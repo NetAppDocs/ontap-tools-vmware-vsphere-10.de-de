@@ -1,5 +1,5 @@
 ---
-permalink: concept/asup.html 
+permalink: concepts/asup.html 
 sidebar: sidebar 
 keywords:  
 summary: AutoSupport ist ein Mechanismus, der proaktiv den Zustand Ihres Systems überwacht und automatisch Meldungen an den technischen Support von NetApp, Ihre interne Support-Abteilung und einen Support-Partner sendet. Obwohl AutoSupport Meldungen an den technischen Support standardmäßig aktiviert sind, müssen Sie die richtigen Optionen festlegen und einen gültigen Mail-Host besitzen, der Meldungen an Ihre interne Support-Abteilung gesendet hat. 
