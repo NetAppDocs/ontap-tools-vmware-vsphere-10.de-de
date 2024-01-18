@@ -50,7 +50,7 @@ NOTE: Bevor Sie mit der Bereitstellung fortfahren, setzen Sie den Distributed Re
 +
 Die ASUP kann nur während der Implementierung aktiviert oder deaktiviert werden.
 
-.. Administratorbenutzername und Administratorkennwort: Dies ist das Passwort, das für die Anmeldung bei der Benutzeroberfläche des *ONTAP-Tools-Managers* verwendet wird.
+.. Administratorbenutzername und Administratorkennwort: Dies ist das Passwort, das zur Anmeldung bei der *ONTAP Tools Manager*-Benutzeroberfläche verwendet wird.
 .. Geben Sie NTP-Serverinformationen in das Feld *NTP-Server* ein.
 .. Maintenance User password: Dies wird verwendet, um Zugriff auf ‘IH Console Options’ zu gewähren.
 

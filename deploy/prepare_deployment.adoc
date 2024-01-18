@@ -27,6 +27,7 @@ Beachten Sie die folgenden Anforderungen an ONTAP-Tools, bevor Sie mit der Imple
 * Stellen Sie sicher, dass der Host oder der Ressourcenpool, in dem die OVA bereitgestellt wird, über die im Abschnitt *Anforderungen für die Bereitstellung der ONTAP-Tools* genannten Mindestressourcen verfügt.
 * Löschen Sie den Browser-Cache.
 * Für Load Balancer und Kubernetes API Server benötigen Sie zwei virtuelle IPs. Sie erhalten zwei kostenlose IPs im VLAN, das für die Implementierung verwendet wird und nach der Implementierung auf die Services zugreift.
+* Beschaffung von CA-Zertifikaten (Root-, Leaf- und Intermediate-Zertifikate) von der kommerziellen CA.
 * Bei einer Bereitstellung mit mehreren vCenter, bei der benutzerdefinierte CA-Zertifikate erforderlich sind, ordnen Sie den *Domain Name* zu, auf dem das Zertifikat ausgestellt wird, der *Virtual IP* zu. Führen Sie eine Ping-Überprüfung des Domänennamens durch, um zu prüfen, ob die Domäne auf die beabsichtigte IP aufgelöst wird.
 * Eine Storage-VM auf ONTAP mit aktiviertem NFS ist erforderlich. Führen Sie die folgenden Schritte aus, um die Storage-VM zu konfigurieren:
 +

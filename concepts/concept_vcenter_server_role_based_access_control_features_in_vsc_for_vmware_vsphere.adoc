@@ -38,7 +38,7 @@ Um eine Aufgabe erfolgreich abzuschließen, müssen Sie über die entsprechenden
 
 NOTE: Die vCenter Server-Rollen gelten für ONTAP Tools vCenter-Benutzer und nicht für Administratoren. Standardmäßig haben Administratoren vollen Zugriff auf das Produkt und benötigen keine Rollen, die ihnen zugewiesen sind.
 
-Benutzern und Gruppen sind ihnen keine Rollen zugewiesen. Sie erhalten Zugriff auf eine Rolle, indem sie Teil einer vCenter Server-Rolle sind.
+Die Benutzer und Gruppen erhalten Zugriff auf eine Rolle, indem sie Teil einer vCenter Server-Rolle sind.
 
 
 

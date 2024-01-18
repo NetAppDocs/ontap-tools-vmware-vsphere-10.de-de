@@ -25,7 +25,7 @@ Sie müssen das CA-signierte Zertifikat in vCenter platzieren, wenn Sie die CA-s
 . Geben Sie die Verbindungsinformationen für den Speicheranbieter ein:
 +
 .. Name: Jeder benutzerfreundliche Name wie "ScaleoutVP"
-.. URL https://<name>/virtualization/version.xml[] - Der Name in der URL entspricht der virtuellen IP, die während der OVA-Bereitstellung für Single vCenter-Bereitstellung (oder) Domain-Name für Multi-vCenter-Bereitstellungen bereitgestellt wird.
+.. URL https://<name>/virtualization/version.xml[] - Der Name in der URL entspricht der virtuellen IP, die während der OVA-Bereitstellung für Single vCenter-Bereitstellung (oder) Domain-Name für Multi-vCenter-Bereitstellungen bereitgestellt wird. Fügen Sie die Zertifikate zur URL hinzu. Dieselben Zertifikate werden in vCenter veröffentlicht.
 .. Anmeldeinformationen: <VASA Provider username>/< VASA Provider password> während der OVA-Bereitstellung angegeben.
 
 
