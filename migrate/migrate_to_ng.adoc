@@ -33,7 +33,7 @@ NOTE: Als bestehender Benutzer müssen Sie das OVA-Backup von 9.10/9.11 durchfü
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Implementieren Sie OVA für ONTAP Tools für VMware vSphere 10.0. Siehe link:../qsg_10.html["ONTAP-Tools Schnellstartanleitung"]
+. Implementieren Sie OVA für ONTAP Tools für VMware vSphere 10.0. Siehe link:../deploy/qsg_10.html["ONTAP-Tools Schnellstartanleitung"]
 . Fügen Sie das vCenter hinzu, das Sie zu ONTAP-Tools für die Version VMware vSphere 10.0 migrieren möchten. Siehe link:../configure/add_vcenter.html["VCenter hinzufügen"].
 . Lokales Storage-Back-End aus den Remote-Plug-in-vCenter-APIs Siehe link:../configure/onboard_svm.html["Onboard Storage-Back-End"]. Hinzufügen von Storage als lokalen Umfang für die Migration
 . Verwenden Sie zur Migration die folgende API:

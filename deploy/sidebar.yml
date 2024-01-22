@@ -3,7 +3,7 @@ section: deploy
 title: Implementierung von ONTAP Tools
 entries:
 - title: ONTAP-Tools Schnellstartanleitung
-  url: "/qsg_10.html"
+  url: "/deploy/qsg_10.html"
 - title: Anforderungen für die Implementierung der ONTAP Tools
   url: "/deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html"
 - title: So laden Sie ONTAP-Tools herunter

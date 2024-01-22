@@ -441,7 +441,6 @@ Beispiel: Für eine mandantenfähige Einrichtung können Sie ein Storage-Back-En
   <block id="f6a8c4418598dbac9139a7fe52e99cd9" category="admonition">Als bestehender Benutzer müssen Sie das OVA-Backup von 9.10/9.11 durchführen, bevor Sie ein Upgrade auf 9,10D-Patch oder 9,11D-Patch durchführen</block>
   <block id="2db68a279bc2b75d7d1a4b6e68d05ff4" category="list-text">Aktivieren Sie Derby-PORT 1527 auf den vorhandenen ONTAP-Tools für VMware vSphere 9.10D2 und 9.11D4. Um den Port zu aktivieren, melden Sie sich bei CLI mit root user an und führen Sie den folgenden Befehl aus:</block>
   <block id="e695b432b77d6bddfcb785c76f5e5442" category="inline-link-macro">ONTAP-Tools Schnellstartanleitung</block>
-  <block id="6f6b7bd58886693f11eb96bd0341b5b3" category="list-text">Implementieren Sie OVA für ONTAP Tools für VMware vSphere 10.0. Siehe <block ref="a02083ee995a4c6975877ba810ab5474" category="inline-link-macro-rx"></block></block>
   <block id="17a7ed8efe05072366e69496ed1711fb" category="list-text">Fügen Sie das vCenter hinzu, das Sie zu ONTAP-Tools für die Version VMware vSphere 10.0 migrieren möchten. Siehe <block ref="a10f9e2fb5f93213a95f892ddd0bf865" category="inline-link-macro-rx"></block>.</block>
   <block id="184c4f313c0a230f7a83d7121fa485d7" category="inline-link-macro">Onboard Storage-Back-End</block>
   <block id="bf632d416dbc3267749473a4eedebc79" category="list-text">Lokales Storage-Back-End aus den Remote-Plug-in-vCenter-APIs Siehe <block ref="3019410685f421965726529ee880cf27" category="inline-link-macro-rx"></block>. Hinzufügen von Storage als lokalen Umfang für die Migration</block>
@@ -675,7 +674,6 @@ Der Zusammenfassungsbericht für VVols Virtual Machines enthält Performance-Ken
   <block id="ff31982aef870d546d52f49bb30ef34b" category="section-title">Implementierungsanforderungen zu erfüllen</block>
   <block id="26d3524e83da73ce160fdf15b9ee1f7f" category="paragraph">Bevor Sie die ONTAP Tools für VMware vSphere implementieren, sollten Sie mit den Speicherplatzanforderungen für das Implementierungspaket und einigen grundlegenden Host-Systemanforderungen vertraut sein.</block>
   <block id="f4930bf161a0a7075db869066f0839f9" category="paragraph">Sie können die ONTAP-Tools entweder mit einem Windows vCenter-Server oder mit einer VMware vCenter Server VirtualAppliance (vCSA) verwenden. Sie müssen die ONTAP-Tools auf einer unterstützten vSphere implementieren, die das ESXi-System umfasst.</block>
-  <block id="ec86808f81c82b9651e18a844d1ea19f" category="paragraph">Weitere Informationen finden Sie unter <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
   <block id="86f56c72e0832c1bb59b9394dbcb0853" category="section-title">Anforderungen für ONTAP-Tools</block>
   <block id="dfa57bc5abba0952197bf25265b987c7" category="list-text">Laden Sie die .ova-Datei herunter.</block>
   <block id="a81177e1cbc66e893d0b2b880b7fb4f4" category="list-text">Die Anmeldeinformationen für Ihre vCenter Server-Instanz.</block>
@@ -841,4 +839,6 @@ Storage Back-Ends einsetzen und ONTAP Tools durchführen. Die ONTAP-Rollen legen
   <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">Die Benutzer und Gruppen erhalten Zugriff auf eine Rolle, indem sie Teil einer vCenter Server-Rolle sind.</block>
   <block id="8a52f25f3fca1f3b4922e7e5dc09fb04" category="admonition">Durch Löschen des VVols Datastore Workflows werden Datastore-Volumes gelöscht, wenn Sie die Markierung delete_Volume als wahr übergeben haben, unabhängig davon, ob das Datastore-Volume gemanagt oder nicht gemanagt wird.</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">Überblick über die rollenbasierte Zugriffssteuerung für ONTAP-Tools</block>
+  <block id="9984e4b52821af66b163b37639e5ffca" category="list-text">Implementieren Sie OVA für ONTAP Tools für VMware vSphere 10.0. Siehe <block ref="09991ee05a1b93f3c38bbfed0e5d1010" category="inline-link-macro-rx"></block></block>
+  <block id="e5317f6738020b54574baa6f35cf9f92" category="paragraph">Weitere Informationen finden Sie unter <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
 </blocks>
