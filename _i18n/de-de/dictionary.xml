@@ -275,7 +275,6 @@ Erstellen Sie die Inhaltsbibliothek mithilfe der folgenden Schritte:</block>
   <block id="88e2b3b526ba4e178ae29fd3079bdbfe" category="summary">Sie können neue Benutzerrollen für das Management von Storage-Back-Ends mithilfe der JSON-Datei, die mit den ONTAP Tools und ONTAP System Manager bereitgestellt wird, konfigurieren.</block>
   <block id="47929bf09df6c8f0f0361e68f281ea29" category="paragraph">Sie können neue Benutzerrollen und -Berechtigungen für das Management von Storage-Back-Ends mit der JSON-Datei konfigurieren, die mit den ONTAP Tools und ONTAP System Manager bereitgestellt wird.</block>
   <block id="6e511cfe87a95df884e3eeb9f86e7f6c" category="paragraph">*Was Sie brauchen*</block>
-  <block id="660df50b4a5374980fdf792a56f7f8fa" category="list-text">Sie sollten die Datei ONTAP Privileges über \https://&lt;loadbalancerIP&gt;:8443/Virtualization/user-Privileges/users_roles.zip von ONTAP-Tools heruntergeladen haben.</block>
   <block id="03370342849465520eebddf710012fb0" category="admonition">Sie können Benutzer auf Cluster- oder direkter Storage Virtual Machines (SVMs)-Ebene erstellen. Sie können auch Benutzer erstellen, ohne die Datei user_roles.json zu verwenden. Falls dies der Fall ist, müssen Sie über einen Mindestsatz an Berechtigungen auf SVM-Ebene verfügen.</block>
   <block id="9baaec212ea7cc94549bac65152b30f9" category="list-text">Sie sollten sich mit Administratorrechten für das Speicher-Back-End angemeldet haben.</block>
   <block id="33cb2eeaa8ed39dc8e17a80d28ad882c" category="list-text">Extrahieren Sie das heruntergeladene<block ref="7f922dba99ab8084641c5a38eed2214d" prefix=" " category="inline-code"></block> Datei:</block>
@@ -360,7 +359,6 @@ Abrufen der Aggregat-id, Storage_id(SVM-UUID) mit der ONTAP REST-API</block>
   <block id="431131d0beb0c4676312767a56da7f4b" category="summary">VCenter sind die zentralen Management-Plattformen, mit denen Sie Hosts, Virtual Machines (VM) und Storage-Back-Ends steuern können.</block>
   <block id="612aa7a1930dd6f3ed723264e94c2a7e" category="doc">VCenter hinzufügen</block>
   <block id="9f65fe2e1d78de824bf3eadfc84dcb76" category="paragraph">Sie können mehrere vCenter mit einer Instanz von ONTAP Tools für VMware vCenter 10.0 hinzufügen und managen.</block>
-  <block id="b95dce2bcc7adc6e60834ff81ca5af5d" category="list-text">Start<block ref="e068378fd08c8099e0a9b67e1ace0a53" category="inline-link-rx"></block> Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.</block>
   <block id="7381f9313b931dde25f155f59fb3be63" category="list-text">Wählen Sie in der Seitenleiste vCenter aus</block>
   <block id="a56ab30c3fa2c56c499feecf7b173c5d" category="list-text">Wählen Sie *ADD* für Onboard-vCenters mit vCenter IP-Adresse/Hostname, Benutzername, Passwort und Port.</block>
   <block id="ed05b72b00296d4ab8e08f703c69cf9c" category="paragraph">Siehe <block ref="fef8f4e7151721135aee00bc2c3cdcc6" category="inline-link-macro-rx"></block>.</block>
@@ -419,7 +417,6 @@ Wiederholen Sie die oben genannten Schritte, um mehrere vCenter zu registrieren.
   <block id="6a2a753f23f929a7e63dfdcca93ad8b5" category="paragraph">Das Storage-Back-End ist global, wenn es vom ONTAP Tools Manager oder von Commons-APIs hinzugefügt wird, und sie werden lokal, wenn sie von den vCenter APIs hinzugefügt werden.
 Beispiel: Für eine mandantenfähige Einrichtung können Sie ein Storage-Back-End (Cluster) global und eine lokale SVM hinzufügen, um direkte SVM-Anmeldedaten zu verwenden.</block>
   <block id="af2c5b945e20e23dc75787cf093c5d9f" category="list-text">Download von Protokollpaketen</block>
-  <block id="bb23f693be2a0f4972ca64c8a621cd2b" category="paragraph">Um auf die UI der ONTAP-Tools zuzugreifen, starten Sie<block ref="e068378fd08c8099e0a9b67e1ace0a53" category="inline-link-rx"></block> Über den Browser und melden Sie sich mit den Administratoranmeldeinformationen von ONTAP Tools an, die während der Bereitstellung angegeben wurden.</block>
   <block id="37960991e64430632025d4f9e59e3070" category="image-alt">UI für ONTAP-Tools-Manager</block>
   <block id="e39f043c7b33aada178210c63dc687b2" category="paragraph">Sie können die Option *nicht mehr anzeigen* auswählen, um dieses Popup-Fenster nicht zu sehen, wenn Sie sich erneut über denselben Browser anmelden.</block>
   <block id="0b116b89d80e19bf956dfc85f50bc1e9" category="summary">Info erforderlich.</block>
@@ -833,7 +830,6 @@ Storage Back-Ends einsetzen und ONTAP Tools durchführen. Die ONTAP-Rollen legen
   <block id="956040396bc93fbe70e3c9e235f5bfdb" category="sidebar">Zugriff auf die Wartungskonsole für ONTAP Tools</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">Konzepte</block>
   <block id="99da96b7c57595264a2d5f3ba294a0af" category="sidebar">Rollenbasierte Zugriffssteuerung</block>
-  <block id="d24271a1f22c82f9f35e39eb3c1987a9" category="list-text">URL<block ref="9db1fbe5367e07ad476cea37f9aa812e" category="inline-link-rx"></block> - Der Name in der URL entspricht der virtuellen IP, die während der OVA-Bereitstellung für Single vCenter-Bereitstellung (oder) Domain-Name für Multi-vCenter-Bereitstellungen bereitgestellt wird. Fügen Sie die Zertifikate zur URL hinzu. Dieselben Zertifikate werden in vCenter veröffentlicht.</block>
   <block id="706d26bec853805e4de29044300749ad" category="list-text">Administratorbenutzername und Administratorkennwort: Dies ist das Passwort, das zur Anmeldung bei der *ONTAP Tools Manager*-Benutzeroberfläche verwendet wird.</block>
   <block id="b910beb5fe2953d304ea1b38de1c4fa3" category="list-text">Beschaffung von CA-Zertifikaten (Root-, Leaf- und Intermediate-Zertifikate) von der kommerziellen CA.</block>
   <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">Die Benutzer und Gruppen erhalten Zugriff auf eine Rolle, indem sie Teil einer vCenter Server-Rolle sind.</block>
@@ -841,4 +837,8 @@ Storage Back-Ends einsetzen und ONTAP Tools durchführen. Die ONTAP-Rollen legen
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">Überblick über die rollenbasierte Zugriffssteuerung für ONTAP-Tools</block>
   <block id="9984e4b52821af66b163b37639e5ffca" category="list-text">Implementieren Sie OVA für ONTAP Tools für VMware vSphere 10.0. Siehe <block ref="09991ee05a1b93f3c38bbfed0e5d1010" category="inline-link-macro-rx"></block></block>
   <block id="e5317f6738020b54574baa6f35cf9f92" category="paragraph">Weitere Informationen finden Sie unter <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
+  <block id="dae8459d0e2ebd11c707cda235a5e574" category="paragraph">Um auf die UI der ONTAP-Tools zuzugreifen, starten Sie<block ref="1910f09ff940f1765a7dd530bdeb5127" prefix=" " category="inline-code"></block> Über den Browser und melden Sie sich mit den Administratoranmeldeinformationen von ONTAP Tools an, die während der Bereitstellung angegeben wurden.</block>
+  <block id="99c32328fc9914bedd703b6f5db4812f" category="list-text">Sie sollten die ONTAP-Berechtigungsdatei von den ONTAP-Tools unter heruntergeladen haben<block ref="7f922dba99ab8084641c5a38eed2214d" prefix=" " category="inline-code"></block>.</block>
+  <block id="6be14525037bcd46eae29cee0ba163b7" category="list-text">URL<block ref="e4f02d6075674fe650d716797297966f" prefix=" " category="inline-code"></block> - Der Name in der URL entspricht der virtuellen IP, die während der OVA-Bereitstellung für Single vCenter-Bereitstellung (oder) Domain-Name für Multi-vCenter-Bereitstellungen bereitgestellt wird. Fügen Sie die Zertifikate zur URL hinzu. Dieselben Zertifikate werden in vCenter veröffentlicht.</block>
+  <block id="734f31344c53092d434b6ffc00072ad9" category="list-text">Start<block ref="1910f09ff940f1765a7dd530bdeb5127" prefix=" " category="inline-code"></block> Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.</block>
 </blocks>

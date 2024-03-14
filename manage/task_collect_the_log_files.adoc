@@ -15,7 +15,7 @@ Sie können Protokolldateien für ONTAP Tools für VMware vSphere über die in d
 
 *Schritte*
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste *Log Bundles* aus.
 +
 Dieser Vorgang kann mehrere Minuten dauern.

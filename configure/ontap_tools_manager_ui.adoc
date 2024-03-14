@@ -26,7 +26,7 @@ Beispiel: Für eine mandantenfähige Einrichtung können Sie ein Storage-Back-En
 * Download von Protokollpaketen
 
 
-Um auf die UI der ONTAP-Tools zuzugreifen, starten Sie https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser und melden Sie sich mit den Administratoranmeldeinformationen von ONTAP Tools an, die während der Bereitstellung angegeben wurden.
+Um auf die UI der ONTAP-Tools zuzugreifen, starten Sie `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser und melden Sie sich mit den Administratoranmeldeinformationen von ONTAP Tools an, die während der Bereitstellung angegeben wurden.
 
 image::../media/ontap_tools_manager.png[UI für ONTAP-Tools-Manager]
 

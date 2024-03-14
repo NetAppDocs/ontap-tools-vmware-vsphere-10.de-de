@@ -19,7 +19,7 @@ Sie können mehrere vCenter mit einer Instanz von ONTAP Tools für VMware vCente
 
 *Schritte*
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste vCenter aus
 . Wählen Sie *ADD* für Onboard-vCenters mit vCenter IP-Adresse/Hostname, Benutzername, Passwort und Port.
 

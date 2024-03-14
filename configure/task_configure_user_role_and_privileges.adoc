@@ -15,7 +15,7 @@ Sie können neue Benutzerrollen und -Berechtigungen für das Management von Stor
 
 *Was Sie brauchen*
 
-* Sie sollten die Datei ONTAP Privileges über \https://<loadbalancerIP>:8443/Virtualization/user-Privileges/users_roles.zip von ONTAP-Tools heruntergeladen haben.
+* Sie sollten die ONTAP-Berechtigungsdatei von den ONTAP-Tools unter heruntergeladen haben `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`.
 +
 
 NOTE: Sie können Benutzer auf Cluster- oder direkter Storage Virtual Machines (SVMs)-Ebene erstellen. Sie können auch Benutzer erstellen, ohne die Datei user_roles.json zu verwenden. Falls dies der Fall ist, müssen Sie über einen Mindestsatz an Berechtigungen auf SVM-Ebene verfügen.

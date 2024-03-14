@@ -19,7 +19,7 @@ Mit dieser Aufgabe können Sie eine Zuordnung zwischen Storage-Backend und dem O
 
 *Schritte*
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste vCenter aus.
 . Klicken Sie auf die vertikalen Ellipsen gegenüber dem vCenter, die Sie mit Storage-Back-Ends verknüpfen möchten.
 . Wählen Sie im Popup-Fenster aus der Dropdown-Liste das Storage-Back-End aus.

@@ -21,7 +21,7 @@ Gehen Sie wie folgt vor, um Speicher-Back-Ends hinzuzufügen.
 
 *Schritte*
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste *Speicher-Backends* aus.
 . Wählen Sie *Hinzufügen*.
 
@@ -32,7 +32,7 @@ Gehen Sie wie folgt vor, um Speicher-Back-Ends hinzuzufügen.
 
 Führen Sie die folgenden Schritte aus, um das vorhandene Speicher-Back-End zu ändern.
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste Speicher-Back-Ends aus.
 . Wählen Sie das *Speicher-Backend* aus, das Sie ändern möchten
 . Klicken Sie auf das vertikale Auslassungsmenü und wählen Sie *Ändern*.
@@ -46,7 +46,7 @@ Führen Sie die folgenden Schritte aus, um das vorhandene Speicher-Back-End zu �
 Sie müssen alle mit dem Speicher-Back-End verbundenen Datenspeicher löschen, bevor Sie das Speicher-Back-End entfernen.
 Gehen Sie wie folgt vor, um das Speicher-Back-End zu entfernen.
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste *Speicher-Backends* aus.
 . Wählen Sie das Storage-Backend aus, das Sie entfernen möchten
 . Klicken Sie auf das vertikale Auslassungsmenü und wählen Sie *Entfernen*.

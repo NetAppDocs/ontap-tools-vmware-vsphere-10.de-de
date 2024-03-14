@@ -19,7 +19,7 @@ Diese Aufgabe hilft Ihnen, den ONTAP-Cluster zu Bord zu nehmen.
 
 *Schritte*
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste *Speicher-Backends* aus.
 . Wählen Sie *Hinzufügen*.
 . Geben Sie die IP-Adresse des Servers oder den FQDN, den Benutzernamen und das Kennwort ein, und wählen Sie *Hinzufügen*.

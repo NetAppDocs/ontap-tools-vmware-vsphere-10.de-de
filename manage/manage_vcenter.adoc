@@ -21,7 +21,7 @@ Sie können mehrere vCenter mit einer Instanz von ONTAP Tools für VMware vCente
 
 *Schritte*
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste vCenter aus
 . Wählen Sie *ADD* für Onboard-vCenters mit vCenter IP-Adresse/Hostname, Benutzername, Passwort und Port.
 . Navigieren Sie zur Seite *Speicher-Backend* und wählen Sie *zum integrierten Speicher-Backend hinzufügen* (ONTAP-Cluster) mit Hostname, Benutzername, Passwort und Port.
@@ -38,7 +38,7 @@ Mit dieser Aufgabe können Sie eine Zuordnung zwischen Storage-Backend und dem O
 
 *Schritte*
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste vCenter aus.
 . Klicken Sie auf die vertikalen Auslassungspunkte gegenüber dem vCenter, die Sie mit Storage-Back-Ends verknüpfen oder trennen möchten.
 . Wählen Sie *Speicher-Backend verknüpfen oder trennen*, je nachdem, welche Aktion Sie durchführen möchten.
@@ -53,7 +53,7 @@ Siehe link:../configure/task_configure_user_role_and_privileges.html["Liste der 
 
 Führen Sie die folgenden Schritte aus, um die vCenter zu ändern.
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste vCenter aus
 . Klicken Sie auf die vertikalen Auslassungspunkte gegenüber dem vCenter, das Sie ändern möchten, und wählen Sie *Ändern*.
 . Ändern Sie die vCenter-Details, und wählen Sie *Ändern*.
@@ -65,7 +65,7 @@ Führen Sie die folgenden Schritte aus, um die vCenter zu ändern.
 
 Sie müssen alle Speicher-Back-Ends entfernen, die mit vCenter verbunden sind, bevor Sie es entfernen.
 
-. Start https://loadBalanceIP:8443/virtualization/ui/[] Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
+. Start `\https://loadBalanceIP:8443/virtualization/ui/` Über den Browser mit den Administratoranmeldeinformationen für ONTAP-Tools, die während der Bereitstellung bereitgestellt werden.
 . Wählen Sie in der Seitenleiste vCenter aus
 . Klicken Sie auf die vertikalen Auslassungspunkte gegen das vCenter, das Sie entfernen möchten, und wählen Sie *Entfernen*.
 +
