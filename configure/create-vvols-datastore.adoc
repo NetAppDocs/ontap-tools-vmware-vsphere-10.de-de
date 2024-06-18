@@ -1,0 +1,112 @@
+---
+permalink: configure/create-vvols-datastore.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können einen VVols-Datastore mit neuen Volumes oder mit vorhandenen Volumes erstellen. Zudem ist es möglich, einen VVols-Datastore mit einer Kombination aus vorhandenen Volumes und neuen Volumes zu erstellen. 
+---
+= Datastore erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Je nach dem für die Aktion ausgewählten Ziel wird der Datastore auf allen Hosts des Ziels erstellt und gemountet. Die Aktion wird nur aktiviert, wenn der aktuelle Benutzer über die Berechtigung zum Ausführen verfügt.
+
+Der Assistent „Datastore erstellen“ unterstützt die Erstellung von NFS-, VMFS- und VVols-Datenspeichern. Die Benutzeroberfläche ist selbsterklärend, verwenden Sie diese Schritte als Richtlinien.
+
+
+
+== Erstellung eines VVols Datastore
+
+Sie können einen VVols-Datastore mit neuen Volumes oder mit vorhandenen Volumes erstellen. Mit einer Kombination aus vorhandenen Volumes und neuen Volumes kann kein VVols-Datastore erstellt werden.
+
+
+NOTE: Überprüfen Sie, ob die Root-Aggregate nicht der SVM zugeordnet sind.
+
+.Schritte
+. Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
+. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder ein Rechenzentrum, und wählen Sie dann *NetApp ONTAP Tools* > *Datastore erstellen* aus
+. Wählen Sie im Bereich *Typ* unter *Datastore Type* die Option VVols aus.
++
+
+NOTE: Die VVols-Option wird nur dann abgerufen, wenn der VASA-Provider bei dem ausgewählten vCenter registriert ist.
+
+. Geben Sie im Bereich *Name und Protokoll* die Informationen *Datastore Name* und *Protocol* an.
+. Wählen Sie im Bereich *Storage* *Platform* und *Storage VM* aus. Wählen Sie im Abschnitt *Erweiterte Optionen* je nach Ihrer Wahl benutzerdefinierte Exportrichtlinie (für NFS-Protokoll) oder benutzerdefinierten Initiatorgruppennamen (für iSCSI-Protokoll) aus.
++
+** Mit Plattform- und asymmetrischen Optionen können Sie die Dropdown-Optionen für SVMs herausfiltern. Sie sollten die SVM auswählen, die erstellt werden soll, oder die Volumes für die Datastore-Erstellung verwenden.
+** *Asymmetric*-Umschalttaste ist nur sichtbar, wenn iSCSI im vorherigen Schritt ausgewählt wurde und Leistung oder Kapazität im Dropdown-Menü Plattform ausgewählt ist.
+** Asymmetric gilt für die AFF-Plattform und für die ASA-Plattform als falsch.
+
+
+. Im Bereich *Speicherattribute* können Sie entweder neue Volumes erstellen oder die vorhandenen Volumes verwenden. Beim Erstellen eines neuen Volumes können Sie die QoS auf dem Datastore aktivieren.
+. Überprüfen Sie Ihre Auswahl im Fenster *Zusammenfassung* und klicken Sie auf *Fertig stellen*.
+Der Datastore wird auf allen Hosts erstellt und gemountet.
+
+
+
+
+== Erstellen Sie einen NFS-Datastore
+
+Der NFS-Datastore (VMware Network File System) ist ein Storage-Typ, der mithilfe des NFS-Protokolls ESXi-Hosts über ein Netzwerk mit einem Shared Storage-Gerät verbindet. NFS-Datastores werden häufig in VMware vSphere Umgebungen verwendet und bieten verschiedene Vorteile, z. B. Einfachheit und Flexibilität.
+
+.Schritte
+. Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
+. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder ein Rechenzentrum, und wählen Sie dann *NetApp ONTAP Tools* > *Datastore erstellen* aus
+. Wählen Sie im Bereich *Typ* NFS unter *Datastore Type* aus.
+. Geben Sie im Bereich *Name und Protokoll* den Namen, die Größe und die Protokollinformationen des Datastore ein. Wählen Sie in den erweiterten Optionen *Datastore Cluster* und Kerberos Authentication aus.
++
+
+NOTE: Kerberos-Authentifizierung ist nur verfügbar, wenn das NFS 4.1-Protokoll ausgewählt ist.
+
+. Wählen Sie im Bereich *Storage* *Platform* und *Storage VM* aus. Sie können *Custom Export Policy* im Abschnitt *Advanced Option* auswählen.
++
+** *Asymmetric* Umschalttaste ist nur sichtbar, wenn Leistung oder Kapazität im Dropdown-Menü Plattform ausgewählt ist.
+** *Any* Option in der Plattform-Dropdown ermöglicht es Ihnen, alle SVMs zu sehen, die Teil des vCenter sind, unabhängig von der Plattform oder asymmetrischen Flagge.
+
+
+. Wählen Sie im Bereich *Speicherattribute* das Aggregat für die Erstellung des Volumes aus. Wählen Sie in den erweiterten Optionen *Space Reserve* und *Enable QoS* je nach Bedarf.
+. Überprüfen Sie die Auswahl im Fenster *Zusammenfassung* und klicken Sie auf *Fertig stellen*.
+
+
+Der Datastore wird auf allen Hosts erstellt und gemountet.
+
+
+
+== Erstellen Sie einen VMFS-Datastore
+
+Virtual Machine File System (VMFS) ist ein geclustertes Filesystem, das speziell zum Speichern von VM-Dateien in VMware vSphere Umgebungen entwickelt wurde. Sie ermöglicht es mehreren ESXi-Hosts, gleichzeitig auf dieselben VM-Dateien zuzugreifen, was Funktionen wie vMotion und Hochverfügbarkeit ermöglicht.
+
+*Bevor Sie beginnen*
+
+Überprüfen Sie die folgenden Punkte, bevor Sie fortfahren:
+
+* Überprüfen Sie, ob alle Zielhosts ordnungsgemäß sind, und prüfen Sie, ob der Host das Protokoll unterstützt.
+* Neues Volume erstellen (min. Größe 2 GB)
+* Festlegen von Volume-Optionen mit QOS
+* Erstellen Sie eine LUN vom Typ VMware
+* Abrufen von Initiatoren für alle Ziel-Hosts
+* Initiatorgruppe auf Basis übereinstimmender Initiatoren erstellen/wiederverwenden
+* LUN zu Initiatorgruppe zuordnen
+* Fügen Sie iSCSI-Ziele zu ESXi-Hosts hinzu
+* Host Bus Adapter (HBAs) auf allen Hosts neu scannen
+* Mounten des Volume als VMFS6-Datenspeicher (für mehr als 6.5 Hosts)
+* VMFS-Speicher auf ESXi-Hosts erneut scannen
+* Datastore auf Datastore-Cluster verschieben
+* Neuausrichtung von iSCSI-Pfaden
+
+
+.Schritte
+. Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
+. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder einen Datastore, und wählen Sie dann *NetApp ONTAP Tools* > *Datastore erstellen* aus
+. Wählen Sie im Bereich *Typ* VMFS unter *Datastore Type* aus.
+. Geben Sie im Bereich *Name und Protokoll* den Namen, die Größe und die Protokollinformationen des Datastore ein. Wählen Sie im Abschnitt *Erweiterte Optionen* des Teilfensters den Datastore-Cluster aus, dem Sie diesen Datastore hinzufügen möchten.
+. Wählen Sie im Fensterbereich Storage die Option Platform and Storage VM aus. Wählen Sie die Schaltfläche Asymmetric Toggle. Geben Sie den *Custom Initiator Group Name* im Abschnitt *Advanced options* des Fensters ein (optional). Sie können entweder eine vorhandene Initiatorgruppe für den Datastore auswählen oder eine neue Initiatorgruppe mit einem benutzerdefinierten Namen erstellen.
++
+Wenn Sie die Option *any* in der Dropdown-Liste der Plattform wählen, sehen Sie alle SVMs, die Teil des vCenter sind, unabhängig von der Plattform oder dem asymmetrischen Flag.
+
+. Wählen Sie im Bereich Speicherattribute aus der Dropdown-Liste *Aggregat* aus. Wählen Sie im Abschnitt *Erweiterte Optionen* die Optionen *Platzreserve*, *vorhandenes Volume verwenden* und *QoS* aktivieren aus und geben Sie die erforderlichen Details an.
+. Überprüfen Sie die Datastore-Details im Bereich *Summary* und klicken Sie auf *Finish*.
+Der Datastore wird auf allen Hosts erstellt und gemountet.
+

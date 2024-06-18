@@ -4,31 +4,63 @@ title: Management von ONTAP-Tools
 entries:
 - title: Managen von Datastores
   entries:
-  - title: Erweitern oder verkleinern Sie Storage von vVol Datastore
-    url: "/manage/expand_storage_of_vvol_datastore.html"
-  - title: VVols Datastore löschen
-    url: "/manage/task_remove_storage_from_a_vvols_datastore.html"
-  - title: Mounten und unmounten Sie einen VVols Datastore
-    url: "/manage/task_mount_a_vvols_datastore.html"
+  - title: Mounten von NFS- und VMFS-Datastores
+    url: "/manage/mount-datastores-on-host.html"
+  - title: Montieren Sie den VVols-Datastore
+    url: "/manage/mount-a-vvols-datastore.html"
+  - title: Redimensionierung von NFS- und VMFS-Datenspeichern
+    url: "/manage/resize-datastores.html"
+  - title: Erweitern Sie vVol Datastores
+    url: "/manage/expand-storage-of-vvol-datastore.html"
+  - title: VVols Datastores werden verkleinert
+    url: "/manage/remove-storage-from-a-vvols-datastore.html"
+  - title: Löschen Sie Datastores
+    url: "/manage/delete-vvols.html"
+  - title: ONTAP-Speicheransichten für Datastores
+    url: "/manage/storage-view-datastore.html"
+  - title: Storage-Ansicht der virtuellen Maschine
+    url: "/manage/virtual-machine-storage-view-datastore.html"
+- title: Speicherschwellenwerte verwalten
+  url: "/manage/manage-storage-threshold.html"
 - title: Management des Storage-Back-End
-  url: "/manage/storage_backend.html"
-- title: Management von vCenter
-  url: "/manage/manage_vcenter.html"
-- title: Managen des vVol-Lebenszyklus
-  url: "/manage/vvol_lifecycle_management.html"
-- title: Verwaltete iGroup- und Export-Richtlinien
-  url: "/manage/igroup_management.html"
-- title: Zugriff auf die Wartungskonsole für ONTAP Tools
+  url: "/manage/storage-backend.html"
+- title: Verwalten der vCenter Server-Instanz
+  url: "/manage/manage-vcenter.html"
+- title: Verwalten von Zertifikaten
+  url: "/manage/certificate-manage.html"
+- title: Verwalten von igroup- und Exportrichtlinien
+  url: "/manage/igroup-management.html"
+- title: Zugriff auf ONTAP Tools für die VMware vSphere Wartungskonsole
   entries:
-  - title: Überblick über Wartungskonsole für ONTAP-Tools
-    url: "/manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html"
+  - title: Überblick über die ONTAP Tools für die VMware vSphere Wartungskonsole
+    url: "/manage/maintenance-console.html"
   - title: Konfigurieren Sie den Zugriff auf die Remote-Diagnose
-    url: "/manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html"
+    url: "/manage/configure-remote-diagnostic-access.html"
   - title: Starten Sie SSH auf anderen Nodes
-    url: "/manage/start_the_ssh_on_other_nodes.html"
+    url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: Aktualisieren Sie die vCenter- und ONTAP-Anmeldedaten
-    url: "/manage/update_vcenter_ontap_credentials.html"
+    url: "/manage/update-vcenter-credentials.html"
+- title: Berichte zum ONTAP-Tool
+  url: "/manage/reports.html"
 - title: Sammeln Sie die Protokolldateien
-  url: "/manage/task_collect_the_log_files.html"
-- title: Ermitteln
-  url: "/manage/discovery.html"
+  url: "/manage/collect-the-log-files.html"
+- title: Management von Virtual Machines
+  entries:
+  - title: Überlegungen zum Migrieren oder Klonen von Virtual Machines
+    url: "/manage/migrate-virtual-machines.html"
+  - title: Migrieren Sie Virtual Machines mit NFS- und VMFS-Datastores zu VVols Datastores
+    url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
+  - title: VASA-Bereinigung
+    url: "/manage/delete-virtual-machines.html"
+- title: Ändern der ESXi-Hosteinstellungen
+  url: "/manage/edit-esxi-host-settings.html"
+- title: Passwörter verwalten
+  entries:
+  - title: Ändern Sie das Kennwort des ONTAP Tools Managers
+    url: "/manage/change-manager-password.html"
+  - title: Kennwort des ONTAP Tools Managers zurücksetzen
+    url: "/manage/reset-manager-password.html"
+  - title: Benutzerkennwort der Anwendung zurücksetzen
+    url: "/manage/reset-app-password.html"
+  - title: Setzt das Benutzerpasswort der Wartungskonsole zurück
+    url: "/manage/reset-maint-password.html"
