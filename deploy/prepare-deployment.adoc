@@ -23,7 +23,7 @@ Im Folgenden finden Sie ONTAP Tools für VMware vSphere Anforderungen, bevor Sie
 . Konfigurieren und richten Sie Ihre vCenter Server-Umgebung ein.
 . Laden Sie die Datei _.ova_ herunter.
 . (Optional) wird für Automatisierungsbenutzer verwendet - Sammeln Sie die Postman-Sammlungen JSON-Datei von NetApp zur Verfügung gestellt.
-. Anmeldedaten des übergeordneten vCenter-Servers für die Bereitstellung der OVA.
+. Anmeldedaten des übergeordneten vCenter-Servers für die Bereitstellung der OVA. Das Passwort für den übergeordneten vCenter Server darf diese Sonderzeichen nicht enthalten (€, ', ')
 . Stellen Sie sicher, dass der Host oder der Ressourcenpool, auf dem die OVA bereitgestellt wird, über die im angegebenen Mindestressourcen verfügt link:../deploy/sizing-requirements.html["Voraussetzungen für die Bereitstellung von ONTAP-Tools für VMware vSphere"] Abschnitt.
 . Die Anmeldeinformationen für Ihre vCenter Server-Instanz, mit der sich die ONTAP-Tools für VMware vSphere nach der Bereitstellung zur Registrierung verbinden.
 . Löschen Sie den Browser-Cache.
@@ -47,7 +47,7 @@ Hostnamen sollten vor der Zuweisung den freien IP-Adressen auf dem DNS zugeordne
 .. Protokoll
 .. Virtuelle IP-Adressen für die Kubernetes-Kontrollebene:
 .. Drop-down für HA/NICHT-HA
-.. Liste der Hostnamen)
+.. Liste der Hostnamen
 .. IP-Adressen (Zeichenfolge)
 .. Name der Inhaltsbibliothek
 .. OVF-Vorlagenname

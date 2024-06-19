@@ -50,13 +50,10 @@ Der empfohlene Arbeitsspeicher gemäß der Größe der Implementierung und pro N
 | ONTAP | Neueste Patch-Version von ONTAP 9.12.1, 9.13.1 oder 9.14.1 
 
 
-| VMware vSphere | VMware 7.0U3, 8.0U1 oder 8.0U2 
-
-
 | ESXi-Hosts | ESXi 7.0.3 
 
 
-| VCenter Server | VCenter 7.0U3, 8.0U1 oder 8.0U2 
+| VCenter Server | VCenter 7.0U3 
 
 
 | VASA-Provider | 3.0 
