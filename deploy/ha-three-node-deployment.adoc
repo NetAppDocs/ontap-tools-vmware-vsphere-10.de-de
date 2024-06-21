@@ -36,6 +36,10 @@ NOTE: Bevor Sie mit der Bereitstellung fortfahren, setzen Sie den Distributed Re
 +
 .. Melden Sie sich beim vSphere-Server an.
 .. Navigieren Sie zum Ressourcenpool oder Host, auf dem Sie die OVA bereitstellen möchten, und klicken Sie mit der rechten Maustaste auf den gewünschten Speicherort, an dem die VM bereitgestellt werden soll, und wählen Sie *OVF-Vorlage bereitstellen...*
++
+
+NOTE: Stellen Sie keine ONTAP-Tools VMware vSphere Virtual Machine auf einem von ihm gemanagten VVols Datastore bereit.
+
 .. Sie können entweder die URL für die _.ova_-Datei eingeben oder in den Ordner navigieren, in dem die _.ova_-Datei gespeichert ist, und dann *Weiter* auswählen
 
 

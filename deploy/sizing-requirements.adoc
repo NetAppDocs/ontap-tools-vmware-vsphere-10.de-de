@@ -18,7 +18,7 @@ Sie können ONTAP-Tools für VMware vSphere mit der virtuellen VMware vCenter Se
 * *Platzanforderungen für Installationspaket pro Knoten*
 +
 ** 10 GB bei Thin Provisioning-Installationen
-** 200 GB für Thick Provisioning-Installationen
+** 248 GB für Thick Provisioning-Installationen
 
 
 * *Größenanforderung Host-System pro Knoten*

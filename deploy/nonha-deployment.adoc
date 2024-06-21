@@ -27,6 +27,10 @@ Beispiel: C1_sti67-vsim-ucs154k_1679633108:> Network Route create -vserver <SVM>
 . Melden Sie sich beim vSphere-Server an.
 . Navigieren Sie zu dem Ressourcenpool oder dem Cluster oder dem Host, auf dem Sie die OVA bereitstellen möchten.
 . Klicken Sie mit der rechten Maustaste auf den gewünschten Speicherort und wählen Sie *OVF-Vorlage bereitstellen...*.
++
+
+NOTE: Stellen Sie keine ONTAP-Tools VMware vSphere Virtual Machine auf einem von ihm gemanagten VVols Datastore bereit.
+
 . Sie können entweder die URL für die _.ova_-Datei eingeben oder in den Ordner navigieren, in dem die _.ova_-Datei gespeichert ist, und dann *Weiter* auswählen.
 . Wählen Sie einen Namen und Ordner für die virtuelle Maschine aus und wählen Sie *Weiter*.
 . Wählen Sie den Host aus und wählen Sie *Weiter*
