@@ -20,6 +20,6 @@ NOTE: Es wird empfohlen, alle VVols-Datastores zu entfernen, bevor Sie die VASA-
 
 . Heben Sie die Registrierung des Plug-ins auf, indem Sie zu \https://OTV_IP:8143/Register.html gehen
 . Vergewissern Sie sich, dass das Plug-in nicht mehr auf dem vCenter Server verfügbar ist.
-. Fahren Sie die ONTAP-Tools für VMware vSphere VM herunter
-. Löschen Sie ONTAP Tools für VMware vSphere VM
+. Fahren Sie die ONTAP Tools für VMware vSphere VM herunter.
+. Löschen Sie ONTAP Tools für VMware vSphere VM.
 

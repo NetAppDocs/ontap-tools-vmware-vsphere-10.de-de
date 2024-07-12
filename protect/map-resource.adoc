@@ -31,8 +31,8 @@ Der Assistent „Ressourcenzuordnung erstellen“ wird angezeigt.
 
 . Führen Sie im Assistenten „Ressourcenzuordnung erstellen“ folgende Schritte aus:
 +
-.. Wählen Sie *Zuordnungen automatisch für Ressource vorbereiten mit übereinstimmenden Namen* und klicken Sie auf *Weiter*.
-.. Wählen Sie die erforderlichen Rechenzentrumsobjekte für die geschützten und Wiederherstellungsstandorte aus, und klicken Sie auf *Zuordnungen hinzufügen*.
+.. Wählen Sie *Zuordnungen für Ressource mit übereinstimmenden Namen automatisch vorbereiten* aus und klicken Sie auf *Weiter*.
+.. Wählen Sie die gewünschten Rechenzentrumsobjekte für die geschützten und Recovery-Standorte aus und klicken Sie auf *Zuordnungen hinzufügen*.
 .. Klicken Sie auf *Weiter*, nachdem Zuordnungen erfolgreich erstellt wurden.
 .. Wählen Sie das zuvor verwendete Objekt aus, um eine umgekehrte Zuordnung zu erstellen, und klicken Sie dann auf *Fertig stellen*.
 

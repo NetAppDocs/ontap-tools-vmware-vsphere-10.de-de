@@ -24,7 +24,7 @@ Sie sollten überprüfen, ob der geschützte Standort und der Recovery-Standort 
 
 . Melden Sie sich bei Ihrem vCenter Server an.
 . Navigieren Sie zu *Site Recovery* > *Array-basierte Replikation*.
-. Wählen Sie das gewünschte ArrayPair aus, und überprüfen Sie die entsprechenden Details.
+. Wählen Sie das erforderliche Array Pair aus, und überprüfen Sie die entsprechenden Details.
 +
 Die Speichersysteme sollten am geschützten Standort und am Recovery-Standort mit dem Status „`enabled`“ erkannt werden.
 

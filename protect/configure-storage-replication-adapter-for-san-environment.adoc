@@ -15,7 +15,7 @@ Sie sollten die Speichersysteme einrichten, bevor Sie Storage Replication Adapte
 
 
 
-== Konfiguration von SRA für SAN-Umgebung
+== Konfiguration von SRA für SAN-Umgebungen
 
 *Was Sie brauchen*
 
@@ -38,7 +38,7 @@ Der Adapter wird entweder auf SRM installiert.
 
 . Vergewissern Sie sich, dass die primären ESXi-Hosts mit den LUNs im primären Speichersystem am geschützten Standort verbunden sind.
 . Vergewissern Sie sich, dass die LUNS in Initiatorgruppen vorhanden sind, die über die verfügen `ostype` Option auf dem primären Storage-System auf _VMware_ eingestellt.
-. Überprüfen Sie, ob die ESXi-Hosts am Wiederherstellungsstandort über eine geeignete iSCSI-Verbindung zur Storage Virtual Machine (SVM) verfügen. Die ESXi-Hosts der sekundären Site sollten Zugriff auf den sekundären Standort-Storage haben, ebenso sollten die ESXi-Hosts des primären Standorts Zugriff auf den primären Standort-Storage haben.
+. Überprüfen Sie, ob die ESXi-Hosts am Wiederherstellungsstandort über eine geeignete iSCSI-Verbindung zur Storage Virtual Machine (SVM) verfügen. Die ESXi-Hosts am sekundären Standort sollten Zugriff auf den sekundären Standortspeicher haben, und die ESXi-Hosts am primären Standort sollten Zugriff auf den primären Standortspeicher haben.
 +
 Dazu können Sie entweder überprüfen, ob die ESXi-Hosts über lokale LUNs auf der SVM oder auf der verfügen `iscsi show initiators` Befehl auf den SVMs.
 Überprüfen Sie den LUN-Zugriff auf die zugeordneten LUNs auf dem ESXi-Host, um die iSCSI-Konnektivität zu überprüfen.
@@ -47,7 +47,7 @@ Dazu können Sie entweder überprüfen, ob die ESXi-Hosts über lokale LUNs auf 
 
 
 
-== Konfiguration von SRA für NAS-Umgebung
+== Konfiguration von SRA für NAS-Umgebungen
 
 *Was Sie brauchen*
 

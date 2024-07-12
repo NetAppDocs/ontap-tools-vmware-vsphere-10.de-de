@@ -83,11 +83,11 @@ image:../media/ha-deploy-config.png["Bereitstellungskonfiguration"]
 
 NOTE: Wenn der SVM-Bereich aktiviert ist, sollte die SVM-Unterstützung mit der Management-IP-Adresse bereits aktiviert sein.
 
-.. Wählen Sie entweder NFS oder iSCSI im Feld *Protokoll* aus.
+.. Wählen Sie im Feld *Protokoll* entweder NFS, iSCSI, NVME/TCP oder NVME/FC aus.
 .. Geben Sie den ONTAP-Cluster oder die IP-Adresse des SVM-Managements in das Feld *ONTAP/SVM-Management-LIF* ein.
 .. Geben Sie den ONTAP Cluster oder die SVM ONTAP/SVM-Daten-LIF ein. Die Daten-LIF sollte zum ausgewählten Protokoll gehören. Wenn beispielsweise das iSCSI-Protokoll ausgewählt ist, sollte eine iSCSI-Daten-LIF angegeben werden.
 .. Bei Storage VM können Sie entweder die Standard-Storage-VM-Details Ihres ONTAP angeben oder eine neue Storage-VM erstellen. Geben Sie den Wert nicht in das Feld *Storage VM* ein, wenn die Option SVM-Scoping aktivieren ausgewählt ist, da dieses Feld ignoriert wird.
-.. Geben Sie den ONTAP/SVM Username ein. Der Benutzername und das Passwort für ONTAP/SVM sind erforderlich, damit Trident Volumes für die Speicherung der Services-Daten im Falle einer erweiterten Implementierung oder HA-Implementierung erstellt und die Daten bei einem Node-Ausfall von Volumes wiederhergestellt werden können.
+.. Geben Sie den ONTAP/SVM-Benutzernamen ein. Der Benutzername und das Passwort für ONTAP/SVM sind erforderlich, damit Trident Volumes für die Speicherung der Services-Daten im Falle einer erweiterten Implementierung oder HA-Implementierung erstellt und die Daten bei einem Node-Ausfall von Volumes wiederhergestellt werden können.
 .. Geben Sie das ONTAP/SVM-Passwort ein. Das ONTAP/SVM-Anmeldepasswort für diese Storage-VM sollte die nachfolgenden Sonderzeichen (€,',“) nicht enthalten.
 .. Die primäre VM ist standardmäßig aktiviert. Ändern Sie diese Auswahl nicht.
 
@@ -125,10 +125,9 @@ Wenn die Bereitstellungsaufgabe erstellt wird, wird der Fortschritt in der vSphe
 
 . Schalten Sie die VM nach Abschluss der Aufgabe ein.
 +
-Die Installation beginnt. Sie können den Installationsfortschritt in der Web-Konsole der VM verfolgen.
-Im Rahmen der Installation werden Node-Konfigurationen validiert. Die Eingaben, die unter verschiedenen Abschnitten unter der Vorlage „Anpassen“ im OVF-Formular bereitgestellt werden, werden validiert. Bei Unstimmigkeiten werden Sie in einem Dialogfeld aufgefordert, Korrekturmaßnahmen zu ergreifen.
+Die Installation beginnt. Sie können den Installationsfortschritt in der Web-Konsole der VM verfolgen. Im Rahmen der Installation werden Node-Konfigurationen validiert. Die Eingaben, die unter verschiedenen Abschnitten unter der Vorlage „Anpassen“ im OVF-Formular bereitgestellt werden, werden validiert. Bei Unstimmigkeiten werden Sie in einem Dialogfeld aufgefordert, Korrekturmaßnahmen zu ergreifen.
 
 . Nehmen Sie die erforderlichen Änderungen in der Dialogaufforderung vor. Verwenden Sie die Tabulatortaste, um über das Bedienfeld zu navigieren, um Ihre Werte einzugeben, *OK* oder *Abbrechen*.
-. Bei Auswahl von *OK* werden die angegebenen Werte erneut validiert. Sie haben die Möglichkeit, alle Werte bis zu 3 Mal zu korrigieren. Wenn Sie innerhalb der 3 Versuche keine Korrektur vornehmen, wird die Produktinstallation beendet, und es wird empfohlen, die Installation auf einer neuen VM zu versuchen.
+. Bei Auswahl von *OK* werden die angegebenen Werte erneut validiert. Mit den ONTAP-Tools für VMware können Sie drei Versuche durchführen, ungültige Werte zu korrigieren. Wenn Sie Probleme nach drei Versuchen nicht beheben können, wird die Produktinstallation angehalten, und Sie werden aufgefordert, die Installation auf einer neuen VM zu versuchen.
 . Nach der erfolgreichen Installation zeigt die Webkonsole den Status der ONTAP Tools für VMware vSphere an.
 

@@ -32,7 +32,7 @@ Hostnamen sollten vor der Zuweisung den freien IP-Adressen auf dem DNS zugeordne
 . Nach dem Hochladen sollte die Vorlage der Inhaltsbibliothek nach der Bereitstellung nicht gelöscht werden, da sie bei einem Neustart verwendet wird.
 . Ordnen Sie in einer Multi-vCenter-Bereitstellung, bei der benutzerdefinierte CA-Zertifikate erforderlich sind, den Domänennamen, auf dem das Zertifikat ausgestellt wird, der virtuellen IP-Adresse zu. Führen Sie eine Prüfung des Domänennamens _nslookup_ durch, um zu überprüfen, ob die Domäne auf die beabsichtigte IP-Adresse aufgelöst wird. Die Zertifikate sollten mit dem Domänennamen und der IP-Adresse der Load Balancer-IP-Adresse erstellt werden.
 . IPv4/IPv6-unterstütztes VLAN – Pure IPV6 wird nicht unterstützt. Der gemischte Modus wird unterstützt, wenn VLAN sowohl IPv6- als auch IPv4-Adressen enthält.
-. NTP-Server, der dem vCenter-Server für Time Sync bereitgestellt wird.
+. NTP-Server, der dem vCenter-Server für die Zeitsynchronisierung zur Verfügung gestellt wird.
 . Statische IP-Adresse Konfigurationsdetails für den Knoten oder die VM, auf dem die OVA bereitgestellt wird (obligatorisch), sowie weitere Details.
 +
 .. Hostname des vCenter-Servers (vCenter, in dem die OVA bereitgestellt wird)

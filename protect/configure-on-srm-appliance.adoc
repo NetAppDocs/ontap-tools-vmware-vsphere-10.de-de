@@ -2,7 +2,7 @@
 permalink: protect/configure-on-srm-appliance.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Nachdem Sie die SRM-Appliance bereitgestellt haben, sollten Sie SRA auf der SRM-Appliance konfigurieren. Die erfolgreiche Konfiguration von SRA ermöglicht die Kommunikation der SRM Appliance mit SRA für das Disaster-Recovery-Management. Sie sollten ONTAP-Tools für VMware vSphere Credentials \(IP-Adresse und Administratorkennwort\) in der SRM-Appliance speichern, um die Kommunikation zwischen SRM-Appliance und SRA zu ermöglichen.' 
+summary: 'Nachdem Sie die SRM-Appliance bereitgestellt haben, sollten Sie SRA auf der SRM-Appliance konfigurieren. Durch die erfolgreiche Konfiguration von SRA kann die SRM-Appliance zum Disaster-Recovery-Management mit SRA kommunizieren. Sie sollten ONTAP-Tools für VMware vSphere Credentials \(IP-Adresse und Administratorkennwort\) in der SRM-Appliance speichern, um die Kommunikation zwischen der SRM-Appliance und SRA zu ermöglichen.' 
 ---
 = Konfigurieren Sie SRA auf der SRM-Appliance
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Nachdem Sie die SRM-Appliance bereitgestellt haben, sollten Sie SRA au
 
 
 [role="lead"]
-Nachdem Sie die SRM-Appliance bereitgestellt haben, sollten Sie SRA auf der SRM-Appliance konfigurieren. Die erfolgreiche Konfiguration von SRA ermöglicht die Kommunikation der SRM Appliance mit SRA für das Disaster-Recovery-Management. Sie sollten ONTAP-Tools für VMware vSphere Credentials (IP-Adresse) in der SRM-Appliance speichern, um die Kommunikation zwischen der SRM-Appliance und SRA zu ermöglichen.
+Nachdem Sie die SRM-Appliance bereitgestellt haben, sollten Sie SRA auf der SRM-Appliance konfigurieren. Durch die erfolgreiche Konfiguration von SRA kann die SRM-Appliance zur Disaster-Recovery-Verwaltung mit SRA kommunizieren. Sie sollten ONTAP Tools für VMware vSphere Credentials (IP-Adresse) in der SRM-Appliance speichern, um die Kommunikation zwischen der SRM-Appliance und SRA zu ermöglichen.
 
 *Was Sie brauchen*
 
@@ -19,7 +19,7 @@ Sie sollten die Datei _tar.gz_ von heruntergeladen haben https://mysupport.netap
 
 *Über diese Aufgabe*
 
-Die Konfiguration von SRA auf der SRM-Appliance speichert die SRA-Anmeldeinformationen in der SRM-Appliance.
+Die Konfiguration von SRA auf einer SRM-Appliance speichert die SRA-Anmeldedaten in der SRM-Appliance.
 
 *Schritte*
 
@@ -27,9 +27,9 @@ Die Konfiguration von SRA auf der SRM-Appliance speichert die SRA-Anmeldeinforma
 . Laden Sie die Datei _.tar.gz_ in SRM hoch.
 . Melden Sie sich mit einem Administratorkonto bei der SRM-Appliance mit Putty an.
 . Wechseln Sie mit dem Befehl zum Root-Benutzer: `su root`
-. Führen Sie den Befehl aus `cd /var/log/vmware/srm` Zum Navigieren zum Protokollverzeichnis.
-. Geben Sie im Protokollverzeichnis den Befehl ein, um die von SRA verwendete Docker-ID zu erhalten: `docker ps -l`
-. Um sich bei der Container-ID anzumelden, geben Sie den folgenden Befehl ein: `docker exec -it -u srm <container id> sh`
+. Führen Sie den Befehl aus `cd /var/log/vmware/srm` , um zum Protokollverzeichnis zu navigieren.
+. Geben Sie am Protokollspeicherort den Befehl ein, um die von SRA verwendete Docker-ID zu erhalten: `docker ps -l`
+. Um sich bei der Container-ID anzumelden, geben Sie den Befehl ein: `docker exec -it -u srm <container id> sh`
 . Konfigurieren Sie SRM mit den ONTAP Tools für VMware vSphere IP-Adresse und Passwort mit dem folgenden Befehl: `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>'`
 +
 

@@ -28,8 +28,8 @@ Der Assistent zum Erstellen der Ordnerzuordnung wird angezeigt.
 
 . Führen Sie im Assistenten zum Erstellen der Ordnerzuordnung folgende Schritte aus:
 +
-.. Wählen Sie *Zuordnungen automatisch für Ordner mit übereinstimmenden Namen vorbereiten* aus, und klicken Sie auf *Weiter*.
-.. Wählen Sie die erforderlichen Rechenzentrumsobjekte für die geschützten und Wiederherstellungsstandorte aus, und klicken Sie auf *Zuordnungen hinzufügen*.
+.. Wählen Sie *automatisch Zuordnungen für Ordner mit übereinstimmenden Namen vorbereiten* aus und klicken Sie auf *Weiter*.
+.. Wählen Sie die gewünschten Rechenzentrumsobjekte für die geschützten und Recovery-Standorte aus und klicken Sie auf *Zuordnungen hinzufügen*.
 .. Klicken Sie auf *Weiter*, nachdem Zuordnungen erfolgreich erstellt wurden.
 .. Wählen Sie das zuvor verwendete Objekt aus, um eine umgekehrte Zuordnung zu erstellen, und klicken Sie dann auf *Fertig stellen*.
 

@@ -1,0 +1,36 @@
+---
+permalink: manage/protect-cluster.html 
+sidebar: sidebar 
+keywords: vVols datastore,delete vVol 
+summary: Mit der Aktion „Datastore löschen“ wird der Datastore gelöscht. Im Falle eines NFS- oder VMFS-Datenspeichers wird ein Dialogfeld mit der Liste der VMs angezeigt, die den Datenspeicher verwenden. 
+---
+= Schützen des Host-Clusters
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revdate: ONTAP tools for VMware vSphere manages protection of a host cluster.
+
+
+Alle Datastores, die zur ausgewählten SVM gehören (und auf einem oder mehreren Hosts des Clusters gemountet), werden unter einem Host-Cluster (für SMAS) geschützt.
+
+.Voraussetzungen
+Stellen Sie sicher, dass die folgenden Bedingungen erfüllt sind, bevor Sie den Host-Cluster schützen: . Der Host-Cluster verfügt nur über Datastores von einer SVM. Die SVM (SB)-Version sollte größer als 9.15.1 sein. Auf dem Host-Cluster gemountete Datastores sollten nicht auf einem Host außerhalb des Clusters gemountet werden. . Bei allen Datenspeichern, die auf dem Host-Cluster gemountet werden, müssen es sich um VMFS-Datastores handeln. . Alle FlexVol/LUN, die auf dem Host-Cluster gemountete Datastores bilden, sollten nicht Teil einer bestehenden CG sein. . FlexVol oder LUNs sollten nicht Teil einer SnapMirror Beziehung sein
+
+.Schritte
+. Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
+. Klicken Sie mit der rechten Maustaste auf einen Host-Cluster, und wählen Sie dann *NetApp ONTAP Tools* > *Cluster schützen* aus.
+. Geben Sie im Fenster Cluster schützen die Schutzeinstellungen für die zu schützenden Datastores ein. Der Host-Cluster kann nur Datastores von einer SVM (Cluster) aufweisen.
+. Wählen Sie einen der ONTAP-Zielcluster und die Storage VM-Option aus.
+. Aktivieren Sie das Kontrollkästchen *Enable local Snapshot*, um eine lokale Snapshot-Richtlinie an die Backing-Volumes der Datastores anzuhängen.
+. Aktivieren Sie *Enable SnapMirror* Checkbox to and *Add Relationship*, um die Datastores mit der ausgewählten AutomaticatedFailoverDuplex Policy, dem Ziel-Cluster und der Ziel-Storage-VM zu schützen.
+. Für eine einheitliche Konfiguration wählen Sie *Uniform Host Configuration* Umschalttaste auf true.
+. Bietet *Host Proximity* oder *Access* für jeden Host, abhängig von der einheitlichen Auswahl der Umschalttaste für die Hostkonfiguration.
+. Wählen Sie *Hinzufügen*.
+. Überprüfen Sie die Übersichtsseite, und wählen Sie Schützen.
+
+
+Im vCenter wird eine Aufgabe erstellt. Verwenden Sie die generierte Job-ID, um die Aufgabe zu überwachen.

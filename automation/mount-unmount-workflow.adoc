@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST APIs, swagger 
 summary: 'Sie können einen VMware Virtual Volumes (VVols)-Datastore auf einen oder mehrere zusätzliche Hosts mounten, um zusätzlichen Hosts den Storage-Zugriff zu ermöglichen. Sie können VVols-Datastore mithilfe von APIs abmounten.' 
 ---
-= Mounten und Unmounten von VVols Datastore
+= Mounten und unmounten Sie einen VVols Datastore
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

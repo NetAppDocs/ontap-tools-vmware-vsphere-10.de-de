@@ -6,7 +6,7 @@ entries:
   entries:
   - title: Mounten von NFS- und VMFS-Datastores
     url: "/manage/mount-datastores-on-host.html"
-  - title: Montieren Sie den VVols-Datastore
+  - title: Mounten Sie einen VVols Datastore
     url: "/manage/mount-a-vvols-datastore.html"
   - title: Redimensionierung von NFS- und VMFS-Datenspeichern
     url: "/manage/resize-datastores.html"
@@ -28,7 +28,7 @@ entries:
   url: "/manage/manage-vcenter.html"
 - title: Verwalten von Zertifikaten
   url: "/manage/certificate-manage.html"
-- title: Verwalten von igroup- und Exportrichtlinien
+- title: Verwalten von Initiatorgruppen und Exportrichtlinien
   url: "/manage/igroup-management.html"
 - title: Zugriff auf ONTAP Tools für die VMware vSphere Wartungskonsole
   entries:
@@ -66,3 +66,5 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: Volumes bereinigen
   url: "/manage/delete-deployment.html"
+- title: Schützen des Host-Clusters
+  url: "/manage/protect-cluster.html"

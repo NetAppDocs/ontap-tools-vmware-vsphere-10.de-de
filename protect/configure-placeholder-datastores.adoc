@@ -30,5 +30,5 @@ Sie sollten einen Platzhalterdatenspeicher konfigurieren, um einen Platz im vCen
 
 NOTE: Als Platzhalter-Datenspeicher können lokale oder Remote-Standorte verwendet werden und sollten nicht repliziert werden.
 
-. Wiederholen Sie die Schritte 3 bis 5, um einen Platzhalter-Datenspeicher für den Recovery-Standort zu konfigurieren.
+. Wiederholen Sie die Schritte 3 bis 5, um einen Platzhalterdatenspeicher für den Recovery-Standort zu konfigurieren.
 

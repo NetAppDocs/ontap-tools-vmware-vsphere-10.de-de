@@ -13,7 +13,7 @@ summary: Sie können die .ova-Datei für ONTAP-Tools für VMware vSphere von der
 [role="lead"]
 Sie können die herunterladen `.zip` Datei, die Binärdateien (_.ova_) und signierte Zertifikate für ONTAP-Tools für VMware vSphere vom enthält https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Website"^].
 
-Nach Abschluss der Implementierung werden die ONTAP Tools für VMware vSphere und VASA-Produkte in Ihrer Umgebung installiert. ONTAP Tools für VMware vSphere funktionieren standardmäßig, sobald Sie sich für das nachfolgende Implementierungsmodell entscheiden und wählen aufgrund Ihrer Anforderungen, ob Sie VASA Provider aktivieren möchten. Siehe link:../configure/registration-process.html["Registrieren Sie den VASA Provider mit einer vCenter Server-Instanz"] Entsprechende Details.
+Nach Abschluss der Implementierung werden die ONTAP Tools für VMware vSphere und VASA-Produkte in Ihrer Umgebung installiert. ONTAP Tools für VMware vSphere funktionieren standardmäßig, sobald Sie das Implementierungsmodell ausgewählt haben und anhand Ihrer Anforderungen auswählen, ob VASA Provider aktiviert werden soll. Weitere Informationen finden Sie unter link:../configure/registration-process.html["Registrieren Sie den VASA Provider mit einer vCenter Server-Instanz"] .
 
 
 
@@ -30,8 +30,8 @@ Erstellen Sie die Inhaltsbibliothek mithilfe der folgenden Schritte:
 
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
 . Wählen Sie die horizontalen Ellipsen neben vSphere Client aus und wählen Sie *Content Library*.
-. Wählen Sie *Create* auf der rechten Seite.
+. Wählen Sie auf der rechten Seite die Option *Erstellen*.
 . Geben Sie einen Namen für die Bibliothek ein, und erstellen Sie die Inhaltsbibliothek.
 . Navigieren Sie zu der von Ihnen erstellten Inhaltsbibliothek.
-. Wählen Sie auf der rechten Seite *actions* aus und wählen Sie *Import item* und importieren Sie die OVA-Datei.
+. Wählen Sie *actions* rechts auf der Seite aus und wählen Sie *Import item* und importieren Sie die OVA-Datei.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Daten verwenden. 
 ---
-= Storage-Back-End hinzufügen
+= Fügen Sie ein Storage-Back-End hinzu
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,18 +15,17 @@ Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Daten verwe
 
 *Über diese Aufgabe*
 
-Diese Aufgabe unterstützt Sie beim Onboarding eines ONTAP-Clusters. Wenn Sie mit dem ONTAP Tools Manager ein Storage Back-End hinzufügen, wird das Storage Back-End dem globalen Cluster hinzugefügt. Ordnen Sie das globale Cluster einer vCenter Server-Instanz zu, um den SVM-Benutzer für die Bereitstellung von VVols-Datastores zu aktivieren.
+Diese Aufgabe unterstützt Sie beim Onboarding eines ONTAP-Clusters. Wenn Sie mit dem ONTAP Tools Manager ein Storage Back-End hinzufügen, wird das Storage Back-End dem globalen Cluster hinzugefügt. Ordnen Sie das globale Cluster einer vCenter Server-Instanz zu, um einen SVM-Benutzer für die Bereitstellung von VVols-Datastores zu aktivieren.
 
 
-NOTE: Wenn Sie ein Storage-Back-End mit der vSphere Client-UI hinzufügen, unterstützt der VVols-Datastore das direkte Hinzufügen eines SVM-Benutzers nicht.
+NOTE: Wenn Sie mithilfe der vSphere Client-UI ein Storage-Back-End hinzufügen, unterstützt VVols Datastore das direkte Hinzufügen eines SVM-Benutzers nicht.
 
 
 
 == Fügen Sie mithilfe des ONTAP Tools Managers das Storage-Back-End hinzu
 
 
-NOTE: Ein Storage-Back-End ist global verfügbar, wenn sie über den ONTAP Tools Manager oder die ONTAP Tools APIs hinzugefügt wird. Ein Storage-Back-End ist lokal, wenn es über die vCenter Server-APIs hinzugefügt wird.
-In einer mandantenfähigen Einrichtung können Sie beispielsweise ein Storage-Back-End (Cluster) global und eine SVM lokal hinzufügen, um die SVM-Benutzeranmeldeinformationen zu verwenden.
+NOTE: Ein Storage-Back-End ist global verfügbar, wenn sie über den ONTAP Tools Manager oder die ONTAP Tools APIs hinzugefügt wird. Ein Storage-Back-End ist lokal, wenn es über die vCenter Server-APIs hinzugefügt wird. So können Sie beispielsweise in einer mandantenfähigen Einrichtung ein globales Storage-Back-End (Cluster) und eine lokale SVM hinzufügen, um die SVM-Benutzeranmeldeinformationen zu verwenden.
 
 *Schritte*
 
@@ -37,7 +36,7 @@ In einer mandantenfähigen Einrichtung können Sie beispielsweise ein Storage-Ba
 . Geben Sie die IP-Adresse des Servers oder den FQDN, den Benutzernamen und das Kennwort ein, und wählen Sie *Hinzufügen*.
 +
 
-NOTE: IPV4- und IPV6-Management-LIFs werden unterstützt. SVM-benutzerbasierte Anmeldedaten mit Management-LIFs werden ebenfalls unterstützt.
+NOTE: IPV4- und IPV6-Management-LIFs werden unterstützt. Auch die benutzerbasierten SVM-Anmeldedaten mit Management-LIFs werden unterstützt.
 
 
 
@@ -48,10 +47,10 @@ NOTE: IPV4- und IPV6-Management-LIFs werden unterstützt. SVM-benutzerbasierte A
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
 . Klicken Sie auf der Shortcuts-Seite unter dem Plug-ins-Bereich auf *NetApp ONTAP Tools*.
 . Navigieren Sie im linken Bereich der ONTAP-Tools zu *Speicher-Backends* und wählen Sie *Hinzufügen*.
-. Geben Sie im Fenster *Add Storage Backend* die IP-Adresse, den Benutzernamen, das Kennwort und die Portdetails des Servers an, und klicken Sie auf *Add*
+. Geben Sie im Fenster *Add Storage Backend* die IP-Adresse, den Benutzernamen, das Passwort und die Port-Details des Servers an und klicken Sie auf *Add*.
 +
 
-NOTE: Sie können Cluster-basierte Anmeldedaten und IPV4- und IPV6-Management-LIFs hinzufügen oder SVM-basierte Anmeldedaten mit der Management-LIF der SVM bereitstellen, um den SVM-Benutzer direkt hinzuzufügen.
+NOTE: Sie können Cluster-basierte Anmeldedaten und IPV4- und IPV6-Management-LIFs hinzufügen oder SVM-basierte Anmeldedaten mit der Management-LIF der SVM bereitstellen, um einen SVM-Benutzer direkt hinzuzufügen.
 
 
 

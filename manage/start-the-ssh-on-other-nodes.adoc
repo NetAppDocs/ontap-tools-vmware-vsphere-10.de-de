@@ -19,7 +19,7 @@ Die VASA Provider-Erweiterung sollte für Ihre vCenter Server-Instanz aktiviert 
 
 *Über diese Aufgabe*
 
-Führen Sie dieses Verfahren für jeden der Nodes vor dem Upgrade durch.
+Führen Sie dieses Verfahren vor dem Upgrade für jeden der Nodes durch.
 
 *Schritte*
 

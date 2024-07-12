@@ -17,7 +17,7 @@ Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Daten verwe
 
 == Storage erkennen
 
-Sie können die Erkennung eines Storage-Backends nach Bedarf ausführen, ohne auf die geplante Erkennung warten zu müssen, um die Speicherdetails zu aktualisieren.
+Sie können die Erkennung eines Storage-Back-End nach Bedarf ausführen, ohne auf eine geplante Erkennung warten zu müssen, um die Speicherdetails zu aktualisieren.
 
 Führen Sie die folgenden Schritte aus, um die Speicher-Back-Ends zu ermitteln.
 
@@ -32,9 +32,9 @@ Sie können den Fortschritt im Fenster Letzte Aufgaben verfolgen.
 
 
 
-== Storage-Back-End ändern
+== Speicherbackends ändern
 
-Befolgen Sie die Schritte in diesem Abschnitt, um das vorhandene Speicher-Back-End zu ändern.
+Befolgen Sie die Schritte in diesem Abschnitt, um ein Speicher-Back-End zu ändern.
 
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
 . Klicken Sie auf der Shortcuts-Seite unter dem Plug-ins-Bereich auf *NetApp ONTAP Tools*.
@@ -43,22 +43,21 @@ Befolgen Sie die Schritte in diesem Abschnitt, um das vorhandene Speicher-Back-E
 Sie können den Fortschritt im Fenster Letzte Aufgaben verfolgen.
 
 
-Sie können den Änderungsvorgang für globale ONTAP-Cluster mithilfe des ONTAP Tools Managers mit den folgenden Schritten durchführen
+Sie können den Änderungsvorgang für globale ONTAP-Cluster mithilfe des ONTAP Tools Managers mit den folgenden Schritten durchführen.
 
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalanceIP:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Seitenleiste Speicher-Back-Ends aus.
-. Wählen Sie das zu ändernde Speicher-Back-End aus
+. Wählen Sie das zu ändernde Speicher-Back-End aus.
 . Klicken Sie auf das vertikale Ellipsenmenü und wählen Sie *Ändern*.
 . Sie können die Anmeldeinformationen oder den Port ändern. Geben Sie den *Username* und das *Passwort* ein, um das Speicher-Backend zu ändern.
 
 
 
 
-== Entfernen Sie das Storage-Back-End
+== Entfernen Sie die Speicher-Back-Ends
 
-Sie müssen alle mit dem Speicher-Back-End verbundenen Datenspeicher löschen, bevor Sie das Speicher-Back-End entfernen.
-Gehen Sie wie folgt vor, um das Speicher-Back-End zu entfernen.
+Sie müssen alle mit dem Speicher-Back-End verbundenen Datenspeicher löschen, bevor Sie das Speicher-Back-End entfernen. Gehen Sie wie folgt vor, um ein Speicher-Back-End zu entfernen.
 
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
 . Klicken Sie auf der Shortcuts-Seite unter dem Plug-ins-Bereich auf *NetApp ONTAP Tools*.

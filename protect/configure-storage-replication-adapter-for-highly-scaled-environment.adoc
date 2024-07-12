@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Sie sollten die Storage-Timeout-Intervalle gemäß den empfohlenen Einstellungen für Storage Replication Adapter\(SRA \) konfigurieren, um in stark skalierten Umgebungen eine optimale Leistung zu erzielen.' 
 ---
-= SRA für hochskalierbare Umgebung konfigurieren
+= Konfiguration von SRA für hochskalierte Umgebungen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -54,7 +54,7 @@ Legen Sie einen hohen Wert fest (z. B. 99999).
 |===
 Sie sollten auch die aktivieren `StorageProvider.autoResignatureMode` Option.
 
-Weitere Informationen zum Ändern der Speicheranbieter-Einstellungen finden Sie in der VMware-Dokumentation.
+Weitere Informationen zum Ändern der Einstellungen für Storage Provider finden Sie in der VMware-Dokumentation.
 
 https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Dokumentation zu VMware vSphere: Ändern der Storage Provider-Einstellungen"]
 
@@ -67,6 +67,6 @@ Wenn Sie auf ein Timeout klicken, erhöhen Sie die Werte von `storage.commandTim
 
 NOTE: Das angegebene Zeitüberschreitungsintervall ist der Höchstwert. Sie müssen nicht warten, bis die maximale Zeitüberschreitung erreicht ist. Die meisten Befehle sind innerhalb des festgelegten maximalen Timeout-Intervalls abgeschlossen.
 
-Die VMware Dokumentation zum Ändern der SAN-Provider-Einstellungen enthält weitere Informationen.
+Weitere Informationen finden Sie in der VMware-Dokumentation zum Ändern der SAN-Provider-Einstellungen.
 
 https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Dokumentation zum VMware Site Recovery Manager: Storage-Einstellungen ändern"]
