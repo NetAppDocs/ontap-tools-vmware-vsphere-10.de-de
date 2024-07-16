@@ -67,7 +67,7 @@ NOTE: Wenn der SVM-Umfang aktiviert ist, sollten Sie bereits die SVM-Unterstütz
 . Geben Sie den ONTAP Cluster oder die SVM ONTAP/SVM-Daten-LIF ein. Die Daten-LIF sollte zum ausgewählten Protokoll gehören. Wenn beispielsweise das iSCSI-Protokoll ausgewählt ist, sollte eine iSCSI-Daten-LIF angegeben werden.
 . Bei Storage VM können Sie entweder die Standard-Storage-VM-Details Ihres ONTAP angeben oder eine neue Storage-VM erstellen. Geben Sie den Wert nicht in das Feld *Storage VM* ein, wenn die Option SVM-Scoping aktivieren ausgewählt ist, da dieses Feld ignoriert wird.
 . Geben Sie den ONTAP/SVM-Benutzernamen ein. Der Benutzername und das Passwort für ONTAP/SVM sind erforderlich, damit Trident Volumes für die Speicherung der Services-Daten im Falle einer erweiterten Implementierung oder HA-Implementierung erstellt und die Daten bei einem Node-Ausfall von Volumes wiederhergestellt werden können.
-. Geben Sie das ONTAP/SVM-Passwort ein. Das ONTAP/SVM-Anmeldepasswort für diese Storage-VM sollte die nachfolgenden Sonderzeichen (€,',“) nicht enthalten.
+. Geben Sie das ONTAP/SVM-Passwort ein.
 . Die primäre VM ist standardmäßig aktiviert. Ändern Sie diese Auswahl nicht.
 +
 .. Geben Sie im Fenster *Template anpassen* > *Node Configuration* die Netzwerkeigenschaften des OVA ein.

@@ -188,10 +188,6 @@ Der empfohlene Arbeitsspeicher gemäß der Größe der Implementierung und pro N
   <block id="87c93b9816d806cccc58f0b610872eda" category="list-text">Eingabe<block ref="a87ff679a2f3e71d9181a67b7542122c" prefix=" " category="inline-code"></block> Wählen Sie Support und Diagnose aus.</block>
   <block id="ef7a1860bfa2c5f2ea33155989f85ee5" category="list-text">Eingabe<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> Wählen Sie Access Diagnostic Shell aus.</block>
   <block id="78efad1f6bb75b53e0c5236fd154c135" category="list-text">Eingabe<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> Fortfahren.</block>
-  <block id="6e1ee8250e4dc3ce6e26c0ebdbaab54a" category="list-text">Aktualisieren Sie die Anmeldeinformationen nach Bedarf:</block>
-  <block id="512e6df6579ba9be187fcdaf015cd5e6" category="paragraph">otv-Update --ontapBenutzername &lt;new username&gt; --ontapPasswort &lt;new password&gt;</block>
-  <block id="7291058dd83795e1ab1d74629e7b59d5" category="paragraph">otv-Update --vcenterBenutzername &lt;new username&gt; --vcenterPasswort &lt;new password&gt;</block>
-  <block id="1c7a1c71a372b297fb2ddde652f24fcc" category="paragraph">otv-Update --dataLif &lt;New Datalif IP&gt;</block>
   <block id="f2bf379ad5a0f05a54bbcdb5678a796e" category="inline-image-macro">Wiedergabetaste</block>
   <block id="0b8a80106a177e9178ec383905046532" category="cell">*Konsolenmenü*</block>
   <block id="2c639d8cf692c100e3eba8b611821414" category="cell">*Optionen*</block>
@@ -1696,7 +1692,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
 Wenn die Bereitstellungsaufgabe erstellt wird, wird der Fortschritt in der vSphere-Taskleiste angezeigt.
 . Schalten Sie die VM nach Abschluss der Aufgabe ein.</block>
   <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">VCenter 7.0U3</block>
-  <block id="b5a405460149721025d3f0b33b133321" category="list-text">Geben Sie das ONTAP/SVM-Passwort ein. Das ONTAP/SVM-Anmeldepasswort für diese Storage-VM sollte die nachfolgenden Sonderzeichen (€,',“) nicht enthalten.</block>
   <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">+
 <block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
   <block id="99126fb772977a83acb4723e429a29c0" category="admonition">Stellen Sie keine ONTAP-Tools VMware vSphere Virtual Machine auf einem von ihm gemanagten VVols Datastore bereit.</block>
@@ -1825,9 +1820,6 @@ Führen Sie den folgenden Befehl aus, um den ersten Initiatorgruppennamen zu fin
   <block id="62d979a8af29380891d017376cb44c65" category="section-title">Entfernen Sie die Speicher-Back-Ends</block>
   <block id="9ca9be4cf1830049310642af0d8597cf" category="paragraph">Sie müssen alle mit dem Speicher-Back-End verbundenen Datenspeicher löschen, bevor Sie das Speicher-Back-End entfernen. Gehen Sie wie folgt vor, um ein Speicher-Back-End zu entfernen.</block>
   <block id="492536f303a280d3ebdae80179b9c31a" category="list-text">Klicken Sie im rechten Fensterbereich auf die Registerkarte *Configure*.</block>
-  <block id="167eaea484341a685fe24829668ec35c" category="list-text">Führen Sie zum Aktualisieren der ONTAP-Anmeldeinformationen den folgenden Befehl aus:</block>
-  <block id="a2e55f135d38f547623aac8e3523ca89" category="list-text">Führen Sie zum Aktualisieren der vCenter-Anmeldeinformationen den folgenden Befehl aus:</block>
-  <block id="4b2505432ca227b6c7b2991e5b223d7d" category="list-text">Führen Sie zum Aktualisieren der Daten-LIF den Befehl aus:</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">Klicken Sie im rechten Fensterbereich auf die Registerkarte *Monitor*.</block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">Fügen Sie dem vCenter-Server ONTAP-Tools für VMware vSphere Storage Provider hinzu und <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block>.</block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">Sobald der alte VASA-Provider angehalten wurde, erfolgt ein Failover von vCenter Server zu ONTAP-Tools für VMware vSphere. Der Zugriff auf alle Datenspeicher und VMs erfolgt über ONTAP Tools für VMware vSphere.</block>
@@ -1867,4 +1859,8 @@ Führen Sie den folgenden Befehl aus, um den ersten Initiatorgruppennamen zu fin
   <block id="33857256a63a7aef7c5bdd248e2cbd12" category="summary">Beim Upgrade von ONTAP Tools für VMware vSphere 10.0 und 10.1 auf 10.1 wird ein Recovery-Volume erstellt und alle erforderlichen Details in das Recovery-Volume übernommen.</block>
   <block id="05138d33f74ef24966432b76ee85d18f" category="paragraph">Beim Upgrade von ONTAP Tools für VMware vSphere 10.0 und 10.1 auf 10.1 wird ein Recovery-Volume erstellt und alle erforderlichen Details in das Recovery-Volume übernommen. Das Recovery Volume kann verwendet werden, um die ONTAP Tools für die Einrichtung von VMware vSphere wiederherzustellen, wenn Sie Ihre Konfiguration wiederherstellen müssen. Wenn Sie ein Upgrade der ONTAP Tools auf Patch-Ebene für VMware vSphere 10.1 durchführen, wird dasselbe Recovery-Volume verwendet und die Details aktualisiert. Upgrade wird sowohl für HA-Implementierungen als auch für Implementierungen ohne HA unterstützt.</block>
   <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">Dokumentation zu ONTAP Tools für VMware vSphere 10.1</block>
+  <block id="344e7fea24fbe3dae5345953d18ee85c" category="list-text">Geben Sie das ONTAP/SVM-Passwort ein.</block>
+  <block id="cea5a13834803a12adaeb249165351df" category="list-text">Geben Sie ein<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> , um das Menü Systemkonfiguration auszuwählen.</block>
+  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Geben Sie ein,<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> um die ONTAP-Anmeldedaten zu ändern.</block>
+  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Geben Sie ein,<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> um die vCenter-Anmeldedaten zu ändern.</block>
 </blocks>
