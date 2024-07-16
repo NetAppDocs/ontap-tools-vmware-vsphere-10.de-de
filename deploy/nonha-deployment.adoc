@@ -62,7 +62,7 @@ image:../media/ha-deploy-config.png["Bereitstellungskonfiguration"]
 
 NOTE: Wenn der SVM-Umfang aktiviert ist, sollten Sie bereits die SVM-Unterstützung mit der Management-IP-Adresse aktiviert haben.
 
-. Wählen Sie im Feld *Protokoll* entweder NFS, iSCSI, NVME/TCP oder NVME/FC aus.
+. Wählen Sie entweder NFS oder iSCSI im Feld *Protokoll* aus.
 . Geben Sie den ONTAP-Cluster oder die IP-Adresse des SVM-Managements in das Feld *ONTAP/SVM-Management-LIF* ein.
 . Geben Sie den ONTAP Cluster oder die SVM ONTAP/SVM-Daten-LIF ein. Die Daten-LIF sollte zum ausgewählten Protokoll gehören. Wenn beispielsweise das iSCSI-Protokoll ausgewählt ist, sollte eine iSCSI-Daten-LIF angegeben werden.
 . Bei Storage VM können Sie entweder die Standard-Storage-VM-Details Ihres ONTAP angeben oder eine neue Storage-VM erstellen. Geben Sie den Wert nicht in das Feld *Storage VM* ein, wenn die Option SVM-Scoping aktivieren ausgewählt ist, da dieses Feld ignoriert wird.

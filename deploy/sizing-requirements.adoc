@@ -47,7 +47,7 @@ Der empfohlene Arbeitsspeicher gemäß der Größe der Implementierung und pro N
 | Storage, Host und Applikationen | Mindestversionsanforderungen 
 
 
-| ONTAP | Neueste Patch-Version von ONTAP 9.13.1, 9.14.1 und 9.15.1. 
+| ONTAP | Neueste Patch-Version von ONTAP 9.12.1, 9.13.1 oder 9.14.1 
 
 
 | ESXi-Hosts | ESXi 7.0.3 
@@ -59,7 +59,7 @@ Der empfohlene Arbeitsspeicher gemäß der Größe der Implementierung und pro N
 | VASA-Provider | 3.0 
 
 
-| OVA-Anwendung | 10,2 
+| OVA-Anwendung | 10,1 
 |===
 Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu den unterstützten Versionen von ONTAP, vCenter Server, ESXi-Hosts und Plug-in-Applikationen.
 
