@@ -24,9 +24,6 @@ NOTE: Benutzer können auf Cluster-Ebene oder direkt auf Storage Virtual Machine
 * Sie sollten sich mit Administratorrechten für das Speicher-Back-End angemeldet haben.
 
 
-
-NOTE: Benutzer können auf Cluster-Ebene oder auf SVM-Ebene erstellt werden. Sie können auch Benutzer erstellen, ohne die Datei user_roles.json zu verwenden. Falls dies der Fall ist, müssen Sie über einen Mindestsatz an Berechtigungen auf SVM-Ebene verfügen.
-
 *Schritte*
 
 . Extrahieren Sie die heruntergeladene Datei _\https://<loadbalancerIP>:8443/Virtualization/user-Privileges/users_roles.zip_.

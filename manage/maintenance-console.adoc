@@ -18,7 +18,7 @@ Sie sollten VMware Tools nach der Bereitstellung von ONTAP Tools für VMware vSp
 
 NOTE: Sie sollten ein Kennwort für das festlegen `diag` Benutzer, während die Ferndiagnose aktiviert wird.
 
-Sie sollten die Registerkarte *Zusammenfassung* Ihrer bereitgestellten ONTAP-Tools für VMware vSphere verwenden, um auf die Wartungskonsole zuzugreifen. Wenn Sie auf klicken image:../media/launch-maintenance-console.gif["Wiedergabetaste"], Die Wartungskonsole wird gestartet.
+Sie sollten die Registerkarte *Zusammenfassung* Ihrer bereitgestellten ONTAP-Tools für VMware vSphere verwenden, um auf die Wartungskonsole zuzugreifen. Wenn Sie auf klickenimage:../media/launch-maintenance-console.gif["Wiedergabetaste"], wird die Wartungskonsole gestartet.
 
 |===
 

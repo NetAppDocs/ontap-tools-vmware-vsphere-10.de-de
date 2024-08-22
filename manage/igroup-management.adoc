@@ -11,7 +11,7 @@ summary: In ONTAP werden Exportrichtlinien verwendet, um Hosts auf den Volume-Da
 
 
 [role="lead"]
-In ONTAP werden Exportrichtlinien verwendet, um Hosts einen Datenzugriff auf Volume-Pfaden zu ermöglichen und Initiatorgruppen werden verwendet, um ESXi Hosts den Datenzugriff auf dem Datenpfad mit der logischen Einheitennummer (LUN) zu ermöglichen.
+In ONTAP werden Exportrichtlinien verwendet, um Hosts einen Datenzugriff auf Volume-Pfaden zu ermöglichen und Initiatorgruppen werden verwendet, um ESXi Hosts den Datenzugriff auf dem Datenpfad mit der logischen Einheitennummer (LUN) zu ermöglichen. Die ONTAP Tools für VMware vSphere erleichtern die igroup-Erstellung und bieten umfassende, intuitive Workflows. Um Konsistenz zu gewährleisten, wird die direkte iGroup-Erstellung auf Speicherplattformen nicht unterstützt.
 
 Wenn Datastores für virtuelle Volumes erstellt oder auf Hosts in vCenter Server gemountet werden, müssen die Hosts abhängig vom Protokolltyp des Datastore Zugriff auf Volumes (NFS) oder LUNs (iSCSI) erhalten.
 

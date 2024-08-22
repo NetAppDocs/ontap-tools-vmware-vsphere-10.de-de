@@ -6,6 +6,8 @@ entries:
   url: "/deploy/sizing-requirements.html"
 - title: ONTAP Tools herunterladen
   url: "/deploy/download-ontap-tools.html"
+- title: Konfigurationseinschränkungen
+  url: "/deploy/config-limits.html"
 - title: Bereiten Sie die Implementierung von ONTAP Tools vor
   url: "/deploy/prepare-deployment.html"
 - title: Implementierung einer Single Node-Konfiguration ohne Hochverfügbarkeit

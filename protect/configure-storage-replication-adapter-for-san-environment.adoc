@@ -26,11 +26,11 @@ Die folgenden Programme sollten auf dem geschützten Standort und dem Wiederhers
 Dokumentation zur Installation von SRM befindet sich auf der VMware Site.
 
 +
-https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager - Dokumentation"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recovery Manager - Dokumentation"]
 
 * SRA
 +
-Der Adapter wird entweder auf SRM installiert.
+Der Adapter ist auf SRM installiert.
 
 
 
@@ -58,7 +58,7 @@ Die folgenden Programme sollten auf dem geschützten Standort und dem Wiederhers
 Dokumentation zur Installation von SRM finden Sie auf der VMware-Website.
 
 +
-https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager - Dokumentation"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html["VMware Site Recovery Manager - Dokumentation"]
 
 * SRA
 +

@@ -21,6 +21,12 @@ CA ist eine vertrauenswürdige Einheit, die SSL-Zertifikate (Secure Sockets Laye
 
 
 
+=== Dual-Stack
+
+Ein Dual-Stack-Netzwerk ist eine Netzwerkumgebung, die die gleichzeitige Verwendung von IPv4- und IPv6-Adressen unterstützt.
+
+
+
 === Hochverfügbarkeit
 
 Cluster Nodes werden für einen unterbrechungsfreien Betrieb in HA-Paaren konfiguriert.
