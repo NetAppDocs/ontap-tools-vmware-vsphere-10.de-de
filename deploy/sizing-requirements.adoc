@@ -49,7 +49,7 @@ link:../deploy/config-limits.html["Konfigurationsbeschränkungen für die Implem
 | Storage, Host und Applikationen | Mindestversionsanforderungen 
 
 
-| ONTAP | Neueste Patch-Version von ONTAP 9.12.1, 9.13.1 oder 9.14.1 
+| ONTAP | Neueste Patch-Version von ONTAP 9.12.1, 9.13.1, 9.14.1 und 9.15.1. 
 
 
 | ESXi-Hosts | ESXi 7.0.3 
