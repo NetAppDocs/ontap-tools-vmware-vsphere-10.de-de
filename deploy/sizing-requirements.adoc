@@ -61,7 +61,7 @@ link:../deploy/config-limits.html["Konfigurationsbeschränkungen für die Implem
 | VASA-Provider | 3.0 
 
 
-| OVA-Anwendung | 10,1 
+| OVA-Anwendung | 10,2 
 |===
 Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu den unterstützten Versionen von ONTAP, vCenter Server, ESXi-Hosts und Plug-in-Applikationen.
 

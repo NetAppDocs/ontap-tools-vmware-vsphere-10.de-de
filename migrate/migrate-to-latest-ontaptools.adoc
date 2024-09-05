@@ -32,9 +32,9 @@ NOTE: Als bestehender Benutzer müssen Sie das OVA-Backup von Ihrer aktuellen Ve
 . Lokales Storage-Back-End aus den ONTAP Tools für VMware vSphere Plug-in vCenter Server-APIs integrieren Fügen Sie Storage als lokal im Umfang enthaltenen Storage für die Migration hinzu.
 . Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xx migriert wurden, sind in den ONTAP-Tools für VMware vSphere 10.2 erst sichtbar, nachdem der Datastore-Erkennungsvorgang ausgelöst wurde. Das Auslösen kann bis zu 30 Minuten dauern. Überprüfen Sie, ob die Datastores auf der Seite „Übersicht“ der UI-Seite „ONTAP Tools for VMware vSphere Plugin“ angezeigt werden.
 . Implementieren Sie OVA für ONTAP Tools für VMware vSphere 10.1.
-. Fügen Sie die vCenter Server-Instanz hinzu, die Sie zu ONTAP-Tools für die Version VMware vSphere 10.1 migrieren möchten. Siehe link:../configure/add-vcenter.html["Fügen Sie vCenter Server-Instanzen hinzu und verwalten Sie sie"]
+. Fügen Sie die vCenter Server-Instanz hinzu, die Sie zu ONTAP-Tools für die Version VMware vSphere 10.2 migrieren möchten. Siehe link:../configure/add-vcenter.html["Fügen Sie vCenter Server-Instanzen hinzu und verwalten Sie sie"]
 . Lokales Storage-Back-End aus den ONTAP Tools für VMware vSphere Plug-in vCenter APIs integrieren Fügen Sie Storage als lokal im Umfang enthaltenen Storage für die Migration hinzu.
-. Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xx migriert wurden, sind in den ONTAP-Tools für VMware vSphere 10.1 erst sichtbar, nachdem der Datastore-Erkennungsvorgang ausgelöst wurde. Das Auslösen kann bis zu 30 Minuten dauern. Überprüfen Sie, ob die Datastores auf der Seite „Übersicht“ der UI-Seite „ONTAP Tools for VMware vSphere Plugin“ angezeigt werden.
+. Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xx migriert wurden, sind in den ONTAP-Tools für VMware vSphere 10.2 erst sichtbar, nachdem der Datastore-Erkennungsvorgang ausgelöst wurde. Das Auslösen kann bis zu 30 Minuten dauern. Überprüfen Sie, ob die Datastores auf der Seite „Übersicht“ der UI-Seite „ONTAP Tools for VMware vSphere Plugin“ angezeigt werden.
 
 
 
