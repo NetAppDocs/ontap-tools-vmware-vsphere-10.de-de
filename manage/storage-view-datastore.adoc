@@ -35,10 +35,11 @@ Die Ansicht „ONTAP Storage“ unter „Configure“ der ONTAP-Tools für VMwar
 .Schritte
 . Navigieren Sie vom vSphere Client zum VMFS-Datastore.
 . Klicken Sie im rechten Fensterbereich auf die Registerkarte *Configure*.
-. Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*. Die *Speicherdetails* und *LUN Details* werden im rechten Fensterbereich angezeigt.
+. Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*. Die Details *Speicher* und *LUN* oder *Namespace* im Fall von NVMe/TCP oder NVMe/FC werden im rechten Fensterbereich angezeigt.
 +
 ** Die Seite mit den Storage-Details enthält Informationen zu Storage-Back-Ends, Aggregaten und Volumes.
 ** Die Seite mit den LUN-Details enthält Daten zur LUN.
+** Bei Verwendung des NVMe/TCP- oder NVMe/FC-Protokolls für VMFS Datastore enthält die Seite mit den Details zum Namespace Daten zu Namespace.
 
 
 
@@ -53,6 +54,6 @@ Die Ansicht „ONTAP Storage“ unter „Configure“ der ONTAP-Tools für VMwar
 . Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*.
 . In der Ansicht ONTAP Storage werden alle Volumes aufgelistet. Sie können Speicher im ONTAP-Speicherbereich erweitern oder entfernen.
 +
-Befolgen Sie die Anweisungen unter link:../manage/expand-storage-of-vvol-datastore.html["Erweitern Sie VVols Datastores"] Abschnitt zum Hinzufügen von VVols Datastore und link:../manage/remove-storage-from-a-vvols-datastore.html["VVols Datastores werden verkleinert"] Abschnitt, um den Datastore zu löschen.
+Befolgen Sie die Anweisungen im link:../manage/expand-storage-of-vvol-datastore.html["Erweiterung des VVols Datastore"] Abschnitt zum Hinzufügen link:../manage/remove-storage-from-a-vvols-datastore.html["VVols Datastore verkleinern"]eines VVols-Datastores und  im Abschnitt zum Löschen des Datastores.
 
 

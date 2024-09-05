@@ -4,18 +4,20 @@ title: Management von ONTAP-Tools
 entries:
 - title: Managen von Datastores
   entries:
-  - title: Mounten von NFS- und VMFS-Datastores
+  - title: Mounten Sie NFS- und VMFS-Datastore
     url: "/manage/mount-datastores-on-host.html"
+  - title: Unmounten Sie den NFS- und VMFS-Datastore
+    url: "/manage/unmount-datastores-on-host.html"
   - title: Mounten Sie einen VVols Datastore
     url: "/manage/mount-a-vvols-datastore.html"
-  - title: Redimensionierung von NFS- und VMFS-Datenspeichern
+  - title: Redimensionierung des NFS- und VMFS-Datenspeichers
     url: "/manage/resize-datastores.html"
-  - title: Erweitern Sie vVol Datastores
+  - title: Erweitern Sie den vVol Datastore
     url: "/manage/expand-storage-of-vvol-datastore.html"
-  - title: VVols Datastores werden verkleinert
+  - title: VVols Datastore verkleinern
     url: "/manage/remove-storage-from-a-vvols-datastore.html"
   - title: Löschen Sie Datastores
-    url: "/manage/delete-vvols.html"
+    url: "/manage/delete-ds.html"
   - title: ONTAP-Speicheransichten für Datastores
     url: "/manage/storage-view-datastore.html"
   - title: Storage-Ansicht der virtuellen Maschine
@@ -38,7 +40,7 @@ entries:
     url: "/manage/configure-remote-diagnostic-access.html"
   - title: Starten Sie SSH auf anderen Nodes
     url: "/manage/start-the-ssh-on-other-nodes.html"
-  - title: Aktualisieren Sie die vCenter- und ONTAP-Anmeldedaten
+  - title: Aktualisieren Sie den vCenter-Server und die ONTAP-Anmeldeinformationen
     url: "/manage/update-vcenter-credentials.html"
 - title: Berichte zum ONTAP-Tool
   url: "/manage/reports.html"
@@ -66,3 +68,9 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: Volumes bereinigen
   url: "/manage/delete-deployment.html"
+- title: Verwalten Sie den Schutz des Host-Clusters
+  entries:
+  - title: Ändern Sie den Schutz des Host-Clusters
+    url: "/manage/edit-hostcluster-protection.html"
+  - title: Entfernen Sie den Host-Cluster-Schutz
+    url: "/manage/delete-hostcluster-protection.html"

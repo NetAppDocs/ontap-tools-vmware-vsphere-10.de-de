@@ -1,0 +1,14 @@
+---
+permalink: whats-new.html 
+sidebar: sidebar 
+keywords: release notes, ontap tools for VMware vSphere 
+summary: Liefert wichtige Informationen zu dieser Version der ONTAP Tools für VMware vSphere, einschließlich neuer Funktionen und Verbesserungen, Schwachstellen, bekannten Problemen, Vorsichtsmaßnahmen und Einschränkungen. 
+---
+= Was ist neu in dieser Version
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bietet wichtige Informationen zu dieser Version der ONTAP Tools für VMware vSphere.

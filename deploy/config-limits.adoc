@@ -33,6 +33,28 @@ Die folgende Tabelle bietet einen Leitfaden zur Konfiguration von ONTAP Tools f�
 
 | Hochverfügbarkeit | Groß (L) | 100 ~ | 256 [ANMERKUNG] die Anzahl der Hosts in der Tabelle zeigt die Gesamtzahl der Hosts von mehreren vCenter. | NFS, iSCSI 
 |===
+Weitere Informationen zur Größenbestimmung des Host-Systems pro Node finden Sie unter link:../deploy/sizing-requirements.html["Voraussetzungen für die Bereitstellung von ONTAP-Tools für VMware vSphere"].
+
+
+
+== ONTAP Tools für VMware vSphere – Storage Replication Adapter (SRA)
+
+Die folgende Tabelle zeigt die unterstützten Zahlen pro SRM-Instanz mit ONTAP Tools für VMware vSphere.
+
+|===
+
+
+| Gesamtzahl der virtuellen Maschinen, die für den Schutz mithilfe einer Array-basierten Replikation konfiguriert wurden | 5000 
+
+
+| Gesamtzahl der Array-basierten Replikationsschutzgruppen | 250 
+
+
+| Gesamtzahl der Schutzgruppen pro Wiederherstellungsplan | 50 
+
+
+| Anzahl replizierter Datastores | 255 
+|===
 Weitere Informationen zur Größenbestimmung des Host-Systems pro Knoten finden Sie unter link:../deploy/sizing-requirements.html["Voraussetzungen für die Bereitstellung von ONTAP-Tools für VMware vSphere"].
 
 

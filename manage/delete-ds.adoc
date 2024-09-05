@@ -1,5 +1,5 @@
 ---
-permalink: manage/delete-vvols.html 
+permalink: manage/delete-ds.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
 summary: Mit der Aktion „Datastore löschen“ wird der Datastore gelöscht. Im Falle eines NFS- oder VMFS-Datenspeichers wird ein Dialogfeld mit der Liste der VMs angezeigt, die den Datenspeicher verwenden. 
@@ -27,10 +27,10 @@ Gehen Sie wie folgt vor, um NFS-, VMFS- oder vVOL-Datastore aus ONTAP-Tools aus 
 
 .Schritte
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
-. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder einen Datastore, und wählen Sie dann *NetApp ONTAP Tools* > *Datastore löschen* aus.
+. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder einen Datastore und wählen Sie *NetApp ONTAP Tools* > *Datastore löschen*.
 +
 
-NOTE: Sie können die Datastores nicht löschen, wenn es virtuelle Maschinen gibt, die diesen Datastore verwenden. Sie müssen die virtuellen Maschinen in einen anderen Datenspeicher verschieben, bevor Sie den Datastore löschen.
+NOTE: Sie können die Datastores nicht löschen, wenn es virtuelle Maschinen gibt, die diesen Datastore verwenden. Sie müssen die virtuellen Maschinen in einen anderen Datenspeicher verschieben, bevor Sie den Datastore löschen. Sie können das Kontrollkästchen Volume delete nicht aktivieren, wenn der Datastore zu einem geschützten Host-Cluster gehört.
 
 +
 .. Im Falle eines NFS- oder VMFS-Datenspeichers wird ein Dialogfeld mit der Liste der VMs angezeigt, die den Datenspeicher verwenden.
@@ -38,4 +38,8 @@ NOTE: Sie können die Datastores nicht löschen, wenn es virtuelle Maschinen gib
 
 
 . Um die Backing Volumes auf dem ONTAP-Speicher zu löschen, wählen Sie *Delete Volumes on ONTAP Cluster* aus.
++
+
+NOTE: Sie können das Volume im ONTAP-Cluster für einen VMFS-Datastore, der Teil des geschützten Host-Clusters ist, nicht löschen.
+
 

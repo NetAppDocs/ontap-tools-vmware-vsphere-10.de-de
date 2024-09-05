@@ -2,20 +2,23 @@
 permalink: upgrade/upgrade-ontap-tools.html 
 sidebar: sidebar 
 keywords: upgrade 
-summary: Beim Upgrade von ONTAP Tools für VMware vSphere 10.0 und 10.1 auf 10.1 wird ein Recovery-Volume erstellt und alle erforderlichen Details in das Recovery-Volume übernommen. 
+summary: Upgrade wird sowohl für HA-Implementierungen als auch für Implementierungen ohne HA unterstützt. 
 ---
-= Upgraden auf die aktuelle Version von ONTAP-Tools
+= Upgrade von ONTAP Tools für VMware vSphere 10.x auf 10.2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Beim Upgrade von ONTAP Tools für VMware vSphere 10.0 und 10.1 auf 10.1 wird ein Recovery-Volume erstellt und alle erforderlichen Details in das Recovery-Volume übernommen. Das Recovery Volume kann verwendet werden, um die ONTAP Tools für die Einrichtung von VMware vSphere wiederherzustellen, wenn Sie Ihre Konfiguration wiederherstellen müssen. Wenn Sie ein Upgrade der ONTAP Tools auf Patch-Ebene für VMware vSphere 10.1 durchführen, wird dasselbe Recovery-Volume verwendet und die Details aktualisiert. Upgrade wird sowohl für HA-Implementierungen als auch für Implementierungen ohne HA unterstützt.
+Upgrade wird sowohl für HA-Implementierungen als auch für Implementierungen ohne HA unterstützt.
+
+
+NOTE: Um ein Upgrade von ONTAP Tools für VMware vSphere 10.0 auf Version 10.2 durchzuführen, müssen Sie zuerst auf ONTAP Tools für VMware vSphere 10.1 und dann auf Version 10.2 aktualisieren.
 
 *Bevor Sie beginnen*
 
-Sie müssen die folgenden Schritte ausführen, bevor Sie mit der Upgrade-Aufgabe fortfahren:
+Wenn Sie ein Upgrade von ONTAP Tools für VMware vSphere 10.0 auf 10.1 durchführen, müssen Sie die folgenden Schritte ausführen, bevor Sie mit dem Upgrade fortfahren:
 
 *Diagnose Aktivieren*
 

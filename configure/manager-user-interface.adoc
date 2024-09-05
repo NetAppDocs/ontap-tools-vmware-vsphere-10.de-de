@@ -18,8 +18,7 @@ Der ONTAP Tools Manager unterstützt Sie bei folgenden Aufgaben:
 * VCenter Server Instance Management - Hinzufügen und verwalten vCenter Server Instanzen zu ONTAP Tools.
 * Storage-Back-End-Management: Fügen Sie ONTAP Storage-Cluster zu ONTAP Tools für VMware vSphere hinzu und managen Sie sie den global integrierten vCenter Server Instanzen.
 * Log Bundle Downloads - Sammeln Sie Log-Dateien für ONTAP-Tools für VMware vSphere.
-* Zertifikatverwaltung – Ändern Sie das selbstsignierte Zertifikat in ein benutzerdefiniertes CA-Zertifikat und erneuern Sie es
-Oder aktualisieren Sie alle Zertifikate.
+* Zertifikatverwaltung - Ändern Sie das selbstsignierte Zertifikat in ein benutzerdefiniertes CA-Zertifikat und erneuern oder aktualisieren Sie alle Zertifikate des VASA-Providers.
 * Password Management - Zurücksetzen OVA-Anwendungs-Passwort für den Benutzer.
 
 

@@ -41,7 +41,7 @@ Systemkonfiguration
  a| 
 . Starten Sie die virtuelle Maschine neu
 . Virtuelle Maschine herunterfahren
-. Erstellen Sie ein Token, um das Passwort der Manager-Benutzeroberfläche zurückzusetzen
+. Ändern Sie das Benutzerpasswort „Wartung“
 . Zeitzone ändern
 . Fügen Sie den neuen NTP-Server hinzu
 . Erhöhen der Größe der Jail-Festplatte (/jail)

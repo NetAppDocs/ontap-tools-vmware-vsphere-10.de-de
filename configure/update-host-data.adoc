@@ -16,6 +16,6 @@ Sie können eine On-Demand-Erkennung auf dem ESXi-Host ausführen, um die neuest
 *Schritte*
 
 . Klicken Sie auf der VMware vSphere Web Client-Startseite auf *Hosts und Cluster*.
-. Klicken Sie mit der rechten Maustaste auf einen Host und wählen Sie dann *NetApp ONTAP Tools* > *Host-Daten aktualisieren*.
+. Klicken Sie mit der rechten Maustaste auf einen Host und wählen Sie *NetApp ONTAP Tools* > *Host-Daten aktualisieren*.
 . Wählen Sie im Popup-Fenster *Update Host Data* *Yes* aus, um die Erkennung aller verbundenen Speichersysteme neu zu starten.
 

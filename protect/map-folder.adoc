@@ -20,7 +20,7 @@ Sie sollten die geschützten und Recovery-Standorte verbunden haben.
 *Schritte*
 
 . Melden Sie sich am vCenter Server an und klicken Sie auf *Site Recovery* > *Sites*.
-. Wählen Sie Ihre geschützte Seite aus, und klicken Sie dann auf *Verwalten*.
+. Wählen Sie Ihre geschützte Site aus und klicken Sie auf *Verwalten*.
 . Wählen Sie auf der Registerkarte Verwalten die Option *Ordnerzuordnungen* aus.
 . Wählen Sie das Symbol *Ordner*, um eine neue Ordnerzuordnung zu erstellen.
 +

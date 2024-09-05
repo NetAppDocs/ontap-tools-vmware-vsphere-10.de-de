@@ -32,5 +32,7 @@ entries:
   url: "/configure/configure-user-role-and-privileges.html"
 - title: NetApp ONTAP Tools für VMware vSphere Plugin – Dashboard-Übersicht
   url: "/configure/dashboard-overview.html"
+- title: Erstellen Sie einen Host-Cluster-Schutz
+  url: "/configure/protect-cluster.html"
 - title: Erstellen eines Datenspeichers
   url: "/configure/create-vvols-datastore.html"

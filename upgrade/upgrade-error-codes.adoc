@@ -125,5 +125,23 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 
 
 | 088 | Die Konfiguration der Protokollrotation für journald ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
+
+
+| 089 | Ändern der Eigentumsrechte für die Konfigurationsdatei „Zusammenfassung Protokoll drehen“ ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
+
+
+| 091 | ISCSI-Upgrade ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
+
+
+| 092 | ISCSI-Rollback ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
+
+
+| 093 | Trident-Upgrade ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
+
+
+| 094 | Trident-Rollback ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
+
+
+| 095 | Debian-Upgrade fehlgeschlagen | Keine Wiederherstellung für debian-Upgrade. Upgrades der Services und Ausführung neuer Pods erfolgen 
 |===
 Weitere Informationen zu https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1["So stellen Sie ONTAP-Tools für VMware vSphere wieder her, wenn das Upgrade von Version 10.0 auf 10.1 fehlschlägt"]
