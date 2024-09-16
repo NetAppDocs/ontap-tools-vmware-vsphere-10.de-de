@@ -53,7 +53,7 @@ Ein NVMe Namespace ist eine Menge nicht-flüchtiger Speicher, der in logische Bl
 
 === ONTAP Tools Manager
 
-Der ONTAP Tools Manager bietet ONTAP Tools für VMware vSphere Administratoren mehr Kontrolle über die gemanagten vCenter Server Instanzen und On-Board Storage Backends. ONTAP Tools Manager unterstützt Sie beim Management von vCenter Server-Instanzen, Speicher-Back-Ends, Zertifikaten, Passwörtern und Log-Bundle-Downloads.
+Der ONTAP Tools Manager bietet ONTAP Tools für VMware vSphere Administratoren mehr Kontrolle über die gemanagten vCenter Server Instanzen und On-Board Storage Backends. ONTAP Tools Manager unterstützt Sie beim Management von vCenter Server-Instanzen, Speicher-Back-Ends, Zertifikaten, Passwörtern und Download von Protokollpaketen.
 
 
 
@@ -71,7 +71,7 @@ SnapMirror Active Sync ermöglicht Business Services auch bei einem vollständig
 
 === Storage Replication Adapter (SRA)
 
-SRA ist die Software des Storage-Anbieters, die innerhalb der SRM Appliance installiert wird. Der Adapter ermöglicht die Kommunikation zwischen Site Recovery Manager und einem Storage Controller auf Storage Virtual Machine (SVM)-Ebene und der Konfiguration auf Cluster-Ebene.
+SRA ist die spezifische Storage-Software eines Anbieters, die innerhalb der VMware Live Site Recovery Appliance installiert wird. Der Adapter ermöglicht die Kommunikation zwischen Site Recovery Manager und einem Storage Controller auf Storage Virtual Machine (SVM)-Ebene und der Konfiguration auf Cluster-Ebene.
 
 
 
@@ -111,9 +111,9 @@ VM-Storage-Richtlinien werden in vCenter Server unter Richtlinien und Profile er
 
 
 
-=== VMware Site Recovery Manager (SRM)
+=== VMware Live Site Recovery
 
-SRM bietet Business Continuity, Disaster Recovery, Standortmigration und unterbrechungsfreie Testfunktionen für virtuelle VMware-Umgebungen.
+VMware Live Site Recovery bietet Business Continuity, Disaster Recovery, Standortmigration und unterbrechungsfreie Testfunktionen für virtuelle VMware-Umgebungen.
 
 
 

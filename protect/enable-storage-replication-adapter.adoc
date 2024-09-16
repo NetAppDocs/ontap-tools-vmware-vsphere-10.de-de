@@ -22,9 +22,8 @@ ONTAP Tools für VMware vSphere bieten die Option zur Aktivierung der SRA-Funkti
 
 *Schritte*
 
-. Melden Sie sich über die URL: An der Verwaltungsschnittstelle der SRM-Appliance an `\https://:<srm_ip>:5480`, und wechseln Sie dann zu Storage Replication Adapters in der VMware SRM Appliance Management Interface.
+. Melden Sie sich über die URL: An der VMware Live Site Recovery Appliance Management Interface an `\https://:<srm_ip>:5480`, und wechseln Sie dann zu Storage Replication Adapters in VMware Live Site Recovery Appliance Management Interface.
 . Wählen Sie *New Adapter*.
-. Laden Sie das Installationsprogramm für _.tar.gz_ für das SRA-Plug-in auf SRM hoch.
-. Überprüfen Sie die Adapter erneut, um sicherzustellen, dass die Details auf den SRM Storage Replication Adaptern aktualisiert werden
-Seite.
+. Laden Sie das Installationsprogramm _.tar.gz_ für das SRA-Plug-in auf VMware Live Site Recovery hoch.
+. Überprüfen Sie die Adapter erneut, um sicherzustellen, dass die Details auf der Seite VMware Live Site Recovery Storage Replication Adapters aktualisiert werden.
 

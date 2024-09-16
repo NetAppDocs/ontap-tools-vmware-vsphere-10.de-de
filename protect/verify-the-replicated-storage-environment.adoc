@@ -16,7 +16,7 @@ Sie sollten überprüfen, ob der geschützte Standort und der Recovery-Standort 
 *Was Sie brauchen*
 
 * Sie sollten Ihr Storage-System konfiguriert haben.
-* Sie sollten den geschützten Standort und den Recovery-Standort mit dem SRM Array Manager gekoppelt haben.
+* Sie sollten den geschützten Standort und den Recovery-Standort mit dem VMware Live Site Recovery Array Manager gekoppelt haben.
 * Bevor Sie den Test-Failover und den Failover-Vorgang für SRA durchführen, sollten Sie die FlexClone Lizenz und die SnapMirror Lizenz aktiviert haben.
 
 

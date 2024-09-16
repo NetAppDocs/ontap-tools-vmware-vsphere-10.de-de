@@ -39,7 +39,7 @@ Weitere Informationen zur Größenbestimmung des Host-Systems pro Node finden Si
 
 == ONTAP Tools für VMware vSphere – Storage Replication Adapter (SRA)
 
-Die folgende Tabelle zeigt die unterstützten Zahlen pro SRM-Instanz mit ONTAP Tools für VMware vSphere.
+In der folgenden Tabelle sind die Zahlen aufgeführt, die pro VMware Live Site Recovery-Instanz mithilfe von ONTAP Tools für VMware vSphere unterstützt werden.
 
 |===
 | *VCenter-Bereitstellungsgröße* | *Klein* | *Mittel* 
@@ -59,12 +59,12 @@ Die folgende Tabelle zeigt die unterstützten Zahlen pro SRM-Instanz mit ONTAP T
 
 | Anzahl der VMs | 4000 | 7000 
 |===
-In der folgenden Tabelle sind die SRM-Anzahl und die entsprechenden ONTAP Tools für die VMware vSphere Implementierungsgröße aufgeführt.
+In der folgenden Tabelle sind die Anzahl der VMware Live Site Recovery und die entsprechenden ONTAP Tools für die VMware vSphere Implementierungsgröße aufgeführt.
 
 |===
 
 
-| *Anzahl der SRM-Instanzen* | *Größe der Bereitstellung von ONTAP-Tools* 
+| *Anzahl der VMware Live Site Recovery Instanzen* | *Größe der Bereitstellung von ONTAP-Tools* 
 
 
 | Bis Zu 4 | Klein 

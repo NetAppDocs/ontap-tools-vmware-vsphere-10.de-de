@@ -141,3 +141,80 @@ Verwenden von APIs:
 
 | /API | Schreibgeschützt | Cluster-Benutzer sollten über diese Berechtigung verfügen, um den korrekten Speicher-Back-End-Status zu erhalten. Andernfalls zeigt der ONTAP Tools Manager „unbekannten“ Speicher-Backend-Status an. 
 |===
+
+
+=== Upgrade von ONTAP Tools für VMware vSphere 10.1 Benutzer auf 10.2 Benutzer
+
+Wenn es sich bei den ONTAP-Tools für VMware vSphere 10.1-Benutzer um einen Cluster-scoped-Benutzer handelt, der mit der json-Datei erstellt wurde, führen Sie die folgenden Befehle auf der ONTAP-CLI mit dem Admin-Benutzer aus, um ein Upgrade auf Version 10.2 durchzuführen.
+
+Produktfunktionen:
+
+* VSC
+* VSC und VASA Provider
+* VSC und SRA
+* VSC, VASA Provider und SRA.
+
+
+Cluster-Privileges:
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Namespace show“ -Access all_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme subsystem show“ -Access all_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem Host show“ -Access all_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem map show“ -Access all_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme show-Interface“ -Access read_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem Host add“ -Access all_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem map add“ -Access all_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Namespace delete“ -Access all_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme subsystem delete“ -Access all_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem Host remove“ -Access all_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem map remove“ -Access all_
+
+Wenn es sich bei den ONTAP Tools für VMware vSphere 10.1 Benutzer um einen im SVM-Umfang enthaltenen Benutzer handelt, der mit der json-Datei erstellt wurde, führen Sie die folgenden Befehle an der ONTAP-CLI aus, wobei Sie den Admin-Benutzer zum Upgrade auf Version 10.2 verwenden.
+
+SVM-Privileges:
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Namespace show“ -Access all -vserver <vserver-name>_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme subsystem show“ -Access all -vserver <vserver-name>_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem Host show“ -Access all -vserver <vserver-name>_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem map show“ -Access all -vserver <vserver-name>_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme show-Interface“ -Access read -vserver <vserver-name>_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem Host add“ -Access all -vserver <vserver-name>_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem map add“ -Access all -vserver <vserver-name>_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Namespace delete“ -Access all -vserver <vserver-name>_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme subsystem delete“ -Access all -vserver <vserver-name>_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem Host remove“ -Access all -vserver <vserver-name>_
+
+_Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem map remove“ -Access all -vserver <vserver-name>_
+
+Durch Hinzufügen des Befehls _vserver nvme Namespace show_ und _vserver nvme-Subsystem show_ zu der vorhandenen Rolle werden die folgenden Befehle hinzugefügt.
+
+[listing]
+----
+vserver nvme namespace create
+
+vserver nvme namespace modify
+
+vserver nvme subsystem create
+
+vserver nvme subsystem modify
+
+----

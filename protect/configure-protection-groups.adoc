@@ -17,7 +17,7 @@ Sie sollten Schutzgruppen erstellen, um eine Gruppe virtueller Maschinen am gesc
 
 Stellen Sie sicher, dass die Quell- und Zielstandorte für Folgendes konfiguriert sind:
 
-* Dieselbe Version von SRM wurde installiert
+* Dieselbe Version von VMware Live Site Recovery ist installiert
 * Virtual Machines
 * Gepaarte geschützte Standorte und Recovery-Standorte
 * Quell- und Ziel-Datastores sollten auf den jeweiligen Sites gemountet werden

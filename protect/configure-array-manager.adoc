@@ -2,7 +2,7 @@
 permalink: protect/configure-array-manager.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Sie können Storage Replication Adapter \(SRA\) mithilfe des Array Manager-Assistenten von Site Recovery Manager \(SRM\) konfigurieren, um Interaktionen zwischen SRM und Storage Virtual Machines \(SVMs\) zu ermöglichen.' 
+summary: 'Sie können Storage Replication Adapter \(SRA\) mit dem Array Manager-Assistenten von VMware Live Site Recovery konfigurieren, um Interaktionen zwischen VMware Live Site Recovery und virtuellen Storage-Maschinen \(SVMs\) zu ermöglichen.' 
 ---
 = Konfigurieren Sie SRA mit Array Manager
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: 'Sie können Storage Replication Adapter \(SRA\) mithilfe des Array Man
 
 
 [role="lead"]
-Sie können Storage Replication Adapter (SRA) mithilfe des Array Manager-Assistenten von Site Recovery Manager (SRM) konfigurieren, um Interaktionen zwischen SRM und Storage Virtual Machines (SVMs) zu ermöglichen.
+Sie können Storage Replication Adapter (SRA) mithilfe des Array Manager-Assistenten von VMware Live Site Recovery konfigurieren, um Interaktionen zwischen VMware Live Site Recovery und Storage Virtual Machines (SVMs) zu ermöglichen.
 
 *Was Sie brauchen*
 
-* Sie sollten die geschützten Standorte und Recovery-Standorte in SRM gekoppelt haben.
+* Sie sollten die geschützten Standorte und Recovery-Standorte in VMware Live Site Recovery gekoppelt haben.
 * Sie sollten Ihren Onboarding Storage konfiguriert haben, bevor Sie den Array Manager konfigurieren.
 * Die SnapMirror Beziehungen zwischen den geschützten Standorten und den Recovery-Standorten sollten konfiguriert und repliziert werden.
 * Sie sollten die SVM-Management-LIFs aktivieren, um die Mandantenfähigkeit zu aktivieren.
@@ -25,8 +25,8 @@ SRA unterstützt das Management auf Cluster-Ebene und das Management der SVM. We
 
 *Schritte*
 
-. Klicken Sie in SRM auf *Array Manager* und dann auf *Array Manager hinzufügen*.
-. Geben Sie die folgenden Informationen ein, um das Array in SRM zu beschreiben:
+. Klicken Sie in VMware Live Site Recovery auf *Array Manager* und dann auf *Array Manager hinzufügen*.
+. Geben Sie die folgenden Informationen ein, um das Array in VMware Live Site Recovery zu beschreiben:
 +
 .. Geben Sie einen Namen ein, um den Array-Manager im Feld *Anzeigename* zu identifizieren.
 .. Wählen Sie im Feld *SRA Typ* *NetApp Storage Replication Adapter für ONTAP* aus.

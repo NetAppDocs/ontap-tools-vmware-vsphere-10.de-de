@@ -49,9 +49,9 @@ Stellen Sie vor der Migration sicher, dass sich einer der Standorte in einem ges
 NOTE: Führen Sie keine Migration durch, wenn das Failover gerade abgeschlossen ist und der erneute Schutz aussteht. Führen Sie die erneute Sicherung durch, und führen Sie die Migration durch.
 Das gilt auch für das Testen des Wiederherstellungsplans. Sobald das Testen des Wiederherstellungsplans abgeschlossen ist, bereinigen Sie die Test-Recovery und starten Sie dann die Migration.
 
-. Führen Sie die folgenden Schritte aus, um ONTAP-Tools für den SRA-Release-Adapter VMware vSphere 9.xx in der SRM-Benutzeroberfläche zu löschen:
+. Führen Sie die folgenden Schritte aus, um ONTAP-Tools für VMware vSphere 9.xx Release SRA-Adapter in VMware Live Site Recovery UI zu löschen:
 +
-.. Rufen Sie die Seite SRM Configuration Management auf
+.. Wechseln Sie zur Seite VMware Live Site Recovery Configuration Management
 .. Gehen Sie zum Abschnitt Storage Replication Adapter
 .. Klicken Sie auf das Kebab-Menü und dann auf *Konfiguration zurücksetzen*
 .. Klicken Sie auf das Kebab-Menü und wählen Sie *Löschen*
@@ -60,8 +60,8 @@ Führen Sie diese Schritte sowohl an Sicherungs- als auch an Recovery-Standorten
 
 
 
-. Installieren Sie ONTAP-Tools für den VMware vSphere 10.1 SRA-Adapter anhand der Schritte in auf Schutz- und Recovery-Seiten link:../protect/configure-on-srm-appliance.html["Konfigurieren Sie SRA auf der SRM-Appliance"]
-. Führen Sie auf der SRM-UI-Seite die Vorgänge *Arrays ermitteln* und *Geräte ermitteln* aus, und überprüfen Sie, ob die Geräte vor der Migration so angezeigt werden, wie es war.
+. Installieren Sie ONTAP-Tools für den VMware vSphere 10.1 SRA-Adapter anhand der Schritte in auf Schutz- und Recovery-Seiten link:../protect/configure-on-srm-appliance.html["Konfigurieren Sie SRA auf der VMware Live Site Recovery-Appliance"]
+. Führen Sie auf der VMware Live Site Recovery UI-Seite *Discover Arrays* und *Discover Devices* aus und überprüfen Sie, ob die Geräte vor der Migration so angezeigt werden wie vor der Migration.
 
 
 

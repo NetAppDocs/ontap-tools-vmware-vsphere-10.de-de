@@ -18,7 +18,7 @@ Sie sollten Ihre Ressourcen am geschützten Standort und am Recovery-Standort zu
 Sie sollten die geschützten und Recovery-Standorte verbunden haben.
 
 
-NOTE: Im Site Recovery Manager (SRM) können Ressourcen in Ressourcen-Pools, ESXi Hosts oder vSphere Clustern zusammengefasst werden.
+NOTE: In VMware Live Site Recovery können Ressourcen Ressourcen-Pools, ESXi-Hosts oder vSphere-Cluster sein.
 
 *Schritte*
 

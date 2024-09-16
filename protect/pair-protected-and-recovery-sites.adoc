@@ -14,11 +14,11 @@ summary: 'Sie sollten die mit Ihrem vSphere-Client erstellten geschützten und R
 Sie sollten die geschützten und Recovery-Standorte, die mit Ihrem vSphere Client erstellt wurden, koppeln, um Storage Replication Adapter (SRA) zur Erkennung der Speichersysteme zu aktivieren.
 
 
-NOTE: Storage Replication Adapter (SRA) unterstützt keine Fan-out-SnapMirror-Konfigurationen. Bei SnapMirror Fan-out-Konfigurationen wird ein Quell-Volume auf zwei unterschiedliche Ziele repliziert. Diese stellen ein Problem während der Wiederherstellung dar, wenn SRM die Virtual Machine vom Ziel wiederherstellen muss.
+NOTE: Storage Replication Adapter (SRA) unterstützt keine Fan-out-SnapMirror-Konfigurationen. Bei SnapMirror Fan-out-Konfigurationen wird ein Quell-Volume auf zwei unterschiedliche Ziele repliziert. Diese stellen während der Wiederherstellung ein Problem dar, wenn VMware Live Site Recovery die virtuelle Maschine vom Ziel wiederherstellen muss.
 
 *Was Sie brauchen*
 
-* Sie sollten Site Recovery Manager (SRM) auf den geschützten und Recovery-Standorten installieren lassen.
+* VMware Live Site Recovery sollte auf den geschützten und Recovery-Standorten installiert sein.
 * SRA sollte auf den geschützten und den Recovery-Standorten installiert sein.
 
 
