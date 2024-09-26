@@ -4,7 +4,7 @@ title: Konfigurieren von ONTAP Tools
 entries:
 - title: Benutzeroberfläche von ONTAP Tools Manager
   url: "/configure/manager-user-interface.html"
-- title: Hinzufügen und Verwalten von vCenter Server
+- title: Fügen Sie vCenter Server hinzu
   url: "/configure/add-vcenter.html"
 - title: Registrieren Sie den VASA Provider bei vCenter Server
   url: "/configure/registration-process.html"
@@ -22,14 +22,14 @@ entries:
     url: "/configure/esxi-host-values.html"
 - title: Erkennen von Storage-Systemen und Hosts
   url: "/configure/discover-storage-systems-and-hosts.html"
+- title: Konfigurieren Sie ONTAP-Benutzerrollen und -Berechtigungen
+  url: "/configure/configure-user-role-and-privileges.html"
 - title: Fügen Sie ein Storage-Back-End hinzu
   url: "/configure/add-storage-backend.html"
 - title: Ordnen Sie ein Storage-Back-End einer vCenter Server-Instanz zu
   url: "/configure/associate-storage-backend.html"
 - title: Konfigurieren Sie den Netzwerkzugriff
   url: "/configure/configure-network-access.html"
-- title: Konfigurieren Sie ONTAP-Benutzerrollen und -Berechtigungen
-  url: "/configure/configure-user-role-and-privileges.html"
 - title: NetApp ONTAP Tools für VMware vSphere Plugin – Dashboard-Übersicht
   url: "/configure/dashboard-overview.html"
 - title: Erstellen Sie einen Host-Cluster-Schutz

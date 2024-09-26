@@ -11,19 +11,16 @@ summary: Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Da
 
 
 [role="lead"]
-Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Daten verwenden.
+Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Daten verwenden. Sie können ein Storage-Backend entweder mit dem ONTAP Tools Manager oder der vSphere Client UI hinzufügen.
 
 *Über diese Aufgabe*
 
 Diese Aufgabe unterstützt Sie beim Onboarding eines ONTAP-Clusters. Wenn Sie mit dem ONTAP Tools Manager ein Storage Back-End hinzufügen, wird das Storage Back-End dem globalen Cluster hinzugefügt. Ordnen Sie das globale Cluster einer vCenter Server-Instanz zu, um einen SVM-Benutzer für die Bereitstellung von VVols-Datastores zu aktivieren.
 
-
-NOTE: Wenn Sie mithilfe der vSphere Client-UI ein Storage-Back-End hinzufügen, unterstützt VVols Datastore das direkte Hinzufügen eines SVM-Benutzers nicht.
-
-
-
-== Fügen Sie mithilfe des ONTAP Tools Managers das Storage-Back-End hinzu
-
+[role="tabbed-block"]
+====
+.Verwenden des ONTAP Tools Managers
+--
 
 NOTE: Ein Storage-Back-End ist global verfügbar, wenn sie über den ONTAP Tools Manager oder die ONTAP Tools APIs hinzugefügt wird. Ein Storage-Back-End ist lokal, wenn es über die vCenter Server-APIs hinzugefügt wird. So können Sie beispielsweise in einer mandantenfähigen Einrichtung ein globales Storage-Back-End (Cluster) und eine lokale SVM hinzufügen, um die SVM-Benutzeranmeldeinformationen zu verwenden.
 
@@ -40,9 +37,11 @@ NOTE: IPV4- und IPV6-Management-LIFs werden unterstützt. Auch die benutzerbasie
 
 
 
+--
+.Verwenden der vSphere-Client-UI
+--
 
-
-== Storage-Back-End mithilfe der vSphere Client-UI hinzufügen:
+NOTE: Wenn Sie mithilfe der vSphere Client-UI ein Storage-Back-End hinzufügen, unterstützt VVols Datastore das direkte Hinzufügen eines SVM-Benutzers nicht.
 
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
 . Klicken Sie auf der Shortcuts-Seite unter dem Plug-ins-Bereich auf *NetApp ONTAP Tools*.
@@ -55,3 +54,6 @@ NOTE: Sie können Cluster-basierte Anmeldedaten und IPV4- und IPV6-Management-LI
 
 
 Die Liste wird aktualisiert, und das neu hinzugefügte Storage-Back-End wird in der Liste angezeigt.
+
+--
+====

@@ -3,18 +3,8 @@ section: deploy
 title: Implementieren Sie ONTAP-Tools für VMware vSphere
 entries:
 - title: Voraussetzungen
-  url: "/deploy/sizing-requirements.html"
-- title: Konfigurationseinschränkungen
-  url: "/deploy/config-limits.html"
-- title: Bereiten Sie die Implementierung von ONTAP Tools vor
-  url: "/deploy/prepare-deployment.html"
-- title: ONTAP Tools herunterladen
-  url: "/deploy/download-ontap-tools.html"
-- title: Implementierung einer Single Node-Konfiguration ohne Hochverfügbarkeit
-  url: "/deploy/nonha-deployment.html"
-- title: Implementierung der HA-Konfiguration
-  url: "/deploy/ha-three-node-deployment.html"
-- title: Recovery
-  url: "/deploy/recovery-deployment.html"
+  url: "/deploy/prerequisites.html"
+- title: Implementierung von ONTAP Tools
+  url: "/deploy/ontap-tools-deployment.html"
 - title: Fehlercodes für die Bereitstellung
   url: "/deploy/deployment-error-codes.html"

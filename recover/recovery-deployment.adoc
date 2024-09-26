@@ -1,5 +1,5 @@
 ---
-permalink: deploy/recovery-deployment.html 
+permalink: recover/recovery-deployment.html 
 sidebar: sidebar 
 keywords:  
 summary: Wenn Sie Ihre ONTAP-Tools für die VMware vSphere-Einrichtung verlieren, aber Ihre ONTAP funktionieren lassen, können Sie ONTAP-Tools für die VMware vSphere-Einrichtung mithilfe des ONTAP wiederherstellen. Wenn Sie das Setup verlieren, fahren Sie das Setup ordnungsgemäß herunter. 
@@ -58,4 +58,4 @@ Die angegebenen Werte werden erneut validiert. Mit den ONTAP-Tools für VMware v
 
 Nach der erfolgreichen Installation zeigt die Webkonsole den Status der ONTAP Tools für VMware vSphere an.
 
-Nach erfolgreicher Installation sollten Sie die Hardwareanforderungen gemäß den Richtlinien auf der Seite manuell bearbeiten link:../deploy/sizing-requirements.html["Voraussetzungen für die Bereitstellung von ONTAP-Tools für VMware vSphere"] .
+Nach erfolgreicher Installation sollten Sie die Hardwareanforderungen gemäß den Richtlinien auf der Seite manuell bearbeiten link:../deploy/prerequisites.html["Voraussetzungen für die Bereitstellung von ONTAP-Tools für VMware vSphere"] .

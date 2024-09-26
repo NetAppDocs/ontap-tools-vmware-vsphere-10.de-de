@@ -143,7 +143,7 @@ Verwenden von APIs:
 |===
 
 
-=== Upgrade von ONTAP Tools für VMware vSphere 10.1 Benutzer auf 10.2 Benutzer
+== Upgrade von ONTAP Tools für VMware vSphere 10.1 Benutzer auf 10.2 Benutzer
 
 Wenn es sich bei den ONTAP-Tools für VMware vSphere 10.1-Benutzer um einen Cluster-scoped-Benutzer handelt, der mit der json-Datei erstellt wurde, führen Sie die folgenden Befehle auf der ONTAP-CLI mit dem Admin-Benutzer aus, um ein Upgrade auf Version 10.2 durchzuführen.
 

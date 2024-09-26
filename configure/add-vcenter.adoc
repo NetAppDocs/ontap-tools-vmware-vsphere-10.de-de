@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'VCenter Server-Instanzen sind die zentralen Management-Plattformen zur Steuerung von Hosts, Virtual Machines (VM) und Storage-Back-Ends.' 
 ---
-= Fügen Sie vCenter Server-Instanzen hinzu und verwalten Sie sie
+= Fügen Sie vCenter Server-Instanzen hinzu
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,10 +12,6 @@ summary: 'VCenter Server-Instanzen sind die zentralen Management-Plattformen zur
 
 [role="lead"]
 VCenter Server stellt die zentrale Managementplattform bereit, mit der Sie Hosts, Virtual Machines (VMs) und Storage-Back-Ends steuern können.
-
-
-
-== Fügen Sie eine vCenter Server-Instanz hinzu
 
 *Über diese Aufgabe*
 
@@ -36,34 +32,6 @@ Wenn Sie ONTAP Tools eine vCenter Server-Instanz hinzufügen, werden die folgend
 * Zum Verwalten der Benutzer werden benutzerdefinierte Rollen erstellt.
 
 
-
-
-== Registrieren Sie ONTAP-Tools für das VMware vSphere Plug-in mit vCenter Server-Instanz
-
 Wenn Sie eine vCenter Server-Instanz hinzufügen, werden die ONTAP-Tools für das VMware vSphere-Plug-in automatisch als Remote-Plug-in für vCenter Server registriert. Das Plug-in wird auf den vSphere-Verknüpfungen der Benutzeroberfläche angezeigt.
 
 Das Plug-in wird mit einem Schlüssel _com.netapp.otv_ für die vCenter Server Instanz registriert und ist im ExtensionManager der vCenter Server Instanz zu sehen.
-
-
-
-== Heben Sie die Registrierung von ONTAP Tools für das VMware vSphere Plug-in auf
-
-Sie können die ONTAP-Tools für das VMware vSphere Plug-in mithilfe der folgenden Schritte von einer vCenter Server-Instanz abmelden.
-
-*Schritte*
-
-. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalanceIP:8443/virtualization/ui/`
-. Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
-. Wählen Sie in der Seitenleiste vCenter aus.
-. Klicken Sie auf die vertikalen Ellipsen gegenüber dem vCenter, das Sie entfernen möchten, und wählen Sie die Option *Entfernen* aus.
-+
-
-NOTE: Sie können eine vCenter Server-Instanz nicht entfernen, wenn eine Speicherzuweisung mit ihr verbunden ist. Sie müssen die Zuordnung entfernen, bevor Sie die vCenter Server-Instanz entfernen.
-
-
-
-Wenn Sie vCenter Server-Instanzen in ONTAP-Tools entfernen, werden die folgenden Aktionen automatisch ausgeführt:
-
-* Die Registrierung des Plug-ins wurde aufgehoben.
-* Plug-in-Berechtigungen und Plug-in-Rollen werden entfernt.
-
