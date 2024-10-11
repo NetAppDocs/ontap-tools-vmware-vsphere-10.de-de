@@ -14,7 +14,10 @@ summary: Bei der Migration von Storage-Daten werden Storage-Back-Ends manuell ü
 Bei der Migration von Storage-Daten werden Storage-Back-Ends manuell über REST-APIs integriert. Bei der Migration von VASA Provider-Daten werden die Daten aus der bestehenden Derby-Datenbank exportiert und in die MongoDB-Datenbank importiert.
 
 
-NOTE: Es wird empfohlen, die ONTAP-Tools für das Setup von VMware vSphere 9.xx nur zu migrieren, wenn das Setup die Funktion des VASA-Providers alleine bedient.
+NOTE: Es wird empfohlen, die ONTAP-Tools für das Setup von VMware vSphere 9.x nur zu migrieren, wenn das Setup die Funktion des VASA-Providers alleine bedient.
+
+
+NOTE: Nach der Migration von ONTAP Tools für VMware vSphere 9.x zu 10.2 funktionieren VVols-Datastores mit NVMe/FC-Protokoll nicht, da ONTAP Tools 10.2 nur NVMe-of bei VMFS-Datastores unterstützt.
 
 *Über diese Aufgabe*
 
