@@ -308,9 +308,6 @@ Sie können auf die Kopfzeile klicken, um die 10 wichtigsten Datastores für die
   <block id="27e514c64c8a3970155422f887b4e4c9" category="cell">ESXi-Host-Compliance-Karte</block>
   <block id="37a7aee5902e5e8b7d36af678ff3baf3" category="cell">Diese Karte zeigt den allgemeinen Compliance-Status aller ESXi-Hosts (für das ausgewählte vCenter)-Einstellungen in Bezug auf die empfohlenen NetApp-Host-Einstellungen nach Einstellungsgruppe/Kategorie an.
 Sie können auf den Link Empfohlene Einstellungen anwenden klicken, um die empfohlenen Einstellungen anzuwenden. Klicken Sie auf Probleme/unbekannt, um die Liste der Hosts anzuzeigen.</block>
-  <block id="ea87c4ef97995827b2d23fec795f9cbd" category="summary">Sie können eine On-Demand-Erkennung auf dem ESXi-Host ausführen, um die neuesten Updates für die Storage-Daten zu erhalten.</block>
-  <block id="de458ad6ecb99cfc8e4cc7fa762462c4" category="doc">Aktualisieren Sie die Hostdaten</block>
-  <block id="6099322beed408d39a0c31a402ba9f04" category="list-text">Wählen Sie im Popup-Fenster *Update Host Data* *Yes* aus, um die Erkennung aller verbundenen Speichersysteme neu zu starten.</block>
   <block id="1772747eceb4be4c72a7b0ba5c7c5a67" category="summary">Sie können neue Benutzerrollen für das Management von Storage-Back-Ends mit der JSON-Datei konfigurieren, die in den ONTAP Tools für VMware vSphere und ONTAP System Manager zur Verfügung gestellt wird.</block>
   <block id="fde3f7a850bbaaac2a3706bf8c7df54c" category="doc">Konfigurieren Sie ONTAP-Benutzerrollen und -Berechtigungen</block>
   <block id="322c3ffbc77c8245a48d32406a927fb6" category="paragraph">Sie können neue Benutzerrollen und -Berechtigungen für das Management von Storage-Back-Ends mit der JSON-Datei konfigurieren, die mit den ONTAP Tools für VMware vSphere und ONTAP System Manager bereitgestellt wird.</block>
@@ -1301,9 +1298,7 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="721041095b64df665034c0b19c967475" category="sidebar">Hochverfügbarkeit für ONTAP Tools für VMware vSphere</block>
   <block id="01c23a6022de21870627c656bac73ece" category="sidebar">Automatisierung mit REST-APIs</block>
   <block id="f724dfae8a2bb3b34e049dcedf88d10d" category="sidebar">Sicherung von Data Stores und Virtual Machines</block>
-  <block id="30dcbadaeab2008f15a279a602f8b6e2" category="sidebar">Konfiguration des Storage-Systems für Disaster Recovery</block>
   <block id="25890161c3df1f2618234e8f48e2c18b" category="sidebar">Konfiguration von SRA für hochskalierte Umgebungen</block>
-  <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">Geschützte Standorte und Recovery-Standorte konfigurieren</block>
   <block id="a239701adb72159a71164b036c18a53a" category="sidebar">Konfigurieren Sie geschützte Ressourcen und Recovery-Standortressourcen</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">Überprüfen Sie die replizierten Storage-Systeme</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">Upgrade von ONTAP-Tools</block>
@@ -1524,7 +1519,6 @@ Führen Sie den folgenden Befehl aus, um den ersten Initiatorgruppennamen zu fin
   <block id="521a15c47fb41d8055141333f4c3f248" category="inline-link">Fügen Sie Software-NVMe-over-RDMA- oder NVMe-over-TCP-Adapter hinzu</block>
   <block id="7b30cf0bf941c59665059610f32765b2" category="list-text">Folgen Sie bei VMware vSphere 7 den Anweisungen auf der VMware-Site<block ref="78ea54819b62ddbcd655a4671d8a5b88" category="inline-link-rx"></block>, um NVMe/TCP-Softwareadapter zu konfigurieren. Folgen Sie bei VMware vSphere 8 Version,<block ref="d7f2ab4a5e61632cb53ab17b5775b973" category="inline-link-rx"></block> um die NVMe/TCP-Softwareadapter zu konfigurieren.</block>
   <block id="f897e941469c1def0ceaad5904784393" category="inline-link">Konfigurieren von NVMe/TCP mit vSphere 8.0 Update 1 und ONTAP 9.13.1 für VMFS-Datenspeicher</block>
-  <block id="81dc7c047ef799c2030ebccbe36d3322" category="list-text">Führen Sie <block ref="6c4ebf1ca886332539cd9c26d849d11e" category="inline-link-macro-rx"></block>eine Aktion auf dem ESXi-Host aus. Weitere Informationen finden Sie unter<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
   <block id="b52744b7fe6a50a639b45ebe19c17f96" category="list-text">Wenn Sie das NVME/FC-Protokoll verwenden, führen Sie die folgenden Schritte aus, um den ESXi-Host zu konfigurieren:</block>
   <block id="0d2e4cff54d6f550e6b15a47007a161c" category="list-text">Aktivieren Sie NVMe over Fabrics (NVMe-of) auf Ihren ESXi Hosts.</block>
   <block id="802068251371051bc6ae5a5f001b4460" category="list-text">Vollständiges SCSI-Zoning</block>
@@ -1839,7 +1833,6 @@ Führen Sie den folgenden Befehl aus, um den ersten Initiatorgruppennamen zu fin
   <block id="c93b5a9d65c77be9a5dfa309362afe22" category="sidebar">Fügen Sie vCenter Server hinzu</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">Implementierung von ONTAP Tools</block>
   <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">ONTAP-Tools wiederherstellen</block>
-  <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">Stellen Sie Ihre ONTAP-Tools wieder her</block>
   <block id="65411d7178112726bcaf549fb0afd1f2" category="paragraph">Die Migration wird von den ONTAP-Tools für VMware vSphere 9.10D2, 9.11D4, 9.12D1 und 9.13D2 bis Version 10.2 unterstützt.</block>
   <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">Erfahren Sie mehr über den Vergleich der Funktionen der ONTAP Tools für VMware vSphere 9 und der ONTAP Tools für VMware vSphere 10</block>
   <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">Vergleich der Funktionen der ONTAP Tools für VMware vSphere 9 und der ONTAP Tools für VMware vSphere 10</block>
@@ -1905,4 +1898,8 @@ Führen Sie den folgenden Befehl aus, um den ersten Initiatorgruppennamen zu fin
   <block id="78ea61f628036a39a60fcb38cdcb0095" category="list-text">Geben Sie im Dialogfeld *Site Recovery Manager Servers* die Adresse des Platform Services Controller des geschützten Standorts ein, und klicken Sie dann auf *Next*.</block>
   <block id="310782e61fec1bb5ccb93c0b13bfd162" category="list-text">Stellen Sie sicher, dass drei freie IP-Adressen für die Implementierung ohne HA verfügbar sind: Eine freie IP-Adresse für den Load Balancer und eine freie IP-Adresse für die Kubernetes-Kontrollebene und eine IP-Adresse für den Node. Für HA-Implementierung benötigen Sie zusammen mit diesen drei IP-Adressen zwei weitere IP-Adressen für den zweiten und dritten Node. Hostnamen sollten den freien IP-Adressen auf dem DNS zugeordnet werden, bevor sie sowohl für HA- als auch für nicht-HA-Bereitstellungen zugewiesen werden. Alle fünf IP-Adressen in der HA-Implementierung und die drei IP-Adressen ohne HA-Implementierung sollten sich in demselben VLAN befinden, das für die Implementierung ausgewählt wurde.</block>
   <block id="598d1a03a9fabe277211c3c65adbfbc6" category="admonition">Der Anwendungsbenutzername und das Kennwort werden während der Bereitstellung von ONTAP-Tools festgelegt. Dies ist für die Registrierung des VASA Providers/SRA erforderlich.</block>
+  <block id="9fc56e301e08de92885a49e832294c9b" category="list-text">Führen Sie <block ref="d7dfa373f3b590500a261c503f3d702f" category="inline-link-macro-rx"></block>eine Aktion auf dem ESXi-Host aus. Weitere Informationen finden Sie unter<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block></block>
+  <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">Schützen mit Host-Cluster-Schutz</block>
+  <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Schutz mit SRA-Sicherung</block>
+  <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Stellen Sie die Einrichtung Ihrer ONTAP Tools wieder her</block>
 </blocks>

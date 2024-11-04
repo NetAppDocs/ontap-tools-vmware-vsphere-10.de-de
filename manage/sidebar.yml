@@ -2,8 +2,12 @@
 section: manage
 title: Management von ONTAP-Tools
 entries:
+- title: NetApp ONTAP Tools für VMware vSphere Plugin – Dashboard-Übersicht
+  url: "/configure/dashboard-overview.html"
 - title: Managen von Datastores
   entries:
+  - title: Erstellen eines Datenspeichers
+    url: "/configure/create-vvols-datastore.html"
   - title: Mounten Sie NFS- und VMFS-Datastore
     url: "/manage/mount-datastores-on-host.html"
   - title: Unmounten Sie den NFS- und VMFS-Datastore
@@ -54,6 +58,8 @@ entries:
     url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
   - title: VASA-Bereinigung
     url: "/manage/delete-virtual-machines.html"
+- title: Erkennen von Storage-Systemen und Hosts
+  url: "/configure/discover-storage-systems-and-hosts.html"
 - title: Ändern der ESXi-Hosteinstellungen
   url: "/manage/edit-esxi-host-settings.html"
 - title: Passwörter verwalten
