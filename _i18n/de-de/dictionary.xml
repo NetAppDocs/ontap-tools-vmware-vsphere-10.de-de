@@ -243,8 +243,6 @@ Der empfohlene Arbeitsspeicher gemäß der Größe der Implementierung und pro N
   <block id="7cd974572a0712e3f4e007a1ceb0f760" category="paragraph">Wenn Sie vCenter Server-Instanzen in ONTAP-Tools entfernen, werden die folgenden Aktionen automatisch ausgeführt:</block>
   <block id="32d5cbccaec76a2688c3f202f4a0fc0c" category="list-text">Die Registrierung des Plug-ins wurde aufgehoben.</block>
   <block id="bc4832cad0eb15905b3945a4b071a06d" category="list-text">Plug-in-Berechtigungen und Plug-in-Rollen werden entfernt.</block>
-  <block id="d5fb672b62a493a68492dfcdac746c0b" category="summary">Vergewissern Sie sich, dass die Onboarding-SVM unter VASA Provider über die vCenter Client-UI aufgeführt ist.</block>
-  <block id="53d752e3cc33b6d74616d71f03425e0f" category="doc">Überprüfen Sie den registrierten VASA-Anbieter</block>
   <block id="b05db788b95e64cca7587ea1c9a8d4fe" category="paragraph">Vergewissern Sie sich, dass der Onboarding VASA-Provider in der vCenter Client-UI und über die Remote-Plug-in-UI unter VASA Provider aufgeführt ist.</block>
   <block id="12c4b643913312ffb0ca49cedfcedd35" category="list-text">Gehen Sie wie folgt vor, um VASA Provider von der vCenter-Client-Benutzeroberfläche zu überprüfen:</block>
   <block id="45b4fd4eef700c8aca7d8e7d745b8cbd" category="list-text">Überprüfen Sie unter Storage Provider/Storage Back-Ends, ob der Onboarding VASA Provider korrekt aufgeführt ist.</block>
@@ -1902,4 +1900,5 @@ Führen Sie den folgenden Befehl aus, um den ersten Initiatorgruppennamen zu fin
   <block id="1bf63b567c68de7fcd78fcc89f42f93c" category="sidebar">Schützen mit Host-Cluster-Schutz</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Schutz mit SRA-Sicherung</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Stellen Sie die Einrichtung Ihrer ONTAP Tools wieder her</block>
+  <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*Nach Ihrer Beendigung*</block>
 </blocks>
