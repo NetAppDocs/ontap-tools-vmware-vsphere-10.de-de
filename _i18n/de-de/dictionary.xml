@@ -1901,4 +1901,6 @@ Führen Sie den folgenden Befehl aus, um den ersten Initiatorgruppennamen zu fin
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Schutz mit SRA-Sicherung</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Stellen Sie die Einrichtung Ihrer ONTAP Tools wieder her</block>
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*Nach Ihrer Beendigung*</block>
+  <block id="7770bd163d7ff3ef18fb8fde03d271ba" category="list-text">Benennen Sie im HA-Modus der Bereitstellung die VM-Namen nicht nach der Bereitstellung um.</block>
+  <block id="c1d3c828ba9f7365c33657c18574ce0d" category="admonition">Wenn Sie ONTAP-Tools für VMware vSphere 9.13P1 verwenden, sollten Sie vor der Migration auf Version 10.2 ein Upgrade auf 9.13D2 durchführen.</block>
 </blocks>

@@ -135,6 +135,7 @@ NOTE: Implementieren Sie keine ONTAP-Tools für die virtuelle VMware vSphere-Mas
 . Wählen Sie das Zielnetzwerk für jedes Quellnetzwerk aus und klicken Sie auf *Weiter*.
 . Füllen Sie im Fenster *Vorlage anpassen* die erforderlichen Felder aus und klicken Sie auf *Weiter*.
 +
+** Benennen Sie im HA-Modus der Bereitstellung die VM-Namen nicht nach der Bereitstellung um.
 ** Wenn der SVM-Bereich aktiviert ist, sollte die SVM-Unterstützung mit der Management-IP-Adresse bereits aktiviert sein.
 ** Die hier bereitgestellten Informationen werden während des Installationsprozesses auf korrekte Muster überprüft. Im Falle einer Abweichung wird eine Fehlermeldung auf der Webkonsole angezeigt, und Sie werden aufgefordert, falsche Informationen zu korrigieren.
 ** Host-Namen müssen aus Groß-/Kleinbuchstaben (A–Z), Ziffern (0–9) oder dem Bindestrich (-) bestehen. Wenn Sie Dual-Stack konfigurieren möchten, geben Sie den Hostnamen an, der der IPv6-Adresse zugeordnet ist.

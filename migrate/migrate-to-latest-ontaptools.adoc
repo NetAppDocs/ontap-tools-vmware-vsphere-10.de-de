@@ -24,6 +24,9 @@ NOTE: Nach der Migration von ONTAP Tools für VMware vSphere 9.x zu 10.2 funktio
 Die Migration wird von den ONTAP-Tools für VMware vSphere 9.10D2, 9.11D4, 9.12D1 und 9.13D2 bis Version 10.2 unterstützt.
 
 
+NOTE: Wenn Sie ONTAP-Tools für VMware vSphere 9.13P1 verwenden, sollten Sie vor der Migration auf Version 10.2 ein Upgrade auf 9.13D2 durchführen.
+
+
 NOTE: Als bestehender Benutzer müssen Sie das OVA-Backup von Ihrer aktuellen Version durchführen, bevor Sie ein Upgrade auf die Patch-Versionen durchführen.
 
 
