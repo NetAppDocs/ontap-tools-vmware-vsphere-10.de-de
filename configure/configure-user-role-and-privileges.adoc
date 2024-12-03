@@ -28,20 +28,24 @@ NOTE: Benutzer können auf Cluster-Ebene oder direkt auf Storage Virtual Machine
 
 . Extrahieren Sie die heruntergeladene Datei _\https://<loadbalancerIP>:8443/Virtualization/user-Privileges/users_roles.zip_.
 . Sie können über die Cluster-Management-IP-Adresse des Clusters auf ONTAP System Manager zugreifen.
-. Melden Sie sich als Cluster- oder SVM-Benutzer an.
-. Wählen Sie *Cluster* > *Einstellungen* > *Benutzer und Rollen*.
-. Wählen Sie unter Benutzer * Hinzufügen *.
-. Wählen Sie im Dialogfeld * Benutzer hinzufügen* die Option *Virtualisierungsprodukte* aus.
-. *Browse*, um die JSON-Datei für ONTAP-Berechtigungen auszuwählen und hochzuladen.
+. Melden Sie sich mit dem Admin-Privileges beim Cluster an. So konfigurieren Sie einen Benutzer:
++
+.. Um Cluster-ONTAP-Tools zu konfigurieren, wählen Sie *Cluster* > *Einstellungen* > *Benutzer und Rollen* aus.
+.. Um den Benutzer der SVM-ONTAP-Tools zu konfigurieren, wählen Sie den Bereich *Speicher-SVM* > *Einstellungen* > *Benutzer und Rollen* aus.
+.. Wählen Sie unter Benutzer * Hinzufügen *.
+.. Wählen Sie im Dialogfeld * Benutzer hinzufügen* die Option *Virtualisierungsprodukte* aus.
+.. *Browse*, um die JSON-Datei für ONTAP-Berechtigungen auszuwählen und hochzuladen.
 +
 Das Produktfeld wird automatisch ausgefüllt.
 
-. Wählen Sie die gewünschte Funktion aus dem Dropdown-Menü „Produktfähigkeit“ aus.
+.. Wählen Sie die gewünschte Funktion aus dem Dropdown-Menü „Produktfähigkeit“ aus.
 +
 Das Feld *Rolle* wird basierend auf der ausgewählten Produktfähigkeit automatisch ausgefüllt.
 
-. Geben Sie den erforderlichen Benutzernamen und das erforderliche Passwort ein.
-. Wählen Sie die für den Benutzer erforderlichen Berechtigungen (Ermittlung, Speicher erstellen, Speicher ändern, Speicher zerstören, NAS/SAN-Rolle) aus, und klicken Sie dann auf *Hinzufügen*.
+.. Geben Sie den erforderlichen Benutzernamen und das erforderliche Passwort ein.
+.. Wählen Sie die für den Benutzer erforderlichen Berechtigungen (Ermittlung, Speicher erstellen, Speicher ändern, Speicher zerstören, NAS/SAN-Rolle) aus, und klicken Sie dann auf *Hinzufügen*.
+
+
 
 
 Die neue Rolle und der neue Benutzer werden hinzugefügt, und Sie können die detaillierten Berechtigungen unter der von Ihnen konfigurierten Rolle sehen.
@@ -74,8 +78,12 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 Befolgen Sie die Anweisungen in diesem Abschnitt, um den Benutzer und die Rollen manuell zu erstellen, ohne die JSON-Datei zu verwenden.
 
 . Sie können über die Cluster-Management-IP-Adresse des Clusters auf ONTAP System Manager zugreifen.
-. Melden Sie sich als Cluster- oder SVM-Benutzer an.
-. Wählen Sie *Cluster* > *Einstellungen* > *Benutzer und Rollen*.
+. Melden Sie sich mit dem Admin-Privileges beim Cluster an.
++
+.. Um Cluster-ONTAP-Tools-Rollen zu konfigurieren, wählen Sie *Cluster* > *Einstellungen* > *Benutzer und Rollen* aus.
+.. Um die Rollen der Cluster-SVM-ONTAP-Tools zu konfigurieren, wählen Sie *Speicher-SVM* > *Einstellungen* > *Benutzer und Rollen* aus
+
+
 . Rollen Erstellen:
 +
 .. Wählen Sie *Hinzufügen* unter *Rollen* Tabelle.
