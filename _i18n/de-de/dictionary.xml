@@ -1907,4 +1907,6 @@ Führen Sie den folgenden Befehl aus, um den ersten Initiatorgruppennamen zu fin
   <block id="2000e83d945563ce0118bc3b5c5f6fbc" category="list-text">Melden Sie sich mit dem Admin-Privileges beim Cluster an.</block>
   <block id="9d65b5cebe69c5a066b9142b67334767" category="list-text">Um Cluster-ONTAP-Tools-Rollen zu konfigurieren, wählen Sie *Cluster* &gt; *Einstellungen* &gt; *Benutzer und Rollen* aus.</block>
   <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">Um die Rollen der Cluster-SVM-ONTAP-Tools zu konfigurieren, wählen Sie *Speicher-SVM* &gt; *Einstellungen* &gt; *Benutzer und Rollen* aus</block>
+  <block id="f6e2644fce556a8207829c90c0760e9e" category="inline-link">Voraussetzungen für die nicht-HA Advanced- und HA-Konfiguration</block>
+  <block id="e919c4d13d770923e879fa844b30c21a" category="list-text">Bevor Sie die ONTAP-Tools für VMware vSphere 10.2 in einer nicht-HA-erweiterten und HA-Konfiguration installieren, lesen Sie den KB-Artikel:<block ref="e4dee65de4069a83bb14c7c7d5ee3ead" category="inline-link-rx"></block></block>
 </blocks>

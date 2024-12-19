@@ -160,4 +160,5 @@ NOTE: Das Passwort für den übergeordneten vCenter Server darf diese Sonderzeic
 
 
 * Stellen Sie sicher, dass der Domänenname, auf dem das Zertifikat ausgestellt wird, der virtuellen IP-Adresse in einer Multi-vCenter-Bereitstellung zugeordnet ist, in der benutzerdefinierte CA-Zertifikate erforderlich sind. _Nslookup_ Überprüfen Sie den Domänennamen, um zu prüfen, ob die Domäne auf die beabsichtigte IP-Adresse aufgelöst wird. Die Zertifikate sollten mit dem Domänennamen und der IP-Adresse der Load Balancer-IP-Adresse erstellt werden.
+* Bevor Sie die ONTAP-Tools für VMware vSphere 10.2 in einer nicht-HA-erweiterten und HA-Konfiguration installieren, lesen Sie den KB-Artikel: https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["Voraussetzungen für die nicht-HA Advanced- und HA-Konfiguration"]
 
