@@ -43,6 +43,6 @@ ONTAP Tools für VMware vSphere zeigt ein *Confirm*-Dialogfeld mit der folgenden
 
 Führen Sie nach Abschluss des Erkennungsvorgangs die folgenden Schritte aus:
 
-* Verwenden Sie ONTAP-Tools für VMware vSphere, um ESXi-Hosteinstellungen für Hosts zu konfigurieren, die das Warnsymbol in der Spalte Adaptereinstellungen, die Spalte MPIO-Einstellungen oder die Spalte NFS-Einstellungen anzeigen.
+* Verwenden Sie ONTAP-Tools für VMware vSphere, um ESXi-Hosteinstellungen für Hosts zu konfigurieren, die das Warnsymbol in der Spalte für die Adaptereinstellungen, die Spalte für die MPIO-Einstellungen oder die Spalte für NFS-Einstellungen anzeigen.
 * Geben Sie die Anmeldeinformationen des Speichersystems an.
 

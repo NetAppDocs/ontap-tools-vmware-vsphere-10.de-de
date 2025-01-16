@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: Bevor Sie ONTAP Tools für VMware vSphere implementieren, sollten Sie mit den Speicherplatzanforderungen für das Implementierungspaket und einigen grundlegenden Host-Systemanforderungen vertraut sein. 
 ---
-= Voraussetzungen für die Bereitstellung von ONTAP-Tools für VMware vSphere
+= Voraussetzungen für ONTAP-Tools für die Bereitstellung von VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,8 +21,8 @@ Sie können ONTAP-Tools für VMware vSphere mit der virtuellen VMware vCenter Se
 
 * *Platzanforderungen für Installationspaket pro Knoten*
 +
-** 10 GB bei Thin Provisioning-Installationen
-** 248 GB für Thick Provisioning-Installationen
+** 15 GB bei Thin Provisioning-Installationen
+** 348 GB für Thick Provisioning-Installationen
 
 
 * *Größenanforderung Host-System pro Knoten*
@@ -32,19 +32,23 @@ Der empfohlene Arbeitsspeicher gemäß der Größe der Implementierung und pro N
 |===
 
 
-| *Art der Bereitstellung* | * CPUs* | *Speicher (GB)* 
+| *Art der Bereitstellung* | * CPUs* | *Speicher (GB)* | *Speicherplatz (GB) Thick Provisioning* 
 
 
-| Klein (S) | 8 | 16 
+| Nicht-HA klein | 9 | 18 | 350 
 
 
-| Mittel (M) | 12 | 24 
+| Non-HA Medium | 13 | 26 | 350 
 
 
-| Groß (L) | 16 | 32 
+| HA klein | 27 | 54 | 1050 
+
+
+| HA mittel | 39 | 78 | 1050 
+
+
+| HA groß | 51 | 102 | 1050 
 |===
-Weitere Details finden Sie im Abschnitt _Konfigurationsbeschränkungen zum Implementieren von ONTAP-Tools für VMware vSphere_ unten.
-
 
 
 == Mindestanforderungen hinsichtlich Storage und Applikationen
@@ -53,7 +57,7 @@ Weitere Details finden Sie im Abschnitt _Konfigurationsbeschränkungen zum Imple
 | Storage, Host und Applikationen | Mindestversionsanforderungen 
 
 
-| ONTAP | Neueste Patch-Version von ONTAP 9.12.1, 9.13.1, 9.14.1 und 9.15.1. 
+| ONTAP | 9.14.1, 9.15.1 und 9.16.0. FAS, ASA A-Serie, ASA C-Serie, AFF A-Serie, AFF C-Serie und ASA r2. 
 
 
 | ESXi-Hosts | ESXi 7.0.3 
@@ -62,10 +66,10 @@ Weitere Details finden Sie im Abschnitt _Konfigurationsbeschränkungen zum Imple
 | VCenter Server | VCenter 7.0U3 
 
 
-| VASA-Provider | 3.0 
+| VASA Provider | 3.0 
 
 
-| OVA-Anwendung | 10,2 
+| OVA-Anwendung | 10,3 
 |===
 Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu den unterstützten Versionen von ONTAP, vCenter Server, ESXi-Hosts und Plug-in-Applikationen.
 
@@ -80,22 +84,22 @@ Die folgende Tabelle bietet einen Leitfaden zur Konfiguration von ONTAP Tools f�
 |===
 
 
-| * Bereitstellung* | *Typ* | *Anzahl der VVols* | *Anzahl der Hosts* | *Protokolltyp* 
+| * Bereitstellung* | *Typ* | *Anzahl der VVols* | *Anzahl der Hosts* 
 
 
-| Einfache Implementierung | Klein (S) | ~12.000 | 32 | NFS, iSCSI 
+| Ohne HA | Klein (S) | ~12.000 | 32 
 
 
-| Einfache Implementierung | Mittel (M) | ~24.000 | 64 | NFS, iSCSI 
+| Ohne HA | Mittel (M) | ~24.000 | 64 
 
 
-| Hochverfügbarkeit | Klein (S) | ~24.000 | 64 | NFS, iSCSI 
+| Hochverfügbarkeit | Klein (S) | ~24.000 | 64 
 
 
-| Hochverfügbarkeit | Mittel (M) | ~50.000 | 128 | NFS, iSCSI 
+| Hochverfügbarkeit | Mittel (M) | ~50.000 | 128 
 
 
-| Hochverfügbarkeit | Groß (L) | 100 ~ | 256 [ANMERKUNG] die Anzahl der Hosts in der Tabelle zeigt die Gesamtzahl der Hosts von mehreren vCenter. | NFS, iSCSI 
+| Hochverfügbarkeit | Groß (L) | 100 ~ | 256 [ANMERKUNG] die Anzahl der Hosts in der Tabelle zeigt die Gesamtzahl der Hosts von mehreren vCenter. 
 |===
 Weitere Informationen zur Größenbestimmung des Host-Systems pro Node finden Sie unter link:../deploy/prerequisites.html["Voraussetzungen für die Bereitstellung von ONTAP-Tools für VMware vSphere"].
 
@@ -143,22 +147,70 @@ Weitere Informationen finden Sie unter https://docs.vmware.com/en/VMware-Live-Re
 
 
 
+== Port-Anforderungen
+
+Die folgende Tabelle gibt einen Überblick über die von NetApp verwendeten Netzwerk-Ports und ihre Zwecke. Stellen Sie sicher, dass diese Anschlüsse offen und zugänglich sind, um den ordnungsgemäßen Betrieb und die Kommunikation innerhalb des Systems zu erleichtern. Stellen Sie sicher, dass die erforderlichen Netzwerkkonfigurationen vorhanden sind, damit der Datenverkehr auf diesen Ports für die zugehörigen Dienste ordnungsgemäß funktioniert. Abhängig von Ihren Sicherheitsrichtlinien müssen Sie möglicherweise Firewalls oder andere Sicherheitsanwendungen konfigurieren, um diesen Datenverkehr innerhalb Ihres Netzwerks zu erlauben.
+
+|===
+
+
+| *Port* | *Beschreibung* 
+
+
+| 22 (TCP) | Ansible verwendet diesen SSH-Port für die Kommunikation während der Cluster-Bereitstellung. Dieser Port ist erforderlich für Funktionen wie das Ändern des Benutzerpassworts für die Wartung, Statusmeldungen und das Aktualisieren von Werten auf allen drei Nodes im Falle einer HA-Konfiguration. 
+
+
+| 443 (TCP) | Dies ist der Pass-Through-Port für die eingehende Kommunikation für den VASA-Provider-Service. Auf diesem Port werden selbstsigniertes VASA-Provider-Zertifikat und ein benutzerdefiniertes CA-Zertifikat gehostet. 
+
+
+| 8443 (TCP) | Dieser Port hostet die API-Dokumentation über swagger und die Manager-Benutzeroberflächenanwendung. 
+
+
+| 2379 (TCP) | Dies ist der Standardport für Client-Anfragen wie get, Put, delete oder Watch für Schlüssel im Schlüssel-Wertspeicher etcd. 
+
+
+| 2380 (TCP) | Dies ist der Standardport für die Server-zu-Server-Kommunikation für den etcd-Cluster, der für den Floß-Konsensus-Algorithmus usw. verwendet wird, der für die Datenreplikation und -Konsistenz von abhängt. 
+
+
+| 7472 (TCP+UDP) | Dies ist der prometheus Kennzahlen-Serviceport. 
+
+
+| 7946 (TCP+UDP) | Dieser Port wird für die Erkennung des Containernetzwerks von Docker verwendet. 
+
+
+| 9083 (TCP) | Dieser Port ist ein intern verwendeter Service-Port für den VASA-Provider-Service. 
+
+
+| 1162 (UDP) | Dies ist der SNMP-Trap-Paketport. 
+
+
+| 6443 (TCP) | Quelle: RKE2 Agenten Knoten. Ziel: REK2 Server Nodes. Beschreibung: Kubernetes API 
+
+
+| 9345 (TCP) | Quelle: RKE2 Agenten Knoten. Ziel: REK2 Server Nodes. Beschreibung: REK2 Supervisor API 
+
+
+| 8472 (TCP+UDP) | Alle Knoten müssen andere Knoten über UDP-Port 8472 erreichen können, wenn Flannel VXLAN verwendet wird. Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: Canal CNI mit VXLAN 
+
+
+| 10250 (TCP) | Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: Kubelet Metriken 
+
+
+| 30000-32767 (TCP) | Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: NodePort Port Portbereich 
+
+
+| 123 (TCP) | Ntpd verwendet diesen Port, um die Validierung des ntp-Servers durchzuführen. 
+|===
+
+
 == Prüfungen vor der Bereitstellung
 
 Stellen Sie sicher, dass die folgenden Elemente vorhanden sind, bevor Sie mit der Bereitstellung fortfahren:
 
 * VCenter Server-Umgebung ist eingerichtet und konfiguriert.
-* (Optional) für Automatisierungsbenutzer: Die von NetApp bereitgestellte JSON-Datei für Postman-Sammlungen wird gesammelt.
 * Die Anmeldeinformationen des übergeordneten vCenter-Servers zur Bereitstellung der OVA sind vorhanden.
-+
-
-NOTE: Das Passwort für den übergeordneten vCenter Server darf diese Sonderzeichen (€, ', ") nicht enthalten.
-
 * Sie verfügen über die Anmeldeinformationen für Ihre vCenter Server-Instanz, mit der sich die ONTAP-Tools für VMware vSphere nach der Bereitstellung zur Registrierung verbinden.
 * Browser-Cache wird gelöscht.
-* Stellen Sie sicher, dass drei freie IP-Adressen für die Implementierung ohne HA verfügbar sind: Eine freie IP-Adresse für den Load Balancer und eine freie IP-Adresse für die Kubernetes-Kontrollebene und eine IP-Adresse für den Node. Für HA-Implementierung benötigen Sie zusammen mit diesen drei IP-Adressen zwei weitere IP-Adressen für den zweiten und dritten Node. Hostnamen sollten den freien IP-Adressen auf dem DNS zugeordnet werden, bevor sie sowohl für HA- als auch für nicht-HA-Bereitstellungen zugewiesen werden. Alle fünf IP-Adressen in der HA-Implementierung und die drei IP-Adressen ohne HA-Implementierung sollten sich in demselben VLAN befinden, das für die Implementierung ausgewählt wurde.
-
-
+* Stellen Sie sicher, dass drei freie IP-Adressen für die Implementierung ohne HA verfügbar sind: Eine freie IP-Adresse für den Load Balancer und eine freie IP-Adresse für die Kubernetes-Kontrollebene und eine IP-Adresse für den Node. Für HA-Implementierung benötigen Sie zusammen mit diesen drei IP-Adressen zwei weitere IP-Adressen für den zweiten und dritten Node. Hostnamen sollten vor der Zuweisung den freien IP-Adressen auf dem DNS zugeordnet werden. Alle fünf IP-Adressen sollten sich in demselben VLAN befinden, das für die Bereitstellung ausgewählt wurde.
 * Stellen Sie sicher, dass der Domänenname, auf dem das Zertifikat ausgestellt wird, der virtuellen IP-Adresse in einer Multi-vCenter-Bereitstellung zugeordnet ist, in der benutzerdefinierte CA-Zertifikate erforderlich sind. _Nslookup_ Überprüfen Sie den Domänennamen, um zu prüfen, ob die Domäne auf die beabsichtigte IP-Adresse aufgelöst wird. Die Zertifikate sollten mit dem Domänennamen und der IP-Adresse der Load Balancer-IP-Adresse erstellt werden.
-* Bevor Sie die ONTAP-Tools für VMware vSphere 10.2 in einer nicht-HA-erweiterten und HA-Konfiguration installieren, lesen Sie den KB-Artikel: https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["Voraussetzungen für die nicht-HA Advanced- und HA-Konfiguration"]
 

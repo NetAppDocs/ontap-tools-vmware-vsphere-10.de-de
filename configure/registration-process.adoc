@@ -2,7 +2,7 @@
 permalink: configure/registration-process.html 
 sidebar: sidebar 
 keywords:  
-summary: Sie können den VASA-Provider mit einer vCenter Server-Instanz über die ONTAP-Tools für die Remote-Plug-in-Schnittstelle von VMware vSphere registrieren und abmelden. 
+summary: Sie können den VASA Provider mit einer vCenter Server-Instanz über die ONTAP-Tools für die Remote-Plug-in-Schnittstelle von VMware vSphere registrieren und abmelden. 
 ---
 = Registrieren Sie den VASA Provider mit einer vCenter Server-Instanz
 :allow-uri-read: 
@@ -11,8 +11,7 @@ summary: Sie können den VASA-Provider mit einer vCenter Server-Instanz über di
 
 
 [role="lead"]
-Sie können den VASA-Provider mit einer vCenter Server-Instanz über die ONTAP-Tools für die Remote-Plug-in-Schnittstelle von VMware vSphere registrieren und abmelden.
-Im Abschnitt „VASA Provider Settings“ wird der Registrierungsstatus des VASA Providers für den ausgewählten vCenter Server angezeigt.
+Sie können den VASA Provider mit einer vCenter Server-Instanz über die ONTAP-Tools für die Remote-Plug-in-Schnittstelle von VMware vSphere registrieren und abmelden. Im Abschnitt „VASA Provider Settings“ wird der Registrierungsstatus des VASA Providers für den ausgewählten vCenter Server angezeigt.
 
 *Schritte*
 
@@ -32,7 +31,7 @@ Im Abschnitt „VASA Provider Settings“ wird der Registrierungsstatus des VASA
 
 *Nach Ihrer Beendigung*
 
-Vergewissern Sie sich, dass der Onboarding VASA-Provider in der vCenter Client-UI und über die Remote-Plug-in-UI unter VASA Provider aufgeführt ist.
+Überprüfen Sie, ob der Onboarding VASA Provider unter VASA Provider von der vCenter Client UI und von der Remote Plug-in UI aufgeführt ist.
 
 *Schritte*
 
@@ -40,8 +39,7 @@ Vergewissern Sie sich, dass der Onboarding VASA-Provider in der vCenter Client-U
 +
 .. Navigieren Sie zu vCenter Server.
 .. Melden Sie sich mit den Administratoranmeldeinformationen an.
-.. Wählen Sie *Speicheranbieter* Aus.
-.. Wählen Sie *Konfigurieren*.
+.. Wählen Sie *Speicheranbieter* > *Konfigurieren* Aus.
 .. Überprüfen Sie unter Storage Provider/Storage Back-Ends, ob der Onboarding VASA Provider korrekt aufgeführt ist.
 
 

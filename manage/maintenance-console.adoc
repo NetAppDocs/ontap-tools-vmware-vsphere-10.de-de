@@ -32,6 +32,7 @@ Anwendungskonfiguration
 . Zeigt eine Zusammenfassung des Serverstatus an
 . Ändern der PROTOKOLLEBENE für VASA Provider Services und SRA Services
 . Deaktivieren Sie AutoSupport
+. Aktualisieren Sie die AutoSupport-Proxy-URL
 
 
 
@@ -71,6 +72,8 @@ Support und Diagnose
  a| 
 . Zugriff auf die Diagnoseschale
 . Remote-Diagnosezugriff aktivieren
+. Geben Sie die vCenter-Anmeldeinformationen für das Backup an
+. Sichern Sie sich
 
 
 |===

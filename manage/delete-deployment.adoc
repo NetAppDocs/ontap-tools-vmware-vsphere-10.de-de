@@ -30,14 +30,4 @@ _Kubectl Beschreiben Sie dauerhafte Volumina.Name AWK -F'=' '{Print 2}'_
 . Löschen Sie VMs von vCenter Server, siehe https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html["Entfernen Sie VMs oder VM-Vorlagen aus vCenter Server oder aus dem Datastore"]
 . Löschen von Volumes aus dem ONTAP-System-Manager, siehe https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Löschen Sie ein FlexVol Volume"]. Geben Sie den genauen Namen des FlexVolume im cli-Befehl ein, um das Volume zu löschen.
 . Löschen Sie im Fall der iSCSI-Bereitstellung SAN-Initiatorgruppen aus ONTAP, siehe https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Zeigen Sie SAN-Initiatoren und -Initiatorgruppen an und verwalten Sie sie"].
-+
-Bei der HA-Bereitstellung werden vier Initiatorgruppen erstellt und in der nicht-HA-Bereitstellung werden zwei Initiatorgruppen erstellt.
-Führen Sie den folgenden Befehl aus, um den ersten Initiatorgruppennamen zu finden:
-
-+
-_Kubectl -n dreident get tbc dreident-Backend -o yaml{grep igroupName: '} Print 2'_
-
-+
-Die anderen Initiatorgruppennamen beginnen mit dem Hostnamen der VM.
-
 

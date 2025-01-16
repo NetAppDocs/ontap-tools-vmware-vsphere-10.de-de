@@ -18,10 +18,12 @@ entries:
     url: "/protect/configure-on-srm-appliance.html"
   - title: SRA-Anmeldedaten aktualisieren
     url: "/protect/update-credentials.html"
-  - title: Konfigurieren Sie Schutzgruppen
-    url: "/protect/configure-protection-groups.html"
-  - title: Kombinieren Sie geschützte Standorte und Recovery-Standorte
-    url: "/protect/pair-protected-and-recovery-sites.html"
+  - title: Geschützte Standorte und Recovery-Standorte konfigurieren
+    entries:
+    - title: Konfigurieren Sie Schutzgruppen
+      url: "/protect/configure-protection-groups.html"
+    - title: Kombinieren Sie geschützte Standorte und Recovery-Standorte
+      url: "/protect/pair-protected-and-recovery-sites.html"
   - title: Konfigurieren Sie geschützte Ressourcen und Recovery-Standortressourcen
     entries:
     - title: Konfigurieren Sie die Netzwerkzuordnungen

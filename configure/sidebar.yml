@@ -4,7 +4,7 @@ title: Konfigurieren von ONTAP Tools
 entries:
 - title: Fügen Sie vCenter Server hinzu
   url: "/configure/add-vcenter.html"
-- title: Registrieren Sie den VASA Provider bei vCenter Server
+- title: Registrieren Sie VASA Provider auf vCenter Server
   url: "/configure/registration-process.html"
 - title: Installieren Sie das NFS VAAI Plug-in
   url: "/configure/install-nfs-vaai-plug-in.html"
@@ -22,3 +22,5 @@ entries:
   url: "/configure/associate-storage-backend.html"
 - title: Konfigurieren Sie den Netzwerkzugriff
   url: "/configure/configure-network-access.html"
+- title: Erstellen eines Datenspeichers
+  url: "/configure/create-vvols-datastore.html"

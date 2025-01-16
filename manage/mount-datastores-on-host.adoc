@@ -27,4 +27,4 @@ Durch das Mounten eines Datenspeichers können zusätzliche Hosts (NFS/VMFS) auf
 . Wählen Sie die Datenspeicher aus, die Sie mounten möchten, und klicken Sie auf *Mount*.
 
 
-Sie können den Fortschritt im Fenster Letzte Aufgabe verfolgen.
+Sie können den Fortschritt im Fenster „Letzte Aufgabe“ verfolgen.

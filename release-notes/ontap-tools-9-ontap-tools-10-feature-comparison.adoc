@@ -11,17 +11,17 @@ summary: Erfahren Sie mehr über den Vergleich der Funktionen der ONTAP Tools f�
 
 
 [role="lead"]
-Erfahren Sie, ob die Migration von ONTAP-Tools für VMware vSphere 9 zu ONTAP-Tools für VMware vSphere 10.1 oder VMware vSphere 10.2 genau das Richtige für Sie ist. Die aktuellsten Informationen zur Kompatibilität finden Sie unter https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+Erfahren Sie, ob eine Migration von ONTAP-Tools für VMware vSphere 9 zu ONTAP-Tools für VMware vSphere 10.1 oder höhere Versionen die richtige Lösung für Sie ist. Die aktuellsten Informationen zur Kompatibilität finden Sie unter https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 [cols="20%,25%,25%,30%"]
 |===
-| Funktion | ONTAP-Tools 9.13 | ONTAP-Tools 10.1 | ONTAP-Tools 10.2 
+| Funktion | ONTAP-Tools 9.13 | ONTAP-Tools 10.1 | ONTAP-Tools ab Version 10.2 
 
 
 | Wichtiges Wertversprechen | Optimieren und vereinfachen Sie den täglichen Betrieb von 0 bis 2 durch verbesserte Sicherheits-, Compliance- und Automatisierungsfunktionen | Entwicklung der ONTAP Tools 10.x in Richtung 9.x-Parität mit erweiterter Hochverfügbarkeit, Performance und Skalierungslimits | Erweiterte Unterstützung auf FC für VMFS und VVols, und NVMe-of/FC, NVMe-of/TCP nur für VMFS. Benutzerfreundliche NetApp SnapMirror, einfache Einrichtung von vSphere Metro Storage-Clustern und SRM-Support an drei Standorten 
 
 
-| ONTAP Release Qualification | ONTAP 9.9.1 bis ONTAP 9.15.1 | ONTAP 9.12.1 bis ONTAP 9.14.1 | ONTAP 9.12.1 bis ONTAP 9.15.1 
+| ONTAP Release Qualification | ONTAP 9.9.1 bis ONTAP 9.15.1 | ONTAP 9.12.1 bis ONTAP 9.14.1 | ONTAP 9.12.1 bis ONTAP 9.15.1 für ONTAP Tools 10.2 ONTAP 9.14.1, 9.15.1 und 9.16.0 für ONTAP Tools 10.3. 
 
 
 | VMware Versionsunterstützung | VSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 auf VMware Live Site Recovery 9.0 | VSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7 auf VMware Live Site Recovery 9.0 | VSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7 auf VMware Live Site Recovery 9.0 

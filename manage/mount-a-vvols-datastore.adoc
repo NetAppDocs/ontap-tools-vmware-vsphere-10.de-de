@@ -21,4 +21,4 @@ Sie können einen VMware Virtual Volumes (VVols)-Datastore auf einen oder mehrer
 . Wählen Sie im Dialogfeld *Datastores auf Hosts mounten* die Hosts aus, auf denen Sie den Datastore mounten möchten, und klicken Sie dann auf *Mount*.
 
 
-Sie können den Fortschritt im Fenster Letzte Aufgabe verfolgen.
+Sie können den Fortschritt im Fenster „Letzte Aufgabe“ verfolgen.

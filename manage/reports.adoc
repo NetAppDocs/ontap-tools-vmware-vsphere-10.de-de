@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP Tools für das VMware vSphere Plug-in bieten Berichte für Virtual Machines und Datastores. 
 ---
-= Berichte zum ONTAP-Tool
+= Berichte zu ONTAP Tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

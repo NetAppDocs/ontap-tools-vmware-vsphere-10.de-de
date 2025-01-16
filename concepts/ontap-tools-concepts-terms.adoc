@@ -15,6 +15,12 @@ Im folgenden Abschnitt werden die wichtigsten Konzepte und Begriffe beschrieben,
 
 
 
+=== ASA r2
+
+Die neuen NetApp ASA r2 Systeme (ASA A1K, ASA A70 und ASA A90) bieten eine einheitliche Hardware- und Softwarelösung, mit der die Benutzerfreundlichkeit speziell auf die Anforderungen reiner SAN-Kunden abgestimmt wird. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Erfahren Sie mehr über ASA r2 Storage-Systeme"].
+
+
+
 === Zertifizierungsstelle (CA)
 
 CA ist eine vertrauenswürdige Einheit, die SSL-Zertifikate (Secure Sockets Layer) ausgibt.
@@ -60,6 +66,12 @@ Der ONTAP Tools Manager bietet ONTAP Tools für VMware vSphere Administratoren m
 === Offene virtuelle Appliance (OVA)
 
 OVA ist ein offener Standard für die Paketierung und Verteilung virtueller Appliances oder Software, die auf virtuellen Maschinen ausgeführt werden müssen.
+
+
+
+=== Recovery-Zeitpunkt (RPO)
+
+RPO ist ein Maß für die Häufigkeit von Daten-Backups bzw. -Replikation. Er gibt den Zeitpunkt an, zu dem Daten nach einem Ausfall wiederhergestellt werden müssen, um den Geschäftsbetrieb wieder aufzunehmen. Wenn ein Unternehmen beispielsweise einen RPO von 4 Stunden hat, kann ein Datenverlust bei einem Ausfall von bis zu 4 Stunden toleriert werden.
 
 
 

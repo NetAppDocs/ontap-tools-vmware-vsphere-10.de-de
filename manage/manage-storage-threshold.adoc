@@ -17,6 +17,5 @@ Sie können den Schwellenwert für den Empfang von Benachrichtigungen in vCenter
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
 . Klicken Sie auf der Shortcuts-Seite unter dem Plug-ins-Bereich auf *NetApp ONTAP Tools*.
 . Navigieren Sie im linken Bereich der ONTAP-Tools zu *Einstellungen* > *Schwellenwerteinstellungen* > *Bearbeiten*.
-. Geben Sie im Fenster *Schwellenwert bearbeiten* die gewünschten Werte in die Felder *nahezu voll* und *voll* ein und klicken Sie auf Speichern.
-Sie können die Zahlen auf die empfohlenen Werte zurücksetzen: 80 für fast voll und 90 für voll.
+. Geben Sie im Fenster *Schwellenwert bearbeiten* die gewünschten Werte in die Felder *nahezu voll* und *voll* ein und klicken Sie auf *Speichern*. Sie können die Zahlen auf die empfohlenen Werte zurücksetzen: 80 für fast voll und 90 für voll.
 

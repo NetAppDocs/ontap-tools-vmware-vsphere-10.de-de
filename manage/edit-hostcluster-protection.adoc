@@ -8,12 +8,9 @@ summary: Sie können die SnapMirror-Beziehungen des geschützten Host-Clusters b
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 Sie können die folgenden Aufgaben im Rahmen des Änderungsschutzes ausführen. Sie können alle Änderungen im selben Workflow vornehmen.
 
 * Fügen Sie dem geschützten Cluster neue Datastores oder Hosts hinzu.
@@ -47,12 +44,12 @@ Gehen Sie wie folgt vor, um die neu hinzugefügten Datastores oder Hosts zu sch�
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
 . Um die Eigenschaften eines geschützten Clusters zu bearbeiten, können Sie eine der beiden Optionen wählen
 +
-.. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, klicken Sie auf das Kebab-Menü für den Cluster und wählen Sie *Bearbeiten* oder
+.. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, klicken Sie auf das Auslassungsmenü für den Cluster und wählen Sie *Bearbeiten* oder
 .. Klicken Sie mit der rechten Maustaste auf einen Host-Cluster und wählen Sie *NetApp ONTAP Tools* > *Cluster schützen*.
 
 
 . Wenn Sie einen Datastore in der nativen vCenter-Benutzeroberfläche erstellt haben, wird dieser Datastore als ungeschützt angezeigt. Auf der Benutzeroberfläche werden alle Datastores im Cluster und deren Schutzstatus in einem Dialogfeld angezeigt. Wählen Sie die Schaltfläche *Protect*, um den vollständigen Schutz zu aktivieren.
-. Wenn Sie einen neuen ESXi-Host hinzugefügt haben, wird der Sicherungsstatus als Teilgeschützt angezeigt. Wählen Sie das Kebab-Menü unter den SnapMirror-Einstellungen und wählen Sie *Bearbeiten*, um die Nähe des neu hinzugefügten ESXi-Hosts einzustellen.
+. Wenn Sie einen neuen ESXi-Host hinzugefügt haben, wird der Sicherungsstatus als Teilgeschützt angezeigt. Wählen Sie das Auslassungsmenü unter den SnapMirror-Einstellungen und wählen Sie *Bearbeiten*, um die Nähe des neu hinzugefügten ESXi-Hosts festzulegen.
 +
 
 NOTE: Im Fall einer asynchronen Beziehung wird die Bearbeitungsaktion nicht unterstützt, da Sie die Ziel-SVM für einen tertiären Standort nicht derselben Instanz der ONTAP-Tools hinzufügen können. Sie können jedoch den System Manager oder die CLI der Ziel-SVM verwenden, um die Beziehungskonfiguration zu ändern.
@@ -71,7 +68,7 @@ Eine vCenter-Aufgabe wird erstellt und Sie können den Fortschritt im Bereich *L
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
 . Um die Eigenschaften eines geschützten Clusters zu bearbeiten, können Sie eine der beiden Optionen wählen
 +
-.. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, klicken Sie auf das Kebab-Menü für den Cluster und wählen Sie *Bearbeiten* oder
+.. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, klicken Sie auf das Auslassungsmenü für den Cluster und wählen Sie *Bearbeiten* oder
 .. Klicken Sie mit der rechten Maustaste auf einen Host-Cluster und wählen Sie *NetApp ONTAP Tools* > *Cluster schützen*.
 
 
@@ -95,11 +92,11 @@ Das Löschen der Beziehung löst einen erneuten Scan am sekundären Standort aus
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
 . Um die Eigenschaften eines geschützten Clusters zu bearbeiten, können Sie eine der beiden Optionen wählen
 +
-.. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, klicken Sie auf das Kebab-Menü für den Cluster und wählen Sie *Bearbeiten* oder
+.. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, klicken Sie auf das Auslassungsmenü für den Cluster und wählen Sie *Bearbeiten* oder
 .. Klicken Sie mit der rechten Maustaste auf einen Host-Cluster und wählen Sie *NetApp ONTAP Tools* > *Cluster schützen*.
 
 
-. Wählen Sie das Menü Kebab unter den SnapMirror-Einstellungen und wählen Sie *Löschen*.
+. Wählen Sie unter den SnapMirror-Einstellungen das Auslassungsmenü aus und wählen Sie *Löschen*.
 
 
 Eine vCenter-Aufgabe wird erstellt und Sie können den Fortschritt im Bereich *Letzte Aufgabe* verfolgen.
@@ -117,7 +114,7 @@ NOTE: Eine vorhandene asynchrone SnapMirror-Beziehung kann nicht bearbeitet werd
 . Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
 . Um die Eigenschaften eines geschützten Clusters zu bearbeiten, können Sie eine der beiden Optionen wählen
 +
-.. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, klicken Sie auf das Kebab-Menü für den Cluster und wählen Sie *Bearbeiten* oder
+.. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, klicken Sie auf das Auslassungsmenü für den Cluster und wählen Sie *Bearbeiten* oder
 .. Klicken Sie mit der rechten Maustaste auf einen Host-Cluster und wählen Sie *NetApp ONTAP Tools* > *Cluster schützen*.
 
 

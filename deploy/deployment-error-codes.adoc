@@ -36,22 +36,25 @@ In der folgenden Tabelle sind die Fehlercodes und die entsprechenden Dateinamen 
 | 02 | firstboot-inputs-validation.pl 
 
 
-| 03 | firstboot-deploy-otv-ng.pl, Deploy, ha 
+| 03 | firstboot-deploy-otv-ng.pl, Deploy, HA 
 
 
-| 04 | firstboot-deploy-otv-ng.pl, Deploy, non-ha 
+| 04 | firstboot-deploy-otv-ng.pl, Deploy, non-HA 
 
 
 | 05 | firstboot-deploy-otv-ng.pl, Neustart 
 
 
-| 06 | firstboot-deploy-otv-ng.pl, Upgrade, ha 
+| 06 | firstboot-deploy-otv-ng.pl, Upgrade, HA 
 
 
-| 07 | firstboot-deploy-otv-ng.pl, Upgrade, nicht-ha 
+| 07 | firstboot-deploy-otv-ng.pl, Upgrade, nicht HA 
 
 
 | 08 | firstboot-otv-recovery.pl 
+
+
+| 09 | post-deploy-upgrade.pl 
 |===
 Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler im Skript an:
 
@@ -62,16 +65,6 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 
 
 | 050 | Generierung des SSH-Schlüssels fehlgeschlagen | Starten Sie die primäre virtuelle Maschine (VM) neu. 
-
-
-| 051 | Fehler beim Bereitstellen von sekundären VMs | * Wenn die zweite und dritte VM erstellt werden, dann stellen Sie sicher, dass genügend CPU/Speicher vorhanden sind, bevor Sie die sekundären VMs einschalten und die primäre VM neu starten.
-
-* Wenn die zweite und dritte VMs in Deploy ONTAP Tools for VMware vSphere Template Task sind, warten Sie, bis die Aufgabe abgeschlossen ist, schalten Sie die VMs ein und starten Sie die primäre VM neu.
-
-* Neuimplementierung. 
-
-
-| 052 | Kopieren der SSH-Schlüssel fehlgeschlagen | Starten Sie die primäre VM neu. 
 
 
 | 053 | RKE2 konnte nicht installiert werden | Führen Sie entweder Folgendes aus und starten Sie die primäre VM neu, oder starten Sie Neuimplementierung:
@@ -85,25 +78,6 @@ Sudo rke2-uninstall.sh (alle VMs).
 | 055 | Fehler beim Bereitstellen der Registrierung | Wenn der Registrierungs-Pod vorhanden ist, warten Sie, bis der Pod bereit ist, starten Sie dann die primäre VM neu oder starten Sie es andernfalls neu. 
 
 
-| 056 | Anmeldung bei ISCSI fehlgeschlagen | Stellen Sie sicher, dass das iSCSI-Protokoll auf ONTAP aktiviert und ordnungsgemäß konfiguriert ist. Stellen Sie sicher, dass die angegebene iSCSI-Daten-LIF-IP-Adresse korrekt und online ist. Starten Sie die VM neu, wenn die vorherigen Punkte korrekt sind. Ansonsten Neuimplementierung. 
-
-
-| 057 | Die Trident-Implementierung ist fehlgeschlagen | *Stellen Sie sicher, dass Management LIF und Data LIF IP Adressen von VM erreichbar sind.
-
-* Stellen Sie sicher, dass das NFS- oder iSCSI-Protokoll aktiviert und auf ONTAP richtig konfiguriert ist.
-
-*Stellen Sie sicher, dass die angegebene LIF-IP-Adresse für NFS/iSCSI-Daten korrekt und online ist.
-
-*Stellen Sie sicher, dass der Benutzername und das Passwort korrekt sind und der Benutzer über ausreichende Berechtigungen verfügt, um ein Volume zu erstellen.
-
-* Starten Sie neu, wenn alle oben genannten Punkte korrekt sind. Ansonsten Neuimplementierung. 
-
-
-| 058 | Der Import von Trident ist fehlgeschlagen | *Stellen Sie sicher, dass der Benutzername und das Passwort korrekt sind und der Benutzer über ausreichende Berechtigungen zum Erstellen, Mounten, Klonen und Löschen von Volumes verfügt.
-
-*Stellen Sie sicher, dass das gleiche ONTAP-Setup verwendet wird, um das Setup wiederherzustellen und die Wiederherstellung zu wiederholen. 
-
-
 | 059 | Die KubeVip-Bereitstellung ist fehlgeschlagen | Vergewissern Sie sich, dass die während der Implementierung angegebene virtuelle IP-Adresse für die Kubernetes-Kontrollebene und den Load Balancer im selben VLAN gehören und freie IP-Adressen sind. Neu starten, wenn alle vorherigen Punkte korrekt sind. Ansonsten Neuimplementierung. 
 
 
@@ -113,61 +87,46 @@ Sudo rke2-uninstall.sh (alle VMs).
 | 061 | Die Bereitstellung der Dienste ist fehlgeschlagen | Führen Sie einfache Kubernetes-Fehlerbehebungen wie get Pods, get rs, get svc usw. im ntv-System-Namespace durch, um weitere Details und Fehlerprotokolle unter /var/log/ansible-perl-errors.log und /var/log/ansible-run.log zu erhalten und Neuimplementierungen durchzuführen. 
 
 
-| 062 | VASA-Provider- und SRA-Bereitstellung ist fehlgeschlagen | Weitere Informationen und Neuimplementierungen finden Sie in den Fehlerprotokollen unter /var/log/ansible-perl-errors.log. 
-
-
-| 064 | version.xml Überprüfung fehlgeschlagen | Neuimplementierung 
+| 062 | Die Bereitstellung der ONTAP Tools Services ist fehlgeschlagen | Weitere Informationen und Neuimplementierungen finden Sie in den Fehlerprotokollen unter /var/log/ansible-perl-errors.log. 
 
 
 | 065 | Die URL der Swagger-Seite ist nicht erreichbar | Neuimplementierung 
 
 
-| 066 | Schritte nach der Bereitstellung sind fehlgeschlagen | - 
+| 066 | Fehler bei den Schritten nach der Bereitstellung für das Gateway-Zertifikat | Gehen Sie wie folgt vor, um das Upgrade wiederherzustellen/abzuschließen: * Diagnostic Shell aktivieren. * Führen Sie den Befehl 'sudo perl /Home/maint/scripts/post-deploy-upgrade.pl --postDeploy' aus. * Überprüfen Sie die Protokolle unter /var/log/post-deploy-Upgrade.log. 
 
 
-| 088 | Die Konfiguration der Protokollrotation für journald ist fehlgeschlagen | Starten Sie die primäre VM neu. 
+| 088 | Die Konfiguration der Protokollrotation für journald ist fehlgeschlagen | Überprüfen Sie die VM-Netzwerkeinstellungen, die mit dem Host kompatibel sind, auf dem die VM gehostet wird. Sie können versuchen, auf einen anderen Host zu migrieren und die VM neu zu starten. 
 
 
 | 089 | Ändern der Eigentumsrechte für die Konfigurationsdatei „Zusammenfassung Protokoll drehen“ ist fehlgeschlagen | Starten Sie die primäre VM neu. 
+
+
+| 096 | Installieren Sie die dynamische Storage-provisionierung | - 
+
+
+| 108 | Das Seeding des Skripts ist fehlgeschlagen | - 
 |===
 |===
 
 
-| *Fehlercode für Neustart* | *Arbeitsablauf* 
+| *Fehlercode für Neustart* | *Arbeitsablauf* | * Auflösung* 
 
 
-| 067 | Zeitüberschreitung beim Warten auf Rke2-Server 
+| 067 | Zeitüberschreitung beim Warten auf Rke2-Server. | - 
 
 
-| 101 | Fehler beim Zurücksetzen des Benutzerpassworts für Wartung/Konsole 
+| 101 | Fehler beim Zurücksetzen des Benutzerpassworts für Wartung/Konsole. | - 
 
 
-| 102 | Fehler beim Löschen der Kennwortdatei beim Zurücksetzen des Benutzerpassworts für Wartung/Konsole 
+| 102 | Fehler beim Löschen der Kennwortdatei beim Zurücksetzen des Benutzerpassworts für Wartung/Konsole. | - 
 
 
-| 103 | Fehler beim Aktualisieren des neuen Benutzerpassworts für Wartung/Konsole im Tresor 
-|===
-|===
+| 103 | Fehler beim Aktualisieren des neuen Benutzerpassworts für Wartung/Konsole im Tresor. | - 
 
 
-| *Wiederherstellungsfehler-Code* | *Arbeitsablauf* | * Auflösung* 
+| 088 | Die Konfiguration der Protokollrotation für journald ist fehlgeschlagen. | Überprüfen Sie die VM-Netzwerkeinstellungen, die mit dem Host kompatibel sind, auf dem die VM gehostet wird. Sie können versuchen, auf einen anderen Host zu migrieren und die VM neu zu starten. 
 
 
-| 104 | Schritte nach der Wiederherstellung sind fehlgeschlagen. | - 
-
-
-| 105 | Kopieren des Inhalts auf das Wiederherstellungsvolume ist fehlgeschlagen. | - 
-
-
-| 106 | Recovery-Volume konnte nicht bereitgestellt werden. | * Stellen Sie sicher, dass die gleiche SVM verwendet wird und das Wiederherstellungsvolume in der SVM vorhanden ist. (Name des Wiederherstellungsvolumes beginnt mit otvng_Trident_Recovery)
-
-* Stellen Sie sicher, dass Management LIF und Data LIF IP Adressen von VM erreichbar sind.
-
-* Stellen Sie sicher, dass das NFS/iSCSI-Protokoll auf ONTAP aktiviert und richtig konfiguriert ist.
-
-* Stellen Sie sicher, dass die angegebene NFS/iSCSI DAT LIF IP Adresse korrekt und online ist.
-
-* Stellen Sie sicher, dass der Benutzername, das Passwort und das Protokoll korrekt sind und der Benutzer über ausreichende Berechtigungen zum Erstellen, Mounten, Klonen, Löschen verfügt.
-
-* Wiederholen Sie die Wiederherstellung 
+| 089 | Ändern der Eigentumsrechte für die Konfigurationsdatei „Zusammenfassung Protokoll drehen“ ist fehlgeschlagen. | Starten Sie den VM neu. 
 |===

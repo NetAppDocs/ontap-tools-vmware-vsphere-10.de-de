@@ -15,7 +15,10 @@ Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Daten verwe
 
 *Über diese Aufgabe*
 
-Diese Aufgabe unterstützt Sie beim Onboarding eines ONTAP-Clusters. Wenn Sie mit dem ONTAP Tools Manager ein Storage Back-End hinzufügen, wird das Storage Back-End dem globalen Cluster hinzugefügt. Ordnen Sie das globale Cluster einer vCenter Server-Instanz zu, um einen SVM-Benutzer für die Bereitstellung von VVols-Datastores zu aktivieren.
+Diese Aufgabe unterstützt Sie beim Onboarding eines ONTAP-Clusters. Wenn Sie mit dem ONTAP Tools Manager ein Storage Back-End hinzufügen, wird das Storage Back-End dem globalen Cluster hinzugefügt. Ordnen Sie das globale Cluster einer vCenter Server-Instanz zu, um einen SVM-Benutzer für die Bereitstellung von VVols-Datastores zu aktivieren. Sie können Storage nur mithilfe der SVM in vCenter hinzufügen.
+
+
+NOTE: Für mandantenfähige Workflows sollten Sie mithilfe des ONTAP Tools Managers global ONTAP-Cluster hinzufügen und die Cluster den gewünschten vCenter Mandanten zuordnen. Der vCenter Mandant muss dann die gewünschten Storage Virtual Machines (SVMs) in die Systeme integrieren. Wenn keine Mandantenfähigkeit erforderlich ist, fügen Sie Ihre ONTAP Systeme direkt über die vCenter UI hinzu.
 
 [role="tabbed-block"]
 ====
@@ -33,7 +36,7 @@ NOTE: Ein Storage-Back-End ist global verfügbar, wenn sie über den ONTAP Tools
 . Geben Sie die IP-Adresse des Servers oder den FQDN, den Benutzernamen und das Kennwort ein, und wählen Sie *Hinzufügen*.
 +
 
-NOTE: IPV4- und IPV6-Management-LIFs werden unterstützt. Auch die benutzerbasierten SVM-Anmeldedaten mit Management-LIFs werden unterstützt.
+NOTE: IPv4- und IPv6-Management-LIFs werden unterstützt. Auch die benutzerbasierten SVM-Anmeldedaten mit Management-LIFs werden unterstützt.
 
 
 
@@ -49,7 +52,7 @@ NOTE: Wenn Sie mithilfe der vSphere Client-UI ein Storage-Back-End hinzufügen, 
 . Geben Sie im Fenster *Add Storage Backend* die IP-Adresse, den Benutzernamen, das Passwort und die Port-Details des Servers an und klicken Sie auf *Add*.
 +
 
-NOTE: Sie können Cluster-basierte Anmeldedaten und IPV4- und IPV6-Management-LIFs hinzufügen oder SVM-basierte Anmeldedaten mit der Management-LIF der SVM bereitstellen, um einen SVM-Benutzer direkt hinzuzufügen.
+NOTE: Sie können Cluster-basierte Anmeldedaten und logische Schnittstellen für das IPv4- und IPv6-Adressmanagement hinzufügen oder SVM-basierte Anmeldedaten mit der Management-LIF der SVM bereitstellen, um einen SVM-Benutzer direkt hinzuzufügen.
 
 
 
