@@ -59,5 +59,6 @@ ONTAP Tools für VMware vSphere 10.3 unterstützen die Bereitstellung von VMFS-D
  a| 
 Verbesserte Beobachtbarkeit
  a| 
- ONTAP tools for VMware vSphere 10.3 extends observability metrics support for VMFS and vVol datastores and their respective VMs.
+ONTAP-Tools für VMware vSphere 10.3 erweitern die Unterstützung von Observability-Metriken für VMFS und vVol Datastores und ihre jeweiligen VMs.
+
 |===
