@@ -1,8 +1,12 @@
 ---
 section: automation
-title: Automatisierung mit REST-APIs
+title: Automatisierung mit der REST-API
 entries:
-- title: Übersicht ÜBER REST-APIs
-  url: "/automation/overview-rest-apis.html"
-- title: Legen Sie los mit DER REST API
-  url: "/automation/get-started-with-the-rest-api.html"
+- title: Weitere Informationen zur REST-API
+  url: "/automation/learn-rest-api.html"
+- title: REST-Implementierung
+  url: "/automation/rest-implementation.html"
+- title: Ihr erster REST-API-Aufruf
+  url: "/automation/first-call.html"
+- title: API-Referenz
+  url: "/automation/api-reference.html"
