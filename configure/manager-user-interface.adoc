@@ -19,22 +19,24 @@ Der ONTAP Tools Manager unterstützt Sie bei folgenden Aufgaben:
 * Storage-Back-End-Management: Fügen Sie ONTAP Storage-Cluster zu ONTAP Tools für VMware vSphere hinzu und managen Sie sie den global integrierten vCenter Server Instanzen.
 * Log Bundle Downloads - Sammeln Sie Log-Dateien für ONTAP-Tools für VMware vSphere.
 * Zertifikatverwaltung – Ändern Sie das selbstsignierte Zertifikat in ein benutzerdefiniertes CA-Zertifikat und erneuern oder aktualisieren Sie alle Zertifikate von VASA Provider und ONTAP Tools.
-* Password Management - Zurücksetzen OVA-Anwendungs-Passwort für den Benutzer.
+* Passwortverwaltung - Zurücksetzen des OVA-Anwendungskennworts des Benutzers.
 
 
 Um auf den ONTAP Tools Manager zuzugreifen, starten Sie `\https://loadBalanceIP:8443/virtualization/ui/` Melden Sie sich über den Browser mit den ONTAP-Tools für VMware vSphere-Administratoranmeldeinformationen an, die Sie während der Bereitstellung angegeben haben.
 
-Im Abschnitt mit der Übersicht über den ONTAP Tools Manager können Sie die Appliance-Konfiguration wie Services-Management, die Skalierung der Node-Größe und die Aktivierung der Hochverfügbarkeit verwalten. Außerdem können Sie die allgemeinen ONTAP-Tools-Informationen zu den Knoten wie Systemzustand, Netzwerkdetails und Warnungen überwachen. image:../media/ontap-tools-manager-overview.png["Dashboard-Übersicht über ONTAP Tools Manager"]
+Im Abschnitt mit der Übersicht über den ONTAP Tools Manager wird die Appliance-Konfiguration gemanagt, z. B. Services-Management, Upscaling der Node-Größe und Unterstützung für Hochverfügbarkeit. Sie können auch die allgemeinen Informationen von ONTAP-Tools zu den Knoten überwachen, wie z. B. Systemzustand, Netzwerkdetails und Warnmeldungen.
+
+image:../media/ontap-tools-manager-overview.png["Dashboard-Übersicht über ONTAP Tools Manager"]
 
 |===
 | *Karte* | *Beschreibung* 
 
 
-| Gerätekarte | Die Appliance-Karte zeigt den allgemeinen Status der ONTAP-Tools-Appliance an. Es zeigt die Details der Appliance-Konfiguration und den Status der aktivierten Dienste an. Für weitere Details zu ONTAP Tools Appliance klicken Sie auf *DETAILS ANZEIGEN* Link. Wenn ein Aktionsjob zum Bearbeiten der Appliance-Einstellungen ausgeführt wird, werden im Portlet der Appliance der Status und die Details des Jobs angezeigt. 
+| Gerätekarte | Die Appliance-Karte zeigt den Gesamtstatus der ONTAP Tools Appliance an. Es zeigt die Details der Appliance-Konfiguration und den Status der aktivierten Dienste an. Weitere Informationen zur ONTAP Tools Appliance erhalten Sie über den Link *Details anzeigen*. Wenn ein Aktionsjob zum Bearbeiten der Appliance-Einstellungen ausgeführt wird, werden im Portlet der Appliance der Status und die Details des Jobs angezeigt. 
 
 
-| Warnkarte | Auf der Warnkarte werden die Warnmeldungen der ONTAP-Tools nach Typen aufgelistet, einschließlich Warnmeldungen auf HA-Node-Ebene. Sie können die Liste der Warnmeldungen anzeigen, indem Sie auf den Text „Count“ (Hyperlink) klicken. Über den Link gelangen Sie zur Seite mit der Warn-Ansicht, die mit dem ausgewählten Typ gefiltert wurde. 
+| Warnkarte | Auf der Warnkarte werden die Warnmeldungen der ONTAP-Tools nach Typ aufgeführt, einschließlich der Warnmeldungen auf HA-Node-Ebene. Sie können die Liste der Warnmeldungen anzeigen, indem Sie auf den Text „Count“ (Hyperlink) klicken. Über den Link gelangen Sie zur Seite mit der Warn-Ansicht, die nach dem ausgewählten Typ gefiltert ist. 
 
 
-| Karte der ONTAP-Tools-Knoten | Die Knotenkarte „ONTAP Tools“ zeigt die Liste der Knoten mit Knotennamen, Node-VM-Namen, Status und allen netzwerkbezogenen Daten an. Sie können auf *VIEW DETAILS* klicken, um die zusätzlichen Details zu dem ausgewählten Knoten anzuzeigen. [HINWEIS] bei einem nicht-HA-Setup wird nur ein Node angezeigt. Bei HA werden drei Nodes angezeigt. 
+| Karte der ONTAP-Tools-Knoten | Die Knotenkarte „ONTAP Tools“ zeigt die Liste der Knoten mit Knotennamen, Node-VM-Namen, Status und allen netzwerkbezogenen Daten an. Sie können auf *Details anzeigen* klicken, um die zusätzlichen Details zu dem ausgewählten Knoten anzuzeigen. [HINWEIS] in einem nicht-HA-Setup wird nur ein Node angezeigt. Im HA-Setup werden drei Nodes angezeigt. 
 |===

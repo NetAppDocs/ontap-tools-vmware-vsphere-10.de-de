@@ -92,10 +92,7 @@ Der empfohlene Arbeitsspeicher gemäß der Größe der Implementierung und pro N
   <block id="d428ebb7ac02e1484781b38a799a4f99" category="paragraph">*Was Sie brauchen*</block>
   <block id="0b116b89d80e19bf956dfc85f50bc1e9" category="summary">Info erforderlich.</block>
   <block id="87b9292b96462f70c7dfb870481b1445" category="list-text">Wählen Sie im Popup-Fenster aus der Dropdown-Liste das Storage-Back-End aus.</block>
-  <block id="b2ed14efa60f0218dbe29d217936db05" category="list-text">Sobald der Job abgeschlossen ist, validieren Sie den Migrationsbericht. Sie können den Bericht aus der Jobantwort als Teil der JobData sehen.</block>
-  <block id="940a68f40b0387ef09c8890b5f3351a3" category="list-text">Führen Sie die Patch-Migration mithilfe der folgenden API durch:</block>
   <block id="603041e40db447bbdd32fd4b4c2f994d" category="admonition">uuid ist die Migrations-uuid, die in der Antwort der API nach der Migration zurückgegeben wird.</block>
-  <block id="c433a687863536676c660d246d95f8f1" category="paragraph">Sobald die API für die Patch-Migration erfolgreich war, entsprechen alle VMs der Storage-Richtlinie.</block>
   <block id="07fdc7a244250b2e1c9e6533ff0ea4e0" category="paragraph">Die delete-API für die Migration ist:</block>
   <block id="6b50b8836085008a8950ddeafeb7453a" category="list-text">Aktualisieren Sie das Zertifikat auf allen Hosts.</block>
   <block id="f14c276c07197ebef1394a5a219087a1" category="cell">*Beschreibung*</block>
@@ -242,7 +239,6 @@ Der empfohlene Arbeitsspeicher gemäß der Größe der Implementierung und pro N
   <block id="db02bd2307c791062e633781a3c11af0" category="list-text">VCenter Server Instance Management - Hinzufügen und verwalten vCenter Server Instanzen zu ONTAP Tools.</block>
   <block id="7642832535ff83a877a05e578e6e55f7" category="list-text">Storage-Back-End-Management: Fügen Sie ONTAP Storage-Cluster zu ONTAP Tools für VMware vSphere hinzu und managen Sie sie den global integrierten vCenter Server Instanzen.</block>
   <block id="ce3d50f0dc891fd49131a5879ff0cfbb" category="list-text">Log Bundle Downloads - Sammeln Sie Log-Dateien für ONTAP-Tools für VMware vSphere.</block>
-  <block id="68ab2bf8c2ce15ec9d7b00c479775a7e" category="list-text">Password Management - Zurücksetzen OVA-Anwendungs-Passwort für den Benutzer.</block>
   <block id="201e0f05da35ce967557e2ecf9f130be" category="paragraph">Um auf den ONTAP Tools Manager zuzugreifen, starten Sie<block ref="1910f09ff940f1765a7dd530bdeb5127" prefix=" " category="inline-code"></block> Melden Sie sich über den Browser mit den ONTAP-Tools für VMware vSphere-Administratoranmeldeinformationen an, die Sie während der Bereitstellung angegeben haben.</block>
   <block id="3fae23455f0376a5d42734cbd65edc69" category="summary">Wenn Sie ONTAP-Tools für VMware vSphere zum ersten Mal in einem vSphere-Client ausführen, erkennt ONTAP-Tools für VMware vSphere die ESXi-Hosts, ihre LUNs und NFS-Exporte und die NetApp-Storage-Systeme, die über diese LUNs und Exporte verfügen.</block>
   <block id="8fd43ee482a4e281b8feee6762fb22d2" category="doc">Erkennen von Storage-Systemen und Hosts</block>
@@ -847,15 +843,9 @@ Wenn beispielsweise die Array Manager-Konfiguration im Umfang der SVM konfigurie
   <block id="6753f4982155708aac37a1bd3bef1245" category="paragraph">Der Assistent „Netzwerkzuordnung erstellen“ wird angezeigt.</block>
   <block id="6211d5bb29b9c1509eb64e37fd1af6f4" category="list-text">Führen Sie im Assistenten „Netzwerkzuordnung erstellen“ folgende Schritte aus:</block>
   <block id="a00d4477c9c1974aff09f6ea5b44859d" category="paragraph">Auf der Seite Netzwerkzuordnungen werden die geschützten Standortressourcen und die Ressourcen des Recovery-Standorts angezeigt. Sie können die gleichen Schritte für andere Netzwerke in Ihrer Umgebung befolgen.</block>
-  <block id="3dd0b6cbf926605abe281a83613cb23c" category="admonition">Als bestehender Benutzer müssen Sie das OVA-Backup von Ihrer aktuellen Version durchführen, bevor Sie ein Upgrade auf die Patch-Versionen durchführen.</block>
   <block id="135dda3ac3096b9bd31ceb04b513c216" category="section-title">Allgemeine Migrationsschritte</block>
   <block id="a556515aafd07bfe4c2dfa6abbaa4ccb" category="section-title">SRA-Migrationsschritte</block>
-  <block id="37470572c4c0d1df68b6e2c9cf86ecf9" category="paragraph">Stellen Sie vor der Migration sicher, dass sich einer der Standorte in einem geschützten Zustand befindet und sich der andere im Wiederherstellungsstatus befindet.</block>
-  <block id="064e145ea2f6bfb5bc6045ba1fb3a818" category="admonition">Führen Sie keine Migration durch, wenn das Failover gerade abgeschlossen ist und der erneute Schutz aussteht. Führen Sie die erneute Sicherung durch, und führen Sie die Migration durch.
-Das gilt auch für das Testen des Wiederherstellungsplans. Sobald das Testen des Wiederherstellungsplans abgeschlossen ist, bereinigen Sie die Test-Recovery und starten Sie dann die Migration.</block>
-  <block id="0bb95f551fcbc064f5de91693d368db6" category="list-text">Gehen Sie zum Abschnitt Storage Replication Adapter</block>
   <block id="77efba168b5a2059c2d20a1e2673f5d1" category="paragraph">Führen Sie diese Schritte sowohl an Sicherungs- als auch an Recovery-Standorten aus.</block>
-  <block id="0052540e6b71b0dead0bb00933d9a68d" category="list-text">Aktivieren Sie Derby-PORT 1527 auf den vorhandenen ONTAP-Tools für VMware vSphere. Um den Port zu aktivieren, melden Sie sich bei CLI mit root user an und führen Sie den folgenden Befehl aus:</block>
   <block id="c713abd43a97c8915e6503cd7f93ad36" category="list-text">Geben Sie den folgenden API-Aufruf zur Migration aus:</block>
   <block id="4b2e39d58448cd6246edaab6e2789245" category="paragraph">*HTTP-Methode und Endpunkt*</block>
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">Dieser REST-API-Aufruf verwendet die folgende Methode und den folgenden Endpunkt.</block>
@@ -892,31 +882,16 @@ Antragstelle für Migration von 9.12 und 9.13:</block>
   „Status“: „Läuft“
 }</block>
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">Registrieren Sie VASA Provider auf vCenter Server</block>
-  <block id="5fec27e27d789740b1557e43765e8712" category="list-text">Stoppen Sie ONTAP Tools für VMware vSphere Storage Provider 9.10/9.11/9.12/9.13 VASA Provider Service von der Wartungskonsole aus.</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">PATCH</block>
   <block id="41e9abb5d58ca11ff36c3067c273a762" category="paragraph">PATCH „/API/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/Migration-Jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43</block>
   <block id="bdfee7ad87d9004e1091e6e1762d0e84" category="paragraph">*JSON-Eingabebeispiel*</block>
-  <block id="80d6f8b7b33941158bf11590d8f340f5" category="paragraph">Anforderungskörper ist für Patchvorgang leer.</block>
   <block id="cef9fa1aa0d8c4bd89bf89cf8cbb5cae" category="paragraph">/API/v1/vcenters/{vcguid}/Migration-Jobs/{Migration_id}</block>
-  <block id="f45df61923075bce3925756b5ef238ac" category="paragraph">Diese API löscht die Migration nach Migrations-ID und löscht die Migration auf dem angegebenen vCenter Server.</block>
-  <block id="02b629daee69a13e1d9e1bb586f9aeaa" category="list-text">Warten Sie einige Zeit, bevor Sie Vorgänge in Datenspeicher (DS) und Virtual Machine (VM) ausführen. Die Wartezeit hängt von der Anzahl der Hosts, DS und VMs ab, die im Setup vorhanden sind. Wenn Sie nicht warten, können die Vorgänge zeitweise ausfallen.</block>
   <block id="07959986337388ebd736dc282a14afca" category="paragraph">*Diagnose Aktivieren*</block>
-  <block id="070fdd3da4ee331b0ced27113978cc9a" category="list-text">Öffnen Sie im vCenter Server eine Konsole für ONTAP Tools.</block>
   <block id="589c4957e1e0bb7b0bf55fa835dbaf3d" category="list-text">Geben Sie *y* ein, um das Passwort Ihrer Wahl festzulegen.</block>
-  <block id="f6026db814a9f3dd7f8b744a321a37f6" category="paragraph">*Backup von MongoDB*</block>
-  <block id="3ad298269c982c99cdf89686fc99f90e" category="paragraph">Führen Sie die folgenden Befehle aus, um ein Backup von MongoDB zu erstellen:</block>
   <block id="0a01c0c2d00b20ff323dc6b25ceb30a5" category="list-text">Kn exec -it ntv-mongodb-0 sh - kn ist ein Alias von kubectl -n ntv-System.</block>
-  <block id="6ac951df6c4326c0b5ba21fb03e462b0" category="list-text">dev_grep MONGODB_ROOT_PASSWORD - Führen Sie diesen Befehl im Pod aus.</block>
-  <block id="56773b08cc852ed52964549dfb9fc61e" category="list-text">„EXIT“ – Führen Sie diesen Befehl aus, um aus dem POD zu kommen.</block>
-  <block id="93c8b0f299af9bd0eec6a1b971e57816" category="list-text">Kn exec ntv-mongodb-0 --mongodump -U ROOT -p MONGODB_ROOT_PASSWORD --Archive=/tmp/mongodb-backup.gz --gzip - Führen Sie diesen Befehl aus, um MONGO_ROOT_PASSWORD set aus dem obigen Befehl zu ersetzen.</block>
-  <block id="e3a9f4dcb4a04b10f748467637c474e9" category="list-text">Kn CP ntv-mongodb-0:/tmp/mongodb-backup.gz ./mongodb-backup.gz - Führen Sie diesen Befehl aus, um das mit dem obigen Befehl erstellte mongodb Backup von Pod zu Host zu kopieren.</block>
-  <block id="7511ae8db149d434a6d995197e107fcb" category="list-text">Führen Sie den Befehl 'kn get pvc' aus und speichern Sie die Ausgabe des Befehls.</block>
   <block id="bfc1d4c138c87f77e5b639193ca91674" category="list-text">Erstellen Sie Snapshots aller Volumes nacheinander mit einer der folgenden Methoden:</block>
   <block id="bcf0e596a358c1cb63fd717d9fa47cd7" category="list-text">Führen Sie in der CLI den Befehl _Volume Snapshot create -vserver &lt;vserver_name&gt; -Volume &lt;volume_name&gt; -Snapshot &lt;snapshot_name&gt;_ aus</block>
-  <block id="37bdbf0e3834e7af7a371007e55bb5b8" category="list-text">Über die Benutzeroberfläche des ONTAP-Systemmanagers können Sie das Volume in der Suchleiste anhand des Namens durchsuchen und dann das Volume durch Klicken auf den Namen öffnen. Wechseln Sie zu Snapshot und fügen Sie den Snapshot dieses Volumes hinzu.</block>
   <block id="c3710cf1c44da535612cf08236cee98f" category="list-text">Wählen Sie in der vSphere-Client-Benutzeroberfläche die VM aus.</block>
-  <block id="0c7449d65eaf3d8213f7d1d7f8e79d1c" category="paragraph">Löschen Sie aus dem Protokoll-Bundle die fertig gestellten Pods mit dem Präfix „Generate-Support-Bundle-Job“, bevor Sie das Upgrade durchführen.
-Wenn derzeit das Support-Bundle generiert wird, warten Sie, bis der Vorgang abgeschlossen ist, und löschen Sie den Pod.</block>
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">Laden Sie ONTAP-Tools für VMware vSphere hoch, aktualisieren Sie ISO in die Content Library.</block>
   <block id="dd5382558ec4a47dfbc203fb25698772" category="list-text">Wählen Sie auf der primären VM-Seite *actions* &gt; *Edit Settings* aus</block>
   <block id="54a029420d74c0dff69239155cf510b5" category="inline-image-macro">Einstellungen bearbeiten</block>
@@ -1297,7 +1272,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="fb9ce87f03a0429d0af0760d01b74612" category="cell">095</block>
   <block id="b5e39b37a2c811e88e1f07aa15f0ba15" category="summary">Upgrade wird sowohl für HA-Implementierungen als auch für Implementierungen ohne HA unterstützt.</block>
   <block id="7504b99fb3697e6b7b59cd3c56ab26b7" category="paragraph">Wenn Sie ein Upgrade von ONTAP Tools für VMware vSphere 10.0 auf 10.1 durchführen, müssen Sie die folgenden Schritte ausführen, bevor Sie mit dem Upgrade fortfahren:</block>
-  <block id="aadafc361893326b48d9ad9299ddff34" category="list-text">Wählen Sie im Fenster Einstellungen bearbeiten unter dem Feld *CD/DVD-Laufwerk* die ISO-Datei der Inhaltsbibliothek aus.</block>
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">Mounten Sie NFS- und VMFS-Datastore</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">Unmounten Sie den NFS- und VMFS-Datastore</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">Erweitern Sie den vVol Datastore</block>
@@ -1353,7 +1327,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="d6efc4dcb0d701b8153c2ef1af6e22b9" category="list-text">Führen Sie die folgenden Schritte aus, um ONTAP-Tools für VMware vSphere 9.xx Release SRA-Adapter in VMware Live Site Recovery UI zu löschen:</block>
   <block id="de7cd16aa682868ad900edd519b06059" category="list-text">Wechseln Sie zur Seite VMware Live Site Recovery Configuration Management</block>
   <block id="e6af441b9194db7f4427a1199ae8c274" category="inline-link-macro">Konfigurieren Sie SRA auf der VMware Live Site Recovery-Appliance</block>
-  <block id="f24af9463aafeb0a644c3f3baddedb00" category="list-text">Führen Sie auf der VMware Live Site Recovery UI-Seite *Discover Arrays* und *Discover Devices* aus und überprüfen Sie, ob die Geräte vor der Migration so angezeigt werden wie vor der Migration.</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">Sie können Storage Replication Adapter \(SRA\) mit dem Array Manager-Assistenten von VMware Live Site Recovery konfigurieren, um Interaktionen zwischen VMware Live Site Recovery und virtuellen Storage-Maschinen \(SVMs\) zu ermöglichen.</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">Sie können Storage Replication Adapter (SRA) mithilfe des Array Manager-Assistenten von VMware Live Site Recovery konfigurieren, um Interaktionen zwischen VMware Live Site Recovery und Storage Virtual Machines (SVMs) zu ermöglichen.</block>
   <block id="986d9b60b2308d9411e69051124f1e90" category="list-text">Sie sollten die geschützten Standorte und Recovery-Standorte in VMware Live Site Recovery gekoppelt haben.</block>
@@ -1536,13 +1509,9 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="35b4916fa7f87e2934afc9aa83571dfc" category="paragraph">Es werden nur die ESXi-Hosts angezeigt, die für die Plug-in-Installation geeignet sind. Befolgen Sie die Anweisungen auf dem Bildschirm, um die Installation abzuschließen. Sie können den Installationsfortschritt im Abschnitt „Letzte Aufgaben“ von vSphere Web Client überwachen.</block>
   <block id="6dc52c7290e3cfc8eb925243061b7551" category="list-text">Zertifikatverwaltung – Ändern Sie das selbstsignierte Zertifikat in ein benutzerdefiniertes CA-Zertifikat und erneuern oder aktualisieren Sie alle Zertifikate von VASA Provider und ONTAP Tools.</block>
   <block id="f8e55333fdf93a54b9c4999e28d01f1c" category="inline-image-macro">Dashboard-Übersicht über ONTAP Tools Manager</block>
-  <block id="69a8f62bd40b2285b7006bc878f63e59" category="paragraph">Im Abschnitt mit der Übersicht über den ONTAP Tools Manager können Sie die Appliance-Konfiguration wie Services-Management, die Skalierung der Node-Größe und die Aktivierung der Hochverfügbarkeit verwalten. Außerdem können Sie die allgemeinen ONTAP-Tools-Informationen zu den Knoten wie Systemzustand, Netzwerkdetails und Warnungen überwachen. <block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="438feb29c72033a1e461b5f8627d139d" category="cell">Gerätekarte</block>
-  <block id="21a9feeb29c1c0a30517eb98535f5202" category="cell">Die Appliance-Karte zeigt den allgemeinen Status der ONTAP-Tools-Appliance an. Es zeigt die Details der Appliance-Konfiguration und den Status der aktivierten Dienste an. Für weitere Details zu ONTAP Tools Appliance klicken Sie auf *DETAILS ANZEIGEN* Link. Wenn ein Aktionsjob zum Bearbeiten der Appliance-Einstellungen ausgeführt wird, werden im Portlet der Appliance der Status und die Details des Jobs angezeigt.</block>
   <block id="2ba512cd332d9fb8cdb8eaaa68126426" category="cell">Warnkarte</block>
-  <block id="2a1cd4a592ca1d01c6e03390d7a6d5d1" category="cell">Auf der Warnkarte werden die Warnmeldungen der ONTAP-Tools nach Typen aufgelistet, einschließlich Warnmeldungen auf HA-Node-Ebene. Sie können die Liste der Warnmeldungen anzeigen, indem Sie auf den Text „Count“ (Hyperlink) klicken. Über den Link gelangen Sie zur Seite mit der Warn-Ansicht, die mit dem ausgewählten Typ gefiltert wurde.</block>
   <block id="3c3237ebddf22ec92cfa91fee8b87db8" category="cell">Karte der ONTAP-Tools-Knoten</block>
-  <block id="50d0b4e12fbe47a8699d3c2d31ef6505" category="cell">Die Knotenkarte „ONTAP Tools“ zeigt die Liste der Knoten mit Knotennamen, Node-VM-Namen, Status und allen netzwerkbezogenen Daten an. Sie können auf *VIEW DETAILS* klicken, um die zusätzlichen Details zu dem ausgewählten Knoten anzuzeigen. [HINWEIS] bei einem nicht-HA-Setup wird nur ein Node angezeigt. Bei HA werden drei Nodes angezeigt.</block>
   <block id="c749ba6a66c9c4d365591fada904e866" category="list-text">Alle Datastores, die auf dem Host-Cluster gemountet werden, müssen VMFS-Datastores mit iSCSI/FC-Protokoll sein. VVols, NFS oder VMFS-Datastores mit NVMe/FC- und NVMe/TCP-Protokollen werden nicht unterstützt.</block>
   <block id="6107bfa2400c41e392656bedd41adf70" category="list-text">Im Fenster *protect Cluster* wird während des Erstellungsvorgangs nur die Löschaktion unterstützt. Sie können den Schutz löschen und erneut hinzufügen. Während des Vorgangs zum Ändern des Host-Cluster-Schutzes ist die Bearbeitungsoption verfügbar. Sie können die Beziehungen mithilfe der Optionen im Menü mit den Auslassungspunkten bearbeiten oder löschen.</block>
   <block id="79f9acbcb92275b6970c0803108ab558" category="paragraph">Eine vCenter-Aufgabe wird mit Job-ID-Details erstellt, und der Fortschritt wird im Fenster „Letzte Aufgaben“ angezeigt. Dies ist eine asynchrone Aufgabe. Die Benutzeroberfläche zeigt nur den Status der Anfrage an und wartet nicht auf den Abschluss der Aufgabe.</block>
@@ -1751,22 +1720,12 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="0e098cc28d02ba04dfc24f8fb59c1fd1" category="admonition">Diese Ansicht wird für ASA r2-basierten VVols-Datastore nicht unterstützt.</block>
   <block id="c46965d55afff0a89c0bb3bd26c0a653" category="summary">Bei der Migration von Storage-Daten werden Storage-Back-Ends manuell über REST-APIs integriert. Bei der Migration von VASA Provider-Daten werden die Daten aus der bestehenden Derby-Datenbank exportiert und in die MongoDB-Datenbank importiert.</block>
   <block id="e43b5fd407b2bc9fda1a39851a48f9bb" category="doc">Migrieren Sie von ONTAP-Tools für VMware vSphere 9.x zu 10.3</block>
-  <block id="f729a2cd0859c6ed3e1a05f2799ab893" category="admonition">Es wird empfohlen, ONTAP-Tools für das Setup von VMware vSphere 9.xx nur zu migrieren, wenn das Setup die Funktion VASA Provider allein bedient.</block>
-  <block id="6572323c8c420a17787c730db23bfe73" category="admonition">Nach der Migration von ONTAP-Tools für VMware vSpher 9.x zu 10.3 funktionieren VVols-Datastores mit dem NVMe/FC-Protokoll nicht, da die ONTAP-Tools 10.3 nur NVMe-of mit VMFS-Datastores unterstützt.</block>
-  <block id="fedbcbfcba84e0f83145c9556e237d18" category="paragraph">Die Migration wird von ONTAP-Tools für VMware vSphere 9.12D1- und 9.13D2-Versionen bis Version 10.3 unterstützt.</block>
   <block id="98db65da9a06955541a5451543410fde" category="list-text">Implementieren Sie OVA für ONTAP Tools für VMware vSphere 10.3.</block>
-  <block id="df773402e8f2ed0ab0c0814bc876c2b4" category="list-text">Fügen Sie die vCenter Server-Instanz hinzu, die Sie zu ONTAP-Tools für die Version VMware vSphere 10.3 migrieren möchten. Siehe <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
-  <block id="528ca6fe76d1644ad915c3bc45c4d63d" category="list-text">Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xx migriert wurden, sind in den ONTAP-Tools für VMware vSphere 10.3 erst sichtbar, nachdem der Datastore-Erkennungsvorgang ausgelöst wurde. Das Auslösen kann bis zu 30 Minuten dauern. Überprüfen Sie, ob die Datastores auf der Seite „Übersicht“ der UI-Seite „ONTAP Tools for VMware vSphere Plugin“ angezeigt werden.</block>
-  <block id="c86e769a3ebdcd57610a068230678ec7" category="list-text">Klicken Sie auf das Auslassungsmenü und dann auf *Konfiguration zurücksetzen*</block>
-  <block id="96069341a33c50a0ef5c1407a1fd182f" category="list-text">Klicken Sie auf das Auslassungsmenü und wählen Sie *Löschen*</block>
   <block id="b81b2046e8a2fa467c645a47a0ade5d0" category="list-text">Installieren Sie ONTAP-Tools für den VMware vSphere 10.3 SRA-Adapter anhand der Schritte in auf Schutz- und Recovery-Seiten <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
   <block id="b7b423b5e37e418ae4659bcf83c729b5" category="section-title">Migrationsschritte für VASA Provider</block>
-  <block id="2cd7a3049fe96503b7de6e7f7aa952df" category="list-text">Fügen Sie die vCenter Server-Instanz hinzu, die Sie zu ONTAP-Tools für die Version VMware vSphere 10.3 migrieren möchten. Siehe <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block>.</block>
   <block id="2d3feeef6331c15c90e4aea5b6cc1e41" category="list-text">Fügen Sie dem vCenter-Server ONTAP-Tools für VMware vSphere Storage Provider hinzu und <block ref="a322950c1b9e940cddaca5a47e2d5895" category="inline-link-macro-rx"></block>.</block>
   <block id="ffdec42d5d13cecca850e153f75748ec" category="paragraph">Löschen Sie VASA Provider nicht.</block>
-  <block id="b5a25fbe7772c238f78e903d293f5308" category="paragraph">Sobald der alte VASA Provider angehalten wurde, erfolgt ein Failover von vCenter Server zu den ONTAP Tools für VMware vSphere. Der Zugriff auf alle Datenspeicher und VMs erfolgt über ONTAP Tools für VMware vSphere.</block>
   <block id="29d0e7add25c8163223dbcb531abf7d0" category="paragraph">Gehen Sie nach der erfolgreichen Migration und nach der Registrierung der ONTAP-Tools 10.3 im vCenter Server wie folgt vor:</block>
-  <block id="b6d81ca221627275f71a12c9cd54aaf8" category="paragraph">Nachdem Sie von alten Versionen von ONTAP-Tools für VMware vSphere auf Version 10.3 migriert haben, können Sie die SRA-Adapter erneut scannen, um zu überprüfen, ob die Details auf der Seite VMware Live Site Recovery Storage Replication Adapters aktualisiert werden.</block>
   <block id="8e9a07c053d2ef05978af8e903731d91" category="paragraph">Erfahren Sie, ob eine Migration von ONTAP-Tools für VMware vSphere 9 zu ONTAP-Tools für VMware vSphere 10.1 oder höhere Versionen die richtige Lösung für Sie ist. Die aktuellsten Informationen zur Kompatibilität finden Sie unter<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>.</block>
   <block id="073983521d52887782f4ac8fcd628e60" category="cell">ONTAP-Tools ab Version 10.2</block>
   <block id="f4950bb5572ea7201d6246f4bd786edd" category="cell">ONTAP 9.12.1 bis ONTAP 9.15.1 für ONTAP Tools 10.2 ONTAP 9.14.1, 9.15.1 und 9.16.0 für ONTAP Tools 10.3.</block>
@@ -1823,17 +1782,12 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="2298090c8808f9e231d33a417e9f8fda" category="cell">Die Aktualisierung der Ressourcen auf sekundären Nodes ist fehlgeschlagen</block>
   <block id="1ca37d27a58b0a0a35fd38c8f42f39fc" category="admonition">Die ONTAP Tools für VMware vSphere 10.3 unterstützen kein RPO.</block>
   <block id="e085c3225ffce6bb698ac8cf50cc0dc4" category="doc">Upgrade von ONTAP Tools für VMware vSphere 10.x auf 10.3</block>
-  <block id="c45b0da6267d1b3ac800c0b030304702" category="paragraph">Upgrade wird sowohl für HA-Implementierungen als auch für Implementierungen ohne HA unterstützt. Unterstützte Upgrade-Pfade:</block>
   <block id="b82f42f52ac5fdc3e618aefefe8a32c4" category="cell">Über ONTAP Tools für die Konfiguration von VMware vSphere 10.1 und 10.2</block>
   <block id="b3b9272a2c469166be75d90b4b3c80cc" category="cell">Zu ONTAP Tools für die Konfiguration von VMware vSphere 10.3</block>
   <block id="55fccd63301cc56ac04a1c6d2f582d36" category="cell">Non-HA und Advanced Small</block>
   <block id="2f876f935e1583f150a8df2b2a6edbf0" category="cell">Non-HA und Advanced Medium</block>
   <block id="4bab1341c76020b5f6d28c63555579b4" category="cell">Advanced Small</block>
   <block id="8cd81bc4ea1b977ea6e585721caa4349" category="cell">Modernes Medium</block>
-  <block id="d2326859c3dfbf997316b902ffdd2b00" category="admonition">Upgrade wird von ONTAP Tools für VM Ware vSphere 10.1 und 10.2 auf 10.3 unterstützt. Ein direktes Upgrade von ONTAP Tools 10.0 auf 10.3 wird nicht unterstützt.</block>
-  <block id="1a66f7eb5566c2688b2d5d921d9eef6f" category="paragraph">Wenn Sie kein HA-Upgrade durchführen, schalten Sie die VM der ONTAP-Tools aus. Schalten Sie für ein HA-Upgrade den ersten Node aus, bevor Sie die folgenden Änderungen an den VM-Einstellungen (Virtual Machine) vornehmen.</block>
-  <block id="b646416d8819b3149b9593d11ae9e16f" category="list-text">Fügen Sie auf jedem Node eine zusätzliche Festplatte von 100 GB hinzu, wenn die Servicedaten lokal auf der VM gespeichert werden.</block>
-  <block id="fc5ce7eb2b2cb08c38ec14e4d238751d" category="list-text">Ändern Sie die CPU und den Arbeitsspeicher für ausgeschalteten VM gemäß Ihrer Implementierung. Aktivieren Sie Hot-Plug-in für CPU und RAM.</block>
   <block id="1b6cfd8c0ad7fbb4f3aad55904bed183" category="cell">10.3 Bereitstellungstyp</block>
   <block id="5d86ea2686b1b1322f7a0284c0f51191" category="cell">CPU (Core) pro Node</block>
   <block id="5c42add8c77b8db0c96fe2b4bd853355" category="cell">Arbeitsspeicher (GB) pro Node</block>
@@ -1848,35 +1802,18 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="662e7928456061bbc4ff15203f731479" category="cell">HA groß</block>
   <block id="70efdf2ec9b086079795c442636b55fb" category="cell">17</block>
   <block id="e369853df766fa44e1ed0ff613f563bd" category="cell">34</block>
-  <block id="87d8a82ad972c59e0687fe82cccc2694" category="list-text">SCHALTEN SIE die VM EIN, nachdem die Änderungen vorgenommen wurden, und warten Sie, bis die Services ausgeführt werden.</block>
-  <block id="c2bf492958f9a5af46545d2cbb870e2f" category="list-text">Nehmen Sie im Fall der HA-Bereitstellung die Ressourcenänderungen vor, aktivieren Sie Hot-Plug-in für CPU und RAM und fügen Sie 100 GB Festplatte für den zweiten und den dritten Node hinzu. Diese Nodes müssen nicht neu gebootet werden.</block>
-  <block id="22a804da0dd55275401036ab63b714e8" category="list-text">Wenn die Appliance mit den ONTAP Tools Version 10.1 oder 10.2 als lokaler Pfad implementiert wurde (einfache Implementierung), müssen Sie vor dem Upgrade einen stillgelegten Snapshot erstellen.</block>
   <block id="8a6126b328272cba568f4c25bb25de85" category="list-text">Geben Sie *4* ein, um *Support und Diagnose* auszuwählen.</block>
   <block id="1e137377f709a1d14e9081a633895f6d" category="list-text">Geben Sie *2* ein, um *Ferndiagnosezugriff aktivieren* auszuwählen.</block>
-  <block id="a285f3b4aeefb88ca2fd8666fcd325b0" category="list-text">Melden Sie sich vom Terminal/Putty an der VM-IP-Adresse mit dem Benutzer als 'diag' und dem Passwort an, das im vorherigen Schritt festgelegt wurde.</block>
   <block id="6628bd5e9dbb13f60147cfc8d04cb977" category="paragraph">*Nehmen Sie den Quaise-Schnappschuss aller Volumen*</block>
   <block id="a6d135b70268e6dae6e2414dc9c7e465" category="inline-link">Erstellen Sie einen Snapshot einer virtuellen Maschine</block>
   <block id="557eb1dc4f7a93540b6e414ed969c26c" category="list-text">Gehen Sie zur Registerkarte Snapshots und klicken Sie auf die Schaltfläche *Snapshot erstellen*. Erstellen Sie einen stillgelegten Snapshot der VM. Weitere Informationen finden Sie unter<block ref="f606a1111a1f40f1cc809e71ec5c1234" category="inline-link-rx"></block>.</block>
-  <block id="1b2929d74bbfce8f97efe465aa7ef62a" category="paragraph">Sie müssen für jede Art von Upgrade eine zusätzliche Festplatte (HDD) von 100 GB hinzufügen. Führen Sie die folgende Aufgabe aus, um die Festplatte hinzuzufügen.</block>
-  <block id="5919e650880cfeabf035fac93b2a3d51" category="list-text">Wählen Sie die VM in Single Node-Konfiguration aus, oder wählen Sie alle drei VMs in HA-Konfiguration aus.</block>
   <block id="f0032c952bebc43c75710433e2994c19" category="list-text">Klicken Sie mit der rechten Maustaste auf die VM(s) und wählen Sie *Neues Gerät hinzufügen* &gt; *Festplatte*</block>
-  <block id="24b529fa7fe637c09879ca05c8c7c2c3" category="list-text">Fügen Sie im Feld *Neue Festplatte* HDD von 100 GB hinzu.</block>
   <block id="91228eef6e9a7bdc25cdad1b40b153b6" category="list-text">Klicken Sie Auf *Anwenden*</block>
-  <block id="635d38999d7fdd67d78a58a7fd2c957c" category="paragraph">Aktualisieren Sie nach dem Hinzufügen der Festplatte die Ressourcen der VM für die entsprechenden Konfigurationen, und starten Sie die primäre VM neu.</block>
-  <block id="b2c62309c8e6bb5418cb5e49fdc348d4" category="paragraph">Es wird eine neue Festplatte erstellt. Die dynamische Storage-bereitstellung erstellt oder repliziert die Volumes über diese Festplatte.</block>
   <block id="51d976aa6e2371bc36e19441158b8e08" category="paragraph">Nach einem Upgrade auf ONTAP Tools für VMware vSphere 10.3 haben Sie folgende Möglichkeiten:</block>
-  <block id="4919e6f9219e550bfd4f15862ca7c4e1" category="list-text">Deaktivieren Sie die Dienste über die Manager-Benutzeroberfläche</block>
-  <block id="cd45571610eaf41dc79736a925d0dd90" category="list-text">Wechseln Sie von einer Einrichtung ohne HA zur Einrichtung für HA</block>
-  <block id="3d7a5459b11b0dd9ed444d6d42cd9d4c" category="list-text">Skalieren Sie eine kleine, nicht-HA-Konfiguration auf ein Medium ohne HA oder auf eine mittelgroße oder große HA-Konfiguration.</block>
-  <block id="573cfbe6133f4358783c68d68d4d7733" category="list-text">Booten Sie die ONTAP Tools VM im Fall eines Upgrades ohne HA neu, um die Änderungen abzubilden. Booten Sie im Fall eines HA-Upgrades den ersten Node neu, um die Änderungen am Node widerzuspiegeln.</block>
-  <block id="f305a79263533021079634e7a636a791" category="paragraph">Nachdem Sie ein Upgrade von früheren Versionen von ONTAP-Tools für VMware vSphere auf Version 10.3 durchgeführt haben, können Sie die SRA-Adapter erneut scannen, um zu überprüfen, ob die Details auf der Seite VMware Live Site Recovery Storage Replication Adapter aktualisiert werden.</block>
   <block id="12da67bb345ae219e1ec7b1f8d8f09dd" category="paragraph">Löschen Sie die Trident-Volumes nach einem erfolgreichen Upgrade manuell aus ONTAP, indem Sie das folgende Verfahren durchführen:</block>
-  <block id="fc95380c03a9e2251e07f1937e36341b" category="admonition">Diese Schritte sind nicht erforderlich, wenn die ONTAP-Tools für VMware vSphere 10.1 oder 10.2 in kleinen Konfigurationen ohne HA oder in mittelgroßen Konfigurationen (lokaler Pfad) ohne HA vorhanden waren.</block>
   <block id="528fcc96313b41a079cf4a618d21bc56" category="list-text">Geben Sie *4* ein, um das Menü *Support und Diagnose* auszuwählen.</block>
-  <block id="7c7165f05246a4a849b52f09cdc55f2e" category="list-text">Geben Sie *1* ein, um die Option *Access Diagnostics Shell* auszuwählen.</block>
   <block id="69fc33706a999a8497eea8a0a1410092" category="list-text">Führen Sie den folgenden Befehl aus</block>
   <block id="4c4796167c3422541c6e31f440e40302" category="list-text">Geben Sie den ONTAP-Benutzernamen und das Passwort ein</block>
-  <block id="cb0777e7c086fec2eb034fbc83e6ea2c" category="paragraph">Dadurch werden alle in ONTAP vorhandenen Trident-Volumes gelöscht, die in ONTAP-Werkzeugen für VMware vSphere 10.1/10.2 verwendet wurden.</block>
   <block id="3c8480343462c93f8ec9ed8f6c4a4282" category="sidebar">Dokumentation für ONTAP Tools für VMware vSphere 10.2</block>
   <block id="2e0332b2709dcff7df5d28c654c54066" category="sidebar">ONTAP Tools für VMware vSphere 10.3</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">Geschützte Standorte und Recovery-Standorte konfigurieren</block>
@@ -2032,4 +1969,75 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="3672cc73e8f241c0e99fa671f7d984c5" category="sidebar">Automatisierung mit der REST-API</block>
   <block id="90182eba2ac7240af5b5cb5ba83a8c1b" category="sidebar">Weitere Informationen zur REST-API</block>
   <block id="d58b759501469292f5d0464d265c376c" category="sidebar">REST-Implementierung</block>
+  <block id="cfd78a7adbcd7e4e099e4150d96d4189" category="list-text">Passwortverwaltung - Zurücksetzen des OVA-Anwendungskennworts des Benutzers.</block>
+  <block id="86e9662d627799ea9b0d956617badc77" category="paragraph">Im Abschnitt mit der Übersicht über den ONTAP Tools Manager wird die Appliance-Konfiguration gemanagt, z. B. Services-Management, Upscaling der Node-Größe und Unterstützung für Hochverfügbarkeit. Sie können auch die allgemeinen Informationen von ONTAP-Tools zu den Knoten überwachen, wie z. B. Systemzustand, Netzwerkdetails und Warnmeldungen.</block>
+  <block id="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="paragraph"><block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9190f42ee5e75c97614269214dfcb136" category="cell">Die Appliance-Karte zeigt den Gesamtstatus der ONTAP Tools Appliance an. Es zeigt die Details der Appliance-Konfiguration und den Status der aktivierten Dienste an. Weitere Informationen zur ONTAP Tools Appliance erhalten Sie über den Link *Details anzeigen*. Wenn ein Aktionsjob zum Bearbeiten der Appliance-Einstellungen ausgeführt wird, werden im Portlet der Appliance der Status und die Details des Jobs angezeigt.</block>
+  <block id="faf239172dda3b91c4655d9bbde63c82" category="cell">Auf der Warnkarte werden die Warnmeldungen der ONTAP-Tools nach Typ aufgeführt, einschließlich der Warnmeldungen auf HA-Node-Ebene. Sie können die Liste der Warnmeldungen anzeigen, indem Sie auf den Text „Count“ (Hyperlink) klicken. Über den Link gelangen Sie zur Seite mit der Warn-Ansicht, die nach dem ausgewählten Typ gefiltert ist.</block>
+  <block id="0e347dbe23febdf1001ed9dfb3e15bc1" category="cell">Die Knotenkarte „ONTAP Tools“ zeigt die Liste der Knoten mit Knotennamen, Node-VM-Namen, Status und allen netzwerkbezogenen Daten an. Sie können auf *Details anzeigen* klicken, um die zusätzlichen Details zu dem ausgewählten Knoten anzuzeigen. [HINWEIS] in einem nicht-HA-Setup wird nur ein Node angezeigt. Im HA-Setup werden drei Nodes angezeigt.</block>
+  <block id="8c5a94dd08e58279f7461d929aa633e6" category="paragraph">Bei der Migration von Storage-Daten werden Storage-Back-Ends manuell über REST-APIs integriert. Bei der Migration von VASA Provider-Daten werden die Daten aus der bestehenden Derby-Datenbank exportiert und in die MongoDB-Datenbank importiert.</block>
+  <block id="b191a7ff08bb6435186d922c59ff1907" category="admonition">Sie sollten ONTAP-Tools für das VMware vSphere 9.xx-Setup nur dann migrieren, wenn das Setup die VASA Provider-Funktion allein bedient.</block>
+  <block id="656a2ce4c62bd399a29a0cc087a7eb83" category="admonition">Nach der Migration von ONTAP Tools für VMware vSphere 9.x zu 10.3 funktionieren VVols-Datastores mit dem NVMe/FC-Protokoll nicht, da die ONTAP Tools 10.3 nur NVMe-of bei VMFS-Datastores unterstützt.</block>
+  <block id="f9f52fdfc3b658d087ef0d1715cc2008" category="paragraph">Sie können von den ONTAP-Tools für VMware vSphere 9.12D1 und 9.13D2-Versionen auf 10.3 migrieren.</block>
+  <block id="12f864a7f79090b1b0f169109899eb43" category="admonition">Sie müssen das OVA-Backup von Ihrer aktuellen Version durchführen, bevor Sie ein Upgrade auf die Patch-Versionen durchführen.</block>
+  <block id="6a52711c7181000aac8a9b276baf324a" category="list-text">Fügen Sie die vCenter Server-Instanz hinzu, die Sie zu ONTAP-Tools für die Version VMware vSphere 10.3 migrieren möchten. Siehe <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block></block>
+  <block id="9a8e25e84fe96275dbb27d27d2cca595" category="list-text">Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xx migriert wurden, sind in den ONTAP-Tools für VMware vSphere 10.3 erst sichtbar, nachdem der Datastore-Erkennungsvorgang ausgelöst wurde. Das Auslösen kann bis zu 30 Minuten dauern. Überprüfen Sie, ob die Datastores auf der Übersichtsseite der ONTAP-Tools für die VMware vSphere Plugin UI-Seite sichtbar sind.</block>
+  <block id="b4c20aabb2d8056ffe9e2b60a0164bf2" category="paragraph">Stellen Sie vor der Migration sicher, dass sich einer der Standorte in einem geschützten Zustand befindet und sich der andere in einem Wiederherstellungsstatus befindet.</block>
+  <block id="c7c25af309bd84b7749f1862027abc3f" category="admonition">Führen Sie keine Migration durch, wenn das Failover gerade abgeschlossen wurde und der erneute Schutz aussteht. Führen Sie den erneuten Schutz durch, und führen Sie dann die Migration durch. Nachdem Sie die Tests des Wiederherstellungsplans abgeschlossen haben, bereinigen Sie die Testwiederherstellung und starten Sie die Migration.</block>
+  <block id="0f47e7ab13b9f8031de10689d97b861b" category="list-text">Gehen Sie zum Abschnitt *Storage Replication Adapter*</block>
+  <block id="c28d0a48f388c92ed3ec2fccafeb15ea" category="list-text">Klicken Sie auf das Auslassungsmenü und wählen Sie *Konfiguration zurücksetzen*</block>
+  <block id="1c5f97ee40c90341d1819bd10d046a29" category="list-text">Klicken Sie auf das Auslassungsmenü und wählen Sie *Löschen*</block>
+  <block id="e7563198149b4ef22a580dcc695a13ec" category="list-text">Führen Sie auf der VMware Live Site Recovery UI-Seite *Discover Arrays* und *Discover Devices* aus und überprüfen Sie, ob die Geräte vor der Migration so angezeigt werden, wie sie waren.</block>
+  <block id="e316aaa000b8dea913558dbe47e2ab03" category="list-text">Aktivieren Sie Derby-PORT 1527 auf den vorhandenen ONTAP-Tools für VMware vSphere. Um den Port zu aktivieren, melden Sie sich mit dem root-Benutzer bei CLI an und führen Sie den folgenden Befehl aus:</block>
+  <block id="fdb5b6876d97a075f0bc2a07cd4be907" category="list-text">Implementieren Sie OVA für ONTAP Tools für VMware vSphere 10.3.</block>
+  <block id="34b17f133cdce8c13fd8b812b8c11211" category="list-text">Fügen Sie die vCenter Server-Instanz hinzu, die Sie zu ONTAP-Tools für die Version VMware vSphere 10.3 migrieren möchten. Siehe <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block>.</block>
+  <block id="142e4d3f8edb2747fa0e3d260133b8c1" category="paragraph">Sobald der Job abgeschlossen ist, validieren Sie den Migrationsbericht. Der Bericht ist Teil der Jobdaten und kann von der Jobantwort aus eingesehen werden.</block>
+  <block id="009dbe214d15197679fe0b95a8a01cc3" category="list-text">Stoppen Sie ONTAP Tools für den VMware vSphere Storage Provider 9.10/9.11/9.12/9.13 VASA Provider Service von der Wartungskonsole aus.</block>
+  <block id="4bf6186a3a16efffdaebdafdd4fcaf4b" category="paragraph">Sobald der alte VASA Provider angehalten wurde, erfolgt ein Failover des vCenter Servers zu den ONTAP Tools für VMware vSphere. Der Zugriff auf alle Datenspeicher und VMs erfolgt über ONTAP Tools für VMware vSphere.</block>
+  <block id="ba5c200a0d4600ec4fe2ef79c26593b8" category="list-text">Führen Sie die Patch-Migration mithilfe der folgenden API durch:</block>
+  <block id="f663ec26fcc5dbf0e82a2df73c30a3e3" category="paragraph">Der Anforderungskörper ist für den Patchvorgang leer.</block>
+  <block id="e4453a0aab117b65b26edb59d78793fd" category="paragraph">Sobald die Patch-Migrations-API erfolgreich ausgeführt wurde, entsprechen alle VMs der Storage-Richtlinie.</block>
+  <block id="cd6f62989595e510d57e7b407691336a" category="paragraph">Diese API löscht die Migration nach Migrations-ID und löscht die Migration auf dem angegebenen vCenter Server.</block>
+  <block id="9a43f64b9545dfa5ddfcc70dbc73d001" category="list-text">Warten Sie einige Zeit, bevor Sie Vorgänge in Datenspeicher (DS) und Virtual Machine (VM) ausführen. Die Wartezeit hängt von der Anzahl der Hosts, DS und VMs in dem Setup ab. Wenn Sie nicht warten, können die Vorgänge zeitweise ausfallen.</block>
+  <block id="d338e834d62b1cf850a89cbfdf1d9bd7" category="paragraph">Nachdem Sie von alten Versionen von ONTAP-Tools für VMware vSphere auf 10.3 migriert haben, können Sie die SRA-Adapter erneut scannen, um zu überprüfen, ob die Details auf der Seite VMware Live Site Recovery Storage Replication Adapters aktualisiert werden.</block>
+  <block id="422c2a3517291219d45e5d0be95be9d1" category="paragraph">Wenn der Compliance-Status der virtuellen Maschine nach dem Upgrade veraltet ist, wenden Sie die Storage-Richtlinie der virtuellen Maschine wie folgt an:</block>
+  <block id="15e560ab707fa2bf2b7b0833adbe8bb9" category="list-text">Navigieren Sie zum Datenspeicher, und wählen Sie *Zusammenfassung* &gt; *VM Storage Policies*.</block>
+  <block id="578a0636e92ae2e1b6afe3bdc7c9f9b3" category="paragraph">Unter *VM Storage Policy Compliance* sehen Sie den Compliance-Status. Es wird als *veraltet* angezeigt</block>
+  <block id="325367fe0120f7c1592bf3028da84bee" category="list-text">Wählen Sie die Richtlinie Storage VM und die entsprechende VM aus</block>
+  <block id="c16f1c2a54634bdad6dee177f8131ef5" category="list-text">Wählen Sie *Anwenden*</block>
+  <block id="b180a96ee0634f423c4629bca8858873" category="paragraph">Der Compliance-Status unter *VM Storage Policy Compliance* wird nun als konform angezeigt.</block>
+  <block id="bd6bc908cf442363948229bac8df6193" category="list-text">ONTAP-Quell- und Ziel-Cluster müssen vor der Ausführung der SRA-Workflows dieselben benutzerdefinierten SnapMirror-Zeitpläne aufweisen.</block>
+  <block id="53fa6655b37323ab66a83f1beb9f66c1" category="paragraph">Das Upgrade wird sowohl für HA-Implementierungen als auch für Implementierungen ohne HA unterstützt. Unterstützte Upgrade-Pfade:</block>
+  <block id="6057f03ffe4bbf8fd9e051002f4f22bb" category="admonition">Es werden Upgrades von ONTAP Tools für VMware vSphere 10.1 und 10.2 auf 10.3 unterstützt. Direkte Upgrades von ONTAP Tools 10.0 auf 10.3 werden nicht unterstützt.</block>
+  <block id="a37e11c372d948a69c1ca06f96f29654" category="paragraph">Wenn Sie ein Upgrade ohne HA durchführen, schalten Sie die ONTAP Tools-VM aus. Schalten Sie für ein HA-Upgrade den ersten Node aus, bevor Sie die folgenden Änderungen an den VM-Einstellungen (Virtual Machine) vornehmen.</block>
+  <block id="360d7dde1452a41a726a072836e13df3" category="list-text">Fügen Sie jedem Node eine zusätzliche 100-GB-Festplatte hinzu, da die Servicedaten lokal auf der VM gespeichert werden.</block>
+  <block id="d542d6e6bfec95dca9488d55ed772578" category="list-text">Ändern Sie die CPU und den Arbeitsspeicher der ausgeschalteten VM entsprechend Ihrer Implementierung. Aktivieren Sie das Hot-Plug-in für CPU und RAM.</block>
+  <block id="fdd3abbed4073b09c3b2a7f9316d5c88" category="list-text">SCHALTEN Sie die VM EIN, nachdem die Änderungen vorgenommen wurden, und warten Sie, bis die Services ausgeführt werden.</block>
+  <block id="ff305864530c5baf345b9688bd0631f4" category="list-text">Nehmen Sie im Fall der HA-Bereitstellung die Ressourcenänderungen vor, aktivieren Sie das Hot-Plug-in für CPU und RAM und fügen Sie 100 GB Festplatten für den zweiten und den dritten Node hinzu. Diese Nodes müssen nicht neu gebootet werden.</block>
+  <block id="aaa3919b119a4a5719987a826b3f426c" category="list-text">Wenn die Appliance als lokaler Pfad (einfache Implementierung) mit den ONTAP-Tools 10.1 oder 10.2 implementiert wurde, müssen Sie vor dem Upgrade einen stillgelegten Snapshot erstellen.</block>
+  <block id="c1da67abb88e41cb6c66ffcb6aa791c1" category="list-text">Öffnen Sie im vCenter Server eine Konsole für ONTAP Tools.</block>
+  <block id="8f6d00eacbf6d4158bc6e74700b0499e" category="list-text">Melden Sie sich vom Terminal/Putty an der VM-IP-Adresse mit dem Benutzer als 'diag' und dem Passwort an, das im vorherigen Schritt festgelegt wurde.</block>
+  <block id="2528cd48cce125276b1d088b78c23ac4" category="paragraph">*Nehmen Sie ein Backup von MongoDB*</block>
+  <block id="968d0c04f7a1680429ceb1db128906cd" category="paragraph">Führen Sie die folgenden Befehle aus, um ein Backup von MongoDB zu erstellen:</block>
+  <block id="54efa270b0d74ef97f3590c0aae1393d" category="list-text">Führen Sie den Befehl _env_grep MONGODB_ROOT_PASSWORD_ innerhalb des Pod aus.</block>
+  <block id="97493984eff3f2fe92f1d3aa5ec1c13a" category="list-text">Führen Sie den Befehl _exit_ aus, um aus dem Pod zu kommen.</block>
+  <block id="91e2ec0f0dd7d843927f5c85366a02ec" category="list-text">Führen Sie den Befehl _kn exec ntv-mongodb-0 --mongodump -U ROOT -p MONGODB_ROOT_PASSWORD --Archive=/tmp/mongodb-backup.gz --gzip_ aus, um den Satz MONGO_ROOT_PASSWORD aus dem obigen Befehl zu ersetzen.</block>
+  <block id="4728f0b778ffa8e0ae5be992c59e144b" category="list-text">Führen Sie den Befehl _kn CP ntv-mongodb-0:/tmp/mongodb-backup.gz ./mongodb-Backup.gz_ aus, um das mit dem obigen Befehl erstellte mongodb Backup vom Pod auf den Host zu kopieren.</block>
+  <block id="8694eb97cf4ec570d09d33becf6a8eed" category="list-text">Führen Sie den Befehl 'kn get pvc' aus und speichern Sie die Befehlsausgabe.</block>
+  <block id="a9e8526531fd29e961f43f5bb243319e" category="list-text">Durchsuchen Sie in der Benutzeroberfläche von ONTAP System Manager das Volume anhand des Namens in der Suchleiste, und öffnen Sie dann das Volume, indem Sie auf den Namen klicken. Wechseln Sie zu Snapshot und fügen Sie den Snapshot dieses Volumes hinzu.</block>
+  <block id="07cf559ee7bbc8841180f1dd59c2917f" category="paragraph">Löschen Sie vor der Durchführung des Upgrades die abgeschlossenen Pods aus dem Log Bundle mit dem Präfix „Generate-Support-Bundle-Job“. Wenn derzeit das Support-Bundle generiert wird, warten Sie, bis der Vorgang abgeschlossen ist, und löschen Sie den Pod.</block>
+  <block id="7817c7412ad536f5c02bd959934f66d5" category="paragraph">Für jede Art von Upgrade müssen Sie eine zusätzliche 100-GB-Festplatte (HDD) hinzufügen. Führen Sie die folgende Aufgabe aus, um eine Festplatte hinzuzufügen.</block>
+  <block id="11873b433682caa870371cc1631ef90f" category="list-text">Wählen Sie die VM in der Single Node-Konfiguration oder alle drei VMs in der HA-Konfiguration aus.</block>
+  <block id="3fed8c7b63099eeb7748cc54424abfec" category="list-text">Fügen Sie eine 100-GB-Festplatte in das Feld * Neue Festplatte* ein.</block>
+  <block id="cd457aeee08a9f6476660a1f15284160" category="paragraph">Aktualisieren Sie nach dem Hinzufügen der Festplatte die VM-Ressourcen für die entsprechenden Konfigurationen, und starten Sie die primäre VM neu.</block>
+  <block id="82c4bde04ac809c6d15f232949e072ce" category="paragraph">Es wird eine neue Festplatte erstellt. Die dynamische Storage-bereitstellung erstellt oder repliziert die Volumes mithilfe dieser HDD.</block>
+  <block id="ef9e53e40d78d57abe78283a3603eb4e" category="list-text">Wählen Sie die ISO-Datei der Inhaltsbibliothek im Fenster Einstellungen bearbeiten unter dem Feld *CD/DVD-Laufwerk* aus.</block>
+  <block id="e4965c8171d689acf2bfafb148ebfaa8" category="list-text">Deaktivieren Sie die Dienste über die Manager-Benutzeroberfläche</block>
+  <block id="c8c29d2a26286541354fc8e377f3b6ce" category="list-text">Wechseln Sie von einer Einrichtung ohne HA-Konfiguration zu einer HA-Einrichtung</block>
+  <block id="4521a8bb9c231770ace79aca6602dc13" category="list-text">Skalieren Sie eine kleine, nicht-HA-Konfiguration als Medium ohne HA oder auf eine mittlere oder große HA-Konfiguration.</block>
+  <block id="48f74593cd55f85759914f3614a0c3b9" category="list-text">Starten Sie im Fall eines Upgrades ohne HA die VM der ONTAP Tools neu, um die Änderungen widerzuspiegeln. Booten Sie im Fall eines HA-Upgrades den ersten Node neu, um die Änderungen am Node widerzuspiegeln.</block>
+  <block id="29c35069673bbb39e41492464283c461" category="paragraph">Nachdem Sie ein Upgrade von früheren Versionen von ONTAP-Tools für VMware vSphere auf 10.3 durchgeführt haben, können Sie die SRA-Adapter erneut scannen, um sicherzustellen, dass die Details auf der Seite VMware Live Site Recovery Storage Replication Adapters aktualisiert werden.</block>
+  <block id="97157e33a0e033b7effd56e6305b9030" category="admonition">Diese Schritte sind nicht erforderlich, wenn die ONTAP-Tools für VMware vSphere 10.1 oder 10.2 in nicht-HA-kleinen oder mittelgroßen (lokalen Pfad)-Konfigurationen verwendet wurden.</block>
+  <block id="3ff3da4c344f1ccca0d255803305cce9" category="list-text">Geben Sie *1* ein, um die Option *Access Diagnostics Shell* auszuwählen.</block>
+  <block id="a1f81812b9996ffae82950938651b560" category="paragraph">Dadurch werden alle Trident Volumes in ONTAP gelöscht, die in ONTAP Tools für VMware vSphere 10.1/10.2 verwendet werden.</block>
 </blocks>
