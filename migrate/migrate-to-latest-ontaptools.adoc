@@ -244,3 +244,7 @@ Unter *VM Storage Policy Compliance* sehen Sie den Compliance-Status. Es wird al
 Der Compliance-Status unter *VM Storage Policy Compliance* wird nun als konform angezeigt.
 
 
+
+*Verwandte Informationen*
+
+link:../upgrade/upgrade-ontap-tools.html["Upgrade von ONTAP Tools für VMware vSphere 10.x auf 10.3"]
