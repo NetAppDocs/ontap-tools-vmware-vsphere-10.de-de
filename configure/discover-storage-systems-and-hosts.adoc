@@ -36,7 +36,7 @@ ONTAP Tools für VMware vSphere zeigt ein *Confirm*-Dialogfeld mit der folgenden
 „Diese Aktion startet die Erkennung aller verbundenen Speichersysteme neu und kann einige Minuten dauern. Möchten Sie fortfahren?“
 
 . Klicken Sie Auf *Ja*.
-. Wählen Sie die ermittelten Speicher-Controller aus `Authentication Failure`, die den Status haben, und klicken Sie auf *actions* > *Modify*.
+. Wählen Sie die ermittelten Speicher-Controller aus, die den Status haben `Authentication Failure`, und wählen Sie *actions* > *Modify* aus.
 . Geben Sie die erforderlichen Informationen in das Dialogfeld * Speichersystem ändern* ein.
 . Wiederholen Sie die Schritte 4 und 5 für alle Speicher-Controller mit `Authentication Failure` Status:
 

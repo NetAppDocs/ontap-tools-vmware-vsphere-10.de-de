@@ -55,7 +55,7 @@ Wenn Sie die Berechtigungen innerhalb einer Rolle ändern, muss sich der Benutze
 
 Zur Vereinfachung der Arbeit mit vCenter Server-Berechtigungen und RBAC bietet das ONTAP Tool für VMware vSphere standardmäßige ONTAP Tools für VMware vSphere Rollen, mit denen Sie wichtige ONTAP Tools für VMware vSphere Aufgaben ausführen können. Es gibt auch eine schreibgeschützte Rolle, mit der Sie die Informationen anzeigen, aber keine Aufgaben ausführen können.
 
-Sie können ONTAP-Tools für VMware vSphere-Standardrollen anzeigen, indem Sie auf der vSphere-Client-Startseite auf *Rollen* klicken. Mithilfe der Rollen, die ONTAP Tools für VMware vSphere bieten, können Sie folgende Aufgaben ausführen:
+Sie können ONTAP-Tools für VMware vSphere-Standardrollen anzeigen, indem Sie auf der vSphere Client-Startseite *Rollen* auswählen. Mithilfe der Rollen, die ONTAP Tools für VMware vSphere bieten, können Sie folgende Aufgaben ausführen:
 
 |===
 

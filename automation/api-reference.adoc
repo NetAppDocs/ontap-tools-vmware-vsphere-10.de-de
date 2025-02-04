@@ -29,5 +29,5 @@ Die ONTAP-Tools für die REST-API-Dokumentation zu VMware vSphere 10 können onl
 +
 `\https://10.61.25.33:8443/`
 
-. Scrollen Sie als Beispiel für einen einzelnen API-Aufruf nach unten in die Kategorie *vCenters* und klicken Sie neben dem Endpunkt auf *GET* `/virtualization/api/v1/vcenters`
+. Scrollen Sie als Beispiel für einen einzelnen API-Aufruf nach unten in die Kategorie *vCenters* und wählen Sie neben dem Endpunkt *GET* `/virtualization/api/v1/vcenters`
 

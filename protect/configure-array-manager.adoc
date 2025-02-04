@@ -25,7 +25,7 @@ SRA unterstützt das Management auf Cluster-Ebene und das Management der SVM. We
 
 *Schritte*
 
-. Klicken Sie in VMware Live Site Recovery auf *Array Manager* und dann auf *Array Manager hinzufügen*.
+. Wählen Sie in VMware Live Site Recovery *Array Manager* > *Array Manager hinzufügen* aus.
 . Geben Sie die folgenden Informationen ein, um das Array in VMware Live Site Recovery zu beschreiben:
 +
 .. Geben Sie einen Namen ein, um den Array-Manager im Feld *Anzeigename* zu identifizieren.
@@ -62,7 +62,7 @@ Wenn Sie beispielsweise Volume _src_vol1_ aus einer SnapMirror-Beziehung mit Vol
 
 
 . Klicken Sie Auf *Weiter*.
-. Überprüfen Sie, ob das Array erkannt und unten im Fenster Array-Manager hinzufügen angezeigt wird, und klicken Sie auf *Fertig stellen*.
+. Überprüfen Sie, ob das Array erkannt und unten im Fenster Array-Manager hinzufügen angezeigt wird, und wählen Sie *Fertig stellen*.
 
 
 Sie können dieselben Schritte für den Recovery-Standort befolgen, indem Sie die entsprechenden SVM-Management-IP-Adressen und Anmeldedaten verwenden. Auf dem Bildschirm Array-Paare aktivieren des Assistenten zum Hinzufügen von Array-Manager sollten Sie überprüfen, ob das richtige Array-Paar ausgewählt ist und dass es als bereit für die Aktivierung angezeigt wird.

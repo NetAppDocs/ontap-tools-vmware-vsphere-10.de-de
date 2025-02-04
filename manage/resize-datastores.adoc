@@ -19,8 +19,8 @@ Sie können nur die Größe von NFS- und VMFS-Datastores erhöhen. Ein FlexVol V
 
 *Schritte*
 
-. Klicken Sie auf der vSphere Client-Startseite auf *Hosts und Cluster*.
+. Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.
 . Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Datastore enthält.
 . Klicken Sie mit der rechten Maustaste auf den NFS- oder VMFS-Datastore und wählen Sie *NetApp ONTAP Tools* > *Datastore skalieren* aus.
-. Geben Sie im Dialogfeld Größe ändern eine neue Größe für den Datastore an und klicken Sie auf *OK*.
+. Geben Sie im Dialogfeld Größe ändern eine neue Größe für den Datastore an und wählen Sie *OK*.
 

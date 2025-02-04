@@ -16,8 +16,8 @@ Wenn Sie mehrere ESXi-Host-IP-Adressen haben, werden standardmäßig alle vom Ho
 Sie können wählen, ob Sie einige bestimmte ESXi-Hostadressen für den Datastore-Mount-Vorgang zulassen möchten. Wenn die Einstellung nicht angegeben ist, fügt die Exportrichtlinie alle im Schritt Pre-Mount ermittelten IP-Adressen hinzu. Wenn die Einstellung angegeben ist, fügen ONTAP-Tools für VMware vSphere nur diejenigen hinzu, die in den aufgeführten IP-Adressen oder -Bereich fallen. Wenn keine der IP-Adressen eines Hosts zu den aufgeführten IP-Adressen gehört, schlägt der Mount-Vorgang auf diesem Host fehl.
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
-. Klicken Sie auf der Shortcuts-Seite unter dem Plug-ins-Bereich auf *NetApp ONTAP Tools*.
+. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Wählen Sie auf der Shortcuts-Seite unter dem Plug-ins-Abschnitt *NetApp ONTAP Tools* aus.
 . Navigieren Sie im linken Bereich der ONTAP-Tools zu *Einstellungen* > *Netzwerkzugang verwalten* > *Bearbeiten*.
 +
 Verwenden Sie ein Komma (,), um die IP-Adressen zu trennen. Sie können eine bestimmte IP-Adresse oder einen Bereich von IP-Adressen oder IPv6-Adressen angeben.

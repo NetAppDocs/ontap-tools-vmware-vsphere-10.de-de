@@ -29,7 +29,7 @@ NOTE: Ein Storage-Back-End ist global verfügbar, wenn sie über den ONTAP Tools
 
 *Schritte*
 
-. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Seitenleiste *Speicher-Backends* aus.
 . Wählen Sie *Hinzufügen*.
@@ -46,10 +46,10 @@ NOTE: IPv4- und IPv6-Management-LIFs werden unterstützt. Auch die benutzerbasie
 
 NOTE: Wenn Sie mithilfe der vSphere Client-UI ein Storage-Back-End hinzufügen, unterstützt VVols Datastore das direkte Hinzufügen eines SVM-Benutzers nicht.
 
-. Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
-. Klicken Sie auf der Shortcuts-Seite unter dem Plug-ins-Bereich auf *NetApp ONTAP Tools*.
+. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Wählen Sie auf der Shortcuts-Seite unter dem Plug-ins-Abschnitt *NetApp ONTAP Tools* aus.
 . Navigieren Sie im linken Bereich der ONTAP-Tools zu *Speicher-Backends* und wählen Sie *Hinzufügen*.
-. Geben Sie im Fenster *Add Storage Backend* die IP-Adresse, den Benutzernamen, das Passwort und die Port-Details des Servers an und klicken Sie auf *Add*.
+. Geben Sie im Fenster *Add Storage Backend* die IP-Adresse, den Benutzernamen, das Passwort und die Port-Details des Servers an und wählen Sie *Add*.
 +
 
 NOTE: Sie können Cluster-basierte Anmeldedaten und logische Schnittstellen für das IPv4- und IPv6-Adressmanagement hinzufügen oder SVM-basierte Anmeldedaten mit der Management-LIF der SVM bereitstellen, um einen SVM-Benutzer direkt hinzuzufügen.

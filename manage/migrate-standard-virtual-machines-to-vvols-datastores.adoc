@@ -23,8 +23,8 @@ Bei der Migration von einem NFS- und VMFS-Datastore zu einem VVols-Datastore ver
 
 *Schritte*
 
-. Klicken Sie mit der rechten Maustaste auf die virtuelle Maschine, die Sie migrieren möchten, und klicken Sie auf *Migrate*.
-. Wählen Sie *nur Speicher ändern* und klicken Sie dann auf *Weiter*.
+. Klicken Sie mit der rechten Maustaste auf die virtuelle Maschine, die Sie migrieren möchten, und wählen Sie *Migrate*.
+. Wählen Sie *nur Speicher ändern* und dann *Weiter*.
 . Wählen Sie ein virtuelles Festplattenformat, eine VM-Speicherrichtlinie und einen vVol-Datastore aus, der den Funktionen des zu migrierenden Datastore entspricht. Klicken Sie Auf *Weiter*.
-. Überprüfen Sie die Einstellungen und klicken Sie auf *Fertig stellen*.
+. Überprüfen Sie die Einstellungen und wählen Sie *Fertig stellen*.
 

@@ -101,7 +101,7 @@ Führen Sie die folgenden Befehle aus, um ein Backup von MongoDB zu erstellen:
 * Erstellen Sie Snapshots aller Volumes nacheinander mit einer der folgenden Methoden:
 +
 ** Führen Sie in der CLI den Befehl _Volume Snapshot create -vserver <vserver_name> -Volume <volume_name> -Snapshot <snapshot_name>_ aus
-** Durchsuchen Sie in der Benutzeroberfläche von ONTAP System Manager das Volume anhand des Namens in der Suchleiste, und öffnen Sie dann das Volume, indem Sie auf den Namen klicken. Wechseln Sie zu Snapshot und fügen Sie den Snapshot dieses Volumes hinzu.
+** Durchsuchen Sie über die Benutzeroberfläche von ONTAP System Manager das Volume anhand des Namens in der Suchleiste, und öffnen Sie dann das Volume, indem Sie den Namen auswählen. Wechseln Sie zu Snapshot und fügen Sie den Snapshot dieses Volumes hinzu.
 
 
 
@@ -109,7 +109,7 @@ Führen Sie die folgenden Befehle aus, um ein Backup von MongoDB zu erstellen:
 *Nehmen Sie die Momentaufnahme von ONTAP-Tools für VMware vSphere VMs in vCenter (3VMs im Fall der HA-Bereitstellung, 1 VM im Falle einer nicht-HA-Bereitstellung)*
 
 * Wählen Sie in der vSphere-Client-Benutzeroberfläche die VM aus.
-* Gehen Sie zur Registerkarte Snapshots und klicken Sie auf die Schaltfläche *Snapshot erstellen*. Erstellen Sie einen stillgelegten Snapshot der VM. Weitere Informationen finden Sie unter https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Erstellen Sie einen Snapshot einer virtuellen Maschine"^].
+* Gehen Sie auf die Registerkarte Snapshots und wählen Sie die Schaltfläche *Snapshot erstellen*. Erstellen Sie einen stillgelegten Snapshot der VM. Weitere Informationen finden Sie unter https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Erstellen Sie einen Snapshot einer virtuellen Maschine"^].
 
 
 Löschen Sie vor der Durchführung des Upgrades die abgeschlossenen Pods aus dem Log Bundle mit dem Präfix „Generate-Support-Bundle-Job“. Wenn derzeit das Support-Bundle generiert wird, warten Sie, bis der Vorgang abgeschlossen ist, und löschen Sie den Pod.
@@ -117,7 +117,7 @@ Löschen Sie vor der Durchführung des Upgrades die abgeschlossenen Pods aus dem
 Für jede Art von Upgrade müssen Sie eine zusätzliche 100-GB-Festplatte (HDD) hinzufügen. Führen Sie die folgende Aufgabe aus, um eine Festplatte hinzuzufügen.
 
 . Wählen Sie die VM in der Single Node-Konfiguration oder alle drei VMs in der HA-Konfiguration aus.
-. Klicken Sie mit der rechten Maustaste auf die VM(s) und wählen Sie *Neues Gerät hinzufügen* > *Festplatte*
+. Klicken Sie mit der rechten Maustaste auf die VM(s), und wählen Sie *Neues Gerät hinzufügen* > *Festplatte*
 . Fügen Sie eine 100-GB-Festplatte in das Feld * Neue Festplatte* ein.
 . Klicken Sie Auf *Anwenden*
 
@@ -131,8 +131,7 @@ Es wird eine neue Festplatte erstellt. Die dynamische Storage-bereitstellung ers
 . Laden Sie ONTAP-Tools für VMware vSphere hoch, aktualisieren Sie ISO in die Content Library.
 . Wählen Sie auf der primären VM-Seite *actions* > *Edit Settings* aus
 . Wählen Sie die ISO-Datei der Inhaltsbibliothek im Fenster Einstellungen bearbeiten unter dem Feld *CD/DVD-Laufwerk* aus.
-. Wählen Sie die ISO-Datei aus und klicken Sie auf *OK*. Aktivieren Sie das Kontrollkästchen Verbunden im Feld *CD/DVD-Laufwerk*.
-image:../media/primaryvm-edit-settings.png["Einstellungen bearbeiten"]
+. Wählen Sie die ISO-Datei und dann *OK*. Aktivieren Sie das Kontrollkästchen Verbunden im Feld *CD/DVD-Laufwerk*. image:../media/primaryvm-edit-settings.png["Einstellungen bearbeiten"]
 . Öffnen Sie im vCenter Server eine Konsole für ONTAP Tools.
 . Melden Sie sich als Wartungbenutzer an.
 . Geben Sie *3* ein, um das Menü Systemkonfiguration auszuwählen.

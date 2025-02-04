@@ -26,7 +26,7 @@ Auf der Registerkarte „ONTAP Tools“ werden Details wie der Zertifikatstyp (s
 
 *Schritte*
 
-. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie *Zertifikate* > *ONTAP Tools* > *erneuern*, um die Zertifikate zu erneuern.
 +
@@ -56,7 +56,7 @@ ONTAP Tools für VMware vSphere werden mit einem selbstsignierten Zertifikat fü
 
 *Schritte*
 
-. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie *Certificates* > *VASA Provider* oder *ONTAP Tools* > *Renew*, um die Zertifikate zu erneuern.
 . Um das selbstsignierte Zertifikat auf ein benutzerdefiniertes CA-Zertifikat zu aktualisieren, wählen Sie *Zertifikate* > *VASA-Anbieter* oder *ONTAP-Tools* > *Upgrade auf CA*.

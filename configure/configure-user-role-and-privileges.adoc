@@ -43,7 +43,7 @@ Das Produktfeld wird automatisch ausgefüllt.
 Das Feld *Rolle* wird basierend auf der ausgewählten Produktfähigkeit automatisch ausgefüllt.
 
 .. Geben Sie den erforderlichen Benutzernamen und das erforderliche Passwort ein.
-.. Wählen Sie die für den Benutzer erforderlichen Berechtigungen (Ermittlung, Speicher erstellen, Speicher ändern, Speicher zerstören, NAS/SAN-Rolle) aus, und klicken Sie dann auf *Hinzufügen*.
+.. Wählen Sie die für den Benutzer erforderliche Privileges (Ermittlung, Speicher erstellen, Speicher ändern, Speicher zerstören, NAS/SAN-Rolle) aus, und wählen Sie dann *Hinzufügen* aus.
 
 
 

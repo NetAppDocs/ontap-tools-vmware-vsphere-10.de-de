@@ -21,24 +21,21 @@ Auf einem ESXi-Host können Sie die folgenden Werte festlegen:
 
 Legt die empfohlenen Einstellungen für das HBA-Zeitlimit für NetApp-Speichersysteme fest.
 
-* *Disk.QFullSampleSize*
-+
-Setzen Sie diesen Wert für alle Konfigurationen auf 32. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert.
-
-* *Disk.QFullThreshold*
-+
-Setzen Sie diesen Wert für alle Konfigurationen auf 8. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert.
-
-* * Emulex FC HBA-Timeouts*
-+
-Standardwert verwenden.
-
-* *QLogic FC HBA Timeouts*
-+
-Standardwert verwenden.
+|===
+| Parameter | Wert festlegen auf... 
 
 
+| Disk.QFullSampleSize | 32 für alle Konfigurationen. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert. 
 
+
+| Disk.QFullThreshold | 8 für alle Konfigurationen. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert. 
+
+
+| Emulex FC-HBA-Zeitüberschreitungen | Standardwert. 
+
+
+| QLogic FC-HBA-Zeitüberschreitungen | Standardwert. 
+|===
 
 
 == MPIO-Einstellungen
@@ -51,36 +48,32 @@ In hochperformanten Umgebungen oder wenn Sie die Performance mit einem einzelnen
 
 == NFS-Einstellungen
 
-* *Net.TcpipHeapSize*
-+
-Setzen Sie diesen Wert auf 32.
-
-* *Net.TcpipHeapMax*
-+
-Setzen Sie diesen Wert auf 1024 MB.
-
-* *NFS.MaxVolumes*
-+
-Setzen Sie diesen Wert auf 256.
-
-* *NFS41.MaxVolumes*
-+
-Setzen Sie diesen Wert auf 256.
-
-* *NFS.MaxQueueDepth*
-+
-Setzen Sie diesen Wert auf 128 oder höher, um Engpässe in der Warteschlange zu vermeiden.
-
-* *NFS.HeartbeatMaxFailures*
-+
-Setzen Sie diesen Wert für alle NFS-Konfigurationen auf 10.
-
-* *NFS.HeartbeatFrequency*
-+
-Setzen Sie diesen Wert für alle NFS-Konfigurationen auf 12.
-
-* *NFS.HeartbeatTimeout*
-+
-Setzen Sie diesen Wert für alle NFS-Konfigurationen auf 5.
+|===
 
 
+| Parameter | Wert festlegen auf... 
+
+
+| NET.TcpipHeapSize | 32 
+
+
+| NET.TcpipHeapMax | 1024MB 
+
+
+| MaxVolumes: NFS | 256 
+
+
+| NFS41.MaxVolumes | 256 
+
+
+| NFS.MaxQueueDepth | 128 oder höher 
+
+
+| NFS.HeartbeatMaxFailures | 10 
+
+
+| HeartbeatFrequency NFS.HeartbeatFrequency | 12 
+
+
+| HeartbeatTimeout NFS.HeartbeatTimeout | 5 
+|===

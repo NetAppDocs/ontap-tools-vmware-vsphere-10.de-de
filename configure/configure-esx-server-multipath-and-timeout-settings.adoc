@@ -11,24 +11,26 @@ summary: ONTAP Tools für VMware vSphere überprüft und setzt die Multipathing-
 
 
 [role="lead"]
+Die Konfiguration der Multipath- und Timeout-Einstellungen des ESXi Servers gewährleistet Hochverfügbarkeit und Datenintegrität, da bei Ausfall eines primären Pfads nahtlos auf einen Backup-Speicherpfad umgeschaltet werden kann.
+
 Die ONTAP Tools für VMware vSphere prüfen und legen die Multipath-Einstellungen für ESXi Hosts und die HBA-Zeitüberschreitungseinstellungen fest, die für NetApp Storage-Systeme am besten geeignet sind.
 
 *Über diese Aufgabe*
 
-Dieser Prozess kann je nach Konfiguration und Systemlast sehr viel Zeit in Anspruch nehmen. Der Aufgabenfortschritt wird im Fenster *Letzte Aufgaben* angezeigt. Wenn die Aufgaben abgeschlossen sind, wird das Host-Statuswarnsymbol durch das normale Symbol oder das Symbol für den ausstehenden Neustart ersetzt.
+Je nach Konfiguration und Systemlast kann dieser Vorgang sehr viel Zeit in Anspruch nehmen. Der Aufgabenfortschritt wird im Fenster Letzte Aufgaben angezeigt.
 
 *Schritte*
 
-. Klicken Sie auf der VMware vSphere Web Client-Startseite auf *Hosts und Cluster*.
+. Wählen Sie auf der VMware vSphere Web Client-Startseite *Hosts und Cluster* aus.
 . Klicken Sie mit der rechten Maustaste auf einen Host und wählen Sie *NetApp ONTAP Tools* > *Host-Daten aktualisieren*.
-. Klicken Sie auf der Shortcuts-Seite unter dem Plug-ins-Bereich auf *NetApp ONTAP Tools*.
-. Gehen Sie in der Übersicht (Dashboard) der ONTAP Tools für VMware vSphere Plug-in zur *ESXi Host Compliance*-Karte.
+. Wählen Sie auf der Seite Verknüpfungen des VMware vSphere Web-Clients im Abschnitt Plug-ins *NetApp ONTAP-Tools* aus.
+. Gehen Sie in der Übersicht (Dashboard) der ONTAP Tools für VMware vSphere Plug-in zur *ESXi Host Compliance* Karte.
 . Wählen Sie den Link *Empfohlene Einstellungen anwenden*.
-. Wählen Sie im Fenster *empfohlene Hosteinstellungen anwenden* die Hosts aus, die Sie den von NetApp empfohlenen Hosteinstellungen entsprechen möchten, und klicken Sie auf *Weiter*.
+. Wählen Sie im Fenster *Empfohlene Host-Einstellungen anwenden* die Hosts aus, die Sie aktualisieren möchten, um den von NetApp empfohlenen Einstellungen zu entsprechen, und wählen Sie *Weiter*.
 +
 
 NOTE: Sie können den ESXi-Host erweitern, um die aktuellen Werte anzuzeigen.
 
 . Wählen Sie auf der Einstellungsseite die empfohlenen Werte nach Bedarf aus.
-. Überprüfen Sie im Übersichtsfenster die Werte und klicken Sie auf *Fertig stellen*. Sie können den Fortschritt im Fenster „Letzte Aufgabe“ verfolgen.
+. Überprüfen Sie im Übersichtsfenster die Werte und wählen Sie *Fertig stellen*. Sie können den Fortschritt im Fenster „Letzte Aufgabe“ verfolgen.
 

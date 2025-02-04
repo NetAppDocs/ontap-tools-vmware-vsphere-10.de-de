@@ -18,7 +18,7 @@ NOTE: Die Generierung von Protokollen über den ONTAP-Tools-Manager umfasst alle
 
 *Schritte*
 
-. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Seitenleiste *Log Bundles* aus.
 +
@@ -34,7 +34,7 @@ Laden Sie die Datei tar.gz herunter, und senden Sie sie an den technischen Suppo
 Gehen Sie wie folgt vor, um Protokollbündel über die vCenter-Client-Benutzeroberfläche zu generieren:
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://vcenterip/ui`
+. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
 . Gehen Sie auf der vSphere Client-Homepage zu *Support* > *Log Bundle* > *Generate*.
 . Geben Sie das Protokollbündel-Label an, und generieren Sie das Protokollbündel.
 Sie können die Download-Option sehen, wenn die Dateien generiert werden. Das Herunterladen kann einige Zeit in Anspruch nehmen.

@@ -27,8 +27,8 @@ Sie sollten die geschützten und Recovery-Standorte verbunden haben.
 
 *Schritte*
 
-. Melden Sie sich am vCenter Server an und klicken Sie auf *Site Recovery* > *Sites*.
-. Wählen Sie Ihre geschützte Site aus und klicken Sie auf *Verwalten*.
+. Melden Sie sich bei vCenter Server an und wählen Sie *Site Recovery* > *Sites*.
+. Wählen Sie Ihre geschützte Site aus und wählen Sie *Verwalten*.
 . Wählen Sie auf der Registerkarte Verwalten die Option *Netzwerkzuordnungen* aus.
 . Klicken Sie auf *Neu*, um ein neues Netzwerk-Mapping zu erstellen.
 +
@@ -36,10 +36,10 @@ Der Assistent „Netzwerkzuordnung erstellen“ wird angezeigt.
 
 . Führen Sie im Assistenten „Netzwerkzuordnung erstellen“ folgende Schritte aus:
 +
-.. Wählen Sie *Zuordnungen für Netzwerke mit übereinstimmenden Namen automatisch vorbereiten* aus und klicken Sie auf *Weiter*.
-.. Wählen Sie die gewünschten Rechenzentrumsobjekte für die geschützten und Recovery-Standorte aus und klicken Sie auf *Zuordnungen hinzufügen*.
+.. Wählen Sie *Zuordnungen für Netzwerke mit übereinstimmenden Namen automatisch vorbereiten* aus und wählen Sie *Weiter* aus.
+.. Wählen Sie die gewünschten Rechenzentrumsobjekte für die geschützten und Recovery-Standorte aus und wählen Sie *Zuordnungen hinzufügen*.
 .. Klicken Sie auf *Weiter*, nachdem Zuordnungen erfolgreich erstellt wurden.
-.. Wählen Sie das zuvor verwendete Objekt aus, um eine umgekehrte Zuordnung zu erstellen, und klicken Sie dann auf *Fertig stellen*.
+.. Wählen Sie das zuvor verwendete Objekt aus, um eine umgekehrte Zuordnung zu erstellen, und wählen Sie dann *Fertig stellen*.
 
 
 

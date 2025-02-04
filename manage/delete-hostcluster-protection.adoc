@@ -18,5 +18,5 @@ Wenn Sie den Host-Cluster-Schutz entfernen, werden die Datastores ungeschützt.
 +
 Auf dieser Seite können Sie die geschützten Host-Cluster zusammen mit ihrem Schutzstatus, der SnapMirror-Beziehung und ihrem entsprechenden SnapMirror-Status überwachen.
 
-. Klicken Sie im Fenster *Host Cluster Protection* auf das Auslassungsmenü für den Cluster und wählen Sie dann *Schutz entfernen*.
+. Wählen Sie im Fenster *Host Cluster Protection* das Auslassungsmenü für den Cluster aus und wählen Sie dann *Schutz entfernen*.
 

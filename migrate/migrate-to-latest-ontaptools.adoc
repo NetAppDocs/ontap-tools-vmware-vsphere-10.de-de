@@ -51,8 +51,8 @@ NOTE: Führen Sie keine Migration durch, wenn das Failover gerade abgeschlossen 
 +
 .. Wechseln Sie zur Seite VMware Live Site Recovery Configuration Management
 .. Gehen Sie zum Abschnitt *Storage Replication Adapter*
-.. Klicken Sie auf das Auslassungsmenü und wählen Sie *Konfiguration zurücksetzen*
-.. Klicken Sie auf das Auslassungsmenü und wählen Sie *Löschen*
+.. Wählen Sie das Menü mit den Auslassungspunkten und dann *Konfiguration zurücksetzen*
+.. Wählen Sie das Menü mit den Auslassungspunkten und dann *Löschen*
 +
 Führen Sie diese Schritte sowohl an Sicherungs- als auch an Recovery-Standorten aus.
 
@@ -231,8 +231,6 @@ Gehen Sie nach der erfolgreichen Migration und nach der Registrierung der ONTAP-
 
 
 *Nach Ihrer Beendigung*
-
-Nachdem Sie von alten Versionen von ONTAP-Tools für VMware vSphere auf 10.3 migriert haben, können Sie die SRA-Adapter erneut scannen, um zu überprüfen, ob die Details auf der Seite VMware Live Site Recovery Storage Replication Adapters aktualisiert werden.
 
 Wenn der Compliance-Status der virtuellen Maschine nach dem Upgrade veraltet ist, wenden Sie die Storage-Richtlinie der virtuellen Maschine wie folgt an:
 

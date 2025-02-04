@@ -74,8 +74,6 @@ entries:
     url: "/manage/reset-app-password.html"
   - title: Setzt das Benutzerpasswort der Wartungskonsole zurück
     url: "/manage/reset-maint-password.html"
-- title: Volumes bereinigen
-  url: "/manage/delete-deployment.html"
 - title: Verwalten Sie den Schutz des Host-Clusters
   entries:
   - title: Ändern Sie den Schutz des Host-Clusters
@@ -84,3 +82,7 @@ entries:
     url: "/manage/delete-hostcluster-protection.html"
 - title: RPO nahezu Null
   url: "/manage/enable-backup.html"
+- title: Beenden der Implementierung von ONTAP Tools
+  url: "/manage/uninstall-deployment.html"
+- title: Volumes bereinigen
+  url: "/manage/delete-deployment.html"
