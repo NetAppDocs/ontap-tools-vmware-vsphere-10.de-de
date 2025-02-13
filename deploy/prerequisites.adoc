@@ -25,8 +25,7 @@ Sie können ONTAP-Tools für VMware vSphere mit der virtuellen VMware vCenter Se
 ** 348 GB für Thick Provisioning-Installationen
 
 
-* *Größenanforderung Host-System pro Knoten*
-Der empfohlene Arbeitsspeicher gemäß der Größe der Implementierung und pro Node wird wie in der folgenden Tabelle dargestellt empfohlen:
+* *Größenanforderungen für das Host-System* Empfohlener Speicher gemäß der Größe der Bereitstellung ist wie in der folgenden Tabelle dargestellt:
 
 
 |===
@@ -41,13 +40,13 @@ Der empfohlene Arbeitsspeicher gemäß der Größe der Implementierung und pro N
 | Non-HA Medium | 13 | 26 | 350 
 
 
-| HA klein | 27 | 54 | 1050 
+| HA klein (kumulativ aus drei Nodes) | 27 | 54 | 1050 
 
 
-| HA mittel | 39 | 78 | 1050 
+| HA mittel (kumulativ aus drei Nodes) | 39 | 78 | 1050 
 
 
-| HA groß | 51 | 102 | 1050 
+| HA groß (kumulativ aus drei Nodes) | 51 | 102 | 1050 
 |===
 
 
@@ -143,7 +142,7 @@ In der folgenden Tabelle sind die Anzahl der VMware Live Site Recovery und die e
 
 | Mehr als 8 | Groß 
 |===
-Weitere Informationen finden Sie unter https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html["Betriebsgrenzen der VMware Live Site Recovery"].
+Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["Betriebsgrenzen der VMware Live Site Recovery"].
 
 
 

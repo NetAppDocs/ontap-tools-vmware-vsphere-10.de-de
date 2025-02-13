@@ -13,8 +13,7 @@ summary: Wenn Sie ONTAP-Tools für VMware vSphere zum ersten Mal in einem vSpher
 [role="lead"]
 Wenn Sie ONTAP-Tools für VMware vSphere zum ersten Mal in einem vSphere Client ausführen, erkennt ONTAP-Tools die ESXi-Hosts, ihre LUNs und NFS-Exporte und die NetApp-Storage-Systeme, die Eigentümer dieser LUNs und Exporte sind.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * Alle ESXi-Hosts sollten eingeschaltet und verbunden sein.
 * Alle zu ermittelenden Storage Virtual Machines (SVMs) sollten ausgeführt werden. Jeder Cluster-Node sollte mindestens eine Daten-LIF für das verwendete Storage-Protokoll (NFS oder iSCSI) konfiguriert haben.
 
@@ -25,17 +24,12 @@ Sie können jederzeit neue Storage-Systeme ermitteln oder Informationen zu vorha
 
 Bei der Erkennung der Speichersysteme erfasst ONTAP-Tools für VMware vSphere Informationen von den ESXi-Hosts, die von der vCenter Server-Instanz gemanagt werden.
 
-*Schritte*
-
+.Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.
 . Klicken Sie mit der rechten Maustaste auf das gewünschte Rechenzentrum und wählen Sie *NetApp ONTAP Tools* > *Hostdaten aktualisieren* .
 +
-ONTAP Tools für VMware vSphere zeigt ein *Confirm*-Dialogfeld mit der folgenden Meldung an:
+Bestätigen Sie im Dialogfeld *Bestätigen* Ihre Auswahl.
 
-+
-„Diese Aktion startet die Erkennung aller verbundenen Speichersysteme neu und kann einige Minuten dauern. Möchten Sie fortfahren?“
-
-. Klicken Sie Auf *Ja*.
 . Wählen Sie die ermittelten Speicher-Controller aus, die den Status haben `Authentication Failure`, und wählen Sie *actions* > *Modify* aus.
 . Geben Sie die erforderlichen Informationen in das Dialogfeld * Speichersystem ändern* ein.
 . Wiederholen Sie die Schritte 4 und 5 für alle Speicher-Controller mit `Authentication Failure` Status:

@@ -22,5 +22,5 @@ Sie können wählen, ob Sie einige bestimmte ESXi-Hostadressen für den Datastor
 +
 Verwenden Sie ein Komma (,), um die IP-Adressen zu trennen. Sie können eine bestimmte IP-Adresse oder einen Bereich von IP-Adressen oder IPv6-Adressen angeben.
 
-. Klicken Sie Auf *Speichern*.
+. Wählen Sie *Speichern*.
 

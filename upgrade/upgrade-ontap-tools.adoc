@@ -109,7 +109,7 @@ Führen Sie die folgenden Befehle aus, um ein Backup von MongoDB zu erstellen:
 *Nehmen Sie die Momentaufnahme von ONTAP-Tools für VMware vSphere VMs in vCenter (3VMs im Fall der HA-Bereitstellung, 1 VM im Falle einer nicht-HA-Bereitstellung)*
 
 * Wählen Sie in der vSphere-Client-Benutzeroberfläche die VM aus.
-* Gehen Sie auf die Registerkarte Snapshots und wählen Sie die Schaltfläche *Snapshot erstellen*. Erstellen Sie einen stillgelegten Snapshot der VM. Weitere Informationen finden Sie unter https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Erstellen Sie einen Snapshot einer virtuellen Maschine"^].
+* Gehen Sie auf die Registerkarte Snapshots und wählen Sie die Schaltfläche *Snapshot erstellen*. Erstellen Sie einen stillgelegten Snapshot der VM. Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html["Erstellen Sie einen Snapshot einer virtuellen Maschine"^].
 
 
 Löschen Sie vor der Durchführung des Upgrades die abgeschlossenen Pods aus dem Log Bundle mit dem Präfix „Generate-Support-Bundle-Job“. Wenn derzeit das Support-Bundle generiert wird, warten Sie, bis der Vorgang abgeschlossen ist, und löschen Sie den Pod.
@@ -119,15 +119,14 @@ Für jede Art von Upgrade müssen Sie eine zusätzliche 100-GB-Festplatte (HDD) 
 . Wählen Sie die VM in der Single Node-Konfiguration oder alle drei VMs in der HA-Konfiguration aus.
 . Klicken Sie mit der rechten Maustaste auf die VM(s), und wählen Sie *Neues Gerät hinzufügen* > *Festplatte*
 . Fügen Sie eine 100-GB-Festplatte in das Feld * Neue Festplatte* ein.
-. Klicken Sie Auf *Anwenden*
+. Wählen Sie *Anwenden*
 
 
 Aktualisieren Sie nach dem Hinzufügen der Festplatte die VM-Ressourcen für die entsprechenden Konfigurationen, und starten Sie die primäre VM neu.
 
 Es wird eine neue Festplatte erstellt. Die dynamische Storage-bereitstellung erstellt oder repliziert die Volumes mithilfe dieser HDD.
 
-*Schritte*
-
+.Schritte
 . Laden Sie ONTAP-Tools für VMware vSphere hoch, aktualisieren Sie ISO in die Content Library.
 . Wählen Sie auf der primären VM-Seite *actions* > *Edit Settings* aus
 . Wählen Sie die ISO-Datei der Inhaltsbibliothek im Fenster Einstellungen bearbeiten unter dem Feld *CD/DVD-Laufwerk* aus.

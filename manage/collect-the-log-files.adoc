@@ -16,8 +16,7 @@ Sie können Protokolldateien für ONTAP-Tools für VMware vSphere über die in d
 
 NOTE: Die Generierung von Protokollen über den ONTAP-Tools-Manager umfasst alle Protokolle für alle vCenter-Serverinstanzen. Das Generieren von Protokollen aus der vCenter Client-Benutzeroberfläche wird für den ausgewählten vCenter Server berücksichtigt.
 
-*Schritte*
-
+.Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Seitenleiste *Log Bundles* aus.

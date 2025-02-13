@@ -19,8 +19,7 @@ Die ONTAP Tools-Appliance wird zunächst in einer nicht-HA-Konfiguration mit ein
 
 Stellen Sie sicher, dass die von Ihnen zur Verfügung gestellt OVA-Vorlage die gleiche OVA-Version wie der erste Node hat.
 
-*Schritte*
-
+.Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie im Übersichtsbereich die Option *Geräteeinstellungen bearbeiten* aus.

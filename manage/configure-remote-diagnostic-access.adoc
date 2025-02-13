@@ -13,8 +13,7 @@ summary: Sie können ONTAP Tools für VMware vSphere konfigurieren, um den SSH-Z
 [role="lead"]
 Sie können ONTAP Tools für VMware vSphere konfigurieren, um den SSH-Zugriff für den Diagnosebenutzer zu aktivieren.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 Die VASA Provider-Erweiterung sollte für Ihre vCenter Server-Instanz aktiviert sein.
 
 *Über diese Aufgabe*
@@ -26,15 +25,14 @@ Die Verwendung von SSH für den Zugriff auf das Diagnose-Benutzerkonto weist fol
 +
 ** Die Zeit läuft ab.
 +
-Die Anmeldesitzung bleibt nur bis Mitternacht des nächsten Tages gültig.
+Die Anmeldesitzung bleibt nur bis Mitternacht am nächsten Tag gültig.
 
 ** Sie melden sich erneut als Diagnose-Benutzer mit SSH an.
 
 
 
 
-*Schritte*
-
+.Schritte
 . Öffnen Sie vom vCenter Server aus eine Konsole zu VASA Provider.
 . Melden Sie sich als Wartungbenutzer an.
 . Eingabe `4` Wählen Sie Support und Diagnose aus.

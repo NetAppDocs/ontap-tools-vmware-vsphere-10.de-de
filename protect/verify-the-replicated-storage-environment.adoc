@@ -21,8 +21,7 @@ Sie sollten überprüfen, ob der geschützte Standort und der Recovery-Standort 
 * Auf Quell- und Zielstandorten sollten dieselben SnapMirror-Richtlinien und Zeitpläne eingehalten werden.
 
 
-*Schritte*
-
+.Schritte
 . Melden Sie sich bei Ihrem vCenter Server an.
 . Navigieren Sie zu *Site Recovery* > *Array-basierte Replikation*.
 . Wählen Sie das erforderliche Array Pair aus, und überprüfen Sie die entsprechenden Details.

@@ -54,7 +54,7 @@ Gehen Sie wie folgt vor, um die neu hinzugefügten Datastores oder Hosts zu sch�
 
 NOTE: Im Fall einer asynchronen Beziehung wird die Bearbeitungsaktion nicht unterstützt, da Sie die Ziel-SVM für einen tertiären Standort nicht derselben Instanz der ONTAP-Tools hinzufügen können. Sie können jedoch den System Manager oder die CLI der Ziel-SVM verwenden, um die Beziehungskonfiguration zu ändern.
 
-. Klicken Sie auf *Speichern*, nachdem Sie die erforderlichen Änderungen vorgenommen haben.
+. Wählen Sie *Speichern*, nachdem Sie die erforderlichen Änderungen vorgenommen haben.
 . Sie können die Änderungen im Fenster *Protect Cluster* sehen.
 
 
@@ -74,8 +74,10 @@ Eine vCenter-Aufgabe wird erstellt und Sie können den Fortschritt im Bereich *L
 
 . Wählen Sie *Beziehung hinzufügen*.
 . Fügen Sie eine neue Beziehung als Richtlinientyp *Asynchronous* oder *AutomatedFailOverDuplex* hinzu.
-. Klicken Sie Auf *Schutz*.
-. Sie können die Änderungen im Fenster *Protect Cluster* sehen.
+. Wählen Sie *Schutz*.
++
+Sie können die Änderungen im Fenster *Protect Cluster* sehen.
+
 
 
 Eine vCenter-Aufgabe wird erstellt und Sie können den Fortschritt im Bereich *Letzte Aufgabe* verfolgen.

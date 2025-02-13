@@ -13,7 +13,7 @@ summary: ONTAP Tools für VMware vSphere managen den Schutz von Host-Clustern.
 [role="lead"]
 ONTAP Tools für VMware vSphere managen den Schutz von Host-Clustern. Alle Datastores, die zur ausgewählten SVM gehören und auf einem oder mehreren Hosts des Clusters gemountet werden, werden unter einem Host-Cluster geschützt.
 
-.Voraussetzungen
+.Bevor Sie beginnen
 Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 * Der Host-Cluster verfügt nur über Datastores von einer SVM.
@@ -38,7 +38,7 @@ Der Richtlinientyp kann „asynchron“ oder „AutomaticatedFailOverDuplex“ s
 Wenn Sie die SnapMirror Beziehung als Richtlinie vom Typ AutomatedFailOverDuplex hinzufügen, müssen Sie die Ziel-Storage VM als Storage-Backend zum gleichen vCenter hinzufügen, in dem ONTAP Tools für VMware vSphere implementiert werden.
 
 +
-Im Richtlinientyp AutomatedFailOverDuplex gibt es einheitliche und nicht einheitliche Hostkonfigurationen. Wenn Sie die Schaltfläche *Uniform Host Configuration* toggle wählen, wird die Konfiguration der Host-Initiatorgruppe implizit auf dem Zielstandort repliziert. Weitere Informationen finden Sie unter link:../concepts/ontap-tools-concepts-terms.html["Schlüsselkonzepte und -Begriffe"]
+Im Richtlinientyp AutomatedFailOverDuplex gibt es einheitliche und nicht einheitliche Hostkonfigurationen. Wenn Sie die Schaltfläche *Uniform Host Configuration* toggle wählen, wird die Konfiguration der Host-Initiatorgruppe implizit auf dem Zielstandort repliziert. Weitere Informationen finden Sie unter link:../concepts/ontap-tools-concepts-terms.html["Schlüsselkonzepte und -Begriffe"].
 
 . Wenn Sie sich für eine nicht einheitliche Hostkonfiguration entscheiden, wählen Sie den Hostzugriff (Quelle/Ziel) für jeden Host innerhalb dieses Clusters aus.
 . Wählen Sie *Hinzufügen*.

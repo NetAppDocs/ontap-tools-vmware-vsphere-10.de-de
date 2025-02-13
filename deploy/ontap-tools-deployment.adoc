@@ -45,8 +45,7 @@ Vergewissern Sie sich, dass Sie die OVA in Ihre Inhaltsbibliothek importiert hab
 
 NOTE: Bevor Sie mit der Bereitstellung fortfahren, setzen Sie den Distributed Resource Scheduler (DRS) des Clusters im Inventar während der Installation von ONTAP-Tools auf „konservativ“. Dadurch wird sichergestellt, dass VMs während der Installation nicht migriert werden.
 
-*Schritte*
-
+.Schritte
 . Laden Sie die `.zip` Datei mit Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP-Tools für VMware vSphere von der herunter https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Website"^]. Wenn Sie die OVA in die Inhaltsbibliothek importiert haben, können Sie diesen Schritt überspringen und mit dem nächsten Schritt fortfahren, da Sie sie direkt aus der Inhaltsbibliothek bereitstellen können.
 . Melden Sie sich beim vSphere-Server an.
 . Navigieren Sie zum Ressourcenpool, den Sie erstellt haben, oder zum Cluster oder zum Host, auf dem Sie die OVA bereitstellen möchten.

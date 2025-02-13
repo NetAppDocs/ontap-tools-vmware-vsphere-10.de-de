@@ -18,7 +18,7 @@ NOTE: Diese Ansicht gilt für die VM, auf der mindestens ein ONTAP-Tool für dur
 
 .Schritte
 . Navigieren Sie vom vSphere Client zur virtuellen Maschine.
-. Klicken Sie im rechten Fensterbereich auf die Registerkarte *Monitor*.
+. Wählen Sie im rechten Fensterbereich die Registerkarte *Monitor* aus.
 . Wählen Sie *NetApp ONTAP Tools* > *Speicher*. Die *Speicher*-Details werden im rechten Fensterbereich angezeigt. Sie können die Liste der VVols anzeigen, die auf der VM vorhanden sind.
 +
 Sie können die Option „Spalten verwalten“ verwenden, um verschiedene Spalten ein- oder auszublenden.

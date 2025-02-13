@@ -17,7 +17,7 @@ Befolgen Sie die Anweisungen in diesem Abschnitt, um Ihre ONTAP-Tools für die V
 NOTE: Wenn die ONTAP Tools für VMware vSphere beendet werden, werden alle Daten in den Tools gelöscht.
 
 .Schritte
-. Löschen Sie alle virtuellen Maschinen, die in den ONTAP-Tools für VMware vSphere erstellt wurden. Siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Entfernen Sie VMs und VM-Vorlagen und registrieren Sie sie erneut"].
+. Entfernen Sie alle virtuellen Maschinen aus Datastores, die von ONTAP Tools für VMware vSphere gemanagt werden. Sie können sie löschen (siehe https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Entfernen Sie VMs und VM-Vorlagen und registrieren Sie sie erneut"] ) oder verwenden https://techdocs.broadcom.com/it/it/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/migration-with-storage-vmotion-host-management.html["Storage vMotion"], um sie in einen nicht verwalteten Datastore zu verschieben.
 . link:../manage/delete-ds.html["Löschen Sie Datastores"] Auf ONTAP Tools für VMware vSphere erstellt.
 . Heben Sie die Registrierung der VASA-Anbieter von allen vCenter-Servern auf, indem Sie die folgenden Schritte ausführen:
 +

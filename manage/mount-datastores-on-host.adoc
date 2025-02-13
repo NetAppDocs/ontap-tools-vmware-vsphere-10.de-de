@@ -18,8 +18,7 @@ Durch das Mounten eines Datenspeichers können zusätzliche Hosts (NFS/VMFS) auf
 * Mount Datastore ist deaktiviert, wenn der Host-Cluster mit einheitlichen Konfigurationen geschützt ist.
 
 
-*Schritte*
-
+.Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.
 . Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Host enthält.
 . Wiederholen Sie Schritt 2 für weitere Hosts.

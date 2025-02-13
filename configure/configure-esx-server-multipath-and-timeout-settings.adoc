@@ -19,8 +19,7 @@ Die ONTAP Tools für VMware vSphere prüfen und legen die Multipath-Einstellunge
 
 Je nach Konfiguration und Systemlast kann dieser Vorgang sehr viel Zeit in Anspruch nehmen. Der Aufgabenfortschritt wird im Fenster Letzte Aufgaben angezeigt.
 
-*Schritte*
-
+.Schritte
 . Wählen Sie auf der VMware vSphere Web Client-Startseite *Hosts und Cluster* aus.
 . Klicken Sie mit der rechten Maustaste auf einen Host und wählen Sie *NetApp ONTAP Tools* > *Host-Daten aktualisieren*.
 . Wählen Sie auf der Seite Verknüpfungen des VMware vSphere Web-Clients im Abschnitt Plug-ins *NetApp ONTAP-Tools* aus.

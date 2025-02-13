@@ -19,7 +19,7 @@ Die Ansicht „ONTAP Storage“ unter „Configure“ der ONTAP-Tools für VMwar
 
 .Schritte
 . Navigieren Sie vom vSphere Client zum NFS-Datastore.
-. Klicken Sie im rechten Fensterbereich auf die Registerkarte *Configure*.
+. Wählen Sie im rechten Fensterbereich die Registerkarte *Configure* aus.
 . Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*. Die *Speicherdetails* und *NFS Details* werden im rechten Fensterbereich angezeigt.
 +
 ** Die Seite mit den Storage-Details enthält Informationen zu Storage-Back-Ends, Aggregaten und Volumes.
@@ -34,7 +34,7 @@ Die Ansicht „ONTAP Storage“ unter „Configure“ der ONTAP-Tools für VMwar
 
 .Schritte
 . Navigieren Sie vom vSphere Client zum VMFS-Datastore.
-. Klicken Sie im rechten Fensterbereich auf die Registerkarte *Configure*.
+. Wählen Sie im rechten Fensterbereich die Registerkarte *Configure* aus.
 . Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*. Die *Speicherdetails* und *LUN Details* oder *Namespace Details* je nach Protokoll werden im rechten Fensterbereich angezeigt.
 +
 ** Die Seite mit den Storage-Details enthält Informationen zu Storage-Back-Ends, Aggregaten und Volumes.
@@ -54,7 +54,7 @@ NOTE: Diese Ansicht wird für ASA r2-basierten VVols-Datastore nicht unterstütz
 
 .Schritte
 . Navigieren Sie vom vSphere Client zum VVols Datastore.
-. Klicken Sie im rechten Fensterbereich auf die Registerkarte *Configure*.
+. Wählen Sie im rechten Fensterbereich die Registerkarte *Configure* aus.
 . Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*.
 . In der Ansicht ONTAP Storage werden alle Volumes aufgelistet. Sie können Speicher im ONTAP-Speicherbereich erweitern oder entfernen.
 +

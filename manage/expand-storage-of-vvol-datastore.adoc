@@ -16,8 +16,7 @@ Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das Datastor
 
 NOTE: Das erweitern des VVols-Datastore ist für ASA r2-basierten VVols-Datastore nicht möglich.
 
-*Schritte*
-
+.Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.
 . Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Datastore enthält.
 . Klicken Sie mit der rechten Maustaste auf den Datastore und wählen Sie *NetApp ONTAP Tools* > *Speicher zum Datastore hinzufügen*.

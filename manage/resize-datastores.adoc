@@ -17,8 +17,7 @@ Durch die Größenänderung eines Datenspeichers können Sie den Speicher für d
 
 Sie können nur die Größe von NFS- und VMFS-Datastores erhöhen. Ein FlexVol Volume, das Teil eines NFS- und VMFS-Datastores ist, kann nicht unter die vorhandene Größe verkleinert, aber um maximal 120 % vergrößert werden.
 
-*Schritte*
-
+.Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.
 . Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Datastore enthält.
 . Klicken Sie mit der rechten Maustaste auf den NFS- oder VMFS-Datastore und wählen Sie *NetApp ONTAP Tools* > *Datastore skalieren* aus.

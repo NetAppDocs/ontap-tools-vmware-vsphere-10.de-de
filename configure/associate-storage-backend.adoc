@@ -17,8 +17,7 @@ Auf der Listingseite des vCenter-Servers wird die zugehörige Anzahl von Speiche
 
 Mit dieser Aufgabe können Sie eine Zuordnung zwischen dem Storage-Back-End und der neu aufgenommenen vCenter Server-Instanz global erstellen.
 
-*Schritte*
-
+.Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Randleiste vCenter aus.

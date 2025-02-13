@@ -13,8 +13,7 @@ summary: Sie sollten Schutzgruppen erstellen, um eine Gruppe virtueller Maschine
 [role="lead"]
 Sie sollten Schutzgruppen erstellen, um eine Gruppe virtueller Maschinen am geschützten Standort zu schützen.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 Stellen Sie sicher, dass die Quell- und Zielstandorte für Folgendes konfiguriert sind:
 
 * Dieselbe Version von VMware Live Site Recovery ist installiert
@@ -23,8 +22,7 @@ Stellen Sie sicher, dass die Quell- und Zielstandorte für Folgendes konfigurier
 * Quell- und Ziel-Datastores sollten auf den jeweiligen Sites gemountet werden
 
 
-*Schritte*
-
+.Schritte
 . Melden Sie sich bei vCenter Server an und wählen Sie dann *Site Recovery* > *Protection Groups* aus.
 . Wählen Sie im Bereich *Schutzgruppen* *Neu* aus.
 . Geben Sie einen Namen und eine Beschreibung für die Schutzgruppe, Richtung und wählen Sie *Weiter*.

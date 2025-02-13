@@ -13,16 +13,14 @@ summary: 'Sie sollten die mit Ihrem vSphere-Client erstellten geschützten und R
 [role="lead"]
 Sie sollten die geschützten und Recovery-Standorte, die mit Ihrem vSphere Client erstellt wurden, koppeln, um Storage Replication Adapter (SRA) zur Erkennung der Speichersysteme zu aktivieren.
 
-*Was Sie brauchen*
-
+.Bevor Sie beginnen
 * VMware Live Site Recovery sollte auf den geschützten und Recovery-Standorten installiert sein.
 * SRA sollte auf den geschützten und den Recovery-Standorten installiert sein.
 
 
-*Schritte*
-
+.Schritte
 . Doppelklicken Sie auf der vSphere Client-Startseite auf *Site Recovery* und wählen Sie *Sites* aus.
-. Klicken Sie Auf *Objects* > *Aktionen* > *Pair Sites*.
+. Wählen Sie *Objects* > *Actions* > *Pair Sites*.
 . Geben Sie im Dialogfeld *Pair Site Recovery Manager Servers* die Adresse des Platform Services Controllers des geschützten Standorts ein, und wählen Sie dann *Next*.
 . Gehen Sie im Abschnitt vCenter Server auswählen folgendermaßen vor:
 +
@@ -33,6 +31,5 @@ Sie sollten die geschützten und Recovery-Standorte, die mit Ihrem vSphere Clien
 . Wenn Sie dazu aufgefordert werden, wählen Sie *Ja*, um die Sicherheitszertifikate zu akzeptieren.
 
 
-*Ergebnis*
-
+.Ergebnis
 Sowohl die geschützten als auch die Wiederherstellungsstandorte werden im Dialogfeld Objekte angezeigt.
