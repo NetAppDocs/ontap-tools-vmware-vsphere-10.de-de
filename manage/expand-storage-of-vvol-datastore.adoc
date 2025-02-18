@@ -2,7 +2,7 @@
 permalink: manage/expand-storage-of-vvol-datastore.html 
 sidebar: sidebar 
 keywords: virtual volume datastores 
-summary: Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das Datastore-Objekt klicken, werden ONTAP-Tools für von VMware vSphere unterstützte Aktionen im Abschnitt Plug-in angezeigt. 
+summary: Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das Datastore-Objekt klicken, werden im Abschnitt Plug-in ONTAP-Tools für von VMware vSphere unterstützte Aktionen angezeigt. 
 ---
 = Erweitern Sie den VVols Datastore
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das
 
 
 [role="lead"]
-Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das Datastore-Objekt klicken, werden ONTAP-Tools für von VMware vSphere unterstützte Aktionen im Abschnitt Plug-in angezeigt. Bestimmte Aktionen werden abhängig vom Typ des Datenspeichers und den aktuellen Benutzerberechtigungen aktiviert.
+Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das Datastore-Objekt klicken, werden im Abschnitt Plug-in ONTAP-Tools für von VMware vSphere unterstützte Aktionen angezeigt. Bestimmte Aktionen werden abhängig vom Typ des Datenspeichers und den aktuellen Benutzerberechtigungen aktiviert.
 
 
 NOTE: Das erweitern des VVols-Datastore ist für ASA r2-basierten VVols-Datastore nicht möglich.

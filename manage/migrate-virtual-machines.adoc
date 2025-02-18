@@ -2,7 +2,7 @@
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
 keywords:  
-summary: Bei der Migration von virtuellen Maschinen in Ihr Rechenzentrum sollten Sie einige Überlegungen beachten. 
+summary: Sie sollten einige der Überlegungen bei der Migration von vorhandenen virtuellen Maschinen in Ihrem Rechenzentrum kennen. 
 ---
 = Überlegungen zum Migrieren oder Klonen von Virtual Machines
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Bei der Migration von virtuellen Maschinen in Ihr Rechenzentrum sollten
 
 
 [role="lead"]
-Beachten Sie einige Überlegungen bei der Migration vorhandener Virtual Machines in Ihrem Datacenter.
+Bei der Migration bestehender virtueller Maschinen in Ihrem Rechenzentrum sollten Sie einige Überlegungen beachten.
 
 
 

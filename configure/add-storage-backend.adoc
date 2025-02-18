@@ -38,10 +38,10 @@ NOTE: IPv4- und IPv6-Adressenmanagement-LIFs werden unterstützt.
 
 
 --
-.Verwenden der vSphere-Client-UI
+.Die vSphere-Client-Benutzeroberfläche wird verwendet
 --
 
-NOTE: Wenn Sie ein Storage-Back-End mithilfe der vSphere Client-UI hinzufügen, unterstützt der VVols-Datastore das direkte Hinzufügen eines SVM-Benutzers nicht.
+NOTE: Wenn Sie mithilfe der vSphere Client-Benutzeroberfläche ein Storage-Back-End hinzufügen, unterstützt der VVols-Datastore das direkte Hinzufügen eines SVM-Benutzers nicht.
 
 . Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
 . Wählen Sie auf der Shortcuts-Seite unter dem Plug-ins-Abschnitt *NetApp ONTAP Tools* aus.

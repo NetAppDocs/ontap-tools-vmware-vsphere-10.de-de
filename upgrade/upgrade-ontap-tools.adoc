@@ -145,7 +145,7 @@ Es wird eine neue Festplatte erstellt. Die dynamische Storage-bereitstellung ers
 
 Nach einem Upgrade auf ONTAP Tools für VMware vSphere 10.3 haben Sie folgende Möglichkeiten:
 
-* Deaktivieren Sie die Dienste über die Manager-Benutzeroberfläche
+* Deaktivieren Sie die Dienste über die Benutzeroberfläche des Managers
 * Wechseln Sie von einer Einrichtung ohne HA-Konfiguration zu einer HA-Einrichtung
 * Skalieren Sie eine kleine, nicht-HA-Konfiguration als Medium ohne HA oder auf eine mittlere oder große HA-Konfiguration.
 * Starten Sie im Fall eines Upgrades ohne HA die VM der ONTAP Tools neu, um die Änderungen widerzuspiegeln. Booten Sie im Fall eines HA-Upgrades den ersten Node neu, um die Änderungen am Node widerzuspiegeln.

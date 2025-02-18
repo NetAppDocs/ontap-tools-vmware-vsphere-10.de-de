@@ -15,9 +15,15 @@ Im folgenden Abschnitt werden die wichtigsten Konzepte und Begriffe beschrieben,
 
 
 
-=== ASA r2
+=== ASA r2-Systeme
 
 Die neuen NetApp ASA r2 Systeme (ASA A1K, ASA A70 und ASA A90) bieten eine einheitliche Hardware- und Softwarelösung, mit der die Benutzerfreundlichkeit speziell auf die Anforderungen reiner SAN-Kunden abgestimmt wird. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Erfahren Sie mehr über ASA r2 Storage-Systeme"].
+
+
+
+=== AutoSupport
+
+AutoSupport ist ein Mechanismus, der proaktiv den Zustand Ihres Systems überwacht und automatisch Meldungen an den technischen Support von NetApp, Ihre interne Support-Abteilung und einen Support-Partner sendet.
 
 
 
@@ -78,6 +84,12 @@ RPO ist ein Maß für die Häufigkeit von Daten-Backups bzw. -Replikation. Er gi
 === SnapMirror aktiv/synchron (SMAS)
 
 SnapMirror Active Sync ermöglicht Business Services auch bei einem vollständigen Standortausfall den Betrieb weiter und unterstützt Applikationen bei einem transparenten Failover mithilfe einer sekundären Kopie. Um einen Failover mit SnapMirror Active Sync auszulösen, sind manuelle Eingriffe oder benutzerdefiniertes Scripting erforderlich. Lear mehr über https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirror Active Sync"].
+
+
+
+=== Storage-Back-Ends
+
+Storage-Back-Ends sind die zugrunde liegende Storage-Infrastruktur, die der ESXi Host zum Speichern von Virtual Machine-Dateien, Daten und anderen Ressourcen verwendet. Über das Storage-Backend kann der ESXi Host auf persistente Daten zugreifen und diese managen. Die erforderliche Storage-Kapazität und Performance für virtualisierte Umgebungen wird bereitgestellt.
 
 
 

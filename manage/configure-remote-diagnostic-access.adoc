@@ -33,7 +33,7 @@ Die Anmeldesitzung bleibt nur bis Mitternacht am nächsten Tag gültig.
 
 
 .Schritte
-. Öffnen Sie vom vCenter Server aus eine Konsole zu VASA Provider.
+. Öffnen Sie über den vCenter Server eine Konsole für VASA Provider.
 . Melden Sie sich als Wartungbenutzer an.
 . Eingabe `4` Wählen Sie Support und Diagnose aus.
 . Geben Sie ein `2`, um den Zugriff auf die Ferndiagnose aktivieren auszuwählen.

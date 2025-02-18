@@ -34,8 +34,7 @@ SRA unterstützt das Management auf Cluster-Ebene und das Management der SVM. We
 *** Wenn Sie eine direkte Verbindung zu einer SVM herstellen, sollten Sie die IP-Adresse der SVM Management LIF eingeben.
 +
 
-NOTE: Beim Konfigurieren des Array Managers sollten Sie dieselbe Verbindung (IP-Adresse) für das Speichersystem verwenden, mit dem das Storage-System in ONTAP Tools integriert wurde.
-Wenn beispielsweise die Array Manager-Konfiguration im Umfang der SVM konfiguriert ist, sollte der Storage unter den ONTAP Tools für VMware vSphere auf SVM-Ebene hinzugefügt werden.
+NOTE: Beim Konfigurieren des Array Managers sollten Sie dieselbe Verbindung (IP-Adresse) für das Speichersystem verwenden, mit dem das Storage-System in ONTAP Tools für VMware vSphere integriert wurde. Wenn beispielsweise die Array Manager-Konfiguration im Umfang der SVM konfiguriert ist, sollte der Storage unter den ONTAP Tools für VMware vSphere auf SVM-Ebene hinzugefügt werden.
 
 
 

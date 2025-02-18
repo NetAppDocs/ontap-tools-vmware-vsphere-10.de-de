@@ -39,7 +39,7 @@ Ab der Verwendung von ONTAP Tools für VMware vSphere 10.3 können Sie einen VVo
 
 .Schritte
 . Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
-. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder ein Rechenzentrum und wählen Sie *NetApp ONTAP Tools* > *Datastore erstellen*.
+. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder ein Rechenzentrum und wählen Sie *NetApp ONTAP Tools* > *Datastore erstellen* aus.
 . Wählen Sie im Bereich *Typ* unter *Datastore Type* die Option VVols aus.
 . Geben Sie im Bereich *Name und Protokoll* die Informationen *Datastore Name* und *Protocol* an.
 +
@@ -62,7 +62,7 @@ Ein Datastore des VMware Network File System (NFS) verwendet das NFS-Protokoll, 
 
 .Schritte
 . Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
-. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder ein Rechenzentrum und wählen Sie *NetApp ONTAP Tools* > *Datastore erstellen*.
+. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder ein Rechenzentrum und wählen Sie *NetApp ONTAP Tools* > *Datastore erstellen* aus.
 . Wählen Sie im Bereich *Typ* NFS unter *Datastore Type* aus.
 . Geben Sie im Bereich *Name und Protokoll* den Namen, die Größe und die Protokollinformationen des Datastore ein. Wählen Sie in den erweiterten Optionen *Datastore Cluster* und *Kerberos Authentication* aus.
 +
@@ -122,7 +122,7 @@ Weitere Informationen zur Verwendung von NVMe/FC mit VMware vSphere 7.0 finden S
 
 .Schritte
 . Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
-. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder ein Rechenzentrum und wählen Sie *NetApp ONTAP Tools* > *Datastore erstellen*.
+. Klicken Sie mit der rechten Maustaste auf ein Hostsystem oder einen Hostcluster oder ein Rechenzentrum und wählen Sie *NetApp ONTAP Tools* > *Datastore erstellen* aus.
 . Wählen Sie den VMFS-Datastore-Typ aus.
 . Geben Sie den Namen, die Größe und die Protokollinformationen des Datastore im Bereich *Name und Protokoll* ein. Wenn Sie den neuen Datastore zu einem vorhandenen VMFS Datastore Cluster hinzufügen möchten, wählen Sie unter *Erweiterte Optionen* die Datastore Cluster Selector aus.
 . Wählen Sie Speicher-VM im Bereich *Speicher* aus. Geben Sie den *Custom Initiator Group Name* im Abschnitt *Advanced options* des Fensters ein (optional). Sie können eine vorhandene Initiatorgruppe für den Datastore auswählen oder eine neue Initiatorgruppe mit einem benutzerdefinierten Namen erstellen.

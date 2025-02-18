@@ -11,16 +11,16 @@ summary: Mit einer einzigen Instanz der ONTAP Tools für VMware vSphere können 
 
 
 [role="lead"]
-Während der Bereitstellung wird standardmäßig ein selbstsigniertes Zertifikat für ONTAP-Tools und VASA Provider generiert. Über die Benutzeroberfläche des ONTAP Tools Managers können Sie das Zertifikat erneuern oder auf eine benutzerdefinierte Zertifizierungsstelle aktualisieren.
+Während der Bereitstellung wird standardmäßig ein selbstsigniertes Zertifikat für ONTAP-Tools und VASA Provider generiert. Über die Benutzeroberfläche des ONTAP Tools Managers können Sie das Zertifikat erneuern oder auf eine benutzerdefinierte Zertifizierungsstelle aktualisieren. Benutzerdefinierte CA-Zertifikate sind in einer Multi-vCenter-Bereitstellung obligatorisch.
 
 .Bevor Sie beginnen
-* Der Domänenname, auf dem das Zertifikat ausgestellt wird, sollte der virtuellen IP-Adresse in einer Multi-vCenter-Bereitstellung zugeordnet werden, in der benutzerdefinierte CA-Zertifikate erforderlich sind.
+* Der Domänenname, auf dem das Zertifikat ausgestellt wird, sollte der virtuellen IP-Adresse zugeordnet werden.
 * Führen Sie die nslookup-Prüfung für den Domänennamen aus, um zu überprüfen, ob die Domäne auf die beabsichtigte IP-Adresse aufgelöst wird.
 * Die Zertifikate sollten mit dem Domänennamen und der Load Balancer-IP-Adresse erstellt werden.
 
 
 
-NOTE: Eine Loadbalancer-IP-Adresse sollte vollständig qualifizierten Domänennamen (FQDN) zugeordnet werden. Zertifikate sollten mit demselben FQDN generiert werden, der der Loadbalancer-IP-Adresse zugeordnet ist.
+NOTE: Eine Loadbalancer-IP-Adresse sollte einem vollständig qualifizierten Domänennamen (FQDN) zugeordnet werden. Zertifikate sollten denselben FQDN enthalten, der der Loadbalancer-IP-Adresse in alternativen Namen des Subjekts oder Subjekts zugeordnet ist.
 
 
 NOTE: Sie können nicht von einem mit einer Zertifizierungsstelle signierten zu einem selbstsignierten Zertifikat wechseln.

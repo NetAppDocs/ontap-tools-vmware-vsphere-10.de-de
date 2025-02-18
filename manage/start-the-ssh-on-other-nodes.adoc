@@ -21,7 +21,7 @@ Die VASA Provider-Erweiterung sollte für Ihre vCenter Server-Instanz aktiviert 
 Führen Sie dieses Verfahren vor dem Upgrade für jeden der Nodes durch.
 
 .Schritte
-. Öffnen Sie vom vCenter Server aus eine Konsole zu VASA Provider.
+. Öffnen Sie über den vCenter Server eine Konsole für VASA Provider.
 . Melden Sie sich als Wartungbenutzer an.
 . Eingabe `4` Wählen Sie Support und Diagnose aus.
 . Eingabe `1` Wählen Sie Access Diagnostic Shell aus.

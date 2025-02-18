@@ -21,7 +21,7 @@ Ein Dialogfeld wird geöffnet und listet die ESXi-Hosts auf, auf denen der Datas
 
 . Wählen Sie einen oder mehrere ESXi-Hosts aus, um die Bereitstellung des Datastore aufzuheben.
 +
-Sie können den Datastore nicht von allen Hosts abladen. Die Benutzeroberfläche schlägt vor, stattdessen den Vorgang zum Löschen von Datastores zu verwenden.
+Sie können den Datastore nicht von allen Hosts abladen. Die Benutzeroberfläche schlägt vor, dass Sie stattdessen den Vorgang zum Löschen von Datenspeichern verwenden.
 
 . Wählen Sie die Schaltfläche *Unmount*.
 +
