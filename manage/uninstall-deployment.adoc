@@ -22,7 +22,7 @@ NOTE: Wenn die ONTAP Tools für VMware vSphere beendet werden, werden alle Daten
 . Heben Sie die Registrierung der VASA-Anbieter von allen vCenter-Servern auf, indem Sie die folgenden Schritte ausführen:
 +
 .. Wählen Sie in den ONTAP-Tools am unteren Bildschirmrand die Option *Einstellungen* > *VASA-Provider-Einstellungen* > *Registrierung aufheben*.
-.. Geben Sie auf der Seite *Registrierung des VASA-Providers aufheben* die Anmeldeinformationen des Anwendungsbenutzers ein und wählen Sie *Registrierung aufheben*.
+.. Geben Sie auf der Seite *Registrierung für VASA Provider aufheben* die Anmeldeinformationen des Anwendungsbenutzers ein und wählen Sie *Registrierung aufheben*.
 
 
 . Aufheben der Zuordnung aller Speicher-Back-Ends zur vCenter Server-Instanz. Siehe link:../manage/manage-vcenter.html["Verknüpfen oder trennen Sie Storage-Back-Ends mit der vCenter Server-Instanz"].

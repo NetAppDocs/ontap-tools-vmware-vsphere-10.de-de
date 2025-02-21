@@ -32,4 +32,5 @@ Wenn der Datastore Teil eines geschützten Host-Clusters ist, wird eine Warnmeld
 
 NOTE: Wenn der geschützte Datastore abgehängt wird, kann die Einstellung für den ausgehenden Schutz zu einem teilweisen Schutz führen. link:../manage/edit-hostcluster-protection.html["Geschütztes Host-Cluster ändern"]Informationen zum Aktivieren des vollständigen Schutzes finden Sie unter.
 
+.Was kommt als Nächstes?
 Sie können den Fortschritt im Fenster „Letzte Aufgaben“ verfolgen.

@@ -159,7 +159,7 @@ Die folgende Tabelle gibt einen Überblick über die von NetApp verwendeten Netz
 | 22 (TCP) | Ansible verwendet diesen SSH-Port für die Kommunikation während der Cluster-Bereitstellung. Dieser Port ist erforderlich für Funktionen wie das Ändern des Benutzerpassworts für die Wartung, Statusmeldungen und das Aktualisieren von Werten auf allen drei Nodes im Falle einer HA-Konfiguration. 
 
 
-| 443 (TCP) | Dies ist der Pass-Through-Port für die eingehende Kommunikation für den VASA-Provider-Service. Auf diesem Port werden selbstsigniertes VASA-Provider-Zertifikat und ein benutzerdefiniertes CA-Zertifikat gehostet. 
+| 443 (TCP) | Dies ist der Pass-Through-Port für die eingehende Kommunikation für den VASA Provider-Dienst. Auf diesem Port werden selbstsigniertes VASA Provider-Zertifikat und ein benutzerdefiniertes CA-Zertifikat gehostet. 
 
 
 | 8443 (TCP) | Dieser Port hostet die API-Dokumentation über swagger und die Manager-Benutzeroberflächenanwendung. 
@@ -177,7 +177,7 @@ Die folgende Tabelle gibt einen Überblick über die von NetApp verwendeten Netz
 | 7946 (TCP+UDP) | Dieser Port wird für die Erkennung des Containernetzwerks von Docker verwendet. 
 
 
-| 9083 (TCP) | Dieser Port ist ein intern verwendeter Service-Port für den VASA-Provider-Service. 
+| 9083 (TCP) | Dieser Port ist ein intern verwendeter Service-Port für den VASA Provider-Service. 
 
 
 | 1162 (UDP) | Dies ist der SNMP-Trap-Paketport. 

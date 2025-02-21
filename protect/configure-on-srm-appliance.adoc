@@ -35,7 +35,7 @@ NOTE: Sie müssen den Kennwortwert in einfachen Anführungszeichen angeben, um s
 
 +
 
-NOTE: Der Anwendungsbenutzername und das Kennwort werden während der Bereitstellung von ONTAP-Tools festgelegt. Dies ist für die Registrierung des VASA Providers/SRA erforderlich.
+NOTE: Der Anwendungsbenutzername und das Kennwort werden während der Bereitstellung von ONTAP-Tools festgelegt. Dies ist für die Registrierung von VASA Provider/SRA erforderlich.
 
 . Überprüfen Sie die Adapter erneut, um sicherzustellen, dass die Details auf der Seite VMware Live Site Recovery Storage Replication Adapters aktualisiert werden.
 

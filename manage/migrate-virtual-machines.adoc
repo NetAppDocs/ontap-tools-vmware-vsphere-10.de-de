@@ -60,4 +60,4 @@ Derzeit werden nur Snapshots virtueller Maschinen ohne Speicher unterstützt. We
 
 Sie können auch nicht geschützte virtuelle Maschinen mit einem Speicher-Snapshot schützen. Für diesen Release sollten Sie den Speicher-Snapshot löschen, bevor Sie den Schutz für die virtuelle Maschine aktivieren.
 
-Bei Windows VM mit ASA r2 Storage-Typ ist es ein schreibgeschützter Snapshot, wenn Sie einen Snapshot der virtuellen Maschine erstellen. Wenn die VM beim Einschalten eingeschaltet wird, erstellt der VASA Provider eine LUN mit dem schreibgeschützten Snapshot und aktiviert sie anschließend für IOPS. Während der Anforderung zum Ausschalten löscht der VASA-Provider die erstellte LUN und deaktiviert anschließend die IOPS.
+Bei Windows VM mit ASA r2 Storage-Typ ist es ein schreibgeschützter Snapshot, wenn Sie einen Snapshot der virtuellen Maschine erstellen. Wenn die VM beim Einschalten eingeschaltet wird, erstellt der VASA Provider eine LUN mit dem schreibgeschützten Snapshot und aktiviert sie anschließend für IOPS. Während der Anforderung zum Ausschalten löscht VASA Provider die erstellte LUN und deaktiviert anschließend die IOPS.

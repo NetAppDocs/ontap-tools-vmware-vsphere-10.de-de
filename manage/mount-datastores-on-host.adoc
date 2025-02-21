@@ -30,4 +30,5 @@ Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speich
 . Wählen Sie die Datenspeicher aus, die Sie mounten möchten, und wählen Sie *Mount*.
 
 
+.Was kommt als Nächstes?
 Sie können den Fortschritt im Fenster „Letzte Aufgabe“ verfolgen.
