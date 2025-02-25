@@ -11,53 +11,25 @@ summary: Die Ansicht „ONTAP Storage“ unter „Configure“ einer Registerkar
 
 
 [role="lead"]
-Die Ansicht „ONTAP Storage“ unter „Configure“ der ONTAP-Tools für VMware vSphere liefert Daten zu den Datastores und ihrem Volume. Diese Ansicht bietet die Storage-Ansicht des Datastore.
-
-
-
-== ONTAP-Speicheransichten für NFS-Datastores
+ONTAP Tools für VMware vSphere zeigt die ONTAP Storage-Seitenansicht der Datastores und ihrer Volumes auf der Registerkarte „Konfigurieren“.
 
 .Schritte
-. Navigieren Sie vom vSphere Client zum NFS-Datastore.
+. Navigieren Sie vom vSphere-Client zum Datastore.
 . Wählen Sie im rechten Fensterbereich die Registerkarte *Configure* aus.
-. Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*. Die *Speicherdetails* und *NFS Details* werden im rechten Fensterbereich angezeigt.
-+
-** Die Seite mit den Storage-Details enthält Informationen zu Storage-Back-Ends, Aggregaten und Volumes.
-** Die Seite mit den NFS-Details enthält Daten zum NFS-Datastore.
+. Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*. Je nach Datenspeichertyp ändert sich die Ansicht. Weitere Informationen finden Sie in der folgenden Tabelle:
 
 
+|===
 
 
+| *Datenspeichertyp* | *Informationen verfügbar* 
 
 
-== ONTAP-Speicheransichten für VMFS-Datastores
-
-.Schritte
-. Navigieren Sie vom vSphere Client zum VMFS-Datastore.
-. Wählen Sie im rechten Fensterbereich die Registerkarte *Configure* aus.
-. Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*. Die *Speicherdetails* und *LUN Details* oder *Namespace Details* je nach Protokoll werden im rechten Fensterbereich angezeigt.
-+
-** Die Seite mit den Storage-Details enthält Informationen zu Storage-Back-Ends, Aggregaten und Volumes.
-** Die Seite mit den LUN-Details enthält Daten zur LUN.
-** Bei Verwendung des NVMe/TCP- oder NVMe/FC-Protokolls für VMFS Datastore enthält die Seite mit den Details zum Namespace Daten zu Namespace.
-** Details zu Volumes und Aggregaten werden für systembasierte Datastores mit ASA r2 nicht angezeigt.
+| NFS-Datastore | Die Seite *Storage Details* enthält Speicher-Back-Ends, Aggregat- und Volume-Informationen. Die Seite mit den NFS-Details enthält Daten zum NFS-Datastore. 
 
 
+| VMFS-Datastores | Die Seite *Storage Details* enthält Informationen zum Speicher-Backend, Aggregat und Volume. Die Seite *LUN Details* enthält Daten zur LUN. Die Seite *Namespace Details* enthält Daten zum Namespace, wenn der VMFS-Datastore das NVMe/TCP- oder NVMe/FC-Protokoll verwendet. Details zu Volumes und Aggregaten werden für systembasierte Datastores mit ASA r2 nicht angezeigt. 
 
 
-
-
-== ONTAP Storage-Ansichten für VVols Datastores
-
-
-NOTE: Diese Ansicht wird für ASA r2-basierten VVols-Datastore nicht unterstützt.
-
-.Schritte
-. Navigieren Sie vom vSphere Client zum VVols Datastore.
-. Wählen Sie im rechten Fensterbereich die Registerkarte *Configure* aus.
-. Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*.
-. In der Ansicht ONTAP Storage werden alle Volumes aufgelistet. Sie können Speicher im ONTAP-Speicherbereich erweitern oder entfernen.
-+
-Befolgen Sie die Anweisungen im link:../manage/expand-storage-of-vvol-datastore.html["Erweiterung des VVols Datastore"] Abschnitt zum Hinzufügen link:../manage/remove-storage-from-a-vvols-datastore.html["VVols Datastore verkleinern"]eines VVols-Datastores und  im Abschnitt zum Löschen des Datastores.
-
-
+| VVols Datastores | Listet alle Volumes auf. Sie können Speicher im ONTAP-Speicherbereich erweitern oder entfernen. Diese Ansicht wird für den systembasierten VVols Datastore ASA r2 nicht unterstützt. 
+|===

@@ -20,7 +20,7 @@ Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speich
 ** Von vSphere 7.0U3 bis vSphere 8.0, obwohl die Optionen angezeigt werden, wird die Aktion deaktiviert.
 
 
-* Die Option Datastore mounten ist deaktiviert, wenn der Host-Cluster mit einheitlichen Konfigurationen geschützt ist.
+* Die Option Datastore mounten ist deaktiviert, wenn der Host-Cluster durch einheitliche Konfigurationen geschützt ist.
 
 
 .Schritte

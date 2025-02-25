@@ -2,7 +2,7 @@
 permalink: configure/associate-storage-backend.html 
 sidebar: sidebar 
 keywords:  
-summary: Info erforderlich. 
+summary: Verknüpfen Sie ein Storage-Backend mit dem vCenter Server, um eine Zuordnung zwischen dem Storage-Backend und der eingeboard vCenter Server Instanz global zu erstellen. 
 ---
 = Ordnen Sie ein Storage-Back-End einer vCenter Server-Instanz zu
 :allow-uri-read: 
@@ -11,17 +11,13 @@ summary: Info erforderlich.
 
 
 [role="lead"]
-Auf der Listingseite des vCenter-Servers wird die zugehörige Anzahl von Speicher-Back-Ends angezeigt. Jede vCenter Server-Instanz kann mit einem Storage-Backend verknüpft werden.
-
-*Über diese Aufgabe*
-
-Mit dieser Aufgabe können Sie eine Zuordnung zwischen dem Storage-Back-End und der neu aufgenommenen vCenter Server-Instanz global erstellen.
+Verknüpfen Sie ein Storage-Backend mit dem vCenter Server, um eine Zuordnung zwischen dem Storage-Backend und der eingeboard vCenter Server Instanz global zu erstellen.
 
 .Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Randleiste vCenter aus.
-. Wählen Sie die vertikalen Ellipsen für das vCenter aus, das Sie den Speicher-Back-Ends zuordnen möchten.
+. Wählen Sie die vertikalen Ellipsen für die vCenter Server-Instanz aus, die Sie mit den Speicher-Back-Ends verknüpfen möchten.
 . Wählen Sie im Popup-Fenster aus der Dropdown-Liste das Storage-Back-End aus.
-. Wählen Sie die Option *Speicher-Backend zuordnen*, um die vCenter Server-Instanz mit dem erforderlichen Speicher-Backend zu verknüpfen.
+. Wählen Sie das Storage-Back-End aus der Dropdown-Liste aus und ordnen Sie die vCenter Server-Instanz dem erforderlichen Storage-Back-End zu.
 
