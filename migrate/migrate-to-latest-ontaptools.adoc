@@ -199,35 +199,14 @@ NOTE: uuid ist die Migrations-uuid, die in der Antwort der API nach der Migratio
 Sobald die Patch-Migrations-API erfolgreich ausgeführt wurde, entsprechen alle VMs der Storage-Richtlinie.
 
 ====
-. Die delete-API für die Migration ist:
 +
-[]
-====
-|===
-
-
-| *HTTP-Methode* | *Pfad* 
-
-
-| Löschen | /API/v1 
-|===
-*Verarbeitungsart*
-
-Asynchron
-
-*Beispiel für Curl*
-
-/API/v1/vcenters/{vcguid}/Migration-Jobs/{Migration_id}
-
-Diese API löscht die Migration nach Migrations-ID und löscht die Migration auf dem angegebenen vCenter Server.
-
-====
-
-
 Gehen Sie nach der erfolgreichen Migration und nach der Registrierung der ONTAP-Tools 10.3 im vCenter Server wie folgt vor:
 
-* Aktualisieren Sie das Zertifikat auf allen Hosts.
-* Warten Sie einige Zeit, bevor Sie Vorgänge in Datenspeicher (DS) und Virtual Machine (VM) ausführen. Die Wartezeit hängt von der Anzahl der Hosts, DS und VMs in dem Setup ab. Wenn Sie nicht warten, können die Vorgänge zeitweise ausfallen.
++
+** Aktualisieren Sie das Zertifikat auf allen Hosts.
+** Warten Sie einige Zeit, bevor Sie Vorgänge in Datenspeicher (DS) und Virtual Machine (VM) ausführen. Die Wartezeit hängt von der Anzahl der Hosts, DS und VMs in dem Setup ab. Wenn Sie nicht warten, können die Vorgänge zeitweise ausfallen.
+
+
 
 
 *Nach Ihrer Beendigung*

@@ -2,7 +2,7 @@
 section: configure
 title: Konfigurieren Sie ONTAP Tools für VMware vSphere
 entries:
-- title: Fügen Sie vCenter Server hinzu
+- title: Fügen Sie vCenter Server-Instanzen hinzu
   url: "/configure/add-vcenter.html"
 - title: Registrieren Sie VASA Provider auf vCenter Server
   url: "/configure/registration-process.html"

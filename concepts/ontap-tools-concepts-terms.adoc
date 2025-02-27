@@ -17,7 +17,7 @@ Im folgenden Abschnitt werden die wichtigsten Konzepte und Begriffe beschrieben,
 
 === ASA r2-Systeme
 
-Die neuen NetApp ASA r2 Systeme (ASA A1K, ASA A70 und ASA A90) bieten eine einheitliche Hardware- und Softwarelösung, mit der die Benutzerfreundlichkeit speziell auf die Anforderungen reiner SAN-Kunden abgestimmt wird. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Erfahren Sie mehr über ASA r2 Storage-Systeme"].
+Die neuen NetApp ASA r2 Systeme bieten eine einheitliche Hardware- und Softwarelösung, mit der eine vereinfachte Benutzererfahrung speziell für die Anforderungen von reinen SAN-Kunden erzielt wird. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Erfahren Sie mehr über ASA r2 Storage-Systeme"].
 
 
 

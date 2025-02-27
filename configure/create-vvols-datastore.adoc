@@ -11,9 +11,7 @@ summary: Wenn Sie einen Datastore auf Host-Cluster-Ebene erstellen, wird der Dat
 
 
 [role="lead"]
-Wenn Sie einen Datastore auf Host-Cluster-Ebene erstellen, wird der Datastore auf allen Hosts des Ziels erstellt und gemountet. Die Aktion wird nur aktiviert, wenn der aktuelle Benutzer über die Berechtigung zur Ausführung verfügt.
-
-Der Assistent zum Erstellen von Datastores unterstützt die Erstellung von NFS-, VMFS- und VVols-Datastores.
+Wenn Sie einen Datastore auf der Host-Cluster-Ebene erstellen, wird der Datastore auf allen Ziel-Hosts erstellt und gemountet. Diese Option wird nur angezeigt, wenn Sie über die erforderliche Privileges verfügen.
 
 * Sie können nur VMFS-Datastores auf einem geschützten Cluster erstellen. Wenn Sie einem geschützten Cluster einen VMFS Datastore hinzufügen, wird dieser automatisch gesichert.
 * Sie können keinen Datastore in einem Rechenzentrum erstellen, das über einen oder mehrere geschützte Hostcluster verfügt.

@@ -25,8 +25,7 @@ NOTE: Um die HA-Bereitstellung später zu aktivieren, sollte die virtuelle Masch
 
 Wenn Sie noch keine passende Inhaltsbibliothek haben, erstellen Sie diese anhand der folgenden Schritte:
 
-
-NOTE: Wenn Sie nur eine kleine Bereitstellung mit einem einzigen Knoten verwenden möchten, müssen Sie keine Inhaltsbibliothek erstellen.
+*Inhaltsbibliothek erstellen* Wenn Sie nur eine kleine Einzelknoten-Bereitstellung verwenden möchten, brauchen Sie keine Inhaltsbibliothek zu erstellen.
 
 . Laden Sie die `.zip` Datei mit Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP-Tools für VMware vSphere von der herunter https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Website"^].
 . Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
