@@ -22,7 +22,7 @@ Durch das Deinstallieren der ONTAP-Tools für VMware vSphere werden alle Daten i
 .. Geben Sie auf der Seite *Registrierung für VASA Provider aufheben* die Anmeldeinformationen des Anwendungsbenutzers ein und wählen Sie *Registrierung aufheben*.
 
 
-. Aufheben der Zuordnung aller Speicher-Back-Ends zur vCenter Server-Instanz. Siehe link:../manage/manage-vcenter.html["Verknüpfen oder trennen Sie Storage-Back-Ends mit der vCenter Server-Instanz"].
+. Aufheben der Zuordnung aller Speicher-Back-Ends zur vCenter Server-Instanz. Siehe link:../manage/manage-vcenter.html["Trennen Sie Storage Back-Ends von der vCenter Server-Instanz"].
 . Löschen Sie alle Speicher-Back-Ends. Siehe link:../manage/storage-backend.html["Managen von Storage-Back-Ends"].
 . Entfernen Sie den SRA-Adapter aus der VMware Live Site Recovery:
 +

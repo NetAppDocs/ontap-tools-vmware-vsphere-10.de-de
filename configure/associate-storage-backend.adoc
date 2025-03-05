@@ -18,6 +18,5 @@ Verknüpfen Sie ein Storage-Backend mit dem vCenter Server, um eine Zuordnung zw
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Randleiste vCenter aus.
 . Wählen Sie die vertikalen Ellipsen für die vCenter Server-Instanz aus, die Sie mit den Speicher-Back-Ends verknüpfen möchten.
-. Wählen Sie im Popup-Fenster aus der Dropdown-Liste das Storage-Back-End aus.
-. Wählen Sie das Storage-Back-End aus der Dropdown-Liste aus und ordnen Sie die vCenter Server-Instanz dem erforderlichen Storage-Back-End zu.
+. Wählen Sie das Storage-Back-End aus der Dropdown-Liste aus, um die vCenter Server-Instanz dem erforderlichen Storage-Back-End zuzuordnen.
 
