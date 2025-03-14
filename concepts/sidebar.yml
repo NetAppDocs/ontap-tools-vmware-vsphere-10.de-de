@@ -8,16 +8,20 @@ entries:
   url: "/concepts/ontap-tools-concepts-terms.html"
 - title: Rollenbasierte Zugriffssteuerung
   entries:
-  - title: Überblick
-    url: "/concepts/vcenter-server-role-based-access-control-features.html"
-  - title: VCenter Server-Berechtigungen
-    url: "/concepts/vcenter-server-permissions.html"
-  - title: Zuweisen und Ändern von Berechtigungen für vCenter Server
-    url: "/concepts/key-points-about-assign-and-modify-permissions.html"
-  - title: Berechtigungen für ONTAP-Tools für VMware vSphere-Tasks erforderlich
-    url: "/concepts/privileges-required.html"
-  - title: Empfohlene ONTAP-Rollen
-    url: "/concepts/ontap-roles.html"
+  - title: Erfahren Sie mehr über RBAC
+    url: "/concepts/rbac-learn-about.html"
+  - title: RBAC mit VMware vSphere
+    entries:
+    - title: VCenter Server-Umgebung
+      url: "/concepts/rbac-vcenter-environment.html"
+    - title: RBAC mit vCenter Server verwenden
+      url: "/concepts/rbac-vcenter-use.html"
+  - title: RBAC mit ONTAP
+    entries:
+    - title: ONTAP-Umgebung
+      url: "/concepts/rbac-ontap-environment.html"
+    - title: RBAC mit ONTAP
+      url: "/concepts/rbac-ontap-use.html"
 - title: Hochverfügbarkeit für ONTAP Tools für VMware vSphere
   url: "/concepts/high-availability.html"
 - title: AutoSupport

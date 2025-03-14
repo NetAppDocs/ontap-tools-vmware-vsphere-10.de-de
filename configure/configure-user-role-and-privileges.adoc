@@ -49,9 +49,6 @@ Das Feld *Rolle* wird basierend auf der ausgewählten Produktfähigkeit automati
 Die neue Rolle und der neue Benutzer werden hinzugefügt, und Sie können die detaillierten Berechtigungen unter der von Ihnen konfigurierten Rolle sehen.
 
 
-NOTE: Beim Deinstallationsvorgang werden keine ONTAP-Tools-Rollen entfernt, sondern die lokalisierten Namen für die spezifische Privileges der ONTAP-Tools und das Präfix wird an sie angehängt `XXX missing privilege`. Wenn Sie ONTAP-Tools für VMware vSphere neu installieren oder auf eine neuere Version aktualisieren, werden alle standardmäßigen ONTAP-Tools für VMware vSphere-Rollen und spezifischen Berechtigungen für ONTAP-Tools wiederhergestellt.
-
-
 
 == Anforderungen für die SVM-Aggregatzuordnung
 
