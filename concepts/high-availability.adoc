@@ -18,7 +18,7 @@ Die Hochverfügbarkeitslösung (HA) sorgt für ein schnelles Recovery nach Ausf�
 * Host-Ausfall
 +
 
-NOTE: Es wird nur der Ausfall eines einzelnen Nodes unterstützt.
+NOTE: Nur Ausfall eines einzelnen Nodes wird unterstützt.
 
 * Netzwerkausfall
 * Fehler bei Virtual Machine (Ausfall des Gastbetriebssystems)

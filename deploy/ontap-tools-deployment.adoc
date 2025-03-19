@@ -2,7 +2,7 @@
 permalink: deploy/ontap-tools-deployment.html 
 sidebar: sidebar 
 keywords:  
-summary: Die ONTAP Tools für die VMware vSphere Appliance werden immer als kleiner Single Node mit Kernservices zur Unterstützung von NFS/VMFS Datastores implementiert. 
+summary: Die ONTAP Tools für die VMware vSphere Appliance werden als kleiner Single Node mit Kernservices zur Unterstützung von NFS und VMFS Datastores implementiert. 
 ---
 = Implementieren Sie ONTAP-Tools für VMware vSphere
 :allow-uri-read: 
@@ -11,21 +11,21 @@ summary: Die ONTAP Tools für die VMware vSphere Appliance werden immer als klei
 
 
 [role="lead"]
-Die ONTAP Tools für die VMware vSphere Appliance werden immer als kleiner Single Node mit Kernservices zur Unterstützung von NFS/VMFS Datastores implementiert.
+Die ONTAP Tools für die VMware vSphere Appliance werden als kleiner Single Node mit Kernservices zur Unterstützung von NFS und VMFS Datastores implementiert.
 
 *Bevor Sie beginnen*
 
 Eine Content-Bibliothek in VMware ist ein Container-Objekt, das VM-Vorlagen, vApp-Vorlagen und andere Dateitypen speichert. Die Bereitstellung mit Inhaltsbibliothek bietet Ihnen eine nahtlose Erfahrung, da sie nicht von der Netzwerkkonnektivität abhängt.
 
 
-NOTE: Sie sollten die Inhaltsbibliothek auf einem freigegebenen Datastore speichern, sodass alle Hosts in einem Cluster darauf zugreifen können. Sie müssen eine Inhaltsbibliothek erstellen, um die OVA zu speichern, bevor Sie die Geräteeinstellungen in die HA-Konfiguration ändern. Nach dem Hochladen sollte die Vorlage für die Inhaltsbibliothek nach der Bereitstellung nicht gelöscht werden.
+NOTE: Sie sollten die Inhaltsbibliothek auf einem gemeinsam genutzten Datastore speichern, damit alle Hosts innerhalb eines Clusters darauf zugreifen können. Erstellen Sie eine Inhaltsbibliothek, um die OVA zu speichern, bevor Sie die Appliance für die HA-Konfiguration konfigurieren. Löschen Sie die Vorlage für die Inhaltsbibliothek nach der Bereitstellung nicht.
 
 
-NOTE: Um die HA-Bereitstellung später zu aktivieren, sollte die virtuelle Maschine, die die ONTAP-Tools hostet, nicht direkt auf einem ESXi-Host bereitgestellt werden. Stattdessen sollte sie entweder auf einem Cluster oder einem Ressourcenpool bereitgestellt werden.
+NOTE: Um die HA-Bereitstellung später zu aktivieren, stellen Sie die virtuelle Maschine, auf der die ONTAP-Tools direkt auf einem ESXi-Host gehostet werden, nicht bereit. Stattdessen können Sie sie in einem Cluster oder Ressourcenpool implementieren.
 
-Wenn Sie noch keine passende Inhaltsbibliothek haben, erstellen Sie diese anhand der folgenden Schritte:
+Wenn Sie keine Inhaltsbibliothek haben, führen Sie die folgenden Schritte aus, um eine zu erstellen:
 
-*Inhaltsbibliothek erstellen* Wenn Sie nur eine kleine Einzelknoten-Bereitstellung verwenden möchten, brauchen Sie keine Inhaltsbibliothek zu erstellen.
+*Inhaltsbibliothek erstellen* Wenn Sie planen, nur eine kleine Einzelknoten-Bereitstellung zu verwenden, ist das Erstellen einer Inhaltsbibliothek nicht notwendig.
 
 . Laden Sie die `.zip` Datei mit Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP-Tools für VMware vSphere von der herunter https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^].
 . Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
@@ -39,55 +39,49 @@ Wenn Sie noch keine passende Inhaltsbibliothek haben, erstellen Sie diese anhand
 
 NOTE: Weitere Informationen finden Sie im https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html["Erstellen und Verwenden der Inhaltsbibliothek"] Blog.
 
-Vergewissern Sie sich, dass Sie die OVA in Ihre Inhaltsbibliothek importiert haben.
 
-
-NOTE: Bevor Sie mit der Bereitstellung fortfahren, setzen Sie den Distributed Resource Scheduler (DRS) des Clusters im Inventar während der Installation von ONTAP-Tools auf „konservativ“. Dadurch wird sichergestellt, dass VMs während der Installation nicht migriert werden.
+NOTE: Bevor Sie mit der Bereitstellung fortfahren, setzen Sie den Distributed Resource Scheduler (DRS) des Clusters im Inventar auf „konservativ“. Dadurch wird sichergestellt, dass während der Installation keine VMs migriert werden.
 
 .Schritte
-. Laden Sie die `.zip` Datei mit Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP-Tools für VMware vSphere von der herunter https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^]. Wenn Sie die OVA in die Inhaltsbibliothek importiert haben, können Sie diesen Schritt überspringen und mit dem nächsten Schritt fortfahren, da Sie sie direkt aus der Inhaltsbibliothek bereitstellen können.
+. Laden Sie die `.zip` Datei mit Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP-Tools für VMware vSphere von der herunter https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^]. Wenn Sie die OVA in die Inhaltsbibliothek importiert haben, können Sie diesen Schritt überspringen und mit dem nächsten Schritt fortfahren.
 . Melden Sie sich beim vSphere-Server an.
-. Navigieren Sie zum Ressourcenpool, den Sie erstellt haben, oder zum Cluster oder zum Host, auf dem Sie die OVA bereitstellen möchten.
+. Navigieren Sie zu dem Ressourcenpool, Cluster oder Host, auf dem Sie die OVA bereitstellen möchten.
 . Klicken Sie mit der rechten Maustaste auf den gewünschten Speicherort und wählen Sie *OVF-Vorlage bereitstellen...*.
 +
 
-NOTE: Speichern Sie niemals ONTAP Tools für Virtual Machines von VMware vSphere auf von ihnen verwalteten VVols Datastores.
+NOTE: Speichern Sie niemals ONTAP Tools für VMware vSphere Virtual Machine auf von ihm gemanagten VVols Datastores.
 
-. Wählen Sie die OVA-Datei entweder über die URL für die _.ova_-Datei aus, oder navigieren Sie zu dem Ordner, in dem die _.ova_-Datei gespeichert ist, und wählen Sie dann *Weiter* aus.
+. Wählen Sie die OVA-Datei aus der URL aus, oder navigieren Sie zu ihrem Speicherort und wählen Sie dann *Weiter*.
 . So implementieren Sie ONTAP-Tools für VMware vSphere aus der Content Library:
 +
 .. Öffnen Sie Ihre Inhaltsbibliothek, und wählen Sie das zu bereitzustellende Bibliothekselement aus.
 .. Wählen Sie *actions* > *New VM aus dieser Vorlage*
 
 
-. Geben Sie im Fenster *Namen und Ordner auswählen* für die virtuelle Maschine den Namen der virtuellen Maschine ein und wählen Sie den Speicherort für die virtuelle Maschine aus. Aktivieren Sie das Kontrollkästchen *Hardware der virtuellen Maschine anpassen*, wird ein Schritt namens *Hardware anpassen* aktiviert, bevor Sie das Fenster *Ready to Complete* erreichen.
-. Wählen Sie eine Computerressource aus und wählen Sie *Weiter*. Sie können das Kontrollkästchen aktivieren, um die bereitgestellte VM automatisch einzuschalten*.
+. Geben Sie im Feld *Namen und Ordner auswählen* den Namen der virtuellen Maschine ein und wählen Sie deren Speicherort. Wenn Sie das Kontrollkästchen *Hardware dieser virtuellen Maschine anpassen* aktivieren, wird ein zusätzlicher Schritt namens *Hardware anpassen* aktiviert, bevor Sie das Fenster *Ready to Complete* erreichen.
+. Wählen Sie eine Computerressource aus und wählen Sie *Weiter*. Aktivieren Sie optional das Kontrollkästchen, um die bereitgestellte VM automatisch einzuschalten*.
 . Überprüfen Sie die Details der Vorlage und wählen Sie *Weiter*.
 . Lesen und akzeptieren Sie die Lizenzvereinbarung und wählen Sie *Weiter*.
 . Wählen Sie den Speicher für die Konfiguration und die Festplattendateien aus und wählen Sie *Weiter*.
 . Wählen Sie für jedes Quellnetzwerk das Zielnetzwerk aus und wählen Sie *Weiter*.
 . Füllen Sie im Fenster *Vorlage anpassen* die erforderlichen Felder aus und wählen Sie *Weiter*.
 +
-** Die hier bereitgestellten Informationen werden während des Installationsprozesses auf korrekte Muster überprüft. Im Falle einer Abweichung wird eine Fehlermeldung auf der Webkonsole angezeigt, und Sie werden aufgefordert, falsche Informationen zu korrigieren.
-** Host-Namen müssen aus Groß-/Kleinbuchstaben (A–Z), Ziffern (0–9) oder dem Bindestrich (-) bestehen. Wenn Sie Dual-Stack konfigurieren möchten, geben Sie den Hostnamen an, der der IPv6-Adresse zugeordnet ist.
+** Die Informationen werden während der Installation validiert. Wenn eine Abweichung vorliegt, wird eine Fehlermeldung auf der Webkonsole angezeigt, und Sie werden aufgefordert, sie zu korrigieren.
+** Hostnamen müssen Buchstaben (A–Z, a–z), Ziffern (0–9) und Bindestriche (-) enthalten. Geben Sie zum Konfigurieren von Dual-Stack den Hostnamen an, der der IPv6-Adresse zugeordnet ist.
 +
 
-NOTE: Pure IPv6 wird nicht unterstützt. Der gemischte Modus wird unterstützt, wenn VLAN sowohl IPv6- als auch IPv4-Adressen enthält.
+NOTE: Pure IPv6 wird nicht unterstützt. Der gemischte Modus wird mit VLAN unterstützt, das sowohl IPv6- als auch IPv4-Adressen enthält.
 
 
 
-. Im *Customize Hardware* Fenster sollten Sie CPU Hot add und Memory Hot Plug aktivieren.
 . Überprüfen Sie die Details im Fenster *Ready to Complete*, wählen Sie *Finish*.
 +
 Wenn die Bereitstellungsaufgabe erstellt wird, wird der Fortschritt in der vSphere-Taskleiste angezeigt.
 
+. Aktivieren Sie im Fenster *Hardware anpassen* CPU Hot add und Memory Hot Plugin.
 . Schalten Sie die VM nach Abschluss der Aufgabe ein.
-+
-
-NOTE: Stellen Sie vor dem Einschalten sicher, dass die VM sowohl für CPU als auch für Arbeitsspeicher über Hot-Plug-ins verfügt.
-
 
 
 Sie können den Fortschritt der Installation in der Webkonsole der VM verfolgen.
 
-Bei Unstimmigkeiten in den im OVF-Formular eingegebenen Werten werden Sie in einem Dialogfeld aufgefordert, Korrekturmaßnahmen einzuleiten. Nehmen Sie die erforderlichen Änderungen im Dialogfeld vor. Verwenden Sie dazu die Tabulatortaste, um zu navigieren, und wählen Sie „OK“. Sie haben drei Versuche, Probleme zu beheben. Wenn nach drei Versuchen weiterhin Probleme auftreten, wird der Installationsvorgang beendet, und es wird empfohlen, die Installation auf einer neuen VM erneut durchzuführen.
+Wenn im OVF-Formular Abweichungen auftreten, wird in einem Dialogfeld eine Korrekturmaßnahme angezeigt. Verwenden Sie die Tab-Taste, um zu navigieren, die erforderlichen Änderungen vorzunehmen, und wählen Sie "OK.Sie haben drei Versuche, Probleme zu beheben. Wenn nach drei Versuchen weiterhin Probleme auftreten, wird der Installationsvorgang beendet, und es wird empfohlen, die Installation auf einer neuen virtuellen Maschine erneut zu versuchen.

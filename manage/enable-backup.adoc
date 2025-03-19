@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Da die ONTAP Tools für VMware vSphere 10.3 die dynamische Storage-bereitstellung verwenden, können Sie kein RPO mehr erzielen. Sie können jedoch eine RPO von nahezu null erzielen. 
 ---
-= RPO nahezu Null
+= Erstellen Sie ein Backup und stellen Sie das Setup wieder her
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -40,7 +40,7 @@ Im Dateibereich sehen Sie das Verzeichnis. Der Name des Verzeichnisses wird die 
 
 == Recovery
 
-Um die Einrichtung wiederherzustellen, schalten Sie die vorhandene virtuelle Maschine aus und stellen Sie eine neue virtuelle Maschine mithilfe der OVA bereit, die bei der ersten Bereitstellung verwendet wurde.
+Um das Setup wiederherzustellen, schalten Sie die vorhandene virtuelle Maschine aus und stellen Sie eine neue virtuelle Maschine mithilfe der OVA bereit, die bei der ersten Bereitstellung verwendet wurde.
 
 Sie müssen für die neue Virtual Machine dieselbe IP-Adresse (Load Balancer-IP) der ONTAP-Tools verwenden. Außerdem muss die Systemkonfiguration – z. B. aktivierte Services, Node-Größe und HA-Modus – mit der ursprünglichen Bereitstellung identisch sein.
 

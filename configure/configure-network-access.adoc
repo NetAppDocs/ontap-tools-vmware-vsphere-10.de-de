@@ -1,9 +1,3 @@
----
-permalink: configure/configure-network-access.html 
-sidebar: sidebar 
-keywords:  
-summary: Sie können wählen, ob Sie nur wenige spezifische ESXi-Hostadressen für den Datastore-Mount-Vorgang zulassen möchten. 
----
 = Konfigurieren Sie den Netzwerkzugriff
 :allow-uri-read: 
 :icons: font
@@ -11,16 +5,14 @@ summary: Sie können wählen, ob Sie nur wenige spezifische ESXi-Hostadressen f�
 
 
 [role="lead"]
-Wenn Sie mehrere ESXi-Host-IP-Adressen haben, werden standardmäßig alle vom Host ermittelten IP-Adressen zu einer Exportrichtlinie hinzugefügt. Wenn Sie nicht alle IP-Adressen zu einer Exportrichtlinie hinzufügen möchten, geben Sie eine Einstellung für das Zulassen bestimmter IP-Adressen in einer kommagetrennten Liste oder einem CIDR oder einer Kombination aller drei für jedes vCenter ein.
-
-Sie können wählen, ob Sie einige bestimmte ESXi-Hostadressen für den Datastore-Mount-Vorgang zulassen möchten. Wenn die Einstellung nicht angegeben ist, fügt die Exportrichtlinie alle im Schritt Pre-Mount ermittelten IP-Adressen hinzu. Wenn die Einstellung angegeben ist, fügen ONTAP-Tools für VMware vSphere nur diejenigen hinzu, die in den aufgeführten IP-Adressen oder -Bereich fallen. Wenn keine der IP-Adressen eines Hosts zu den aufgeführten IP-Adressen gehört, schlägt der Mount-Vorgang auf diesem Host fehl.
+Wenn Sie den Netzwerkzugriff nicht konfiguriert haben, werden standardmäßig alle vom ESXi-Host ermittelten IP-Adressen zur Exportrichtlinie hinzugefügt. Sie können ihn so konfigurieren, dass der Exportrichtlinie einige spezifische IP-Adressen hinzugefügt und der Rest ausgeschlossen wird. Wenn Sie jedoch einen Mount-Vorgang auf den ausgeschlossenen ESXi-Hosts durchführen, schlägt der Vorgang fehl.
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
-. Wählen Sie auf der Shortcuts-Seite unter dem Plug-ins-Abschnitt *NetApp ONTAP Tools* aus.
+. Melden Sie sich beim vSphere-Client an.
+. Wählen Sie *NetApp ONTAP Tools* auf der Shortcuts-Seite unter dem Plug-ins-Bereich.
 . Navigieren Sie im linken Bereich der ONTAP-Tools zu *Einstellungen* > *Netzwerkzugang verwalten* > *Bearbeiten*.
 +
-Verwenden Sie ein Komma (,), um die IP-Adressen zu trennen. Sie können eine bestimmte IP-Adresse oder einen Bereich von IP-Adressen oder IPv6-Adressen angeben.
+Um mehrere IP-Adressen hinzuzufügen, trennen Sie die Liste durch Kommas, Bereich, klassenloses Inter-Domain Routing (CIDR) oder eine Kombination aller drei.
 
 . Wählen Sie *Speichern*.
 
