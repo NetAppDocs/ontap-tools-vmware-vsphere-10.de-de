@@ -44,7 +44,7 @@ Befolgen Sie die Schritte in diesem Abschnitt, um ein Speicher-Back-End zu ände
 
 Sie können den Änderungsvorgang für globale ONTAP-Cluster mithilfe des ONTAP Tools Managers mit den folgenden Schritten durchführen.
 
-. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Seitenleiste Speicher-Back-Ends aus.
 . Wählen Sie das zu ändernde Speicher-Back-End aus.
@@ -66,7 +66,7 @@ Sie müssen alle mit dem Speicher-Back-End verbundenen Datenspeicher löschen, b
 
 Sie können den Vorgang zum Entfernen globaler ONTAP-Cluster mit dem ONTAP-Tools-Manager ausführen.
 
-. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Seitenleiste *Speicher-Backends* aus.
 . Wählen Sie das Storage-Backend aus, das Sie entfernen möchten

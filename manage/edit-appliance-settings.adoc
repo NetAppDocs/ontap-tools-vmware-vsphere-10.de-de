@@ -18,7 +18,7 @@ Mithilfe des ONTAP Tools Managers können Sie die Konfiguration der ONTAP Tools 
 Stellen Sie sicher, dass die von Ihnen zur Verfügung gestellt OVA-Vorlage die gleiche OVA-Version wie Knoten 1 hat. Knoten 1 ist der Standardknoten, auf dem die ONTAP-Tools für VMware vSphere OVA ursprünglich bereitgestellt werden.
 
 .Schritte
-. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie im Übersichtsbereich die Option *Geräteeinstellungen bearbeiten* aus.
 . Im Abschnitt *Konfiguration* können Sie vertikal skalieren, um die Knotengröße zu erhöhen und die HA-Konfiguration nach Ihren Anforderungen zu aktivieren. Sie benötigen die vCenter Server-Anmeldeinformationen, um Änderungen vorzunehmen.

@@ -27,7 +27,7 @@ Um einem lokal Scoped-Cluster ein Storage Back-End hinzuzufügen, fügen Sie Ihr
 NOTE: In einer mandantenfähigen Einrichtung können Sie ein Storage-Back-End-Cluster global und eine lokale SVM hinzufügen, um die SVM-Benutzeranmeldedaten zu verwenden.
 
 .Schritte
-. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Seitenleiste *Speicher-Backends* aus.
 . Fügen Sie das Speicher-Back-End hinzu und geben Sie die IP-Adresse oder den FQDN, den Benutzernamen und das Kennwort des Servers an.
