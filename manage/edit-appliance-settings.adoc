@@ -15,7 +15,15 @@ Mithilfe des ONTAP Tools Managers können Sie die Konfiguration der ONTAP Tools 
 
 *Bevor Sie beginnen*
 
-Stellen Sie sicher, dass die von Ihnen zur Verfügung gestellt OVA-Vorlage die gleiche OVA-Version wie Knoten 1 hat. Knoten 1 ist der Standardknoten, auf dem die ONTAP-Tools für VMware vSphere OVA ursprünglich bereitgestellt werden.
+* Stellen Sie sicher, dass Ihre OVA-Vorlage die gleiche OVA-Version wie Knoten 1 hat. Knoten 1 ist der Standardknoten, auf dem die ONTAP-Tools für VMware vSphere OVA ursprünglich bereitgestellt werden.
+* Stellen Sie sicher, dass der CPU-Hot-Plug-Speicher und der Hot-Plug-Speicher während der Bereitstellung aktiviert sind. Sie können sie im vCenter Client-Menü aktivieren, wenn sie während der Bereitstellung nicht aktiviert wurden. Befolgen Sie diese Anweisungen, um sie vom vCenter Client aus zu aktivieren:
++
+** Navigieren Sie unter *Inventars* zu ONTAP-Tools für virtuelle VMware vSphere-Maschinen und wählen Sie *Einstellungen bearbeiten*.
+** Aktivieren Sie unter den Optionen *CPU* das Kontrollkästchen *CPU Hot add aktivieren*
+** Aktivieren Sie unter den *Memory*-Optionen das Kontrollkästchen *enable* gegen *Memory Hot Plug*.
+
+
+
 
 .Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`

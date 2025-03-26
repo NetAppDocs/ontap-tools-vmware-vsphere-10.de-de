@@ -29,3 +29,5 @@ Für ONTAP Tools für VMware vSphere ist keine zusätzliche Konfiguration erford
 
 
 NOTE: ONTAP Tools für VMware vSphere unterstützen vCenter HA nicht.
+
+Um die HA-Funktion zu aktivieren, sollten der Hot Plug für CPU und Arbeitsspeicher während der Implementierung oder später in den ONTAP Tools für VMware vSphere VM-Einstellungen aktiviert werden.

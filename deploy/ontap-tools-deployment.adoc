@@ -29,7 +29,7 @@ Wenn Sie keine Inhaltsbibliothek haben, führen Sie die folgenden Schritte aus, 
 
 . Laden Sie die `.zip` Datei mit Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP-Tools für VMware vSphere von der herunter https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^].
 . Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
-. Wählen Sie die horizontalen Ellipsen neben vSphere Client aus und wählen Sie *Content Library*.
+. Wählen Sie das vSphere-Client-Menü aus und wählen Sie *Inhaltsbibliotheken* aus.
 . Wählen Sie auf der rechten Seite die Option *Erstellen*.
 . Geben Sie einen Namen für die Bibliothek ein, und erstellen Sie die Inhaltsbibliothek.
 . Navigieren Sie zu der von Ihnen erstellten Inhaltsbibliothek.
@@ -42,27 +42,31 @@ NOTE: Weitere Informationen finden Sie im https://blogs.vmware.com/vsphere/2020/
 
 NOTE: Bevor Sie mit der Bereitstellung fortfahren, setzen Sie den Distributed Resource Scheduler (DRS) des Clusters im Inventar auf „konservativ“. Dadurch wird sichergestellt, dass während der Installation keine VMs migriert werden.
 
+Die ONTAP-Tools für VMware vSphere werden zunächst als Einrichtung ohne HA implementiert. Um eine Skalierung auf die HA-Bereitstellung zu erreichen, müssen Hot-Plug-in für CPU und Arbeitsspeicher aktiviert werden. Sie können diesen Schritt im Rahmen des Bereitstellungsprozesses durchführen oder die VM-Einstellungen nach der Bereitstellung bearbeiten.
+
 .Schritte
 . Laden Sie die `.zip` Datei mit Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP-Tools für VMware vSphere von der herunter https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^]. Wenn Sie die OVA in die Inhaltsbibliothek importiert haben, können Sie diesen Schritt überspringen und mit dem nächsten Schritt fortfahren.
 . Melden Sie sich beim vSphere-Server an.
 . Navigieren Sie zu dem Ressourcenpool, Cluster oder Host, auf dem Sie die OVA bereitstellen möchten.
-. Klicken Sie mit der rechten Maustaste auf den gewünschten Speicherort und wählen Sie *OVF-Vorlage bereitstellen...*.
 +
 
 NOTE: Speichern Sie niemals ONTAP Tools für VMware vSphere Virtual Machine auf von ihm gemanagten VVols Datastores.
 
-. Wählen Sie die OVA-Datei aus der URL aus, oder navigieren Sie zu ihrem Speicherort und wählen Sie dann *Weiter*.
-. So implementieren Sie ONTAP-Tools für VMware vSphere aus der Content Library:
+. Sie können die OVA aus der Inhaltsbibliothek oder aus dem lokalen System bereitstellen.
 +
-.. Öffnen Sie Ihre Inhaltsbibliothek, und wählen Sie das zu bereitzustellende Bibliothekselement aus.
-.. Wählen Sie *actions* > *New VM aus dieser Vorlage*
+|===
 
 
-. Geben Sie im Feld *Namen und Ordner auswählen* den Namen der virtuellen Maschine ein und wählen Sie deren Speicherort. Wenn Sie das Kontrollkästchen *Hardware dieser virtuellen Maschine anpassen* aktivieren, wird ein zusätzlicher Schritt namens *Hardware anpassen* aktiviert, bevor Sie das Fenster *Ready to Complete* erreichen.
+| Aus dem lokalen System | Aus der Inhaltsbibliothek 
+
+
+| a. Klicken Sie mit der rechten Maustaste, und wählen Sie *OVF-Vorlage bereitstellen...*. b. Wählen Sie die OVA-Datei aus der URL aus, oder navigieren Sie zu ihrem Speicherort, und wählen Sie dann *Weiter* aus. | a. Gehen Sie zu Ihrer Inhaltsbibliothek und wählen Sie das Bibliothekselement aus, das Sie bereitstellen möchten. b. Wählen Sie *Aktionen* > *Neue VM aus dieser Vorlage* 
+|===
+. Geben Sie im Feld *Namen und Ordner auswählen* den Namen der virtuellen Maschine ein und wählen Sie deren Speicherort. Um die Möglichkeit zu aktivieren, die HA-Funktion zu verwenden, wählen Sie die Option *Hardware dieser virtuellen Maschine anpassen* aus, die einen zusätzlichen Schritt namens *Hardware anpassen* aktiviert, bevor Sie zum Fenster *bereit zur Fertigstellung* gehen.
 . Wählen Sie eine Computerressource aus und wählen Sie *Weiter*. Aktivieren Sie optional das Kontrollkästchen, um die bereitgestellte VM automatisch einzuschalten*.
 . Überprüfen Sie die Details der Vorlage und wählen Sie *Weiter*.
 . Lesen und akzeptieren Sie die Lizenzvereinbarung und wählen Sie *Weiter*.
-. Wählen Sie den Speicher für die Konfiguration und die Festplattendateien aus und wählen Sie *Weiter*.
+. Wählen Sie den Speicher für die Konfiguration und das Festplattenformat aus und wählen Sie *Weiter*.
 . Wählen Sie für jedes Quellnetzwerk das Zielnetzwerk aus und wählen Sie *Weiter*.
 . Füllen Sie im Fenster *Vorlage anpassen* die erforderlichen Felder aus und wählen Sie *Weiter*.
 +
@@ -74,11 +78,11 @@ NOTE: Pure IPv6 wird nicht unterstützt. Der gemischte Modus wird mit VLAN unter
 
 
 
+. Aktivieren Sie im Fenster *Hardware anpassen* die Optionen *CPU Hot add* und *Memory Hot Plug*, um die HA-Funktionalität zu ermöglichen.
 . Überprüfen Sie die Details im Fenster *Ready to Complete*, wählen Sie *Finish*.
 +
 Wenn die Bereitstellungsaufgabe erstellt wird, wird der Fortschritt in der vSphere-Taskleiste angezeigt.
 
-. Aktivieren Sie im Fenster *Hardware anpassen* CPU Hot add und Memory Hot Plugin.
 . Schalten Sie die VM nach Abschluss der Aufgabe ein.
 
 

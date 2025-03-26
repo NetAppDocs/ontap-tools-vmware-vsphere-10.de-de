@@ -1,3 +1,9 @@
+---
+permalink: configure/configure-network-access.html 
+sidebar: sidebar 
+keywords: network access configuration, export policy, mount operation, ESXi hosts 
+summary: Wenn Sie den Netzwerkzugriff noch nicht konfiguriert haben, werden standardmäßig alle vom ESXi-Host ermittelten IP-Adressen zur Exportrichtlinie hinzugefügt. 
+---
 = Konfigurieren Sie den Netzwerkzugriff
 :allow-uri-read: 
 :icons: font
