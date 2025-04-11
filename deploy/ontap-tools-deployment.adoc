@@ -62,7 +62,12 @@ NOTE: Speichern Sie niemals ONTAP Tools für VMware vSphere Virtual Machine auf 
 
 | a. Klicken Sie mit der rechten Maustaste, und wählen Sie *OVF-Vorlage bereitstellen...*. b. Wählen Sie die OVA-Datei aus der URL aus, oder navigieren Sie zu ihrem Speicherort, und wählen Sie dann *Weiter* aus. | a. Gehen Sie zu Ihrer Inhaltsbibliothek und wählen Sie das Bibliothekselement aus, das Sie bereitstellen möchten. b. Wählen Sie *Aktionen* > *Neue VM aus dieser Vorlage* 
 |===
-. Geben Sie im Feld *Namen und Ordner auswählen* den Namen der virtuellen Maschine ein und wählen Sie deren Speicherort. Um die Möglichkeit zu aktivieren, die HA-Funktion zu verwenden, wählen Sie die Option *Hardware dieser virtuellen Maschine anpassen* aus, die einen zusätzlichen Schritt namens *Hardware anpassen* aktiviert, bevor Sie zum Fenster *bereit zur Fertigstellung* gehen.
+. Geben Sie im Feld *Namen und Ordner auswählen* den Namen der virtuellen Maschine ein und wählen Sie deren Speicherort.
++
+** Wenn Sie die vCenter Server 8.0.3-Version verwenden, wählen Sie die Option *Hardware dieser virtuellen Maschine anpassen* aus, die einen zusätzlichen Schritt mit dem Namen *Hardware anpassen* aktiviert, bevor Sie zum Fenster *Ready to Complete* gehen.
+** Wenn Sie die vCenter Server 7.0.3-Version verwenden, folgen Sie den Schritten im Abschnitt *wie geht es weiter?* am Ende der Bereitstellung.
+
+
 . Wählen Sie eine Computerressource aus und wählen Sie *Weiter*. Aktivieren Sie optional das Kontrollkästchen, um die bereitgestellte VM automatisch einzuschalten*.
 . Überprüfen Sie die Details der Vorlage und wählen Sie *Weiter*.
 . Lesen und akzeptieren Sie die Lizenzvereinbarung und wählen Sie *Weiter*.
@@ -78,7 +83,7 @@ NOTE: Pure IPv6 wird nicht unterstützt. Der gemischte Modus wird mit VLAN unter
 
 
 
-. Aktivieren Sie im Fenster *Hardware anpassen* die Optionen *CPU Hot add* und *Memory Hot Plug*, um die HA-Funktionalität zu ermöglichen.
+. Aktivieren Sie bei Verwendung der vCenter Server 8.0.3-Version im Fenster *Hardware anpassen* die Optionen *CPU Hot add* und *Memory Hot Plug*, um HA-Funktionen zu ermöglichen.
 . Überprüfen Sie die Details im Fenster *Ready to Complete*, wählen Sie *Finish*.
 +
 Wenn die Bereitstellungsaufgabe erstellt wird, wird der Fortschritt in der vSphere-Taskleiste angezeigt.
@@ -89,3 +94,12 @@ Wenn die Bereitstellungsaufgabe erstellt wird, wird der Fortschritt in der vSphe
 Sie können den Fortschritt der Installation in der Webkonsole der VM verfolgen.
 
 Wenn im OVF-Formular Abweichungen auftreten, wird in einem Dialogfeld eine Korrekturmaßnahme angezeigt. Verwenden Sie die Tab-Taste, um zu navigieren, die erforderlichen Änderungen vorzunehmen, und wählen Sie "OK.Sie haben drei Versuche, Probleme zu beheben. Wenn nach drei Versuchen weiterhin Probleme auftreten, wird der Installationsvorgang beendet, und es wird empfohlen, die Installation auf einer neuen virtuellen Maschine erneut zu versuchen.
+
+.Was kommt als Nächstes?
+Wenn Sie ONTAP-Tools für VMware vSphere mit vCenter Server 7.0.3 bereitstellen, führen Sie diese Schritte nach der Bereitstellung aus.
+
+. Melden Sie sich beim vCenter Client an
+. Navigieren Sie unter *Inventars* zu den ONTAP-Tools für virtuelle VMware vSphere-Maschinen und wählen Sie die Option *Einstellungen bearbeiten*.
+. Aktivieren Sie unter den Optionen *CPU* das Kontrollkästchen *CPU Hot add aktivieren*
+. Aktivieren Sie unter den *Memory*-Optionen das Kontrollkästchen *enable* gegen *Memory Hot Plug*.
+
