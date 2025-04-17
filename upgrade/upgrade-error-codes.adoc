@@ -59,9 +59,10 @@ In der folgenden Tabelle sind die Fehlercodes und die entsprechenden Dateinamen 
 Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler im Skript an:
 
 |===
-
-
 | *Upgrade-Fehlercode* | *Arbeitsablauf* | * Auflösung* 
+
+
+| 052 | Die ISO kann mit der aktuellen Version oder zwei Versionen über der aktuellen Version identisch sein. | Verwenden Sie eine kompatible ISO-Version, um von Ihrer aktuellen Version zu aktualisieren. 
 
 
 | 068 | Das Rollback von Debian-Paketen ist fehlgeschlagen | Recovery auf Basis von RPOs oder Snapshots ohne RPO und Upgrade erneut versuchen 
@@ -118,12 +119,6 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 089 | Ändern der Eigentumsrechte für die Konfigurationsdatei „Zusammenfassung Protokoll drehen“ ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
 
 
-| 093 | Das Upgrade der dynamischen speicherbereitstellung ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
-
-
-| 094 | Rollback für die dynamische Storage-bereitstellung ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
-
-
 | 095 | Fehler beim Upgrade des Betriebssystems | Kein Recovery für OS Upgrade. Die ONTAP Tools Services wurden aktualisiert und neue Pods laufen. 
 
 
@@ -155,8 +150,20 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 
 
 | 113 | Die Aktualisierung der Ressourcen auf sekundären Nodes ist fehlgeschlagen | Prüfen Sie die Upgrade-Protokolle, und versuchen Sie das Upgrade erneut. 
+
+
+| 104 | Der Neustart des sekundären Knotens ist fehlgeschlagen | Starten Sie die Knoten manuell nacheinander neu 
+
+
+| 100 | Kernel-Rollback ist fehlgeschlagen | - 
+
+
+| 051 | Das Upgrade der dynamischen speicherbereitstellung ist fehlgeschlagen | Upgrade-Protokolle prüfen und Upgrade wiederholen. 
+
+
+| 056 | Löschen der Migrationssicherung fehlgeschlagen | NA 
 |===
 
-NOTE: Die ONTAP Tools für VMware vSphere 10.3 unterstützen kein RPO.
+NOTE: Ab ONTAP-Tools für VMware vSphere 10.3 werden Zero RPO nicht unterstützt.
 
 Weitere Informationen zu https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1["So stellen Sie ONTAP-Tools für VMware vSphere wieder her, wenn das Upgrade von Version 10.0 auf 10.1 fehlschlägt"]

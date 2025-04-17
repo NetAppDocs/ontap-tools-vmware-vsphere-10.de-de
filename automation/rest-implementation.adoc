@@ -22,7 +22,7 @@ Die REST-API umfasst mehrere Ressourcenkategorien wie vCenter und Aggregate. Im 
 
 == So erhalten Sie Zugriff auf die REST API
 
-Sie können über die Load Balancer-IP-Adresse des ONTAP Tools und den Port auf die ONTAP Tools für die VMware vSphere 10 REST-API zugreifen. Es gibt mehrere Teile der vollständigen URL, einschließlich:
+Sie können über die IP-Adresse des ONTAP Tools und den Port auf die ONTAP Tools für die VMware vSphere 10 REST-API zugreifen. Es gibt mehrere Teile der vollständigen URL, einschließlich:
 
 * ONTAP Tools IP-Adresse und Port
 * API-Version

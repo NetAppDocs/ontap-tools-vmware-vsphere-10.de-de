@@ -14,7 +14,7 @@ summary: Mit der Aktion „Datastore löschen“ wird der Datastore gelöscht, w
 Mit der Aktion „Datastore löschen“ wird der Datastore gelöscht, wenn sich keine VVols auf dem ausgewählten Datastore befinden.
 
 
-NOTE: Das Verkleinern des VVols-Datastores wird für ASA r2-basierten VVols Datastore nicht unterstützt.
+NOTE: Die Verkleinerung des VVols Datastore wird für den systembasierten VVols Datastore in ASA r2 nicht unterstützt.
 
 .Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.

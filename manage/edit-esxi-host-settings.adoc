@@ -17,7 +17,7 @@ summary: Über das Dashboard der ONTAP Tools für VMware vSphere können Sie Ihr
 Wenn ein Problem mit den ESXi-Hosteinstellungen auftritt, wird das Problem im Portlet „ESXi-Hostsysteme“ des Dashboards angezeigt. Sie können das Problem auswählen, um den Hostnamen oder die IP-Adresse des ESXi-Hosts anzuzeigen, auf dem das Problem aufgetreten ist.
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an.
 . Wählen Sie auf der Shortcuts-Seite unter dem Plug-ins-Abschnitt *NetApp ONTAP Tools* aus.
 . Gehen Sie in der Übersicht (Dashboard) des ONTAP Tools for VMware vSphere Plug-ins zum Portlet *ESXi Host Compliance*.
 . Wählen Sie den Link *Empfohlene Einstellungen anwenden*.
@@ -30,6 +30,5 @@ NOTE: Sie können den ESXi-Host erweitern, um die aktuellen Werte anzuzeigen.
 . Überprüfen Sie im Übersichtsfenster die Werte und wählen Sie *Fertig stellen*. Sie können den Fortschritt im Fenster „Letzte Aufgabe“ verfolgen.
 
 
-*Verwandte Informationen*
-
+.Verwandte Informationen
 link:../configure/configure-esx-server-multipath-and-timeout-settings.html["Konfigurieren Sie ESXi-Hosteinstellungen"]

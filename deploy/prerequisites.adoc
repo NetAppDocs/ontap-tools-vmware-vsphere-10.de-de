@@ -49,27 +49,39 @@ Sie können ONTAP-Tools für VMware vSphere mit der virtuellen VMware vCenter Se
 | HA groß (kumulativ aus drei Nodes) | 51 | 102 | 1050 
 |===
 
+NOTE: Wenn Backup aktiviert ist, benötigt jeder Cluster mit ONTAP Tools weitere 50 GB Speicherplatz auf dem Datenspeicher, auf dem die VMs implementiert werden. Daher sind für nicht-HA 400 GB und für HA insgesamt 1100 GB Speicherplatz erforderlich.
+
+
 
 == Mindestanforderungen hinsichtlich Storage und Applikationen
 
 |===
-| Storage, Host und Applikationen | Mindestversionsanforderungen 
+| Storage, Host und Applikationen | Versionsanforderungen 
 
 
 | ONTAP | 9.14.1, 9.15.1 und 9.16.0. FAS, ASA A-Serie, ASA C-Serie, AFF A-Serie, AFF C-Serie und ASA r2. 
 
 
-| ESXi-Hosts | ESXi 7.0.3 
+| Von ONTAP Tools unterstützte ESXi-Hosts | Ab 7.0.3 
 
 
-| VCenter Server | VCenter 7.0U3 
+| ONTAP Tools unterstützten vCenter Server | 7.0U3 ab 
 
 
 | VASA Provider | 3.0 
 
 
-| OVA-Anwendung | 10,3 
+| OVA-Anwendung | 10,4 
+
+
+| ESXi-Host zur Implementierung der virtuellen Maschine mit ONTAP-Tools | 7.0, 7.0U1, 7.0U2, 7.0U3, 8.0, 8.0U1 UND 8.0U3 
+
+
+| VCenter Server zur Bereitstellung einer virtuellen Maschine mit ONTAP-Tools | 7.0 und 8.0 
 |===
+
+NOTE: Ab ONTAP-Tools für VMware vSphere 10.4 wird die Hardware der virtuellen Maschine von Version 10 auf 17 geändert.
+
 Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu den unterstützten Versionen von ONTAP, vCenter Server, ESXi-Hosts und Plug-in-Applikationen.
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
@@ -151,50 +163,86 @@ Die folgende Tabelle gibt einen Überblick über die von NetApp verwendeten Netz
 |===
 
 
-| *Port* | *Beschreibung* 
+| *Port* | *Protokoll* | *Beschreibung* 
 
 
-| 22 (TCP) | Ansible verwendet diesen SSH-Port für die Kommunikation während der Cluster-Bereitstellung. Dieser Port ist erforderlich für Funktionen wie das Ändern des Benutzerpassworts für die Wartung, Statusmeldungen und das Aktualisieren von Werten auf allen drei Nodes im Falle einer HA-Konfiguration. 
+| 8143 | TCP | HTTP/HTTPS-Verbindungen für ONTAP-Tools. 
 
 
-| 443 (TCP) | Dies ist der Pass-Through-Port für die eingehende Kommunikation für den VASA Provider-Dienst. Auf diesem Port werden selbstsigniertes VASA Provider-Zertifikat und ein benutzerdefiniertes CA-Zertifikat gehostet. 
+| 8043 | TCP | HTTP/HTTPS-Verbindungen für ONTAP-Tools. 
 
 
-| 8443 (TCP) | Dieser Port hostet die API-Dokumentation über swagger und die Manager-Benutzeroberflächenanwendung. 
+| 9060 | TCP | HTTP/HTTPS-Verbindungen für ONTAP-Tools. 
 
 
-| 2379 (TCP) | Dies ist der Standardport für Client-Anfragen wie get, Put, delete oder Watch für Schlüssel im Schlüssel-Wertspeicher etcd. 
+| 22 | TCP | Ansible verwendet diesen SSH-Port für die Kommunikation während der Cluster-Bereitstellung. Dieser Port ist erforderlich für Funktionen wie das Ändern des Benutzerpassworts für die Wartung, Statusmeldungen und das Aktualisieren von Werten auf allen drei Nodes im Falle einer HA-Konfiguration. 
 
 
-| 2380 (TCP) | Dies ist der Standardport für die Server-zu-Server-Kommunikation für den etcd-Cluster, der für den Floß-Konsensus-Algorithmus usw. verwendet wird, der für die Datenreplikation und -Konsistenz von abhängt. 
+| 443 | TCP | Dies ist der Pass-Through-Port für die eingehende Kommunikation für den VASA Provider-Dienst. Auf diesem Port werden selbstsigniertes VASA Provider-Zertifikat und ein benutzerdefiniertes CA-Zertifikat gehostet. 
 
 
-| 7472 (TCP+UDP) | Dies ist der prometheus Kennzahlen-Serviceport. 
+| 8443 | TCP | Dieser Port hostet die API-Dokumentation über swagger und die Manager-Benutzeroberflächenanwendung. 
 
 
-| 7946 (TCP+UDP) | Dieser Port wird für die Erkennung des Containernetzwerks von Docker verwendet. 
+| 2379 | TCP | Dies ist der Standardport für Client-Anfragen wie get, Put, delete oder Watch für Schlüssel im Schlüssel-Wertspeicher etcd. 
 
 
-| 9083 (TCP) | Dieser Port ist ein intern verwendeter Service-Port für den VASA Provider-Service. 
+| 2380 | TCP | Dies ist der Standardport für die Server-zu-Server-Kommunikation für den etcd-Cluster, der für den Floß-Konsensus-Algorithmus usw. verwendet wird, der für die Datenreplikation und -Konsistenz von abhängt. 
 
 
-| 1162 (UDP) | Dies ist der SNMP-Trap-Paketport. 
+| 7472 | TCP/UDP | Dies ist der prometheus Kennzahlen-Serviceport. 
 
 
-| 6443 (TCP) | Quelle: RKE2 Agenten Knoten. Ziel: REK2 Server Nodes. Beschreibung: Kubernetes API 
+| 7946 | TCP/UDP | Dieser Port wird für die Erkennung des Containernetzwerks von Docker verwendet. 
 
 
-| 9345 (TCP) | Quelle: RKE2 Agenten Knoten. Ziel: REK2 Server Nodes. Beschreibung: REK2 Supervisor API 
+| 9083 | TCP | Dieser Port ist ein intern verwendeter Service-Port für den VASA Provider-Service. 
 
 
-| 8472 (TCP+UDP) | Alle Knoten müssen andere Knoten über UDP-Port 8472 erreichen können, wenn Flannel VXLAN verwendet wird. Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: Canal CNI mit VXLAN 
+| 1162 | UDP | Dies ist der SNMP-Trap-Paketport. 
 
 
-| 10250 (TCP) | Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: Kubelet Metriken 
+| 6443 | TCP | Quelle: RKE2 Agenten Knoten. Ziel: REK2 Server Nodes. Beschreibung: Kubernetes API 
 
 
-| 30000-32767 (TCP) | Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: NodePort Port Portbereich 
+| 9345 | TCP | Quelle: RKE2 Agenten Knoten. Ziel: REK2 Server Nodes. Beschreibung: REK2 Supervisor API 
 
 
-| 123 (TCP) | Ntpd verwendet diesen Port, um die Validierung des ntp-Servers durchzuführen. 
+| 8472 | TCP+UDP | Alle Knoten müssen andere Knoten über UDP-Port 8472 erreichen können, wenn Flannel VXLAN verwendet wird. Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: Canal CNI mit VXLAN 
+
+
+| 10250 | TCP | Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: Kubelet Metriken 
+
+
+| 30000-32767 | TCP | Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: NodePort Port Portbereich 
+
+
+| 123 | TCP | Ntpd verwendet diesen Port, um die Validierung des NTP-Servers durchzuführen. 
+
+
+| 137-139 | TCP/UDP | SMB/Windows-Pakete zur gemeinsamen Nutzung 
+
+
+| 6789 | TCP | Ceph-Monitor (MON) 
+
+
+| 3300 | TCP | Ceph-Monitor (MON) 
+
+
+| 6800-7300 | TCP | Ceph Manager, OSDs und Filesystem (MDS). 
+
+
+| 80 | TCP | Ceph RADOS Gateway (RGW) 
+
+
+| 9080 | TCP | VP HTTP/HTTPS-Verbindungen (nur von 127.0.0.0/8 für IPv4 oder ::1/128 für IPv6). 
 |===
+
+
+== ONTAP Storage-Einstellungen
+
+Um eine nahtlose Integration von ONTAP Storage mit ONTAP Tools für VMware vSphere zu gewährleisten, sollten folgende Einstellungen durchgeführt werden:
+
+* Wenn Sie Fibre Channel (FC) für Storage-Konnektivität verwenden, konfigurieren Sie das Zoning auf den FC-Switches, um die ESXi-Hosts mit den FC-LIFs der SVM zu verbinden. https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Erfahren Sie mehr über FC- und FCoE-Zoning mit ONTAP Systemen"]
+* Um ONTAP Tools-gemanagte SnapMirror-Replizierung zu verwenden, sollte der ONTAP Storage-Administrator vor Verwendung von SnapMirror und https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["Intercluster SVM-Peer-Beziehungen mit ONTAP"] in ONTAP erstellen https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAP Cluster Peer-Beziehungen"].
+

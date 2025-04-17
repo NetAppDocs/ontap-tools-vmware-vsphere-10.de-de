@@ -1,0 +1,45 @@
+---
+permalink: protect/fan-out-protection.html 
+sidebar: sidebar 
+keywords:  
+summary: In einem Fan-out-Schutz ist die Konsistenzgruppe doppelt geschützt – mit der synchronen Beziehung auf dem ersten ONTAP-Ziel-Cluster und mit der asynchronen Beziehung auf dem zweiten ONTAP-Ziel-Cluster. 
+---
+= Fan-out-Schutz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In einem Fan-out-Schutz ist die Konsistenzgruppe doppelt geschützt – mit der synchronen Beziehung auf dem ersten ONTAP-Ziel-Cluster und mit der asynchronen Beziehung auf dem zweiten ONTAP-Ziel-Cluster. Die Workflows zum Erstellen, Bearbeiten und Löschen der aktiven SnapMirror Synchronisierungsschutz behalten den synchronen Schutz bei. Der asynchrone Schutz wird durch SRM-Failover und Workflows zum erneuten Schutz gewährleistet.
+
+Um einen Fan-out-Schutz zu erreichen, müssen die Cluster und SVMs von drei Standorten als Peer-to-Peer eingesetzt werden.
+
+Beispiel:
+
+|===
+
+
+| Wenn | Dann 
+
+
+ a| 
+* Die Konsistenzgruppe der Quelle befindet sich auf Cluster c1 und SVM svm1
+* Die erste Ziel-Konsistenzgruppe befindet sich auf Cluster c2 und SVM svm2 und
+* Die zweite Ziel-Konsistenzgruppe befindet sich auf Cluster c3 und SVM svm3
+
+ a| 
+* Der Cluster-Peering auf dem Quell-ONTAP-Cluster ist (C1, C2) und (C1, C3).
+* Der Cluster-Peering auf dem ersten Ziel-ONTAP-Cluster ist (C2, C1) und (C2, C3)
+* Der Cluster-Peering auf dem zweiten Ziel-ONTAP-Cluster sind (C3, C1) und (C3, C2).
+* SVM-Peering auf Quell-SVM wird (svm1, svm2) und (svm1, svm3) sein.
+* SVM-Peering auf der ersten Ziel-SVM wird (svm2, svm1) und (svm2, svm3) und sein
+* SVM-Peering auf zweite Ziel-SVM wird (svm3, svm1) und (svm3, svm2) sein.
+
+
+|===
+*Schritte*
+
+. Erstellen Sie einen neuen Platzhalter-Datastore. Siehe https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["Wählen Sie einen Platzhalter Datastore aus"]
+. Fügen Sie den Datastore zum Schutz des Host-Clusters hinzulink:../manage/edit-hostcluster-protection.html["Geschütztes Host-Cluster ändern"]. Sie müssen sowohl asynchrone als auch synchrone Richtlinientypen hinzufügen.
+

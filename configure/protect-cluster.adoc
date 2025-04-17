@@ -25,7 +25,7 @@ Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an.
 . Klicken Sie mit der rechten Maustaste auf einen Host-Cluster und wählen Sie *NetApp ONTAP Tools* > *Cluster schützen*.
 . Im Fenster Protect Cluster werden der Datastore-Typ und die Details der Quell-Storage Virtual Machine (VM) automatisch ausgefüllt. Wählen Sie den Datenspeicher-Link aus, um die geschützten Datastores anzuzeigen.
 . Geben Sie den Namen der * Konsistenzgruppe* ein.

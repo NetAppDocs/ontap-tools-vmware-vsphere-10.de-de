@@ -16,11 +16,11 @@ Während der Bereitstellung wird standardmäßig ein selbstsigniertes Zertifikat
 .Bevor Sie beginnen
 * Der Domänenname, auf dem das Zertifikat ausgestellt wird, sollte der virtuellen IP-Adresse zugeordnet werden.
 * Führen Sie die nslookup-Prüfung für den Domänennamen aus, um zu überprüfen, ob die Domäne auf die beabsichtigte IP-Adresse aufgelöst wird.
-* Die Zertifikate sollten mit dem Domänennamen und der Load Balancer-IP-Adresse erstellt werden.
+* Die Zertifikate sollten mit dem Domänennamen und der IP-Adresse des ONTAP-Tools erstellt werden.
 
 
 
-NOTE: Eine Loadbalancer-IP-Adresse sollte einem vollständig qualifizierten Domänennamen (FQDN) zugeordnet werden. Zertifikate sollten denselben FQDN enthalten, der der Loadbalancer-IP-Adresse in alternativen Namen des Subjekts oder Subjekts zugeordnet ist.
+NOTE: Eine IP-Adresse für ONTAP-Tools sollte einem vollständig qualifizierten Domänennamen (FQDN) zugeordnet werden. Zertifikate sollten denselben FQDN enthalten, der der IP-Adresse des ONTAP-Tools in alternativen Namen des Subjekts oder des Subjekts zugeordnet ist.
 
 
 NOTE: Sie können nicht von einem mit einer Zertifizierungsstelle signierten zu einem selbstsignierten Zertifikat wechseln.

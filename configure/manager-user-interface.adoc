@@ -38,5 +38,11 @@ image:../media/ontap-tools-manager-overview.png["Dashboard-Übersicht über ONTA
 | Warnkarte | Auf der Warnkarte werden die Warnmeldungen der ONTAP-Tools nach Typ aufgeführt, einschließlich der Warnmeldungen auf HA-Node-Ebene. Sie können die Liste der Warnmeldungen anzeigen, indem Sie auf den Zähltext (Hyperlink) klicken. Über den Link gelangen Sie zur Seite mit der Warn-Ansicht, die nach dem ausgewählten Typ gefiltert ist. 
 
 
+| VCenter | Die vCenter-Karte zeigt den Integritätsstatus der vCenter im System an. 
+
+
+| Storage-Back-Ends | Die Karte Speicher-Back-Ends zeigt den Integritätsstatus der Speicher-Back-Ends im System an. 
+
+
 | Karte der ONTAP-Tools-Knoten | Die Knotenkarte „ONTAP Tools“ zeigt die Liste der Knoten mit Knotennamen, Node-VM-Namen, Status und allen netzwerkbezogenen Daten an. Sie können auf *Details anzeigen* auswählen, um die zusätzlichen Details zu dem ausgewählten Knoten anzuzeigen. [HINWEIS] in einem nicht-HA-Setup wird nur ein Node angezeigt. Im HA-Setup werden drei Nodes angezeigt. 
 |===

@@ -4,53 +4,30 @@ sidebar: sidebar
 keywords: upgrade 
 summary: Upgrade wird sowohl für HA-Implementierungen als auch für Implementierungen ohne HA unterstützt. 
 ---
-= Upgrade von ONTAP Tools für VMware vSphere 10.x auf 10.3
+= Upgrade von ONTAP Tools für VMware vSphere 10.x auf 10.4
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Das Upgrade wird sowohl für HA-Implementierungen als auch für Implementierungen ohne HA unterstützt. Unterstützte Upgrade-Pfade:
+Sie können ein Upgrade von ONTAP Tools für VMware vSphere 10.2 oder 10.3 auf 10.4 durchführen. Ein direktes Upgrade von ONTAP Tools 10.0 oder 10.1 auf 10.4 wird jedoch nicht unterstützt.
 
-|===
+HINWEIS:
 
-
-| Über ONTAP Tools für die Konfiguration von VMware vSphere 10.1 und 10.2 | Zu ONTAP Tools für die Konfiguration von VMware vSphere 10.3 
-
-
-| Nicht-HA klein | Non-HA und Advanced Small 
+* Bei ASA r2 Systemen sollten Sie ein Upgrade auf ONTAP Tools für VMware vSphere 10.4 mit ONTAP 9.16.1 durchführen, bevor Sie weitere Storage Availability Zones (SAZs) hinzufügen.
+* Wenn das Upgrade von ONTAP Tools für VMware vSphere 10.2 oder 10.3 auf Version 10.4 fehlschlägt, wird Rollback nicht unterstützt. Verwenden Sie zum Wiederherstellen der Einrichtung RPO für ONTAP-Tools für VMware vSphere 10.2 und RPO von nahezu null oder Snapshot-Wiederherstellung für ONTAP-Tools für VMware vSphere 10.3.
 
 
-| Non-HA Medium | Non-HA und Advanced Medium 
-
-
-| Advanced Small | Non-HA und Advanced Small 
-
-
-| Modernes Medium | Non-HA und Advanced Medium 
-
-
-| HA klein | HA klein 
-
-
-| HA mittel | HA mittel 
-
-
-| HA groß | HA groß 
-|===
-
-NOTE: Es werden Upgrades von ONTAP Tools für VMware vSphere 10.1 und 10.2 auf 10.3 unterstützt. Direkte Upgrades von ONTAP Tools 10.0 auf 10.3 werden nicht unterstützt.
-
-*Bevor Sie beginnen*
-
+.Bevor Sie beginnen
 Wenn Sie ein Upgrade ohne HA durchführen, schalten Sie die ONTAP Tools-VM aus. Schalten Sie für ein HA-Upgrade den ersten Node aus, bevor Sie die folgenden Änderungen an den VM-Einstellungen (Virtual Machine) vornehmen.
 
-* Fügen Sie jedem Node eine zusätzliche 100-GB-Festplatte hinzu, da die Servicedaten lokal auf der VM gespeichert werden.
-* Ändern Sie die CPU und den Arbeitsspeicher der ausgeschalteten VM entsprechend Ihrer Implementierung. Aktivieren Sie das Hot-Plug-in für CPU und RAM.
+Wenn Sie ein Upgrade von ONTAP-Tools für VMware vSphere 10.2 oder 10.3 durchführen, müssen Sie die folgenden Schritte ausführen, bevor Sie mit der Upgrade-Aufgabe fortfahren: * Fügen Sie jedem Knoten eine zusätzliche 100-GB-Festplatte hinzu, da die Servicedaten lokal auf der VM gespeichert werden. * Ändern Sie die CPU und den Speicher für die ausgeschalteten VM entsprechend dem Geschmack Ihrer Bereitstellung. Aktivieren Sie das Hot-Plug-in für CPU und RAM.
+
 +
+
 |===
-| 10.3 Bereitstellungstyp | CPU (Core) pro Node | Arbeitsspeicher (GB) pro Node | Festplattenspeicher (GB) pro Node | CPU gesamt (Core) | Arbeitsspeicher (GB) | Gesamter Festplattenspeicher (GB) 
+| Bereitstellungstyp | CPU (Core) pro Node | Arbeitsspeicher (GB) pro Node | Festplattenspeicher (GB) pro Node | CPU gesamt (Core) | Arbeitsspeicher (GB) | Gesamter Festplattenspeicher (GB) 
 
 
 | Nicht-HA klein | 9 | 18 | 350 | 9 | 18 | 350 
@@ -69,12 +46,10 @@ Wenn Sie ein Upgrade ohne HA durchführen, schalten Sie die ONTAP Tools-VM aus. 
 |===
 * SCHALTEN Sie die VM EIN, nachdem die Änderungen vorgenommen wurden, und warten Sie, bis die Services ausgeführt werden.
 * Nehmen Sie im Fall der HA-Bereitstellung die Ressourcenänderungen vor, aktivieren Sie das Hot-Plug-in für CPU und RAM und fügen Sie 100 GB Festplatten für den zweiten und den dritten Node hinzu. Diese Nodes müssen nicht neu gebootet werden.
-* Wenn die Appliance als lokaler Pfad (einfache Implementierung) mit den ONTAP-Tools 10.1 oder 10.2 implementiert wurde, müssen Sie vor dem Upgrade einen stillgelegten Snapshot erstellen.
+* Wenn die Appliance mit den ONTAP-Tools 10.2 als lokaler Pfad implementiert wurde (einfache Implementierung), müssen Sie vor der Aktualisierung einen stillgelegten Snapshot erstellen.
 
 
-Wenn Sie ein Upgrade von ONTAP Tools für VMware vSphere 10.0 auf 10.1 durchführen, müssen Sie die folgenden Schritte ausführen, bevor Sie mit dem Upgrade fortfahren:
-
-*Diagnose Aktivieren*
+Wenn Sie ein Upgrade von ONTAP-Tools für VMware vSphere 10.0 auf 10.1 durchführen, müssen Sie die folgenden Schritte ausführen, bevor Sie mit dem Upgrade fortfahren: *Diagnose aktivieren*
 
 . Öffnen Sie im vCenter Server eine Konsole für ONTAP Tools.
 . Melden Sie sich als Wartungbenutzer an.
@@ -143,7 +118,7 @@ Es wird eine neue Festplatte erstellt. Die dynamische Storage-bereitstellung ers
 
 
 
-Nach einem Upgrade auf ONTAP Tools für VMware vSphere 10.3 haben Sie folgende Möglichkeiten:
+Nach einem Upgrade auf ONTAP Tools für VMware vSphere 10.4 haben Sie folgende Möglichkeiten:
 
 * Deaktivieren Sie die Dienste über die Benutzeroberfläche des Managers
 * Wechseln Sie von einer Einrichtung ohne HA-Konfiguration zu einer HA-Einrichtung
@@ -151,9 +126,8 @@ Nach einem Upgrade auf ONTAP Tools für VMware vSphere 10.3 haben Sie folgende M
 * Starten Sie im Fall eines Upgrades ohne HA die VM der ONTAP Tools neu, um die Änderungen widerzuspiegeln. Booten Sie im Fall eines HA-Upgrades den ersten Node neu, um die Änderungen am Node widerzuspiegeln.
 
 
-*Nach Ihrer Beendigung*
-
-Nachdem Sie ein Upgrade von früheren Versionen von ONTAP-Tools für VMware vSphere auf 10.3 durchgeführt haben, können Sie die SRA-Adapter erneut scannen, um sicherzustellen, dass die Details auf der Seite VMware Live Site Recovery Storage Replication Adapters aktualisiert werden.
+.Wie es weiter geht
+Nachdem Sie ein Upgrade von früheren Versionen von ONTAP-Tools für VMware vSphere auf 10.4 durchgeführt haben, können Sie die SRA-Adapter erneut scannen, um sicherzustellen, dass die Details auf der Seite VMware Live Site Recovery Storage Replication Adapters aktualisiert werden.
 
 Löschen Sie die Trident-Volumes nach einem erfolgreichen Upgrade manuell aus ONTAP, indem Sie das folgende Verfahren durchführen:
 
@@ -175,6 +149,5 @@ sudo python3 /home/maint/scripts/ontap_cleanup.py
 
 Dadurch werden alle Trident Volumes in ONTAP gelöscht, die in ONTAP Tools für VMware vSphere 10.1/10.2 verwendet werden.
 
-*Verwandte Informationen*
-
-link:../migrate/migrate-to-latest-ontaptools.html["Migrieren Sie von ONTAP-Tools für VMware vSphere 9.x zu 10.3"]
+.Verwandte Informationen
+link:../migrate/migrate-to-latest-ontaptools.html["Migrieren Sie von ONTAP-Tools für VMware vSphere 9.x zu 10.4"]

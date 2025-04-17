@@ -13,8 +13,10 @@ summary: Sie können das Administratorkennwort mit dem ONTAP Tools Manager ände
 [role="lead"]
 Mithilfe des ONTAP Tools Managers können Sie die Konfiguration der ONTAP Tools für VMware vSphere vertikal skalieren, um die Anzahl der Knoten in der Implementierung zu erhöhen oder die Konfiguration in die Einrichtung für Hochverfügbarkeit (HA) zu ändern. Die ONTAP Tools für die VMware vSphere Appliance werden zunächst in einer Konfiguration ohne HA-Konfiguration mit einem einzelnen Node implementiert.
 
-*Bevor Sie beginnen*
 
+NOTE: Um auf HA zu migrieren, wenn das nicht-HA-Backup aktiviert ist, deaktivieren Sie zuerst das Backup und aktivieren Sie es nach der Migration erneut.
+
+.Bevor Sie beginnen
 * Stellen Sie sicher, dass Ihre OVA-Vorlage die gleiche OVA-Version wie Knoten 1 hat. Knoten 1 ist der Standardknoten, auf dem die ONTAP-Tools für VMware vSphere OVA ursprünglich bereitgestellt werden.
 * Stellen Sie sicher, dass der CPU-Hot-Plug-Speicher und der Hot-Plug-Speicher aktiviert sind.
 

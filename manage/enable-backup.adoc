@@ -2,16 +2,19 @@
 permalink: manage/enable-backup.html 
 sidebar: sidebar 
 keywords:  
-summary: Da die ONTAP Tools für VMware vSphere 10.3 die dynamische Storage-bereitstellung verwenden, können Sie kein RPO mehr erzielen. Sie können jedoch eine RPO von nahezu null erzielen. 
+summary: Ab der Verwendung von ONTAP Tools für VMware vSphere 10.3 verwendet die Appliance die dynamische Storage-bereitstellung. Ein RPO von null ist nicht möglich. Sie können jedoch eine RPO von nahezu null erzielen. 
 ---
-= Erstellen Sie ein Backup und stellen Sie das Setup wieder her
+= Erstellen Sie Backup und Recovery der ONTAP Tools Setup
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Da die ONTAP Tools für VMware vSphere 10.3 die dynamische Storage-bereitstellung verwenden, können Sie keine sofort erstellte RPOs mehr erreichen. Sie können jedoch eine RPO von nahezu null erzielen. Um ein RPO von nahezu null zu erzielen, müssen Sie ein Backup des Setups erstellen und es auf einer neuen Virtual Machine wiederherstellen.
+Ab den ONTAP Tools für VMware vSphere 10.3 verwendet die Appliance die dynamische Storage-bereitstellung. Ein RPO von null ist nicht möglich. Sie können jedoch eine RPO von nahezu null erzielen. Um ein RPO von nahezu null zu erzielen, müssen Sie ein Backup des Setups erstellen und es auf einer neuen Virtual Machine wiederherstellen.
+
+
+NOTE: Um auf HA zu migrieren, wenn das nicht-HA-Backup aktiviert ist, deaktivieren Sie zuerst das Backup und aktivieren Sie es nach der Migration erneut.
 
 
 
@@ -42,7 +45,7 @@ Im Dateibereich sehen Sie das Verzeichnis. Der Name des Verzeichnisses wird die 
 
 Um das Setup wiederherzustellen, schalten Sie die vorhandene virtuelle Maschine aus und stellen Sie eine neue virtuelle Maschine mithilfe der OVA bereit, die bei der ersten Bereitstellung verwendet wurde.
 
-Sie müssen für die neue Virtual Machine dieselbe IP-Adresse (Load Balancer-IP) der ONTAP-Tools verwenden. Außerdem muss die Systemkonfiguration – z. B. aktivierte Services, Node-Größe und HA-Modus – mit der ursprünglichen Bereitstellung identisch sein.
+Sie müssen für die neue Virtual Machine dieselbe IP-Adresse für ONTAP Tools verwenden. Außerdem muss die Systemkonfiguration, z. B. aktivierte Services, Node-Größe und HA-Modus, mit der ursprünglichen Implementierung identisch sein.
 
 Führen Sie die folgenden Schritte aus, um das Setup aus der Sicherungsdatei wiederherzustellen.
 

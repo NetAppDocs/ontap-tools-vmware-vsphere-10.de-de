@@ -1,64 +1,31 @@
 ---
 permalink: release-notes/whats-new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, 10.3, ONTAP tools for VMware vSphere' 
-summary: Erfahren Sie mehr über die neuen Funktionen in den ONTAP Tools für VMware vSphere 10.3. 
+keywords: 'what"s new, release notes, 10.4, ONTAP tools for VMware vSphere' 
+summary: Erfahren Sie mehr über die neuen Funktionen in den ONTAP Tools für VMware vSphere 10.4. 
 ---
-= Neuerungen bei ONTAP Tools für VMware vSphere 10.3
+= Neuerungen bei ONTAP Tools für VMware vSphere 10.4
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 [role="lead"]
-Erfahren Sie mehr über die neuen Funktionen in den ONTAP Tools für VMware vSphere 10.3.
+Erfahren Sie mehr über die neuen Funktionen in den ONTAP Tools für VMware vSphere 10.4.
 
 [cols="30%,70%"]
 |===
 | Aktualisieren | Beschreibung 
 
 
- a| 
-Unterstützung neuer Plattform- und Applikationsversionen
- a| 
-Die ONTAP-Tools für VMware vSphere 10.3 unterstützen jetzt folgende Plattform- und Anwendungsversionen:
-
-* ONTAP 9.16.0 und höher
-* VMware vSphere 8.0 U3
-* VMware Live Site Recovery 9.0
+| Unterstützung für ASA r2-Systeme mit 12 Nodes pro Cluster | Die ONTAP Tools für VMware vSphere 10.4 unterstützen Workflows für ASA r2 Storage-Systeme mit bis zu 12 Nodes pro Cluster und verbessern so Datenmanagement-Effizienz und Skalierbarkeit. VVols Datastores mit iSCSI- und FC-Protokoll sowie VMFS-Datastores mit iSCSI-, FC- und NVMe-Protokoll werden unterstützt und bieten so flexible und verbesserte Storage-Optionen. 
 
 
+| Verbesserungen der Benutzeroberfläche von ONTAP Tools Manager | Sie können den NTP-Server jetzt für die präzise Zeitsynchronisierung der Umgebung aktivieren und die Telemetrieeinstellungen über die ONTAP Tools Manager-Schnittstelle für das Monitoring und die Analyse der Systemperformance konfigurieren. Diese Einstellungen sind in der Wartungskonsole nicht mehr verfügbar. 
 
 
- a| 
-Einfache Implementierung
- a| 
-Sie können jetzt ONTAP Tools für VMware vSphere 10.3 mit den Mindestanforderungen für ein Single-Node-Cluster implementieren und anschließend auf eine HA- oder Multi-Node-Implementierung aktualisieren.
+| Verbesserte Sicherheitsfunktionen | Sicherheitsfunktionen bieten jetzt einen verbesserten Schutz und die Einhaltung von Branchenstandards und bieten eine robuste und benutzerfreundliche Erfahrung, mit der Administratoren VMware-Umgebungen effektiver verwalten können. 
 
 
-
- a| 
-Nahtlose Bereitstellung und Konfiguration
- a| 
-ONTAP Tools für VMware vSphere 10.3 hat die mit Trident verbundenen Abhängigkeiten beseitigt und verwendet jetzt die dynamische Storage-bereitstellung, um eine nahtlose Bereitstellung und Konfiguration zu ermöglichen.
-
-
-
- a| 
-Verbesserte Sicherheit für REST-API-Authentifizierung
- a| 
-ONTAP-Tools für VMware vSphere 10.3 verlassen sich jetzt auf CA-signierte Zertifikate für ONTAP-Tools REST-APIs und Benutzeroberfläche, um eine höhere Sicherheit zu bieten.
-
-
-
- a| 
-Unterstützung für ASA r2-Systeme
- a| 
-ONTAP Tools für VMware vSphere 10.3 unterstützen die Bereitstellung von VMFS-Datenspeichern auf ASA r2 Systemen zur Sicherung von VMFS-Datastores mit aktiver SnapMirror Synchronisierung und SRA/VMware Live Site Recovery.
-
-
-
- a| 
-Verbesserte Beobachtbarkeit
- a| 
-ONTAP-Tools für VMware vSphere 10.3 erweitern die Unterstützung von Observability-Metriken für VMFS und vVol Datastores und ihre jeweiligen VMs.
-
+| Verbesserte Disaster-Recovery-Funktionen von SRA | ONTAP Tools für VMware vSphere 10.4 unterstützen jetzt zusätzlich zu geplanten SnapMirror Snapshot-Kopien Disaster-Recovery-Vorgänge mithilfe von Site-Recovery-Appliance (SRA) mit benutzerdefinierten Snapshots. 
 |===

@@ -13,8 +13,7 @@ summary: 'Sie sollten überprüfen, ob der geschützte Standort und der Recovery
 [role="lead"]
 Sie sollten überprüfen, ob der geschützte Standort und der Recovery-Standort nach der Konfiguration des Storage Replication Adapter (SRA) erfolgreich gepaart wurden. Das replizierte Storage-System sollte sowohl vom geschützten Standort als auch vom Wiederherstellungsstandort erkannt werden können.
 
-*Bevor Sie beginnen*
-
+.Bevor Sie beginnen
 * Sie sollten Ihr Storage-System konfiguriert haben.
 * Sie sollten den geschützten Standort und den Recovery-Standort mit dem VMware Live Site Recovery Array Manager gekoppelt haben.
 * Bevor Sie den Test-Failover und den Failover-Vorgang für SRA durchführen, sollten Sie die FlexClone Lizenz und die SnapMirror Lizenz aktiviert haben.

@@ -24,7 +24,7 @@ Das NFS vStorage API for Array Integration (NFS VAAI) Plug-in ist eine Softwarek
 
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an.
 . Wählen Sie im Abschnitt Plug-ins *Shortcuts* > *NetApp ONTAP Tools* aus.
 . Wählen Sie *Einstellungen* > *NFS VAAI Tools*.
 . Wenn das VAAI-Plug-in auf vCenter Server hochgeladen wird, wählen Sie im Bereich *existing Version* *Change* aus. Wenn kein VAAI-Plug-in auf den vCenter-Server hochgeladen wird, klicken Sie auf die Schaltfläche *Upload*.

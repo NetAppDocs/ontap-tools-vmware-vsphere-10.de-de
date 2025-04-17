@@ -14,7 +14,7 @@ summary: Sie können den VASA Provider mit einer vCenter Server-Instanz über di
 Sie können den VASA Provider mit einer vCenter Server-Instanz unter Verwendung von ONTAP Tools für VMware vSphere registrieren. Im Abschnitt VASA Provider-Einstellungen wird der Registrierungsstatus des VASA Providers für den ausgewählten vCenter Server angezeigt.
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an.
 . Wählen Sie im Abschnitt Plug-ins *Shortcuts* > *NetApp ONTAP Tools* aus.
 . Wählen Sie *Einstellungen* > *VASA Provider-Einstellungen*. Der Registrierungsstatus des VASA Providers wird als nicht registriert angezeigt.
 . Klicken Sie auf die Schaltfläche *Registrieren*, um den VASA Provider zu registrieren.
@@ -22,8 +22,7 @@ Sie können den VASA Provider mit einer vCenter Server-Instanz unter Verwendung 
 . Nach einer erfolgreichen Registrierung und Seitenaktualisierung werden der Status, der Name und die Version des registrierten VASA Providers angezeigt. Nach der Registrierung wird die Registrierung aufgehoben.
 
 
-*Nach Ihrer Beendigung*
-
+.Wie es weiter geht
 Vergewissern Sie sich, dass der aufgelistete VASA Provider vom vCenter Client unter VASA Provider aufgeführt ist:
 
 .Schritte

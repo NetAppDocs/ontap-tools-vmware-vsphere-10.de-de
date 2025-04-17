@@ -11,10 +11,9 @@ summary: Die ONTAP Tools für die VMware vSphere Appliance werden als kleiner Si
 
 
 [role="lead"]
-Die ONTAP Tools für die VMware vSphere Appliance werden als kleiner Single Node mit Kernservices zur Unterstützung von NFS und VMFS Datastores implementiert.
+Die ONTAP Tools für die VMware vSphere Appliance werden als kleiner Single Node mit Kernservices zur Unterstützung von NFS und VMFS Datastores implementiert. Die Implementierung von ONTAP Tools kann bis zu 45 Minuten dauern.
 
-*Bevor Sie beginnen*
-
+.Bevor Sie beginnen
 Eine Content-Bibliothek in VMware ist ein Container-Objekt, das VM-Vorlagen, vApp-Vorlagen und andere Dateitypen speichert. Die Bereitstellung mit Inhaltsbibliothek bietet Ihnen eine nahtlose Erfahrung, da sie nicht von der Netzwerkkonnektivität abhängt.
 
 
@@ -28,7 +27,7 @@ Wenn Sie keine Inhaltsbibliothek haben, führen Sie die folgenden Schritte aus, 
 *Inhaltsbibliothek erstellen* Wenn Sie planen, nur eine kleine Einzelknoten-Bereitstellung zu verwenden, ist das Erstellen einer Inhaltsbibliothek nicht notwendig.
 
 . Laden Sie die `.zip` Datei mit Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP-Tools für VMware vSphere von der herunter https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^].
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an
 . Wählen Sie das vSphere-Client-Menü aus und wählen Sie *Inhaltsbibliotheken* aus.
 . Wählen Sie auf der rechten Seite die Option *Erstellen*.
 . Geben Sie einen Namen für die Bibliothek ein, und erstellen Sie die Inhaltsbibliothek.
@@ -88,7 +87,7 @@ NOTE: Pure IPv6 wird nicht unterstützt. Der gemischte Modus wird mit VLAN unter
 +
 Wenn die Bereitstellungsaufgabe erstellt wird, wird der Fortschritt in der vSphere-Taskleiste angezeigt.
 
-. Schalten Sie die VM nach Abschluss der Aufgabe ein.
+. Schalten Sie die VM nach Abschluss der Aufgabe ein, wenn die Option zum automatischen Einschalten der VM nicht ausgewählt wurde.
 
 
 Sie können den Fortschritt der Installation in der Webkonsole der VM verfolgen.
@@ -99,6 +98,7 @@ Wenn im OVF-Formular Abweichungen auftreten, wird in einem Dialogfeld eine Korre
 Wenn Sie ONTAP-Tools für VMware vSphere mit vCenter Server 7.0.3 bereitstellen, führen Sie diese Schritte nach der Bereitstellung aus.
 
 . Melden Sie sich beim vCenter Client an
+. Schalten Sie den Knoten „ONTAP Tools“ aus.
 . Navigieren Sie unter *Inventars* zu den ONTAP-Tools für virtuelle VMware vSphere-Maschinen und wählen Sie die Option *Einstellungen bearbeiten*.
 . Aktivieren Sie unter den Optionen *CPU* das Kontrollkästchen *CPU Hot add aktivieren*
 . Aktivieren Sie unter den *Memory*-Optionen das Kontrollkästchen *enable* gegen *Memory Hot Plug*.

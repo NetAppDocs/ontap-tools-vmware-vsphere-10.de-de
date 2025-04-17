@@ -60,6 +60,8 @@ entries:
     url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
   - title: VASA-Bereinigung
     url: "/manage/delete-virtual-machines.html"
+  - title: Verbinden oder Trennen einer Datenfestplatte von einer virtuellen Maschine
+    url: "/manage/attach-detach-disk.html"
 - title: Erkennen von Storage-Systemen und Hosts
   url: "/configure/discover-storage-systems-and-hosts.html"
 - title: Ändern der ESXi-Hosteinstellungen
@@ -84,7 +86,10 @@ entries:
   url: "/manage/disable-autosupport.html"
 - title: Aktualisieren Sie die AutoSupport-Proxy-URL
   url: "/manage/update-proxyurl.html"
-- title: Erstellen Sie ein Backup und stellen Sie das Setup wieder her
+- title: Fügen Sie NTP-Server hinzu
+  url: "/manage/add-ntpserver.html"
+- title: Erstellen Sie ein Backup und stellen Sie die Einrichtung der ONTAP Tools
+    wieder her
   url: "/manage/enable-backup.html"
 - title: Deinstallieren Sie die ONTAP-Tools für VMware vSphere
   url: "/manage/uninstall-deployment.html"

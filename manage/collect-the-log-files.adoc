@@ -33,7 +33,7 @@ Laden Sie die Datei tar.gz herunter, und senden Sie sie an den technischen Suppo
 Führen Sie die folgenden Schritte aus, um Protokollbündel über die vCenter Client-Benutzeroberfläche zu generieren:
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an.
 . Gehen Sie auf der vSphere Client-Homepage zu *Support* > *Log Bundle* > *Generate*.
 . Geben Sie das Protokollbündel-Label an, und generieren Sie das Protokollbündel.
 Sie können die Download-Option sehen, wenn die Dateien generiert werden. Das Herunterladen kann einige Zeit in Anspruch nehmen.

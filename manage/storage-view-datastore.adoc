@@ -25,10 +25,10 @@ ONTAP Tools für VMware vSphere zeigt die ONTAP Storage-Seitenansicht der Datast
 | *Datenspeichertyp* | *Informationen verfügbar* 
 
 
-| NFS-Datastore | Die Seite *Storage Details* enthält Speicher-Back-Ends, Aggregat- und Volume-Informationen. Die Seite mit den NFS-Details enthält Daten zum NFS-Datastore. 
+| NFS-Datastore | Die Seite *Storage Details* enthält Speicher-Back-Ends, Aggregat- und Volume-Informationen. Die Seite *NFS Details* enthält Daten zum NFS Datastore. 
 
 
-| VMFS-Datastores | Die Seite *Storage Details* enthält Informationen zum Speicher-Backend, Aggregat und Volume. Die Seite *LUN Details* enthält Daten zur LUN. Die Seite *Namespace Details* enthält Daten zum Namespace, wenn der VMFS-Datastore das NVMe/TCP- oder NVMe/FC-Protokoll verwendet. Details zu Volumes und Aggregaten werden für systembasierte Datastores mit ASA r2 nicht angezeigt. 
+| VMFS-Datastores | Die Seite *Storage Details* enthält Details zu Speicher-Backend, Aggregat, Volume und Storage Availability Zone (SAZ). Die Seite *Storage unit Details* enthält Details zur Speichereinheit. 
 
 
 | VVols Datastores | Listet alle Volumes auf. Sie können Speicher im ONTAP-Speicherbereich erweitern oder entfernen. Diese Ansicht wird für den systembasierten VVols Datastore ASA r2 nicht unterstützt. 

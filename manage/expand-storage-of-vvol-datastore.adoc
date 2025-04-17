@@ -14,7 +14,7 @@ summary: Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das
 Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das Datastore-Objekt klicken, werden im Abschnitt Plug-in ONTAP-Tools für von VMware vSphere unterstützte Aktionen angezeigt. Bestimmte Aktionen werden abhängig vom Typ des Datenspeichers und den aktuellen Benutzerberechtigungen aktiviert.
 
 
-NOTE: Das erweitern des VVols-Datastore ist für ASA r2-basierten VVols-Datastore nicht möglich.
+NOTE: Das erweitern des VVols Datastore ist für einen systembasierten VVols Datastore in ASA r2 nicht möglich.
 
 .Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.

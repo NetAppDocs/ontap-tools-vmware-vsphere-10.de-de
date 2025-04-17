@@ -31,8 +31,6 @@ Anwendungskonfiguration
  a| 
 . Zeigt eine Zusammenfassung des Serverstatus an
 . Ändern der PROTOKOLLEBENE für VASA Provider Services und SRA Services
-. Deaktivieren Sie AutoSupport
-. Aktualisieren Sie die AutoSupport-Proxy-URL
 
 
 
@@ -44,7 +42,6 @@ Systemkonfiguration
 . Virtuelle Maschine herunterfahren
 . Ändern Sie das Benutzerpasswort „Wartung“
 . Zeitzone ändern
-. Fügen Sie den neuen NTP-Server hinzu
 . Erhöhen der Größe der Jail-Festplatte (/jail)
 . Upgrade
 . Installation der VMware Tools

@@ -64,6 +64,9 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | *Deployment-Fehlercode* | *Arbeitsablauf* | * Auflösung* 
 
 
+| 049 | Für Netzwerk und Validierung wird Perl Skript sie auch in Kürze zuweisen | - 
+
+
 | 050 | Generierung des SSH-Schlüssels fehlgeschlagen | Starten Sie die primäre virtuelle Maschine (VM) neu. 
 
 
@@ -78,7 +81,7 @@ Sudo rke2-uninstall.sh (alle VMs).
 | 055 | Fehler beim Bereitstellen der Registrierung | Wenn der Registrierungs-Pod vorhanden ist, warten Sie, bis der Pod bereit ist, starten Sie dann die primäre VM neu oder starten Sie es andernfalls neu. 
 
 
-| 059 | Die KubeVip-Bereitstellung ist fehlgeschlagen | Vergewissern Sie sich, dass die während der Implementierung angegebene virtuelle IP-Adresse für die Kubernetes-Kontrollebene und den Load Balancer im selben VLAN gehören und freie IP-Adressen sind. Neu starten, wenn alle vorherigen Punkte korrekt sind. Ansonsten Neuimplementierung. 
+| 059 | Die KubeVip-Bereitstellung ist fehlgeschlagen | Vergewissern Sie sich, dass die während der Implementierung angegebene virtuelle IP-Adresse für die Kubernetes-Kontrollebene und die ONTAP-Tools die IP-Adresse im selben VLAN und freien IP-Adressen sind. Neu starten, wenn alle vorherigen Punkte korrekt sind. Ansonsten Neuimplementierung. 
 
 
 | 060 | Die Benutzerbereitstellung ist fehlgeschlagen | Neu Starten 

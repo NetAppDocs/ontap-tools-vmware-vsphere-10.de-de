@@ -26,7 +26,7 @@ Sie können die folgenden Aufgaben im Rahmen des Änderungsschutzes ausführen. 
 Gehen Sie wie folgt vor, um den Status des Host-Cluster-Schutzes zu überwachen. Sie können jeden geschützten Host-Cluster sowie seinen Sicherungsstatus, SnapMirror-Beziehungen, Datastores und den entsprechenden SnapMirror-Status überwachen.
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an.
 . Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*.
 +
 Das Symbol unter der Spalte „Schutz“ zeigt den Status des Schutzes an
@@ -41,7 +41,7 @@ Das Symbol unter der Spalte „Schutz“ zeigt den Status des Schutzes an
 Gehen Sie wie folgt vor, um die neu hinzugefügten Datastores oder Hosts zu schützen. Sie können dem geschützten Cluster neue Hosts hinzufügen oder neue Datastores auf dem Host-Cluster über die native vCenter-Benutzeroberfläche erstellen.
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an.
 . Um die Eigenschaften eines geschützten Clusters zu bearbeiten, können Sie eine der beiden Optionen wählen
 +
 .. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, wählen Sie das Auslassungsmenü für den Cluster aus und wählen Sie *Bearbeiten* oder
@@ -65,7 +65,7 @@ Eine vCenter-Aufgabe wird erstellt und Sie können den Fortschritt im Bereich *L
 == Fügen Sie eine neue SnapMirror-Beziehung hinzu
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an.
 . Um die Eigenschaften eines geschützten Clusters zu bearbeiten, können Sie eine der beiden Optionen wählen
 +
 .. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, wählen Sie das Auslassungsmenü für den Cluster aus und wählen Sie *Bearbeiten* oder
@@ -91,7 +91,7 @@ Zum Löschen einer asynchronen SnapMirror Beziehung sollte die SVM oder das Clus
 Das Löschen der Beziehung löst einen erneuten Scan am sekundären Standort aus, um die nicht zugeordnete LUN als aktiven Pfad von den Hosts zu entfernen.
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an.
 . Um die Eigenschaften eines geschützten Clusters zu bearbeiten, können Sie eine der beiden Optionen wählen
 +
 .. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, wählen Sie das Auslassungsmenü für den Cluster aus und wählen Sie *Bearbeiten* oder
@@ -113,7 +113,7 @@ Zum Ändern einer asynchronen SnapMirror Beziehung sollte die SVM oder das Clust
 NOTE: Eine vorhandene asynchrone SnapMirror-Beziehung kann nicht bearbeitet werden.
 
 .Schritte
-. Melden Sie sich mit beim vSphere-Client an `\https://<vcenterip>/<ui>`
+. Melden Sie sich beim vSphere-Client an.
 . Um die Eigenschaften eines geschützten Clusters zu bearbeiten, können Sie eine der beiden Optionen wählen
 +
 .. Navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*, wählen Sie das Auslassungsmenü für den Cluster aus und wählen Sie *Bearbeiten* oder
