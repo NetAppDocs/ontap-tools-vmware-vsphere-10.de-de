@@ -15,11 +15,9 @@ Durch das Hinzufügen eines Storage-Backends können Sie ein ONTAP Cluster integ
 
 *Über diese Aufgabe*
 
-Hinzufügen von Storage Back-End zu einem ONTAP Cluster Wenn vCenter für mandantenfähige Konfigurationen als Mandant mit der zugehörigen SVM fungiert, fügen Sie das Cluster mithilfe des ONTAP Tools Manager hinzu. Nachdem Sie das Storage-Back-End dem globalen Cluster hinzugefügt haben, müssen Sie das Cluster den gewünschten vCenter-Mandanten zuordnen. Der vCenter Mandant muss die gewünschten Storage Virtual Machines (SVMs) integriert haben. Dadurch kann ein SVM-Benutzer VVols Datastore bereitstellen. Sie können Storage in vCenter mithilfe der SVM hinzufügen.
+Bei mandantenfähige Konfigurationen, bei denen vCenter als Mandant mit einer entsprechenden SVM fungiert, können Sie das Cluster mit dem ONTAP Tools Manager hinzufügen. Verknüpfen Sie das Storage-Backend mit dem vCenter Server, um es global der eingenommenen vCenter Server-Instanz zuzuordnen. Der vCenter Mandant muss die gewünschten Storage Virtual Machines (SVMs) integriert haben. Dadurch kann ein SVM-Benutzer VVols Datastore bereitstellen. Sie können Storage in vCenter mithilfe der SVM hinzufügen.
 
-Verwenden Sie das ONTAP Tools-Plug-in auf dem vCenter Server, um einem lokalen Cluster ein Storage-Back-End hinzuzufügen.
-
-link:../concepts/ontap-tools-concepts-terms.html["Schlüsselkonzepte und -Begriffe"] Enthält weitere Informationen zu den in diesem Abschnitt verwendeten Begriffen.
+Fügen Sie über die Benutzeroberfläche von ONTAP Tools lokale Storage-Back-Ends mit Cluster- oder SVM-Anmeldedaten hinzu. Diese Storage Back-Ends sind auf nur ein vCenter beschränkt. Bei lokaler Verwendung der Cluster-Anmeldedaten werden die zugehörigen SVMs automatisch dem vCenter zugeordnet, um VVols oder VMFS zu managen. Für VMFS-Management, einschließlich SRA, unterstützen ONTAP-Tools SVM-Zugangsdaten, ohne dass ein globales Cluster erforderlich ist.
 
 [role="tabbed-block"]
 ====
