@@ -23,7 +23,7 @@ Sie können die Konfiguration der ONTAP Tools für VMware vSphere vertikal skali
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] Aktivieren Sie Services
 [role="quick-margin-para"]
-Zum Konfigurieren des VVols-Datastores müssen Sie den VASA Provider-Service aktivieren. Registrieren Sie den VASA Provider bei vCenter, und stellen Sie sicher, dass Ihre Storage-Richtlinien die HA-Anforderungen erfüllen, einschließlich der richtigen Netzwerk- und Storage-Konfigurationen.
+Zum Konfigurieren der VVols-Datastores müssen Sie den VASA Provider-Service aktivieren. Registrieren Sie den VASA Provider bei vCenter, und stellen Sie sicher, dass Ihre Storage-Richtlinien die HA-Anforderungen erfüllen, einschließlich der richtigen Netzwerk- und Storage-Konfigurationen.
 
 [role="quick-margin-para"]
 Aktivieren Sie die SRA-Dienste zur Verwendung von ONTAP-Tools Storage Replication Adapter (SRA) für VMware Site Recovery Manager (SRM) oder VMware Live Site Recovery (VLSR).

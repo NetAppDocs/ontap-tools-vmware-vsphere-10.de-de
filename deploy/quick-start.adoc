@@ -13,7 +13,7 @@ summary: Die ersten Schritte mit den ONTAP Tools für VMware vSphere sind ein pa
 [role="lead"]
 Die ersten Schritte mit den ONTAP Tools für VMware vSphere sind ein paar Schritte. Dieser schnelle Einstieg führt Sie durch die Ersteinrichtung von ONTAP Tools für VMware vSphere.
 
-Zunächst implementieren Sie ONTAP Tools für VMware vSphere als eine kleine Single-Node-Konfiguration, die wichtige Services zur Unterstützung von NFS- und VMFS-Datastores bietet. Wenn Sie Ihre Konfiguration für den Einsatz von VVols-Datastore und Hochverfügbarkeit (HA) erweitern müssen, sind Sie nach Abschluss dieses Workflows damit richtig. Weitere Informationen finden Sie im link:../deploy/ha-workflow.html["HA-Implementierungs-Workflow"].
+Zunächst implementieren Sie ONTAP Tools für VMware vSphere als eine kleine Single-Node-Konfiguration, die wichtige Services zur Unterstützung von NFS- und VMFS-Datastores bietet. Wenn Sie Ihre Konfiguration für VVols-Datastores und Hochverfügbarkeit (HA) erweitern müssen, sind Sie nach Abschluss dieses Workflows ebenfalls dafür tätig. Weitere Informationen finden Sie im link:../deploy/ha-workflow.html["HA-Implementierungs-Workflow"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] Planen Sie Ihre Implementierung
 [role="quick-margin-para"]

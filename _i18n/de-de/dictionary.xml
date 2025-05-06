@@ -76,10 +76,8 @@
   <block id="a00c50b90749f90a36742b8673eb5362" category="cell">/API/Netzwerk/ip/Schnittstellen</block>
   <block id="75a3ccbb7a9e84c450e2a4fa949a65dd" category="cell">Storage Back-end hinzufügen: Zur Identifizierung des Management-LIF-Umfangs ist Cluster/SVM</block>
   <block id="d683f4893193b2031b9057d1e1d8107d" category="list-text">Melden Sie sich mit den Administratoranmeldeinformationen an.</block>
-  <block id="aee895c24ce8b1de4db4cd6c7eabc1e3" category="paragraph">Verwenden Sie den folgenden URI, um den Status zu überprüfen:</block>
   <block id="f323831468d8f05429defe22a9e81256" category="list-text">Wählen Sie in der Seitenleiste *Speicher-Backends* aus.</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">Wählen Sie *Hinzufügen*.</block>
-  <block id="6b50b8836085008a8950ddeafeb7453a" category="list-text">Aktualisieren Sie das Zertifikat auf allen Hosts.</block>
   <block id="f14c276c07197ebef1394a5a219087a1" category="cell">*Beschreibung*</block>
   <block id="d59f94015529940d2e6778d013097380" category="summary">VCenter sind zentrale Management-Plattformen, mit denen Sie Hosts, Virtual Machines und Storage-Back-Ends steuern können.</block>
   <block id="a1c4eb450799cb3f30c400d0201414e7" category="doc">Ermitteln</block>
@@ -329,14 +327,12 @@ Das Passwort wird auf der VM aktualisiert.</block>
   <block id="180b08fa6b9d0983aae906976c87c440" category="paragraph">Sie können auch nicht geschützte virtuelle Maschinen mit einem Speicher-Snapshot schützen. Für diesen Release sollten Sie den Speicher-Snapshot löschen, bevor Sie den Schutz für die virtuelle Maschine aktivieren.</block>
   <block id="317f8a592684314bc3829f0ff356fe47" category="summary">Mit der Aktion „Datastore löschen“ wird der Datastore gelöscht. Im Falle eines NFS- oder VMFS-Datenspeichers wird ein Dialogfeld mit der Liste der VMs angezeigt, die den Datenspeicher verwenden.</block>
   <block id="3cd4a1ddd805e8692af529725906108e" category="doc">Löschen Sie Datastores</block>
-  <block id="74c2a170a3a0431313f534b1ea7f6223" category="paragraph">Die Aktion „Storage aus Datastore entfernen“ wird von allen ONTAP-Tools für VMware vSphere unterstützt, die VVols-Datastores im vCenter Server erkannt oder gemanagt haben. Durch diese Aktion können Volumes aus dem VVols Datastore entfernt werden.</block>
   <block id="06fc0088433da1586d8b146d3fb952e1" category="list-text">Unmountet den vVol Container.</block>
   <block id="bc673c8811aaa2034bb2cffd8a96248d" category="list-text">Bereinigt igroup. Wenn Initiatorgruppe nicht verwendet wird, entfernt iqn von der Initiatorgruppe.</block>
   <block id="fb40032a4ad6a68c56c06487fb3a7ffe" category="list-text">Löscht den Vvol-Container.</block>
   <block id="b79137ab5f6862c1ee80db1d5af71ce7" category="list-text">Belässt die Flex-Volumes auf dem Storage Array.</block>
   <block id="376f79911f0474ff0e2b48680f291d92" category="paragraph">Gehen Sie wie folgt vor, um NFS-, VMFS- oder vVOL-Datastore aus ONTAP-Tools aus vCenter Server zu löschen:</block>
   <block id="6ee2af5b3e7281deafcb804bdc59b6d6" category="list-text">Im Falle eines NFS- oder VMFS-Datenspeichers wird ein Dialogfeld mit der Liste der VMs angezeigt, die den Datenspeicher verwenden.</block>
-  <block id="ca0de4dc7005c772fe956ef77a54062d" category="list-text">Im Fall eines VVols Datastore wird der Datastore durch die Aktion „Datastore löschen“ nur gelöscht, wenn keine VVols damit verbunden sind. Das Dialogfeld Datastore löschen bietet eine Option zum Löschen von Volumes aus dem ONTAP-Cluster.</block>
   <block id="a8211be0a6fb73b95cdffd1ac6d2b9d5" category="list-text">Um die Backing Volumes auf dem ONTAP-Speicher zu löschen, wählen Sie *Delete Volumes on ONTAP Cluster* aus.</block>
   <block id="c00d479945ae0ac31dc91b4e3dd1e862" category="summary">Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speicher zugreifen. Nachdem Sie die Hosts der VMware Umgebung hinzugefügt haben, können Sie den Datastore auf den zusätzlichen Hosts einbinden.</block>
   <block id="36a4b56b73b4162884e7f45d9d8a7152" category="doc">Mounten von NFS- und VMFS-Datastores</block>
@@ -570,7 +566,6 @@ Die Fehlerdomäne ist nichts anderes als SVMs mit aktivierter Replizierung. Es w
   <block id="b46b241331d5bfe90afd25ec36605c07" category="paragraph">*Verarbeitungsart*</block>
   <block id="288aae25bc408055f50c21c991903a44" category="paragraph">Asynchron</block>
   <block id="a62fbfbe1fa2fbcd3ff1ab71d9f0cf7a" category="paragraph">*Beispiel für Curl*</block>
-  <block id="f8528d0e8a8584338a8fc7938174cdc1" category="paragraph">/API/v1/vcenters/{vcguid}/Migration-Jobs</block>
   <block id="80e56be2a784c57e6087b3af6db66ad9" category="paragraph">{
   „otv_ip“: „10.12.13.45“,
   „vasa_Provider_Credentials“: {
@@ -596,7 +591,6 @@ Die Fehlerdomäne ist nichts anderes als SVMs mit aktivierter Replizierung. Es w
 }</block>
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">Registrieren Sie VASA Provider auf vCenter Server</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">PATCH</block>
-  <block id="41e9abb5d58ca11ff36c3067c273a762" category="paragraph">PATCH „/API/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/Migration-Jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43</block>
   <block id="bdfee7ad87d9004e1091e6e1762d0e84" category="paragraph">*JSON-Eingabebeispiel*</block>
   <block id="589c4957e1e0bb7b0bf55fa835dbaf3d" category="list-text">Geben Sie *y* ein, um das Passwort Ihrer Wahl festzulegen.</block>
   <block id="0a01c0c2d00b20ff323dc6b25ceb30a5" category="list-text">Kn exec -it ntv-mongodb-0 sh - kn ist ein Alias von kubectl -n ntv-System.</block>
@@ -1084,7 +1078,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="5f5053e002bb673864826817a2f5203c" category="paragraph">Auf der Registerkarte „ONTAP Tools“ werden Details wie der Zertifikatstyp (selbstsigniert/CA-signiert) und der Domänenname angezeigt. Während der Bereitstellung wird standardmäßig ein selbstsigniertes Zertifikat generiert. Sie können das Zertifikat erneuern oder das Zertifikat auf CA aktualisieren.</block>
   <block id="043925c248050af88bd5572f4c47c484" category="list-text">Um das selbstsignierte Zertifikat auf ein benutzerdefiniertes CA-Zertifikat zu aktualisieren, wählen Sie *Zertifikate* &gt; *ONTAP-Tools* &gt; *Upgrade auf CA*.</block>
   <block id="21d108129175f5ff7e7d38e10818e345" category="list-text">Wenn der VMFS-Datastore auf ASA r2-Systemen erstellt wird und Teil des Schutzes ist, müssen Sie den Schutz des Datastore aufheben, bevor Sie ihn löschen.</block>
-  <block id="714ece12b84efacae25f0810e81201df" category="list-text">Bei auf ASA r2 Systemen basiertem VVols-Datastore ist das Kontrollkästchen zum Löschen der Backup-Volumes nicht anwendbar.</block>
   <block id="da8b2f27297a9b9118f73acd0acb3d1c" category="paragraph">Stellen Sie sicher, dass ein ESXi-Host nur eine VM mit ONTAP Tools enthält. Die Eingaben werden jedes Mal validiert, wenn Sie zum nächsten Fenster wechseln.</block>
   <block id="d4074ccb6b38b9bac6bde691702ff0e0" category="paragraph">Auf der Registerkarte *Alerts* im linken Bereich werden Warnungen für ONTAP-Tools für VMware vSphere aufgelistet.</block>
   <block id="1ea68582c5812061ab6e0dec557f5c98" category="list-text">Gehen Sie in der Übersicht (Dashboard) des ONTAP Tools for VMware vSphere Plug-ins zum Portlet *ESXi Host Compliance*.</block>
@@ -1110,7 +1103,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="4b917cebfb8f237f71651dbbf70704f5" category="list-text">Melden Sie sich nach dem Kopieren der Sicherungsdatei bei der Diagnoseshell an, und führen Sie den folgenden Befehl aus:</block>
   <block id="cc6f23548d79558cc785e66bb64756c5" category="paragraph">Die Protokolle werden in der Datei _/var/log/post-deploy-Upgrade.log_ aufgezeichnet.</block>
   <block id="0305dc99772d0a5c329839aa9316d5e1" category="list-text">Nach der erfolgreichen Recovery werden Services und vCenter Objekte wiederhergestellt.</block>
-  <block id="8746628f0f2c5087a8e2a516211f31a4" category="doc">Erweitern Sie den VVols Datastore</block>
   <block id="7a8e7317ab9023c8e3dac44950232672" category="list-text">Aktualisieren Sie die AutoSupport-Proxy-URL</block>
   <block id="d51a3b8155ff2f65ec368b7278c07f16" category="list-text">Geben Sie die vCenter-Anmeldeinformationen für das Backup an</block>
   <block id="1f3bf2522a0df56ad834875880cfcc04" category="list-text">Sichern Sie sich</block>
@@ -1331,7 +1323,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="paragraph"><block ref="eaff07db9f9bd4c788b59cf5ac2e6f5e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="009dbe214d15197679fe0b95a8a01cc3" category="list-text">Stoppen Sie ONTAP Tools für den VMware vSphere Storage Provider 9.10/9.11/9.12/9.13 VASA Provider Service von der Wartungskonsole aus.</block>
   <block id="4bf6186a3a16efffdaebdafdd4fcaf4b" category="paragraph">Sobald der alte VASA Provider angehalten wurde, erfolgt ein Failover des vCenter Servers zu den ONTAP Tools für VMware vSphere. Der Zugriff auf alle Datenspeicher und VMs erfolgt über ONTAP Tools für VMware vSphere.</block>
-  <block id="ba5c200a0d4600ec4fe2ef79c26593b8" category="list-text">Führen Sie die Patch-Migration mithilfe der folgenden API durch:</block>
   <block id="f663ec26fcc5dbf0e82a2df73c30a3e3" category="paragraph">Der Anforderungskörper ist für den Patchvorgang leer.</block>
   <block id="15e560ab707fa2bf2b7b0833adbe8bb9" category="list-text">Navigieren Sie zum Datenspeicher, und wählen Sie *Zusammenfassung* &gt; *VM Storage Policies*.</block>
   <block id="325367fe0120f7c1592bf3028da84bee" category="list-text">Wählen Sie die Richtlinie Storage VM und die entsprechende VM aus</block>
@@ -1861,7 +1852,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="80841c66bc065a4621fdb8223573f180" category="list-text"><block ref="80841c66bc065a4621fdb8223573f180" category="inline-link-macro-rx"></block></block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Zwei</block>
   <block id="e81b0e6462481fcd3413377a49eef929" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Aktivieren Sie Services</block>
-  <block id="c056ecd855e5405820342c3949fe830c" category="paragraph">Zum Konfigurieren des VVols-Datastores müssen Sie den VASA Provider-Service aktivieren. Registrieren Sie den VASA Provider bei vCenter, und stellen Sie sicher, dass Ihre Storage-Richtlinien die HA-Anforderungen erfüllen, einschließlich der richtigen Netzwerk- und Storage-Konfigurationen.</block>
   <block id="3fbec94821f3d895b930a04dc44657cc" category="paragraph">Aktivieren Sie die SRA-Dienste zur Verwendung von ONTAP-Tools Storage Replication Adapter (SRA) für VMware Site Recovery Manager (SRM) oder VMware Live Site Recovery (VLSR).</block>
   <block id="d9fa12637706812af1872dd61fc64453" category="inline-link-macro">Aktivieren Sie VASA Provider- und SRA-Services</block>
   <block id="c838d1e4bdb7f26f5aa0d841f7268233" category="list-text"><block ref="c838d1e4bdb7f26f5aa0d841f7268233" category="inline-link-macro-rx"></block></block>
@@ -1919,7 +1909,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="410dbf8e1f100ad53deb3ca66cb8ec8b" category="doc">Schnellstart für ONTAP-Tools für VMware vSphere</block>
   <block id="86339f91ab8e0352f8b9f8c35611a4ee" category="paragraph">Die ersten Schritte mit den ONTAP Tools für VMware vSphere sind ein paar Schritte. Dieser schnelle Einstieg führt Sie durch die Ersteinrichtung von ONTAP Tools für VMware vSphere.</block>
   <block id="7261b4472f18d3e8c4584d0bb039ec79" category="inline-link-macro">HA-Implementierungs-Workflow</block>
-  <block id="b95e3b604f6a59d80c159f8bcc30d45e" category="paragraph">Zunächst implementieren Sie ONTAP Tools für VMware vSphere als eine kleine Single-Node-Konfiguration, die wichtige Services zur Unterstützung von NFS- und VMFS-Datastores bietet. Wenn Sie Ihre Konfiguration für den Einsatz von VVols-Datastore und Hochverfügbarkeit (HA) erweitern müssen, sind Sie nach Abschluss dieses Workflows damit richtig. Weitere Informationen finden Sie im <block ref="9ef467ebb813ac9bfc1579e0ba7d9e65" category="inline-link-macro-rx"></block>.</block>
   <block id="3b46ad0549cc1ae15c466e1539cac6cc" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Planen Sie Ihre Implementierung</block>
   <block id="235431ffa3dee921fa339768f9c9a6c1" category="paragraph">Vergewissern Sie sich, dass Ihre vSphere-, ONTAP- und ESXi-Hostversionen mit der Version der ONTAP-Tools kompatibel sind. Weisen Sie ausreichend CPU, Arbeitsspeicher und Festplattenspeicher zu. Abhängig von Ihren Sicherheitsrichtlinien müssen Sie möglicherweise Firewalls oder andere Sicherheitsanwendungen konfigurieren, um Netzwerkverkehr zu ermöglichen.</block>
   <block id="9ebdb7921f7484cee5e22c5bfd2470c8" category="paragraph">Stellen Sie sicher, dass vCenter Server installiert ist und zugänglich ist.</block>
@@ -1988,7 +1977,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="46d5887698b4ff6635920edd7737e068" category="paragraph">RPO steht für den Recovery Point Objective, die Menge des Datenverlusts, der während eines bestimmten Zeitraums als akzeptabel erachtet wird. Ein RPO von null bedeutet, dass kein Datenverlust akzeptabel ist.</block>
   <block id="92e19cab5053b797a9992003d1875ca8" category="paragraph">ONTAP Tools für VMware vSphere sind eine Sammlung von Tools für das Lifecycle Management von Virtual Machines. Sie lässt sich in das VMware Ecosystem integrieren, unterstützt die Bereitstellung von Datastores und bietet grundlegende Sicherung für Virtual Machines. Die ONTAP Tools für VMware vSphere sind eine Sammlung horizontal skalierbarer, ereignisgesteuerter Microservices, die als Open Virtual Appliance (OVA) implementiert werden. Diese Version integriert REST-API mit ONTAP.</block>
   <block id="80cf0f2342cd77d47d9e4fa2a26e2e3f" category="paragraph">Die ONTAP Tools für VMware vSphere bestehen aus folgenden Komponenten:</block>
-  <block id="112fa4a14bcd73096ce0a79df18e90c8" category="admonition">Bei der Konfiguration eines Storage-Backend über die vSphere Client-Benutzeroberfläche ist zu beachten, dass der VVols-Datastore das direkte Hinzufügen eines SVM-Benutzers nicht unterstützt.</block>
   <block id="f112fce472a37331caaff255b19ba53d" category="list-text">Sie sollten die ONTAP Privileges-Datei von den ONTAP-Tools für VMware vSphere unter Verwendung von _\https://&lt;ONTAPtoolsIP&gt;:8443/Virtualization/user-Privileges/users_roles.zip_ heruntergeladen haben.</block>
   <block id="bba28a18430d8b63217997697c799196" category="list-text">Sie sollten die ONTAP Privileges-Datei von ONTAP-Tools heruntergeladen haben<block ref="37ba4e2f7974871d64576fb3f91d8d8a" prefix=" " category="inline-code"></block>.</block>
   <block id="a3436af33b8b4a9134f232e721682327" category="list-text">Extrahieren Sie die heruntergeladene Datei _\https://&lt;ONTAPtoolsIP&gt;:8443/Virtualization/user-Privileges/users_roles.zip_.</block>
@@ -2155,7 +2143,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="ac7b715393b89bac4b710e7aea826fbb" category="paragraph">Sie müssen für die neue Virtual Machine dieselbe IP-Adresse für ONTAP Tools verwenden. Außerdem muss die Systemkonfiguration, z. B. aktivierte Services, Node-Größe und HA-Modus, mit der ursprünglichen Implementierung identisch sein.</block>
   <block id="9388b8f101226e86df67ddf2f1f8f8c5" category="summary">Mithilfe von ONTAP Tools Manager kann das Administratorpasswort geändert werden, um Services wie VASA Provider, den Import der VVols-Konfiguration und die Disaster Recovery (SRA) mithilfe von ONTAP Tools Manager zu aktivieren.</block>
   <block id="ae80821bc04ea97412a103f5a9cdea58" category="paragraph">Die Option *Import der VVols-Konfiguration zulassen* wird nur angezeigt, wenn der VASA Provider-Dienst aktiviert ist. Mit dieser Option wird die VVols Datenmigration von den ONTAP-Tools 9.x auf die ONTAP-Tools 10.4 aktiviert.</block>
-  <block id="e5ea5ad9578577e69649af9a97651027" category="admonition">Das erweitern des VVols Datastore ist für einen systembasierten VVols Datastore in ASA r2 nicht möglich.</block>
   <block id="fff6f63a28676182cb9ee6c87c52911e" category="paragraph">Weitere Informationen finden Sie unter<block ref="74392a6ed560b64c3e452acc2a7ab97a" category="inline-link-rx"></block>.</block>
   <block id="7846abe7ddf5ac39a4f1d59f03a61e7d" category="admonition">Die Verkleinerung des VVols Datastore wird für den systembasierten VVols Datastore in ASA r2 nicht unterstützt.</block>
   <block id="7e80b22daba2fc98d372c1fedd3205c6" category="list-text">Die Drill-down-Ansicht des ASA r2-Cluster enthält keine Registerkarte für lokale Tiers, wenn die disaggregierte Eigenschaft für die SVM oder den Cluster als „wahr“ festgelegt wird.</block>
@@ -2234,9 +2221,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="fb029c6d9932bd7c5642df65930dc178" category="sidebar">ONTAP Tools für VMware vSphere 10.4</block>
   <block id="0857bfd766eab16b4130e4efc5375da1" category="sidebar">Erstellen Sie ein Backup und stellen Sie die Einrichtung der ONTAP Tools wieder her</block>
   <block id="4a0289525221cf8ff283b68c2151b26c" category="sidebar">Migrieren Sie die ONTAP-Tools für VMware vSphere 9.x zu 10.4</block>
-  <block id="7ffde475c4ea55e9fc7c8c11becbc141" category="paragraph">Bei mandantenfähige Konfigurationen, bei denen vCenter als Mandant mit einer entsprechenden SVM fungiert, können Sie das Cluster mit dem ONTAP Tools Manager hinzufügen. Verknüpfen Sie das Storage-Backend mit dem vCenter Server, um es global der eingenommenen vCenter Server-Instanz zuzuordnen. Der vCenter Mandant muss die gewünschten Storage Virtual Machines (SVMs) integriert haben. Dadurch kann ein SVM-Benutzer VVols Datastore bereitstellen. Sie können Storage in vCenter mithilfe der SVM hinzufügen.</block>
-  <block id="b4197a2c2f47c6b05c81d5a9e0ce17b2" category="admonition">Ohne Administratorkonto können Sie eine benutzerdefinierte Rolle mit eingeschränkten Berechtigungen erstellen. Weitere Informationen finden Sie unter <block ref="31ec071db09c0fa81e221bfe3044a965" category="inline-link-macro-rx"></block> .</block>
-  <block id="87dd51e51741bea35d69e26e7dedec96" category="list-text">Die IP-Adresse des ONTAP Tools ist die primäre Schnittstelle zur Kommunikation mit ONTAP Tools</block>
   <block id="0c72f5748e7c096b829fa8c13bdb6b7f" category="list-text">IPv4 ist die IP-Adresskomponente der Knotenkonfiguration, die zur Aktivierung von Diagnose-Shell und SSH-Zugriff auf den Knoten für Debugging und Wartung verwendet werden kann.</block>
   <block id="b2594cd127874498d2bbfa55ff19c5f5" category="cell">ONTAP Tools virtuelle IP-Adresse für die interne Kommunikation</block>
   <block id="a9919517205886b598c13e9032a09059" category="paragraph">Während der Storage-Datenmigration werden Storage-Back-Ends manuell über REST-APIs integriert. Bei der VASA Provider-Datenmigration werden Daten aus der bestehenden Derby-Datenbank exportiert und in die MongoDB-Datenbank importiert.</block>
@@ -2245,7 +2229,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="38376c135168fabdcdde30ebd8337b3c" category="paragraph">Sie können von ONTAP-Tools für VMware vSphere 9.12D1, 9.13D2 und 9.13P2 auf ONTAP-Tools für VMware vSphere 10.4 migrieren.</block>
   <block id="8b8b53606264e9f2f6b3466d202a79e7" category="admonition">Sie müssen die Bereitstellung Ihrer aktuellen ONTAP-Tools sichern, bevor Sie ein Upgrade auf die Patch-Versionen durchführen.</block>
   <block id="bf24d37a98e4819aab4f021ae207e4a2" category="list-text">Fügen Sie die vCenter Server-Instanz hinzu, die Sie zu ONTAP-Tools für die Version VMware vSphere 10.4 migrieren möchten. Weitere Informationen finden Sie unter <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block> .</block>
-  <block id="006a96430568667225adcbf5741c465f" category="list-text">Lokales Onboarding des Storage-Backends mit dem ONTAP Tools Plug-in auf dem vCenter Server. Fügen Sie den Speicher als lokal im Umfang enthaltenen Speicher für die Migration hinzu.</block>
   <block id="87e126829123fea19e6f12abbe92d154" category="paragraph">Vergewissern Sie sich vor der Migration, dass sich ein Standort im geschützten Zustand befindet und der andere im Wiederherstellungsstatus ist.</block>
   <block id="46ec37b71ccf8c993dcbf7cb78fe2af7" category="admonition">Starten Sie die Migration nicht, wenn das Failover abgeschlossen wurde, der erneute Schutz jedoch aussteht. Stellen Sie sicher, dass der erneute Schutz abgeschlossen ist, bevor Sie mit der Migration fortfahren. Wenn ein Test-Failover ausgeführt wird, bereinigen Sie das Test-Failover, und starten Sie die Migration.</block>
   <block id="da2f48d729eae4ca1010b4a077b66b02" category="list-text">Führen Sie diese Schritte aus, um den SRA-Adapter für ONTAP-Tools für VMware vSphere 9.xx in der VMware-Standortwiederherstellung zu löschen:</block>
@@ -2257,14 +2240,12 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="6136a81a0ac0e402d6b510c2488f1d36" category="list-text">Um Derby-PORT 1527 auf den vorhandenen ONTAP-Tools für VMware vSphere zu aktivieren, aktivieren Sie den Root-Benutzer und melden Sie sich über SSH an der CLI an. Führen Sie dann den folgenden Befehl aus:</block>
   <block id="3b89ab69ad47240835c0cd31ab9230d1" category="list-text">Fügen Sie die vCenter Server-Instanz hinzu, die Sie zu ONTAP-Tools für die Version VMware vSphere 10.4 migrieren möchten. Weitere Informationen finden Sie unter <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block> .</block>
   <block id="04cb9537a1b5aeb2f489acc8a6af2479" category="list-text">Lokales Storage-Back-End von den vCenter Server-APIs für das ONTAP Tools-Plug-in integriert</block>
-  <block id="2df3130083991453ee4ad8bec092b04c" category="list-text">Geben Sie die folgende API von Swagger oder in Postman für die Migration aus:</block>
   <block id="40e0776d71fd5d591d53e451a6006fa9" category="paragraph">Antragstelle für Migration von 9.12 und 9.13:</block>
   <block id="b02dd8a7793406878f54951af581d6f2" category="paragraph">Überprüfen Sie nach Abschluss des Jobs den Migrationsbericht. Dieser Bericht ist in den Jobdaten enthalten und kann über die Jobantwort abgerufen werden.</block>
   <block id="4551975cd29f0bfb98cd73d6f5cb8388" category="inline-link-macro">Registrieren Sie den VASA Provider</block>
   <block id="0edd46e4487a559e489864eebe825e64" category="list-text">Fügen Sie dem vCenter Server ONTAP Tools für VMware vSphere Storage Provider und ONTAP Tools für VMware vSphere hinzu<block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block>.</block>
   <block id="588348e2b65e0439aeb5d92799e13781" category="inline-link-macro">Aktivieren Sie VASA Provider</block>
   <block id="8c6bc1d231b93b5d6466c303391dba0b" category="list-text"><block ref="3f0f412beb77bd4bc4dc7f97f661a149" category="inline-link-macro-rx"></block> Service auf ONTAP Tools für VMware vSphere 10.4.</block>
-  <block id="ca1dae7fca99953eaa9acae8d9bf1bc5" category="list-text">Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xx migriert wurden, sind erst in den ONTAP-Tools für VMware vSphere 10.4 sichtbar, nachdem der Datastore-Erkennungsauftrag ausgelöst wurde. Das dauert bis zu 30 Minuten. Überprüfen Sie, ob die Datastores auf der Übersichtsseite der ONTAP-Tools für die Benutzeroberflächenseite des VMware vSphere Plug-ins sichtbar sind.</block>
   <block id="84a75f6b0a005e405f2680d9ab007b12" category="admonition">UUID ist die Migrations-UUID, die als Antwort auf die API nach der Migration zurückgegeben wird.</block>
   <block id="6282a0b7136c4d492053004c35f8e976" category="paragraph">Nach Ausführung der Patch-Migrations-API halten alle VMs die Storage-Richtlinie ein.</block>
   <block id="5eae8ab983bf75db57974d8e9b94ad5d" category="paragraph">Gehen Sie nach Abschluss der Migration und Registrierung der ONTAP-Tools 10.4 auf dem vCenter Server wie folgt vor:</block>
@@ -2275,4 +2256,25 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="0815c940666dbbf7ced52220b9b86f5b" category="inline-image-macro">Konfiguration des Lüfterschutzes</block>
   <block id="f95f9c4d72c71e2ed6223d5fb59cd8e3" category="inline-image-macro">Fan-out-Sicherheitsbeziehung</block>
   <block id="5a0ccad96f1ea52a56dd458f85c9c213" category="paragraph">Die folgende Abbildung zeigt die Konfiguration des Lüfterschutzes: <block ref="7fafdc79f7aea0b21898963e0edacd97" category="inline-image-macro-rx" type="image"></block> <block ref="dd53bd32310d5cd7c5aa13e62e3129ac" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fc8a748ed021f715d7a93750b6424484" category="paragraph">Bei mandantenfähige Konfigurationen, bei denen vCenter als Mandant mit einer entsprechenden SVM fungiert, können Sie das Cluster mit dem ONTAP Tools Manager hinzufügen. Verknüpfen Sie das Storage-Backend mit dem vCenter Server, um es global der eingenommenen vCenter Server-Instanz zuzuordnen. Der vCenter Mandant muss die gewünschten Storage Virtual Machines (SVMs) integriert haben. Dadurch kann ein SVM-Benutzer VVols-Datastores bereitstellen. Sie können Storage in vCenter mithilfe der SVM hinzufügen.</block>
+  <block id="eb99e18297d0216c348f606e3bc216c2" category="admonition">Bei der Konfiguration eines Storage-Backend über die vSphere Client-Benutzeroberfläche ist zu beachten, dass die VVols-Datastores das direkte Hinzufügen eines SVM-Benutzers nicht unterstützen.</block>
+  <block id="cbc2b2dc8b4ce185c5ef0381522a3cfc" category="admonition">Sie benötigen kein Administratorkonto, um vCenter Instanzen zu ONTAP Tools hinzuzufügen. Sie können eine benutzerdefinierte Rolle ohne Administratorkonto mit eingeschränkten Berechtigungen erstellen. Weitere Informationen finden Sie unter <block ref="31ec071db09c0fa81e221bfe3044a965" category="inline-link-macro-rx"></block> .</block>
+  <block id="ab6f6941feb4e0a5a710c656e7220d5b" category="paragraph">Zum Konfigurieren der VVols-Datastores müssen Sie den VASA Provider-Service aktivieren. Registrieren Sie den VASA Provider bei vCenter, und stellen Sie sicher, dass Ihre Storage-Richtlinien die HA-Anforderungen erfüllen, einschließlich der richtigen Netzwerk- und Storage-Konfigurationen.</block>
+  <block id="0d8dd733c5e5b6b5d173af6dbb7e3dff" category="list-text">Die IP-Adresse des ONTAP Tools ist die primäre Schnittstelle zur Kommunikation mit ONTAP Tools.</block>
+  <block id="5fd88e1bc3771a2d68c05679fdf846fe" category="paragraph">Zunächst implementieren Sie ONTAP Tools für VMware vSphere als eine kleine Single-Node-Konfiguration, die wichtige Services zur Unterstützung von NFS- und VMFS-Datastores bietet. Wenn Sie Ihre Konfiguration für VVols-Datastores und Hochverfügbarkeit (HA) erweitern müssen, sind Sie nach Abschluss dieses Workflows ebenfalls dafür tätig. Weitere Informationen finden Sie im <block ref="9ef467ebb813ac9bfc1579e0ba7d9e65" category="inline-link-macro-rx"></block>.</block>
+  <block id="bda674f75d608dc57d51a83342d3e94a" category="paragraph">Die Aktion „Storage aus Datastore entfernen“ wird von allen ONTAP-Tools für VMware vSphere unterstützt, die VVols-Datastores im vCenter Server erkannt oder gemanagt haben. Mit dieser Aktion können Volumes aus den VVols-Datastores entfernt werden.</block>
+  <block id="0937867bcaf714607b361292664d6adc" category="list-text">Bei VVols Datastores wird der Datastore durch die Löschaktion nur gelöscht, wenn keine VVols damit verbunden sind. Das Dialogfeld Datastore löschen bietet eine Option zum Löschen von Volumes aus dem ONTAP-Cluster.</block>
+  <block id="8bd4742720d0b535334c005ff20fb5b9" category="list-text">Bei auf ASA r2 Systemen basierten VVols-Datastores ist das Kontrollkästchen zum Löschen der Backup-Volumes nicht anwendbar.</block>
+  <block id="6a9f1ff4ac0e0c970407817908ab7071" category="doc">Erweitern Sie VVols Datastores</block>
+  <block id="c61ac620cee1003679fdaa462dbeaede" category="admonition">Das erweitern des VVols-Datastore ist nicht für systembasierte VVols Datastores in ASA r2 anwendbar.</block>
+  <block id="7949ac5c6b3d4313dd4d5969af832925" category="list-text">Lokales Onboarding des Storage-Backends mit dem ONTAP Tools Plug-in auf dem vCenter Server. Fügen Sie den Speicher als lokal im Umfang enthaltenen Speicher für die Migration hinzu.</block>
+  <block id="b5bf1eb9fc501e53457cde004db09086" category="list-text">Geben Sie die folgende API von Swagger oder in Postman zur Migration aus.</block>
+  <block id="45b4835ddd7ad16076afa0b51bf12d2a" category="paragraph">Curl -X-STÜTZE<block ref="a9f22201e72a1b8e399b24ae5e861616" category="inline-link-rx"></block></block>
+  <block id="d15764d5088db3a571ec9ccf86341552" category="paragraph">Sie können über diese URL auf Swagger zugreifen: `https://$FQDN_IP_PORT/, zum Beispiel:<block ref="1f852f41a6044590b385b39eaef5531e" category="inline-link-rx"></block>.</block>
+  <block id="54caf31d7246402cdcb6cd5c255c5c64" category="paragraph">Curl -X-STÜTZE<block ref="4042f1acb8fe47ca556f8b938a8d6e08" category="inline-link-rx"></block></block>
+  <block id="91377d2edc3d930017c1b8c4679bdb89" category="list-text">Verwenden Sie den folgenden URI in Swagger, um den Status zu überprüfen:</block>
+  <block id="0a2391e3ac02617f43d98f9eaaf37028" category="list-text">Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xx migriert wurden, sind erst in den ONTAP-Tools für VMware vSphere 10.4 sichtbar, nachdem der Datastore-Erkennungsauftrag ausgelöst wurde. Das dauert bis zu 30 Minuten. Überprüfen Sie, ob die Datastores auf der Übersichtsseite der ONTAP-Tools für die Benutzeroberflächenseite des VMware vSphere Plugin angezeigt werden.</block>
+  <block id="96b2fedcc932770f843418dedfe7f004" category="list-text">Führen Sie die Patch-Migration mit der folgenden API in Swagger oder in Postman durch:</block>
+  <block id="99a490d727b23ee47f3b441a7342d420" category="paragraph">Curl -X-PATCH <block ref="fd07e34d045cf59e25acb7168e60f530" category="inline-link-rx"></block></block>
+  <block id="5db743b53293821cee54f2f6de3ecd01" category="list-text">Warten Sie, bis *Discovery* abgeschlossen ist. Die Zertifikate werden automatisch auf allen Hosts aktualisiert.</block>
 </blocks>
