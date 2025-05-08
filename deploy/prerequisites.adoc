@@ -25,28 +25,22 @@ Sie können ONTAP-Tools für VMware vSphere mit der virtuellen VMware vCenter Se
 ** 348 GB für Thick Provisioning-Installationen
 
 
-* *Größenanforderungen für das Host-System* Empfohlener Speicher gemäß der Größe der Bereitstellung ist wie in der folgenden Tabelle dargestellt:
+* *Größenanforderungen für das Host-System* Empfohlener Speicher gemäß der Größe der Bereitstellung ist wie in der folgenden Tabelle dargestellt. Für die Bereitstellung von Hochverfügbarkeit (High Availability, HA) ist das Dreifache der in der Tabelle angegebenen Appliance-Größe erforderlich.
 
 
 |===
 
 
-| *Art der Bereitstellung* | * CPUs* | *Speicher (GB)* | *Speicherplatz (GB) Thick Provisioning* 
+| *Art der Bereitstellung* | *CPUs pro Knoten* | *Arbeitsspeicher (GB) pro Node* | *Speicherplatz (GB) Thick Provisioning pro Knoten* 
 
 
-| Nicht-HA klein | 9 | 18 | 350 
+| Klein | 9 | 18 | 350 
 
 
-| Non-HA Medium | 13 | 26 | 350 
+| Mittel | 13 | 26 | 350 
 
 
-| HA klein (kumulativ aus drei Nodes) | 27 | 54 | 1050 
-
-
-| HA mittel (kumulativ aus drei Nodes) | 39 | 78 | 1050 
-
-
-| HA groß (kumulativ aus drei Nodes) | 51 | 102 | 1050 
+| HINWEIS: Bei der großen Implementierung geht es nur um die HA-Konfiguration. | 17 | 34 | 350 
 |===
 
 NOTE: Wenn Backup aktiviert ist, benötigt jeder Cluster mit ONTAP Tools weitere 50 GB Speicherplatz auf dem Datenspeicher, auf dem die VMs implementiert werden. Daher sind für nicht-HA 400 GB und für HA insgesamt 1100 GB Speicherplatz erforderlich.
