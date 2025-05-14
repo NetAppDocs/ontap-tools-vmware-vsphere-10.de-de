@@ -35,7 +35,7 @@ Ab der Nutzung von ONTAP Tools für VMware vSphere 10.3 können Sie auf ASA r2 S
 NOTE: Das ASA r2 System unterstützt die iSCSI- und FC-Protokolle für VVols.
 
 . Wählen Sie die Storage-VM aus, auf der der Datastore erstellt werden soll.
-. Wählen Sie in den *Erweiterten Optionen* eine benutzerdefinierte Exportrichtlinie für das NFS-Protokoll oder einen benutzerdefinierten Initiatorgruppennamen für die iSCSI- und FC-Protokolle aus.
+. Unter Advanced options können Sie *Custom Export Policy* für das NFS-Protokoll oder einen benutzerdefinierten Initiatorgruppennamen für die iSCSI- und FC-Protokolle auswählen, dies wird jedoch nicht empfohlen. Wenn Sie diese Option verwenden, stellen Sie sicher, dass Sie die Erkennung in vCenter für alle Objekte ausführen.
 +
 
 NOTE: Beim Typ SVM des ASA r2 Storage-Systems werden Storage-Einheiten (LUN/Namespace) nicht erstellt, da der Datastore nur ein logischer Container ist.
@@ -62,7 +62,7 @@ Ein Datastore des VMware Network File System (NFS) verwendet das NFS-Protokoll, 
 NOTE: Kerberos-Authentifizierung ist nur verfügbar, wenn das NFS 4.1-Protokoll ausgewählt ist.
 
 . Wählen Sie *Plattform* und *Storage VM* im Bereich *Storage* aus.
-. Wählen Sie *Custom Export Policy* unter Advanced options, falls erforderlich, aber es wird nicht empfohlen. Falls verwendet, stellen Sie sicher, dass Sie die Erkennung in vCenter für alle Objekte ausführen.
+. Sie können unter „Erweiterte Optionen“ eine benutzerdefinierte Exportrichtlinie auswählen. Dies wird jedoch nicht empfohlen. Falls verwendet, stellen Sie sicher, dass Sie die Erkennung in vCenter für alle Objekte ausführen.
 +
 
 NOTE: Sie können keinen NFS-Datastore mit der Standard-/Root-Volume-Richtlinie der SVM erstellen.

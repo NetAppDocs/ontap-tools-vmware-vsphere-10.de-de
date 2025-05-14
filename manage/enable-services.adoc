@@ -19,7 +19,7 @@ Mithilfe von ONTAP Tools Manager kann das Administratorpasswort geändert werden
 . Wählen Sie im Übersichtsbereich die Option *Geräteeinstellungen bearbeiten* aus.
 . Im Abschnitt *Services* können Sie nach Ihren Anforderungen optionale Services wie VASA Provider, den Import der VVols-Konfiguration und Disaster Recovery (SRA) aktivieren.
 +
-Wenn Sie die Services zum ersten Mal aktivieren, müssen Sie die VASA Provider- und SRA-Anmeldeinformationen erstellen. Diese werden verwendet, um die VASA Provider- und SRA-Dienste auf dem vCenter Server zu registrieren oder zu aktivieren.
+Wenn Sie die Services zum ersten Mal aktivieren, müssen Sie die VASA Provider- und SRA-Anmeldeinformationen erstellen. Diese werden verwendet, um die VASA Provider- und SRA-Dienste auf dem vCenter Server zu registrieren oder zu aktivieren. Der Benutzername darf nur Buchstaben, Ziffern und Unterstriche enthalten. Das Passwort muss zwischen 8 und 256 Zeichen lang sein.
 
 +
 
