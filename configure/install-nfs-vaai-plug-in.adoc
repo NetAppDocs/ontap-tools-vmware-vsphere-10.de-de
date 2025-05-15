@@ -17,7 +17,6 @@ Das NFS vStorage API for Array Integration (NFS VAAI) Plug-in ist eine Softwarek
 * Laden Sie das Installationspaket herunter https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab["NetApp NFS Plug-in für VMware VAAI"].
 * Stellen Sie sicher, dass Sie über den ESXi-Host und vSphere 7.0U3 neuesten Patch oder neuere Versionen und ONTAP 9.14.1 oder höhere Versionen verfügen.
 * Mounten Sie einen NFS-Datastore.
-* VSphere 8.x wird mit dem NetApp NFS VAAI Plug-in 2.0.1(Build 16) unterstützt.
 
 
 .Schritte
