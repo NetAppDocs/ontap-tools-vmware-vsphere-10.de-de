@@ -19,6 +19,8 @@ NOTE: Um auf HA zu migrieren, wenn das nicht-HA-Backup aktiviert ist, deaktivier
 .Bevor Sie beginnen
 * Stellen Sie sicher, dass Ihre OVA-Vorlage die gleiche OVA-Version wie Knoten 1 hat. Knoten 1 ist der Standardknoten, auf dem die ONTAP-Tools für VMware vSphere OVA ursprünglich bereitgestellt werden.
 * Stellen Sie sicher, dass der CPU-Hot-Plug-Speicher und der Hot-Plug-Speicher aktiviert sind.
+* Stellen Sie im vCenter Server die Automatisierungsstufe des Disaster Recovery Service (DRS) auf „Teilautomatisiert“ ein. Setzen Sie sie nach der HA-Bereitstellung wieder auf „Vollautomatisiert“ zurück.
+* Knoten-Hostnamen im HA-Setup sollten in Kleinbuchstaben geschrieben sein.
 
 
 .Schritte

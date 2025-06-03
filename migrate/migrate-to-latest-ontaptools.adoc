@@ -156,7 +156,7 @@ Löschen Sie VASA Provider nicht.
 +
 Sobald der alte VASA Provider angehalten wurde, erfolgt ein Failover des vCenter Servers zu den ONTAP Tools für VMware vSphere. Der Zugriff auf alle Datenspeicher und VMs erfolgt über ONTAP Tools für VMware vSphere.
 
-. Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xx migriert wurden, sind erst in den ONTAP-Tools für VMware vSphere 10.4 sichtbar, nachdem der Datastore-Erkennungsauftrag ausgelöst wurde. Das dauert bis zu 30 Minuten. Überprüfen Sie, ob die Datastores auf der Übersichtsseite der ONTAP-Tools für die Benutzeroberflächenseite des VMware vSphere Plugin angezeigt werden.
+. Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xx migriert wurden, sind erst in den ONTAP-Tools für VMware vSphere 10.4 sichtbar, nachdem der Datastore-Erkennungsauftrag ausgelöst wurde. Das dauert bis zu 30 Minuten. Überprüfen Sie, ob die Datenspeicher auf der Übersichtsseite der ONTAP-Tools für die Benutzeroberflächenseite des VMware vSphere-Plugins sichtbar sind.
 . Führen Sie die Patch-Migration mit der folgenden API in Swagger oder in Postman durch:
 +
 []
