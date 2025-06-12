@@ -26,7 +26,7 @@ Wenn Sie keine Inhaltsbibliothek haben, führen Sie die folgenden Schritte aus, 
 
 *Inhaltsbibliothek erstellen* Wenn Sie planen, nur eine kleine Einzelknoten-Bereitstellung zu verwenden, ist das Erstellen einer Inhaltsbibliothek nicht notwendig.
 
-. Laden Sie die `.zip` Datei mit Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP-Tools für VMware vSphere von der herunter https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^].
+. Laden Sie die  `.zip` Datei, die die Binärdateien (_.ova_) und signierten Zertifikate für ONTAP-Tools für VMware vSphere aus dem  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^] .
 . Melden Sie sich beim vSphere-Client an
 . Wählen Sie das vSphere-Client-Menü aus und wählen Sie *Inhaltsbibliotheken* aus.
 . Wählen Sie auf der rechten Seite die Option *Erstellen*.
@@ -41,10 +41,10 @@ NOTE: Weitere Informationen finden Sie im https://blogs.vmware.com/vsphere/2020/
 
 NOTE: Bevor Sie mit der Bereitstellung fortfahren, setzen Sie den Distributed Resource Scheduler (DRS) des Clusters im Inventar auf „konservativ“. Dadurch wird sichergestellt, dass während der Installation keine VMs migriert werden.
 
-Die ONTAP-Tools für VMware vSphere werden zunächst als Einrichtung ohne HA implementiert. Um eine Skalierung auf die HA-Bereitstellung zu erreichen, müssen Hot-Plug-in für CPU und Arbeitsspeicher aktiviert werden. Sie können diesen Schritt im Rahmen des Bereitstellungsprozesses durchführen oder die VM-Einstellungen nach der Bereitstellung bearbeiten.
+Die ONTAP-Tools für VMware vSphere werden zunächst als Nicht-HA-Setup bereitgestellt. Um eine Skalierung auf die HA-Bereitstellung zu erreichen, müssen Hot-Plug-in für CPU und Arbeitsspeicher aktiviert werden. Sie können diesen Schritt im Rahmen des Bereitstellungsprozesses durchführen oder die VM-Einstellungen nach der Bereitstellung bearbeiten.
 
 .Schritte
-. Laden Sie die `.zip` Datei mit Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP-Tools für VMware vSphere von der herunter https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^]. Wenn Sie die OVA in die Inhaltsbibliothek importiert haben, können Sie diesen Schritt überspringen und mit dem nächsten Schritt fortfahren.
+. Laden Sie die  `.zip` Datei, die die Binärdateien (_.ova_) und signierten Zertifikate für die ONTAP-Tools für VMware vSphere aus dem  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^] . Wenn Sie die OVA in die Inhaltsbibliothek importiert haben, können Sie diesen Schritt überspringen und mit dem nächsten Schritt fortfahren.
 . Melden Sie sich beim vSphere-Server an.
 . Navigieren Sie zu dem Ressourcenpool, Cluster oder Host, auf dem Sie die OVA bereitstellen möchten.
 +

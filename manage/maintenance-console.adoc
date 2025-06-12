@@ -13,7 +13,7 @@ summary: Sie können Ihre Applikations-, System- und Netzwerkkonfigurationen mit
 [role="lead"]
 Sie können Ihre Applikations-, System- und Netzwerkkonfigurationen mithilfe der Wartungskonsole der ONTAP Tools managen. Sie können Ihr Administratorkennwort und Ihr Wartungskennwort ändern. Außerdem können Sie Supportpakete generieren, verschiedene Protokollebenen festlegen, TLS-Konfigurationen anzeigen und verwalten und die Remote-Diagnose starten.
 
-Sie sollten VMware Tools nach der Bereitstellung von ONTAP Tools für VMware vSphere installieren lassen, um auf die Wartungskonsole zuzugreifen. Sie sollten verwenden `maint` Als Benutzername und Passwort, das Sie bei der Bereitstellung für die Anmeldung an der Wartungskonsole der ONTAP-Tools konfiguriert haben. Sie sollten *nano* zum Bearbeiten der Dateien in der Wartungs- oder Root-Login-Konsole verwenden.
+Nach der Bereitstellung der ONTAP-Tools für VMware vSphere sollten Sie VMware-Tools installiert haben, um auf die Wartungskonsole zugreifen zu können. Verwenden Sie  `maint` als Benutzername und Passwort, das Sie während der Bereitstellung konfiguriert haben, um sich bei der Wartungskonsole der ONTAP-Tools anzumelden. Sie sollten *nano* zum Bearbeiten der Dateien in der Wartungs- oder Root-Login-Konsole verwenden.
 
 
 NOTE: Sie sollten ein Kennwort für das festlegen `diag` Benutzer, während die Ferndiagnose aktiviert wird.

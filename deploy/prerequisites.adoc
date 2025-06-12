@@ -2,7 +2,7 @@
 permalink: deploy/prerequisites.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: Bevor Sie ONTAP Tools für VMware vSphere implementieren, sollten Sie mit den Speicherplatzanforderungen für das Implementierungspaket und einigen grundlegenden Host-Systemanforderungen vertraut sein. 
+summary: Vor der Bereitstellung der ONTAP Tools für VMware vSphere sollten Sie mit den Speicherplatzanforderungen für das Deployment-Paket und einigen grundlegenden Anforderungen an das Host-System vertraut sein. 
 ---
 = Voraussetzungen für ONTAP-Tools für die Bereitstellung von VMware vSphere
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Bevor Sie ONTAP Tools für VMware vSphere implementieren, sollten Sie m
 
 
 [role="lead"]
-Bevor Sie ONTAP Tools für VMware vSphere implementieren, sollten Sie mit den Speicherplatzanforderungen für das Implementierungspaket und einigen grundlegenden Host-Systemanforderungen vertraut sein.
+Vor der Bereitstellung der ONTAP Tools für VMware vSphere sollten Sie mit den Speicherplatzanforderungen für das Deployment-Paket und einigen grundlegenden Anforderungen an das Host-System vertraut sein.
 
 Sie können ONTAP-Tools für VMware vSphere mit der virtuellen VMware vCenter Server-Appliance (vCSA) verwenden. Sie sollten ONTAP-Tools für VMware vSphere auf einem unterstützten vSphere-Client mit ESXi-System implementieren.
 
@@ -68,7 +68,7 @@ NOTE: Wenn Backup aktiviert ist, benötigt jeder Cluster mit ONTAP Tools weitere
 | OVA-Anwendung | 10,4 
 
 
-| ESXi-Host zur Implementierung der virtuellen Maschine mit ONTAP-Tools | 7.0, 7.0U1, 7.0U2, 7.0U3, 8.0, 8.0U1 UND 8.0U3 
+| ESXi-Host zur Implementierung der virtuellen Maschine mit ONTAP-Tools | 7.0U3 und 8.0U3 
 
 
 | VCenter Server zur Bereitstellung einer virtuellen Maschine mit ONTAP-Tools | 7.0 und 8.0 

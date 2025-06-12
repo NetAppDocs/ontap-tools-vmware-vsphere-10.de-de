@@ -26,6 +26,6 @@ Wenn Sie die Services zum ersten Mal aktivieren, müssen Sie die VASA Provider- 
 NOTE: Bevor Sie optionale Dienste deaktivieren, stellen Sie sicher, dass die von ONTAP-Tools verwalteten vCenter-Server diese nicht verwenden.
 
 +
-Die Option *Import der VVols-Konfiguration zulassen* wird nur angezeigt, wenn der VASA Provider-Dienst aktiviert ist. Mit dieser Option wird die VVols Datenmigration von den ONTAP-Tools 9.x auf die ONTAP-Tools 10.4 aktiviert.
+Die Option *Import der VVols-Konfiguration zulassen* wird nur angezeigt, wenn der VASA Provider-Dienst aktiviert ist. Mit dieser Option wird die VVols Datenmigration von den ONTAP-Tools 9.xx auf die ONTAP-Tools 10.4 aktiviert.
 
 

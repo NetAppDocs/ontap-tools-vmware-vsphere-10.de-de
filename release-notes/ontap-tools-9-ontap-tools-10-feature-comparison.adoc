@@ -18,7 +18,7 @@ Erfahren Sie, ob eine Migration von ONTAP-Tools für VMware vSphere 9 zu ONTAP-T
 | Funktion | ONTAP-Tools 9.13 | ONTAP-Tools 10.1 | ONTAP-Tools ab Version 10.2 
 
 
-| Wichtiges Wertversprechen | Optimieren und vereinfachen Sie den täglichen Betrieb von 0 bis 2 durch verbesserte Sicherheits-, Compliance- und Automatisierungsfunktionen | Entwicklung der ONTAP Tools 10.x in Richtung 9.x-Parität mit erweiterter Hochverfügbarkeit, Performance und Skalierungslimits | Erweiterte Unterstützung auf FC für VMFS und VVols, und NVMe-of/FC, NVMe-of/TCP nur für VMFS. Benutzerfreundliche NetApp SnapMirror, einfache Einrichtung von vSphere Metro Storage-Clustern und Unterstützung für VMware Live Site Recovery an drei Standorten 
+| Wichtiges Wertversprechen | Optimieren und vereinfachen Sie den täglichen Betrieb von 0 bis 2 durch verbesserte Sicherheits-, Compliance- und Automatisierungsfunktionen | Entwicklung der ONTAP Tools 10.x in Richtung 9.xx-Parität mit erweiterter Hochverfügbarkeit, Performance und Skalierungslimits | Erweiterte Unterstützung auf FC für VMFS und VVols, und NVMe-of/FC, NVMe-of/TCP nur für VMFS. Benutzerfreundliche NetApp SnapMirror, einfache Einrichtung von vSphere Metro Storage-Clustern und Unterstützung für VMware Live Site Recovery an drei Standorten 
 
 
 | ONTAP Release Qualification | ONTAP 9.9.1 bis ONTAP 9.15.1 | ONTAP 9.12.1 bis ONTAP 9.14.1 | ONTAP 9.12.1 bis ONTAP 9.15.1 für ONTAP Tools 10.2 ONTAP 9.14.1, 9.15.1 und 9.16.0 für ONTAP Tools 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 und 9.16.1 für ONTAP Tools 10.4 
