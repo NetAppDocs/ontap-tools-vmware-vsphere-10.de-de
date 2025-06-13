@@ -2236,7 +2236,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="15f0aef685a07d8a64ee213328fd4abf" category="list-text">Bestimmen Sie die ONTAP-Tools für den VMware vSphere-Bereitstellungstyp aus der ersten Knoten-VM.</block>
   <block id="82cb2fe68a0c35dd310db836d38102d0" category="list-text">Stellen Sie im vCenter Server die Automatisierungsstufe des Disaster Recovery Service (DRS) auf „Teilautomatisiert“ ein. Setzen Sie sie nach der HA-Bereitstellung wieder auf „Vollautomatisiert“ zurück.</block>
   <block id="b02bbd059e55c04c7db94e76a92bd311" category="list-text">Knoten-Hostnamen im HA-Setup sollten in Kleinbuchstaben geschrieben sein.</block>
-  <block id="a4a802cdddc104ad7f0a14d2bdc2c05e" category="list-text">Geben Sie den Wert für die Sicherungshäufigkeit zwischen 10-60 Minuten ein.</block>
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">Für ONTAP-Tools für die VMware vSphere HA-Bereitstellung sollten Sie das Benutzerkennwort der Wartungskonsole auf dem ersten Knoten (Knoten1) ändern.</block>
   <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">Die MPIO-Einstellungen gelten nicht für die Protokolle NVMe, NVMe/FC und NVMe/TCP.</block>
   <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">Sie können den VASA Provider mit einer vCenter Server-Instanz unter Verwendung von ONTAP Tools für VMware vSphere registrieren. Im Abschnitt VASA Provider-Einstellungen wird der Registrierungsstatus des VASA Providers für den ausgewählten vCenter Server angezeigt. Stellen Sie in einer Multi-vCenter-Bereitstellung sicher, dass Sie für jede vCenter Server-Instanz über benutzerdefinierte CA-Zertifikate verfügen.</block>
@@ -2277,4 +2276,5 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">Migrieren Sie die ONTAP-Tools für VMware vSphere 9.xx zu 10.4</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">Migrieren Sie zu den neuesten ONTAP-Tools für VMware vSphere</block>
   <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">Migrieren des VASA-Anbieters und SRA</block>
+  <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">Geben Sie einen Wert zwischen 5 und 60 Minuten für die Sicherungshäufigkeit ein.</block>
 </blocks>

@@ -26,7 +26,7 @@ NOTE: Um auf HA zu migrieren, wenn das nicht-HA-Backup aktiviert ist, deaktivier
 . Geben Sie ein `4`, um *Support und Diagnose* auszuwählen.
 . Geben Sie ein `3`, um die Option *Systemsicherung aktivieren* auszuwählen.
 . Geben Sie im Fall von nicht-HA die vCenter-Anmeldeinformationen ein, auf denen die virtuelle Maschine der ONTAP-Tools bereitgestellt wird.
-. Geben Sie den Wert für die Sicherungshäufigkeit zwischen 10-60 Minuten ein.
+. Geben Sie einen Wert zwischen 5 und 60 Minuten für die Sicherungshäufigkeit ein.
 . Drücken Sie *Enter*
 +
 Dadurch wird das Backup erstellt und das Backup in regelmäßigen Abständen auf den Datastore der virtuellen Maschine übertragen.
