@@ -2277,4 +2277,102 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">Migrieren Sie zu den neuesten ONTAP-Tools für VMware vSphere</block>
   <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">Migrieren des VASA-Anbieters und SRA</block>
   <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">Geben Sie einen Wert zwischen 5 und 60 Minuten für die Sicherungshäufigkeit ein.</block>
+  <block id="d12f6b7d9e336bb21523e27a7954a424" category="doc">Verstehen Sie igroups und Exportrichtlinien in ONTAP-Tools für VMware vSphere</block>
+  <block id="27fa3073e12d15edf2d9cd750cf92bd4" category="paragraph">Initiatorgruppen (igroups) sind Tabellen mit World Wide Port Names (WWPNs) des FC-Protokollhosts oder qualifizierten Knotennamen des iSCSI-Hosts. Sie können Initiatorgruppen definieren und sie LUNs zuordnen, um zu steuern, welche Initiatoren Zugriff auf LUNs haben.</block>
+  <block id="fc5f47745f7c061ae1196d24f351c7b6" category="paragraph">Jeder Datenspeicher in vCenter ist einer übergeordneten igroup zugeordnet, während jeder Host mit einer untergeordneten igroup unter dieser verknüpft ist. Sie können benutzerdefinierte übergeordnete igroups mit benutzerdefinierten Namen für die Wiederverwendung in mehreren Datenspeichern definieren und so eine flexiblere und vernetztere Verwaltung von igroups ermöglichen. Unterschiedliche Workflows erzeugen unterschiedliche igroup-Konfigurationen, wie die folgenden Beispiele zeigen:</block>
+  <block id="ae993cdc1fd6c1873ab68a1c6ee58ead" category="admonition">Die genannten Namen dienen nur zur Veranschaulichung und beziehen sich nicht auf echte igroup-Namen. Von ONTAP-Tools verwaltete igroups verwenden das Präfix „otv_“. Benutzerdefinierte igroups können beliebige Namen erhalten.</block>
+  <block id="cf5f3091e30dee6597885d8c0e0c357f" category="cell">Begriff</block>
+  <block id="1b63a2eb7e8a70cf1b8b669bc150e401" category="cell">DS&lt;Nummer&gt;</block>
+  <block id="8a5227cc82d14862956938caffc1acf2" category="cell">Datenspeicher</block>
+  <block id="95a16b532fa8ed9188599929af9e5262" category="cell">iqn&lt;Nummer&gt;</block>
+  <block id="edb0132f304c760893f41c94545adda7" category="cell">Initiator-IQN</block>
+  <block id="41ec3b4baa8c2ac4670f3d8b342745f4" category="cell">Host&lt;Nummer&gt;</block>
+  <block id="eebd7b1ed737a71cd20f07184995f2d6" category="cell">Gastgeber MoRef</block>
+  <block id="94c6c072c97f90138ebb2ee074be8600" category="cell">lun&lt;Nummer&gt;</block>
+  <block id="77863eecd3628172144d619c2f03fb64" category="cell">LUN-ID</block>
+  <block id="b989cbd0eba5a3051041de7edfa979e5" category="cell">&lt;DSName&gt;Igroup&lt;Nummer&gt;</block>
+  <block id="d8cba531cf36a19013999be13aebec3a" category="cell">Standardmäßige (von ONTAP-Tools verwaltete) übergeordnete igroup</block>
+  <block id="3dc1d1c3dce65c0c38318e1ebbcd4dee" category="cell">&lt;Host-Moref&gt;Igroup&lt;Nummer&gt;</block>
+  <block id="7373da93b05c2b988adcaa5fbf0edfcc" category="cell">Untergeordnete igroup</block>
+  <block id="4bd15973d38707ac9b65aaf3f989ed0f" category="cell">CustomIgroup&lt;Nummer&gt;</block>
+  <block id="a81c9d5d7cdd61b993abfc37eaf551db" category="cell">Benutzerdefinierte benutzerdefinierte übergeordnete igroup</block>
+  <block id="c9addbf487b919c868ba38bce10c0fec" category="cell">ClassicIgroup&lt;Nummer&gt;</block>
+  <block id="b6c271eb9e2a9392b22e2be5c7aa3614" category="cell">In den Versionen 9.x der ONTAP-Tools verwendete Igroup.</block>
+  <block id="0b7b29d7656d8d29ec3286a241de010e" category="paragraph-title">Beispiel 1:</block>
+  <block id="f55636419489fc39d90e3b2ec66d66d1" category="paragraph">Erstellen Sie einen Datenspeicher auf einem einzelnen Host mit einem Initiator</block>
+  <block id="239346122912a11ed5cbb915016a28e3" category="paragraph">*Workflow*: [Erstellen] DS1 (lun1): host1 (iqn1)</block>
+  <block id="184e7557d37448b68814a3826b88604b" category="paragraph">*Ergebnis*:</block>
+  <block id="29792d8650120f6afd7c0ece95876b79" category="list-text">DS1Igroup:</block>
+  <block id="337504141d62bdffc7f0b1a0e1bb16af" category="list-text">host1Igroup → (iqn1: lun1)</block>
+  <block id="71c3f3b14a29b76e7d9976e1fd92866d" category="paragraph">Auf den ONTAP-Systemen für DS1 wird eine übergeordnete igroup DS1Igroup erstellt, wobei eine untergeordnete igroup host1Igroup der lun1 zugeordnet ist. LUNs werden immer untergeordneten igroups zugeordnet.</block>
+  <block id="2be7ab20c80a99b42fc79400ca3f36ea" category="paragraph-title">Beispiel 2:</block>
+  <block id="be3104bc1fff4c1bfb9f5da101aed986" category="paragraph">Mounten Sie den vorhandenen Datenspeicher auf einem zusätzlichen Host</block>
+  <block id="835065c40104234c9a8abb4875fbeba8" category="paragraph">*Workflow*: [Mount] DS1 (lun1): host2 (iqn2)</block>
+  <block id="2297adf1ae6c60ea9363ce5ef2e41f52" category="list-text">host2Igroup → (iqn2: lun1)</block>
+  <block id="d2b07c984d7fce344070b5c0752a51d8" category="paragraph">Eine untergeordnete Igroup „host2Igroup“ wird erstellt und der vorhandenen übergeordneten Igroup „DS1Igroup“ hinzugefügt.</block>
+  <block id="2d6cceda29fb927297683321657cc7f7" category="paragraph-title">Beispiel 3:</block>
+  <block id="6e0ad0300479c496e85c7f90f364f3da" category="paragraph">Unmounten eines Datenspeichers von einem Host</block>
+  <block id="1042a36d4bd6b198c75db206e253d6a1" category="paragraph">*Workflow*: [Unmount] DS1 (lun1): host1 (iqn1)</block>
+  <block id="99fb3d64e6243f94e6f41859fd70993d" category="paragraph">Die host1Igroup wird aus der Hierarchie entfernt. Untergeordnete Igroups werden nicht explizit gelöscht. Die Löschung erfolgt unter folgenden zwei Bedingungen: • Wenn keine LUNs zugeordnet sind, löscht das ONTAP-System die untergeordnete Igroup. • Ein geplanter Bereinigungsjob entfernt die nicht zugeordneten untergeordneten Igroups ohne LUN-Zuordnungen. Diese Szenarien gelten nur für von ONTAP-Tools verwaltete Igroups, nicht für benutzerdefinierte Igroups.</block>
+  <block id="041ec4ff6ad5f804da8976d697659842" category="paragraph-title">Beispiel 4:</block>
+  <block id="e5e28486c61b67fca6b2ef177a5f9359" category="paragraph">Datenspeicher löschen</block>
+  <block id="4a3642a61d33fc5e86d2b97fb3ec5b26" category="paragraph">*Workflow*: [Löschen] DS1 (lun1): host2 (iqn2)</block>
+  <block id="a221428f85ab85b50304989ceb5f1013" category="paragraph">Übergeordnete und untergeordnete igroups werden entfernt, wenn ein anderer Datenspeicher die übergeordnete igroup nicht wiederverwendet. Untergeordnete igroups werden nie explizit gelöscht.</block>
+  <block id="8c0e16266857385b0b0b181e3b641f04" category="paragraph-title">Beispiel 5:</block>
+  <block id="726d4f85c9b9eaa5f6c5968d19c3a7df" category="paragraph">Erstellen Sie mehrere Datenspeicher unter einer benutzerdefinierten übergeordneten igroup</block>
+  <block id="bea6104954555c1b763633c7a55ea6f8" category="paragraph">*Arbeitsablauf*:</block>
+  <block id="19e99edc83cbbbcc6ab8d304178f9046" category="list-text">[Erstellen] DS2 (lun2): host1 (iqn1), host2 (iqn2)</block>
+  <block id="cb4835be3502172f05fc0fb1636c6f71" category="list-text">[Erstellen] DS3 (lun3): host1 (iqn1), host3 (iqn3)</block>
+  <block id="1349428cc30cda216cf2019786367f2e" category="list-text">CustomIgroup1:</block>
+  <block id="da0fa0c3efce4fb609fc503d43009a84" category="list-text">host1Igroup → (iqn1: lun2, lun3)</block>
+  <block id="f89b4a662e7511de5794930a38008165" category="list-text">host2Igroup → (iqn2: lun2)</block>
+  <block id="9db51efb0434c0f5d42d43e58d48a6d0" category="list-text">host3Igroup → (iqn3: lun3)</block>
+  <block id="ee0f441220124ad6f5f79f31ca2850c1" category="paragraph">CustomIgroup1 wird für DS2 erstellt und für DS3 wiederverwendet. Untergeordnete Igroups werden unter dem gemeinsamen übergeordneten Element erstellt oder aktualisiert, wobei jede untergeordnete Igroup den entsprechenden LUNs zugeordnet wird.</block>
+  <block id="a09d3d7fa6e5e57286de75b1ba1b3b81" category="paragraph-title">Beispiel 6:</block>
+  <block id="14962f74dc2fca05f3ae890d88732a98" category="paragraph">Löschen Sie einen Datenspeicher unter einer benutzerdefinierten übergeordneten Igroup.</block>
+  <block id="e33a694e17ff6619f6b2fe691a1d309a" category="paragraph">*Workflow*: [Löschen] DS2 (lun2): host1 (iqn1), host2 (iqn2)</block>
+  <block id="67b13646bf72c18d796c8bf3198f5814" category="list-text">host1Igroup → (iqn1: lun3)</block>
+  <block id="6db15a5e6a1d1e2fef5984c15cc5eb69" category="list-text">Obwohl CustomIgroup1 nicht wiederverwendet wird, wird es nicht gelöscht.</block>
+  <block id="382a19507b1950afa51e368afebb5fcc" category="list-text">Wenn keine LUNs zugeordnet sind, löscht das ONTAP-System host2Igroup.</block>
+  <block id="32af8db1601aae83c5ed7e84130e7e2f" category="list-text">Die Host1-Igroup wird nicht gelöscht, da sie der Lun3 von DS3 zugeordnet ist. Benutzerdefinierte Igroups werden unabhängig vom Wiederverwendungsstatus nie gelöscht.</block>
+  <block id="5152900fa2b4fe857b3d0f2bf9c7b1eb" category="paragraph-title">Beispiel 7:</block>
+  <block id="96c7142b58bd9e54729ddd088e808dc7" category="paragraph">Erweitern Sie den vVols-Datenspeicher (Volume hinzufügen)</block>
+  <block id="d5819bf04d1e61714a844702340b0d01" category="paragraph">Vor der Erweiterung:</block>
+  <block id="4c770faced138366beb0f7a04f395d83" category="paragraph">[Erweitern] DS4 (lun4): host4 (iqn4)</block>
+  <block id="51ebf26e977eb695e06cf1b254d79a30" category="list-text">DS4Igroup: host4Igroup → (iqn4: lun4)</block>
+  <block id="c367cd17021bf2e5e0481fdd6e7ae90b" category="paragraph">Nach der Erweiterung:</block>
+  <block id="6594f9252d2a17fc4bad619de20a7757" category="paragraph">[Erweitern] DS4 (lun4, lun5): host4 (iqn4)</block>
+  <block id="aa5e06dab7f5d9a795d5333805806c5c" category="list-text">DS4Igroup: host4Igroup → (iqn4: lun4, lun5)</block>
+  <block id="a00c0ff3a9039b59496981135459ef0f" category="paragraph">Eine neue LUN wird erstellt und der vorhandenen untergeordneten Igroup „host4Igroup“ zugeordnet.</block>
+  <block id="d8b6441496bad3b41e04f590687e0880" category="paragraph-title">Beispiel 8:</block>
+  <block id="9e8052e57e1cbe7ffc7f3aed17d3a225" category="paragraph">vVols-Datenspeicher verkleinern (Volume entfernen)</block>
+  <block id="a6c4fbf684b02254a93362b7f87f46b3" category="paragraph">Vor dem Schrumpfen:</block>
+  <block id="392dcdd65448cf07c9c771abcd18cf1d" category="paragraph">[Verkleinern] DS4 (lun4, lun5): host4 (iqn4)</block>
+  <block id="8e16bef4ac0dfac3f3858a459f385130" category="paragraph">Nach dem Schrumpfen:</block>
+  <block id="32fb6c0701827305127700e83186ed50" category="paragraph">[Verkleinern] DS4 (lun4): host4 (iqn4)</block>
+  <block id="44aac1af9c3e4914e749589a45fb9355" category="paragraph">Die Zuordnung der angegebenen LUN (lun5) zur untergeordneten Igroup wird aufgehoben. Die Igroup bleibt aktiv, solange sie mindestens eine zugeordnete LUN hat.</block>
+  <block id="04866dfa9cd876e3761fb20cb80cc396" category="paragraph-title">Beispiel 9:</block>
+  <block id="40f0d0153abdb5aa1e2c4d8bff1c093e" category="paragraph">Migration von ONTAP Tools 9 auf 10 (igroup-Normalisierung)</block>
+  <block id="91d00fcabdddfee3723ef8914e95006a" category="paragraph">ONTAP-Tools für VMware vSphere 9.x unterstützen keine hierarchischen igroups. Bei der Migration auf Version 10.3 oder höher müssen igroups in die hierarchische Struktur normalisiert werden.</block>
+  <block id="51d52f26bb3fadc49354d8294632607a" category="paragraph">Vor der Migration:</block>
+  <block id="551fe7e3259b26ff1787acbea836b895" category="paragraph">[Migration] DS6 (lun6, lun7): host6 (iqn6), host7 (iqn7) → ClassicIgroup1 (iqn6 &amp; iqn7 : lun6, lun7)</block>
+  <block id="d5d2d4dab88d65ed1d095044810e95c5" category="paragraph">Die Logik der ONTAP Tools 9.x ermöglicht mehrere Initiatoren pro Igroup, ohne eine Eins-zu-eins-Hostzuordnung zu erzwingen.</block>
+  <block id="e1511f1b44bc4c0e4bf944f12546a9e8" category="paragraph">Nach der Migration:</block>
+  <block id="a7d16c97cdedffae87ecd1f35d0ac590" category="paragraph">[Migration] DS6 (lun6, lun7): host6 (iqn6), host7 (iqn7) → ClassicIgroup1: otv_ClassicIgroup1 (iqn6 &amp; iqn7 : lun6, lun7)</block>
+  <block id="d993b7559126972c5320acf14fe956d9" category="paragraph">Während der Migration:</block>
+  <block id="8e328318bac6efeb120cc4c6cd3df1e7" category="list-text">Eine neue übergeordnete Igroup (ClassicIgroup1) wird erstellt.</block>
+  <block id="5682831142ad0882b1551736c0a14535" category="list-text">Die ursprüngliche Igroup wird mit dem Präfix „otv_“ umbenannt und wird zu einer untergeordneten Igroup.</block>
+  <block id="a1d7bef497585c5e3e0761a58c9192df" category="paragraph">Dadurch wird die Einhaltung des hierarchischen Modells sichergestellt.</block>
+  <block id="9d7e0542459b60f98e1d8529e2c87e4e" category="paragraph-title">Verwandte Themen</block>
+  <block id="19dea799245ee5cf6e758f51c6b46e67" category="inline-link">Allgemeines zu Initiatorgruppen</block>
+  <block id="9ec090c0889f67a04d8d16ec3fc894af" category="paragraph"><block ref="9ec090c0889f67a04d8d16ec3fc894af" category="inline-link-rx"></block></block>
+  <block id="bd4308f8ba5f92aa81fb16563206441d" category="section-title">Exportrichtlinien</block>
+  <block id="483d357ed85943a2600f4700b4234595" category="paragraph">Exportrichtlinien steuern den Zugriff auf NFS-Datenspeicher in ONTAP-Tools für VMware vSphere. Sie definieren, welche Clients auf die Datenspeicher zugreifen können und welche Berechtigungen sie haben. Exportrichtlinien werden in ONTAP-Systemen erstellt und verwaltet und können mit NFS-Datenspeichern verknüpft werden, um die Zugriffskontrolle zu gewährleisten. Jede Exportrichtlinie besteht aus Regeln, die die Clients (IP-Adressen oder Subnetze) mit Zugriffsberechtigung und den erteilten Berechtigungen (Schreib- oder Lesezugriff) festlegen.</block>
+  <block id="df454efba6089b22bf497aa6bdafcce9" category="paragraph">Beim Erstellen eines NFS-Datenspeichers in ONTAP Tools für VMware vSphere können Sie eine vorhandene Exportrichtlinie auswählen oder eine neue erstellen. Die Exportrichtlinie wird dann auf den Datenspeicher angewendet und stellt sicher, dass nur autorisierte Clients darauf zugreifen können.</block>
+  <block id="e25beec793547cce47bd3965725ecdb1" category="paragraph">Wenn Sie einen NFS-Datenspeicher auf einem neuen ESXi-Host mounten, fügen ONTAP Tools für VMware vSphere die IP-Adresse des Hosts der bestehenden Exportrichtlinie des Datenspeichers hinzu. Dadurch kann der neue Host auf den Datenspeicher zugreifen, ohne eine neue Exportrichtlinie erstellen zu müssen.</block>
+  <block id="52faf43c83a97dd583b56f8fd4367598" category="paragraph">Wenn Sie einen NFS-Datenspeicher von einem ESXi-Host löschen oder unmounten, entfernen ONTAP Tools für VMware vSphere die IP-Adresse des Hosts aus der Exportrichtlinie. Wenn diese Exportrichtlinie von keinem anderen Host verwendet wird, wird sie gelöscht. Beim Löschen eines NFS-Datenspeichers entfernen ONTAP Tools für VMware vSphere die zugehörige Exportrichtlinie, sofern sie nicht von anderen Datenspeichern wiederverwendet wird. Bei Wiederverwendung der Exportrichtlinie bleibt die Host-IP-Adresse erhalten und unverändert. Beim Löschen der Datenspeicher hebt die Exportrichtlinie die Host-IP-Adresse auf und weist eine Standard-Exportrichtlinie zu, sodass die ONTAP-Systeme bei Bedarf darauf zugreifen können.</block>
+  <block id="064bdf085906b78017207e105ea1456c" category="paragraph">Die Zuweisung der Exportrichtlinie unterscheidet sich, wenn sie in verschiedenen Datenspeichern wiederverwendet wird. Bei der Wiederverwendung der Exportrichtlinie können Sie die neue Host-IP-Adresse anhängen. Beim Löschen oder Unmounten eines Datenspeichers mit einer freigegebenen Exportrichtlinie wird die Richtlinie nicht gelöscht. Sie bleibt unverändert, und die Host-IP-Adresse wird nicht entfernt, da sie mit den anderen Datenspeichern gemeinsam genutzt wird. Die Wiederverwendung von Exportrichtlinien wird nicht empfohlen, da dies zu Zugriffs- und Latenzproblemen führen kann.</block>
+  <block id="bb53c6c29f127a298da7dd86bf00bb89" category="inline-link">Erstellen Sie eine Exportrichtlinie</block>
+  <block id="c7196e0d279885126e6f1c8cf1f7195f" category="paragraph"><block ref="c7196e0d279885126e6f1c8cf1f7195f" category="inline-link-rx"></block></block>
+  <block id="d416ef8edb2844634dbe8cfff2e77f9a" category="sidebar">Verstehen Sie igroups und Exportrichtlinien</block>
 </blocks>
