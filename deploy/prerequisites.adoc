@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: Vor der Bereitstellung der ONTAP Tools für VMware vSphere sollten Sie mit den Speicherplatzanforderungen für das Deployment-Paket und einigen grundlegenden Anforderungen an das Host-System vertraut sein. 
 ---
-= Voraussetzungen für ONTAP-Tools für die Bereitstellung von VMware vSphere
+= ONTAP-Tools für VMware vSphere – Anforderungen und Konfigurationsgrenzen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -79,74 +79,6 @@ NOTE: Ab ONTAP-Tools für VMware vSphere 10.4 wird die Hardware der virtuellen M
 Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu den unterstützten Versionen von ONTAP, vCenter Server, ESXi-Hosts und Plug-in-Applikationen.
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
-
-
-
-== Konfigurationsbeschränkungen für die Implementierung von ONTAP Tools für VMware vSphere
-
-Die folgende Tabelle bietet einen Leitfaden zur Konfiguration von ONTAP Tools für VMware vSphere.
-
-|===
-
-
-| * Bereitstellung* | *Typ* | *Anzahl der VVols* | *Anzahl der Hosts* 
-
-
-| Ohne HA | Klein (S) | ~12.000 | 32 
-
-
-| Ohne HA | Mittel (M) | ~24.000 | 64 
-
-
-| Hochverfügbarkeit | Klein (S) | ~24.000 | 64 
-
-
-| Hochverfügbarkeit | Mittel (M) | ~50.000 | 128 
-
-
-| Hochverfügbarkeit | Groß (L) | 100 ~ | 256 [ANMERKUNG] die Anzahl der Hosts in der Tabelle zeigt die Gesamtzahl der Hosts von mehreren vCenter. 
-|===
-
-
-== ONTAP Tools für VMware vSphere – Storage Replication Adapter (SRA)
-
-In der folgenden Tabelle sind die Zahlen aufgeführt, die pro VMware Live Site Recovery-Instanz mithilfe von ONTAP Tools für VMware vSphere unterstützt werden.
-
-|===
-| *VCenter-Bereitstellungsgröße* | *Klein* | *Mittel* 
-
-
-| Gesamtzahl der virtuellen Maschinen, die für den Schutz mithilfe einer Array-basierten Replikation konfiguriert wurden | 2000 | 5000 
-
-
-| Gesamtzahl der Array-basierten Replikationsschutzgruppen | 250 | 250 
-
-
-| Gesamtzahl der Schutzgruppen pro Wiederherstellungsplan | 50 | 50 
-
-
-| Anzahl replizierter Datastores | 255 | 255 
-
-
-| Anzahl der VMs | 4000 | 7000 
-|===
-In der folgenden Tabelle sind die Anzahl der VMware Live Site Recovery und die entsprechenden ONTAP Tools für die VMware vSphere Implementierungsgröße aufgeführt.
-
-|===
-
-
-| *Anzahl der VMware Live Site Recovery Instanzen* | *Größe der Bereitstellung von ONTAP-Tools* 
-
-
-| Bis Zu 4 | Klein 
-
-
-| 4 bis 8 | Mittel 
-
-
-| Mehr als 8 | Groß 
-|===
-Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["Betriebsgrenzen der VMware Live Site Recovery"].
 
 
 
@@ -233,10 +165,68 @@ Die folgende Tabelle gibt einen Überblick über die von NetApp verwendeten Netz
 |===
 
 
-== ONTAP Storage-Einstellungen
+== Konfigurationsbeschränkungen für die Implementierung von ONTAP Tools für VMware vSphere
 
-Um eine nahtlose Integration von ONTAP Storage mit ONTAP Tools für VMware vSphere zu gewährleisten, sollten folgende Einstellungen durchgeführt werden:
+Die folgende Tabelle bietet einen Leitfaden zur Konfiguration von ONTAP Tools für VMware vSphere.
 
-* Wenn Sie Fibre Channel (FC) für Storage-Konnektivität verwenden, konfigurieren Sie das Zoning auf den FC-Switches, um die ESXi-Hosts mit den FC-LIFs der SVM zu verbinden. https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Erfahren Sie mehr über FC- und FCoE-Zoning mit ONTAP Systemen"]
-* Um ONTAP Tools-gemanagte SnapMirror-Replizierung zu verwenden, sollte der ONTAP Storage-Administrator vor Verwendung von SnapMirror und https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["Intercluster SVM-Peer-Beziehungen mit ONTAP"] in ONTAP erstellen https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAP Cluster Peer-Beziehungen"].
+|===
 
+
+| * Bereitstellung* | *Typ* | *Anzahl der VVols* | *Anzahl der Hosts* 
+
+
+| Ohne HA | Klein (S) | ~12.000 | 32 
+
+
+| Ohne HA | Mittel (M) | ~24.000 | 64 
+
+
+| Hochverfügbarkeit | Klein (S) | ~24.000 | 64 
+
+
+| Hochverfügbarkeit | Mittel (M) | ~50.000 | 128 
+
+
+| Hochverfügbarkeit | Groß (L) | 100 ~ | 256 [ANMERKUNG] die Anzahl der Hosts in der Tabelle zeigt die Gesamtzahl der Hosts von mehreren vCenter. 
+|===
+
+
+== ONTAP Tools für VMware vSphere – Storage Replication Adapter (SRA)
+
+In der folgenden Tabelle sind die Zahlen aufgeführt, die pro VMware Live Site Recovery-Instanz mithilfe von ONTAP Tools für VMware vSphere unterstützt werden.
+
+|===
+| *VCenter-Bereitstellungsgröße* | *Klein* | *Mittel* 
+
+
+| Gesamtzahl der virtuellen Maschinen, die für den Schutz mithilfe einer Array-basierten Replikation konfiguriert wurden | 2000 | 5000 
+
+
+| Gesamtzahl der Array-basierten Replikationsschutzgruppen | 250 | 250 
+
+
+| Gesamtzahl der Schutzgruppen pro Wiederherstellungsplan | 50 | 50 
+
+
+| Anzahl replizierter Datastores | 255 | 255 
+
+
+| Anzahl der VMs | 4000 | 7000 
+|===
+In der folgenden Tabelle sind die Anzahl der VMware Live Site Recovery und die entsprechenden ONTAP Tools für die VMware vSphere Implementierungsgröße aufgeführt.
+
+|===
+
+
+| *Anzahl der VMware Live Site Recovery Instanzen* | *Größe der Bereitstellung von ONTAP-Tools* 
+
+
+| Bis Zu 4 | Klein 
+
+
+| 4 bis 8 | Mittel 
+
+
+| Mehr als 8 | Groß 
+|===
+Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["Betriebsgrenzen der VMware Live Site Recovery"].

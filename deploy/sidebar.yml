@@ -6,7 +6,7 @@ entries:
   url: "/deploy/quick-start.html"
 - title: Hochverfügbarkeits-Implementierungs-Workflow (HA)
   url: "/deploy/ha-workflow.html"
-- title: Voraussetzungen
+- title: Anforderungen und Konfigurationsgrenzen für ONTAP-Tools
   url: "/deploy/prerequisites.html"
 - title: Bevor Sie beginnen
   url: "/deploy/pre-deploy-checks.html"

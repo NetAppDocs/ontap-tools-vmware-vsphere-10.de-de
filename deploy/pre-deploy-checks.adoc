@@ -54,7 +54,7 @@ Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, bevor Sie mi
 
 === Für Single-Node-Implementierung
 
-Verwenden Sie das folgende Arbeitsblatt, um die erforderlichen Informationen für ONTAP-Tools für die Erstbereitstellung von VMware vSphere zu sammeln: Für ONTAP-Tools für die Erstbereitstellung von VMware vSphere:
+Verwenden Sie das folgende Arbeitsblatt, um die erforderlichen Informationen für ONTAP-Tools für die Erstbereitstellung von VMware vSphere zu sammeln:
 
 |===
 | Anforderungen | Ihr Wert 
@@ -133,4 +133,14 @@ Zusätzlich zu den Implementierungsanforderungen für einen Node benötigen Sie 
 
 == Konfiguration der Netzwerk-Firewall
 
-Öffnen Sie die erforderlichen Ports für die IP-Adressen in Ihrer Netzwerk-Firewall. ONTAP Tools müssen in der Lage sein, dieses LIF über Port 443 zu erreichen. Aktuelle Informationen finden Sie unterlink:../deploy/prerequisites.html["Port-Anforderungen"].
+Öffnen Sie die erforderlichen Ports für die IP-Adressen in Ihrer Netzwerk-Firewall. ONTAP-Tools müssen dieses LIF über Port 443 erreichen können. Aktuelle Informationen finden Sie unterlink:../deploy/prerequisites.html["Port-Anforderungen"].
+
+
+
+== ONTAP Storage-Einstellungen
+
+Um eine nahtlose Integration von ONTAP Storage mit ONTAP Tools für VMware vSphere zu gewährleisten, sollten folgende Einstellungen durchgeführt werden:
+
+* Wenn Sie Fibre Channel (FC) für Storage-Konnektivität verwenden, konfigurieren Sie das Zoning auf den FC-Switches, um die ESXi-Hosts mit den FC-LIFs der SVM zu verbinden. https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["Erfahren Sie mehr über FC- und FCoE-Zoning mit ONTAP Systemen"]
+* Um ONTAP Tools-gemanagte SnapMirror-Replizierung zu verwenden, sollte der ONTAP Storage-Administrator vor Verwendung von SnapMirror und https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html["Intercluster SVM-Peer-Beziehungen mit ONTAP"] in ONTAP erstellen https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html["ONTAP Cluster Peer-Beziehungen"].
+

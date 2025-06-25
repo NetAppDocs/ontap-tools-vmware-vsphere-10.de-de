@@ -71,7 +71,7 @@ OVA ist ein offener Standard für die Paketierung und Verteilung virtueller Appl
 
 === Recovery-Zeitpunkt (RPO)
 
-RPO ist ein Maß für die Häufigkeit von Daten-Backups bzw. -Replikation. Er gibt den Zeitpunkt an, zu dem Daten nach einem Ausfall wiederhergestellt werden müssen, um den Geschäftsbetrieb wieder aufzunehmen. Wenn ein Unternehmen beispielsweise einen RPO von 4 Stunden hat, kann ein Datenverlust bei einem Ausfall von bis zu 4 Stunden toleriert werden.
+RPO misst, wie häufig Sie Daten sichern oder replizieren. Es gibt den genauen Zeitpunkt an, zu dem Sie nach einem Ausfall Daten wiederherstellen müssen, um den Geschäftsbetrieb wieder aufzunehmen. Wenn ein Unternehmen beispielsweise einen RPO von 4 Stunden hat, kann ein Datenverlust bei einem Ausfall von bis zu 4 Stunden toleriert werden.
 
 
 
