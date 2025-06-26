@@ -2246,16 +2246,10 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="8b6081846f56ef049557c82e5b444e2d" category="paragraph">Wenn Ihr Setup NFS- und VMFS-Datenspeicher, aber keine vVols-Datenspeicher enthält, deinstallieren Sie einfach ONTAP Tools 9.xx und installieren Sie ONTAP Tools 10.x. Enthält Ihr Setup jedoch vVols-Datenspeicher, müssen Sie den VASA-Provider und den SRA migrieren.</block>
   <block id="30725e73463cac6869eb16851a0b7f1f" category="paragraph">Die folgende Tabelle skizziert den Migrationsprozess in diesen beiden unterschiedlichen Szenarien.</block>
   <block id="481ad82ca4c063eed4e75acc5640a962" category="cell">*Wenn das Setup über vVols-Datenspeicher verfügt*</block>
-  <block id="a52ec04716984e73a95a673f19b4381b" category="cell">*Wenn das Setup keine vVols-Datenspeicher enthält*</block>
-  <block id="612ae34fe355690bba22816577fb8ceb" category="inline-link-macro">VASA-Anbieter migrieren</block>
-  <block id="b01a9665d854fa0b6f2ee86db8e7e7e5" category="inline-link-macro">SRA migrieren</block>
   <block id="6e4d49fbd70ad4839257ed5ced55d275" category="inline-link">Erstellen von VM-Speicherrichtlinien</block>
-  <block id="a1a2f15a55d77fba2d3e9d1ffb9c2d37" category="cell">Schritte: 1. <block ref="b948e8148e317c6b3a44b41129efa89c" category="inline-link-macro-rx"></block> 2. <block ref="fd39ed98cbc7c628cdfb8965952c02e6" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="27116dca14772e71a5f801de216fb934" category="inline-link-macro">Bereitstellen und Konfigurieren von ONTAP-Tools für VMware vSphere 10.4</block>
   <block id="ae2e6f54444edfbcea323e8f64be5184" category="inline-link">So entfernen Sie OTV 9.xx aus Ihrer Umgebung</block>
-  <block id="2de1e904f7a723f3fccf3b29b5d3a892" category="cell">Schritte: 1. Entfernen Sie ONTAP Tools 9.xx aus Ihrer Umgebung. Siehe <block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> NetApp Knowledge Base-Artikel. 2. <block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
   <block id="8fba1879056f1b6c411434b65fe61ee9" category="admonition">Nach der Migration von ONTAP Tools für VMware vSphere 9.xx zu 10.4 werden VVols-Datastores mit NVMe/FC-Protokoll nicht mehr in Betrieb, da die ONTAP Tools 10.4 das NVMe-of-Protokoll nur mit VMFS-Datastores unterstützt.</block>
-  <block id="61ace5a2518ab1c5ed7b0cdaaff98213" category="doc">Migrieren Sie den VASA-Anbieter und den Speicherreplikationsadapter (SRA).</block>
   <block id="74a0fcc4fbe41d518dabd4de3a069584" category="section-title">Schritte zur Migration des VASA-Anbieters</block>
   <block id="db9ce82f740ff3a9f2ad609cd7d296c9" category="list-text">Integrieren Sie das Speicher-Backend lokal von den vCenter-Server-APIs für das ONTAP-Tools-Plug-In.</block>
   <block id="c31397b4be5939d5bf72a8bb0faf9443" category="paragraph">Sie können über diese URL auf Swagger zugreifen: `https://$FQDN_IP_PORT/, zum Beispiel:<block ref="31b962e36589b3bd2081bfb7d028723f" category="inline-link-rx"></block>.</block>
@@ -2263,13 +2257,11 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="684e740f5c7b2c5d6085a2342428c783" category="paragraph">{ "otv_ip": "xx.xx.xx.xx", "vasa_provider_credentials": { "Benutzername": "xxxxx", "Passwort": "*******" } }</block>
   <block id="fafb1a9cdf3a5eb6029da27aa9e99060" category="list-text">Fügen Sie die ONTAP-Tools für den VMware vSphere-Speicheranbieter zum vCenter Server hinzu und <block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block> mit ONTAP-Tools für VMware vSphere.</block>
   <block id="9a75388e84716581ed710b23451155ae" category="list-text">Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xxx migriert wurden, sind erst in den ONTAP-Tools für VMware vSphere 10.4 sichtbar, nachdem der Datastore-Erkennungsauftrag ausgelöst wurde. Das dauert bis zu 30 Minuten. Überprüfen Sie, ob die Datenspeicher auf der Übersichtsseite der ONTAP-Tools für die Benutzeroberflächenseite des VMware vSphere-Plugins sichtbar sind.</block>
-  <block id="219ce9585531b00b3bd54170f3775f53" category="section-title">Schritte zur Migration des SRA</block>
   <block id="507fcd9c144d0cee8403de3b0608fc58" category="paragraph">Im Wiederherstellungsplan bezeichnet der geschützte Standort den Ort, an dem die VMs aktuell ausgeführt werden, während der Wiederherstellungsstandort der Ort ist, an dem die VMs wiederhergestellt werden. Die SRM-Oberfläche zeigt den Status des Wiederherstellungsplans mit Details zu den geschützten und den Wiederherstellungsstandorten an. Im Wiederherstellungsplan sind die Schaltflächen „BEREINIGEN“ und „NEU SCHÜTZEN“ deaktiviert, während die Schaltflächen „TESTEN“ und „AUSFÜHREN“ aktiviert bleiben. Dies zeigt an, dass der Standort für die Datenwiederherstellung vorbereitet ist. Stellen Sie vor der Migration des SRA sicher, dass sich ein Standort im geschützten Zustand und der andere im Wiederherstellungszustand befindet.</block>
   <block id="d6b99aad2c3ad58ece5306ce3dbab4d3" category="cell">Entwicklung der ONTAP Tools 10.x in Richtung 9.xx-Parität mit erweiterter Hochverfügbarkeit, Performance und Skalierungslimits</block>
   <block id="ea974b3b2665a0ede55feb5ef712e4dd" category="paragraph"><block ref="ea974b3b2665a0ede55feb5ef712e4dd" category="inline-link-macro-rx"></block></block>
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">Migrieren Sie die ONTAP-Tools für VMware vSphere 9.xx zu 10.4</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">Migrieren Sie zu den neuesten ONTAP-Tools für VMware vSphere</block>
-  <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">Migrieren des VASA-Anbieters und SRA</block>
   <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">Geben Sie einen Wert zwischen 5 und 60 Minuten für die Sicherungshäufigkeit ein.</block>
   <block id="d12f6b7d9e336bb21523e27a7954a424" category="doc">Verstehen Sie igroups und Exportrichtlinien in ONTAP-Tools für VMware vSphere</block>
   <block id="27fa3073e12d15edf2d9cd750cf92bd4" category="paragraph">Initiatorgruppen (igroups) sind Tabellen mit World Wide Port Names (WWPNs) des FC-Protokollhosts oder qualifizierten Knotennamen des iSCSI-Hosts. Sie können Initiatorgruppen definieren und sie LUNs zuordnen, um zu steuern, welche Initiatoren Zugriff auf LUNs haben.</block>
@@ -2376,4 +2368,11 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="dc0055de9b7e911c1f50f49dc1b3ef79" category="inline-link-macro">ONTAP-Tools für VMware vSphere – Anforderungen und Konfigurationsgrenzen</block>
   <block id="25eb466dd476278d60eabf35f3daa859" category="list-text"><block ref="25eb466dd476278d60eabf35f3daa859" category="inline-link-macro-rx"></block></block>
   <block id="8afddaa1858f79be24bc3f9dfe03eb86" category="sidebar">Anforderungen und Konfigurationsgrenzen für ONTAP-Tools</block>
+  <block id="122962cdef914297e7bd27106c4b08ef" category="cell">*Wenn das Setup nur NFS- und VMFS-Datenspeicher enthält*</block>
+  <block id="23582373a176f3a1391b91644579b591" category="inline-link-macro">Migrieren des VASA-Anbieters</block>
+  <block id="56e81eec05ba3edf697b5613dfbb8977" category="cell">Schritte: 1. <block ref="393201960d4eefccacb06cc7ccdc8cfc" category="inline-link-macro-rx"></block> 2. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="690fca4891ecdd9975fe5dc5bd2a520b" category="inline-link-macro">Aktualisieren Sie das SRA</block>
+  <block id="b468841971bd972a362e1fdbf6619e6e" category="cell">Schritte: 1. Entfernen Sie ONTAP Tools 9.xx aus Ihrer Umgebung. Siehe <block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> NetApp Knowledge Base-Artikel. 2. <block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3. <block ref="a29d94f131e388c7ee7c4a56d062be87" category="inline-link-macro-rx"></block> 4. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="3d73385f16fa6d4daf757e66c8eab31b" category="doc">Migrieren Sie den VASA-Anbieter und aktualisieren Sie die SRA</block>
+  <block id="3ce8158207209ed6b060c0d6db6b685d" category="section-title">Schritte zum Aktualisieren des Storage Replication Adapters (SRA)</block>
 </blocks>

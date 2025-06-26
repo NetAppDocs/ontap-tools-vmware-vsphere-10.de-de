@@ -20,10 +20,10 @@ Wenn Ihr Setup NFS- und VMFS-Datenspeicher, aber keine vVols-Datenspeicher enth�
 Die folgende Tabelle skizziert den Migrationsprozess in diesen beiden unterschiedlichen Szenarien.
 
 |===
-| *Wenn das Setup über vVols-Datenspeicher verfügt* | *Wenn das Setup keine vVols-Datenspeicher enthält* 
+| *Wenn das Setup über vVols-Datenspeicher verfügt* | *Wenn das Setup nur NFS- und VMFS-Datenspeicher enthält* 
 
 
-| Schritte: 1. link:../migrate/sra-vasa-migration.html["VASA-Anbieter migrieren"] 2. link:../migrate/sra-vasa-migration.html["SRA migrieren"] 3.  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html["Erstellen von VM-Speicherrichtlinien"] | Schritte: 1. Entfernen Sie ONTAP Tools 9.xx aus Ihrer Umgebung. Siehe  https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_How_to_remove_OTV_9_12_from_your_environment["So entfernen Sie OTV 9.xx aus Ihrer Umgebung"] NetApp Knowledge Base-Artikel. 2. link:../deploy/quick-start.html["Bereitstellen und Konfigurieren von ONTAP-Tools für VMware vSphere 10.4"] 3.  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html["Erstellen von VM-Speicherrichtlinien"] 
+| Schritte: 1. link:../migrate/sra-vasa-migration.html["Migrieren des VASA-Anbieters"] 2.  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html["Erstellen von VM-Speicherrichtlinien"] | Schritte: 1. Entfernen Sie ONTAP Tools 9.xx aus Ihrer Umgebung. Siehe  https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_How_to_remove_OTV_9_12_from_your_environment["So entfernen Sie OTV 9.xx aus Ihrer Umgebung"] NetApp Knowledge Base-Artikel. 2. link:../deploy/quick-start.html["Bereitstellen und Konfigurieren von ONTAP-Tools für VMware vSphere 10.4"] 3. link:../migrate/sra-vasa-migration.html["Aktualisieren Sie das SRA"] 4.  https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html["Erstellen von VM-Speicherrichtlinien"] 
 |===
 
 NOTE: Nach der Migration von ONTAP Tools für VMware vSphere 9.xx zu 10.4 werden VVols-Datastores mit NVMe/FC-Protokoll nicht mehr in Betrieb, da die ONTAP Tools 10.4 das NVMe-of-Protokoll nur mit VMFS-Datastores unterstützt.

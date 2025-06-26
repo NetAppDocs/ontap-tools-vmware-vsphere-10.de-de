@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: Bei der Migration von Storage-Daten werden Storage-Back-Ends manuell über REST-APIs integriert. Bei der Migration von VASA Provider-Daten werden die Daten aus der bestehenden Derby-Datenbank exportiert und in die MongoDB-Datenbank importiert. 
 ---
-= Migrieren Sie den VASA-Anbieter und den Speicherreplikationsadapter (SRA).
+= Migrieren Sie den VASA-Anbieter und aktualisieren Sie die SRA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -158,7 +158,7 @@ Der Compliance-Status unter *VM Storage Policy Compliance* wird nun als konform 
 
 
 
-== Schritte zur Migration des SRA
+== Schritte zum Aktualisieren des Storage Replication Adapters (SRA)
 
 .Bevor Sie beginnen
 Im Wiederherstellungsplan bezeichnet der geschützte Standort den Ort, an dem die VMs aktuell ausgeführt werden, während der Wiederherstellungsstandort der Ort ist, an dem die VMs wiederhergestellt werden. Die SRM-Oberfläche zeigt den Status des Wiederherstellungsplans mit Details zu den geschützten und den Wiederherstellungsstandorten an. Im Wiederherstellungsplan sind die Schaltflächen „BEREINIGEN“ und „NEU SCHÜTZEN“ deaktiviert, während die Schaltflächen „TESTEN“ und „AUSFÜHREN“ aktiviert bleiben. Dies zeigt an, dass der Standort für die Datenwiederherstellung vorbereitet ist. Stellen Sie vor der Migration des SRA sicher, dass sich ein Standort im geschützten Zustand und der andere im Wiederherstellungszustand befindet.
