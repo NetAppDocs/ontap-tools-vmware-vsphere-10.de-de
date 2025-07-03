@@ -94,7 +94,11 @@ Unmounten eines Datenspeichers von einem Host
 
 
 
-Die host1Igroup wird aus der Hierarchie entfernt. Untergeordnete Igroups werden nicht explizit gelöscht. Die Löschung erfolgt unter folgenden zwei Bedingungen: • Wenn keine LUNs zugeordnet sind, löscht das ONTAP-System die untergeordnete Igroup. • Ein geplanter Bereinigungsjob entfernt die nicht zugeordneten untergeordneten Igroups ohne LUN-Zuordnungen. Diese Szenarien gelten nur für von ONTAP-Tools verwaltete Igroups, nicht für benutzerdefinierte Igroups.
+Die host1Igroup wird aus der Hierarchie entfernt. Untergeordnete Igroups werden nicht explizit gelöscht. Die Löschung erfolgt unter diesen beiden Bedingungen:
+
+* Wenn keine LUNs zugeordnet sind, löscht das ONTAP-System die untergeordnete igroup.
+* Ein geplanter Bereinigungsauftrag entfernt die nicht mehr vorhandenen untergeordneten Igroups ohne LUN-Zuordnungen. Diese Szenarien gelten nur für von ONTAP-Tools verwaltete Igroups, nicht für benutzerdefinierte Igroups.
+
 
 .Beispiel 4:
 Datenspeicher löschen

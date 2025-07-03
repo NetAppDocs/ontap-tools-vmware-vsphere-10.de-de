@@ -20,7 +20,7 @@ Sie sollten Schutzgruppen erstellen, um eine Gruppe virtueller Maschinen am gesc
 Sie sollten die geschützten und Recovery-Standorte, die mit Ihrem vSphere Client erstellt wurden, koppeln, um Storage Replication Adapter (SRA) zur Erkennung der Speichersysteme zu aktivieren.
 
 
-NOTE: Storage Replication Adapter (SRA) unterstützt Fan-out mit einer einzigen synchronen Beziehung vom Typ Automated Failover Duplex and Async Relationship SnapMirror on Consistency Group. Fan-out mit zwei asynchronen SnapMirror auf einer Konsistenzgruppe oder Fan-out SnapMirror auf einem Volume wird jedoch nicht unterstützt.
+NOTE: Storage Replication Adapter (SRA) unterstützt Fan-Out mit einer Synchronisierungsbeziehung vom Typ „Automated Failover Duplex“ und der asynchronen Beziehung SnapMirror auf der Konsistenzgruppe. Fan-out mit zwei asynchronen SnapMirror auf einer Konsistenzgruppe oder Fan-out SnapMirror auf einem Volume wird jedoch nicht unterstützt.
 
 .Bevor Sie beginnen
 * VMware Live Site Recovery sollte auf den geschützten und Recovery-Standorten installiert sein.
