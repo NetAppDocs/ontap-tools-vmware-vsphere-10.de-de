@@ -26,7 +26,7 @@ Wenn Sie keine Inhaltsbibliothek haben, führen Sie die folgenden Schritte aus, 
 
 *Inhaltsbibliothek erstellen* Wenn Sie planen, nur eine kleine Einzelknoten-Bereitstellung zu verwenden, ist das Erstellen einer Inhaltsbibliothek nicht notwendig.
 
-. Laden Sie die  `.zip` Datei, die die Binärdateien (_.ova_) und signierten Zertifikate für ONTAP-Tools für VMware vSphere aus dem  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^] .
+. Laden Sie die Datei mit den Binärdateien (_.ova_) und signierten Zertifikaten für ONTAP tools for VMware vSphere von der  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^] .
 . Melden Sie sich beim vSphere-Client an
 . Wählen Sie das vSphere-Client-Menü aus und wählen Sie *Inhaltsbibliotheken* aus.
 . Wählen Sie auf der rechten Seite die Option *Erstellen*.
