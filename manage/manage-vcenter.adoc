@@ -52,7 +52,7 @@ Sie müssen alle Speicher-Back-Ends entfernen, die mit dem vCenter Server verbun
 . Wählen Sie die vertikalen Ellipsen für den vCenter Server aus, den Sie entfernen möchten, und wählen Sie *Entfernen* aus.
 +
 
-NOTE: Sobald Sie vCenter Server-Instanzen entfernt haben, werden diese nicht mehr von der Anwendung verwaltet.
+NOTE: Nachdem Sie vCenter Server-Instanzen entfernt haben, werden sie nicht mehr von der Anwendung verwaltet.
 
 
 

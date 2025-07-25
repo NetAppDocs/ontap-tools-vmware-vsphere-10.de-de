@@ -2,7 +2,7 @@
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Sie sollten einen Platzhalterdatenspeicher so konfigurieren, dass er einen Platz im vCenter Inventory am Recovery-Standort für die geschützte Virtual Machine \(VM\) hält. Der Platzhalter-Datenspeicher muss nicht groß sein, da die Platzhalter-VMs klein sind und nur einige Hundert Kilobyte verwenden.' 
+summary: 'Sie sollten einen Platzhalter-Datenspeicher konfigurieren, um Platz im vCenter-Inventar am Wiederherstellungsstandort für die geschützte virtuelle Maschine (VM) zu reservieren. Der Platzhalter-Datenspeicher muss nicht groß sein, da die Platzhalter-VMs klein sind und nur wenige hundert Kilobyte oder weniger belegen.' 
 ---
 = Platzhalter-Datastores konfigurieren
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Sie sollten einen Platzhalterdatenspeicher so konfigurieren, dass er e
 
 
 [role="lead"]
-Sie sollten einen Platzhalterdatenspeicher konfigurieren, um einen Platz im vCenter Inventory am Recovery-Standort für die geschützte Virtual Machine (VM) zu halten. Der Platzhalter-Datenspeicher muss nicht groß sein, da die Platzhalter-VMs klein sind und nur einige Hundert Kilobyte verwenden.
+Sie sollten einen Platzhalterdatenspeicher konfigurieren, der im vCenter-Inventar am Wiederherstellungsstandort Platz für die geschützte virtuelle Maschine (VM) reserviert. Der Platzhalterdatenspeicher muss nicht groß sein, da die Platzhalter-VMs klein sind und nur wenige hundert Kilobyte oder weniger belegen.
 
 .Bevor Sie beginnen
 * Sie sollten die geschützten und Recovery-Standorte verbunden haben.

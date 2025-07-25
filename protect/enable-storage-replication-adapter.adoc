@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP Tools für VMware vSphere bieten die Option zur Aktivierung der SRA-Funktionen zur Konfiguration der Disaster Recovery. 
 ---
-= Aktivieren Sie SRA, um Datastores zu sichern
+= Konfigurieren Sie SRA zum Schutz von Datenspeichern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ ONTAP Tools für VMware vSphere bieten die Option zur Aktivierung der SRA-Funkti
 * Sie sollten ONTAP Tools für VMware vSphere implementiert haben.
 * Sie sollten die SRA Adapter- `.tar.gz`Datei von der heruntergeladen haben https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^].
 * ONTAP-Quell- und Ziel-Cluster müssen vor der Ausführung der SRA-Workflows dieselben benutzerdefinierten SnapMirror-Zeitpläne aufweisen.
+* link:../manage/enable-services.html["Aktivieren Sie ONTAP-Tools für VMware vSphere-Services"] um die SRA-Funktion zu aktivieren.
 
 
 .Schritte

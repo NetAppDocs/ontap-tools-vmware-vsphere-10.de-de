@@ -36,7 +36,7 @@ NOTE: Benutzer können auf Cluster-Ebene oder direkt auf Storage Virtual Machine
 +
 Das Produktfeld wird automatisch ausgefüllt.
 
-.. Wählen Sie im Dropdown-Menü die Produktfunktion VSC, VASA Provider oder SRA aus.
+.. Wählen Sie aus der Dropdown-Liste die Produktfunktion „VSC, VASA Provider und SRA“ aus.
 +
 Das Feld *Rolle* wird basierend auf der ausgewählten Produktfähigkeit automatisch ausgefüllt.
 
@@ -105,7 +105,7 @@ Fügen Sie den *REST API Path* und den entsprechenden Zugriff aus dem Drop-Down-
 
 === Liste der Mindestberechtigungen, die für einen nicht-Administrator-Cluster mit globalem Umfang erforderlich sind
 
-In diesem Abschnitt werden die Mindestberechtigungen aufgeführt, die für Benutzer mit globalem Clusterbereich, die ohne Verwendung der JSON-Datei des Benutzers erstellt wurden, erforderlich sind. Wenn Sie einen Cluster mit lokalem Umfang hinzufügen, empfehlen wir, zum Erstellen der Benutzer die JSON-Datei zu verwenden, da für ONTAP Tools für VMware vSphere mehr als nur die Leseberechtigungen für das Provisioning auf ONTAP erforderlich sind.
+In diesem Abschnitt sind die Mindestberechtigungen für Clusterbenutzer mit globalem Gültigkeitsbereich ohne Administratorrechte aufgeführt, die ohne Verwendung der JSON-Datei erstellt wurden. Wenn ein Cluster im lokalen Gültigkeitsbereich hinzugefügt wird, wird empfohlen, die JSON-Datei zum Erstellen der Benutzer zu verwenden, da ONTAP tools for VMware vSphere für die Bereitstellung auf ONTAP mehr als nur Leseberechtigungen erfordern.
 
 Verwenden von APIs:
 

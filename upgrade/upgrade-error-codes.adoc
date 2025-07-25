@@ -62,7 +62,7 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | *Upgrade-Fehlercode* | *Arbeitsablauf* | * Auflösung* 
 
 
-| 052 | Die ISO kann mit der aktuellen Version oder zwei Versionen über der aktuellen Version identisch sein. | Verwenden Sie eine kompatible ISO-Version, um von Ihrer aktuellen Version zu aktualisieren. 
+| 052 | Die ISO-Datei kann mit der aktuellen Version identisch sein oder zwei Versionen über der aktuellen Version liegen. | Verwenden Sie eine kompatible ISO-Version, um von Ihrer aktuellen Version zu aktualisieren. 
 
 
 | 068 | Das Rollback von Debian-Paketen ist fehlgeschlagen | Recovery auf Basis von RPOs oder Snapshots ohne RPO und Upgrade erneut versuchen 

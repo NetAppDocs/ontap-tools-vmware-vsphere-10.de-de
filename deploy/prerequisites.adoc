@@ -84,7 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 == Port-Anforderungen
 
-Die folgende Tabelle gibt einen Überblick über die von NetApp verwendeten Netzwerk-Ports und ihre Zwecke. Stellen Sie sicher, dass diese Anschlüsse offen und zugänglich sind, um den ordnungsgemäßen Betrieb und die Kommunikation innerhalb des Systems zu erleichtern. Stellen Sie sicher, dass die erforderlichen Netzwerkkonfigurationen vorhanden sind, damit der Datenverkehr auf diesen Ports für die zugehörigen Dienste ordnungsgemäß funktioniert. Abhängig von Ihren Sicherheitsrichtlinien müssen Sie möglicherweise Firewalls oder andere Sicherheitsanwendungen konfigurieren, um diesen Datenverkehr innerhalb Ihres Netzwerks zu erlauben.
+Die folgende Tabelle zeigt die von NetApp verwendeten Netzwerkports und deren Zweck. Stellen Sie sicher, dass diese Ports offen und zugänglich sind, um einen ordnungsgemäßen Betrieb und die Kommunikation innerhalb des Systems zu gewährleisten. Stellen Sie sicher, dass die erforderlichen Netzwerkkonfigurationen vorhanden sind, um den Datenverkehr über diese Ports zu ermöglichen, damit die zugehörigen Dienste ordnungsgemäß funktionieren. Abhängig von Ihren Sicherheitsrichtlinien müssen Sie möglicherweise Firewalls oder andere Sicherheitsanwendungen konfigurieren, um diesen Datenverkehr innerhalb Ihres Netzwerks zuzulassen.
 
 |===
 

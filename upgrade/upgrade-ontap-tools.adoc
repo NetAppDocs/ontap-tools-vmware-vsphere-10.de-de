@@ -22,7 +22,7 @@ HINWEIS:
 .Bevor Sie beginnen
 Wenn Sie ein Upgrade ohne HA durchführen, schalten Sie die ONTAP Tools-VM aus. Schalten Sie für ein HA-Upgrade den ersten Node aus, bevor Sie die folgenden Änderungen an den VM-Einstellungen (Virtual Machine) vornehmen.
 
-Wenn Sie ein Upgrade von ONTAP-Tools für VMware vSphere 10.2 oder 10.3 durchführen, müssen Sie die folgenden Schritte ausführen, bevor Sie mit der Upgrade-Aufgabe fortfahren: * Fügen Sie jedem Knoten eine zusätzliche 100-GB-Festplatte hinzu, da die Servicedaten lokal auf der VM gespeichert werden. * Ändern Sie die CPU und den Speicher für die ausgeschalteten VM entsprechend dem Geschmack Ihrer Bereitstellung. Aktivieren Sie das Hot-Plug-in für CPU und RAM.
+Wenn Sie von ONTAP tools for VMware vSphere 10.2 oder 10.3 aktualisieren, müssen Sie vor dem Upgrade folgende Schritte ausführen: * Fügen Sie jedem Knoten eine zusätzliche 100-GB-Festplatte hinzu, da die Servicedaten lokal auf der VM gespeichert sind. * Passen Sie CPU und Speicher für die ausgeschaltete VM entsprechend Ihrer Implementierung an. Aktivieren Sie das Hot-Plugin für CPU und RAM.
 
 +
 

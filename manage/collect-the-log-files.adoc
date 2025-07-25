@@ -35,8 +35,7 @@ Führen Sie die folgenden Schritte aus, um Protokollbündel über die vCenter Cl
 .Schritte
 . Melden Sie sich beim vSphere-Client an.
 . Gehen Sie auf der vSphere Client-Homepage zu *Support* > *Log Bundle* > *Generate*.
-. Geben Sie das Protokollbündel-Label an, und generieren Sie das Protokollbündel.
-Sie können die Download-Option sehen, wenn die Dateien generiert werden. Das Herunterladen kann einige Zeit in Anspruch nehmen.
+. Geben Sie die Bezeichnung des Protokollpakets an und generieren Sie das Protokollpaket. Die Download-Option wird angezeigt, wenn die Dateien generiert werden. Der Download kann einige Zeit dauern.
 
 
 

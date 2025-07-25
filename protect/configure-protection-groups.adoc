@@ -13,6 +13,8 @@ summary: Sie sollten Schutzgruppen erstellen, um eine Gruppe virtueller Maschine
 [role="lead"]
 Sie sollten Schutzgruppen erstellen, um eine Gruppe virtueller Maschinen am geschützten Standort zu schützen.
 
+Wenn Sie einen neuen Datenspeicher hinzufügen, können Sie ihn in die bestehende Datenspeichergruppe aufnehmen oder einen neuen Datenspeicher hinzufügen und ein neues Volume oder eine neue Konsistenzgruppe zum Schutz erstellen. Nachdem Sie einen neuen Datenspeicher zu einer geschützten Konsistenzgruppe oder einem geschützten Volume hinzugefügt haben, aktualisieren Sie SnapMirror und führen Sie die Speichererkennung sowohl auf dem geschützten als auch auf dem Wiederherstellungsstandort durch. Sie können die Erkennung manuell oder nach Zeitplan durchführen, um sicherzustellen, dass der neue Datenspeicher erkannt und geschützt wird.
+
 
 
 == Kombinieren Sie geschützte Standorte und Recovery-Standorte
@@ -57,15 +59,14 @@ Stellen Sie sicher, dass die Quell- und Zielstandorte für Folgendes konfigurier
 
 
 .Schritte
-. Melden Sie sich bei vCenter Server an und wählen Sie dann *Site Recovery* > *Protection Groups* aus.
+. Melden Sie sich bei vCenter Server an und wählen Sie *Site Recovery* > *Schutzgruppen*.
 . Wählen Sie im Bereich *Schutzgruppen* *Neu* aus.
 . Geben Sie einen Namen und eine Beschreibung für die Schutzgruppe, Richtung und wählen Sie *Weiter*.
-. Wählen Sie im Feld *Typ* die Option *Typ Feld...* als Datastore-Gruppen (Array-basierte Replikation) für NFS- und VMFS-Datastore aus.
-Die Fehlerdomäne ist nichts anderes als SVMs mit aktivierter Replizierung. Es werden die SVMs angezeigt, für die lediglich Peering implementiert ist und keine Probleme vorhanden sind.
+. Wählen Sie im Feld *Typ* die Option *Typfeldoption...* als Datenspeichergruppen (Array-basierte Replikation) für NFS- und VMFS-Datenspeicher aus. Die Fehlerdomäne besteht ausschließlich aus SVMs mit aktivierter Replikation. Es werden die SVMs angezeigt, die nur Peering implementiert haben und keine Probleme aufweisen.
 . Wählen Sie auf der Registerkarte Replikationsgruppen entweder das aktivierte Array-Paar oder die Replikationsgruppen aus, für die die virtuelle Maschine konfiguriert ist, und wählen Sie dann *Weiter* aus.
 +
 Alle virtuellen Maschinen auf der Replikationsgruppe werden der Schutzgruppe hinzugefügt.
 
-. Wählen Sie entweder den vorhandenen Wiederherstellungsplan aus oder erstellen Sie einen neuen Plan, indem Sie *zu neuem Wiederherstellungsplan hinzufügen* auswählen.
+. Sie können entweder den vorhandenen Wiederherstellungsplan auswählen oder einen neuen erstellen, indem Sie *Zum neuen Wiederherstellungsplan hinzufügen* auswählen.
 . Überprüfen Sie auf der Registerkarte bereit zur Fertigstellung die Details der von Ihnen erstellten Schutzgruppe, und wählen Sie dann *Fertig stellen* aus.
 

@@ -22,7 +22,7 @@ Auf der Übersichtsseite können Sie die Aktion *Discovery* ausführen. Die Erke
 
 NOTE: Die Aktionsschaltfläche wird nur aktiviert, wenn Sie über die Berechtigung zum Ausführen der Ermittlungsaktion verfügen.
 
-Sobald die Ermittlungsanforderung gesendet wurde, können Sie den Fortschritt der Aktion im Bereich „Letzte Aufgaben“ verfolgen.
+Nachdem die Ermittlungsanfrage übermittelt wurde, können Sie den Fortschritt der Aktion im Bereich „Letzte Aufgaben“ verfolgen.
 
 Das Dashboard verfügt über mehrere Karten, die verschiedene Elemente des Systems anzeigen. Die folgende Tabelle zeigt die verschiedenen Karten und was sie darstellen.
 
@@ -35,7 +35,7 @@ Das Dashboard verfügt über mehrere Karten, die verschiedene Elemente des Syste
 | Status | Die Statuskarte zeigt die Anzahl der Speicher-Back-Ends und den allgemeinen Integritätsstatus der Speicher-Back-Ends und des VASA Providers an. Speicher-Back-Ends-Status zeigt *gesund* an, wenn der gesamte Speicher-Back-Ends-Status normal ist und es *ungesund* anzeigt, wenn eines der Speicher-Backends ein Problem hat (Unbekannt/Unerreichbar/herabgesetzt). Wählen Sie die QuickInfo aus, um die Statusdetails der Speicherbackends zu öffnen. Für weitere Details können Sie ein beliebiges Storage-Back-End auswählen. *Andere VASA Provider-Zustände* Link zeigt den aktuellen Status des VASA Providers an, der im vCenter Server registriert ist. 
 
 
-| Storage Back-Ends – Kapazität | Diese Karte zeigt die aggregierte genutzte und verfügbare Kapazität aller Speicher-Back-Ends für die ausgewählte vCenter Server-Instanz an. Bei ASA r2-Storage-Systemen werden Kapazitätsdaten nicht angezeigt, da es sich um ein disaggregated System handelt. 
+| Storage Back-Ends – Kapazität | Diese Karte zeigt die aggregierte genutzte und verfügbare Kapazität aller Speicher-Backends für die ausgewählte vCenter Server-Instanz. Bei ASA R2-Speichersystemen werden die Kapazitätsdaten nicht angezeigt, da es sich um ein disaggregiertes System handelt. 
 
 
 | Virtual Machines | Diese Karte zeigt die 10 wichtigsten VMs nach Performance-Metrik. Sie können die Kopfzeile auswählen, um die 10 wichtigsten VMs für die ausgewählte Metrik nach aufsteigender oder absteigender Reihenfolge zu erhalten. Die auf der Karte vorgenommenen Änderungen beim Sortieren und Filtern bleiben bestehen, bis Sie den Browser-Cache ändern oder löschen. 

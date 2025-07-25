@@ -41,7 +41,7 @@ NOTE: In ONTAP Tools für VMware vSphere können Sie nur die Node-Größe erhöh
 ** Die virtuelle Maschine, die die ONTAP-Tools hostet, wird nicht direkt auf einem ESXi-Host bereitgestellt. Die VM sollte auf einem Cluster oder einem Ressourcen-Pool bereitgestellt werden.
 +
 
-NOTE: Sobald die HA-Konfiguration aktiviert ist, können Sie sie nicht auf eine Konfiguration ohne HA-Konfiguration mit einem einzelnen Node zurücksetzen.
+NOTE: Nachdem die HA-Konfiguration aktiviert wurde, können Sie nicht mehr zu einer Einzelknotenkonfiguration ohne HA zurückkehren.
 
 
 

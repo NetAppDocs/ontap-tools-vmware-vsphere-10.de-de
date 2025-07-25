@@ -52,7 +52,7 @@ Gehen Sie wie folgt vor, um die neu hinzugefügten Datastores oder Hosts zu sch�
 . Wenn Sie einen neuen ESXi-Host hinzugefügt haben, wird der Sicherungsstatus als Teilgeschützt angezeigt. Wählen Sie das Auslassungsmenü unter den SnapMirror-Einstellungen und wählen Sie *Bearbeiten*, um die Nähe des neu hinzugefügten ESXi-Hosts festzulegen.
 +
 
-NOTE: Im Fall einer asynchronen Beziehung wird die Bearbeitungsaktion nicht unterstützt, da Sie die Ziel-SVM für einen tertiären Standort nicht derselben Instanz der ONTAP-Tools hinzufügen können. Sie können jedoch den System Manager oder die CLI der Ziel-SVM verwenden, um die Beziehungskonfiguration zu ändern.
+NOTE: Bei asynchronen Beziehungen wird die Bearbeitungsaktion nicht unterstützt, da Sie die Ziel-SVM für den tertiären Standort nicht derselben ONTAP -Tools-Instanz hinzufügen können. Sie können jedoch den Systemmanager oder die CLI der Ziel-SVM verwenden, um die Beziehungskonfiguration zu ändern.
 
 . Wählen Sie *Speichern*, nachdem Sie die erforderlichen Änderungen vorgenommen haben.
 . Sie können die Änderungen im Fenster *Protect Cluster* sehen.

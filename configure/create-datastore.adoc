@@ -26,7 +26,7 @@ Wenn der Speicher in ONTAP Tools integriert ist und die Datenspeichererkennung a
 Ab der Nutzung von ONTAP Tools für VMware vSphere 10.3 können Sie auf ASA r2 Systemen mit Platzeffizienz wie Thin.vVol einen VVols Datastore erstellen. Der VASA Provider erstellt bei der Erstellung des vVol Datastore einen Container und die gewünschten Protokollendpunkte. Dieser Container verfügt nicht über Sicherungsvolumes.
 
 .Bevor Sie beginnen
-* Vergewissern Sie sich, dass Root-Aggregate nicht der SVM zugeordnet sind.
+* Stellen Sie sicher, dass Root-Aggregate nicht auf SVM abgebildet werden.
 * Stellen Sie sicher, dass der VASA Provider beim ausgewählten vCenter registriert ist.
 * Im ASA r2 Storage-System sollte die SVM dem Aggregat für SVM-Benutzer zugeordnet werden.
 
@@ -47,7 +47,7 @@ NOTE: Das ASA r2 System unterstützt die iSCSI- und FC-Protokolle für VVols.
 ** Sie können für die iSCSI- und FC-Protokolle *Custom Initiator Group*-Name auswählen.
 +
 
-NOTE: Beim Typ SVM des ASA r2 Storage-Systems werden Storage-Einheiten (LUN/Namespace) nicht erstellt, da der Datastore nur ein logischer Container ist.
+NOTE: Im ASA R2-Speichersystemtyp SVM werden keine Speichereinheiten (LUN/Namespace) erstellt, da der Datenspeicher nur ein logischer Container ist.
 
 
 
@@ -148,7 +148,7 @@ Bei Auswahl des NVMe/FC- oder NVMe/TCP-Protokolls wird ein neues Namespace-Subsy
 .. Wählen Sie aus den Dropdown-Optionen *Aggregate* aus.
 +
 
-NOTE: Bei ASA r2-Speichersystemen wird die Option *Aggregate* nicht angezeigt, da es sich bei ASA r2-Speicher um einen disaggregierten Speicher handelt. Wenn Sie eine ASA r2 Storage-System-Typ SVM auswählen, werden auf der Seite Storage-Attribute die Optionen zur Aktivierung der QoS angezeigt.
+NOTE: Bei ASA R2-Speichersystemen wird die Option „Aggregat“ nicht angezeigt, da es sich beim ASA R2-Speicher um einen disaggregierten Speicher handelt. Wenn Sie einen ASA R2-Speichersystemtyp „SVM“ auswählen, werden auf der Seite mit den Speicherattributen die Optionen zum Aktivieren von QoS angezeigt.
 
 .. Nach dem ausgewählten Protokoll wird eine Storage-Einheit (LUN/Namespace) mit einer Platzreserve des Typs Thin erstellt.
 +

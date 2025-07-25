@@ -11,10 +11,10 @@ summary: Die ONTAP Tools für die VMware vSphere Appliance werden als kleiner Si
 
 
 [role="lead"]
-Die ONTAP Tools für die VMware vSphere Appliance werden als kleiner Single Node mit Kernservices zur Unterstützung von NFS und VMFS Datastores implementiert. Die Implementierung von ONTAP Tools kann bis zu 45 Minuten dauern.
+Die ONTAP tools for VMware vSphere werden als kleiner Einzelknoten mit Kerndiensten zur Unterstützung von NFS- und VMFS-Datenspeichern bereitgestellt. Die Bereitstellung der ONTAP Tools kann bis zu 45 Minuten dauern.
 
 .Bevor Sie beginnen
-Eine Content-Bibliothek in VMware ist ein Container-Objekt, das VM-Vorlagen, vApp-Vorlagen und andere Dateitypen speichert. Die Bereitstellung mit Inhaltsbibliothek bietet Ihnen eine nahtlose Erfahrung, da sie nicht von der Netzwerkkonnektivität abhängt.
+Eine Inhaltsbibliothek in VMware ist ein Containerobjekt, das VM-Vorlagen, vApp-Vorlagen und andere Dateitypen speichert. Die Bereitstellung mit Inhaltsbibliothek bietet Ihnen ein nahtloses Erlebnis, da sie nicht von der Netzwerkkonnektivität abhängig ist.
 
 
 NOTE: Sie sollten die Inhaltsbibliothek auf einem gemeinsam genutzten Datastore speichern, damit alle Hosts innerhalb eines Clusters darauf zugreifen können. Erstellen Sie eine Inhaltsbibliothek, um die OVA zu speichern, bevor Sie die Appliance für die HA-Konfiguration konfigurieren. Löschen Sie die Vorlage für die Inhaltsbibliothek nach der Bereitstellung nicht.

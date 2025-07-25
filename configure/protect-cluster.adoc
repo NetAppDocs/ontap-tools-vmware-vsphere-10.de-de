@@ -18,7 +18,7 @@ Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 * Der Host-Cluster verfügt nur über Datastores von einer SVM.
 * Der auf dem Host-Cluster gemountete Datastore sollte nicht auf einem Host außerhalb des Clusters gemountet werden.
-* Alle Datastores, die auf dem Host-Cluster gemountet werden, müssen VMFS-Datastores mit iSCSI/FC-Protokoll sein. VVols, NFS oder VMFS-Datastores mit NVMe/FC- und NVMe/TCP-Protokollen werden nicht unterstützt.
+* Alle auf dem Hostcluster bereitgestellten Datenspeicher müssen VMFS-Datenspeicher mit iSCSI/FC-Protokoll sein. vVols, NFS- oder VMFS-Datenspeicher mit NVMe/FC- und NVMe/TCP-Protokollen werden nicht unterstützt.
 * FlexVol/LUN, die Datastores bilden, die auf dem Host-Cluster gemountet sind, sollten nicht Teil einer vorhandenen Konsistenzgruppe (CG) sein.
 * FlexVol/LUN, die auf dem Host-Cluster gemountete Datastores bilden, sollten nicht Bestandteil einer bestehenden SnapMirror Beziehung sein.
 * Der Host-Cluster sollte über mindestens einen Datastore verfügen.

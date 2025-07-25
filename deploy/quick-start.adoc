@@ -2,7 +2,7 @@
 permalink: deploy/quick-start.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: Die ersten Schritte mit den ONTAP Tools für VMware vSphere sind ein paar Schritte. 
+summary: Richten Sie mit diesem Schnellstartabschnitt ONTAP tools for VMware vSphere ein. 
 ---
 = Schnellstart für ONTAP-Tools für VMware vSphere
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: Die ersten Schritte mit den ONTAP Tools für VMware vSphere sind ein pa
 
 
 [role="lead"]
-Die ersten Schritte mit den ONTAP Tools für VMware vSphere sind ein paar Schritte. Dieser schnelle Einstieg führt Sie durch die Ersteinrichtung von ONTAP Tools für VMware vSphere.
+Richten Sie mit diesem Schnellstartabschnitt ONTAP tools for VMware vSphere ein.
 
 Zunächst implementieren Sie ONTAP Tools für VMware vSphere als eine kleine Single-Node-Konfiguration, die wichtige Services zur Unterstützung von NFS- und VMFS-Datastores bietet. Wenn Sie Ihre Konfiguration für VVols-Datastores und Hochverfügbarkeit (HA) erweitern müssen, sind Sie nach Abschluss dieses Workflows ebenfalls dafür tätig. Weitere Informationen finden Sie im link:../deploy/ha-workflow.html["HA-Implementierungs-Workflow"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] Planen Sie Ihre Implementierung
 [role="quick-margin-para"]
-Vergewissern Sie sich, dass Ihre vSphere-, ONTAP- und ESXi-Hostversionen mit der Version der ONTAP-Tools kompatibel sind. Weisen Sie ausreichend CPU, Arbeitsspeicher und Festplattenspeicher zu. Abhängig von Ihren Sicherheitsrichtlinien müssen Sie möglicherweise Firewalls oder andere Sicherheitsanwendungen konfigurieren, um Netzwerkverkehr zu ermöglichen.
+Stellen Sie sicher, dass Ihre vSphere-, ONTAP und ESXi-Hostversionen mit der ONTAP Toolversion kompatibel sind. Stellen Sie ausreichend CPU-, Arbeitsspeicher- und Festplattenspeicher bereit. Abhängig von Ihren Sicherheitsregeln müssen Sie möglicherweise Firewalls oder andere Sicherheitstools einrichten, um Netzwerkverkehr zuzulassen.
 
 [role="quick-margin-para"]
 Stellen Sie sicher, dass vCenter Server installiert ist und zugänglich ist.
@@ -30,7 +30,7 @@ Stellen Sie sicher, dass vCenter Server installiert ist und zugänglich ist.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] Implementieren Sie ONTAP-Tools für VMware vSphere
 [role="quick-margin-para"]
-Zunächst implementieren Sie ONTAP Tools für VMware vSphere als eine kleine Single Node-Konfiguration, die wichtige Services zur Unterstützung von NFS- und VMFS-Datastores bietet. Wenn Sie planen, Ihre Konfiguration für VVols-Datastores und Hochverfügbarkeit zu erweitern, erledigen Sie nach Abschluss dieses Workflows genau das. Um eine HA-Konfiguration erfolgreich zu erweitern, müssen Sie sicherstellen, dass die Hot-Plug-Optionen für CPU und Arbeitsspeicher aktiviert sind.
+Zunächst implementieren Sie ONTAP tools for VMware vSphere als kleine Einzelknotenkonfiguration, die Kerndienste zur Unterstützung von NFS- und VMFS-Datenspeichern bereitstellt. Wenn Sie Ihre Konfiguration um vVols Datenspeicher und Hochverfügbarkeit (HA) erweitern möchten, tun Sie dies nach Abschluss dieses Workflows. Stellen Sie für die Erweiterung auf ein HA-Setup sicher, dass CPU-Hot-Add und Memory-Hot-Plug aktiviert sind.
 
 [role="quick-margin-list"]
 * link:../deploy/ontap-tools-deployment.html["Implementieren Sie ONTAP-Tools für VMware vSphere"]
@@ -38,7 +38,7 @@ Zunächst implementieren Sie ONTAP Tools für VMware vSphere als eine kleine Sin
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"] Fügen Sie vCenter Server-Instanzen hinzu
 [role="quick-margin-para"]
-Fügen Sie eine oder mehrere vCenter Server-Instanzen zu den ONTAP Tools für VMware vSphere hinzu, um Ihre virtuellen Datastores in Ihrer vCenter Server-Umgebung zu konfigurieren, zu verwalten und zu sichern.
+Fügen Sie vCenter Server-Instanzen zu ONTAP tools for VMware vSphere hinzu, um virtuelle Datenspeicher in der vCenter Server-Umgebung zu konfigurieren, zu verwalten und zu schützen.
 
 [role="quick-margin-list"]
 * link:../configure/add-vcenter.html["Fügen Sie vCenter Server-Instanzen hinzu"]
@@ -72,11 +72,12 @@ Wenn Sie mit mehreren vCenter Server-Instanzen arbeiten, aktualisieren Sie das s
 * link:../manage/certificate-manage.html["Verwalten von Zertifikaten"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sieben"] (Optional) Aktivieren Sie den SRA-Schutz
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sieben"] (Optional) Konfigurieren des SRA-Schutzes
 [role="quick-margin-para"]
 Stellen Sie die SRA-Funktionen bereit, um Disaster Recovery zu konfigurieren und NFS- oder VMFS-Datastores zu schützen.
 
 [role="quick-margin-list"]
+* link:../manage/enable-services.html["Aktivieren Sie ONTAP-Tools für VMware vSphere-Services"]
 * link:../protect/configure-on-srm-appliance.html["Konfigurieren Sie SRA auf der VMware Live Site Recovery-Appliance"]
 
 
@@ -93,5 +94,5 @@ Konfigurieren Sie ONTAP-Tools für VMware vSphere, um den Schutz des Host-Cluste
 Planen Sie Backups Ihrer ONTAP Tools für das VMware vSphere Setup, mit dem Sie das Setup bei einem Fehler wiederherstellen können.
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html["Erstellen Sie Backup und Recovery der ONTAP Tools Setup"]
+* link:../manage/manage/enable-backup.html["Erstellen Sie Backup und Recovery der ONTAP Tools Setup"]
 

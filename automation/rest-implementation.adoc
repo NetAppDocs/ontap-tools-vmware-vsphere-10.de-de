@@ -30,7 +30,7 @@ Sie können über die IP-Adresse des ONTAP Tools und den Port auf die ONTAP Tool
 * Bestimmte Ressource
 
 
-Sie müssen die IP-Adresse während der Erstkonfiguration konfigurieren, und der Port ist immer 8443. Auch für eine bestimmte ONTAP-Tools für VMware vSphere 10-Instanz ist der erste Teil der URL konstant. Nur die Ressourcenkategorie und die spezifische Ressource variieren zwischen den Endpunkten.
+Sie müssen die IP-Adresse während der Ersteinrichtung konfigurieren, während der Port fest auf 8443 bleibt. Der erste Teil der URL ist für jede ONTAP tools for VMware vSphere 10-Instanz konsistent; nur die Ressourcenkategorie und die spezifische Ressource ändern sich zwischen den Endpunkten.
 
 
 CAUTION: Die IP-Adresse und die Portwerte in den folgenden Beispielen dienen nur der Veranschaulichung. Sie müssen diese Werte für Ihre Umgebung ändern.
@@ -68,7 +68,7 @@ Die HTTP-Methoden oder Verben, die von der REST-API unterstützt werden, sind in
 | POST | Erstellen | Erstellt eine neue Ressourceninstanz basierend auf den Eingabeparametern. 
 
 
-| PUT | Aktualisieren | Aktualisiert eine gesamte Ressourceninstanz mit dem mitgelieferten JSON Request Body. Schlüsselwerte, die nicht vom Benutzer geändert werden können, bleiben erhalten. 
+| PUT | Aktualisieren | Aktualisiert eine gesamte Ressourceninstanz mit dem bereitgestellten JSON-Anforderungstext. Nicht vom Benutzer änderbare Schlüsselwerte bleiben erhalten. 
 
 
 | PATCH | Aktualisieren | Fordert eine Reihe ausgewählter Änderungen in der Anforderung an, die auf die Ressourceninstanz angewendet werden. 

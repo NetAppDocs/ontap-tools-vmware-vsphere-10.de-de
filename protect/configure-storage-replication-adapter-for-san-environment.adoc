@@ -66,6 +66,6 @@ Der Adapter wird auf VMware Live Site Recovery und dem SRA-Server installiert.
 .Schritte
 . Überprüfen Sie, ob die Datenspeicher am geschützten Standort virtuelle Maschinen enthalten, die bei vCenter Server registriert sind.
 . Überprüfen Sie, ob die ESXi-Hosts am geschützten Standort die NFS-Exporte-Volumes von der Storage Virtual Machine (SVM) gemountet haben.
-. Überprüfen Sie, ob gültige Adressen wie IP-Adresse, Hostname oder FQDN, auf denen die NFS-Exporte vorhanden sind, im Feld *NFS-Adressen* angegeben sind, wenn Sie mit dem Array Manager-Assistenten Arrays zur VMware Live Site Recovery hinzufügen.
+. Stellen Sie sicher, dass gültige Adressen wie die IP-Adresse oder der FQDN, unter dem die NFS-Exporte vorliegen, im Feld *NFS-Adressen* angegeben sind, wenn Sie den Array Manager-Assistenten zum Hinzufügen von Arrays zu VMware Live Site Recovery verwenden. Verwenden Sie im Feld *NFS-Adressen* nicht den NFS-Hostnamen.
 . Verwenden Sie die `ping` Führen Sie einen Befehl auf jedem ESXi Host am Recovery-Standort aus, um zu überprüfen, ob der Host über einen VMkernel-Port verfügt, der auf die IP-Adressen zugreifen kann, die für NFS-Exporte von der SVM verwendet werden.
 

@@ -38,10 +38,7 @@ NOTE: Beim Konfigurieren des Array Managers sollten Sie dieselbe Verbindung (IP-
 
 
 
-.. Wenn Sie eine Verbindung zu einem Cluster herstellen, geben Sie den Namen der SVM in das Feld *SVM Name* ein.
-+
-Sie können dieses Feld auch leer lassen.
-
+.. Wenn Sie eine Verbindung zu einem Cluster herstellen, geben Sie den SVM-Namen im Feld *SVM-Name* an oder lassen Sie es leer, um alle SVMs im Cluster zu verwalten.
 .. Geben Sie die Volumes ein, die im Feld *Liste der Volumes include* erkannt werden sollen.
 +
 Sie können das Quell-Volume am geschützten Standort und das replizierte Ziel-Volume am Recovery-Standort eingeben.

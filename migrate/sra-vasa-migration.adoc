@@ -84,7 +84,7 @@ curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?inc
 Löschen Sie VASA Provider nicht.
 
 +
-Sobald der alte VASA Provider angehalten wurde, erfolgt ein Failover des vCenter Servers zu den ONTAP Tools für VMware vSphere. Der Zugriff auf alle Datenspeicher und VMs erfolgt über ONTAP Tools für VMware vSphere.
+Nachdem der alte VASA-Provider gestoppt wurde, führt der vCenter Server ein Failover auf ONTAP tools for VMware vSphere durch. Alle Datenspeicher und VMs sind nun über ONTAP tools for VMware vSphere zugänglich und werden von diesen bedient.
 
 . Die NFS- und VMFS-Datenspeicher, die aus den ONTAP-Tools für VMware vSphere 9.xxx migriert wurden, sind erst in den ONTAP-Tools für VMware vSphere 10.4 sichtbar, nachdem der Datastore-Erkennungsauftrag ausgelöst wurde. Das dauert bis zu 30 Minuten. Überprüfen Sie, ob die Datenspeicher auf der Übersichtsseite der ONTAP-Tools für die Benutzeroberflächenseite des VMware vSphere-Plugins sichtbar sind.
 . Führen Sie die Patch-Migration mit der folgenden API in Swagger oder in Postman durch:
@@ -135,7 +135,7 @@ Nach Ausführung der Patch-Migrations-API halten alle VMs die Storage-Richtlinie
 Gehen Sie nach Abschluss der Migration und Registrierung der ONTAP-Tools 10.4 auf dem vCenter Server wie folgt vor:
 
 * Warten Sie, bis *Discovery* abgeschlossen ist. Die Zertifikate werden automatisch auf allen Hosts aktualisiert.
-* Warten Sie ausreichend Zeit, bevor Sie den Datastore- und VM-Betrieb initiieren. Die erforderliche Wartezeit variiert je nach Anzahl der Hosts, Datastores und virtuellen Maschinen in der Konfiguration. Eine Nichtbeachtung der Wartezeit kann zu sporadischen Betriebsfehlern führen.
+* Warten Sie ausreichend, bevor Sie Datenspeicher- und virtuelle Maschinenvorgänge starten. Die erforderliche Wartezeit hängt von der Anzahl der Hosts, Datenspeicher und virtuellen Maschinen in der Konfiguration ab. Andernfalls kann es zu zeitweiligen Betriebsausfällen kommen.
 
 
 Wenn der Compliance-Zustand der virtuellen Maschine nach dem Upgrade veraltet ist, wenden Sie die Speicherrichtlinie erneut an, indem Sie die folgenden Schritte ausführen:
@@ -161,7 +161,7 @@ Der Compliance-Status unter *VM Storage Policy Compliance* wird nun als konform 
 == Schritte zum Aktualisieren des Storage Replication Adapters (SRA)
 
 .Bevor Sie beginnen
-Im Wiederherstellungsplan bezeichnet der geschützte Standort den Ort, an dem die VMs aktuell ausgeführt werden, während der Wiederherstellungsstandort der Ort ist, an dem die VMs wiederhergestellt werden. Die SRM-Oberfläche zeigt den Status des Wiederherstellungsplans mit Details zu den geschützten und den Wiederherstellungsstandorten an. Im Wiederherstellungsplan sind die Schaltflächen „BEREINIGEN“ und „NEU SCHÜTZEN“ deaktiviert, während die Schaltflächen „TESTEN“ und „AUSFÜHREN“ aktiviert bleiben. Dies zeigt an, dass der Standort für die Datenwiederherstellung vorbereitet ist. Stellen Sie vor der Migration des SRA sicher, dass sich ein Standort im geschützten Zustand und der andere im Wiederherstellungszustand befindet.
+Im Wiederherstellungsplan bezeichnet der geschützte Standort den Ort, an dem die VMs aktuell ausgeführt werden, während der Wiederherstellungsstandort der Ort ist, an dem die VMs wiederhergestellt werden. Die SRM-Oberfläche zeigt den Status des Wiederherstellungsplans mit Details zu den geschützten und den Wiederherstellungsstandorten an. Im Wiederherstellungsplan sind die Schaltflächen *CleanupP* und *Reprotect* deaktiviert, während die Schaltflächen TEST und RUN aktiviert bleiben. Dies zeigt an, dass der Standort für die Datenwiederherstellung vorbereitet ist. Stellen Sie vor der Migration des SRA sicher, dass sich ein Standort im geschützten Zustand und der andere im Wiederherstellungszustand befindet.
 
 
 NOTE: Starten Sie die Migration nicht, wenn das Failover abgeschlossen wurde, der erneute Schutz jedoch aussteht. Stellen Sie sicher, dass der erneute Schutz abgeschlossen ist, bevor Sie mit der Migration fortfahren. Wenn ein Test-Failover ausgeführt wird, bereinigen Sie das Test-Failover, und starten Sie die Migration.
@@ -176,6 +176,7 @@ NOTE: Starten Sie die Migration nicht, wenn das Failover abgeschlossen wurde, de
 
 . Führen Sie diese Schritte sowohl an Sicherungs- als auch an Recovery-Standorten aus.
 +
+.. link:../manage/enable-services.adoc["Aktivieren Sie ONTAP-Tools für VMware vSphere-Services"]
 .. Installieren Sie ONTAP-Tools für den VMware vSphere 10.4 SRA-Adapter mithilfe der Schritte in link:../protect/configure-on-srm-appliance.html["Konfigurieren Sie SRA auf der VMware Live Site Recovery-Appliance"].
 .. Führen Sie auf der VMware Live Site Recovery-Benutzeroberflächenseite die Vorgänge *Arrays ermitteln* und *Geräte ermitteln* aus und bestätigen Sie, dass die Geräte wie vor der Migration angezeigt werden.
 
