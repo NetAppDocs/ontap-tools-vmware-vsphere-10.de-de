@@ -2,7 +2,7 @@
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
 keywords:  
-summary: - 
+summary: Verbinden Sie eine Datenfestplatte mit einer virtuellen Maschine, um die Speicherkapazität zu erweitern. 
 ---
 = Verbinden oder Trennen einer Datenfestplatte von einer virtuellen Maschine
 :allow-uri-read: 

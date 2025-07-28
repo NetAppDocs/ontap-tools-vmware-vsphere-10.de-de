@@ -94,5 +94,5 @@ Konfigurieren Sie ONTAP-Tools für VMware vSphere, um den Schutz des Host-Cluste
 Planen Sie Backups Ihrer ONTAP Tools für das VMware vSphere Setup, mit dem Sie das Setup bei einem Fehler wiederherstellen können.
 
 [role="quick-margin-list"]
-* link:../manage/manage/enable-backup.html["Erstellen Sie Backup und Recovery der ONTAP Tools Setup"]
+* link:../manage/enable-backup.html["Erstellen Sie Backup und Recovery der ONTAP Tools Setup"]
 
