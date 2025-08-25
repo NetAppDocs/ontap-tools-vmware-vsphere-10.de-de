@@ -95,7 +95,8 @@ Verwenden Sie das folgende Arbeitsblatt, um die erforderlichen Informationen fü
 
 | Gateway für die IPv6-Adresse (optional) |  
 |===
-Erstellen Sie DNS-Einträge für alle oben genannten IP-Adressen. Bevor Sie Hostnamen zuweisen, ordnen Sie sie den freien IP-Adressen auf dem DNS zu. Alle IP-Adressen sollten sich im gleichen VLAN befinden, das für die Bereitstellung ausgewählt wurde.
+
+NOTE: Erstellen Sie DNS-Einträge für alle oben genannten IP-Adressen. Bevor Sie Hostnamen zuweisen, ordnen Sie sie den freien IP-Adressen auf dem DNS zu. Alle IP-Adressen sollten sich im gleichen VLAN befinden, das für die Bereitstellung ausgewählt wurde.
 
 
 

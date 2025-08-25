@@ -11,7 +11,10 @@ summary: Erfahren Sie mehr über den Vergleich der Funktionen der ONTAP Tools f�
 
 
 [role="lead"]
-Erfahren Sie, ob eine Migration von ONTAP-Tools für VMware vSphere 9 zu ONTAP-Tools für VMware vSphere 10.1 oder höhere Versionen die richtige Lösung für Sie ist. Aktuelle Informationen zur Kompatibilität finden Sie unter https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
+Erfahren Sie, ob die Migration von ONTAP tools for VMware vSphere 9 auf ONTAP tools for VMware vSphere 10.1 oder spätere Versionen das Richtige für Sie ist.
+
+
+NOTE: Die aktuellsten Informationen zur Kompatibilität finden Sie unter https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] .
 
 [cols="20%,25%,25%,30%"]
 |===
@@ -21,7 +24,7 @@ Erfahren Sie, ob eine Migration von ONTAP-Tools für VMware vSphere 9 zu ONTAP-T
 | Wichtiges Wertversprechen | Optimieren und vereinfachen Sie den täglichen Betrieb von 0 bis 2 durch verbesserte Sicherheits-, Compliance- und Automatisierungsfunktionen | Entwicklung der ONTAP Tools 10.x in Richtung 9.xx-Parität mit erweiterter Hochverfügbarkeit, Performance und Skalierungslimits | Erweiterte Unterstützung auf FC für VMFS und VVols, und NVMe-of/FC, NVMe-of/TCP nur für VMFS. Benutzerfreundliche NetApp SnapMirror, einfache Einrichtung von vSphere Metro Storage-Clustern und Unterstützung für VMware Live Site Recovery an drei Standorten 
 
 
-| ONTAP Release Qualification | ONTAP 9.9.1 bis ONTAP 9.15.1 | ONTAP 9.12.1 bis ONTAP 9.14.1 | ONTAP 9.12.1 bis ONTAP 9.15.1 für ONTAP Tools 10.2 ONTAP 9.14.1, 9.15.1 und 9.16.0 für ONTAP Tools 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 und 9.16.1 für ONTAP Tools 10.4 
+| ONTAP Release Qualification | ONTAP 9.9.1 bis ONTAP 9.16.1 | ONTAP 9.12.1 bis ONTAP 9.14.1 | ONTAP 9.12.1 bis ONTAP 9.15.1 für ONTAP -Tools 10.2.  ONTAP 9.14.1, 9.15.1, 9.16.0 und 9.16.1 für ONTAP -Tools 10.3.  ONTAP 9.14.1, 9.15.1, 9.16.0 und 9.16.1 für ONTAP -Tools 10.4.  ONTAP 9.16.1P3 und höher ist für ONTAP Tools 10.4 erforderlich, wenn ASA R2-Systeme verwendet werden. 
 
 
 | VMware Versionsunterstützung | VSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 auf VMware Live Site Recovery 9.0 | VSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7 auf VMware Live Site Recovery 9.0 | VSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7 auf VMware Live Site Recovery 9.0 
