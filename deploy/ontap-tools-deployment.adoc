@@ -64,7 +64,7 @@ NOTE: Speichern Sie niemals ONTAP Tools für VMware vSphere Virtual Machine auf 
 . Geben Sie im Feld *Namen und Ordner auswählen* den Namen der virtuellen Maschine ein und wählen Sie deren Speicherort.
 +
 ** Wenn Sie die vCenter Server 8.0.3-Version verwenden, wählen Sie die Option *Hardware dieser virtuellen Maschine anpassen* aus, die einen zusätzlichen Schritt mit dem Namen *Hardware anpassen* aktiviert, bevor Sie zum Fenster *Ready to Complete* gehen.
-** Wenn Sie die vCenter Server 7.0.3-Version verwenden, folgen Sie den Schritten im Abschnitt *wie geht es weiter?* am Ende der Bereitstellung.
+** Wenn Sie die Version 7.0.3 von vCenter Server verwenden, befolgen Sie die Schritte im Abschnitt *Was kommt als Nächstes?* am Ende der Bereitstellung.image:../media/select-name.png["Wählen Sie einen Namen und einen Ordner"]
 
 
 . Wählen Sie eine Computerressource aus und wählen Sie *Weiter*. Aktivieren Sie optional das Kontrollkästchen, um die bereitgestellte VM automatisch einzuschalten*.
@@ -72,7 +72,7 @@ NOTE: Speichern Sie niemals ONTAP Tools für VMware vSphere Virtual Machine auf 
 . Lesen und akzeptieren Sie die Lizenzvereinbarung und wählen Sie *Weiter*.
 . Wählen Sie den Speicher für die Konfiguration und das Festplattenformat aus und wählen Sie *Weiter*.
 . Wählen Sie für jedes Quellnetzwerk das Zielnetzwerk aus und wählen Sie *Weiter*.
-. Füllen Sie im Fenster *Vorlage anpassen* die erforderlichen Felder aus und wählen Sie *Weiter*.
+. Füllen Sie im Fenster *Vorlage anpassen* die erforderlichen Felder aus und wählen Sie *Weiter*.image:../media/customize-temp.png["Vorlage anpassen"]
 +
 ** Die Informationen werden während der Installation validiert. Wenn eine Abweichung vorliegt, wird eine Fehlermeldung auf der Webkonsole angezeigt, und Sie werden aufgefordert, sie zu korrigieren.
 ** Hostnamen müssen Buchstaben (A–Z, a–z), Ziffern (0–9) und Bindestriche (-) enthalten. Geben Sie zum Konfigurieren von Dual-Stack den Hostnamen an, der der IPv6-Adresse zugeordnet ist.
@@ -84,7 +84,7 @@ NOTE: Pure IPv6 wird nicht unterstützt. Der gemischte Modus wird mit VLAN unter
 ** IPv4 ist die IP-Adresskomponente der Knotenkonfiguration, die zur Aktivierung von Diagnose-Shell und SSH-Zugriff auf den Knoten für Debugging und Wartung verwendet werden kann.
 
 
-. Aktivieren Sie bei Verwendung der vCenter Server 8.0.3-Version im Fenster *Hardware anpassen* die Optionen *CPU Hot add* und *Memory Hot Plug*, um HA-Funktionen zu ermöglichen.
+. Wenn Sie die Version 8.0.3 von vCenter Server verwenden, aktivieren Sie im Fenster *Hardware anpassen* die Optionen *CPU Hot Add* und *Memory Hot Plug*, um die HA-Funktionalität zu ermöglichen.image:../media/customize-hw.png["Hardware anpassen"]
 . Überprüfen Sie die Details im Fenster *Ready to Complete*, wählen Sie *Finish*.
 +
 Wenn die Bereitstellungsaufgabe erstellt wird, wird der Fortschritt in der vSphere-Taskleiste angezeigt.
