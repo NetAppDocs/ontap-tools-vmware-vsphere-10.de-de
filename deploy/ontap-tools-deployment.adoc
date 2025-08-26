@@ -94,7 +94,7 @@ Wenn die Bereitstellungsaufgabe erstellt wird, wird der Fortschritt in der vSphe
 
 Sie können den Fortschritt der Installation in der Webkonsole der VM verfolgen.
 
-Wenn im OVF-Formular Abweichungen auftreten, wird in einem Dialogfeld eine Korrekturmaßnahme angezeigt. Verwenden Sie die Tab-Taste, um zu navigieren, die erforderlichen Änderungen vorzunehmen, und wählen Sie "OK.Sie haben drei Versuche, Probleme zu beheben. Wenn nach drei Versuchen weiterhin Probleme auftreten, wird der Installationsvorgang beendet, und es wird empfohlen, die Installation auf einer neuen virtuellen Maschine erneut zu versuchen.
+Wenn im OVF-Formular Unstimmigkeiten auftreten, werden Sie in einem Dialogfeld aufgefordert, Korrekturmaßnahmen zu ergreifen.  Navigieren Sie mit der Tabulatortaste, nehmen Sie die erforderlichen Änderungen vor und wählen Sie *OK*.  Sie haben drei Versuche, etwaige Probleme zu lösen.  Wenn die Probleme nach drei Versuchen weiterhin bestehen, wird der Installationsvorgang abgebrochen und es wird empfohlen, die Installation auf einer neuen virtuellen Maschine erneut zu versuchen.
 
 .Was kommt als Nächstes?
 Wenn Sie ONTAP-Tools für VMware vSphere mit vCenter Server 7.0.3 bereitstellen, führen Sie diese Schritte nach der Bereitstellung aus.
