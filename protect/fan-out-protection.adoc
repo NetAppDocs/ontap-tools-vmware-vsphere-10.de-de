@@ -42,6 +42,6 @@ Die folgende Abbildung zeigt die Konfiguration des Lüfterschutzes: image:../med
 
 *Schritte*
 
-. Erstellen Sie einen neuen Platzhalter-Datastore. Siehe https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["Wählen Sie einen Platzhalter Datastore aus"]
+. Erstellen Sie einen neuen Platzhalter-Datenspeicher. Verweisen https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Wählen Sie einen Platzhalter Datastore aus"]
 . Fügen Sie den Datastore zum Schutz des Host-Clusters hinzulink:../manage/edit-hostcluster-protection.html["Geschütztes Host-Cluster ändern"]. Sie müssen sowohl asynchrone als auch synchrone Richtlinientypen hinzufügen.
 
