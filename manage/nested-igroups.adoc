@@ -13,9 +13,9 @@ summary:
 [role="lead"]
 Beim Verwalten von ONTAP -Tool-VMs und ONTAP Speichersystemen ist es wichtig, das Verhalten von igroups zu verstehen, insbesondere beim Migrieren von Datenspeichern aus Umgebungen ohne ONTAP Tools zur Verwaltung von ONTAP Tools.  In diesem Abschnitt wird beschrieben, wie igroups während dieses Übergangs aktualisiert werden.
 
-ONTAP tools for VMware vSphere 10.4 vereinfachen die Datenspeicherverwaltung durch Automatisierung der Erstellung und Wartung von ONTAP und vCenter-Objekten in VMware-Rechenzentrumsumgebungen.
+Beginnend mit den ONTAP tools for VMware vSphere 10.4 wird die Datenspeicherverwaltung durch die automatische Erstellung und Wartung von ONTAP und vCenter-Objekten in VMware-Rechenzentrumsumgebungen optimiert.
 
-ONTAP tools for VMware vSphere 10.4 interpretieren igroups in zwei verschiedenen Kontexten:
+ONTAP tools for VMware vSphere interpretieren igroups in zwei verschiedenen Kontexten:
 
 .Von Nicht- ONTAP -Tools verwaltete igroups
 Als Speicheradministrator können Sie igroups auf dem ONTAP -System als flache oder verschachtelte Strukturen erstellen.  Die Abbildung zeigt eine flache igroup, die im ONTAP -System erstellt wurde.
@@ -23,7 +23,7 @@ Als Speicheradministrator können Sie igroups auf dem ONTAP -System als flache o
 image:../media/non-otv-managed.png["Von Nicht- ONTAP -Tools verwaltete igroup"]
 
 .Von ONTAP -Tools verwaltete igroups
-Wenn Sie Datenspeicher erstellen, erstellen ONTAP tools for VMware vSphere 10.4 automatisch igroups mithilfe einer verschachtelten Struktur für eine einfachere LUN-Zuordnung.
+Wenn Sie Datenspeicher erstellen, erstellen ONTAP tools for VMware vSphere automatisch igroups mithilfe einer verschachtelten Struktur für eine einfachere LUN-Zuordnung.
 
 Wenn beispielsweise Datastore1 erstellt und auf den Hosts 1, 2 und 3 gemountet wird und ein neuer Datastore (Datastore2) erstellt und auf den Hosts 3, 4 und 5 gemountet wird, verwenden ONTAP -Tools die igroup auf Hostebene für eine effiziente Verwaltung erneut.
 

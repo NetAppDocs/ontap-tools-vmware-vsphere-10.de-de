@@ -12,5 +12,5 @@ entries:
   url: "/deploy/pre-deploy-checks.html"
 - title: Implementieren Sie ONTAP-Tools für VMware vSphere
   url: "/deploy/ontap-tools-deployment.html"
-- title: Fehlercodes für die Bereitstellung
+- title: Beheben von Bereitstellungsfehlern
   url: "/deploy/deployment-error-codes.html"

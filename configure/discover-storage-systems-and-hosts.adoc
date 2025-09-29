@@ -26,7 +26,7 @@ Bei der Erkennung der Speichersysteme erfasst ONTAP-Tools für VMware vSphere In
 
 .Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.
-. Klicken Sie mit der rechten Maustaste auf das gewünschte Rechenzentrum und wählen Sie *NetApp ONTAP Tools* > *Hostdaten aktualisieren* .
+. Klicken Sie mit der rechten Maustaste auf das gewünschte Rechenzentrum und wählen Sie * NetApp ONTAP -Tools* > *Hostdaten aktualisieren*.
 +
 Bestätigen Sie im Dialogfeld *Bestätigen* Ihre Auswahl.
 

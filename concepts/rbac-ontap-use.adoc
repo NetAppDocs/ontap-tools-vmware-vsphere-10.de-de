@@ -17,7 +17,7 @@ Es gibt verschiedene Aspekte der ONTAP Tools für die Implementierung der rollen
 
 == Überblick über den Konfigurationsprozess
 
-Die ONTAP Tools für VMware vSphere 10 unterstützen das Erstellen eines ONTAP-Benutzers mit einer benutzerdefinierten Rolle. Die Definitionen sind in eine JSON-Datei verpackt, die Sie in das ONTAP Cluster hochladen können. Sie können den Benutzer erstellen und die Rolle an Ihre Umgebung und Sicherheitsanforderungen anpassen.
+ONTAP tools for VMware vSphere umfassen Unterstützung für die Erstellung eines ONTAP Benutzers mit einer benutzerdefinierten Rolle.  Die Definitionen sind in einer JSON-Datei verpackt, die Sie in den ONTAP Cluster hochladen können.  Sie können den Benutzer erstellen und die Rolle an Ihre Umgebung und Sicherheitsanforderungen anpassen.
 
 Die wichtigsten Konfigurationsschritte werden auf einer der folgenden Ebenen beschrieben. link:../configure/configure-user-role-and-privileges.html["Konfigurieren Sie ONTAP-Benutzerrollen und -Berechtigungen"]Weitere Informationen finden Sie unter.
 

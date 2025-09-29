@@ -4,12 +4,22 @@ title: Managen Sie ONTAP Tools für VMware vSphere
 entries:
 - title: Dashboard-Übersicht über die ONTAP Tools für VMware vSphere
   url: "/configure/dashboard-overview.html"
-- title: Benutzeroberfläche von ONTAP Tools Manager
-  url: "/configure/manager-user-interface.html"
 - title: Verstehen Sie igroups und Exportrichtlinien
   url: "/manage/igroup-workflow.html"
 - title: Verstehen Sie die von ONTAP -Tools verwalteten igroups
   url: "/manage/nested-igroups.html"
+- title: Benutzeroberfläche von ONTAP Tools Manager
+  url: "/manage/manager-user-interface.html"
+- title: Verwalten der ONTAP Tools Manager-Einstellungen
+  entries:
+  - title: AutoSupport -Einstellungen bearbeiten
+    url: "/manage/edit-autosupport.html"
+  - title: Fügen Sie NTP-Server hinzu
+    url: "/manage/add-ntpserver.html"
+  - title: Setzen Sie die VASA-Provider- und SRA-Anmeldeinformationen zurück
+    url: "/manage/reset-vasa-sra-credentials.html"
+  - title: Backup-Einstellungen bearbeiten
+    url: "/manage/backup-settings.html"
 - title: Aktivieren Sie ONTAP-Tools für VMware vSphere-Services
   url: "/manage/enable-services.html"
 - title: Ändern Sie ONTAP-Tools für die VMware vSphere Konfiguration
@@ -38,7 +48,7 @@ entries:
   url: "/manage/manage-storage-threshold.html"
 - title: Managen von Storage-Back-Ends
   url: "/manage/storage-backend.html"
-- title: Verwalten von vCenter Server-Instanzen
+- title: Verwalten von vCenter Server-Instanzen in ONTAP -Tools
   url: "/manage/manage-vcenter.html"
 - title: Verwalten von Zertifikaten
   url: "/manage/certificate-manage.html"
@@ -52,10 +62,10 @@ entries:
     url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: Aktualisieren Sie den vCenter-Server und die ONTAP-Anmeldeinformationen
     url: "/manage/update-vcenter-credentials.html"
+  - title: Zertifikatvalidierungsflag ändern
+    url: "/manage/change-valid-flag.html"
 - title: Berichte zu ONTAP Tools
   url: "/manage/reports.html"
-- title: Sammeln Sie die Protokolldateien
-  url: "/manage/collect-the-log-files.html"
 - title: Management von Virtual Machines
   entries:
   - title: Überlegungen zum Migrieren oder Klonen von Virtual Machines
@@ -86,15 +96,8 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: Entfernen Sie den Host-Cluster-Schutz
     url: "/manage/delete-hostcluster-protection.html"
-- title: Deaktivieren Sie AutoSupport
-  url: "/manage/disable-autosupport.html"
-- title: Aktualisieren Sie die AutoSupport-Proxy-URL
-  url: "/manage/update-proxyurl.html"
-- title: Fügen Sie NTP-Server hinzu
-  url: "/manage/add-ntpserver.html"
-- title: Erstellen Sie ein Backup und stellen Sie die Einrichtung der ONTAP Tools
-    wieder her
-  url: "/manage/enable-backup.html"
+- title: Wiederherstellen des ONTAP Tools-Setups
+  url: "/manage/recover-backup.html"
 - title: Deinstallieren Sie die ONTAP-Tools für VMware vSphere
   url: "/manage/uninstall-deployment.html"
 - title: Entfernen Sie FlexVol Volumes

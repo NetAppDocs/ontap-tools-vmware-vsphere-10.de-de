@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Fügen Sie vCenter Server-Instanzen zu den ONTAP-Tools für VMware vSphere hinzu, um Ihre virtuellen Datastores in Ihrer vCenter Server-Umgebung zu konfigurieren, zu managen und zu sichern. 
 ---
-= Fügen Sie vCenter Server-Instanzen hinzu
+= vCenter Server-Instanzen zu ONTAP -Tools hinzufügen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,14 +13,14 @@ summary: Fügen Sie vCenter Server-Instanzen zu den ONTAP-Tools für VMware vSph
 [role="lead"]
 Fügen Sie vCenter Server-Instanzen zu den ONTAP-Tools für VMware vSphere hinzu, um Ihre virtuellen Datastores in Ihrer vCenter Server-Umgebung zu konfigurieren, zu managen und zu sichern. Wenn Sie mehrere vCenter Server-Instanzen hinzufügen, sind für die sichere Kommunikation zwischen ONTAP-Tools und jedem vCenter Server benutzerdefinierte CA-Zertifikate erforderlich.
 
-*Über diese Aufgabe*
-
-Durch die Integration mit vCenter können Sie mit ONTAP Tools Storage-Aufgaben wie Bereitstellung, Snapshots und Datensicherung direkt aus dem vSphere Client ausführen, sodass keine separaten Storage-Management-Konsolen mehr erforderlich sind.
+.Über diese Aufgabe
+ONTAP -Tools lassen sich in vCenter Server integrieren, um Speicheraufgaben wie Bereitstellung, Snapshots und Datenschutz direkt vom vSphere-Client aus durchzuführen.
 
 .Schritte
-. Öffnen Sie einen Webbrowser, und navigieren Sie zur URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Öffnen Sie einen Webbrowser und rufen Sie die URL auf: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie *vCenters* > *Add*, um die vCenter Server-Instanzen zu integrieren. Geben Sie die vCenter-IP-Adresse oder den Hostnamen, den Benutzernamen, das Kennwort und die Portdetails an.
+. Rufen Sie in den erweiterten Optionen das vCenter Server-Zertifikat automatisch ab (autorisieren Sie es) oder laden Sie es manuell hoch.
 +
 
 NOTE: Sie benötigen kein Administratorkonto, um vCenter Instanzen zu ONTAP Tools hinzuzufügen. Sie können eine benutzerdefinierte Rolle ohne Administratorkonto mit eingeschränkten Berechtigungen erstellen. Weitere Informationen finden Sie unter link:../concepts/rbac-vcenter-use.html["Nutzen Sie die RBAC für vCenter Server mit ONTAP Tools für VMware vSphere 10"] .
@@ -29,7 +29,7 @@ NOTE: Sie benötigen kein Administratorkonto, um vCenter Instanzen zu ONTAP Tool
 
 Das Hinzufügen einer vCenter Server-Instanz zu ONTAP Tools löst automatisch die folgenden Aktionen aus:
 
-* Das vCenter Client-Plug-in ist als Remote-Plug-in registriert.
+* ONTAP -Tools registrieren das vCenter-Client-Plug-In als Remote-Plug-In.
 * Benutzerdefinierte Privileges für die Plug-ins und APIs werden auf die vCenter Server Instanz angewendet.
 * Zum Verwalten der Benutzer werden benutzerdefinierte Rollen erstellt.
 * Das Plug-in wird als Verknüpfung auf der vSphere-Benutzeroberfläche angezeigt.

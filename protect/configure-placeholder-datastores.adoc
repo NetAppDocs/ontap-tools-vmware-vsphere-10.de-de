@@ -2,7 +2,7 @@
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Sie sollten einen Platzhalter-Datenspeicher konfigurieren, um Platz im vCenter-Inventar am Wiederherstellungsstandort für die geschützte virtuelle Maschine (VM) zu reservieren. Der Platzhalter-Datenspeicher muss nicht groß sein, da die Platzhalter-VMs klein sind und nur wenige hundert Kilobyte oder weniger belegen.' 
+summary: 'Konfigurieren Sie einen Platzhalterdatenspeicher, um im vCenter-Inventar am Wiederherstellungsstandort Speicherplatz für geschützte virtuelle Maschinen (VMs) zu reservieren.  Platzhalter-Datenspeicher erfordern nur minimale Kapazität, da Platzhalter-VMs klein sind und normalerweise nur einige hundert Kilobyte verwenden.' 
 ---
 = Platzhalter-Datastores konfigurieren
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: 'Sie sollten einen Platzhalter-Datenspeicher konfigurieren, um Platz im
 
 
 [role="lead"]
-Sie sollten einen Platzhalterdatenspeicher konfigurieren, der im vCenter-Inventar am Wiederherstellungsstandort Platz für die geschützte virtuelle Maschine (VM) reserviert. Der Platzhalterdatenspeicher muss nicht groß sein, da die Platzhalter-VMs klein sind und nur wenige hundert Kilobyte oder weniger belegen.
+Konfigurieren Sie einen Platzhalterdatenspeicher, um im vCenter-Inventar am Wiederherstellungsstandort Speicherplatz für geschützte virtuelle Maschinen (VMs) zu reservieren.  Platzhalter-Datenspeicher erfordern nur minimale Kapazität, da Platzhalter-VMs klein sind und normalerweise nur einige hundert Kilobyte verwenden.
 
 .Bevor Sie beginnen
-* Sie sollten die geschützten und Recovery-Standorte verbunden haben.
-* Sie sollten Ihre Ressourcenzuordnungen konfiguriert haben.
+* Stellen Sie sicher, dass die geschützten Sites und die Wiederherstellungssites verbunden sind.
+* Überprüfen Sie, ob die Ressourcenzuordnungen konfiguriert wurden.
 
 
 .Schritte
@@ -25,7 +25,7 @@ Sie sollten einen Platzhalterdatenspeicher konfigurieren, der im vCenter-Inventa
 . Wählen Sie den entsprechenden Datastore aus und wählen Sie *OK*.
 +
 
-NOTE: Als Platzhalter-Datenspeicher können lokale oder Remote-Standorte verwendet werden und sollten nicht repliziert werden.
+NOTE: Platzhalter-Datenspeicher können sich auf einem lokalen oder Remote-Speicher befinden, erfordern jedoch keine Replikation.
 
 . Wiederholen Sie die Schritte 3 bis 5, um einen Platzhalterdatenspeicher für den Recovery-Standort zu konfigurieren.
 

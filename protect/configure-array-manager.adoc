@@ -30,8 +30,8 @@ SRA unterstützt das Management auf Cluster-Ebene und das Management der SVM. We
 .. Wählen Sie im Feld *SRA Typ* *NetApp Storage Replication Adapter für ONTAP* aus.
 .. Geben Sie die Informationen ein, die für eine Verbindung zum Cluster oder zur SVM benötigen:
 +
-*** Wenn Sie eine Verbindung zu einem Cluster herstellen, sollten Sie die Cluster-Management-LIF eingeben.
-*** Wenn Sie eine direkte Verbindung zu einer SVM herstellen, sollten Sie die IP-Adresse der SVM Management LIF eingeben.
+*** Wenn Sie eine Verbindung zu einem Cluster herstellen, sollten Sie das LIF zur Clusterverwaltung eingeben.
+*** Wenn Sie eine direkte Verbindung zu einem SVM herstellen, sollten Sie die IP-Adresse des SVM-Verwaltungs-LIF eingeben.
 +
 
 NOTE: Beim Konfigurieren des Array Managers sollten Sie dieselbe Verbindung (IP-Adresse) für das Speichersystem verwenden, mit dem das Storage-System in ONTAP Tools für VMware vSphere integriert wurde. Wenn beispielsweise die Array Manager-Konfiguration im Umfang der SVM konfiguriert ist, sollte der Storage unter den ONTAP Tools für VMware vSphere auf SVM-Ebene hinzugefügt werden.

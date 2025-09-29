@@ -13,7 +13,7 @@ summary: Richten Sie mit diesem Schnellstartabschnitt ONTAP tools for VMware vSp
 [role="lead"]
 Richten Sie mit diesem Schnellstartabschnitt ONTAP tools for VMware vSphere ein.
 
-Zunächst implementieren Sie ONTAP Tools für VMware vSphere als eine kleine Single-Node-Konfiguration, die wichtige Services zur Unterstützung von NFS- und VMFS-Datastores bietet. Wenn Sie Ihre Konfiguration für VVols-Datastores und Hochverfügbarkeit (HA) erweitern müssen, sind Sie nach Abschluss dieses Workflows ebenfalls dafür tätig. Weitere Informationen finden Sie im link:../deploy/ha-workflow.html["HA-Implementierungs-Workflow"].
+Zunächst stellen Sie ONTAP tools for VMware vSphere als kleine Einzelknotenkonfiguration bereit, die Kerndienste zur Unterstützung von NFS- und VMFS-Datenspeichern bereitstellt.  Um Ihre Konfiguration für zusätzliche Container pro Dienst, verbesserte Ausfallsicherheit oder die Verwendung von vVols -Datenspeichern und Hochverfügbarkeit (HA) zu erweitern, schließen Sie zuerst diesen Workflow ab und fahren Sie dann mit den Erweiterungsschritten fort. Weitere Informationen finden Sie im link:../deploy/ha-workflow.html["HA-Implementierungs-Workflow"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] Planen Sie Ihre Implementierung
 [role="quick-margin-para"]
@@ -91,8 +91,9 @@ Konfigurieren Sie ONTAP-Tools für VMware vSphere, um den Schutz des Host-Cluste
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png["Neun"] Richten Sie Backup und Recovery für Ihre ONTAP Tools zur Implementierung von VMware vSphere ein
 [role="quick-margin-para"]
-Planen Sie Backups Ihrer ONTAP Tools für das VMware vSphere Setup, mit dem Sie das Setup bei einem Fehler wiederherstellen können.
+Die Sicherung ist in den ONTAP tools for VMware vSphere 10.5 standardmäßig aktiviert und erfolgt alle 10 Minuten.  Planen Sie Backups Ihrer ONTAP tools for VMware vSphere -Setup, mit denen Sie das Setup im Fehlerfall wiederherstellen können.
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html["Erstellen Sie Backup und Recovery der ONTAP Tools Setup"]
+* link:../manage/backup-settings.html["Bearbeiten der Sicherungseinstellungen"]
+* link:../manage/recover-backup.html["Wiederherstellen des ONTAP Tools-Setups"]
 

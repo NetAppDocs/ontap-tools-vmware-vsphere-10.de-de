@@ -4,20 +4,23 @@ sidebar: sidebar
 keywords:  
 summary: Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Daten verwenden. 
 ---
-= Fügen Sie ein Storage-Back-End hinzu
+= Fügen Sie den ONTAP -Tools ein Speicher-Backend hinzu
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Durch das Hinzufügen eines Storage-Backends können Sie ein ONTAP Cluster integrieren.
+Wenn Sie Speicher-Backends zu ONTAP -Tools hinzufügen, können Sie Datenspeicher direkt vom vCenter Server aus bereitstellen und verwalten.
 
-*Über diese Aufgabe*
+Um Speicher-Backends lokal hinzuzufügen, verwenden Sie Cluster- oder SVM-Anmeldeinformationen in der ONTAP Tools-Schnittstelle.  Diese Speicher-Backends sind nur für den ausgewählten vCenter Server verfügbar.  ONTAP -Tools ordnen SVMs dem vCenter Server für die Verwaltung von vVols oder VMFS-Datenspeichern zu.  Für VMFS-Datenspeicher und SRA-Workflows können Sie SVM-Anmeldeinformationen verwenden, ohne dass ein global zugeordneter Cluster erforderlich ist.
 
-Bei mandantenfähige Konfigurationen, bei denen vCenter als Mandant mit einer entsprechenden SVM fungiert, können Sie das Cluster mit dem ONTAP Tools Manager hinzufügen. Verknüpfen Sie das Storage-Backend mit dem vCenter Server, um es global der eingenommenen vCenter Server-Instanz zuzuordnen. Der vCenter Mandant muss die gewünschten Storage Virtual Machines (SVMs) integriert haben. Dadurch kann ein SVM-Benutzer VVols-Datastores bereitstellen. Sie können Storage in vCenter mithilfe der SVM hinzufügen.
+Sie können globale Speicher-Backends mithilfe der ONTAP Cluster-Anmeldeinformationen im ONTAP Tools-Manager hinzufügen.  Globale Speicher-Backends ermöglichen Erkennungs-Workflows zur Identifizierung der für die vVol-Verwaltung benötigten Clusterressourcen.  In Multitenant-Setups können Sie lokal einen SVM-Benutzer hinzufügen, um vVols -Datenspeicher zu verwalten.
 
-Fügen Sie über die Benutzeroberfläche von ONTAP Tools lokale Storage-Back-Ends mit Cluster- oder SVM-Anmeldedaten hinzu. Diese Storage Back-Ends sind auf nur ein vCenter beschränkt. Bei lokaler Verwendung der Cluster-Anmeldedaten werden die zugehörigen SVMs automatisch dem vCenter zugeordnet, um VVols oder VMFS zu managen. Für VMFS-Management, einschließlich SRA, unterstützen ONTAP-Tools SVM-Zugangsdaten, ohne dass ein globales Cluster erforderlich ist.
+Wenn Sie die MetroCluster Unterstützung im ONTAP -System aktivieren, integrieren Sie sowohl Quell- als auch Zielcluster als lokale oder globale Speicher-Backends.
+
+.Bevor Sie beginnen
+Überprüfen Sie, ob das Zertifikat ein gültiges Feld „Subject Alternative Name“ (SAN) enthält.  ONTAP -Systeme verwenden das SAN-Feld, um Cluster- und SVM-Management-LIFs zu identifizieren.
 
 [role="tabbed-block"]
 ====
@@ -35,13 +38,23 @@ NOTE: In einer mandantenfähigen Einrichtung können Sie ein Storage-Back-End-Cl
 
 NOTE: IPv4- und IPv6-Adressenmanagement-LIFs werden unterstützt.
 
+. Rufen Sie die ONTAP Cluster-Zertifikate automatisch ab und autorisieren Sie das Zertifikat oder laden Sie es manuell hoch, indem Sie zu seinem Speicherort navigieren.
++
+
+NOTE: Bei Bedarf können Sie die SAN-Validierung (Subject Alternative Name) über die Wartungskonsole deaktivieren. Anweisungen hierzu finden Sie unterlink:../manage/change-valid-flag.html["Zertifikatvalidierungsflag ändern"] .
+
+. Wenn das von Ihnen hinzugefügte Speicher-Backend Teil einer MetroCluster -Konfiguration ist, zeigt der ONTAP Tools Manager eine Popup-Meldung zum Hinzufügen des Peered-Clusters an.  Wählen Sie *Hinzufügen* und geben Sie die Details für das MetroCluster Peer-Storage-Backend ein.
++
+
+NOTE: Nachdem das ONTAP -System ein Switchover und Switchback durchgeführt hat, führen Sie die Erkennung der ONTAP Tools manuell aus.
+
 
 
 --
 .Die vSphere-Client-Benutzeroberfläche wird verwendet
 --
 
-NOTE: Bei der Konfiguration eines Storage-Backend über die vSphere Client-Benutzeroberfläche ist zu beachten, dass die VVols-Datastores das direkte Hinzufügen eines SVM-Benutzers nicht unterstützen.
+NOTE: vVols -Datenspeicher unterstützen nicht das direkte Hinzufügen eines SVM-Benutzers über die Benutzeroberfläche des vSphere-Clients.
 
 . Melden Sie sich beim vSphere-Client an.
 . Wählen Sie auf der Shortcuts-Seite unter dem Plug-ins-Abschnitt *NetApp ONTAP Tools* aus.
@@ -49,12 +62,22 @@ NOTE: Bei der Konfiguration eines Storage-Backend über die vSphere Client-Benut
 . Fügen Sie das Speicher-Back-End hinzu, und geben Sie die IP-Adresse, den Benutzernamen, das Kennwort und die Portdetails des Servers an.
 +
 
-NOTE: Zum direkten Hinzufügen eines SVM-Benutzers können Cluster-basierte Anmeldedaten und logische Schnittstellen für das IPv4- und IPv6-Adressmanagement hinzugefügt oder SVM-basierte Anmeldedaten mit einer SVM-Management-LIF bereitgestellt werden.
+NOTE: Sie können ein Speicher-Backend mithilfe clusterbasierter Anmeldeinformationen mit IPv4- oder IPv6-Verwaltungs-LIFs hinzufügen.  Um einen SVM-Benutzer direkt hinzuzufügen, geben Sie SVM-basierte Anmeldeinformationen zusammen mit einem SVM-Verwaltungs-LIF an.  Wenn ein Cluster bereits integriert ist, können Sie keinen SVM-Benutzer aus diesem Cluster erneut integrieren.
+
+. Rufen Sie die ONTAP Cluster-Zertifikate automatisch ab und autorisieren Sie das Zertifikat oder laden Sie es manuell hoch, indem Sie zu seinem Speicherort navigieren.
+. Wenn das hinzugefügte Speicher-Backend Teil der MetroCluster -Konfiguration ist, zeigen die ONTAP Tools den Bildschirm * MetroCluster Peer hinzufügen* an.  Wählen Sie *Peer hinzufügen*, um das Peer-Speicher-Backend hinzuzufügen.
++
+
+NOTE: Nachdem das ONTAP -System ein Switchover und Switchback durchgeführt hat, führen Sie die Erkennung der ONTAP Tools manuell aus.
 
 
 
 .Was kommt als Nächstes?
-Die Liste wird aktualisiert, und das neu hinzugefügte Storage-Back-End wird in der Liste angezeigt.
+ONTAP -Tools aktualisieren die Liste, um das neue Speicher-Backend anzuzeigen.
 
 --
 ====
+ONTAP -Tools listen das neu hinzugefügte Speicher-Backend auf der Seite *Speicher-Backends* auf.  Wenn ein Zertifikat in 30 Tagen oder weniger abläuft, zeigen die ONTAP Tools in der Spalte mit dem Ablaufdatum des Zertifikats eine Warnung an.  Nach Ablauf markieren die ONTAP -Tools das Speicher-Backend als unbekannt, da es keine Verbindung zum Speichersystem herstellen kann.
+
+.Verwandte Informationen
+https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_sw_config_configure_clusters.html["Konfigurieren der Cluster in einer MetroCluster -Konfiguration"]

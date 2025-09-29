@@ -13,10 +13,10 @@ summary:
 [role="lead"]
 Initiatorgruppen (igroups) sind Tabellen mit World Wide Port Names (WWPNs) des FC-Protokollhosts oder qualifizierten Knotennamen des iSCSI-Hosts. Sie können Initiatorgruppen definieren und sie LUNs zuordnen, um zu steuern, welche Initiatoren Zugriff auf LUNs haben.
 
-In ONTAP Tools für VMware vSphere 9.x wurden igroups in einer flachen Struktur erstellt und verwaltet, wobei jeder Datastore in vCenter einer einzelnen igroup zugeordnet war. Dieses Modell schränkte die Flexibilität und Wiederverwendung von igroups über mehrere Datastores hinweg ein. ONTAP Tools für VMware vSphere 10.x führt verschachtelte igroups ein, bei denen jeder Datastore in vCenter einer übergeordneten igroup zugeordnet ist, während jeder Host mit einer untergeordneten igroup unter dieser übergeordneten igroup verknüpft ist. Sie können benutzerdefinierte übergeordnete igroups mit benutzerdefinierten Namen für die Wiederverwendung in mehreren Datenspeichern definieren und so eine flexiblere und vernetztere Verwaltung von igroups ermöglichen. Das Verständnis des igroup-Workflows ist für die effektive Verwaltung von LUNs und Datastores in ONTAP Tools für VMware vSphere unerlässlich. Unterschiedliche Workflows erzeugen unterschiedliche igroup-Konfigurationen, wie die folgenden Beispiele zeigen:
+In ONTAP tools for VMware vSphere 9.x wurden igroups in einer flachen Struktur erstellt und verwaltet, wobei jeder Datenspeicher in vCenter einer einzelnen igroup zugeordnet war.  Dieses Modell schränkte die Flexibilität und Wiederverwendung von igroups über mehrere Datenspeicher hinweg ein.  ONTAP tools for VMware vSphere führen verschachtelte igroups ein, bei denen jeder Datenspeicher in vCenter einer übergeordneten igroup zugeordnet ist, während jeder Host mit einer untergeordneten igroup unter dieser übergeordneten igroup verknüpft ist.  Sie können benutzerdefinierte übergeordnete igroups mit benutzerdefinierten Namen zur Wiederverwendung in mehreren Datenspeichern definieren und so eine flexiblere und vernetztere Verwaltung von igroups ermöglichen.  Das Verständnis des igroup-Workflows ist für die effektive Verwaltung von LUNs und Datenspeichern in ONTAP tools for VMware vSphere von entscheidender Bedeutung.  Verschiedene Workflows erzeugen unterschiedliche igroup-Konfigurationen, wie in den folgenden Beispielen gezeigt:
 
 
-NOTE: Die genannten Namen dienen nur zur Veranschaulichung und beziehen sich nicht auf echte igroup-Namen. Von ONTAP-Tools verwaltete igroups verwenden das Präfix „otv_“. Benutzerdefinierte igroups können beliebige Namen erhalten.
+NOTE: Die genannten Namen dienen nur zu Illustrationszwecken und beziehen sich nicht auf echte igroup-Namen.  Von ONTAP -Tools verwaltete igroups verwenden das Präfix „otv_“.  Benutzerdefinierten igroups kann ein beliebiger Name zugewiesen werden.
 
 |===
 
@@ -94,7 +94,7 @@ Unmounten eines Datenspeichers von einem Host
 
 
 
-Die host1Igroup wird aus der Hierarchie entfernt. Untergeordnete Igroups werden nicht explizit gelöscht. Die Löschung erfolgt unter diesen beiden Bedingungen:
+Die Host1I-Gruppe wird aus der Hierarchie entfernt.  Untergeordnete igroups werden nicht explizit gelöscht.  Die Löschung erfolgt unter diesen beiden Bedingungen:
 
 * Wenn keine LUNs zugeordnet sind, löscht das ONTAP-System die untergeordnete igroup.
 * Ein geplanter Bereinigungsauftrag entfernt die nicht mehr vorhandenen untergeordneten Igroups ohne LUN-Zuordnungen. Diese Szenarien gelten nur für von ONTAP-Tools verwaltete Igroups, nicht für benutzerdefinierte Igroups.
@@ -114,7 +114,7 @@ Datenspeicher löschen
 
 
 
-Übergeordnete und untergeordnete igroups werden entfernt, wenn ein anderer Datenspeicher die übergeordnete igroup nicht wiederverwendet. Untergeordnete igroups werden nie explizit gelöscht.
+Übergeordnete und untergeordnete Igroups werden entfernt, wenn ein anderer Datenspeicher die übergeordnete Igroup nicht wiederverwendet.  Untergeordnete igroups werden nie explizit gelöscht
 
 .Beispiel 5:
 Erstellen Sie mehrere Datenspeicher unter einer benutzerdefinierten übergeordneten igroup
@@ -203,7 +203,7 @@ Migration von ONTAP Tools 9 auf 10 (igroup-Normalisierung)
 
 *Arbeitsablauf*
 
-ONTAP-Tools für VMware vSphere 9.x unterstützen keine hierarchischen igroups. Bei der Migration auf Version 10.3 oder höher müssen igroups in die hierarchische Struktur normalisiert werden.
+ONTAP -Tools für VMware vSPhere 9.x-Versionen unterstützen keine hierarchischen igroups.  Während der Migration auf Version 10.3 oder höher müssen igroups in die hierarchische Struktur normalisiert werden.
 
 Vor der Migration:
 

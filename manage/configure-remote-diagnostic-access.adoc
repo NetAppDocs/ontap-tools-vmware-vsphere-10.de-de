@@ -20,7 +20,7 @@ Die VASA Provider-Erweiterung sollte für Ihre vCenter Server-Instanz aktiviert 
 
 Die Verwendung von SSH für den Zugriff auf das Diagnose-Benutzerkonto weist folgende Einschränkungen auf:
 
-* Sie haben nur ein Anmeldekonto pro Aktivierung von SSH.
+* Sie dürfen pro SSH-Aktivierung nur ein Anmeldekonto verwenden.
 * SSH-Zugriff auf das Diagnose-Benutzerkonto ist deaktiviert, wenn eines der folgenden Ereignisse eintritt:
 +
 ** Die Zeit läuft ab.
@@ -35,8 +35,8 @@ Die Anmeldesitzung bleibt nur bis Mitternacht am nächsten Tag gültig.
 .Schritte
 . Öffnen Sie über den vCenter Server eine Konsole für VASA Provider.
 . Melden Sie sich als Wartungbenutzer an.
-. Eingabe `4` Wählen Sie Support und Diagnose aus.
-. Geben Sie ein `2`, um den Zugriff auf die Ferndiagnose aktivieren auszuwählen.
+. Geben Sie ein `4`, um *Support und Diagnose* auszuwählen.
+. Eingeben `2` , um *Zugriff auf Remotediagnose aktivieren* auszuwählen.
 . Eingabe `y` Im Dialogfeld „Bestätigung“ können Sie den Remote-Diagnosezugriff aktivieren.
 . Geben Sie ein Kennwort für den Remote-Diagnosezugriff ein.
 

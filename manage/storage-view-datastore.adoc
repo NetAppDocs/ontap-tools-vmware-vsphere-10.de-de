@@ -14,7 +14,7 @@ summary: Die Ansicht „ONTAP Storage“ unter „Configure“ einer Registerkar
 ONTAP Tools für VMware vSphere zeigt die ONTAP Storage-Seitenansicht der Datastores und ihrer Volumes auf der Registerkarte „Konfigurieren“.
 
 .Schritte
-. Navigieren Sie vom vSphere-Client zum Datastore.
+. Gehen Sie vom vSphere-Client zum Datenspeicher.
 . Wählen Sie im rechten Fensterbereich die Registerkarte *Configure* aus.
 . Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*. Je nach Datenspeichertyp ändert sich die Ansicht. Weitere Informationen finden Sie in der folgenden Tabelle:
 

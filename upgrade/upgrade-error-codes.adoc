@@ -134,9 +134,6 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 099 | Die neue HDD-Ergänzung konnte nicht validiert werden | Fügen Sie im Falle von HA alle Nodes hinzu und bei einer Implementierung ohne HA-System einem Node. 
 
 
-| 108 | Das Seeding des Skripts ist fehlgeschlagen | - 
-
-
 | 109 | Das Backup von persistenten Volume-Daten ist fehlgeschlagen | Prüfen Sie die Upgrade-Protokolle, und versuchen Sie das Upgrade erneut. 
 
 
@@ -162,6 +159,9 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 
 
 | 056 | Löschen der Migrationssicherung fehlgeschlagen | NA 
+
+
+| 090 | Zertifikatsvalidierung für Speicher-Backends und vCenter fehlgeschlagen | Überprüfen Sie die Upgrade-Protokolle und die Protokolldatei unter /var/log/cert_validation_error.log und versuchen Sie das Upgrade erneut. 
 |===
 
 NOTE: Ab ONTAP-Tools für VMware vSphere 10.3 werden Zero RPO nicht unterstützt.

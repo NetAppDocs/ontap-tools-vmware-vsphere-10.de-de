@@ -2,7 +2,7 @@
 permalink: manage/delete-deployment.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: Nach dem Löschen der ONTAP tools for VMware vSphere Bereitstellung sollten Sie die während der Bereitstellung erstellten FlexVolumes bereinigen. Wenn Sie einen dedizierten ONTAP Cluster für Bereitstellungen verwendet haben, sollten Sie die FlexVolumes bereinigen, da die Bereitstellung viele ungenutzte FlexVolumes erzeugt, was zu Leistungseinbußen führt. 
+summary: Wenn Sie einen dedizierten ONTAP Cluster für ONTAP Tools zur VMware Implementierung verwenden, werden viele nicht genutzte FlexVol Volumes erstellt. Nach dem Entfernen von ONTAP-Tools für VMware vSphere sollten Sie die FlexVol-Volumes entfernen, um mögliche Performance-Auswirkungen zu vermeiden. 
 ---
 = Entfernen Sie FlexVol Volumes
 :allow-uri-read: 
@@ -14,7 +14,7 @@ summary: Nach dem Löschen der ONTAP tools for VMware vSphere Bereitstellung sol
 Wenn Sie einen dedizierten ONTAP Cluster für ONTAP Tools zur VMware Implementierung verwenden, werden viele nicht genutzte FlexVol Volumes erstellt. Nach dem Entfernen von ONTAP-Tools für VMware vSphere sollten Sie die FlexVol-Volumes entfernen, um mögliche Performance-Auswirkungen zu vermeiden.
 
 .Schritte
-. Bestimmen Sie die ONTAP-Tools für den VMware vSphere-Bereitstellungstyp aus der ersten Knoten-VM.
+. Bestimmen Sie den Bereitstellungstyp der ONTAP tools for VMware vSphere anhand der VM des ONTAP Tools-Verwaltungsknotens.
 +
 _CAT /opt/netapp/meta/ansible_vars.yaml grep -i Protocol_
 

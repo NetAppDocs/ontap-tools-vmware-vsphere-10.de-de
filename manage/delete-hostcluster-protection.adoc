@@ -14,9 +14,15 @@ summary: Wenn Sie den Host-Cluster-Schutz entfernen, werden die Datastores unges
 Wenn Sie den Host-Cluster-Schutz entfernen, werden die Datastores ungeschützt.
 
 .Schritte
-. Um die geschützten Host-Cluster anzuzeigen, navigieren Sie zu *NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*.
+. Um die Liste der geschützten Host-Cluster anzuzeigen, gehen Sie zu * NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*.
 +
-Auf dieser Seite können Sie die geschützten Host-Cluster zusammen mit ihrem Schutzstatus, der SnapMirror-Beziehung und ihrem entsprechenden SnapMirror-Status überwachen.
+Überwachen Sie auf dieser Seite geschützte Hostcluster, den Schutzstatus, die SnapMirror -Beziehung und den Status.  Wählen Sie Konsistenzgruppen aus, um Kapazität, zugehörige Datenspeicher und untergeordnete Gruppen anzuzeigen.
 
-. Wählen Sie im Fenster *Host Cluster Protection* das Auslassungsmenü für den Cluster aus und wählen Sie dann *Schutz entfernen*.
+. Wählen Sie im Fenster *Hostclusterschutz* das Auslassungsmenü neben dem Cluster und wählen Sie *Schutz entfernen*.
++
+** Wenn Sie den Schutz von einem Hostcluster mit nur einer asynchronen SnapMirror -Beziehung entfernen, müssen Sie die Speicherelemente manuell löschen.  Zu den Speicherelementen gehören Konsistenzgruppen, Volumes (für ONTAP -Systeme), Speichereinheiten (LUNs) und Snapshots.
+** Wenn Sie den Schutz von einem Hostcluster mit nur einer automatisierten, auf Failover-Duplex basierenden SnapMirror -Richtlinienbeziehung und einer nicht hierarchischen Konsistenzgruppe entfernen, können Sie die zugehörigen Speicherelemente auf dem sekundären Speicher direkt vom selben Bildschirm aus löschen.
+** Wenn Sie den Schutz eines Hostclusters sowohl mit SnapMirror -Richtlinien als auch mit einer hierarchischen Konsistenzgruppe für Sicherungen entfernen, wird eine Warnung zu den Auswirkungen auf die Sicherung angezeigt.  Bestätigen Sie, um fortzufahren.  Nach der Bestätigung löschen Sie die zugehörigen Speicherelemente auf dem Sekundärspeicher.  Wenn Sie keine Bereinigung durchführen, verbleiben die Speicherelemente auf dem sekundären Standort.
+
+
 

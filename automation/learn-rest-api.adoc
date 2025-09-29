@@ -50,7 +50,7 @@ Die ONTAP-Tools für VMware vSphere 10 REST API führen die meisten Anfragen syn
 Es gibt mehrere Aspekte der ONTAP Tools Manager Umgebung, die Sie berücksichtigen sollten.
 
 .Virtual Machine
-ONTAP Tools für VMware vSphere 10 werden mit der vSphere Remote-Plug-in-Architektur implementiert. Die Software, einschließlich der Unterstützung für die REST-API, wird auf einer separaten Virtual Machine ausgeführt.
+ONTAP tools for VMware vSphere 10 werden mithilfe der vSphere-Remote-Plug-In-Architektur bereitgestellt.  Die Software, einschließlich der Unterstützung für die REST-API, wird in einer separaten virtuellen Maschine ausgeführt.
 
 .IP-Adresse des ONTAP Tools
 Die ONTAP Tools für VMware vSphere 10 bieten eine einzige IP-Adresse, die ein Gateway für die Funktionen der Virtual Machine bereitstellt. Sie müssen die Adresse während der Erstkonfiguration angeben und sie ist einer internen Komponente des Load Balancers zugewiesen. Die Adresse wird von der Benutzeroberfläche des ONTAP Tools Managers sowie für den direkten Zugriff auf die Dokumentationsseite und die REST-API von Swagger verwendet.

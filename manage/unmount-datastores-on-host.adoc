@@ -15,7 +15,7 @@ Durch die Unmounten der Datastore-Aktion wird ein NFS- oder VMFS-Datastore von E
 
 .Schritte
 . Melden Sie sich beim vSphere-Client an.
-. Klicken Sie mit der rechten Maustaste auf ein NFS- oder VMFS-Datastore-Objekt und wählen Sie *Datastore unmounten* aus.
+. Klicken Sie mit der rechten Maustaste auf ein NFS- oder VMFS-Datenspeicherobjekt und wählen Sie *Datenspeicher aushängen*.
 +
 Ein Dialogfeld wird geöffnet und listet die ESXi-Hosts auf, auf denen der Datastore gemountet ist. Wenn der Vorgang auf einem geschützten Datastore ausgeführt wird, wird eine Warnmeldung auf dem Bildschirm angezeigt.
 

@@ -27,8 +27,8 @@ Durch die Konfiguration von SRA auf der VMware Live Site Recovery-Appliance werd
 . Laden Sie die Datei _.tar.gz_ in die VMware Live Site Recovery hoch.
 . Melden Sie sich mit einem Administratorkonto über einen SSH-Client wie PuTTY bei der VMware Live Site Recovery-Appliance an.
 . Wechseln Sie mit dem Befehl zum Root-Benutzer: `su root`
-. Führen Sie den Befehl aus `cd /var/log/vmware/srm` , um zum Protokollverzeichnis zu navigieren.
-. Geben Sie am Protokollspeicherort den Befehl ein, um die von SRA verwendete Docker-ID zu erhalten: `docker ps -l`
+. Führen Sie den Befehl aus `cd /var/log/vmware/srm` um zum Protokollverzeichnis zu gelangen.
+. Geben Sie am Protokollspeicherort den Befehl ein, um die von SRA verwendete Docker-ID abzurufen: `docker ps -l`
 . Um sich bei der Container-ID anzumelden, geben Sie den Befehl ein: `docker exec -it -u srm <container id> sh`
 . Konfigurieren Sie VMware Live Site Recovery mit ONTAP tools for VMware vSphere IP-Adresse und das Kennwort mithilfe des folgenden Befehls:  `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>`
 +
@@ -40,5 +40,4 @@ Durch die Konfiguration von SRA auf der VMware Live Site Recovery-Appliance werd
 . Scannen Sie die Adapter erneut, um zu bestätigen, dass die aktualisierten Details auf der Seite „VMware Live Site Recovery Storage Replication Adapters“ angezeigt werden.
 
 
-.Ergebnisse
-Eine Bestätigungsmeldung zeigt an, dass die Speicheranmeldeinformationen gespeichert wurden. SRA kann nun über die angegebene IP-Adresse, den Port und die Anmeldeinformationen mit dem SRA-Server kommunizieren.
+*Ergebnisse* Es wird eine Bestätigungsmeldung angezeigt, die angibt, dass die Speicheranmeldeinformationen gespeichert wurden.  Sie können jetzt SRA verwenden, um mit dem SRA-Server unter Verwendung der angegebenen IP-Adresse, des Ports und der Anmeldeinformationen zu kommunizieren.

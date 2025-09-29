@@ -1,0 +1,30 @@
+---
+permalink: manage/change-valid-flag.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können das Zertifikatvalidierungsflag mithilfe der Wartungskonsole ändern. 
+---
+= Zertifikatvalidierungsflag ändern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Standardmäßig ist das Flag zur Zertifikatsvalidierung aktiviert (auf „true“ gesetzt).  Sie können das Zertifikatvalidierungsflag des ONTAP -Speicher-Backends auf „false“ setzen, wenn Sie SAN-Zertifikatsprüfungen umgehen müssen.  Diese Einstellung ist nicht auf vCenter Server-Zertifikate anwendbar.
+
+.Bevor Sie beginnen
+Sie müssen über Anmeldedaten für Wartungsbenutzer verfügen.
+
+.Schritte
+. Öffnen Sie im vCenter Server eine Konsole für ONTAP Tools.
+. Melden Sie sich als Wartungbenutzer an.
+. Eingeben `1` , um das Anwendungskonfigurationsmenü auszuwählen.
+. Eingeben `3` um das Zertifikatvalidierungsflag zu ändern.
++
+Die Wartungskonsole zeigt den Status des Zertifikatvalidierungsflags an und fordert Sie auf, ihn zu ändern.
+
+. Geben Sie „y“ ein, um die Flagge umzuschalten, oder „n“, um abzubrechen.
+
+
+Wenn Sie das Flag zur Zertifikatsvalidierung wieder auf „true“ setzen, führt das System eine Vorprüfung durch.  Wenn ein hinzugefügtes Speicher-Backend ein Zertifikat ohne SAN verwendet, können Sie die Zertifikatsvalidierung nicht aktivieren.  Stellen Sie sicher, dass alle Speicher-Backends SAN-basierte Zertifikate verwenden, bevor Sie dieses Flag aktivieren.  Wenn Sie das Flag für die Zertifikatsvalidierung auf „false“ setzen, überspringt das System die Zertifikatsvalidierung für alle hinzugefügten Speicher-Backends.

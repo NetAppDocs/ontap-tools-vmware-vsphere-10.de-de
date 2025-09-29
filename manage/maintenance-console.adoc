@@ -30,7 +30,8 @@ Sie sollten die Registerkarte *Zusammenfassung* Ihrer bereitgestellten ONTAP-Too
 Anwendungskonfiguration
  a| 
 . Zeigt eine Zusammenfassung des Serverstatus an
-. Ändern der PROTOKOLLEBENE für VASA Provider Services und SRA Services
+. Ändern Sie die LOG-Ebene für ONTAP -Tools-Dienste
+. Zertifikatsvalidierungsflag ändern
 
 
 

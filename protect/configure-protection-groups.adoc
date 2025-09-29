@@ -30,7 +30,7 @@ NOTE: Storage Replication Adapter (SRA) unterstützt Fan-Out mit einer Synchroni
 
 
 .Schritte
-. Doppelklicken Sie auf der vSphere Client-Startseite auf *Site Recovery* und wählen Sie *Sites* aus.
+. Doppelklicken Sie auf der Startseite des vSphere-Clients auf das Symbol *Site Recovery* und wählen Sie dann *Sites* aus.
 . Wählen Sie *Objects* > *Actions* > *Pair Sites*.
 . Geben Sie im Dialogfeld *Pair Site Recovery Manager Servers* die Adresse des Platform Services Controllers des geschützten Standorts ein, und wählen Sie dann *Next*.
 . Gehen Sie im Abschnitt vCenter Server auswählen folgendermaßen vor:
@@ -43,7 +43,7 @@ NOTE: Storage Replication Adapter (SRA) unterstützt Fan-Out mit einer Synchroni
 
 
 .Ergebnis
-Sowohl die geschützten als auch die Wiederherstellungsstandorte werden im Dialogfeld Objekte angezeigt.
+Im Dialogfeld *Objekte* werden sowohl die geschützten als auch die Wiederherstellungssites angezeigt.
 
 
 

@@ -11,16 +11,14 @@ summary: Wenn Sie im Abschnitt Verknüpfungen des vCenter-Clients das Symbol ONT
 
 
 [role="lead"]
-Wenn Sie im Abschnitt Verknüpfungen des vCenter-Clients das Symbol ONTAP-Tools für VMware vSphere Plug-in auswählen, wechselt die Benutzeroberfläche zur Übersichtsseite. Diese Seite ähnelt dem Dashboard mit einer Zusammenfassung der ONTAP Tools für VMware vSphere Plug-in.
+Wenn Sie im vCenter-Client im Abschnitt „Verknüpfungen“ das Plug-in-Symbol „ONTAP tools for VMware vSphere“ auswählen, wird die Übersichtsseite geöffnet.  Dieses Dashboard bietet eine Zusammenfassung der ONTAP tools for VMware vSphere Plug-in.
 
-Im Fall von Enhanced Linked Mode Setup (ELM) wird das Drop-down-Menü vCenter Server SELECT angezeigt, und Sie können einen gewünschten vCenter Server auswählen, um die für ihn relevanten Daten anzuzeigen. Diese Dropdown-Liste ist für alle anderen Listenansichten des Plugins verfügbar.
-Die auf einer Seite getroffene vCenter Server-Auswahl bleibt auf den Registerkarten des Plug-ins erhalten.
-image:../media/remote-plugin-dashboard.png["Dashboard-Übersicht"]
+Bei der Einrichtung im Enhanced Linked Mode (ELM) wird das Dropdown-Menü zur Auswahl des vCenter-Servers angezeigt und Sie können einen gewünschten vCenter-Server auswählen, um die entsprechenden Daten anzuzeigen.  Dieses Dropdown-Menü ist für alle anderen Listenansichten des Plug-Ins verfügbar. Die auf einer Seite getroffene vCenter Server-Auswahl bleibt auf allen Registerkarten des Plug-Ins erhalten.image:../media/remote-plugin-dashboard.png["Dashboard-Übersicht"]
 
 Auf der Übersichtsseite können Sie die Aktion *Discovery* ausführen. Die Erkennungsaktion führt die Erkennung auf vCenter Ebene aus, um alle neu hinzugefügten oder aktualisierten Storage-Back-Ends, Hosts, Datastores und Sicherungsstatus bzw. -Beziehungen zu erkennen. Sie können eine On-Demand-Erkennung von Entitäten ausführen, ohne auf die geplante Ermittlung warten zu müssen.
 
 
-NOTE: Die Aktionsschaltfläche wird nur aktiviert, wenn Sie über die Berechtigung zum Ausführen der Ermittlungsaktion verfügen.
+NOTE: Die Aktionsschaltfläche *Erkennung* ist nur aktiviert, wenn Sie über die erforderliche Berechtigung zum Ausführen der Erkennungsaktion verfügen.
 
 Nachdem die Ermittlungsanfrage übermittelt wurde, können Sie den Fortschritt der Aktion im Bereich „Letzte Aufgaben“ verfolgen.
 

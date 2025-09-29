@@ -106,7 +106,7 @@ Die HTTP-Statuscodes, die von der REST-API verwendet werden, werden im Folgenden
 | Codieren | Bedeutung | Beschreibung 
 
 
-| 200 | OK | Zeigt Erfolg für Anrufe an, die keine neue Ressourceninstanz erstellen. 
+| 200 | OK | Zeigt den Erfolg von Aufrufen an, die keine neue Ressourceninstanz erstellen. 
 
 
 | 201 | Erstellt | Ein Objekt mit einer eindeutigen Kennung für die Ressourceninstanz wurde erfolgreich erstellt. 
@@ -127,7 +127,7 @@ Die HTTP-Statuscodes, die von der REST-API verwendet werden, werden im Folgenden
 | 403 | Verboten | Der Zugriff wird aufgrund eines Autorisierungsfehlers verweigert. 
 
 
-| 404 | Nicht gefunden | Die Ressource, auf die in diesem Antrag verwiesen wird, ist nicht vorhanden. 
+| 404 | Nicht gefunden | Die in der Anfrage genannte Ressource existiert nicht. 
 
 
 | 409 | Konflikt | Der Versuch, ein Objekt zu erstellen, ist fehlgeschlagen, weil das Objekt bereits vorhanden ist. 

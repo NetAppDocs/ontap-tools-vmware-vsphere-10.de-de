@@ -25,7 +25,7 @@ Sie können ONTAP-Tools für VMware vSphere mit der virtuellen VMware vCenter Se
 ** 348 GB für Thick Provisioning-Installationen
 
 
-* *Größenanforderungen für das Host-System* Empfohlener Speicher gemäß der Größe der Bereitstellung ist wie in der folgenden Tabelle dargestellt. Für die Bereitstellung von Hochverfügbarkeit (High Availability, HA) ist das Dreifache der in der Tabelle angegebenen Appliance-Größe erforderlich.
+* *Größenanforderungen des Hostsystems* Der empfohlene Speicher für jede Bereitstellungsgröße ist in der folgenden Tabelle aufgeführt.  Für Bereitstellungen mit hoher Verfügbarkeit (HA) benötigen Sie die dreifache Appliance-Größe, die angegeben ist.
 
 
 |===
@@ -53,7 +53,7 @@ NOTE: Wenn Backup aktiviert ist, benötigt jeder Cluster mit ONTAP Tools weitere
 | Storage, Host und Applikationen | Versionsanforderungen 
 
 
-| ONTAP | 9.14.1, 9.15.1, 9.16.0, 9.16.1 und 9.16.1P3 FAS, ASA A-Serie, ASA C-Serie, AFF A-Serie, AFF C-Serie und ASA r2. 
+| ONTAP | 9.15.1, 9.16.0, 9.16.1, 9.17.0 und 9.17.1 
 
 
 | Von ONTAP Tools unterstützte ESXi-Hosts | Ab 7.0.3 
@@ -65,7 +65,7 @@ NOTE: Wenn Backup aktiviert ist, benötigt jeder Cluster mit ONTAP Tools weitere
 | VASA Provider | 3.0 
 
 
-| OVA-Anwendung | 10,4 
+| OVA-Anwendung | 10,5 
 
 
 | ESXi-Host zur Implementierung der virtuellen Maschine mit ONTAP-Tools | 7.0U3 und 8.0U3 
@@ -85,6 +85,9 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 == Port-Anforderungen
 
 Die folgende Tabelle zeigt die von NetApp verwendeten Netzwerkports und deren Zweck. Stellen Sie sicher, dass diese Ports offen und zugänglich sind, um einen ordnungsgemäßen Betrieb und die Kommunikation innerhalb des Systems zu gewährleisten. Stellen Sie sicher, dass die erforderlichen Netzwerkkonfigurationen vorhanden sind, um den Datenverkehr über diese Ports zu ermöglichen, damit die zugehörigen Dienste ordnungsgemäß funktionieren. Abhängig von Ihren Sicherheitsrichtlinien müssen Sie möglicherweise Firewalls oder andere Sicherheitsanwendungen konfigurieren, um diesen Datenverkehr innerhalb Ihres Netzwerks zuzulassen.
+
+
+NOTE: Stellen Sie sicher, dass sich alle ONTAP Tool-Knoten im selben Subnetz befinden, um eine unterbrechungsfreie Kommunikation untereinander aufrechtzuerhalten.
 
 |===
 
@@ -116,16 +119,10 @@ Die folgende Tabelle zeigt die von NetApp verwendeten Netzwerkports und deren Zw
 | 2380 | TCP | Dies ist der Standardport für die Server-zu-Server-Kommunikation für den etcd-Cluster, der für den Floß-Konsensus-Algorithmus usw. verwendet wird, der für die Datenreplikation und -Konsistenz von abhängt. 
 
 
-| 7472 | TCP/UDP | Dies ist der prometheus Kennzahlen-Serviceport. 
-
-
-| 7946 | TCP/UDP | Dieser Port wird für die Erkennung des Containernetzwerks von Docker verwendet. 
+| 7946 | TCP/UDP | Dieser Port wird für die Container-Netzwerkerkennung von Docker verwendet. 
 
 
 | 9083 | TCP | Dieser Port ist ein intern verwendeter Service-Port für den VASA Provider-Service. 
-
-
-| 1162 | UDP | Dies ist der SNMP-Trap-Paketport. 
 
 
 | 6443 | TCP | Quelle: RKE2 Agenten Knoten. Ziel: REK2 Server Nodes. Beschreibung: Kubernetes API 
@@ -146,19 +143,7 @@ Die folgende Tabelle zeigt die von NetApp verwendeten Netzwerkports und deren Zw
 | 123 | TCP | Ntpd verwendet diesen Port, um die Validierung des NTP-Servers durchzuführen. 
 
 
-| 137-139 | TCP/UDP | SMB/Windows-Pakete zur gemeinsamen Nutzung 
-
-
-| 6789 | TCP | Ceph-Monitor (MON) 
-
-
-| 3300 | TCP | Ceph-Monitor (MON) 
-
-
-| 6800-7300 | TCP | Ceph Manager, OSDs und Filesystem (MDS). 
-
-
-| 80 | TCP | Ceph RADOS Gateway (RGW) 
+| 3300 und 6789-7300 | TCP | Datenebene zwischen Knoten 
 
 
 | 9080 | TCP | VP HTTP/HTTPS-Verbindungen (nur von 127.0.0.0/8 für IPv4 oder ::1/128 für IPv6). 
@@ -187,7 +172,7 @@ Die folgende Tabelle bietet einen Leitfaden zur Konfiguration von ONTAP Tools f�
 | Hochverfügbarkeit | Mittel (M) | ~50.000 | 128 
 
 
-| Hochverfügbarkeit | Groß (L) | 100 ~ | 256 [ANMERKUNG] die Anzahl der Hosts in der Tabelle zeigt die Gesamtzahl der Hosts von mehreren vCenter. 
+| Hochverfügbarkeit | Groß (L) | 100 ~ | 256 [HINWEIS] Die Hostanzahl in der Tabelle stellt die Gesamtzahl aller verbundenen vCenter dar. 
 |===
 
 

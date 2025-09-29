@@ -11,10 +11,7 @@ summary: Sie können das Administratorkennwort mit dem ONTAP Tools Manager ände
 
 
 [role="lead"]
-Mithilfe des ONTAP Tools Managers können Sie die Konfiguration der ONTAP Tools für VMware vSphere vertikal skalieren, um die Anzahl der Knoten in der Implementierung zu erhöhen oder die Konfiguration in die Einrichtung für Hochverfügbarkeit (HA) zu ändern. Die ONTAP Tools für die VMware vSphere Appliance werden zunächst in einer Konfiguration ohne HA-Konfiguration mit einem einzelnen Node implementiert.
-
-
-NOTE: Um auf HA zu migrieren, wenn das nicht-HA-Backup aktiviert ist, deaktivieren Sie zuerst das Backup und aktivieren Sie es nach der Migration erneut.
+Verwenden Sie den ONTAP Tools Manager, um die ONTAP tools for VMware vSphere Konfiguration zu skalieren, indem Sie entweder die Anzahl der Knoten erhöhen oder die Hochverfügbarkeit (HA) aktivieren.  Standardmäßig werden die ONTAP tools for VMware vSphere Appliance als Einzelknotenkonfiguration ohne Hochverfügbarkeit bereitgestellt.
 
 .Bevor Sie beginnen
 * Stellen Sie sicher, dass Ihre OVA-Vorlage die gleiche OVA-Version wie Knoten 1 hat. Knoten 1 ist der Standardknoten, auf dem die ONTAP-Tools für VMware vSphere OVA ursprünglich bereitgestellt werden.
@@ -33,7 +30,7 @@ Wenn sich ONTAP Tools in der HA-Konfiguration befinden, können Sie die Details 
 
 +
 
-NOTE: In ONTAP Tools für VMware vSphere können Sie nur die Node-Größe erhöhen. Sie können die Node-Größe nicht verkleinern. In einem nicht-HA-Setup wird nur eine mittelgroße Konfiguration unterstützt. Bei einer HA-Einrichtung werden mittelgroße und große Konfigurationen unterstützt.
+NOTE: In ONTAP tools for VMware vSphere können Sie die Knotengröße nur erhöhen, nicht jedoch verringern.  In einem Nicht-HA-Setup wird nur eine mittelgroße Konfiguration unterstützt.  In einem HA-Setup werden mittlere und große Konfigurationen unterstützt.
 
 . Aktivieren Sie die HA-Konfiguration mit der HA-Toggle-Taste. Stellen Sie auf der Seite *HA settings* Folgendes sicher:
 +
@@ -48,7 +45,7 @@ NOTE: Nachdem die HA-Konfiguration aktiviert wurde, können Sie nicht mehr zu ei
 . Im Abschnitt *HA-Einstellungen* des Fensters *Appliance-Einstellungen bearbeiten* können Sie die Details der Knoten 2 und 3 eingeben. Die ONTAP Tools für VMware vSphere unterstützen drei Nodes im HA-Setup.
 +
 
-NOTE: Die meisten Eingabeoptionen sind zur Vereinfachung des Workflows mit Netzwerkdetails von Knoten 1 vorausgefüllt. Sie können die Eingabedaten jedoch bearbeiten, bevor Sie zur letzten Seite des Assistenten navigieren. Sie können IPv6-Adressdetails für die anderen beiden Knoten nur eingeben, wenn die IPv6-Adresse auf dem ersten Knoten aktiviert ist.
+NOTE: Zur Vereinfachung des Arbeitsablaufs sind die meisten Eingabeoptionen bereits mit Netzwerkdetails zu Knoten 1 ausgefüllt.  Sie können die Eingabedaten jedoch bearbeiten, bevor Sie zur letzten Seite des Assistenten navigieren.  Sie können IPv6-Adressdetails für die anderen beiden Knoten nur eingeben, wenn die IPv6-Adresse auf dem Verwaltungsknoten der ONTAP -Tools aktiviert ist.
 
 +
 Stellen Sie sicher, dass ein ESXi-Host nur eine VM mit ONTAP Tools enthält. Die Eingaben werden jedes Mal validiert, wenn Sie zum nächsten Fenster wechseln.

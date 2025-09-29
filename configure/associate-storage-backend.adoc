@@ -11,12 +11,12 @@ summary: Verknüpfen Sie ein Storage-Backend mit dem vCenter Server, um eine Zuo
 
 
 [role="lead"]
-Verknüpfen Sie ein Storage-Backend mit dem vCenter Server, um eine Zuordnung zwischen dem Storage-Backend und der eingeboard vCenter Server Instanz global zu erstellen.
+Ordnen Sie einer vCenter Server-Instanz ein Speicher-Backend zu, um den Zugriff für alle vCenter Server-Instanzen zu ermöglichen.  Stellen Sie bei der MetroCluster -Konfiguration sicher, dass Sie beim Zuordnen eines Storage-Backend-Clusters auch dessen Peer-Cluster mit dem vCenter Server zuordnen.
 
 .Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Randleiste vCenter aus.
-. Wählen Sie die vertikalen Ellipsen für die vCenter Server-Instanz aus, die Sie mit den Speicher-Back-Ends verknüpfen möchten.
-. Wählen Sie das Storage-Back-End aus der Dropdown-Liste aus, um die vCenter Server-Instanz dem erforderlichen Storage-Back-End zuzuordnen.
+. Wählen Sie die vertikalen Auslassungspunkte neben der vCenter Server-Instanz aus, die Sie mit den Speicher-Backends verbinden möchten.
+. Wählen Sie aus dem Dropdown-Menü das Speicher-Backend aus, das Sie mit der ausgewählten vCenter Server-Instanz verknüpfen möchten.
 

@@ -46,7 +46,7 @@ Dem FlexVol Volume, auf dem die geklonte Virtual Machine gespeichert wird, werde
 
 
 
-VMware unterstützt derzeit keine virtuellen Maschinen, die in einer VM-Vorlage geklont wurden.
+VMware unterstützt derzeit keine virtuellen Maschinen, die in eine VM-Vorlage geklont wurden.
 
 Der Klon einer geschützten Virtual Machine wird unterstützt.
 
@@ -58,6 +58,6 @@ Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmwar
 
 Derzeit werden nur Snapshots virtueller Maschinen ohne Speicher unterstützt. Wenn auf einer virtuellen Maschine Snapshot mit Arbeitsspeicher vorhanden ist, wird die virtuelle Maschine nicht als Schutz betrachtet.
 
-Sie können auch nicht geschützte virtuelle Maschinen mit einem Speicher-Snapshot schützen. Für diesen Release sollten Sie den Speicher-Snapshot löschen, bevor Sie den Schutz für die virtuelle Maschine aktivieren.
+Sie können auch keine ungeschützten virtuellen Maschinen schützen, die über einen Speicher-Snapshot verfügen.  Bei dieser Version müssen Sie den Speicher-Snapshot löschen, bevor Sie den Schutz für die virtuelle Maschine aktivieren.
 
 Bei Windows VM mit ASA r2 Storage-Typ ist es ein schreibgeschützter Snapshot, wenn Sie einen Snapshot der virtuellen Maschine erstellen. Wenn die VM beim Einschalten eingeschaltet wird, erstellt der VASA Provider eine LUN mit dem schreibgeschützten Snapshot und aktiviert sie anschließend für IOPS. Während der Anforderung zum Ausschalten löscht VASA Provider die erstellte LUN und deaktiviert anschließend die IOPS.

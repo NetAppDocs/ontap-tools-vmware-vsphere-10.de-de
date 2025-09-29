@@ -20,23 +20,17 @@ Sie sollten die Speichersysteme einrichten, bevor Sie Storage Replication Adapte
 .Bevor Sie beginnen
 Die folgenden Programme sollten auf dem geschützten Standort und dem Wiederherstellungsstandort installiert sein:
 
-* VMware Live Site Recovery
-+
-Die Dokumentation zur Installation von VMware Live Site Recovery ist auf der VMware-Website verfügbar.
-
+* VMware Live Site Recovery: Die VMware-Site bietet Installationsdokumentation für VMware Live Site Recovery.
 +
 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["Über VMware Live Site Recovery"]
 
-* SRA
-+
-Der Adapter wird auf VMware Live Site Recovery installiert.
-
+* SRA: Installieren Sie den Adapter auf VMware Live Site Recovery.
 
 
 .Schritte
 . Vergewissern Sie sich, dass die primären ESXi-Hosts mit den LUNs im primären Speichersystem am geschützten Standort verbunden sind.
 . Vergewissern Sie sich, dass die LUNS in Initiatorgruppen vorhanden sind, die über die verfügen `ostype` Option auf dem primären Storage-System auf _VMware_ eingestellt.
-. Überprüfen Sie, ob die ESXi-Hosts am Wiederherstellungsstandort über eine geeignete iSCSI-Verbindung zur Storage Virtual Machine (SVM) verfügen. Die ESXi-Hosts am sekundären Standort sollten Zugriff auf den sekundären Standortspeicher haben, und die ESXi-Hosts am primären Standort sollten Zugriff auf den primären Standortspeicher haben.
+. Stellen Sie sicher, dass die ESXi-Hosts am Wiederherstellungsstandort über eine entsprechende iSCSI- und Fibre Channel-Konnektivität zur Storage Virtual Machine (SVM) verfügen.  Die ESXi-Hosts des sekundären Standorts sollten Zugriff auf den Speicher des sekundären Standorts haben und die ESXi-Hosts des primären Standorts sollten Zugriff auf den Speicher des primären Standorts haben.
 +
 Dazu können Sie entweder überprüfen, ob die ESXi-Hosts über lokale LUNs auf der SVM oder auf der verfügen `iscsi show initiators` Befehl auf den SVMs.
 Überprüfen Sie den LUN-Zugriff auf die zugeordneten LUNs auf dem ESXi-Host, um die iSCSI-Konnektivität zu überprüfen.
@@ -50,17 +44,8 @@ Dazu können Sie entweder überprüfen, ob die ESXi-Hosts über lokale LUNs auf 
 .Bevor Sie beginnen
 Die folgenden Programme sollten auf dem geschützten Standort und dem Wiederherstellungsstandort installiert sein:
 
-* VMware Live Site Recovery
-+
-Dokumentation zur Installation von VMware Live Site Recovery finden Sie auf der VMware-Website.
-
-+
-https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["Über VMware Live Site Recovery"]
-
-* SRA
-+
-Der Adapter wird auf VMware Live Site Recovery und dem SRA-Server installiert.
-
+* VMware Live Site Recovery: Installationsdokumentation für VMware Live Site Recovery finden Sie auf der VMware-Site – https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/about-vmware-live-site-recovery-installation-and-configuration.html["Über VMware Live Site Recovery"]
+* SRA: Installieren Sie den Adapter auf VMware Live Site Recovery und dem SRA-Server.
 
 
 .Schritte

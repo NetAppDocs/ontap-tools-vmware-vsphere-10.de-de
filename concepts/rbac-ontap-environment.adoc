@@ -23,7 +23,7 @@ ONTAP bietet eine robuste und erweiterbare RBAC-Umgebung. Über die RBAC-Funktio
 Bei der Nutzung von ONTAP RBAC stehen Ihnen je nach Umgebung und Zielen verschiedene Optionen zur Verfügung. Im Folgenden wird ein Überblick über die wichtigsten Verwaltungsentscheidungen gegeben. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["ONTAP Automatisierung: Überblick über die RBAC-Sicherheit"^].
 
 
-NOTE: RBAC von ONTAP ist auf eine Storage-Umgebung zugeschnitten und ist einfacher als die RBAC-Implementierung, die über vCenter Server zur Verfügung steht. Mit ONTAP weisen Sie dem Benutzer direkt eine Rolle zu. Die Konfiguration expliziter Berechtigungen, wie sie beispielsweise mit vCenter Server verwendet werden, ist für die ONTAP RBAC nicht erforderlich.
+NOTE: ONTAP RBAC ist auf eine Speicherumgebung zugeschnitten und einfacher als die mit vCenter Server bereitgestellte RBAC-Implementierung.  Mit ONTAP weisen Sie dem Benutzer direkt eine Rolle zu.  Das Konfigurieren expliziter Berechtigungen, wie sie beispielsweise bei vCenter Server verwendet werden, ist bei ONTAP RBAC nicht erforderlich.
 
 .Rollen- und Privileges-Typen
 Beim Definieren eines ONTAP-Benutzers ist eine ONTAP-Rolle erforderlich. Es gibt zwei Arten von ONTAP-Rollen:

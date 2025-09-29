@@ -15,21 +15,15 @@ Im folgenden Abschnitt werden die wichtigsten Konzepte und Begriffe beschrieben,
 
 
 
-=== ASA r2-Systeme
-
-Die neuen NetApp ASA r2 Systeme bieten eine einheitliche Hardware- und Softwarelösung, mit der eine vereinfachte Benutzererfahrung speziell für die Anforderungen von reinen SAN-Kunden erzielt wird. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Erfahren Sie mehr über ASA r2 Storage-Systeme"].
-
-
-
 === Zertifizierungsstelle (CA)
 
 CA ist eine vertrauenswürdige Einheit, die SSL-Zertifikate (Secure Sockets Layer) ausgibt.
 
 
 
-=== Konsistenzgruppe (CG)
+=== Konsistenzgruppe
 
-Eine Konsistenzgruppe ist eine Sammlung von Volumes, die als eine Einheit gemanagt werden. CGS werden zur Datenkonsistenz über Storage-Einheiten und Volumes hinweg synchronisiert. ONTAP bietet ein einfaches Management und eine Garantie für die Sicherung eines Applikations-Workloads, der mehrere Volumes umfasst. Erfahren Sie mehr über https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["Konsistenzgruppen"].
+Eine Konsistenzgruppe ist eine Sammlung von Volumes, die als eine Einheit verwaltet werden. Konsistenzgruppen werden zur Gewährleistung der Datenkonsistenz über Speichereinheiten und Datenträger hinweg synchronisiert. In ONTAP bieten sie eine einfache Verwaltung und eine Schutzgarantie für eine Anwendungs-Workload, die sich über mehrere Volumes erstreckt.  Erfahren Sie mehr über https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["Konsistenzgruppen"] .
 
 
 
@@ -125,7 +119,7 @@ VMFS ist ein geclustertes Dateisystem, das zum Speichern von Dateien von virtuel
 
 === Virtuelle Volumes (VVols)
 
-VVols bieten eine Abstraktion auf Volume-Ebene für den von einer Virtual Machine verwendeten Storage. Sie bietet mehrere Vorteile und eine Alternative zur Verwendung einer herkömmlichen LUN. Ein vVol Datastore wird normalerweise mit einer einzelnen LUN verknüpft, die als Container für die VVols fungiert.
+vVols bieten eine Abstraktion auf Volume-Ebene für den von einer virtuellen Maschine verwendeten Speicher.  Es bietet mehrere Vorteile und stellt eine Alternative zur Verwendung einer herkömmlichen LUN dar.  Ein vVol-Datenspeicher ist normalerweise mit einer einzelnen LUN verknüpft, die als Container für vVols fungiert.
 
 
 

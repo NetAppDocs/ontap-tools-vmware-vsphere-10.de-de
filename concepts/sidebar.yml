@@ -6,7 +6,7 @@ entries:
   url: "/concepts/ontap-tools-overview.html"
 - title: Schlüsselkonzepte und -Begriffe
   url: "/concepts/ontap-tools-concepts-terms.html"
-- title: Rollenbasierte Zugriffssteuerung
+- title: Rollenbasierte Zugriffskontrolle (RBAC)
   entries:
   - title: Erfahren Sie mehr über RBAC
     url: "/concepts/rbac-learn-about.html"
@@ -22,7 +22,3 @@ entries:
       url: "/concepts/rbac-ontap-environment.html"
     - title: RBAC mit ONTAP
       url: "/concepts/rbac-ontap-use.html"
-- title: Hochverfügbarkeit für ONTAP Tools für VMware vSphere
-  url: "/concepts/high-availability.html"
-- title: Benutzeroberfläche von ONTAP Tools Manager
-  url: "/configure/manager-user-interface.html"

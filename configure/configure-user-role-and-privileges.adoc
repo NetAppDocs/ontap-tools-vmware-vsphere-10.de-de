@@ -2,7 +2,7 @@
 permalink: configure/configure-user-role-and-privileges.html 
 sidebar: sidebar 
 keywords: user roles 
-summary: Sie können neue Benutzerrollen für das Management von Storage-Back-Ends mit der JSON-Datei konfigurieren, die in den ONTAP Tools für VMware vSphere und ONTAP System Manager zur Verfügung gestellt wird. 
+summary: Konfigurieren Sie Benutzerrollen und Berechtigungen für Speicher-Backends mit der JSON-Datei aus ONTAP tools for VMware vSphere und ONTAP System Manager. 
 ---
 = Konfigurieren Sie ONTAP-Benutzerrollen und -Berechtigungen
 :allow-uri-read: 
@@ -11,48 +11,47 @@ summary: Sie können neue Benutzerrollen für das Management von Storage-Back-En
 
 
 [role="lead"]
-Sie können neue Benutzerrollen und -Berechtigungen für das Management von Storage-Back-Ends mit der JSON-Datei konfigurieren, die mit den ONTAP Tools für VMware vSphere und ONTAP System Manager bereitgestellt wird.
+Konfigurieren Sie Benutzerrollen und Berechtigungen für Speicher-Backends mit der JSON-Datei aus ONTAP tools for VMware vSphere und ONTAP System Manager.
 
 .Bevor Sie beginnen
-* Sie sollten die ONTAP Privileges-Datei von den ONTAP-Tools für VMware vSphere unter Verwendung von _\https://<ONTAPtoolsIP>:8443/Virtualization/user-Privileges/users_roles.zip_ heruntergeladen haben.
-* Sie sollten die ONTAP Privileges-Datei von ONTAP-Tools heruntergeladen haben `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`.
+* Laden Sie die ONTAP Privileges von den ONTAP tools for VMware vSphere mit _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ herunter.  Nach dem Herunterladen der ZIP-Datei finden Sie zwei JSON-Dateien.  Verwenden Sie die ASA r2-spezifische JSON-Datei, wenn Sie ein ASA r2-System konfigurieren.
 +
 
-NOTE: Benutzer können auf Cluster-Ebene oder direkt auf Storage Virtual Machines (SVMs)-Ebene erstellt werden. Sie können auch Benutzer erstellen, ohne die Datei user_roles.json zu verwenden. Falls dies der Fall ist, müssen Sie über einen Mindestsatz an Berechtigungen auf SVM-Ebene verfügen.
+NOTE: Sie können Benutzer auf Clusterebene oder direkt auf der Ebene der virtuellen Speichermaschinen (SVMs) erstellen.  Wenn Sie die Datei user_roles.json nicht verwenden, stellen Sie sicher, dass der Benutzer über die erforderlichen Mindestberechtigungen für SVM verfügt.
 
-* Sie sollten sich mit Administratorrechten für das Speicher-Back-End angemeldet haben.
+* Melden Sie sich mit Administratorrechten für das Speicher-Backend an.
 
 
 .Schritte
-. Extrahieren Sie die heruntergeladene Datei _\https://<ONTAPtoolsIP>:8443/Virtualization/user-Privileges/users_roles.zip_.
+. Extrahieren Sie die heruntergeladene Datei _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.
 . Sie können über die Cluster-Management-IP-Adresse des Clusters auf ONTAP System Manager zugreifen.
-. Melden Sie sich mit dem Admin-Privileges beim Cluster an. So konfigurieren Sie einen Benutzer:
+. Melden Sie sich mit Administratorrechten beim Cluster an.  So konfigurieren Sie einen Benutzer:
 +
-.. Um Cluster-ONTAP-Tools zu konfigurieren, wählen Sie *Cluster* > *Einstellungen* > *Benutzer und Rollen* aus.
-.. Um den Benutzer der SVM-ONTAP-Tools zu konfigurieren, wählen Sie den Bereich *Speicher-SVM* > *Einstellungen* > *Benutzer und Rollen* aus.
+.. Um einen Cluster ONTAP Tools-Benutzer zu konfigurieren, wählen Sie den Bereich *Cluster* > *Einstellungen* > *Benutzer und Rollen*.
+.. Um einen SVM ONTAP -Tools-Benutzer zu konfigurieren, wählen Sie den Bereich *Storage SVM* > *Einstellungen* > *Benutzer und Rollen*.
 .. Wählen Sie unter Benutzer * Hinzufügen *.
 .. Wählen Sie im Dialogfeld * Benutzer hinzufügen* die Option *Virtualisierungsprodukte* aus.
-.. *Browse*, um die JSON-Datei für ONTAP-Berechtigungen auszuwählen und hochzuladen.
+.. *Durchsuchen*, um die JSON-Datei mit den ONTAP Privileges auszuwählen und hochzuladen.  Wählen Sie für Nicht- ASA R2-Systeme die Datei users_roles.json und für ASA R2-Systeme die Datei users_roles_ASAr2.json aus.
 +
-Das Produktfeld wird automatisch ausgefüllt.
+ONTAP -Tools füllen das Produktfeld automatisch aus.
 
 .. Wählen Sie aus der Dropdown-Liste die Produktfunktion „VSC, VASA Provider und SRA“ aus.
 +
-Das Feld *Rolle* wird basierend auf der ausgewählten Produktfähigkeit automatisch ausgefüllt.
+ONTAP -Tools füllen das Feld *Rolle* automatisch basierend auf der von Ihnen ausgewählten Produktfunktion aus.
 
 .. Geben Sie den erforderlichen Benutzernamen und das erforderliche Passwort ein.
-.. Wählen Sie die für den Benutzer erforderliche Privileges (Ermittlung, Speicher erstellen, Speicher ändern, Speicher zerstören, NAS/SAN-Rolle) aus, und wählen Sie dann *Hinzufügen* aus.
+.. Wählen Sie die Berechtigungen (Erkennung, Speicher erstellen, Speicher ändern, Speicher zerstören, NAS/SAN-Rolle) aus, die der Benutzer benötigt, und wählen Sie dann *Hinzufügen*.
 
 
 
 
-Die neue Rolle und der neue Benutzer werden hinzugefügt, und Sie können die detaillierten Berechtigungen unter der von Ihnen konfigurierten Rolle sehen.
+ONTAP -Tools fügen die neue Rolle und den neuen Benutzer hinzu.  Sie können die Berechtigungen unter der von Ihnen konfigurierten Rolle anzeigen.
 
 
 
 == Anforderungen für die SVM-Aggregatzuordnung
 
-Um SVM-Benutzeranmeldeinformationen für die Bereitstellung von Datastores zu verwenden, erstellt das interne ONTAP-Tool für VMware vSphere Volumes auf dem Aggregat, das in der POST-API für Datastores angegeben ist. Die ONTAP ermöglicht nicht die Erstellung von Volumes auf Aggregaten ohne Zuweisung auf einer SVM mit SVM-Benutzeranmeldeinformationen. Um das zu lösen, müssen Sie die SVMs wie hier beschrieben mit den Aggregaten zuordnen. Dazu verwenden Sie entweder die ONTAP REST-API oder die CLI.
+Beim Bereitstellen von Datenspeichern mithilfe von SVM-Benutzeranmeldeinformationen erstellen ONTAP tools for VMware vSphere Volumes auf dem in der POST-API des Datenspeichers angegebenen Aggregat.  ONTAP verhindert, dass SVM-Benutzer Volumes auf Aggregaten erstellen, die nicht dem SVM zugeordnet sind.  Ordnen Sie die SVM mithilfe der ONTAP REST API oder CLI den erforderlichen Aggregaten zu, bevor Sie Volumes erstellen.
 
 REST-API:
 
@@ -70,26 +69,26 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 == Erstellen Sie ONTAP-Benutzer und -Rolle manuell
 
-Befolgen Sie die Anweisungen in diesem Abschnitt, um den Benutzer und die Rollen manuell zu erstellen, ohne die JSON-Datei zu verwenden.
+Erstellen Sie Benutzer und Rollen manuell ohne die JSON-Datei.
 
 . Sie können über die Cluster-Management-IP-Adresse des Clusters auf ONTAP System Manager zugreifen.
 . Melden Sie sich mit dem Admin-Privileges beim Cluster an.
 +
-.. Um Cluster-ONTAP-Tools-Rollen zu konfigurieren, wählen Sie *Cluster* > *Einstellungen* > *Benutzer und Rollen* aus.
-.. Um die Rollen der Cluster-SVM-ONTAP-Tools zu konfigurieren, wählen Sie *Speicher-SVM* > *Einstellungen* > *Benutzer und Rollen* aus
+.. Um die Rollen der Cluster ONTAP Tools zu konfigurieren, wählen Sie *Cluster* > *Einstellungen* > *Benutzer und Rollen*.
+.. Um die Rollen der Cluster-SVM ONTAP -Tools zu konfigurieren, wählen Sie *Storage-SVM* > *Einstellungen* > *Benutzer und Rollen*.
 
 
-. Rollen Erstellen:
+. Rollen erstellen:
 +
 .. Wählen Sie *Hinzufügen* unter *Rollen* Tabelle.
 .. Geben Sie die Details *Rollenname* und *Rollenattribute* ein.
 +
-Fügen Sie den *REST API Path* und den entsprechenden Zugriff aus dem Drop-Down-Menü hinzu.
+Fügen Sie den *REST-API-Pfad* hinzu und wählen Sie den Zugriff aus der Dropdown-Liste.
 
 .. Fügen Sie alle benötigten APIs hinzu und speichern Sie die Änderungen.
 
 
-. Benutzer Erstellen:
+. Benutzer erstellen:
 +
 .. Wählen Sie *Hinzufügen* unter *Benutzer* Tabelle.
 .. Wählen Sie im Dialogfeld *Benutzer hinzufügen* *System Manager* aus.
@@ -105,9 +104,9 @@ Fügen Sie den *REST API Path* und den entsprechenden Zugriff aus dem Drop-Down-
 
 === Liste der Mindestberechtigungen, die für einen nicht-Administrator-Cluster mit globalem Umfang erforderlich sind
 
-In diesem Abschnitt sind die Mindestberechtigungen für Clusterbenutzer mit globalem Gültigkeitsbereich ohne Administratorrechte aufgeführt, die ohne Verwendung der JSON-Datei erstellt wurden. Wenn ein Cluster im lokalen Gültigkeitsbereich hinzugefügt wird, wird empfohlen, die JSON-Datei zum Erstellen der Benutzer zu verwenden, da ONTAP tools for VMware vSphere für die Bereitstellung auf ONTAP mehr als nur Leseberechtigungen erfordern.
+In diesem Abschnitt sind die Mindestberechtigungen aufgeführt, die für einen Clusterbenutzer mit globalem Geltungsbereich ohne Administratorrechte und ohne JSON-Datei erforderlich sind.  Wenn sich ein Cluster im lokalen Bereich befindet, verwenden Sie die JSON-Datei zum Erstellen von Benutzern, da ONTAP tools for VMware vSphere mehr als nur Leseberechtigungen für die Bereitstellung auf ONTAP benötigen.
 
-Verwenden von APIs:
+Sie können über APIs auf die Funktionen zugreifen:
 
 |===
 
@@ -115,7 +114,7 @@ Verwenden von APIs:
 | API | Zugangsstufe | Verwendet für 
 
 
-| /API/Cluster | Schreibgeschützt | Erkennung Der Clusterkonfiguration 
+| /API/Cluster | Schreibgeschützt | Erkennung der Clusterkonfiguration 
 
 
 | /API/Cluster/Lizenzierung/Lizenzen | Schreibgeschützt | Lizenzprüfung für protokollspezifische Lizenzen 
@@ -124,40 +123,43 @@ Verwenden von APIs:
 | /API/Cluster/Nodes | Schreibgeschützt | Erkennung des Plattformtyps 
 
 
-| /API/Sicherheit/Konten | Schreibgeschützt | Ermittlung Von Berechtigungen 
+| /API/Sicherheit/Konten | Schreibgeschützt | Berechtigungsermittlung 
 
 
-| /API/Sicherheit/Funktionen | Schreibgeschützt | Ermittlung Von Berechtigungen 
+| /API/Sicherheit/Funktionen | Schreibgeschützt | Berechtigungsermittlung 
 
 
-| /API/Storage/Aggregate | Schreibgeschützt | Speicherplatzüberprüfung von Aggregaten während der Bereitstellung von Datastores/Volumes 
+| /API/Storage/Aggregate | Schreibgeschützt | Überprüfung des Gesamtspeicherplatzes während der Bereitstellung von Datenspeichern/Volumes 
 
 
-| /API/Storage/Cluster | Schreibgeschützt | Um Speicherplatz auf Cluster-Ebene und Effizienzdaten zu erhalten 
+| /API/Storage/Cluster | Schreibgeschützt | So erhalten Sie Speicherplatz- und Effizienzdaten auf Clusterebene 
 
 
-| /API/Storage/Festplatten | Schreibgeschützt | Um die in einem Aggregat zugeordneten Festplatten zu erhalten 
+| /API/Storage/Festplatten | Schreibgeschützt | So erhalten Sie die in einem Aggregat verknüpften Datenträger 
 
 
-| /API/Storage/qos/Richtlinien | Lesen/Erstellen/Ändern | QoS- und VM-Richtlinienmanagement 
+| /API/Storage/qos/Richtlinien | Lesen/Erstellen/Ändern | QoS- und VM-Richtlinienverwaltung 
 
 
-| /API/svm/svms | Schreibgeschützt | Um die SVM-Konfiguration für den Fall zu erhalten, dass das Cluster lokal hinzugefügt wird. 
+| /API/svm/svms | Schreibgeschützt | Um die SVM-Konfiguration abzurufen, wenn der Cluster lokal hinzugefügt wird. 
 
 
-| /API/Netzwerk/ip/Schnittstellen | Schreibgeschützt | Storage Back-end hinzufügen: Zur Identifizierung des Management-LIF-Umfangs ist Cluster/SVM 
+| /API/Netzwerk/ip/Schnittstellen | Schreibgeschützt | Speicher-Backend hinzufügen – Um zu identifizieren, dass der Verwaltungs-LIF-Bereich Cluster/SVM ist 
 
 
-| /API/Storage/Verfügbarkeitszonen | Schreibgeschützt | SAZ-Erkennung: Gilt für Systeme ab ONTAP 9.16.1 und ASA r2. 
+| /API/Storage/Verfügbarkeitszonen | Schreibgeschützt | SAZ-Entdeckung.  Gilt für ONTAP Versionen ab 9.16.1 und ASA r2-Systeme. 
+
+
+| /api/cluster/metrocluster | Schreibgeschützt | Ruft den Status und die Konfigurationsdetails von MetroCluster ab. 
 |===
 
 
 === Erstellen Sie ONTAP Tools für VMware vSphere ONTAP API-basierten Cluster Scoped User
 
 
-NOTE: Privileges müssen erkannt, erstellt, geändert und zerstört werden, damit bei Ausfällen in Datastores PATCHVORGÄNGE und automatische Rollbacks durchgeführt werden können. Das Fehlen dieser Privileges führt zu Unterbrechungen des Workflows und Problemen bei der Bereinigung.
+NOTE: Für PATCH-Vorgänge und automatische Rollbacks auf Datenspeichern sind Berechtigungen zum Ermitteln, Erstellen, Ändern und Löschen erforderlich.  Fehlende Berechtigungen können zu Problemen beim Workflow und bei der Bereinigung führen.
 
-Erstellen von ONTAP-Tools für VMware vSphere ONTAP API-basierte Benutzer mit Erkennung, Erstellung von Speicher, Änderung von Speicher, Zerstörung von Speicher Privileges ermöglicht die Initiierung von Ermittlungen und Management von ONTAP-Tools Workflows.
+Ein auf der ONTAP -API basierender Benutzer mit den Berechtigungen zum Erkennen, Erstellen, Ändern und Löschen kann die Workflows der ONTAP -Tools verwalten.
 
 Führen Sie die folgenden Befehle aus, um einen Cluster-scoped-Benutzer mit allen oben genannten Privileges zu erstellen:
 
@@ -254,6 +256,8 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly
 
+security login rest-role create -role <role-name> -api /api/cluster/metrocluster -access readonly
+
 ----
 Außerdem führen Sie für ONTAP-Versionen 9.16.0 und höher den folgenden Befehl aus:
 
@@ -271,7 +275,7 @@ security login rest-role create -role <role-name> -api /api/storage/availability
 
 === ONTAP Tools für VMware vSphere ONTAP API-basierten SVM-Scoped User erstellen
 
-Führen Sie die folgenden Befehle aus, um einen für den SVM-Scoped-Benutzer mit allen Privileges zu erstellen:
+Führen Sie die folgenden Befehle aus, um einen SVM-Benutzer mit allen Berechtigungen zu erstellen:
 
 [listing]
 ----
@@ -369,7 +373,7 @@ Beispiel:
 ----
 security login create -user-or-group-name testvpsraall -application http -authentication-method password -role OTV_10_VP_SRA_Discovery_Create_Modify_Destroy -vserver C1_sti160-cluster_
 ----
-Um das Konto zu entsperren, führen Sie den folgenden Befehl aus, um den Zugriff auf die Managementoberfläche zu aktivieren:
+Führen Sie den folgenden Befehl aus, um das Konto zu entsperren und den Zugriff auf die Verwaltungsschnittstelle zu aktivieren:
 
 [listing]
 ----
@@ -445,7 +449,7 @@ _Security Login role create -role <existing-role-name> -cmddirname „vserver nv
 
 _Security Login role create -role <existing-role-name> -cmddirname „vserver nvme Subsystem map remove“ -Access all -vserver <vserver-name>_
 
-Durch Hinzufügen des Befehls _vserver nvme Namespace show_ und _vserver nvme-Subsystem show_ zu der vorhandenen Rolle werden die folgenden Befehle hinzugefügt.
+Um die folgenden Befehle zu aktivieren, fügen Sie der vorhandenen Rolle die Befehle _vserver nvme namespace show_ und _vserver nvme subsystem show_ hinzu.
 
 [listing]
 ----
@@ -462,7 +466,7 @@ vserver nvme subsystem modify
 
 == Upgrade von ONTAP Tools für VMware vSphere 10.3 Benutzer auf 10.4 Benutzer
 
-Ab ONTAP 9.16.1 Upgrade der ONTAP Tools für VMware vSphere 10.3 Benutzer auf 10.4 Benutzer.
+Ab ONTAP 9.16.1 aktualisieren Sie die ONTAP tools for VMware vSphere 10.3-Benutzer auf 10.4-Benutzer.
 
 Verwenden Sie für ONTAP Tools für VMware vSphere 10.3 Benutzer mit einem über Cluster erstellten Benutzer, der über die JSON-Datei und ONTAP Version 9.16.1 oder höher erstellt wurde, den ONTAP-CLI-Befehl mit dem Admin-Benutzer Privileges, um ein Upgrade auf den Release 10.4 durchzuführen.
 

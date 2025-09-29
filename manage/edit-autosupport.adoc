@@ -1,0 +1,47 @@
+---
+permalink: manage/edit-autosupport.html 
+sidebar: sidebar 
+keywords:  
+summary: Bei der erstmaligen Konfiguration von ONTAP tools for VMware vSphere ist AutoSupport standardmäßig aktiviert.  Es sendet 24 Stunden nach der Aktivierung Nachrichten an den technischen Support. 
+---
+= AutoSupport -Einstellungen bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der erstmaligen Konfiguration von ONTAP tools for VMware vSphere ist AutoSupport standardmäßig aktiviert.  Es sendet 24 Stunden nach der Aktivierung Nachrichten an den technischen Support.
+
+
+
+== Deaktivieren Sie AutoSupport
+
+Wenn Sie AutoSupport deaktivieren, erhalten Sie keinen proaktiven Support und keine Überwachung mehr.
+
+
+NOTE: Es wird empfohlen, AutoSupport aktiviert zu lassen, da es die Problemerkennung und -lösung beschleunigt.  Auch wenn AutoSupport deaktiviert ist, sammelt und speichert das System weiterhin lokal Informationen, sendet jedoch keine Berichte über das Netzwerk.
+
+.Schritte
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
+. Wählen Sie die Option *Einstellungen* > *Telemetrie* > *Bearbeiten*.
+. Deaktivieren Sie die Option *AutoSupport* und speichern Sie die Änderungen.
+
+
+
+
+== Aktualisieren Sie die AutoSupport-Proxy-URL
+
+Aktualisieren Sie die AutoSupport -Proxy-URL, damit die AutoSupport Funktion Daten zur sicheren Übertragung über den Proxy-Server leitet.
+
+.Schritte
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
+. Wählen Sie in der Seitenleiste *Einstellungen* aus.
+. Wählen Sie die Option *Einstellungen* > *Telemetrie* > *Bearbeiten*.
+. Geben Sie eine gültige *Proxy-URL* ein und speichern Sie die Änderungen.
++
+Wenn Sie AutoSupport deaktivieren, ist auch die Proxy-URL deaktiviert.
+
+

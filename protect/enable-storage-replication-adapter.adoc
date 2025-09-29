@@ -17,7 +17,7 @@ ONTAP Tools für VMware vSphere bieten die Option zur Aktivierung der SRA-Funkti
 * Sie sollten Ihre vCenter Server-Instanz eingerichtet und den ESXi-Host konfiguriert haben.
 * Sie sollten ONTAP Tools für VMware vSphere implementiert haben.
 * Sie sollten die SRA Adapter- `.tar.gz`Datei von der heruntergeladen haben https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["NetApp Support Website"^].
-* ONTAP-Quell- und Ziel-Cluster müssen vor der Ausführung der SRA-Workflows dieselben benutzerdefinierten SnapMirror-Zeitpläne aufweisen.
+* Sie sollten auf den Quell- und Ziel ONTAP -Clustern dieselben benutzerdefinierten SnapMirror -Zeitpläne haben, bevor Sie die SRA-Workflows ausführen.
 * link:../manage/enable-services.html["Aktivieren Sie ONTAP-Tools für VMware vSphere-Services"] um die SRA-Funktion zu aktivieren.
 
 
@@ -27,3 +27,16 @@ ONTAP Tools für VMware vSphere bieten die Option zur Aktivierung der SRA-Funkti
 . Laden Sie das Installationsprogramm _.tar.gz_ für das SRA-Plug-in auf VMware Live Site Recovery hoch.
 . Überprüfen Sie die Adapter erneut, um sicherzustellen, dass die Details auf der Seite VMware Live Site Recovery Storage Replication Adapters aktualisiert werden.
 
+
+
+NOTE: Nach einem Failover sind Aktionen wie Erweitern, Mounten und Löschen für Datenspeicher möglicherweise nicht verfügbar.  Führen Sie eine Datenspeichererkennung durch, um die entsprechenden Kontextmenüaktionen zu aktualisieren und anzuzeigen.
+
+
+NOTE: Nach jedem erneuten Schutzvorgang müssen Sie auf beiden Sites eine Speichererkennung durchführen.
+
+Führen Sie bei einer neuen Konfiguration mit SRA-Schutz immer ein Test-Failover durch.  Das Überspringen des Test-Failovers kann dazu führen, dass der Vorgang zum erneuten Schützen fehlschlägt.
+
+Führen Sie in einer Fan-Out-Konfiguration nach einem SnapMirror Active Sync-Failover, bei dem die SnapMirror Quelle für Automated Failover Duplex und Asynchronous SnapMirror zu Site B wechselt, ein Test-Failover zwischen Site B und C aus. Das Überspringen dieses Schritts kann zu einem fehlgeschlagenen Vorgang zum erneuten Schützen führen.
+
+.Verwandte Informationen
+https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-nfs-vlsr.html#scenario-overview["Konfigurieren der Notfallwiederherstellung für NFS-Datenspeicher mit VMware Site Recovery Manager"]

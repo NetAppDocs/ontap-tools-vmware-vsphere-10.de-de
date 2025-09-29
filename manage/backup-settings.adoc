@@ -1,0 +1,23 @@
+---
+permalink: manage/backup-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Geben Sie die NTP-Serverdetails ein, um die Zeituhren der ONTAP Tools-Appliance zu synchronisieren. 
+---
+= Backup-Einstellungen bearbeiten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ab ONTAP tools for VMware vSphere 10.5 ist die Backup-Funktion standardmäßig aktiviert und alle 10 Minuten wird ein Backup erstellt.  Sie können die Sicherung deaktivieren oder die Häufigkeit der Sicherung bearbeiten.
+
+Deaktivieren Sie die Sicherung nicht, da dies die ONTAP -Tools daran hindert, einen niedrigen RPO aufrechtzuerhalten.  Durch das Deaktivieren der Sicherung werden die vorhandenen Sicherungsdateien nicht gelöscht.  Sie können die Häufigkeit der Sicherung auf einen Wert zwischen 10 und 60 Minuten ändern.
+
+.Schritte
+. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
+. Wählen Sie die Option *Einstellungen* > *Sicherung* > *Bearbeiten*.
+. Im Bearbeitungsfenster können Sie die Sicherung deaktivieren oder die Sicherungshäufigkeit bearbeiten.
+

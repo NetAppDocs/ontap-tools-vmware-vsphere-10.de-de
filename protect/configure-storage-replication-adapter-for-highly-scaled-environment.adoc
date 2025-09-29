@@ -63,6 +63,6 @@ Weitere Informationen zum Ändern von Speicheranbietereinstellungen finden Sie u
 Wenn Sie auf ein Timeout klicken, erhöhen Sie die Werte von `storage.commandTimeout` Und `storage.maxConcurrentCommandCnt` Zu einem höheren Wert.
 
 
-NOTE: Das angegebene Zeitüberschreitungsintervall ist der Höchstwert. Sie müssen nicht warten, bis die maximale Zeitüberschreitung erreicht ist. Die meisten Befehle sind innerhalb des festgelegten maximalen Timeout-Intervalls abgeschlossen.
+NOTE: Das angegebene Timeout-Intervall ist der Maximalwert.  Sie müssen nicht warten, bis das maximale Timeout erreicht ist.  Die meisten Befehle werden innerhalb des festgelegten maximalen Timeout-Intervalls abgeschlossen.
 
 Informationen zum Ändern der SAN-Provider-Einstellungen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html["Ändern Sie Die Speichereinstellungen"].

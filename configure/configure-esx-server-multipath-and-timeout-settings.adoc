@@ -11,7 +11,7 @@ summary: ONTAP Tools für VMware vSphere überprüft und setzt die Multipathing-
 
 
 [role="lead"]
-Die Konfiguration der Multipath- und Timeout-Einstellungen des ESXi Servers gewährleistet Hochverfügbarkeit und Datenintegrität, da bei Ausfall eines primären Pfads nahtlos auf einen Backup-Speicherpfad umgeschaltet werden kann.
+Durch die Konfiguration der Multipath- und Timeout-Einstellungen des ESXi-Servers können Sie die Datenverfügbarkeit und -integrität aufrechterhalten.  Es ermöglicht ein automatisches Failover auf einen Backup-Speicherpfad, wenn der primäre Pfad nicht mehr verfügbar ist.
 
 
 
@@ -19,17 +19,15 @@ Die Konfiguration der Multipath- und Timeout-Einstellungen des ESXi Servers gew�
 
 Die ONTAP Tools für VMware vSphere prüfen und legen die Multipath-Einstellungen für ESXi Hosts und die HBA-Zeitüberschreitungseinstellungen fest, die für NetApp Storage-Systeme am besten geeignet sind.
 
-*Über diese Aufgabe*
-
-Je nach Konfiguration und Systemlast kann dieser Vorgang sehr viel Zeit in Anspruch nehmen. Der Aufgabenfortschritt wird im Fenster Letzte Aufgaben angezeigt.
+.Über diese Aufgabe
+Dieser Vorgang kann je nach Konfiguration und Systemauslastung einige Zeit in Anspruch nehmen.  Sie können den Fortschritt im Bereich „Letzte Aufgaben“ anzeigen.
 
 .Schritte
 . Wählen Sie auf der VMware vSphere Web Client-Startseite *Hosts und Cluster* aus.
-. Klicken Sie mit der rechten Maustaste auf einen Host und wählen Sie *NetApp ONTAP Tools* > *Host-Daten aktualisieren*.
 . Wählen Sie auf der Seite Verknüpfungen des VMware vSphere Web-Clients im Abschnitt Plug-ins *NetApp ONTAP-Tools* aus.
 . Gehen Sie in der Übersicht (Dashboard) der ONTAP Tools für VMware vSphere Plug-in zur *ESXi Host Compliance* Karte.
 . Wählen Sie den Link *Empfohlene Einstellungen anwenden*.
-. Wählen Sie im Fenster *Empfohlene Host-Einstellungen anwenden* die Hosts aus, die Sie aktualisieren möchten, um den von NetApp empfohlenen Einstellungen zu entsprechen, und wählen Sie *Weiter*.
+. Wählen Sie im Fenster *Empfohlene Hosteinstellungen anwenden* die Hosts aus, die Sie aktualisieren möchten, um die empfohlenen NetApp -Einstellungen zu verwenden, und wählen Sie *Weiter*.
 +
 
 NOTE: Sie können den ESXi-Host erweitern, um die aktuellen Werte anzuzeigen.
@@ -42,7 +40,7 @@ NOTE: Sie können den ESXi-Host erweitern, um die aktuellen Werte anzuzeigen.
 
 == Legen Sie ESXi-Hostwerte fest
 
-Mit den ONTAP-Tools für VMware vSphere können Sie Timeouts und andere Werte auf den ESXi-Hosts festlegen, um die beste Performance und ein erfolgreiches Failover zu gewährleisten. Die Werte, die ONTAP Tools für VMware vSphere Set bieten, basieren auf internen NetApp-Tests.
+Verwenden Sie ONTAP tools for VMware vSphere, um Timeouts und andere Werte auf ESXi-Hosts für optimale Leistung und Failover festzulegen.  Diese Werte werden auf Grundlage von NetApp -Tests festgelegt.
 
 Auf einem ESXi-Host können Sie die folgenden Werte festlegen:
 
@@ -62,9 +60,9 @@ Setzt die folgenden Parameter auf Standardwerte:
 
 === MPIO-Einstellungen
 
-MPIO-Einstellungen definieren die bevorzugten Pfade für NetApp-Speichersysteme. Sie legen fest, welche der verfügbaren Pfade optimiert sind (im Gegensatz zu nicht optimierten Pfaden, die das Interconnect-Kabel durchlaufen), und legen den bevorzugten Pfad auf einen dieser Pfade fest.
+MPIO-Einstellungen wählen die besten Pfade für NetApp -Speichersysteme aus.  Wählen Sie in den MPIO-Einstellungen den besten Pfad aus und verwenden Sie ihn.
 
-In hochperformanten Umgebungen oder wenn Sie die Performance mit einem einzelnen LUN-Datastore testen, sollten Sie eventuell die Load-Balancing-Einstellung der Round-Robin (VMW_PSP_RR) Path Selection Policy (PSP) von der Standard-IOPS-Einstellung von 1000 auf den Wert 1 ändern.
+Passen Sie für Hochleistungsumgebungen oder beim Testen mit einem einzelnen LUN-Datenspeicher die Lastausgleichseinstellung der Round-Robin-Pfadauswahlrichtlinie (VMW_PSP_RR) an, um die Leistung zu verbessern.  Setzen Sie den Standard-IOPS-Wert von 1000 auf 1.
 
 
 NOTE: Die MPIO-Einstellungen gelten nicht für die Protokolle NVMe, NVMe/FC und NVMe/TCP.
