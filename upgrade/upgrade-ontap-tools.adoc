@@ -13,15 +13,16 @@ summary: Upgrade wird sowohl für HA-Implementierungen als auch für Implementie
 [role="lead"]
 Sie können von ONTAP tools for VMware vSphere 10.3 oder 10.4 auf 10.5 aktualisieren.  Um jedoch von ONTAP Tools 10.0, 10.1 oder 10.2 auf 10.5 zu aktualisieren, müssen Sie zuerst auf 10.3 oder 10.4 aktualisieren, bevor Sie mit 10.5 fortfahren.
 
-HINWEIS:
-
+[NOTE]
+====
 * Stellen Sie bei ASA R2-Systemen sicher, dass Sie ein Upgrade auf ONTAP tools for VMware vSphere auf 10.5 und ONTAP auf 9.16.1 durchführen, bevor Sie weitere Storage Availability Zones (SAZs) einrichten.
-* Wenn das Upgrade von ONTAP tools for VMware vSphere 10.3 oder 10.4 auf 10.5 fehlschlägt, ist kein Rollback möglich.  Verwenden Sie ein niedriges RPO oder eine Snapshot-Wiederherstellung, um das Setup wiederherzustellen.  Verwenden Sie für ONTAP tools for VMware vSphere 10.2 und früher Zero-RPO, um das Setup wiederherzustellen.
+* Wenn das Upgrade von ONTAP tools for VMware vSphere 10.3 oder 10.4 auf 10.5 fehlschlägt, ist ein Rollback nicht möglich. Verwenden Sie ein niedriges RPO oder eine Snapshot-Wiederherstellung, um das Setup wiederherzustellen. Verwenden Sie für ONTAP tools for VMware vSphere 10.2 und früher Zero-RPO, um das Setup wiederherzustellen.
 
 
+====
 .Bevor Sie beginnen
-* Stellen Sie sicher, dass das ONTAP -Systemzertifikat und die integrierten vCenter-Zertifikate mindestens 5 Tage gültig sind.  Wenn es früher abläuft, schlägt das Upgrade fehl.
-* Um ein sicheres Upgrade zu gewährleisten, überprüfen Sie, ob Ihre Zertifikate Einträge für den Subject Alternative Name (SAN) enthalten.  Wenn Ihren Zertifikaten SAN-Einträge fehlen und Sie mit dem Upgrade fortfahren müssen, können Sie das Zertifikatvalidierungsflag auf „false“ setzen, um SAN-Prüfungen in der Eingabeaufforderung während des Upgrades zu umgehen.
+* Stellen Sie sicher, dass das ONTAP -Systemzertifikat und die integrierten vCenter-Zertifikate mindestens 5 Tage gültig sind. Wenn die Zertifikate früher ablaufen, schlägt das Upgrade fehl.
+* Um ein sicheres Upgrade zu gewährleisten, überprüfen Sie, ob Ihre Zertifikate Einträge für den Subject Alternative Name (SAN) enthalten. Wenn Zertifikate keine SAN-Einträge enthalten, setzen Sie das Zertifikatvalidierungsflag auf „false“, um SAN-Prüfungen während des Upgrades zu umgehen.
 * Stellen Sie sicher, dass Sie auf allen Knoten über eine fünfte Festplatte mit einer Kapazität von 100 GB verfügen.
 * Überprüfen Sie, ob die Knotenkonfiguration den Spezifikationen in der folgenden Tabelle entspricht.
 

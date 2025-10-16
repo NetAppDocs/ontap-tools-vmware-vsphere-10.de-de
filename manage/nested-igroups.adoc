@@ -11,9 +11,9 @@ summary:
 
 
 [role="lead"]
-Beim Verwalten von ONTAP -Tool-VMs und ONTAP Speichersystemen ist es wichtig, das Verhalten von igroups zu verstehen, insbesondere beim Migrieren von Datenspeichern aus Umgebungen ohne ONTAP Tools zur Verwaltung von ONTAP Tools.  In diesem Abschnitt wird beschrieben, wie igroups während dieses Übergangs aktualisiert werden.
+Wenn Sie sowohl VMs mit ONTAP -Tools als auch ONTAP Speichersysteme verwalten, ist es wichtig zu verstehen, wie sich igroups verhalten, insbesondere beim Verschieben von Datenspeichern aus Umgebungen, die nicht mit ONTAP -Tools verwaltet werden, in Umgebungen, die mit ONTAP-Tools verwaltet werden.  In diesem Abschnitt wird erläutert, wie igroups während dieses Vorgangs aktualisiert werden.
 
-Beginnend mit den ONTAP tools for VMware vSphere 10.4 wird die Datenspeicherverwaltung durch die automatische Erstellung und Wartung von ONTAP und vCenter-Objekten in VMware-Rechenzentrumsumgebungen optimiert.
+ONTAP tools for VMware vSphere 10.4 und höhere Versionen erstellen und verwalten automatisch ONTAP und vCenter-Objekte, um die Datenspeicherverwaltung in VMware-Rechenzentrumsumgebungen zu vereinfachen.
 
 ONTAP tools for VMware vSphere interpretieren igroups in zwei verschiedenen Kontexten:
 
@@ -41,7 +41,7 @@ Beim Ansatz mit verschachtelten igroups werden LUNs nur den untergeordneten igro
 
 *Wenn Sie einen Datenspeicher mit einem benutzerdefinierten igroup-Namen erstellen*
 
-Während der Datenspeichererstellung in ONTAP -Tools können Sie einen benutzerdefinierten Igroup-Namen eingeben, anstatt ihn aus der Dropdown-Liste auszuwählen.  Anschließend erstellen die ONTAP -Tools eine übergeordnete igroup auf Datenspeicherebene mit dem von Ihnen angegebenen Namen.  Wenn derselbe Host für mehrere Datenspeicher verwendet wird, wird die vorhandene (untergeordnete) igroup auf Hostebene wiederverwendet.  Infolgedessen wird die LUN für den neuen Datenspeicher dieser vorhandenen untergeordneten Igroup zugeordnet, die jetzt möglicherweise mit mehreren übergeordneten Igroups verknüpft ist (eine für jeden Datenspeicher).  Die Datenspeicherliste der vCenter Server-Benutzeroberfläche bestätigt die erfolgreiche Erstellung des neuen Datenspeichers mit dem benutzerdefinierten igroup-Namen.
+Während der Datenspeichererstellung in ONTAP -Tools können Sie einen benutzerdefinierten Igroup-Namen eingeben, anstatt ihn aus der Dropdown-Liste auszuwählen. Anschließend erstellen die ONTAP -Tools eine übergeordnete igroup auf Datenspeicherebene mit dem von Ihnen angegebenen Namen. Wenn derselbe Host für mehrere Datenspeicher verwendet wird, wird die vorhandene (untergeordnete) igroup auf Hostebene wiederverwendet. Infolgedessen wird die LUN für den neuen Datenspeicher dieser vorhandenen untergeordneten Igroup zugeordnet, die jetzt möglicherweise mit mehreren übergeordneten Igroups verknüpft ist (eine für jeden Datenspeicher). Sie können den neuen Datenspeicher mit dem benutzerdefinierten Igroup-Namen in der vCenter Server-Schnittstelle sehen.
 
 *Wenn Sie den Igroup-Namen während der Datenspeichererstellung wiederverwenden*
 
@@ -59,10 +59,10 @@ Um einen vorhandenen Datenspeicher und eine vorhandene igroup mit ONTAP Tools zu
 
 image:../media/otv-ds.png["Datastore und igroup werden von ONTAP -Tools verwaltet"]
 
-Sie können einen Datenspeicher direkt im vCenter Server erstellen und ihn später unter die Verwaltung der ONTAP -Tools stellen.  Erstellen Sie zunächst eine flache igroup in ONTAP -Systemen und ordnen Sie ihr eine LUN zu.  Nach dem Ausführen der Datenspeichererkennung in ONTAP -Tools wird die flache Igroup in eine verschachtelte Struktur konvertiert.  ONTAP -Tools verwalten dann die igroup und benennen sie mit dem Präfix „otv_“ um.  Die LUN bleibt während des gesamten Vorgangs derselben Igroup zugeordnet.
+Nachdem Sie die Datenspeichererkennung in ONTAP -Tools ausgeführt haben, konvertieren ONTAP Tools die flache Igroup in eine verschachtelte Struktur. ONTAP -Tools verwalten dann die igroup und benennen sie mit dem Präfix „otv_“ um. Die LUN bleibt während des gesamten Vorgangs derselben Igroup zugeordnet.
 
 *Wie ONTAP -Tools nativ erstellte igroups wiederverwenden*
 
-Sie können einen Datenspeicher in ONTAP -Tools mithilfe einer ursprünglich in ONTAP Systemen erstellten Igroup bereitstellen, nachdem diese von ONTAP -Tools verwaltet wurde.  Diese Igroups werden in der Dropdown-Liste mit den benutzerdefinierten Initiatorgruppennamen angezeigt.  Die neue LUN für den Datenspeicher wird dann der entsprechenden normalisierten untergeordneten Igroup zugeordnet, beispielsweise „otv_NativeIgroup1“.
+Sie können einen Datenspeicher in ONTAP -Tools mithilfe einer Igroup erstellen, die zuerst in ONTAP Systemen erstellt wurde, nachdem ONTAP Tools sie verwaltet haben. Diese Igroups werden in der Dropdown-Liste mit den benutzerdefinierten Initiatorgruppennamen angezeigt. Die neue LUN für den Datenspeicher wird dann der entsprechenden normalisierten untergeordneten Igroup zugeordnet, beispielsweise „otv_NativeIgroup1“.
 
 ONTAP tools for VMware vSphere erkennen oder verwenden keine im ONTAP System erstellten Igroups, die nicht von ONTAP Tools verwaltet oder mit einem Datenspeicher verknüpft werden.

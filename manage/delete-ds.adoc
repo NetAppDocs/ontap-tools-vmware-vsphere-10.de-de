@@ -44,3 +44,5 @@ NOTE: Sie können einen von virtuellen Maschinen verwendeten Datenspeicher nicht
 NOTE: Bei VMFS-Datenspeichern auf Unified ONTAP -Speicher, die Teil eines geschützten Hostclusters sind, können Sie das Volume nicht aus dem ONTAP Cluster löschen.
 
 
+
+Wenn Sie einen NFS-, VMFS- oder vVols -Datenspeicher löschen, verbleiben die übergeordneten igroups auf dem ONTAP System.  Untergeordnete igroups, die keinen LUNs zugeordnet sind, werden automatisch gelöscht.  ONTAP -Tools führen eine tägliche Bereinigung durch, um nicht zugeordnete übergeordnete Standard-igroups zu entfernen.  Benutzerdefinierte übergeordnete igroups müssen in ONTAP manuell gelöscht werden.  Alle verbleibenden übergeordneten igroups veralten und können von ONTAP -Tools nicht wiederverwendet werden.

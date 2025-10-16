@@ -22,7 +22,7 @@ Wenn Sie einen neuen Datenspeicher hinzufügen, können Sie ihn in die bestehend
 Sie sollten die geschützten und Recovery-Standorte, die mit Ihrem vSphere Client erstellt wurden, koppeln, um Storage Replication Adapter (SRA) zur Erkennung der Speichersysteme zu aktivieren.
 
 
-NOTE: Storage Replication Adapter (SRA) unterstützt Fan-Out mit einer Synchronisierungsbeziehung vom Typ „Automated Failover Duplex“ und der asynchronen Beziehung SnapMirror auf der Konsistenzgruppe. Fan-out mit zwei asynchronen SnapMirror auf einer Konsistenzgruppe oder Fan-out SnapMirror auf einem Volume wird jedoch nicht unterstützt.
+NOTE: Storage Replication Adapter (SRA) unterstützt Fan-Out mit einer Synchronisierungsbeziehung vom Typ „Automated Failover Duplex“ und der asynchronen Beziehung SnapMirror auf der Konsistenzgruppe. Allerdings wird Fan-Out mit zwei asynchronen SnapMirror auf einer Konsistenzgruppe oder Fan-Out-SnapMirrors auf einem Volume nicht unterstützt. SnapMirror -Beziehungen vom Vault-Typ werden bei diesen Fan-Out-Einschränkungen nicht berücksichtigt.
 
 .Bevor Sie beginnen
 * VMware Live Site Recovery sollte auf den geschützten und Recovery-Standorten installiert sein.

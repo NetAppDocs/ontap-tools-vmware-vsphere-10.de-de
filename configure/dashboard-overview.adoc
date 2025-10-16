@@ -13,9 +13,9 @@ summary: Wenn Sie im Abschnitt Verknüpfungen des vCenter-Clients das Symbol ONT
 [role="lead"]
 Wenn Sie im vCenter-Client im Abschnitt „Verknüpfungen“ das Plug-in-Symbol „ONTAP tools for VMware vSphere“ auswählen, wird die Übersichtsseite geöffnet.  Dieses Dashboard bietet eine Zusammenfassung der ONTAP tools for VMware vSphere Plug-in.
 
-Bei der Einrichtung im Enhanced Linked Mode (ELM) wird das Dropdown-Menü zur Auswahl des vCenter-Servers angezeigt und Sie können einen gewünschten vCenter-Server auswählen, um die entsprechenden Daten anzuzeigen.  Dieses Dropdown-Menü ist für alle anderen Listenansichten des Plug-Ins verfügbar. Die auf einer Seite getroffene vCenter Server-Auswahl bleibt auf allen Registerkarten des Plug-Ins erhalten.image:../media/remote-plugin-dashboard.png["Dashboard-Übersicht"]
+Im Enhanced Linked Mode (ELM) wird das Dropdown-Menü „vCenter Server“ angezeigt.  Wählen Sie einen vCenter Server aus, um seine Daten anzuzeigen.  Das Dropdown-Menü ist in allen Listenansichten des Plug-Ins verfügbar. Wenn Sie auf einer Seite einen vCenter Server auswählen, bleibt dieser beim Wechseln der Registerkarten im Plug-In unverändert.image:../media/remote-plugin-dashboard.png["Dashboard-Übersicht"]
 
-Auf der Übersichtsseite können Sie die Aktion *Discovery* ausführen. Die Erkennungsaktion führt die Erkennung auf vCenter Ebene aus, um alle neu hinzugefügten oder aktualisierten Storage-Back-Ends, Hosts, Datastores und Sicherungsstatus bzw. -Beziehungen zu erkennen. Sie können eine On-Demand-Erkennung von Entitäten ausführen, ohne auf die geplante Ermittlung warten zu müssen.
+Von der Übersichtsseite aus können Sie die Aktion *Discovery* ausführen. Die Erkennungsaktion erkennt neu hinzugefügte oder aktualisierte Speicher-Backends, Hosts, Datenspeicher und Schutzstatus oder -beziehungen auf vCenter-Ebene.  Führen Sie die Erkennung nach Bedarf aus, ohne auf die geplante Erkennung zu warten.
 
 
 NOTE: Die Aktionsschaltfläche *Erkennung* ist nur aktiviert, wenn Sie über die erforderliche Berechtigung zum Ausführen der Erkennungsaktion verfügen.
@@ -42,5 +42,5 @@ Das Dashboard verfügt über mehrere Karten, die verschiedene Elemente des Syste
 | Datenspeicher | Diese Karte zeigt die 10 besten Datenspeicher, sortiert nach einer Performance-Metrik. Sie können die Kopfzeile auswählen, um die 10 wichtigsten Datastores für die ausgewählte Metrik nach aufsteigender oder absteigender Reihenfolge zu erhalten. Die auf der Karte vorgenommenen Änderungen beim Sortieren und Filtern bleiben bestehen, bis Sie den Browser-Cache ändern oder löschen. Zum Auswählen des Typs der Datastores – NFS, VMFS oder VVols – existiert ein Dropdown-Menü zum Datenspeichertyp. 
 
 
-| ESXi-Host-Compliance-Karte | Diese Karte zeigt den allgemeinen Compliance-Status aller ESXi-Hosts (für das ausgewählte vCenter)-Einstellungen in Bezug auf die empfohlenen NetApp-Host-Einstellungen nach Einstellungsgruppe/Kategorie an. Sie können den Link *Empfohlene Einstellungen anwenden* auswählen, um die empfohlenen Einstellungen anzuwenden. Sie können den kompatiblen Status der Hosts auswählen, um die Liste der Hosts anzuzeigen. 
+| ESXi-Host-Compliance-Karte | Diese Karte zeigt, ob alle ESXi-Hosts (für das ausgewählte vCenter) den empfohlenen NetApp Hosteinstellungen nach Gruppe oder Kategorie folgen. Sie können den Link *Empfohlene Einstellungen anwenden* auswählen, um die empfohlenen Einstellungen anzuwenden. Sie können den Konformitätsstatus der Hosts auswählen, um die Liste der Hosts anzuzeigen. 
 |===
