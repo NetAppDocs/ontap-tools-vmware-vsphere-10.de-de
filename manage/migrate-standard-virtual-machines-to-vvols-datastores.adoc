@@ -16,8 +16,7 @@ Sie können Virtual Machines von NFS- und VMFS-Datastores auf Virtual Volumes (V
 .Bevor Sie beginnen
 Vergewissern Sie sich, dass VASA Provider auf keiner der virtuellen Maschinen ausgeführt wird, die Sie migrieren möchten. Wenn Sie eine Virtual Machine migrieren, auf der VASA Provider ausgeführt wird, zu einem VVols Datastore, können Sie keine Managementvorgänge ausführen. Das gilt auch das Hochfahren der Virtual Machines auf VVols Datastores.
 
-*Über diese Aufgabe*
-
+.Über diese Aufgabe
 Bei der Migration von einem NFS- und VMFS-Datastore zu einem VVols-Datastore verwendet vCenter Server vStorage APIs for Array Integration (VAAI), wenn Daten aus VMFS-Datastores, nicht jedoch aus einer NFS VMDK-Datei verschoben werden. VAAI-Entlastung verringert normalerweise die Last des Hosts.
 
 .Schritte

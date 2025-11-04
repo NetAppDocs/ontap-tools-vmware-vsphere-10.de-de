@@ -11,10 +11,10 @@ summary: In der Ansicht Storage wird die Liste der VVols angezeigt, die von der 
 
 
 [role="lead"]
-In der Ansicht Storage wird die Liste der VVols angezeigt, die von der virtuellen Maschine erstellt werden.
+Die Speicheransicht zeigt die Liste der vVols an, die die virtuelle Maschine erstellt.
 
 
-NOTE: Diese Ansicht gilt für die VM, auf der mindestens ein ONTAP-Tool für durch VMware vSphere gemanagte VVols-Datastore-bezogene Festplatte gemountet ist.
+NOTE: Diese Ansicht gilt für VMs mit mindestens einer Festplatte aus einem von ONTAP tools for VMware vSphere verwalteten vVols Datenspeicher.
 
 .Schritte
 . Gehen Sie vom vSphere-Client zur virtuellen Maschine.

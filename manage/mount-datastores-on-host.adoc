@@ -13,6 +13,9 @@ summary: Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf d
 [role="lead"]
 Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speicher zugreifen. Nachdem Sie die Hosts der VMware Umgebung hinzugefügt haben, können Sie den Datastore auf den zusätzlichen Hosts einbinden.
 
+
+NOTE: Wenn Sie einen neuen ESXi-Host hinzufügen, indem Sie https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["Fügen Sie Ihrem vSphere-Cluster-Workflow einen ESX-Host hinzu"] Warten Sie, bis die geplante Host-Erkennung abgeschlossen ist, bevor der Host in den ONTAP -Tools angezeigt wird. Alternativ können Sie die Erkennung manuell über die Übersichtsseite der NetApp ONTAP -Tools starten.
+
 .Über diese Aufgabe
 * Einige Rechtsklick-Aktionen sind abhängig von der vSphere-Client-Version und dem ausgewählten Datastore-Typ deaktiviert oder nicht verfügbar.
 +
@@ -20,15 +23,18 @@ Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speich
 ** Von vSphere 7.0U3 bis vSphere 8.0, obwohl die Optionen angezeigt werden, wird die Aktion deaktiviert.
 
 
-* Die Option Datastore mounten ist deaktiviert, wenn der Host-Cluster durch einheitliche Konfigurationen geschützt ist.
+* vSphere deaktiviert die Option "Mount Datastore", wenn der Host-Cluster mit einheitlichen Konfigurationen geschützt ist.
 
 
 .Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.
 . Wählen Sie im linken Navigationsbereich die Rechenzentren aus, die die Hosts enthalten.
-. Um NFS/VMFS-Datastores auf Host- oder Host-Cluster zu mounten, klicken Sie mit der rechten Maustaste und wählen Sie *NetApp ONTAP Tools* > *Mount Datastores* aus.
+. Um NFS/VMFS-Datenspeicher auf einem Host oder einem Hostcluster einzubinden, klicken Sie mit der rechten Maustaste und wählen Sie * NetApp ONTAP Tools* > *Datenspeicher einbinden*.
 . Wählen Sie die Datenspeicher aus, die Sie mounten möchten, und wählen Sie *Mount*.
 
 
 .Was kommt als Nächstes?
 Sie können den Fortschritt im Fenster „Letzte Aufgabe“ verfolgen.
+
+.Verwandtes Thema
+link:../manage/add-vsphere-host.html["Neue VMware vSphere-Hosts hinzufügen"]

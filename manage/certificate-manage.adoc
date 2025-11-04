@@ -11,12 +11,14 @@ summary: Mit einer einzigen Instanz der ONTAP Tools für VMware vSphere können 
 
 
 [role="lead"]
-Während der Bereitstellung wird standardmäßig ein selbstsigniertes Zertifikat für ONTAP-Tools und VASA Provider generiert. Über die Benutzeroberfläche des ONTAP Tools Managers können Sie das Zertifikat erneuern oder auf eine benutzerdefinierte Zertifizierungsstelle aktualisieren. Benutzerdefinierte CA-Zertifikate sind in einer Multi-vCenter-Bereitstellung obligatorisch.
+Während der Bereitstellung wird standardmäßig ein selbstsigniertes Zertifikat für ONTAP -Tools und VASA Provider generiert. Über die ONTAP Tools Manager-Schnittstelle können Sie das Zertifikat erneuern oder auf eine benutzerdefinierte Zertifizierungsstelle aktualisieren. In einer Multi-vCenter-Bereitstellung müssen Sie benutzerdefinierte CA-Zertifikate verwenden.
 
 .Bevor Sie beginnen
-* Der Domänenname, auf dem das Zertifikat ausgestellt wird, sollte der virtuellen IP-Adresse zugeordnet werden.
-* Führen Sie die nslookup-Prüfung für den Domänennamen aus, um zu überprüfen, ob die Domäne auf die beabsichtigte IP-Adresse aufgelöst wird.
-* Die Zertifikate sollten mit dem Domänennamen und der IP-Adresse des ONTAP-Tools erstellt werden.
+Folgendes sollten Sie vor Beginn bereithalten:
+
+* Der Domänenname wurde der virtuellen IP-Adresse zugeordnet.
+* Erfolgreicher nslookup des Domainnamens, was bestätigt, dass er zur korrekten IP-Adresse aufgelöst wird.
+* Zertifikate, die mit dem Domänennamen und der IP-Adresse der ONTAP -Tools erstellt wurden.
 
 
 

@@ -104,7 +104,7 @@ Fügen Sie den *REST-API-Pfad* hinzu und wählen Sie den Zugriff aus der Dropdow
 
 === Liste der Mindestberechtigungen, die für einen nicht-Administrator-Cluster mit globalem Umfang erforderlich sind
 
-In diesem Abschnitt sind die Mindestberechtigungen aufgeführt, die für einen Clusterbenutzer mit globalem Geltungsbereich ohne Administratorrechte und ohne JSON-Datei erforderlich sind.  Wenn sich ein Cluster im lokalen Bereich befindet, verwenden Sie die JSON-Datei zum Erstellen von Benutzern, da ONTAP tools for VMware vSphere mehr als nur Leseberechtigungen für die Bereitstellung auf ONTAP benötigen.
+Diese Seite listet die Mindestberechtigungen auf, die für einen globalen Clusterbenutzer ohne Administratorrechte und ohne JSON-Datei erforderlich sind. Wenn sich ein Cluster im lokalen Bereich befindet, verwenden Sie die JSON-Datei zum Erstellen von Benutzern, da ONTAP tools for VMware vSphere mehr als nur Leseberechtigungen für die Bereitstellung auf ONTAP benötigen.
 
 Sie können über APIs auf die Funktionen zugreifen:
 

@@ -11,7 +11,7 @@ summary: Mit der Aktion „Datastore löschen“ wird der Datastore gelöscht. I
 
 
 [role="lead"]
-In diesem Abschnitt wird beschrieben, wie Sie NFS-, VMFS- oder vVols -Datenspeicher mithilfe von ONTAP Tools im vCenter Server löschen.
+Diese Seite beschreibt, wie man NFS-, VMFS- oder vVols -Datenspeicher mithilfe von ONTAP Tools im vCenter Server löscht.
 
 Wenn Sie einen Datenspeicher löschen, werden je nach Datenspeichertyp die folgenden Aktionen ausgeführt:
 
@@ -33,7 +33,7 @@ NOTE: Sie können einen von virtuellen Maschinen verwendeten Datenspeicher nicht
 +
 .. Bei einem NFS- oder VMFS-Datenspeicher wird ein Dialogfeld mit der Liste der VMs angezeigt, die den Datenspeicher verwenden.
 .. Wenn einem VMFS-Datenspeicher keine virtuellen Maschinen zugeordnet sind, wird ein Bestätigungsdialogfeld angezeigt.  Wenn der Hostclusterschutz aktiviert ist und eine AFD-Beziehung besteht, können Sie sekundäre Speicherelemente bereinigen.
-.. Stellen Sie bei geschützten VMFS-Datenspeichern auf ASA R2-Systemen sicher, dass der Schutz vor dem Löschen entfernt wird.  Ab ONTAP 9.17.1 und ONTAP tools for VMware vSphere 10.5 können Sie einen geschützten Datenspeicher löschen.  Wenn es sich um den einzigen Datenspeicher in der Schutzgruppe handelt, wird der Hostclusterschutz automatisch entfernt.
+.. Bei geschützten VMFS-Datenspeichern auf ASA r2-Systemen muss der Schutz vor dem Löschen entfernt werden. Ab ONTAP 9.17.1 und ONTAP tools for VMware vSphere 10.5 können Sie einen geschützten Datenspeicher löschen.  Wenn es sich um den einzigen Datenspeicher in der Schutzgruppe handelt, wird dieser vom Hostclusterschutz automatisch entfernt.
 .. Bei vVols -Datenspeichern können Sie den Datenspeicher nur löschen, wenn keine vVols vorhanden sind.  Das Dialogfeld *Datenspeicher löschen* enthält eine Option zum Entfernen von Volumes aus dem ONTAP Cluster.
 .. Bei vVols Datenspeichern auf ASA r2-Systemen können Sie die Sicherungsvolumes nicht mit der Option *Datenspeicher löschen* aus ONTAP löschen.
 
@@ -45,4 +45,4 @@ NOTE: Bei VMFS-Datenspeichern auf Unified ONTAP -Speicher, die Teil eines gesch�
 
 
 
-Wenn Sie einen NFS-, VMFS- oder vVols -Datenspeicher löschen, verbleiben die übergeordneten igroups auf dem ONTAP System.  Untergeordnete igroups, die keinen LUNs zugeordnet sind, werden automatisch gelöscht.  ONTAP -Tools führen eine tägliche Bereinigung durch, um nicht zugeordnete übergeordnete Standard-igroups zu entfernen.  Benutzerdefinierte übergeordnete igroups müssen in ONTAP manuell gelöscht werden.  Alle verbleibenden übergeordneten igroups veralten und können von ONTAP -Tools nicht wiederverwendet werden.
+Wenn Sie einen NFS-, VMFS- oder vVols -Datenspeicher löschen, verbleiben die übergeordneten igroups auf dem ONTAP System. Untergeordnete igroups, die keinen LUNs zugeordnet sind, werden automatisch gelöscht. ONTAP -Tools führen eine tägliche Bereinigung durch, um nicht zugeordnete übergeordnete Standard-igroups zu entfernen. Löschen Sie die benutzerdefinierten übergeordneten iGroups manuell in ONTAP.  ONTAP Tools können veraltete übergeordnete iGroups nicht wiederverwenden.

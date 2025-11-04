@@ -13,6 +13,9 @@ summary: 'Mithilfe des Dialogfelds Mount VVols Datastore können Sie einen VMwar
 [role="lead"]
 Sie können einen VMware Virtual Volumes (VVols)-Datastore auf einen oder mehrere zusätzliche Hosts mounten, um zusätzlichen Hosts den Storage-Zugriff zu ermöglichen. Sie können das Mounten von VVols-Datastores nur über die APIs aufheben.
 
+
+NOTE: Wenn Sie einen neuen ESXi-Host hinzufügen, indem Sie https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["Fügen Sie Ihrem vSphere-Cluster-Workflow einen ESX-Host hinzu"] Warten Sie, bis die geplante Host-Erkennung abgeschlossen ist, bevor der Host in den ONTAP -Tools angezeigt wird. Alternativ können Sie die Erkennung manuell über die Übersichtsseite der NetApp ONTAP -Tools starten.
+
 .Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.
 . Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Datastore enthält.
@@ -20,4 +23,7 @@ Sie können einen VMware Virtual Volumes (VVols)-Datastore auf einen oder mehrer
 . Wählen Sie im Dialogfeld *Datastores auf Hosts mounten* die Hosts aus, auf denen Sie den Datastore mounten möchten, und wählen Sie dann *Mount* aus.
 
 
-Sie können den Fortschritt im Fenster „Letzte Aufgabe“ verfolgen.
+Im Bereich „Letzte Aufgaben“ wird der Fortschritt angezeigt.
+
+.Verwandtes Thema
+link:../manage/add-vsphere-host.html["Neue VMware vSphere-Hosts hinzufügen"]

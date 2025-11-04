@@ -25,7 +25,7 @@ Sie können ONTAP-Tools für VMware vSphere mit der virtuellen VMware vCenter Se
 ** 348 GB für Thick Provisioning-Installationen
 
 
-* *Größenanforderungen des Hostsystems* Der empfohlene Speicher für jede Bereitstellungsgröße ist in der folgenden Tabelle aufgeführt.  Für Bereitstellungen mit hoher Verfügbarkeit (HA) benötigen Sie die dreifache Appliance-Größe, die angegeben ist.
+* *Anforderungen an die Dimensionierung des Hostsystems* Die folgende Tabelle zeigt den empfohlenen Arbeitsspeicher für jede Bereitstellungsgröße. Für Bereitstellungen mit hoher Verfügbarkeit (HA) benötigen Sie die dreifache Appliance-Größe, die angegeben ist.
 
 
 |===
@@ -84,70 +84,74 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 == Port-Anforderungen
 
-Die folgende Tabelle zeigt die von NetApp verwendeten Netzwerkports und deren Zweck. Stellen Sie sicher, dass diese Ports offen und zugänglich sind, um einen ordnungsgemäßen Betrieb und die Kommunikation innerhalb des Systems zu gewährleisten. Stellen Sie sicher, dass die erforderlichen Netzwerkkonfigurationen vorhanden sind, um den Datenverkehr über diese Ports zu ermöglichen, damit die zugehörigen Dienste ordnungsgemäß funktionieren. Abhängig von Ihren Sicherheitsrichtlinien müssen Sie möglicherweise Firewalls oder andere Sicherheitsanwendungen konfigurieren, um diesen Datenverkehr innerhalb Ihres Netzwerks zuzulassen.
+Die folgende Tabelle zeigt die von NetApp verwendeten Netzwerkports und deren Zweck. Es gibt drei verschiedene Arten von Anschlüssen:
+
+* Externe Ports: Diese Ports sind von außerhalb des Kubernetes-Clusters oder -Knotens zugänglich. Sie ermöglichen es Diensten, mit externen Netzwerken oder Benutzern zu kommunizieren und so die Integration mit Systemen außerhalb der Clusterumgebung zu ermöglichen.
+* Inter-Node-Ports: Diese Ports ermöglichen die Kommunikation zwischen den Knoten innerhalb des Kubernetes-Clusters. Sie werden für Clusteraufgaben wie den Datenaustausch und die Zusammenarbeit benötigt. Bei Einzelknoten-Bereitstellungen werden die Inter-Node-Ports nur innerhalb des Knotens verwendet und benötigen keinen externen Zugriff. Inter-Node-Ports können Datenverkehr von außerhalb des Clusters akzeptieren. Sperren Sie den Internetzugang zwischen den Knoten mithilfe von Firewall-Regeln.
+* Interne Ports: Diese Ports kommunizieren innerhalb des Kubernetes-Clusters über ClusterIP-Adressen. Sie sind nicht extern zugänglich und müssen nicht zu Firewall-Regeln hinzugefügt werden.
+
 
 
 NOTE: Stellen Sie sicher, dass sich alle ONTAP Tool-Knoten im selben Subnetz befinden, um eine unterbrechungsfreie Kommunikation untereinander aufrechtzuerhalten.
 
+
+|===
+| *Dienst-/Komponentenname* | *Port* | *Protokoll* | *Anschlusstyp* | *Beschreibung* 
+
+
+| ntv-gateway-svc (LB) | 443, 8443 | TCP | Extern | Durchgangsport für eingehende Kommunikation für den VASA-Provider-Dienst. Auf diesem Port werden das selbstsignierte Zertifikat des VASA-Anbieters und das benutzerdefinierte CA-Zertifikat gehostet. 
+
+
+| SSH | 22 | TCP | Extern | Secure Shell für die Anmeldung am Remote-Server und die Ausführung von Befehlen. 
+
+
+| rke2-Server | 9345 | TCP | Zwischenknoten | RKE2 Supervisor API (Beschränkung auf vertrauenswürdige Netzwerke). 
+
+
+| kube-apiserver | 6443 | TCP | Zwischenknoten | Kubernetes API-Server-Port (auf vertrauenswürdige Netzwerke beschränken). 
+
+
+| rpcbind/portmapper | 111 | TCP/UDP | Zwischenknoten | Wird für die RPC-Kommunikation zwischen Diensten verwendet. 
+
+
+| coredns (DNS) | 53 | TCP/UDP | Zwischenknoten | Domain Name System (DNS)-Dienst zur Namensauflösung innerhalb des Clusters. 
+
+
+| NTP | 123 | UDP | Zwischenknoten | Netzwerkzeitprotokoll (NTP) zur Zeitsynchronisation. 
+
+
+| etcd | 2379, 2380, 2381 | TCP | Zwischenknoten | Schlüsselwertspeicher für Clusterdaten. 
+
+
+| kube-vip | 2112 | TCP | Zwischenknoten | Kubernetes API-Server-Port. 
+
+
+| kubelet | 10248, 10250 | TCP | Zwischenknoten | Kubernetes-Komponente 
+
+
+| kube-controller | 10257 | TCP | Zwischenknoten | Kubernetes-Komponente 
+
+
+| Cloud-Controller | 10258 | TCP | Zwischenknoten | Kubernetes-Komponente 
+
+
+| kube-scheduler | 10259 | TCP | Zwischenknoten | Kubernetes-Komponente 
+
+
+| kube-proxy | 10249, 10256 | TCP | Zwischenknoten | Kubernetes-Komponente 
+
+
+| Kaliko-Knoten | 9091, 9099 | TCP | Zwischenknoten | Calico-Netzwerkkomponente. 
+
+
+| containerd | 10010 | TCP | Zwischenknoten | Container-Daemon-Dienst. 
+
+
+| VXLAN (Flannel) | 8472 | UDP | Zwischenknoten | Overlay-Netzwerk für die Pod-Kommunikation. 
 |===
 
+NOTE: Bei HA-Bereitstellungen muss sichergestellt werden, dass der UDP-Port 8472 zwischen allen Knoten geöffnet ist. Dieser Port ermöglicht die Kommunikation zwischen Pods über verschiedene Knoten hinweg; durch Blockierung wird die Netzwerkverbindung zwischen den Knoten unterbrochen.
 
-| *Port* | *Protokoll* | *Beschreibung* 
-
-
-| 8143 | TCP | HTTP/HTTPS-Verbindungen für ONTAP-Tools. 
-
-
-| 8043 | TCP | HTTP/HTTPS-Verbindungen für ONTAP-Tools. 
-
-
-| 9060 | TCP | HTTP/HTTPS-Verbindungen für ONTAP-Tools. 
-
-
-| 22 | TCP | Ansible verwendet diesen SSH-Port für die Kommunikation während der Cluster-Bereitstellung. Dieser Port ist erforderlich für Funktionen wie das Ändern des Benutzerpassworts für die Wartung, Statusmeldungen und das Aktualisieren von Werten auf allen drei Nodes im Falle einer HA-Konfiguration. 
-
-
-| 443 | TCP | Dies ist der Pass-Through-Port für die eingehende Kommunikation für den VASA Provider-Dienst. Auf diesem Port werden selbstsigniertes VASA Provider-Zertifikat und ein benutzerdefiniertes CA-Zertifikat gehostet. 
-
-
-| 8443 | TCP | Dieser Port hostet die API-Dokumentation über swagger und die Manager-Benutzeroberflächenanwendung. 
-
-
-| 2379 | TCP | Dies ist der Standardport für Client-Anfragen wie get, Put, delete oder Watch für Schlüssel im Schlüssel-Wertspeicher etcd. 
-
-
-| 2380 | TCP | Dies ist der Standardport für die Server-zu-Server-Kommunikation für den etcd-Cluster, der für den Floß-Konsensus-Algorithmus usw. verwendet wird, der für die Datenreplikation und -Konsistenz von abhängt. 
-
-
-| 7946 | TCP/UDP | Dieser Port wird für die Container-Netzwerkerkennung von Docker verwendet. 
-
-
-| 9083 | TCP | Dieser Port ist ein intern verwendeter Service-Port für den VASA Provider-Service. 
-
-
-| 6443 | TCP | Quelle: RKE2 Agenten Knoten. Ziel: REK2 Server Nodes. Beschreibung: Kubernetes API 
-
-
-| 9345 | TCP | Quelle: RKE2 Agenten Knoten. Ziel: REK2 Server Nodes. Beschreibung: REK2 Supervisor API 
-
-
-| 8472 | TCP+UDP | Alle Knoten müssen andere Knoten über UDP-Port 8472 erreichen können, wenn Flannel VXLAN verwendet wird. Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: Canal CNI mit VXLAN 
-
-
-| 10250 | TCP | Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: Kubelet Metriken 
-
-
-| 30000-32767 | TCP | Quelle: Alle RKE2 Knoten. Ziel: Alle REK2-Knoten. Beschreibung: NodePort Port Portbereich 
-
-
-| 123 | TCP | Ntpd verwendet diesen Port, um die Validierung des NTP-Servers durchzuführen. 
-
-
-| 3300 und 6789-7300 | TCP | Datenebene zwischen Knoten 
-
-
-| 9080 | TCP | VP HTTP/HTTPS-Verbindungen (nur von 127.0.0.0/8 für IPv4 oder ::1/128 für IPv6). 
-|===
 
 
 == Konfigurationsbeschränkungen für die Implementierung von ONTAP Tools für VMware vSphere

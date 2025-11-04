@@ -11,7 +11,7 @@ summary: Verwenden Sie die Schritte in diesem Abschnitt, um die VASA-Bereinigung
 
 
 [role="lead"]
-Verwenden Sie die Schritte in diesem Abschnitt, um die VASA-Bereinigung durchzuführen.
+Befolgen Sie diese Anweisungen, um den VASA-Reinigungsprozess abzuschließen.
 
 
 NOTE: Es wird empfohlen, alle VVols-Datastores zu entfernen, bevor Sie die VASA-Bereinigung durchführen.

@@ -24,9 +24,9 @@ Verwenden Sie den ONTAP Tools Manager, um die ONTAP tools for VMware vSphere Kon
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie im Übersichtsbereich die Option *Geräteeinstellungen bearbeiten* aus.
-. Im Abschnitt *Konfiguration* können Sie vertikal skalieren, um die Knotengröße zu erhöhen und die HA-Konfiguration nach Ihren Anforderungen zu aktivieren. Sie benötigen die vCenter Server-Anmeldeinformationen, um Änderungen vorzunehmen.
+. Im Abschnitt *Konfiguration* können Sie die Knotengröße erhöhen und die HA-Konfiguration aktivieren.  Verwenden Sie die Anmeldeinformationen des vCenter Servers, um Änderungen vorzunehmen.
 +
-Wenn sich ONTAP Tools in der HA-Konfiguration befinden, können Sie die Details der Content Library ändern. Geben Sie das Kennwort erneut für die neue Einreichung der Bearbeitung ein.
+In der HA-Konfiguration können Sie Details zur Inhaltsbibliothek ändern.  Geben Sie für jede Bearbeitung das Passwort an.
 
 +
 
@@ -45,7 +45,7 @@ NOTE: Nachdem die HA-Konfiguration aktiviert wurde, können Sie nicht mehr zu ei
 . Im Abschnitt *HA-Einstellungen* des Fensters *Appliance-Einstellungen bearbeiten* können Sie die Details der Knoten 2 und 3 eingeben. Die ONTAP Tools für VMware vSphere unterstützen drei Nodes im HA-Setup.
 +
 
-NOTE: Zur Vereinfachung des Arbeitsablaufs sind die meisten Eingabeoptionen bereits mit Netzwerkdetails zu Knoten 1 ausgefüllt.  Sie können die Eingabedaten jedoch bearbeiten, bevor Sie zur letzten Seite des Assistenten navigieren.  Sie können IPv6-Adressdetails für die anderen beiden Knoten nur eingeben, wenn die IPv6-Adresse auf dem Verwaltungsknoten der ONTAP -Tools aktiviert ist.
+NOTE: Die ONTAP -Tools füllen die meisten Eingabefelder automatisch mit Netzwerkdetails von Knoten 1 aus, um den Arbeitsablauf zu vereinfachen.  Sie können die Eingabedaten bearbeiten, bevor Sie zur letzten Seite des Assistenten gelangen. Sie können IPv6-Adressdetails für die anderen beiden Knoten nur eingeben, wenn die IPv6-Adresse auf dem Verwaltungsknoten der ONTAP -Tools aktiviert ist.
 
 +
 Stellen Sie sicher, dass ein ESXi-Host nur eine VM mit ONTAP Tools enthält. Die Eingaben werden jedes Mal validiert, wenn Sie zum nächsten Fenster wechseln.
@@ -54,8 +54,8 @@ Stellen Sie sicher, dass ein ESXi-Host nur eine VM mit ONTAP Tools enthält. Die
 
 
 .Was kommt als Nächstes?
-Die Seite *Übersicht* zeigt den Status der Bereitstellung an. Mithilfe der Job-ID können Sie auch den Jobstatus der Geräteeinstellungen bearbeiten in der Jobansicht verfolgen.
+Auf der Seite *Übersicht* wird der Status der Bereitstellung angezeigt. Sie können den Status des Auftrags „Geräteeinstellungen bearbeiten“ auch in der Auftragsansicht mithilfe der Auftrags-ID verfolgen.
 
-Wenn die HA-Bereitstellung fehlschlägt und der Status des neuen Node als ‘Neu angezeigt wird, löschen Sie die neue VM in vCenter, bevor Sie den HA-Vorgang aktivieren erneut versuchen.
+Falls die HA-Bereitstellung fehlschlägt und der Status des neuen Knotens „Neu“ lautet, löschen Sie die neue VM in vCenter, bevor Sie versuchen, HA erneut zu aktivieren.
 
 Auf der Registerkarte *Alerts* im linken Bereich werden Warnungen für ONTAP-Tools für VMware vSphere aufgelistet.

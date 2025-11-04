@@ -11,7 +11,7 @@ summary:
 
 
 [role="lead"]
-Wenn Sie sowohl VMs mit ONTAP -Tools als auch ONTAP Speichersysteme verwalten, ist es wichtig zu verstehen, wie sich igroups verhalten, insbesondere beim Verschieben von Datenspeichern aus Umgebungen, die nicht mit ONTAP -Tools verwaltet werden, in Umgebungen, die mit ONTAP-Tools verwaltet werden.  In diesem Abschnitt wird erläutert, wie igroups während dieses Vorgangs aktualisiert werden.
+Wenn Sie sowohl VMs mit ONTAP -Tools als auch ONTAP Speichersysteme verwalten, ist es wichtig zu verstehen, wie sich igroups verhalten, insbesondere beim Verschieben von Datenspeichern aus Umgebungen, die nicht mit ONTAP -Tools verwaltet werden, in Umgebungen, die mit ONTAP-Tools verwaltet werden. Diese Seite erklärt, wie igroups während dieses Prozesses aktualisiert werden.
 
 ONTAP tools for VMware vSphere 10.4 und höhere Versionen erstellen und verwalten automatisch ONTAP und vCenter-Objekte, um die Datenspeicherverwaltung in VMware-Rechenzentrumsumgebungen zu vereinfachen.
 

@@ -11,7 +11,7 @@ summary: Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das
 
 
 [role="lead"]
-Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das Datastore-Objekt klicken, werden im Abschnitt Plug-in ONTAP-Tools für von VMware vSphere unterstützte Aktionen angezeigt. Bestimmte Aktionen werden abhängig vom Typ des Datenspeichers und den aktuellen Benutzerberechtigungen aktiviert.
+Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das Datenspeicherobjekt klicken, werden im Abschnitt „Plug-ins“ die unterstützten Aktionen für ONTAP tools for VMware vSphere angezeigt. Abhängig vom Datenspeichertyp und den aktuellen Benutzerberechtigungen werden bestimmte Aktionen aktiviert.
 
 
 NOTE: Das erweitern des VVols-Datastore ist nicht für systembasierte VVols Datastores in ASA r2 anwendbar.
@@ -20,6 +20,6 @@ NOTE: Das erweitern des VVols-Datastore ist nicht für systembasierte VVols Data
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.
 . Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Datastore enthält.
 . Klicken Sie mit der rechten Maustaste auf den Datastore und wählen Sie *NetApp ONTAP Tools* > *Speicher zum Datastore hinzufügen*.
-. Im Fenster *create oder Select Volumes* können Sie entweder neue Volumes erstellen oder aus den vorhandenen Volumes auswählen. Die Benutzeroberfläche ist selbsterklärend. Befolgen Sie die Anweisungen gemäß Ihrer Wahl.
+. Im Fenster „Volumes erstellen oder auswählen“ können Sie entweder neue Volumes erstellen oder aus den vorhandenen Volumes auswählen. Folgen Sie den Anweisungen auf dem Bildschirm, um Ihre Auswahl zu treffen.
 . Überprüfen Sie im Fenster *Summary* die Auswahl und wählen Sie *Expand*. Sie können den Fortschritt im Fenster „Letzte Aufgaben“ verfolgen.
 

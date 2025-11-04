@@ -24,7 +24,7 @@ Sie können die geschützten virtuellen Maschinen migrieren in:
 * Unterschiedliche kompatible VVols-Datastores auf einem anderen ESXi-Host
 
 
-Wenn die Virtual Machine in ein anderes FlexVol Volume migriert wird, wird auch die entsprechende Metadatendatei mit den Informationen der Virtual Machine aktualisiert. Wenn eine virtuelle Maschine zu einem anderen ESXi-Host, aber demselben Storage migriert wird, wird die zugrunde liegende FlexVol-Volume-Metadatendatei nicht geändert.
+Wenn Sie die virtuelle Maschine auf ein anderes FlexVol volume migrieren, aktualisiert das System die Metadatendatei für dieses Volume mit den Informationen zur virtuellen Maschine. Wenn eine virtuelle Maschine auf einen anderen ESXi-Host, aber denselben Speicher migriert wird, wird die zugrunde liegende Metadatendatei des FlexVol volume nicht geändert.
 
 
 
@@ -60,4 +60,4 @@ Derzeit werden nur Snapshots virtueller Maschinen ohne Speicher unterstützt. We
 
 Sie können auch keine ungeschützten virtuellen Maschinen schützen, die über einen Speicher-Snapshot verfügen.  Bei dieser Version müssen Sie den Speicher-Snapshot löschen, bevor Sie den Schutz für die virtuelle Maschine aktivieren.
 
-Bei Windows VM mit ASA r2 Storage-Typ ist es ein schreibgeschützter Snapshot, wenn Sie einen Snapshot der virtuellen Maschine erstellen. Wenn die VM beim Einschalten eingeschaltet wird, erstellt der VASA Provider eine LUN mit dem schreibgeschützten Snapshot und aktiviert sie anschließend für IOPS. Während der Anforderung zum Ausschalten löscht VASA Provider die erstellte LUN und deaktiviert anschließend die IOPS.
+Bei einer Windows-VM mit dem Speichertyp ASA r2 ist ein Snapshot der virtuellen Maschine schreibgeschützt.  Beim Einschalten der VM erstellt der VASA Provider eine LUN aus dem schreibgeschützten Snapshot und aktiviert IOPS.  Wenn Sie die VM ausschalten, löscht der VASA Provider die LUN und deaktiviert IOPS.

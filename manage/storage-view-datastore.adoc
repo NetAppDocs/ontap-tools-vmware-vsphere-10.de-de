@@ -16,7 +16,7 @@ ONTAP Tools für VMware vSphere zeigt die ONTAP Storage-Seitenansicht der Datast
 .Schritte
 . Gehen Sie vom vSphere-Client zum Datenspeicher.
 . Wählen Sie im rechten Fensterbereich die Registerkarte *Configure* aus.
-. Wählen Sie *NetApp ONTAP-Tools* > *ONTAP-Speicher*. Je nach Datenspeichertyp ändert sich die Ansicht. Weitere Informationen finden Sie in der folgenden Tabelle:
+. Wählen Sie * NetApp ONTAP -Tools* > * ONTAP Speicher*. Die Ansicht ändert sich je nach Datenspeichertyp.  Siehe die folgende Tabelle:
 
 
 |===
@@ -31,5 +31,5 @@ ONTAP Tools für VMware vSphere zeigt die ONTAP Storage-Seitenansicht der Datast
 | VMFS-Datastores | Die Seite *Storage Details* enthält Details zu Speicher-Backend, Aggregat, Volume und Storage Availability Zone (SAZ). Die Seite *Storage unit Details* enthält Details zur Speichereinheit. 
 
 
-| VVols Datastores | Listet alle Volumes auf. Sie können Speicher im ONTAP-Speicherbereich erweitern oder entfernen. Diese Ansicht wird für den systembasierten VVols Datastore ASA r2 nicht unterstützt. 
+| VVols Datastores | Listet alle Bände auf. Sie können Speicher im ONTAP Speicherbereich erweitern oder entfernen. ONTAP Tools unterstützen diese Ansicht nicht für ASA r2-System-basierte vVols Datenspeicher. 
 |===
