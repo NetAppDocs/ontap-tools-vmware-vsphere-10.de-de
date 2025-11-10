@@ -48,11 +48,20 @@ Sie können von ONTAP tools for VMware vSphere 10.3 oder 10.4 auf 10.5 aktualisi
 * Stellen Sie sicher, dass das Hot-Plug-in für CPU und RAM aktiviert ist.
 * Erstellen Sie für ONTAP tools for VMware vSphere 10.3 oder 10.4 vor dem Upgrade einen stillgelegten Snapshot auf der virtuellen Maschine der ONTAP Tools.
 * Aktivieren Sie die Sicherung mit niedrigem RPO und stellen Sie sicher, dass eine Sicherung in der vCenter-Client-Schnittstelle sichtbar ist.
++
+Siehe link:../manage/backup-settings.html["Backup-Einstellungen bearbeiten"] Und link:../manage/recover-backup.html["Wiederherstellen des ONTAP Tools-Setups"] Weitere Informationen zu Datensicherung und -wiederherstellung finden Sie hier.
+
 
 
 .Schritte
 . Laden Sie ONTAP-Tools für VMware vSphere hoch, aktualisieren Sie ISO in die Content Library.
-. Wählen Sie auf der primären VM-Seite *actions* > *Edit Settings* aus
+. Wählen Sie auf der primären VM-Seite *Aktionen* > *Einstellungen bearbeiten*. Um den primären VM-Namen zu ermitteln:
++
+.. Aktivieren Sie die Diagnose-Shell auf einem beliebigen Knoten.
+.. Führen Sie folgenden Befehl aus:
+`grep sourceHost /opt/netapp/meta/ansible_vars.yaml`
+
+
 . Wählen Sie im Fenster „Einstellungen bearbeiten“ unter dem Feld „CD/DVD-Laufwerk“ die *ISO-Datei der Inhaltsbibliothek* aus.
 . Wählen Sie die ISO-Datei aus, aktivieren Sie das Kontrollkästchen *Verbunden* für das Feld *CD/DVD-Laufwerk* und klicken Sie auf *OK*.
 . Öffnen Sie im vCenter Server eine Konsole für ONTAP Tools.

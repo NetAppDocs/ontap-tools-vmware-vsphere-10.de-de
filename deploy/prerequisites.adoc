@@ -94,7 +94,10 @@ Die folgende Tabelle zeigt die von NetApp verwendeten Netzwerkports und deren Zw
 
 NOTE: Stellen Sie sicher, dass sich alle ONTAP Tool-Knoten im selben Subnetz befinden, um eine unterbrechungsfreie Kommunikation untereinander aufrechtzuerhalten.
 
+Klicken Sie, um die Tabelle mit den Portanforderungen ein- oder auszublenden.
 
+[%collapsible]
+====
 |===
 | *Dienst-/Komponentenname* | *Port* | *Protokoll* | *Anschlusstyp* | *Beschreibung* 
 
@@ -152,6 +155,7 @@ NOTE: Stellen Sie sicher, dass sich alle ONTAP Tool-Knoten im selben Subnetz bef
 
 NOTE: Bei HA-Bereitstellungen muss sichergestellt werden, dass der UDP-Port 8472 zwischen allen Knoten geöffnet ist. Dieser Port ermöglicht die Kommunikation zwischen Pods über verschiedene Knoten hinweg; durch Blockierung wird die Netzwerkverbindung zwischen den Knoten unterbrochen.
 
+====
 
 
 == Konfigurationsbeschränkungen für die Implementierung von ONTAP Tools für VMware vSphere

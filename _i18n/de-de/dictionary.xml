@@ -204,9 +204,6 @@
   <block id="ad9681c4b067c102640e512ffe944ae5" category="paragraph">Vergewissern Sie sich, dass VASA Provider auf keiner der virtuellen Maschinen ausgeführt wird, die Sie migrieren möchten. Wenn Sie eine Virtual Machine migrieren, auf der VASA Provider ausgeführt wird, zu einem VVols Datastore, können Sie keine Managementvorgänge ausführen. Das gilt auch das Hochfahren der Virtual Machines auf VVols Datastores.</block>
   <block id="87dd176d02dc14ceef36faeb3b3e32ae" category="paragraph">Bei der Migration von einem NFS- und VMFS-Datastore zu einem VVols-Datastore verwendet vCenter Server vStorage APIs for Array Integration (VAAI), wenn Daten aus VMFS-Datastores, nicht jedoch aus einer NFS VMDK-Datei verschoben werden. VAAI-Entlastung verringert normalerweise die Last des Hosts.</block>
   <block id="951d3fc54a28f9f46798897467d96a5b" category="doc">Verwalten von Zertifikaten</block>
-  <block id="a6f65a806180d1ff3c8d5e553e634e9d" category="summary">Sie können die vCenter Server- und ONTAP-Anmeldeinformationen über die Wartungskonsole aktualisieren.</block>
-  <block id="f72e000ebb4c7bedf651a46e595f1371" category="doc">Aktualisieren Sie die vCenter Server- und ONTAP-Anmeldeinformationen</block>
-  <block id="7ac19aa441feceb73519a5108d4cc366" category="paragraph">Sie können die vCenter Server-Instanz und die ONTAP-Anmeldeinformationen über die Wartungskonsole aktualisieren.</block>
   <block id="21a56b485fb6cd9f7c9cc8f514440950" category="paragraph">Sie müssen über Anmeldedaten für Wartungsbenutzer verfügen.</block>
   <block id="2e7ce9d8495225c584175fd7caa148ce" category="summary">ONTAP Tools für das VMware vSphere Plug-in bieten Berichte für Virtual Machines und Datastores.</block>
   <block id="bd294460cf119253eaf3ca5c5ff6bb68" category="summary">Während des Betriebs des Gast-Betriebssystems neu starten zeigt das Menü grub eine Option zum Zurücksetzen des Benutzerpassworts der Wartungskonsole an. </block>
@@ -475,7 +472,6 @@ Sudo rke2-uninstall.sh (alle VMs).</block>
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">Registrieren Sie VASA Provider auf vCenter Server</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">PATCH</block>
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">Laden Sie ONTAP-Tools für VMware vSphere hoch, aktualisieren Sie ISO in die Content Library.</block>
-  <block id="dd5382558ec4a47dfbc203fb25698772" category="list-text">Wählen Sie auf der primären VM-Seite *actions* &gt; *Edit Settings* aus</block>
   <block id="6aa61138e01e77bb590500715db216a4" category="list-text">Wenn Sie ein Upgrade durchführen, werden die folgenden Aktionen automatisch ausgeführt:</block>
   <block id="ea228e7ce90fb22b7336716e47dc7d35" category="summary">Auf dieser Seite werden die Fehlercodes für den Upgrade-Betrieb von ONTAP-Tools für das VMware vSphere-System erläutert.</block>
   <block id="f804f395829e966ca161a8be7756fec4" category="doc">Upgrade-Fehlercodes</block>
@@ -576,8 +572,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Führen Sie den Perl-Befehl aus, um SRA mit den neuen Anmeldeinformationen zu konfigurieren:</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">Wählen Sie das erforderliche Array Pair aus, und überprüfen Sie die entsprechenden Details.</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">Geben Sie ein<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> , um das Menü Systemkonfiguration auszuwählen.</block>
-  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Geben Sie ein,<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> um die ONTAP-Anmeldedaten zu ändern.</block>
-  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Geben Sie ein,<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> um die vCenter-Anmeldedaten zu ändern.</block>
   <block id="ab475951501b4995dc2913e61372d546" category="section-title">Dual-Stack</block>
   <block id="5541521d8d465590f0919510f29154b2" category="summary">Konfigurationsbeschränkungen für die Implementierung von ONTAP Tools für VMware vSphere</block>
   <block id="96c7de8d06430bb8621d9ca29f8bf76b" category="paragraph">Die folgende Tabelle bietet einen Leitfaden zur Konfiguration von ONTAP Tools für VMware vSphere.</block>
@@ -677,7 +671,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">Mounten Sie NFS- und VMFS-Datastore</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">Unmounten Sie den NFS- und VMFS-Datastore</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">Erweitern Sie den vVol Datastore</block>
-  <block id="0b05bd7cf8d32e0eca345c170c1c2bdd" category="sidebar">Aktualisieren Sie den vCenter-Server und die ONTAP-Anmeldeinformationen</block>
   <block id="b380edc36b1ed383fd72d0b93d5857c5" category="sidebar">Verwalten Sie den Schutz des Host-Clusters</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">Ändern Sie den Schutz des Host-Clusters</block>
   <block id="4fb2d974d1e232174a0545c1d40f5345" category="section-title">VMware Live Site Recovery</block>
@@ -2440,8 +2433,18 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="0e527af09bb57a137d15be7b82466174" category="cell">Listet alle Bände auf. Sie können Speicher im ONTAP Speicherbereich erweitern oder entfernen. ONTAP Tools unterstützen diese Ansicht nicht für ASA r2-System-basierte vVols Datenspeicher.</block>
   <block id="c39c392ff0013e0b93fcc63dc310cc30" category="paragraph">Die Aktion „Datenspeicher aushängen“ entfernt einen NFS- oder VMFS-Datenspeicher von ESXi-Hosts.  Es ist für Datenspeicher verfügbar, die von ONTAP tools for VMware vSphere erkannt oder verwaltet werden.</block>
   <block id="0901929c9c2cc418f53328e6412b7d46" category="paragraph">Der vSphere-Client öffnet ein Dialogfeld und listet die ESXi-Hosts auf, die den Datenspeicher einbinden. Wenn der Vorgang auf einem geschützten Datenspeicher ausgeführt wird, wird eine Warnmeldung auf dem Bildschirm angezeigt.</block>
-  <block id="e65e1eb2c16cb3c35af4e401b566b7c4" category="paragraph">Wenn Sie die Anmeldeinformationen für vCenter Server, ONTAP oder Data LIF nach der Bereitstellung geändert haben, aktualisieren Sie diese mit diesem Verfahren.</block>
   <block id="69e03ac4326032eeb38fb3fcf35c7ff6" category="paragraph">Die Speicheransicht zeigt die Liste der vVols an, die die virtuelle Maschine erstellt.</block>
   <block id="6dc534da8e148f3344a75f75993a7078" category="admonition">Diese Ansicht gilt für VMs mit mindestens einer Festplatte aus einem von ONTAP tools for VMware vSphere verwalteten vVols Datenspeicher.</block>
   <block id="c94984b666995a59419ca0857f214e23" category="list-text">Geben Sie *2* ein, um das Menü *Systemkonfiguration* auszuwählen.</block>
+  <block id="bac860f1d4bb4c20d8de991eeeedd998" category="paragraph">Klicken Sie, um die Tabelle mit den Portanforderungen ein- oder auszublenden.</block>
+  <block id="f59d6f6c2fbe5659bab55bb335b17871" category="summary">Sie können die Anmeldeinformationen des vCenter Servers über die Wartungskonsole aktualisieren.</block>
+  <block id="d546c3915b2e0bc231d2bd0456f2d736" category="doc">Aktualisieren Sie die Anmeldeinformationen des vCenter Servers.</block>
+  <block id="6e73e8087488ddc10c72aeec0f27cc93" category="paragraph">Sie können die Anmeldeinformationen der vCenter Server-Instanz über die Wartungskonsole aktualisieren.</block>
+  <block id="f13c11fc9998fa4e2d133fe7f943fb4f" category="paragraph">Wenn Sie die Anmeldeinformationen für den vCenter Server nach der Bereitstellung geändert haben, aktualisieren Sie diese mit diesem Verfahren.</block>
+  <block id="a38dbe6982c223d82e53b7d0feab69ce" category="list-text">Eingeben<block ref="c9f0f895fb98ab9159f51fd0297e236d" prefix=" " category="inline-code"></block> um die vCenter-Anmeldeinformationen zu ändern.</block>
+  <block id="b09a768d508454c0e540ea7b37cb5509" category="paragraph">Siehe <block ref="afe6cee65a7db7868c8d2eef90c140e6" category="inline-link-macro-rx"></block> Und <block ref="da3a0196b755588b543a28093241fcfa" category="inline-link-macro-rx"></block> Weitere Informationen zu Datensicherung und -wiederherstellung finden Sie hier.</block>
+  <block id="a928a1b805644ea87a643f7f8d60a477" category="list-text">Wählen Sie auf der primären VM-Seite *Aktionen* &gt; *Einstellungen bearbeiten*. Um den primären VM-Namen zu ermitteln:</block>
+  <block id="75a86edd37c9b2122be450b28fa09149" category="list-text">Aktivieren Sie die Diagnose-Shell auf einem beliebigen Knoten.</block>
+  <block id="e016d50ae26af4214e6a864c1c2c8db5" category="list-text">Führen Sie folgenden Befehl aus:<block ref="1ebe86b64a17c55ae52f4488cffae75f" prefix=" " category="inline-code"></block></block>
+  <block id="e40ec845cea3d17ed090f7fc08824c3f" category="sidebar">Aktualisieren Sie die Anmeldeinformationen des vCenter-Servers.</block>
 </blocks>
