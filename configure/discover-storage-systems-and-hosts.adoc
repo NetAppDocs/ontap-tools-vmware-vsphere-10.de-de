@@ -11,16 +11,15 @@ summary: Wenn Sie ONTAP-Tools für VMware vSphere zum ersten Mal in einem vSpher
 
 
 [role="lead"]
-Wenn Sie ONTAP-Tools für VMware vSphere zum ersten Mal in einem vSphere Client ausführen, erkennt ONTAP-Tools die ESXi-Hosts, ihre LUNs und NFS-Exporte und die NetApp-Storage-Systeme, die Eigentümer dieser LUNs und Exporte sind.
+Wenn ONTAP tools for VMware vSphere zum ersten Mal im vSphere Client gestartet wird, werden automatisch ESXi-Hosts, die zugehörigen LUNs und NFS-Exporte sowie die NetApp -Speichersysteme, denen diese Ressourcen gehören, erkannt.
 
 .Bevor Sie beginnen
-* Alle ESXi-Hosts sollten eingeschaltet und verbunden sein.
-* Alle zu ermittelenden Storage Virtual Machines (SVMs) sollten ausgeführt werden. Jeder Cluster-Node sollte mindestens eine Daten-LIF für das verwendete Storage-Protokoll (NFS oder iSCSI) konfiguriert haben.
+* Stellen Sie sicher, dass alle ESXi-Hosts eingeschaltet und verbunden sind.
+* Stellen Sie sicher, dass alle zu erkennenden Storage Virtual Machines (SVMs) ausgeführt werden und dass auf jedem Clusterknoten mindestens eine Daten-LIF für das verwendete Speicherprotokoll (NFS oder iSCSI) konfiguriert ist.
 
 
-*Über diese Aufgabe*
-
-Sie können jederzeit neue Storage-Systeme ermitteln oder Informationen zu vorhandenen Storage-Systemen aktualisieren, um die aktuellsten Kapazitäts- und Konfigurationsinformationen zu erhalten. Sie können auch die Anmeldeinformationen ändern, die die ONTAP-Tools für VMware vSphere für die Anmeldung bei den Speichersystemen verwenden.
+.Über diese Aufgabe
+Sie können neue Speichersysteme entdecken oder bestehende aktualisieren, um die neuesten Kapazitäts- und Konfigurationsdetails zu erhalten.  Sie können die ONTAP tools for VMware vSphere Anmeldeinformationen für den Zugriff auf das Speichersystem ändern.
 
 Bei der Erkennung der Speichersysteme erfasst ONTAP-Tools für VMware vSphere Informationen von den ESXi-Hosts, die von der vCenter Server-Instanz gemanagt werden.
 

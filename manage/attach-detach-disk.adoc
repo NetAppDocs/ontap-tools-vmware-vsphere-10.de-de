@@ -10,18 +10,21 @@ summary: Verbinden Sie eine Datenfestplatte mit einer virtuellen Maschine, um di
 :imagesdir: ../media/
 
 
+[role="lead"]
+Befolgen Sie diese Schritte, um Datenträger an virtuelle Maschinen in vSphere anzuhängen oder zu trennen und deren Speicherressourcen zu verwalten.
+
 
 
 == Verbinden Sie eine Datenfestplatte mit einer virtuellen Maschine
 
-Verbinden Sie eine Datenfestplatte mit einer virtuellen Maschine, um die Speicherkapazität zu erweitern.
+Schließen Sie eine Datenfestplatte an eine virtuelle Maschine an, um mehr Speicherplatz hinzuzufügen.
 
 .Schritte
 . Melden Sie sich beim vSphere-Client an.
 . Klicken Sie mit der rechten Maustaste auf eine virtuelle Maschine im Inventar und wählen Sie *Einstellungen bearbeiten*.
 . Wählen Sie auf der Registerkarte *Virtual Hardware* *existing Hard Disk* aus.
 . Wählen Sie die virtuelle Maschine aus, auf der das Laufwerk vorhanden ist.
-. Wählen Sie die Festplatte aus, die Sie anschließen möchten, und wählen Sie *OK*
+. Wählen Sie die Festplatte aus, die Sie anschließen möchten, und klicken Sie auf die Schaltfläche *OK*.
 
 
 .Ergebnis
@@ -31,7 +34,7 @@ Die Festplatte wird in der Liste Virtuelle Hardwaregeräte angezeigt.
 
 == Trennen Sie ein Datenlaufwerk von der virtuellen Maschine
 
-Sie können eine Datenfestplatte, die mit einer virtuellen Maschine verbunden ist, trennen, wenn sie nicht mehr benötigt wird. Wenn Sie das Laufwerk von der virtuellen Maschine trennen, wird es nicht automatisch gelöscht, sondern verbleibt im ONTAP-Speichersystem.
+Trennen Sie eine Datenfestplatte von einer virtuellen Maschine, wenn Sie sie nicht mehr benötigen.  Die Festplatte wird nicht gelöscht; sie verbleibt im ONTAP -Speichersystem.
 
 .Schritte
 . Melden Sie sich beim vSphere-Client an.

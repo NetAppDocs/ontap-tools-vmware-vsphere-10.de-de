@@ -11,7 +11,7 @@ summary: Wenn Sie den Netzwerkzugriff noch nicht konfiguriert haben, werden stan
 
 
 [role="lead"]
-Sofern kein Netzwerkzugriff konfiguriert wurde, werden alle vom ESXi-Host ermittelten IP-Adressen automatisch in die Exportrichtlinie aufgenommen.  Sie können die Richtlinie so konfigurieren, dass nur bestimmte IP-Adressen zugelassen und andere ausgeschlossen werden. Wenn Sie jedoch versuchen, von einem ausgeschlossenen ESXi-Host aus zu mounten, schlägt der Vorgang fehl.
+Standardmäßig werden alle vom ESXi-Host ermittelten IP-Adressen automatisch zur Exportrichtlinie hinzugefügt, es sei denn, Sie konfigurieren den Netzwerkzugriff.  Sie können die Exportrichtlinie so ändern, dass der Zugriff nur von bestimmten IP-Adressen aus erlaubt ist.  Wenn ein ausgeschlossener ESXi-Host versucht, einen Mount-Vorgang durchzuführen, schlägt der Vorgang fehl.
 
 .Schritte
 . Melden Sie sich beim vSphere-Client an.

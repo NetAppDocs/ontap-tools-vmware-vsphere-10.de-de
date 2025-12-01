@@ -19,7 +19,7 @@ Sie müssen über Anmeldedaten für Wartungsbenutzer verfügen.
 .Schritte
 . Öffnen Sie im vCenter Server eine Konsole für ONTAP Tools.
 . Melden Sie sich als Wartungbenutzer an.
-. Eingeben `1` , um das Anwendungskonfigurationsmenü auszuwählen.
+. Eingeben `1` um das Menü *Anwendungskonfiguration* auszuwählen.
 . Eingeben `3` um das Zertifikatvalidierungsflag zu ändern.
 +
 Die Wartungskonsole zeigt den Status des Zertifikatvalidierungsflags an und fordert Sie auf, ihn zu ändern.

@@ -21,8 +21,8 @@ Sie können von ONTAP tools for VMware vSphere 10.3 oder 10.4 auf 10.5 aktualisi
 
 ====
 .Bevor Sie beginnen
+* Stellen Sie sicher, dass alle Knoten aktiv sind.
 * Stellen Sie sicher, dass das ONTAP -Systemzertifikat und die integrierten vCenter-Zertifikate mindestens 5 Tage gültig sind. Wenn die Zertifikate früher ablaufen, schlägt das Upgrade fehl.
-* Um ein sicheres Upgrade zu gewährleisten, überprüfen Sie, ob Ihre Zertifikate Einträge für den Subject Alternative Name (SAN) enthalten. Wenn Zertifikate keine SAN-Einträge enthalten, setzen Sie das Zertifikatvalidierungsflag auf „false“, um SAN-Prüfungen während des Upgrades zu umgehen.
 * Stellen Sie sicher, dass Sie auf allen Knoten über eine fünfte Festplatte mit einer Kapazität von 100 GB verfügen.
 * Überprüfen Sie, ob die Knotenkonfiguration den Spezifikationen in der folgenden Tabelle entspricht.
 
@@ -46,8 +46,8 @@ Sie können von ONTAP tools for VMware vSphere 10.3 oder 10.4 auf 10.5 aktualisi
 | HA groß | 17 | 34 | 350 | 51 | 102 | 1050 
 |===
 * Stellen Sie sicher, dass das Hot-Plug-in für CPU und RAM aktiviert ist.
-* Erstellen Sie für ONTAP tools for VMware vSphere 10.3 oder 10.4 vor dem Upgrade einen stillgelegten Snapshot auf der virtuellen Maschine der ONTAP Tools.
-* Aktivieren Sie die Sicherung mit niedrigem RPO und stellen Sie sicher, dass eine Sicherung in der vCenter-Client-Schnittstelle sichtbar ist.
+* Aktivieren Sie die Sicherung mit niedrigem RPO und stellen Sie sicher, dass eine Sicherung in der vCenter Client-Oberfläche sichtbar ist.  Laden Sie den Sicherungsordner vor dem Upgrade herunter.
+* Es wird eine Datensicherung mit niedrigem RPO empfohlen.  Bei einer Bereitstellung ohne Hochverfügbarkeit können Sie jedoch vor dem Upgrade einen statischen Snapshot der virtuellen Maschine der ONTAP -Tools erstellen.
 +
 Siehe link:../manage/backup-settings.html["Backup-Einstellungen bearbeiten"] Und link:../manage/recover-backup.html["Wiederherstellen des ONTAP Tools-Setups"] Weitere Informationen zu Datensicherung und -wiederherstellung finden Sie hier.
 
@@ -85,7 +85,8 @@ Wenn während des Upgrades in integrierten Speicher-Backend-Zertifikaten SAN-Ein
 Nach dem Upgrade auf ONTAP tools for VMware vSphere 10.5:
 
 * Überwachen Sie Systemwarnungen und planen Sie die Erneuerung des Gateway-Zertifikats, bevor es in einem Jahr abläuft.
-* Entfernen Sie den SRA-Adapter der ONTAP Tools 10.4 oder 10.3 und laden Sie die TAR-Datei des SRA-Adapters 10.5 hoch.  Scannen Sie dann die SRA-Adapter erneut, um die Seite „VMware Site Recovery Storage Replication Adapters“ zu aktualisieren.
+* Entfernen Sie den SRA-Adapter der ONTAP Tools 10.4 oder 10.3 und laden Sie die TAR-Datei des SRA-Adapters 10.5 hoch.
+* Führen Sie den Installationsbefehl nach dem Hochladen des SRA-Adapter-Tar-Archivs aus. Scannen Sie anschließend die SRA-Adapter erneut, um die Seite „VMware Site Recovery Storage Replication Adapters“ zu aktualisieren.
 
 
 Nach dem Upgrade können Sie:

@@ -11,13 +11,13 @@ summary: Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Da
 
 
 [role="lead"]
-Wenn Sie Speicher-Backends zu ONTAP -Tools hinzufügen, können Sie Datenspeicher direkt vom vCenter Server aus bereitstellen und verwalten.
+Verwenden Sie ONTAP tools for VMware vSphere, um Speicher-Backends für Ihre ESXi-Hosts hinzuzufügen und zu verwalten.  Sie können Cluster oder SVMs einbinden, die MetroCluster Unterstützung aktivieren und Zertifikate für eine sichere Verbindung validieren.  Sie können Speicher-Backends mit dem ONTAP Tools Manager oder dem vSphere Client konfigurieren, den Zertifikatsstatus überwachen und Ressourcen nach Clusteränderungen manuell neu erkennen.
 
-Um Speicher-Backends lokal hinzuzufügen, verwenden Sie Cluster- oder SVM-Anmeldeinformationen in der ONTAP Tools-Schnittstelle.  Diese Speicher-Backends sind nur für den ausgewählten vCenter Server verfügbar.  ONTAP -Tools ordnen SVMs dem vCenter Server für die Verwaltung von vVols oder VMFS-Datenspeichern zu.  Für VMFS-Datenspeicher und SRA-Workflows können Sie SVM-Anmeldeinformationen verwenden, ohne dass ein global zugeordneter Cluster erforderlich ist.
+Um ein lokales Speicher-Backend hinzuzufügen, verwenden Sie Cluster- oder SVM-Anmeldeinformationen in der ONTAP -Tools-Oberfläche.  Lokale Speicher-Backends stehen nur dem ausgewählten vCenter Server zur Verfügung. ONTAP -Tools ordnen SVMs dem vCenter Server für die Verwaltung von vVols oder VMFS-Datenspeichern zu.  Für VMFS-Datenspeicher und SRA-Workflows können Sie SVM-Anmeldeinformationen verwenden, ohne einen Cluster global zuzuordnen.
 
-Sie können globale Speicher-Backends mithilfe der ONTAP Cluster-Anmeldeinformationen im ONTAP Tools-Manager hinzufügen.  Globale Speicher-Backends ermöglichen Erkennungs-Workflows zur Identifizierung der für die vVol-Verwaltung benötigten Clusterressourcen.  In Multitenant-Setups können Sie lokal einen SVM-Benutzer hinzufügen, um vVols -Datenspeicher zu verwalten.
+Um ein globales Speicher-Backend hinzuzufügen, verwenden Sie die ONTAP Cluster-Anmeldeinformationen im ONTAP Tools Manager.  Globale Speicher-Backends ermöglichen Discovery-Workflows zur Identifizierung der für die vVol-Verwaltung erforderlichen Clusterressourcen.  In Multitenant-Umgebungen können Sie einen SVM-Benutzer lokal hinzufügen, um vVols Datenspeicher zu verwalten.
 
-Wenn Sie die MetroCluster Unterstützung im ONTAP -System aktivieren, integrieren Sie sowohl Quell- als auch Zielcluster als lokale oder globale Speicher-Backends.
+Wenn die MetroCluster Unterstützung in ONTAP aktiviert ist, werden sowohl Quell- als auch Zielcluster als lokale oder globale Speicher-Backends eingebunden.
 
 .Bevor Sie beginnen
 Überprüfen Sie, ob das Zertifikat ein gültiges Feld „Subject Alternative Name“ (SAN) enthält.  ONTAP -Systeme verwenden das SAN-Feld, um Cluster- und SVM-Management-LIFs zu identifizieren.

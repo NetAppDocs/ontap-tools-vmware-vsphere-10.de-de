@@ -11,7 +11,7 @@ summary: Konfigurieren Sie Benutzerrollen und Berechtigungen für Speicher-Backe
 
 
 [role="lead"]
-Konfigurieren Sie Benutzerrollen und Berechtigungen für Speicher-Backends mit der JSON-Datei aus ONTAP tools for VMware vSphere und ONTAP System Manager.
+In diesem Abschnitt konfigurieren Sie ONTAP -Benutzerrollen und -Berechtigungen für Speichersysteme mit ONTAP tools for VMware vSphere und ONTAP System Manager.  Sie können Rollen mithilfe der bereitgestellten JSON-Dateien zuweisen, Benutzer und Rollen manuell erstellen und die minimal erforderlichen Berechtigungen für Nicht-Administratorkonten anwenden.
 
 .Bevor Sie beginnen
 * Laden Sie die ONTAP Privileges von den ONTAP tools for VMware vSphere mit _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ herunter.  Nach dem Herunterladen der ZIP-Datei finden Sie zwei JSON-Dateien.  Verwenden Sie die ASA r2-spezifische JSON-Datei, wenn Sie ein ASA r2-System konfigurieren.

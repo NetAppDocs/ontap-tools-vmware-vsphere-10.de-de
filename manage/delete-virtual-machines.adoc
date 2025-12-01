@@ -11,10 +11,10 @@ summary: Verwenden Sie die Schritte in diesem Abschnitt, um die VASA-Bereinigung
 
 
 [role="lead"]
-Befolgen Sie diese Anweisungen, um den VASA-Reinigungsprozess abzuschließen.
+Um den VASA-Bereinigungsprozess abzuschließen, befolgen Sie diese Schritte.
 
 
-NOTE: Es wird empfohlen, alle VVols-Datastores zu entfernen, bevor Sie die VASA-Bereinigung durchführen.
+NOTE: Es wird empfohlen, vor Beginn der VASA-Bereinigung alle vVols -Datenspeicher zu entfernen.
 
 .Schritte
 . Heben Sie die Registrierung des Plug-ins auf, indem Sie zu \https://OTV_IP:8143/Register.html gehen
