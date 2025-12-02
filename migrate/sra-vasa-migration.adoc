@@ -10,6 +10,9 @@ summary: Bei der Migration von Storage-Daten werden Storage-Back-Ends manuell ü
 :imagesdir: ../media/
 
 
+[role="lead"]
+Befolgen Sie die Schritte in diesem Abschnitt, um den VASA Provider von ONTAP tools for VMware vSphere 9.xx auf ONTAP tools for VMware vSphere 10.5 zu migrieren und den Storage Replication Adapter (SRA) auf der VMware Live Site Recovery Appliance zu aktualisieren.
+
 
 
 == Schritte zur Migration des VASA-Anbieters

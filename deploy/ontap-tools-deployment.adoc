@@ -96,7 +96,6 @@ Wenn Sie ONTAP Tools in einer Topologie mit zwei vCenter Servern einsetzen – w
 +
 Stellen Sie für die vCenter-Instanz, die von ONTAP -Tools verwaltet wird, sicher, dass das vCenter-Benutzerkonto über Administratorrechte verfügt.
 
-** Die Informationen werden während der Installation validiert.  Bei Abweichungen erscheint eine Fehlermeldung auf der Webkonsole und Sie werden aufgefordert, diese zu korrigieren.
 ** Hostnamen müssen Buchstaben (A–Z, a–z), Ziffern (0–9) und Bindestriche (-) enthalten. Geben Sie zum Konfigurieren von Dual-Stack den Hostnamen an, der der IPv6-Adresse zugeordnet ist.
 +
 
