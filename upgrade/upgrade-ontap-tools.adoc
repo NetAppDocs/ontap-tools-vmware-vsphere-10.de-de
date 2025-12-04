@@ -68,8 +68,9 @@ Siehe link:../manage/backup-settings.html["Backup-Einstellungen bearbeiten"] Und
 . Melden Sie sich als Wartungbenutzer an.
 . Geben Sie *2* ein, um das Menü *Systemkonfiguration* auszuwählen.
 . Geben Sie *7* ein, um die Option *Upgrade* auszuwählen.
+. Geben Sie die vCenter-Anmeldeinformationen an, wenn Sie dazu aufgefordert werden.  Dies ist die vCenter-Instanz, auf der die ONTAP Tools gehostet werden.
 +
-Wenn Sie ONTAP Tools in einer Topologie mit zwei vCenter Servern einsetzen – wobei die Appliance in einer vCenter-Instanz gehostet wird und eine andere verwaltet – können Sie der vCenter-Instanz, die die ONTAP Tools hostet, eine eingeschränkte Rolle zuweisen.  Sie können einen dedizierten vCenter-Benutzer und eine Rolle erstellen, für die nur die unten aufgeführten Datenspeicherberechtigungen für die OVF-Vorlagenbereitstellung erforderlich sind:
+Wenn Sie ONTAP -Tools in einer Topologie mit zwei vCenter Servern verwenden – wobei die Appliance in einer vCenter-Instanz gehostet wird und eine andere verwaltet – können Sie der vCenter-Instanz, die die ONTAP Tools hostet, eine eingeschränkte Rolle zuweisen.  Sie können einen dedizierten vCenter-Benutzer und eine Rolle erstellen, die ausschließlich über die unten aufgeführten Datenspeicherberechtigungen verfügen:
 
 +
 ** Speicherplatz zuweisen
