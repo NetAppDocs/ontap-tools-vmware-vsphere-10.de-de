@@ -75,7 +75,7 @@ Wenn Sie ONTAP -Tools in einer Topologie mit zwei vCenter Servern verwenden – 
 +
 ** Speicherplatz zuweisen
 ** Datenspeicher durchsuchen
-** Dateiverarbeitung auf niedriger Ebene
+** Dateivorgänge auf niedriger Ebene
 ** Datei entfernen
 ** Aktualisieren der Dateien der virtuellen Maschine
 ** Aktualisieren der Metadaten virtueller Maschinen

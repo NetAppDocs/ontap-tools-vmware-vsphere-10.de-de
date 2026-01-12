@@ -41,7 +41,180 @@ Um die Arbeit mit RBAC für vCenter Server zu vereinfachen, bieten die ONTAP Too
 
 NOTE: Sie können bei Bedarf neue benutzerdefinierte Rollen erstellen. In diesem Fall sollten Sie eine der vorhandenen Rollen des ONTAP-Tools klonen und sie bei Bedarf bearbeiten. Nachdem Sie die Konfigurationsänderungen vorgenommen haben, müssen sich die betroffenen vSphere-Client-Benutzer ab- und wieder anmelden, um die Änderungen zu aktivieren.
 
-Um die ONTAP-Tools für VMware vSphere-Rollen anzuzeigen, wählen Sie oben im vSphere-Client *Menü* aus und klicken Sie auf *Administration* und dann auf *Rollen* auf der linken Seite. Es gibt drei vordefinierte Rollen, wie unten beschrieben.
+Um die ONTAP tools for VMware vSphere -Rollen anzuzeigen, wählen Sie oben im vSphere Client *Menü* und klicken Sie links auf *Administration* und dann auf *Rollen*. Die folgenden Berechtigungen müssen in der Rolle enthalten sein, die dem vCenter-Benutzer zugewiesen wird, der für die Bereitstellung oder das Onboarding von vCenter verantwortlich ist. Stellen Sie sicher, dass diese Berechtigungen als Voraussetzung für den Bereitstellungs- oder Onboarding-Prozess konfiguriert sind.
+
+* Alarm
++
+** Alarm bestätigen
+
+
+* Inhaltsbibliothek
++
+** Bibliothekselement hinzufügen
+** Vorlage einchecken
+** Schau dir eine Vorlage an
+** Dateien herunterladen
+** Importspeicher
+** Lesespeicher
+** Bibliothekselement synchronisieren
+** Synchronisierung der abonnierten Bibliothek
+** Konfigurationseinstellungen anzeigen
+
+
+* Datenspeicher
++
+** Speicherplatz zuweisen
+** Datenspeicher durchsuchen
+** Dateivorgänge auf niedriger Ebene
+** Datei entfernen
+** Aktualisieren der Dateien der virtuellen Maschine
+** Aktualisieren der Metadaten virtueller Maschinen
+
+
+* ESX Agent Manager
++
+** Anzeigen
+
+
+* Ordner
++
+** Ordner erstellen
+
+
+* Gastgeber
++
+** Konfiguration
++
+*** Erweiterte Einstellungen
+*** Einstellungen ändern
+*** Netzwerkkonfiguration
+*** Systemressourcen
+*** Konfiguration für den automatischen Start der virtuellen Maschine
+
+
+** Lokale Operationen
++
+*** Erstellen einer virtuellen Maschine
+*** Virtuelle Maschine löschen
+*** Virtuelle Maschine neu konfigurieren
+
+
+
+
+* Netzwerk
++
+** Netzwerk zuweisen
+** Konfigurieren
+
+
+* OvfManager
++
+** Ovf-Verbraucherzugang
+
+
+* Hostprofil
++
+** Anzeigen
+
+
+* Ressource
++
+** Weisen Sie die virtuelle Maschine dem Ressourcenpool zu.
+
+
+* Geplante Aufgabe
++
+** Aufgaben erstellen
+** Aufgabe ändern
+** Aufgabe ausführen
+
+
+* Aufgaben
++
+** Aufgabe erstellen
+** Aufgabe aktualisieren
+
+
+* vApp
++
+** Virtuelle Maschine hinzufügen
+** Ressourcenpool zuweisen
+** vApp zuweisen
+** Erstellen
+** Import
+** Bewegen
+** Strom aus
+** Strom einschalten
+** Aus URL abrufen
+** OVF-Umgebung anzeigen
+
+
+* Virtual Machine
++
+** Konfiguration ändern
++
+*** Vorhandene Festplatte hinzufügen
+*** Neue Festplatte hinzufügen
+*** Gerät hinzufügen oder entfernen
+*** Erweiterte Konfiguration
+*** CPU-Anzahl ändern
+*** Speicher ändern
+*** Einstellungen ändern
+*** Ressource ändern
+*** Virtuelle Festplatte erweitern
+*** Geräteeinstellungen ändern
+*** Datenträger entfernen
+*** Gastinformationen zurücksetzen
+*** Kompatibilität mit virtuellen Maschinen verbessern
+
+
+** Inventar bearbeiten
++
+*** Aus bestehenden erstellen
+*** Neu erstellen
+*** Bewegen
+*** Anmeldung
+*** Entfernen
+*** Abmelden
+
+
+** Interaktion
++
+*** Sicherungsvorgang auf virtueller Maschine
+*** CD-Medien konfigurieren
+*** Diskettenmedien konfigurieren
+*** Geräte verbinden
+*** Konsoleninteraktion
+*** Gastbetriebssystemverwaltung über die VIX-API
+*** Strom aus
+*** Strom einschalten
+*** Zurücksetzen
+*** Aussetzen
+
+
+** Bereitstellung
++
+*** Festplattenzugriff zulassen
+*** Klonvorlage
+*** Gäste anpassen
+*** Bereitstellungsvorlage
+*** Anpassungsspezifikation ändern
+*** Lesen Sie die Anpassungsspezifikationen.
+
+
+** Snapshot-Verwaltung
++
+*** Snapshot erstellen
+*** Snapshot entfernen
+*** Snapshot umbenennen
+*** Auf Snapshot zurücksetzen
+
+
+
+
+
+
+Es gibt drei vordefinierte Rollen, die unten beschrieben werden.
 
 .NetApp ONTAP-Tools für VMware vSphere Administrator
 Bietet alle nativen vCenter Server Privileges- und ONTAP-Tools-spezifischen Privileges, die für das Ausführen zentraler ONTAP Tools für VMware vSphere Administratoraufgaben erforderlich sind.

@@ -11,7 +11,7 @@ summary: Mit einer einzigen Instanz der ONTAP Tools für VMware vSphere können 
 
 
 [role="lead"]
-Während der Bereitstellung wird standardmäßig ein selbstsigniertes Zertifikat für ONTAP -Tools und VASA Provider generiert. Über die ONTAP Tools Manager-Schnittstelle können Sie das Zertifikat erneuern oder auf eine benutzerdefinierte Zertifizierungsstelle aktualisieren. In einer Multi-vCenter-Bereitstellung müssen Sie benutzerdefinierte CA-Zertifikate verwenden.
+Für ONTAP -Tools und den VASA-Provider wird während der Bereitstellung standardmäßig ein selbstsigniertes Zertifikat generiert. Über die ONTAP Tools Manager-Oberfläche können Sie dieses Zertifikat erneuern oder durch ein benutzerdefiniertes CA-Zertifikat ersetzen. Bei Multi-vCenter-Bereitstellungen ist die Verwendung benutzerdefinierter CA-Zertifikate erforderlich.
 
 .Bevor Sie beginnen
 Folgendes sollten Sie vor Beginn bereithalten:
@@ -47,7 +47,7 @@ NOTE: Das System ist offline, bis das Zertifikat erneuert wird, und Sie werden v
 . Um das selbstsignierte Zertifikat auf ein benutzerdefiniertes CA-Zertifikat zu aktualisieren, wählen Sie *Zertifikate* > *ONTAP-Tools* > *Upgrade auf CA*.
 +
 .. Laden Sie im Popup-Fenster das Serverzertifikat, den privaten Schlüssel des Serverzertifikats, das Stammzertifizierungsstellenzertifikat und die Zwischenzertifikatdateien hoch.
-.. Geben Sie den Domänennamen ein, für den Sie dieses Zertifikat erstellt haben, und aktualisieren Sie das Zertifikat.
+.. Geben Sie den FQDN der Load Balancer IP-Adresse ein, für die Sie dieses Zertifikat generiert haben, und aktualisieren Sie das Zertifikat.
 +
 
 NOTE: Das System ist bis zum Abschluss des Upgrades offline und Sie werden von der Oberfläche des ONTAP Tools Managers abgemeldet.
@@ -68,7 +68,7 @@ ONTAP Tools für VMware vSphere werden mit einem selbstsignierten Zertifikat fü
 . Wählen Sie *Certificates* > *VASA Provider* oder *ONTAP Tools* > *Upgrade auf CA*, um das selbstsignierte Zertifikat auf ein benutzerdefiniertes CA-Zertifikat zu aktualisieren.
 +
 .. Laden Sie im Popup-Fenster das Serverzertifikat, den privaten Schlüssel des Serverzertifikats, das Stammzertifizierungsstellenzertifikat und die Zwischenzertifikatdateien hoch.
-.. Geben Sie den Domänennamen ein, für den Sie dieses Zertifikat erstellt haben, und aktualisieren Sie das Zertifikat.
+.. Geben Sie den FQDN der Load Balancer IP-Adresse ein, für die Sie dieses Zertifikat generiert haben, und aktualisieren Sie das Zertifikat.
 +
 
 NOTE: Das System ist bis zum Abschluss des Upgrades offline und Sie werden von der Oberfläche des ONTAP Tools Managers abgemeldet.
