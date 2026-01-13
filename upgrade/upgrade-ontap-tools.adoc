@@ -70,22 +70,13 @@ Siehe link:../manage/backup-settings.html["Backup-Einstellungen bearbeiten"] Und
 . Geben Sie *7* ein, um die Option *Upgrade* auszuwählen.
 . Geben Sie die vCenter-Anmeldeinformationen an, wenn Sie dazu aufgefordert werden.  Dies ist die vCenter-Instanz, auf der die ONTAP Tools gehostet werden.
 +
-Wenn Sie ONTAP -Tools in einer Topologie mit zwei vCenter Servern verwenden – wobei die Appliance in einer vCenter-Instanz gehostet wird und eine andere verwaltet – können Sie der vCenter-Instanz, die die ONTAP Tools hostet, eine eingeschränkte Rolle zuweisen.  Sie können einen dedizierten vCenter-Benutzer und eine Rolle erstellen, die ausschließlich über die unten aufgeführten Datenspeicherberechtigungen verfügen:
+Wenn Sie ONTAP Tools in einer Topologie mit zwei vCenter Servern verwenden – wobei die Appliance in einer vCenter-Instanz gehostet wird und eine andere verwaltet –, können Sie der vCenter-Instanz, die die ONTAP Tools hostet, eine eingeschränkte Rolle zuweisen. Sie können einen dedizierten vCenter-Benutzer und eine Rolle erstellen, die nur über die für die OVF-Vorlagenbereitstellung erforderlichen Berechtigungen verfügen. Für Einzelheiten siehe die aufgeführten Rollen in https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["In ONTAP Tools für VMware vSphere 10 enthaltene Rollen"]Die
 
-+
-** Speicherplatz zuweisen
-** Datenspeicher durchsuchen
-** Dateivorgänge auf niedriger Ebene
-** Datei entfernen
-** Aktualisieren der Dateien der virtuellen Maschine
-** Aktualisieren der Metadaten virtueller Maschinen
 +
 Stellen Sie für die vCenter-Instanz, die von ONTAP -Tools verwaltet wird, sicher, dass das vCenter-Benutzerkonto über Administratorrechte verfügt.
 
 +
 Wenn während des Upgrades in integrierten Speicher-Backend-Zertifikaten SAN-Einträge (Subject Alternative Name) fehlen, erhalten Sie eine Meldung mit dem Hinweis auf den fehlenden SAN.  Wenn Sie ohne Validierung des SAN fortfahren, wird das Upgrade fortgesetzt. Dies wird jedoch aufgrund potenzieller Sicherheitsrisiken nicht empfohlen.
-
-
 
 . Wenn Sie ein Upgrade durchführen, werden die folgenden Aktionen automatisch ausgeführt:
 +
