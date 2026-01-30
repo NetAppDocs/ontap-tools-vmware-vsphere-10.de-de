@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles 
 summary: Wenn Sie im Abschnitt Verknüpfungen des vCenter-Clients das Symbol ONTAP-Tools für VMware vSphere Plug-in auswählen, wechselt die Benutzeroberfläche zur Übersichtsseite. Diese Seite ähnelt dem Dashboard mit einer Zusammenfassung der ONTAP Tools für VMware vSphere Plug-in. 
 ---
-= Dashboard-Übersicht über die ONTAP Tools für VMware vSphere
+= Erfahren Sie mehr über das ONTAP tools-Dashboard
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

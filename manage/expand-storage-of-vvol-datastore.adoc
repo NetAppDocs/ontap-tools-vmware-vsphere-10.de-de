@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: virtual volume datastores 
 summary: Wenn Sie in der vCenter-Objektansicht mit der rechten Maustaste auf das Datastore-Objekt klicken, werden im Abschnitt Plug-in ONTAP-Tools für von VMware vSphere unterstützte Aktionen angezeigt. 
 ---
-= Erweitern Sie VVols Datastores
+= Erweitern Sie vVols Datenspeicher in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

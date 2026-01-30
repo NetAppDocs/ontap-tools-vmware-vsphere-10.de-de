@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Konfigurieren Sie nach der Bereitstellung der VMware Live Site Recovery-Appliance den Storage Replication Adapter (SRA), um die Notfallwiederherstellungsverwaltung zu aktivieren.' 
 ---
-= Konfigurieren Sie SRA auf der VMware Live Site Recovery-Appliance
+= Konfigurieren Sie SRA auf der VMware Live Site Recovery Appliance mithilfe von ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

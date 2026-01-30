@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Bei der erstmaligen Konfiguration von ONTAP tools for VMware vSphere ist AutoSupport standardmäßig aktiviert.  Es sendet 24 Stunden nach der Aktivierung Nachrichten an den technischen Support. 
 ---
-= AutoSupport -Einstellungen bearbeiten
+= ONTAP tools AutoSupport-Einstellungen bearbeiten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

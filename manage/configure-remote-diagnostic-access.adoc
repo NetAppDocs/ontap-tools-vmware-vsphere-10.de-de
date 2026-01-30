@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Sie können ONTAP Tools für VMware vSphere konfigurieren, um den SSH-Zugriff für den Diagnosebenutzer zu aktivieren. 
 ---
-= Konfigurieren Sie den Zugriff auf die Remote-Diagnose
+= Konfigurieren Sie den Ferndiagnosezugriff für ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

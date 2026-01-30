@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vcenter, vcenter server, vcenter server rbac, rbac environment 
 summary: VMware vCenter Server bietet eine RBAC-Funktion, mit der Sie den Zugriff auf vSphere Objekte steuern können. Dies ist ein wichtiger Teil der zentralisierten Authentifizierungs- und Autorisierungssicherheitsdienste von vCenter. 
 ---
-= RBAC-Umgebung für vCenter Server mit ONTAP Tools für VMware vSphere 10
+= Wie vCenter Server-RBAC mit ONTAP tools funktioniert
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

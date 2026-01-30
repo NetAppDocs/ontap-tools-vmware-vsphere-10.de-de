@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: In einem Fan-Out-Schutzszenario ist die Konsistenzgruppe doppelt geschützt, mit einer synchronen Beziehung auf dem ersten Ziel ONTAP Cluster und mit einer asynchronen Beziehung auf dem zweiten Ziel ONTAP Cluster. 
 ---
-= Fan-Out-Schutz
+= Fan-out-Schutz in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

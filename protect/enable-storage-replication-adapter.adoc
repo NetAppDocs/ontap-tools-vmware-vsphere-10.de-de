@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP Tools für VMware vSphere bieten die Option zur Aktivierung der SRA-Funktionen zur Konfiguration der Disaster Recovery. 
 ---
-= Konfigurieren Sie SRA zum Schutz von Datenspeichern
+= Konfigurieren Sie SRA in ONTAP tools, um Datastores zu schützen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

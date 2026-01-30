@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Sie können den VASA-Anbieter mithilfe der ONTAP tools for VMware vSphere bei einer vCenter Server-Instanz registrieren. 
 ---
-= Registrieren Sie den VASA-Anbieter mithilfe von ONTAP -Tools bei einer vCenter Server-Instanz
+= Registrieren Sie den VASA Provider bei einer vCenter Server-Instanz in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

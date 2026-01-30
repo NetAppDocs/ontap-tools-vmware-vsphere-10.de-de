@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Sie sollten Schutzgruppen erstellen, um eine Gruppe virtueller Maschinen am geschützten Standort zu schützen. 
 ---
-= Geschützte Standorte und Recovery-Standorte konfigurieren
+= Konfigurieren von geschützten und Wiederherstellungsstandorten in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

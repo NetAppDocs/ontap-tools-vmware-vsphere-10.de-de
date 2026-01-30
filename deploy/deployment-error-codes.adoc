@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade 
 summary: Auf dieser Seite werden die Fehlercodes für die Bereitstellung, den Neustart und die Wiederherstellungsvorgänge von ONTAP-Tools für das VMware vSphere-System erläutert. 
 ---
-= Beheben von Bereitstellungsfehlern
+= Fehler bei der Bereitstellung von ONTAP tools beheben
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

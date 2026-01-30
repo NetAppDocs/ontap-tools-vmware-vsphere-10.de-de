@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: Wenn Sie den Host-Cluster-Schutz entfernen, werden die Datastores ungeschützt. 
 ---
-= Entfernen Sie den Host-Cluster-Schutz
+= Hostclusterschutz in ONTAP tools entfernen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

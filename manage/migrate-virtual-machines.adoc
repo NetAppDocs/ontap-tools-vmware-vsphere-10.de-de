@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Sie sollten einige der Überlegungen bei der Migration von vorhandenen virtuellen Maschinen in Ihrem Rechenzentrum kennen. 
 ---
-= Überlegungen zum Migrieren oder Klonen von Virtual Machines
+= Überlegungen zur Migration und zum Klonen virtueller Maschinen für ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

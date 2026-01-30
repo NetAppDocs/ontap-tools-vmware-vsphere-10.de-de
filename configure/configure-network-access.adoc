@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: network access configuration, export policy, mount operation, ESXi hosts 
 summary: Wenn Sie den Netzwerkzugriff noch nicht konfiguriert haben, werden standardmäßig alle vom ESXi-Host ermittelten IP-Adressen zur Exportrichtlinie hinzugefügt. 
 ---
-= Konfigurieren Sie den Netzwerkzugriff
+= Konfigurieren Sie Netzwerkzugriff in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

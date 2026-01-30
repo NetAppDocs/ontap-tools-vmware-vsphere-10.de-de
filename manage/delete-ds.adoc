@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: Mit der Aktion „Datastore löschen“ wird der Datastore gelöscht. Im Falle eines NFS- oder VMFS-Datenspeichers wird ein Dialogfeld mit der Liste der VMs angezeigt, die den Datenspeicher verwenden. 
 ---
-= Löschen Sie Datastores
+= Datenspeicher in ONTAP tools löschen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

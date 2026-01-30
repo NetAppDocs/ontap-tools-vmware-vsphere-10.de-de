@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Verstehen Sie igroups und Exportrichtlinien in ONTAP-Tools für VMware vSphere
+= Wie ONTAP tools igroups und Exportrichtlinien verwaltet
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

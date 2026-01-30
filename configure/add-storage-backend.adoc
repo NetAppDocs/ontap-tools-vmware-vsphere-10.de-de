@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Daten verwenden. 
 ---
-= Fügen Sie den ONTAP -Tools ein Speicher-Backend hinzu
+= Fügen Sie ein Speicher-Backend zu ONTAP tools hinzu
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

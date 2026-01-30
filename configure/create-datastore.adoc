@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Wenn Sie einen Datenspeicher auf Hostclusterebene erstellen, mounten ONTAP Tools ihn auf allen Zielhosts und aktivieren die Aktion nur, wenn Sie über die erforderlichen Berechtigungen verfügen. 
 ---
-= Erstellen eines Datenspeichers
+= Erstellen Sie einen Datenspeicher in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

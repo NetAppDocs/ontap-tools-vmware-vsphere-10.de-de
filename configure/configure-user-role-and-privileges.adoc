@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles 
 summary: Konfigurieren Sie Benutzerrollen und Berechtigungen für Speicher-Backends mit der JSON-Datei aus ONTAP tools for VMware vSphere und ONTAP System Manager. 
 ---
-= Konfigurieren Sie ONTAP-Benutzerrollen und -Berechtigungen
+= Konfigurieren Sie ONTAP Benutzerrollen und -Berechtigungen für ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

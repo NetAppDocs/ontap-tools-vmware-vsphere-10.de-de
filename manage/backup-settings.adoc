@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Geben Sie die NTP-Serverdetails ein, um die Zeituhren der ONTAP Tools-Appliance zu synchronisieren. 
 ---
-= Backup-Einstellungen bearbeiten
+= ONTAP tools-Sicherungseinstellungen bearbeiten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

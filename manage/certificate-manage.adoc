@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Mit einer einzigen Instanz der ONTAP Tools für VMware vSphere können mehrere vCenter Server-Instanzen gemanagt werden. ONTAP Tools für VMware vSphere werden mit einem selbstsignierten Zertifikat für VASA Provider implementiert. Dadurch kann nur eine vCenter Server-Instanz für VVols-Datastores gemanagt werden. 
 ---
-= Verwalten von Zertifikaten
+= ONTAP tools-Zertifikate verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

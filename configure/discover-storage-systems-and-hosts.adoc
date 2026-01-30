@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Wenn Sie ONTAP-Tools für VMware vSphere zum ersten Mal in einem vSphere-Client ausführen, erkennt ONTAP-Tools für VMware vSphere die ESXi-Hosts, ihre LUNs und NFS-Exporte und die NetApp-Storage-Systeme, die über diese LUNs und Exporte verfügen. 
 ---
-= Erkennen von Storage-Systemen und Hosts
+= Speichersysteme und Hosts in ONTAP tools entdecken
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

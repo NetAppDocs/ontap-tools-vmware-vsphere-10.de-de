@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Sie sollten Ihre Ordner auf dem geschützten Standort und dem Wiederherstellungsstandort zuordnen, um die Kommunikation zwischen ihnen zu ermöglichen. 
 ---
-= Konfigurieren von Ordnerzuordnungen
+= Ordnerzuordnungen in ONTAP tools konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

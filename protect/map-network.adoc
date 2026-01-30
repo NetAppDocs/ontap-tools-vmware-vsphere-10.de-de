@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Sie sollten Ihre Netzwerke am geschützten Standort und am Wiederherstellungsstandort zuordnen, um die Kommunikation zwischen ihnen zu ermöglichen. 
 ---
-= Konfigurieren Sie die Netzwerkzuordnungen
+= Netzwerkzuordnungen in ONTAP tools konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

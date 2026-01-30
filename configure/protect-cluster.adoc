@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: ONTAP Tools für VMware vSphere managen den Schutz von Host-Clustern. 
 ---
-= Schützen mit Host-Cluster-Schutz
+= Schützen Sie einen Hostcluster in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

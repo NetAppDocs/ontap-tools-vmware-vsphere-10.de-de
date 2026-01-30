@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Mithilfe von ONTAP Tools Manager kann das Administratorpasswort geändert werden, um Services wie VASA Provider, den Import der VVols-Konfiguration und die Disaster Recovery (SRA) mithilfe von ONTAP Tools Manager zu aktivieren.' 
 ---
-= Aktivieren Sie ONTAP-Tools für VMware vSphere-Services
+= ONTAP tools-Dienste aktivieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Verbinden Sie eine Datenfestplatte mit einer virtuellen Maschine, um die Speicherkapazität zu erweitern. 
 ---
-= Verbinden oder Trennen einer Datenfestplatte von einer virtuellen Maschine
+= Eine Datenfestplatte an eine VM in ONTAP tools anhängen oder trennen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Geben Sie die NTP-Serverdetails ein, um die Zeituhren der ONTAP Tools-Appliance zu synchronisieren. 
 ---
-= Fügen Sie NTP-Server hinzu
+= Fügen Sie NTP-Server zu ONTAP tools hinzu
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

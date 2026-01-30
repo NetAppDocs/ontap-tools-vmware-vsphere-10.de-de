@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Sie müssen SSH auf anderen Nodes vor dem Upgrade starten. 
 ---
-= Starten Sie SSH auf anderen Nodes
+= Starten Sie SSH auf anderen ONTAP tools-Knoten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

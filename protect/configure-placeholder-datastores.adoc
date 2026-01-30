@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Konfigurieren Sie einen Platzhalterdatenspeicher, um im vCenter-Inventar am Wiederherstellungsstandort Speicherplatz für geschützte virtuelle Maschinen (VMs) zu reservieren.  Platzhalter-Datenspeicher erfordern nur minimale Kapazität, da Platzhalter-VMs klein sind und normalerweise nur einige hundert Kilobyte verwenden.' 
 ---
-= Platzhalter-Datastores konfigurieren
+= Platzhalterdatenspeicher in ONTAP tools konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

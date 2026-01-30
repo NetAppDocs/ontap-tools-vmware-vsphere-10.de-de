@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: Bei der Migration von Storage-Daten werden Storage-Back-Ends manuell über REST-APIs integriert. Bei der Migration von VASA Provider-Daten werden die Daten aus der bestehenden Derby-Datenbank exportiert und in die MongoDB-Datenbank importiert. 
 ---
-= Migrieren Sie den VASA-Anbieter und aktualisieren Sie die SRA
+= Migrieren Sie den VASA Provider und aktualisieren Sie die SRA in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

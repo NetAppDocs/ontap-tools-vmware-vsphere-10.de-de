@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Sie sollten die Storage-Timeout-Intervalle gemäß den empfohlenen Einstellungen für Storage Replication Adapter\(SRA \) konfigurieren, um in stark skalierten Umgebungen eine optimale Leistung zu erzielen.' 
 ---
-= Konfiguration von SRA für hochskalierte Umgebungen
+= Konfigurieren Sie SRA in ONTAP tools für hochskalierte Umgebungen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

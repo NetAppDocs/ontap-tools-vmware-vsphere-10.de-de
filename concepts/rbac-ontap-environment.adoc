@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap rbac, ontap rbac environment 
 summary: ONTAP bietet eine robuste und erweiterbare RBAC-Umgebung. Über die RBAC-Funktion kann der Zugriff auf Storage- und Systemvorgänge gesteuert werden, da diese über die REST-API und CLI offengelegt werden. Es ist besonders hilfreich, mit der Umgebung vertraut zu sein, bevor sie mit ONTAP Tools für die Implementierung von VMware vSphere 10 verwendet wird. 
 ---
-= ONTAP RBAC-Umgebung mit ONTAP Tools für VMware vSphere 10
+= Wie ONTAP RBAC mit ONTAP tools funktioniert
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

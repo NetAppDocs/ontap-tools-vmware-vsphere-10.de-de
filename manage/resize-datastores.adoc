@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Durch die Größenänderung eines Datenspeichers können Sie den Speicher für die Dateien Ihrer virtuellen Maschine erhöhen. Sie können die Größe eines Datastores ändern, wenn sich Ihre Infrastrukturanforderungen ändern. 
 ---
-= Redimensionierung des NFS- und VMFS-Datenspeichers
+= NFS- und VMFS-Datenspeicher in ONTAP tools vergrößern/verkleinern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

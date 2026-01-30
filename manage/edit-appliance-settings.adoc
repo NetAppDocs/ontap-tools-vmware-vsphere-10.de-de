@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Sie können das Administratorkennwort mit dem ONTAP Tools Manager ändern. 
 ---
-= Ändern Sie ONTAP-Tools für die VMware vSphere Konfiguration
+= ONTAP-Tools-Appliance-Einstellungen ändern
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

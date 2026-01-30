@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Die ONTAP tools for VMware vSphere Appliance werden als kleiner Einzelknoten mit Kerndiensten zur Unterstützung von NFS- und VMFS-Datenspeichern bereitgestellt. 
 ---
-= Implementieren Sie ONTAP-Tools für VMware vSphere
+= ONTAP tools bereitstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: In der Ansicht Storage wird die Liste der VVols angezeigt, die von der virtuellen Maschine erstellt werden. 
 ---
-= Storage-Ansicht der virtuellen Maschine
+= Ansicht des Speichers virtueller Maschinen in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

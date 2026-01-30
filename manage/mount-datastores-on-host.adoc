@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speicher zugreifen. Nachdem Sie die Hosts der VMware Umgebung hinzugefügt haben, können Sie den Datastore auf den zusätzlichen Hosts einbinden. 
 ---
-= Mounten von NFS- und VMFS-Datastores
+= NFS- und VMFS-Datenspeicher in ONTAP tools einbinden
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

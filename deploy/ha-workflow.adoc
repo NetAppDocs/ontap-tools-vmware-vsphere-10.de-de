@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: Die ersten Schritte mit den ONTAP Tools für VMware vSphere sind ein paar Schritte. 
 ---
-= Hochverfügbarkeits-Implementierungs-Workflow (HA)
+= Workflow für die Hochverfügbarkeitsbereitstellung von ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

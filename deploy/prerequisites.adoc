@@ -158,9 +158,9 @@ NOTE: Bei HA-Bereitstellungen muss sichergestellt werden, dass der UDP-Port 8472
 ====
 
 
-== Konfigurationsbeschränkungen für die Implementierung von ONTAP Tools für VMware vSphere
+== Konfigurationsbeschränkungen für die Bereitstellung von ONTAP tools for VMware vSphere für vVols Datenspeicher
 
-Die folgende Tabelle bietet einen Leitfaden zur Konfiguration von ONTAP Tools für VMware vSphere.
+Sie können die folgende Tabelle als Leitfaden für die Konfiguration von ONTAP tools for VMware vSphere verwenden.
 
 |===
 
@@ -168,19 +168,53 @@ Die folgende Tabelle bietet einen Leitfaden zur Konfiguration von ONTAP Tools f�
 | * Bereitstellung* | *Typ* | *Anzahl der VVols* | *Anzahl der Hosts* 
 
 
-| Ohne HA | Klein (S) | ~12.000 | 32 
+| Ohne HA | Klein (S) | bis zu 12K | 32 
 
 
-| Ohne HA | Mittel (M) | ~24.000 | 64 
+| Ohne HA | Mittel (M) | bis zu 24K | 64 
 
 
-| Hochverfügbarkeit | Klein (S) | ~24.000 | 64 
+| Hochverfügbarkeit | Klein (S) | bis zu 24K | 64 
 
 
-| Hochverfügbarkeit | Mittel (M) | ~50.000 | 128 
+| Hochverfügbarkeit | Mittel (M) | bis zu 50k | 128 
 
 
-| Hochverfügbarkeit | Groß (L) | 100 ~ | 256 [HINWEIS] Die Hostanzahl in der Tabelle stellt die Gesamtzahl aller verbundenen vCenter dar. 
+| Hochverfügbarkeit | Groß (L) | bis zu 100k | 256 
+|===
+
+NOTE: Die Host-Zahlen in der Tabelle stellen die kombinierte Gesamtzahl über alle verbundenen vCenters dar.
+
+
+
+== Konfigurationsbeschränkungen für die Bereitstellung von ONTAP tools for VMware vSphere für VMFS- und NFS-Datenspeicher
+
+Die in diesem Abschnitt aufgeführten Konfigurationsgrenzen sind von NetApp validiert und unterstützt. Die tatsächlichen Grenzen können je nach Umgebung und Arbeitslast variieren. Eine Überschreitung dieser Grenzen kann die Leistung oder die Supportfähigkeit beeinträchtigen und wird nicht empfohlen. Beachten Sie Folgendes bei der Durchsicht der Tabelle:
+
+* Die Notfallwiederherstellung (Disaster Recovery, DR) virtueller Maschinen wird mithilfe von synchronen, asynchronen oder strikten Sync-Richtlinien konfiguriert. DR wird für das NVMe-Protokoll nicht unterstützt.
+* Der ESXi-Hostclusterschutz verwendet SnapMirror Active Sync, welches keine Multi-vCenter-Bereitstellungen unterstützt.
+* ONTAP tools beschränkt lediglich die Anzahl der ESXi-Hosts und Datenspeicher basierend auf der Bereitstellungsgröße. Es gibt keine Beschränkungen hinsichtlich der Anzahl der vCenter Server, die mit ONTAP tools verbunden werden können.
+* ONTAP tools führt eine parallele Erkennung aller Speicherobjekte durch. Konfigurationsbeschränkungen für ONTAP-Speicherobjekte gelten unabhängig von der Anzahl der aktiv verwendeten Objekte.
+* ONTAP tools legt keine Beschränkung hinsichtlich der Anzahl der vCenter Servers fest, die integriert werden können. Die Konfigurationsbeschränkungen werden durch die Anzahl der unterstützten Hosts und Datenspeicher bestimmt, wie in der folgenden Tabelle aufgeführt.
+
+
+|===
+| Bereitstellung | Anzahl der VMFS- und NFS-Datenspeicher | Anzahl der DR-fähigen VMFS-Datenspeicher | Anzahl der Hosts 
+
+
+| Nicht-HA klein | 200 | 80 | 32 
+
+
+| Non-HA Medium | 250 | 100 | 32 
+
+
+| HA klein | 350 | 200 | 64 
+
+
+| HA Mittel | 600 | 200 | 128 
+
+
+| HA groß | 1024 | 250 | 256 
 |===
 
 

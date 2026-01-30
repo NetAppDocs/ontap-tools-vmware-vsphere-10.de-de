@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: Vor der Bereitstellung der ONTAP Tools für VMware vSphere sollten Sie mit den Speicherplatzanforderungen für das Deployment-Paket und einigen grundlegenden Anforderungen an das Host-System vertraut sein. 
 ---
-= Bevor Sie beginnen…​
+= Anforderungen vor der Bereitstellung von ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

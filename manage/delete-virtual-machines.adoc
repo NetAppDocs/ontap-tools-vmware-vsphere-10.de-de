@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Verwenden Sie die Schritte in diesem Abschnitt, um die VASA-Bereinigung durchzuführen. 
 ---
-= VASA-Bereinigung
+= Bereinigen Sie die VASA-Konfigurationen in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

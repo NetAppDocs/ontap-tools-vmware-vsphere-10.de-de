@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Im folgenden Abschnitt werden die wichtigsten Konzepte und Begriffe beschrieben, die in diesem Dokument verwendet werden. 
 ---
-= Schlüsselkonzepte und -Begriffe
+= Schlüsselkonzepte und Begriffe in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

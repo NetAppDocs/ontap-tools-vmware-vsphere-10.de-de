@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Sie sollten Ihre Ressourcen am geschützten Standort und am Recovery-Standort zuordnen, damit Virtual Machines für Failover auf eine oder mehrere Host-Gruppen konfiguriert sind. 
 ---
-= Konfigurieren von Ressourcenzuordnungen
+= Ressourcenzuordnungen in ONTAP tools konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

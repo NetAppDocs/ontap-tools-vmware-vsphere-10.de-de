@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Sie sollten überprüfen, ob der geschützte Standort und der Recovery-Standort erfolgreich gepaart wurden, nachdem Sie Storage Replication Adapter\(SRA \) konfiguriert haben. Das replizierte Storage-System sollte sowohl vom geschützten Standort als auch vom Wiederherstellungsstandort erkannt werden können.' 
 ---
-= Überprüfung replizierter Storage-Systeme
+= Überprüfen Sie replizierte Speichersysteme in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

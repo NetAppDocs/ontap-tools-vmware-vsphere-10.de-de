@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ontap tools manager, managerui 
 summary: Der ONTAP Tools Manager bietet mehr Kontrolle und Power für die ONTAP Tools für den VMware vSphere Administrator, wodurch das allgemeine Management der Appliance, Mandanten und Storage-Back-Ends erleichtert wird. 
 ---
-= Benutzeroberfläche von ONTAP Tools Manager
+= Erfahren Sie mehr über die Benutzeroberfläche des ONTAP tools Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

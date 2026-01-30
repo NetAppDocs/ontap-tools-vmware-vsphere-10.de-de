@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Durch die Unmounten der Datastore-Aktion wird ein NFS- oder VMFS-Datastore von ESXi-Hosts abgehängt. Die Aktion „Datastore unmounten“ ist für NFS- und VMFS-Datastores aktiviert, die von den ONTAP-Tools für VMware vSphere erkannt oder gemanagt werden. 
 ---
-= Unmounten Sie NFS- und VMFS-Datastores
+= NFS- und VMFS-Datenspeicher in ONTAP tools aushängen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

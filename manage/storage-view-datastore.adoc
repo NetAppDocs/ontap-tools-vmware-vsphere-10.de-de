@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: Die Ansicht „ONTAP Storage“ unter „Configure“ einer Registerkarte „ONTAP Tools for VMware vSphere“ stellt Daten zum Datastore und dessen Volume bereit. 
 ---
-= ONTAP-Speicheransichten für Datastores
+= ONTAP-Speicheransichten für Datenspeicher in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
