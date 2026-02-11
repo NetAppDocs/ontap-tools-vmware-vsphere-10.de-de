@@ -53,7 +53,7 @@ NOTE: Wenn Backup aktiviert ist, benötigt jeder Cluster mit ONTAP Tools weitere
 | Storage, Host und Applikationen | Versionsanforderungen 
 
 
-| ONTAP | 9.15.1, 9.16.0, 9.16.1, 9.17.0 und 9.17.1 
+| ONTAP | 9.15.1, 9.16.1 und 9.17.0 
 
 
 | Von ONTAP Tools unterstützte ESXi-Hosts | Ab 7.0.3 
