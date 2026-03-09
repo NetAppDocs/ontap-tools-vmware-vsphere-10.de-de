@@ -28,3 +28,16 @@ Die Wartungskonsole zeigt den Status des Zertifikatvalidierungsflags an und ford
 
 
 Wenn Sie das Flag für die Zertifikatsvalidierung aktivieren (auf „true“ setzen), überprüft ONTAP Tools, ob alle Speicher-Backends Zertifikate mit einem Subject Alternative Name (SAN) verwenden.  Wenn ein Backend ein Zertifikat ohne SAN verwendet, kann die Zertifikatsvalidierung nicht aktiviert werden.  Bevor Sie dieses Flag aktivieren, vergewissern Sie sich, dass alle Speichersysteme SAN-basierte Zertifikate verwenden.  Wenn Sie das Flag für die Zertifikatsvalidierung deaktivieren (auf „false“ setzen), umgeht ONTAP tools die Zertifikatsvalidierung für alle konfigurierten Speicher-Backends.
+
+
+
+== SAN-basierte Zertifikate für Storage-Backends überprüfen
+
+Um eine sichere Kommunikation und ordnungsgemäße Validierung zu gewährleisten, überprüfen Sie, ob alle Storage-Backends SAN-basierte Zertifikate verwenden:
+
+. Prüfen Sie, ob das ONTAP-Managementzertifikat einen Subject Alternative Name (SAN)-Eintrag enthält.
+. Bestätigen Sie, dass die SAN-Einträge mit der ONTAP-Management-IP-Adresse oder dem DNS-Namen oder beiden übereinstimmen.
+. Stellen Sie sicher, dass die für die Onboarding von ONTAP verwendeten Details mit der IP-Adresse oder dem DNS-Namen im SAN-Eintrag des Zertifikats übereinstimmen.
+
+
+Durch die Befolgung dieser Schritte lassen sich Probleme bei der Zertifikatsvalidierung vermeiden und sicherstellen, dass das ONTAP-System sicher integriert ist.

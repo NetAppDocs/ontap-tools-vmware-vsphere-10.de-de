@@ -2703,4 +2703,10 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="9c3fd4feed3b70ad58582159360ae925" category="list-text">Im vSphere Client navigieren Sie zum vCenter Server und wählen Sie *Konfigurieren* &gt; *Speicheranbieter*.</block>
   <block id="6df01bde6e0e3398aefe5b78073a6a20" category="list-text">Wählen Sie den Offline VASA Provider für ONTAP tools 9.x aus und wählen Sie *Entfernen*.</block>
   <block id="5f3d684c32f3b3125b0b7b6f2b37b3f0" category="admonition">Verwenden Sie den in Schritt 7 zurückgegebenen Wert 'migration_id' als &lt;migration_id&gt; im PATCH-API-Aufruf. Der Anfragetext ist für die Patch-Operation leer.</block>
+  <block id="c5ee1392d2a4919b586e3706e8fd7ca2" category="section-title">SAN-basierte Zertifikate für Storage-Backends überprüfen</block>
+  <block id="7fddec929757e28798cf7b2e040cc5c0" category="paragraph">Um eine sichere Kommunikation und ordnungsgemäße Validierung zu gewährleisten, überprüfen Sie, ob alle Storage-Backends SAN-basierte Zertifikate verwenden:</block>
+  <block id="5f2131ae70df4a174b962b01cada7033" category="list-text">Prüfen Sie, ob das ONTAP-Managementzertifikat einen Subject Alternative Name (SAN)-Eintrag enthält.</block>
+  <block id="8d80b04306b64b2c7241ee8c3b8cac3a" category="list-text">Bestätigen Sie, dass die SAN-Einträge mit der ONTAP-Management-IP-Adresse oder dem DNS-Namen oder beiden übereinstimmen.</block>
+  <block id="0c205dec8702acf753959708a299c51f" category="list-text">Stellen Sie sicher, dass die für die Onboarding von ONTAP verwendeten Details mit der IP-Adresse oder dem DNS-Namen im SAN-Eintrag des Zertifikats übereinstimmen.</block>
+  <block id="f38a6ced93585f5991828bd2b6c8fa42" category="paragraph">Durch die Befolgung dieser Schritte lassen sich Probleme bei der Zertifikatsvalidierung vermeiden und sicherstellen, dass das ONTAP-System sicher integriert ist.</block>
 </blocks>
