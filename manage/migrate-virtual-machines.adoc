@@ -56,8 +56,8 @@ Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmwar
 
 == Snapshots Von Virtual Machines
 
-Derzeit werden nur Snapshots virtueller Maschinen ohne Speicher unterstützt. Wenn auf einer virtuellen Maschine Snapshot mit Arbeitsspeicher vorhanden ist, wird die virtuelle Maschine nicht als Schutz betrachtet.
+Snapshots virtueller Maschinen ohne Speicher werden unterstützt. Wenn eine virtuelle Maschine einen Snapshot mit Speicher hat, kann die virtuelle Maschine nicht geschützt werden.
 
-Sie können auch keine ungeschützten virtuellen Maschinen schützen, die über einen Speicher-Snapshot verfügen.  Bei dieser Version müssen Sie den Speicher-Snapshot löschen, bevor Sie den Schutz für die virtuelle Maschine aktivieren.
+Sie können ungeschützte virtuelle Maschinen, die Speicherabbilder enthalten, nicht schützen. Löschen Sie die Speicherabbilder, bevor Sie den Schutz für die virtuelle Maschine aktivieren.
 
-Bei einer Windows-VM mit dem Speichertyp ASA r2 ist ein Snapshot der virtuellen Maschine schreibgeschützt.  Beim Einschalten der VM erstellt der VASA Provider eine LUN aus dem schreibgeschützten Snapshot und aktiviert IOPS.  Wenn Sie die VM ausschalten, löscht der VASA Provider die LUN und deaktiviert IOPS.
+Für eine Windows-VM mit ASA r2-Speichertyp sind virtuelle Maschinen-Snapshots schreibgeschützt. Wenn Sie die VM einschalten, erstellt der VASA Provider eine LUN aus dem schreibgeschützten Snapshot und aktiviert IOPS. Wenn Sie die VM ausschalten, löscht der VASA Provider die LUN und deaktiviert IOPS.
