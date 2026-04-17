@@ -163,7 +163,7 @@ Falls die Bereitstellung mit dem Fehlercode 114 fehlschlägt, führen Sie die fo
 
 * Aktivieren Sie die Diagnose-Shell.
 * Führen Sie folgenden Befehl aus: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* Überprüfen Sie die Protokolle unter  `/var/log/otvng/post-deploy-upgrade.log`.
+* Überprüfen Sie die Protokolle unter `/var/log/otvng/post-deploy-upgrade.log`
 
 
 |===
