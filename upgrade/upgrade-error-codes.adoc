@@ -17,7 +17,7 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
 Alle Fehlerprotokolle werden in der Datei ansible-perl-errors.log aufgezeichnet, um die Nachverfolgung und Behebung von Problemen zu erleichtern. Diese Protokolldatei enthält den Fehlercode und die fehlgeschlagene Ansible-Aufgabe.
 
 
-NOTE: Die auf dieser Seite angegebenen Fehlercodes dienen nur als Referenz. Wenden Sie sich an das Support-Team, wenn der Fehler weiterhin besteht oder wenn keine Lösung erwähnt wird.
+NOTE: Die auf dieser Seite angegebenen Fehlercodes dienen nur als Referenz. Wenden Sie sich an das Support-Team, falls der Fehler weiterhin besteht oder keine Lösung genannt wird.
 
 In der folgenden Tabelle sind die Fehlercodes und die entsprechenden Dateinamen aufgeführt.
 
@@ -107,13 +107,13 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 083 | Löschen des Backups ist fehlgeschlagen | Recovery auf Basis von RPOs oder Snapshots ohne RPO und Upgrade erneut versuchen 
 
 
-| 084 | JobManager konnte nicht wieder in die Produktion geändert werden | Führen Sie die folgenden Schritte aus, um das Upgrade wiederherzustellen/abzuschließen. 1. Aktivieren Sie Diagnostic Shell 2. Führen Sie den Befehl _sudo perl /Home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3 aus. Überprüfen Sie die Protokolle unter /var/log/post-deploy-upgrade.log 
+| 084 | JobManager konnte nicht wieder in die Produktion geändert werden | Führen Sie die folgenden Schritte aus, um das Upgrade wiederherzustellen/abzuschließen. 1. Aktivieren Sie die Diagnose-Shell 2. Führen Sie den Befehl aus: _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Überprüfen Sie die Protokolle unter /var/log/post-deploy-upgrade.log 
 
 
 | 087 | Schritte nach dem Upgrade fehlgeschlagen. | Führen Sie die folgenden Schritte aus, um das Upgrade wiederherzustellen bzw. abzuschließen. 1. Aktivieren Sie Diagnostic Shell 2. Führen Sie _sudo perl /Home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ Befehl 3 aus. Überprüfen Sie die Protokolle unter /var/log/post-deploy-upgrade.log 
 
 
-| 088 | Die Konfiguration der Protokollrotation für journald ist fehlgeschlagen | Überprüfen Sie die VM-Netzwerkeinstellungen, die mit dem Host kompatibel sind, auf dem die VM gehostet wird. Sie können versuchen, die VM auf einen anderen Host zu migrieren und neu zu starten. 
+| 088 | Die Konfiguration der Protokollrotation für journald ist fehlgeschlagen | Prüfen Sie, ob die Netzwerkeinstellungen der VM mit dem Host kompatibel sind, auf dem die VM gehostet wird. Sie können versuchen, die VM auf einen anderen Host zu migrieren und neu zu starten. 
 
 
 | 089 | Ändern der Eigentumsrechte für die Konfigurationsdatei „Zusammenfassung Protokoll drehen“ ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
@@ -149,7 +149,7 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 113 | Die Aktualisierung der Ressourcen auf sekundären Nodes ist fehlgeschlagen | Prüfen Sie die Upgrade-Protokolle, und versuchen Sie das Upgrade erneut. 
 
 
-| 104 | Der Neustart des sekundären Knotens ist fehlgeschlagen | Starten Sie die Knoten manuell nacheinander neu 
+| 104 | Der Neustart des sekundären Knotens ist fehlgeschlagen | Starten Sie die Knoten manuell neu, einen nach dem anderen. 
 
 
 | 100 | Kernel-Rollback ist fehlgeschlagen | - 
@@ -162,6 +162,81 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 
 
 | 090 | Zertifikatsvalidierung für Speicher-Backends und vCenter fehlgeschlagen | Überprüfen Sie die Upgrade-Protokolle und die Protokolldatei unter /var/log/cert_validation_error.log und versuchen Sie das Upgrade erneut. 
+
+
+| 114 | Interne Zertifikatsaktualisierung in der MongoDB-Collection fehlgeschlagen  a| 
+Falls das Upgrade mit dem Fehlercode 114 fehlschlägt, führen Sie die folgenden Schritte aus:
+
+. Stellen Sie eine Verbindung zum Upgrade-ISO auf dem primären Knoten her und aktivieren Sie die Diagnose-Shell.
+. Mounten Sie die ISO-Datei über die SSH-Sitzung auf dem primären Knoten:
++
+[listing]
+----
+sudo mount /dev/cdrom
+sudo mount -o loop,ro /dev/cdrom/APPLIANCE_UPGRADE.bin /upgrade
+----
+. Debian-Pakete installieren:
++
+[listing]
+----
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vplatform.deb
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vpupgrader.deb
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vmware-tools.deb
+----
+. Kopieren Sie die Build-Informationsdatei:
++
+[listing]
+----
+sudo cp /upgrade/APPLIANCE_BUILD /
+----
+. Fügen Sie der Sammlung Zertifikate hinzu, indem Sie die Diagnose-Shell aktivieren und folgenden Befehl ausführen:
++
+[listing]
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection
+----
++
+Überprüfen Sie die Protokolle unter  `/var/log/otvng/post-deploy-upgrade.log`.
+
+. Starten Sie die Knoten neu:
++
+[listing]
+----
+sudo bash /home/maint/scripts/vault_decrypt.sh
+cd /home/maint/rke2-pb
+sudo ansible-playbook site.yaml --tags restart_nodes --skip-tags debian_upgrade,kernel_upgrade,rescan_scsi_bus,source_iso,eject_upgrade,mountIso,upgradeNodes,registryUpg,deleteOldImages,wait,checkReachability,delete_otv_cr,uninstall_trident,del_trident_images,refresh_resources,ntp_configure,ntpd_uninstall
+----
+. Führen Sie die Schritte nach dem Upgrade durch:
++
+[listing]
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade
+----
+. Überprüfen Sie den erfolgreichen Abschluss, indem Sie die Protokolle einsehen:
++
+[listing]
+----
+tail -f /var/log/post-deploy-upgrade.log
+----
++
+Achten Sie auf die Erfolgsmeldung: `Completed post 10.5 upgrade steps.`
+
+. ISO auswerfen:
++
+[listing]
+----
+sudo umount -l -f /upgrade
+sudo umount -l -f /dev/cdrom
+sudo eject /dev/cdrom
+----
+. Starten Sie den primären Knoten neu:
++
+[listing]
+----
+sudo reboot -f
+----
+
+
 |===
 
 NOTE: Ab ONTAP-Tools für VMware vSphere 10.3 werden Zero RPO nicht unterstützt.

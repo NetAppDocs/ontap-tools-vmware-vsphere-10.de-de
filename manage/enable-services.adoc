@@ -2,7 +2,7 @@
 permalink: manage/enable-services.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Mithilfe von ONTAP Tools Manager kann das Administratorpasswort geändert werden, um Services wie VASA Provider, den Import der VVols-Konfiguration und die Disaster Recovery (SRA) mithilfe von ONTAP Tools Manager zu aktivieren.' 
+summary: 'Sie können optionale Dienste wie VASA Provider, den Import der vVols-Konfiguration und Disaster Recovery (SRA) mit dem ONTAP tools Manager aktivieren.' 
 ---
 = ONTAP tools-Dienste aktivieren
 :allow-uri-read: 

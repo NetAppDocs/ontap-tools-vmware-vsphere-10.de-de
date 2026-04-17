@@ -13,7 +13,7 @@ summary: Vor der Bereitstellung der ONTAP Tools für VMware vSphere sollten Sie 
 [role="lead"]
 Vor der Bereitstellung der ONTAP Tools für VMware vSphere sollten Sie mit den Speicherplatzanforderungen für das Deployment-Paket und einigen grundlegenden Anforderungen an das Host-System vertraut sein.
 
-Sie können ONTAP-Tools für VMware vSphere mit der virtuellen VMware vCenter Server-Appliance (vCSA) verwenden. Sie sollten ONTAP-Tools für VMware vSphere auf einem unterstützten vSphere-Client mit ESXi-System implementieren.
+Sie können ONTAP tools für VMware vSphere mit VMware vCenter Server Virtual Appliance (vCSA) verwenden. Sie sollten ONTAP tools für VMware vSphere in einer unterstützten vSphere Umgebung bereitstellen, die ESXi-Hosts umfasst.
 
 
 
@@ -240,7 +240,7 @@ In der folgenden Tabelle sind die Zahlen aufgeführt, die pro VMware Live Site R
 
 | Anzahl der VMs | 4000 | 7000 
 |===
-In der folgenden Tabelle sind die Anzahl der VMware Live Site Recovery und die entsprechenden ONTAP Tools für die VMware vSphere Implementierungsgröße aufgeführt.
+Die folgende Tabelle zeigt die Anzahl der VMware Live Site Recovery-Instanzen und die entsprechenden ONTAP tools für VMware vSphere-Bereitstellungsgröße.
 
 |===
 

@@ -2,7 +2,7 @@
 permalink: manage/delete-ds.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
-summary: Mit der Aktion „Datastore löschen“ wird der Datastore gelöscht. Im Falle eines NFS- oder VMFS-Datenspeichers wird ein Dialogfeld mit der Liste der VMs angezeigt, die den Datenspeicher verwenden. 
+summary: Die Aktion „Datenspeicher löschen“ entfernt den Datenspeicher. Bei einem NFS- oder VMFS-Datenspeicher wird ein Dialogfeld mit der Liste der VMs angezeigt, die diesen Datenspeicher verwenden. 
 ---
 = Datenspeicher in ONTAP tools löschen
 :allow-uri-read: 
@@ -16,7 +16,7 @@ Diese Seite beschreibt, wie man NFS-, VMFS- oder vVols -Datenspeicher mithilfe v
 Wenn Sie einen Datenspeicher löschen, werden je nach Datenspeichertyp die folgenden Aktionen ausgeführt:
 
 * Der vVol-Container ist ausgehängt.
-* Wenn die Igroup nicht verwendet wird, wird iqn aus der Igroup entfernt.
+* Wenn die Initiatorgruppe nicht verwendet wird, werden ihre Initiatoren aus der Initiatorgruppe entfernt.
 * Der vVol-Container wird gelöscht.
 * Flex-Volumes verbleiben auf dem Speicherarray.
 

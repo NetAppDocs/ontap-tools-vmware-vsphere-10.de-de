@@ -44,14 +44,14 @@ Beispiel:
 Das folgende Diagramm zeigt die Fan-Out-Schutzkonfiguration:image:../media/fan-out-protection.png["Fan-Out-Schutzkonfiguration"] image:../media/fan-out-protection-relationship.png["Fan-Out-Schutzbeziehung"]
 
 .Schritte
-. Wählen Sie einen neuen Platzhalter-Datenspeicher aus.  Die Auswahlkriterien für den Platzhalterdatenspeicher für den stufenweisen Schutz sind:
+. Wählen Sie einen neuen Platzhalterdatenspeicher aus. Die Auswahlkriterien für den Platzhalterdatenspeicher im Rahmen des phasenweisen Schutzes lauten:
 +
 ** Platzieren Sie den Platzhalter-Datenspeicher nicht im Hostcluster, den Sie schützen.
-** Wenn Sie den Platzhalter-Datenspeicher in den Hostcluster aufnehmen müssen, fügen Sie ihn der VMware Live Site Recovery-Appliance hinzu, bevor Sie den SnapMirror Active Sync-Schutz einrichten.  Mit diesem Setup können Sie den Platzhalterdatenspeicher vom Schutz ausnehmen.
+** Wenn Sie den Platzhalterdatenspeicher in den Hostcluster einbinden müssen, fügen Sie ihn der VMware Live Site Recovery Appliance hinzu, bevor Sie SnapMirror active sync-Schutz einrichten. Mit dieser Konfiguration können Sie den Platzhalterdatenspeicher vom Schutz ausnehmen.
 +
 Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Wählen Sie einen Platzhalter Datastore aus"]
 
 
 
-. Fügen Sie dem Hostclusterschutz einen Datenspeicher hinzu, indem Sie Folgendes tun:link:../manage/edit-hostcluster-protection.html["Geschütztes Host-Cluster ändern"] .  Fügen Sie sowohl asynchrone als auch synchrone Richtlinientypen hinzu.
+. Fügen Sie Datenspeicher zum Hostclusterschutz hinzu, indem Sie link:../manage/edit-hostcluster-protection.html["Geschütztes Host-Cluster ändern"] folgen. Fügen Sie sowohl asynchrone als auch synchrone Richtlinientypen hinzu.
 

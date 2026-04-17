@@ -19,6 +19,6 @@ Geben Sie die NTP-Serverdetails ein, um die Zeituhren der ONTAP Tools-Appliance 
 . Wählen Sie die Option *Einstellungen* > *NTP-Server* > *Bearbeiten*.
 . Geben Sie den vollständig qualifizierten Domänennamen (FQDN), IPv4- oder IPv6-Adressen durch Komma getrennt ein.
 +
-Aktualisieren Sie den Bildschirm, um die aktualisierten Werte anzuzeigen.
+Aktualisieren Sie die Seite, um die aktualisierten Werte zu sehen.
 
 

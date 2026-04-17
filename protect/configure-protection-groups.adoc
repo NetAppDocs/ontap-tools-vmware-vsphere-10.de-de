@@ -22,7 +22,7 @@ Wenn Sie einen neuen Datenspeicher hinzufügen, können Sie ihn in die bestehend
 Sie sollten die geschützten und Recovery-Standorte, die mit Ihrem vSphere Client erstellt wurden, koppeln, um Storage Replication Adapter (SRA) zur Erkennung der Speichersysteme zu aktivieren.
 
 
-NOTE: Storage Replication Adapter (SRA) unterstützt Fan-Out mit einer Synchronisierungsbeziehung vom Typ „Automated Failover Duplex“ und der asynchronen Beziehung SnapMirror auf der Konsistenzgruppe. Allerdings wird Fan-Out mit zwei asynchronen SnapMirror auf einer Konsistenzgruppe oder Fan-Out-SnapMirrors auf einem Volume nicht unterstützt. SnapMirror -Beziehungen vom Vault-Typ werden bei diesen Fan-Out-Einschränkungen nicht berücksichtigt.
+NOTE: Der Storage Replication Adapter (SRA) unterstützt Fan-Out mit einer synchronen Beziehung vom Typ Automated Failover Duplex und einer asynchronen SnapMirror-Beziehung in einer Konsistenzgruppe. Fan-Out mit zwei asynchronen SnapMirror-Beziehungen in Konsistenzgruppen oder Fan-Out SnapMirror-Beziehungen auf Volumes wird jedoch nicht unterstützt. Vault-Typ SnapMirror-Beziehungen sind von diesen Fan-Out-Beschränkungen ausgenommen. Die Unterstützung von Konsistenzgruppen im SRA ist auf SAN-Protokolle (iSCSI und Fibre Channel) auf Unified- und ASA r2 Storage-Systemen beschränkt. Konsistenzgruppen werden für NFS nicht unterstützt; wenn NFS-Datenspeichervolumes einer Konsistenzgruppe zugeordnet werden, schlägt die Discover Devices-Operation fehl.
 
 .Bevor Sie beginnen
 * VMware Live Site Recovery sollte auf den geschützten und Recovery-Standorten installiert sein.
@@ -62,7 +62,7 @@ Stellen Sie sicher, dass die Quell- und Zielstandorte für Folgendes konfigurier
 . Melden Sie sich bei vCenter Server an und wählen Sie *Site Recovery* > *Schutzgruppen*.
 . Wählen Sie im Bereich *Schutzgruppen* *Neu* aus.
 . Geben Sie einen Namen und eine Beschreibung für die Schutzgruppe, Richtung und wählen Sie *Weiter*.
-. Wählen Sie im Feld *Typ* die Option *Typfeldoption...* als Datenspeichergruppen (Array-basierte Replikation) für NFS- und VMFS-Datenspeicher aus. Die Fehlerdomäne besteht ausschließlich aus SVMs mit aktivierter Replikation. Es werden die SVMs angezeigt, die nur Peering implementiert haben und keine Probleme aufweisen.
+. Wählen Sie im Feld *Typ* die Option *Typfeld...* als Datenspeichergruppen (Array-basierte Replikation) für NFS- und VMFS-Datenspeicher aus. Die Fehlerdomäne besteht aus SVMs mit aktivierter Replikation. Die SVMs, die ausschließlich Peering implementiert haben und keine Probleme aufweisen, werden angezeigt.
 . Wählen Sie auf der Registerkarte Replikationsgruppen entweder das aktivierte Array-Paar oder die Replikationsgruppen aus, für die die virtuelle Maschine konfiguriert ist, und wählen Sie dann *Weiter* aus.
 +
 Alle virtuellen Maschinen auf der Replikationsgruppe werden der Schutzgruppe hinzugefügt.

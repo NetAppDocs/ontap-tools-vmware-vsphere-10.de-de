@@ -14,7 +14,7 @@ summary: Erfahren Sie mehr über den Funktionsvergleich der ONTAP tools for VMwa
 Erfahren Sie, ob die Migration von ONTAP tools for VMware vSphere 9 auf ONTAP tools for VMware vSphere 10.2 oder spätere Versionen das Richtige für Sie ist.
 
 
-NOTE: Die aktuellsten Informationen zur Kompatibilität finden Sie unter https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] .
+NOTE: Die aktuellsten Informationen zur Kompatibilität finden Sie unter  https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 [cols="20%,25%,30%"]
 |===

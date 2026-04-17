@@ -40,7 +40,7 @@ curl --request POST \
 +
 Kopieren und speichern Sie das in der Antwort zurückgegebene Zugriffstoken.
 
-. Geben Sie die folgende API von Swagger oder in Postman zur Migration aus.
+. Führen Sie die folgende API von Swagger oder Postman aus, um die Migration durchzuführen.
 +
 [listing]
 ----
@@ -240,17 +240,17 @@ Wenn der Compliance-Zustand der virtuellen Maschine nach dem Upgrade veraltet is
 
 
 
-== Schritte zum Aktualisieren des Storage Replication Adapters (SRA)
+== Schritte zum Aktualisieren des Speicherreplikationsadapters (SRA)
 
 .Bevor Sie beginnen
 Im Wiederherstellungsplan bezeichnet der geschützte Standort den Ort, an dem die VMs aktuell ausgeführt werden, während der Wiederherstellungsstandort der Ort ist, an dem die VMs wiederhergestellt werden. Die Schnittstelle der VMware Live Site Recovery-Appliance zeigt den Status des Wiederherstellungsplans mit Details zu den geschützten und Wiederherstellungs-Sites an.  Im Wiederherstellungsplan sind die Schaltflächen „Bereinigen“ und „Neu schützen“ deaktiviert, während die Schaltflächen „Testen“ und „Ausführen“ aktiviert bleiben. Dies zeigt an, dass der Standort für die Datenwiederherstellung vorbereitet ist. Stellen Sie vor der Migration des SRA sicher, dass sich ein Standort im geschützten Zustand und der andere im Wiederherstellungszustand befindet.
 
 
-NOTE: Beginnen Sie nicht mit der Migration, wenn das Failover abgeschlossen ist, der erneute Schutz jedoch noch aussteht.  Stellen Sie sicher, dass der erneute Schutzvorgang abgeschlossen ist, bevor Sie mit der Migration fortfahren.  Wenn ein Test-Failover läuft, bereinigen Sie das Test-Failover und starten Sie die Migration.
+NOTE: Beginnen Sie die Migration nicht, wenn das Failover abgeschlossen ist, die Re-Protect-Funktion aber noch aussteht. Stellen Sie sicher, dass der Re-Protect-Vorgang abgeschlossen ist, bevor Sie mit der Migration fortfahren. Wenn ein Test-Failover läuft, bereinigen Sie das Test-Failover und starten Sie die Migration.
 
 . Führen Sie diese Schritte aus, um den SRA-Adapter für ONTAP-Tools für VMware vSphere 9.xx in der VMware-Standortwiederherstellung zu löschen:
+. Wechseln Sie zur Konfigurationsverwaltungsseite von VMware Live Site Recovery.
 +
-.. Wechseln Sie zur Seite VMware Live Site Recovery Configuration Management
 .. Gehen Sie zum Abschnitt *Storage Replication Adapter*.
 .. Wählen Sie im Auslassungsmenü *Konfiguration zurücksetzen*.
 .. Wählen Sie im Auslassungsmenü *Löschen*.

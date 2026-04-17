@@ -68,7 +68,7 @@ Sie müssen alle an das Speicher-Backend angeschlossenen Datenspeicher entfernen
 . Wählen Sie das vertikale Auslassungsmenü und wählen Sie *Entfernen*.  Stellen Sie sicher, dass das Speicher-Backend keine Datenspeicher enthält.  Sie können den Fortschritt im Bereich „Letzte Aufgaben“ verfolgen.
 
 
-Sie können den Vorgang zum Entfernen globaler ONTAP-Cluster mit dem ONTAP-Tools-Manager ausführen.
+Sie können globale ONTAP-Cluster mit ONTAP tools Manager entfernen.
 
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
@@ -92,7 +92,7 @@ Die Übersichtsseite enthält folgende Details:
 * Grundlegende Informationen zur VM
 * Zertifikatsdetails wie Zertifikatsstatus und Ablaufdatum.
 * Netzwerkinformationen wie IP-Adresse und Port des Netzwerks.  Für die untergeordnete SVM sind die Informationen dieselben wie für das übergeordnete Speicher-Backend.
-* Erlaubte und eingeschränkte Privileges für das Speicher-Backend.  Für die untergeordnete SVM sind die Informationen dieselben wie für das übergeordnete Speicher-Backend.  ONTAP -Tools zeigen Berechtigungen nur für die clusterbasierten Speicher-Backends an.  Wenn Sie SVM als Speicher-Backend hinzufügen, werden keine Berechtigungsinformationen angezeigt.
+* Privileges erlaubt und eingeschränkt für das Storage-Backend. Für das untergeordnete SVM sind die Informationen dieselben wie für das übergeordnete Storage-Backend. ONTAP tools zeigt Privileges nur bei clusterbasierten Storage-Backends an. Wenn Sie SVM als Storage-Backend hinzufügen, werden keine Privileges-Informationen angezeigt.
 * Die Drilldown-Ansicht des ASA R2-Systemclusters enthält keine Registerkarte „Lokale Ebenen“, wenn die disaggregierte Eigenschaft für die SVM oder den Cluster auf „true“ gesetzt ist.
 * Bei ASA r2 SVM-Systemen wird das Portlet „Capacity“ nicht angezeigt. Das Kapazitätsportal ist nur erforderlich, wenn die disaggregierte Eigenschaft für die SVM oder den Cluster als „true“ festgelegt ist.
 * Für ASA r2 SVM-Systeme wird im Abschnitt grundlegende Informationen der Plattformtyp angezeigt.

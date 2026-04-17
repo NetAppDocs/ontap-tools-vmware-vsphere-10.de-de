@@ -17,10 +17,10 @@ Wenn bei der Bereitstellung Probleme auftreten, überprüfen Sie die Protokolle 
 
 == Sammeln Sie die Protokolldateien
 
-Sie können Protokolldateien für ONTAP-Tools für VMware vSphere über die in der Benutzeroberfläche von ONTAP Tools Manager verfügbaren Optionen sammeln. Der technische Support fordert Sie möglicherweise auf, die Protokolldateien zu sammeln, damit Sie Probleme beheben können.
+Sie können Protokolldateien für ONTAP tools for VMware vSphere über die Optionen in der ONTAP tools Manager-Benutzeroberfläche erfassen. Der technische Support kann Sie bitten, die Protokolldateien zur Fehlerbehebung zu sammeln.
 
 
-NOTE: Die Generierung von Protokollen über den ONTAP-Tools-Manager umfasst alle Protokolle für alle vCenter-Serverinstanzen. Die Generierung von Protokollen über die vCenter-Client-Benutzeroberfläche ist für den ausgewählten vCenter-Server vorgesehen.
+NOTE: Die Protokollgenerierung über den ONTAP tools Manager umfasst alle Protokolle aller vCenter Serverinstanzen. Die Protokollgenerierung über die vCenter Client-Benutzeroberfläche ist auf den ausgewählten vCenter Server beschränkt.
 
 .Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -57,7 +57,7 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
 Alle Fehlerprotokolle werden in der Datei ansible-perl-errors.log im Verzeichnis /var/log aufgezeichnet, um die einfache Verfolgung und Lösung von Problemen zu ermöglichen.  Diese Protokolldatei enthält den Fehlercode und die fehlgeschlagene Ansible-Aufgabe.
 
 
-NOTE: Die auf dieser Seite angegebenen Fehlercodes dienen nur als Referenz. Wenden Sie sich an das Support-Team, wenn der Fehler weiterhin besteht oder wenn keine Lösung erwähnt wird.
+NOTE: Die auf dieser Seite angegebenen Fehlercodes dienen nur als Referenz. Wenden Sie sich an das Support-Team, falls der Fehler weiterhin besteht oder keine Lösung genannt wird.
 
 In der folgenden Tabelle sind die Fehlercodes und die entsprechenden Dateinamen aufgeführt.
 
@@ -107,10 +107,10 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 049 | Für Netzwerk und Validierung wird Perl Skript sie auch in Kürze zuweisen | - 
 
 
-| 050 | Generierung des SSH-Schlüssels fehlgeschlagen | Starten Sie die primäre virtuelle Maschine (VM) neu. 
+| 050 | SSH-Schlüsselgenerierung fehlgeschlagen | Starten Sie die primäre virtuelle Maschine (VM) neu. 
 
 
-| 053 | RKE2 konnte nicht installiert werden | Führen Sie entweder Folgendes aus und starten Sie die primäre VM neu, oder starten Sie Neuimplementierung:
+| 053 | Fehler bei der Installation von RKE2 | Führen Sie entweder Folgendes aus und starten Sie die primäre VM neu, oder starten Sie Neuimplementierung:
 Sudo rke2-killall.sh (alle VMs)
 Sudo rke2-uninstall.sh (alle VMs). 
 
@@ -118,10 +118,10 @@ Sudo rke2-uninstall.sh (alle VMs).
 | 054 | Einstellung von kubeconfig fehlgeschlagen | Neuimplementierung 
 
 
-| 055 | Fehler beim Bereitstellen der Registrierung | Wenn der Registrierungs-Pod vorhanden ist, warten Sie, bis der Pod bereit ist, starten Sie dann die primäre VM neu oder starten Sie es andernfalls neu. 
+| 055 | Fehler beim Bereitstellen der Registrierung | Wenn der Registry-Pod vorhanden ist, warten Sie, bis der Pod bereit ist, und starten Sie dann die primäre VM neu oder stellen Sie sie erneut bereit. 
 
 
-| 059 | Die KubeVip-Bereitstellung ist fehlgeschlagen | Vergewissern Sie sich, dass die während der Implementierung angegebene virtuelle IP-Adresse für die Kubernetes-Kontrollebene und die ONTAP-Tools die IP-Adresse im selben VLAN und freien IP-Adressen sind. Neu starten, wenn alle vorherigen Punkte korrekt sind. Ansonsten Neuimplementierung. 
+| 059 | Die KubeVip-Bereitstellung ist fehlgeschlagen | Stellen Sie sicher, dass die virtuelle IP-Adresse für die Kubernetes-Steuerungsebene und die während der Bereitstellung angegebene ONTAP tools IP-Adresse zum selben VLAN gehören und freie IP-Adressen sind. Starten Sie neu, wenn alle vorherigen Punkte korrekt sind. Andernfalls führen Sie eine erneute Bereitstellung durch. 
 
 
 | 060 | Die Benutzerbereitstellung ist fehlgeschlagen | Neu Starten 
@@ -136,7 +136,14 @@ Sudo rke2-uninstall.sh (alle VMs).
 | 065 | Die URL der Swagger-Seite ist nicht erreichbar | Neuimplementierung 
 
 
-| 066 | Fehler bei den Schritten nach der Bereitstellung für das Gateway-Zertifikat | Gehen Sie wie folgt vor, um das Upgrade wiederherzustellen/abzuschließen: * Diagnostic Shell aktivieren. * Führen Sie den Befehl 'sudo perl /Home/maint/scripts/post-deploy-upgrade.pl --postDeploy' aus. * Überprüfen Sie die Protokolle unter /var/log/post-deploy-Upgrade.log. 
+| 066 | Fehler bei den Schritten nach der Bereitstellung für das Gateway-Zertifikat  a| 
+Führen Sie folgende Schritte aus, um das Upgrade wiederherzustellen/abzuschließen:
+
+* Diagnose-Shell aktivieren.
+* Führen Sie den Befehl 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy' aus.
+* Überprüfen Sie die Protokolle unter /var/log/post-deploy-upgrade.log.
+
+
 
 
 | 088 | Die Konfiguration der Protokollrotation für journald ist fehlgeschlagen | Überprüfen Sie die VM-Netzwerkeinstellungen, die mit dem Host kompatibel sind, auf dem die VM gehostet wird. Sie können versuchen, auf einen anderen Host zu migrieren und die VM neu zu starten. 
@@ -149,6 +156,16 @@ Sudo rke2-uninstall.sh (alle VMs).
 
 
 | 108 | Das Seeding des Skripts ist fehlgeschlagen | - 
+
+
+| 114 | Interne Zertifikatsaktualisierung in der MongoDB-Collection fehlgeschlagen  a| 
+Falls die Bereitstellung mit dem Fehlercode 114 fehlschlägt, führen Sie die folgenden Schritte aus:
+
+* Aktivieren Sie die Diagnose-Shell.
+* Führen Sie folgenden Befehl aus: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
+* Überprüfen Sie die Protokolle unter  `/var/log/otvng/post-deploy-upgrade.log`.
+
+
 |===
 |===
 

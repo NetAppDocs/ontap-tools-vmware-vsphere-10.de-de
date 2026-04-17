@@ -49,6 +49,9 @@ Wenn Sie einen Datenspeicher mithilfe der Benutzeroberfläche der ONTAP -Tools e
 
 Dieser Vorgang kann auch mithilfe der API durchgeführt werden.  Um eine vorhandene Igroup während der Datenspeichererstellung wiederzuverwenden, geben Sie die Igroup-UUID in der Nutzlast der API-Anforderung an.
 
+
+NOTE: Nur benutzerdefinierte igroups können wiederverwendet werden. Igroups, die während der Migration von ONTAP tools 9.x erstellt wurden (migrierte igroups), können nicht wiederverwendet werden und werden ab ONTAP tools 10.5P2 automatisch gelöscht, sobald sie nicht mehr verwendet werden.
+
 *Wenn Sie einen Datastore und eine igroup nativ von ONTAP und vCenter erstellen*
 
 Wenn Sie die igroup und den Datenspeicher direkt in ONTAP -Systemen und VMware-Umgebungen erstellen, verwalten die ONTAP Tools diese Objekte zunächst nicht.  Dadurch entsteht eine flache Igroup-Struktur.

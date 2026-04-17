@@ -39,4 +39,4 @@ Sie müssen keine zusätzliche Konfiguration durchführen, um HA für ONTAP tool
 ONTAP tools for VMware vSphere unterstützen vCenter HA nicht.
 
 ====
-Um die HA-Funktion zu verwenden, stellen Sie sicher, dass CPU-Hot-Add und Memory-Hot-Plug während der Bereitstellung oder später in den VM-Einstellungen aktiviert sind.
+Um die HA-Funktion nutzen zu können, stellen Sie sicher, dass CPU Hot-Add und Memory Hot-Plug während der Bereitstellung oder in den VM-Einstellungen aktiviert sind.

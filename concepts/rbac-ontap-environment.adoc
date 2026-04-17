@@ -34,11 +34,11 @@ DIE REST-Funktionen wurden mit ONTAP 9.6 eingeführt und werden in der Regel fü
 
 * Traditionell
 +
-Hierbei handelt es sich um die älteren Rollen, die vor ONTAP 9.6 enthalten sind. Sie sind weiterhin ein grundlegender Aspekt der RBAC. Die Privileges sind für den Zugriff auf die ONTAP-CLI-Befehle definiert.
+Dies sind die Legacy-Rollen, die vor ONTAP 9.6 existierten. Sie sind weiterhin ein grundlegender Bestandteil von RBAC. Die Privileges werden anhand des Zugriffs auf die ONTAP CLI-Befehle definiert.
 
 
 
-Während die ÜBRIGEN Rollen in jüngster Zeit eingeführt wurden, haben die traditionellen Rollen einige Vorteile. So können optional zusätzliche Abfrageparameter einbezogen werden, damit die Privileges die Objekte genauer definieren, auf die sie angewendet werden.
+Obwohl die REST-Rollen erst vor Kurzem eingeführt wurden, bieten die traditionellen Rollen einige Vorteile. Beispielsweise können zusätzliche Abfrageparameter hinzugefügt werden, damit Privileges die Objekte, auf die sie angewendet werden, genauer definieren können.
 
 .Umfang
 ONTAP-Rollen können mit einem von zwei verschiedenen Bereichen definiert werden. Sie können auf eine bestimmte Daten-SVM (SVM-Ebene) oder auf das gesamte ONTAP-Cluster (Cluster-Ebene) angewendet werden.

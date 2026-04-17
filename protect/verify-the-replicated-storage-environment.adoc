@@ -1,7 +1,7 @@
 ---
 permalink: protect/verify-the-replicated-storage-environment.html 
 sidebar: sidebar 
-keywords:  
+keywords: SRA, storage replication adapter, storage discovery, SnapMirror, custom policy, array pairing, VMware Live Site Recovery 
 summary: 'Sie sollten überprüfen, ob der geschützte Standort und der Recovery-Standort erfolgreich gepaart wurden, nachdem Sie Storage Replication Adapter\(SRA \) konfiguriert haben. Das replizierte Storage-System sollte sowohl vom geschützten Standort als auch vom Wiederherstellungsstandort erkannt werden können.' 
 ---
 = Überprüfen Sie replizierte Speichersysteme in ONTAP tools
@@ -18,6 +18,13 @@ Sie sollten überprüfen, ob der geschützte Standort und der Recovery-Standort 
 * Sie sollten den geschützten Standort und den Recovery-Standort mit dem VMware Live Site Recovery Array Manager gekoppelt haben.
 * Bevor Sie den Test-Failover und den Failover-Vorgang für SRA durchführen, sollten Sie die FlexClone Lizenz und die SnapMirror Lizenz aktiviert haben.
 * Auf Quell- und Zielstandorten sollten dieselben SnapMirror-Richtlinien und Zeitpläne eingehalten werden.
+* Wenn Sie benutzerdefinierte SnapMirror-Richtlinien mit einem benutzerdefinierten Zeitplan verwenden, müssen Sie denselben Zeitplan und dieselbe Richtlinie sowohl auf dem geschützten als auch auf dem Wiederherstellungsstandort konfigurieren.
+* Wenn Sie benutzerdefinierte SnapMirror-Richtlinien verwenden (mit einem Standard- oder benutzerdefinierten Zeitplan), müssen Sie die Speichererkennung von ONTAP tools durchführen, damit die neue Richtlinie erkannt wird. Ohne dies schlagen SRA-Workflows, einschließlich Test-Failover und Failover, fehl. Führen Sie die Speichererkennung an den folgenden Punkten durch:
++
+** Nach dem Erstellen der benutzerdefinierten Richtlinie auf der Wiederherstellungsseite.
+** Nach einer Reprotect-Operation, bei der die Richtlinie auf der geschützten Site wiederhergestellt wird.
+
+
 
 
 .Schritte

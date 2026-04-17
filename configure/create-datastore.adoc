@@ -26,7 +26,7 @@ Nachdem Sie den Speicher integriert und die Datenspeichererkennung ausgeführt h
 Ab den ONTAP tools for VMware vSphere 10.3 können Sie einen vVols Datenspeicher auf ASA R2-Systemen mit platzsparender Speicherkapazität als thin.vVol erstellen.  Der VASA-Anbieter erstellt beim Erstellen des vVol-Datenspeichers einen Container und die gewünschten Protokollendpunkte.  Der VASA-Anbieter weist diesem Container keine Sicherungsvolumes zu.
 
 .Bevor Sie beginnen
-* Stellen Sie sicher, dass Root-Aggregate nicht auf SVM abgebildet sind.
+* Stellen Sie sicher, dass keine Root-Aggregate auf die SVM abgebildet werden.
 * Stellen Sie sicher, dass der VASA Provider beim ausgewählten vCenter registriert ist.
 * Im ASA R2-Speichersystem sollte die SVM dem Aggregat für den SVM-Benutzer zugeordnet werden.
 
@@ -34,7 +34,7 @@ Ab den ONTAP tools for VMware vSphere 10.3 können Sie einen vVols Datenspeicher
 .Schritte
 . Melden Sie sich beim vSphere-Client an.
 . Klicken Sie mit der rechten Maustaste auf ein Hostsystem, einen Hostcluster oder ein Rechenzentrum und wählen Sie * NetApp ONTAP Tools* > *Datastore erstellen*.
-. Wählen Sie VVols *Datenspeichertyp* aus.
+. Wählen Sie vVols als *Datenspeichertyp* aus.
 . Geben Sie die Informationen *Datastore Name* und *Protocol* ein.
 +
 
@@ -44,7 +44,7 @@ NOTE: Das ASA r2 System unterstützt die iSCSI- und FC-Protokolle für VVols.
 . Unter Erweiterte Optionen:
 +
 ** Wenn Sie die *Benutzerdefinierte Exportrichtlinie* auswählen, stellen Sie sicher, dass Sie die Erkennung in vCenter für alle Objekte ausführen.  Es wird empfohlen, diese Option nicht zu verwenden.
-** Sie können für die iSCSI- und FC-Protokolle *Custom Initiator Group*-Name auswählen.
+** Sie können einen *benutzerdefinierten Initiatorgruppen*-Namen für die iSCSI- und FC-Protokolle auswählen.
 +
 
 NOTE: Im ASA R2-Speichersystemtyp SVM werden keine Speichereinheiten (LUN/Namespace) erstellt, da der Datenspeicher nur ein logischer Container ist.
@@ -53,7 +53,7 @@ NOTE: Im ASA R2-Speichersystemtyp SVM werden keine Speichereinheiten (LUN/Namesp
 
 . Im Bereich *Speicherattribute* können Sie neue Volumes erstellen oder die vorhandenen Volumes verwenden. Sie können diese beiden Volume-Typen jedoch nicht kombinieren, um einen VVols-Datastore zu erstellen.
 +
-Beim Erstellen eines neuen Volumes können Sie QoS im Datenspeicher aktivieren.  Standardmäßig wird für jede LUN-Erstellungsanforderung ein Volume erstellt.  Überspringen Sie diesen Schritt für vVols -Datenspeicher auf ASA R2-Speichersystemen.
+Beim Erstellen eines neuen Volumes können Sie QoS für den Datenspeicher aktivieren. Standardmäßig wird für jede LUN-Erstellungsanforderung ein Volume erstellt. Überspringen Sie diesen Schritt für vVols Datenspeicher auf ASA r2-Speichersystemen.
 
 . Überprüfen Sie Ihre Auswahl im Fenster *Zusammenfassung* und wählen Sie *Fertig stellen*.
 
@@ -137,9 +137,9 @@ Weitere Informationen zur Verwendung von NVMe/FC mit VMware vSphere 7.0 finden S
 .Schritte
 . Melden Sie sich beim vSphere-Client an.
 . Klicken Sie mit der rechten Maustaste auf ein Hostsystem, einen Hostcluster oder ein Rechenzentrum und wählen Sie * NetApp ONTAP Tools* > *Datastore erstellen*.
-. Wählen Sie den VMFS-Datastore-Typ aus.
+. Wählen Sie den VMFS-Datenspeichertyp aus.
 . Geben Sie im Bereich „Name und Protokoll“ den Namen, die Größe und die Protokollinformationen des Datenspeichers ein.  Um den neuen Datenspeicher zu einem vorhandenen VMFS-Cluster hinzuzufügen, wählen Sie den Datenspeicher-Cluster in den erweiterten Optionen aus.
-. Wählen Sie Speicher-VM im Bereich *Speicher* aus. Geben Sie den *Custom Initiator Group Name* im Abschnitt *Advanced options* nach Bedarf an. Sie können eine vorhandene Initiatorgruppe für den Datastore auswählen oder eine neue Initiatorgruppe mit einem benutzerdefinierten Namen erstellen.
+. Wählen Sie im Bereich *Speicher* eine Speicher-VM aus. Geben Sie im Abschnitt *Erweiterte Optionen* bei Bedarf den *Namen der benutzerdefinierten Initiatorgruppe* an. Sie können eine vorhandene Initiatorgruppe für den Datenspeicher auswählen oder eine neue Initiatorgruppe mit einem benutzerdefinierten Namen erstellen.
 +
 Wenn das NVMe/FC- oder NVMe/TCP-Protokoll ausgewählt wird, wird ein neues Namespace-Subsystem erstellt und für die Namespace-Zuordnung verwendet.  ONTAP -Tools erstellen das Namespace-Subsystem mithilfe des automatisch generierten Namens, der den Datenspeichernamen enthält.  Sie können das Namespace-Subsystem im Feld *Benutzerdefinierter Namespace-Subsystemname* in den erweiterten Optionen des Bereichs *Speicher* umbenennen.
 
@@ -162,7 +162,7 @@ NOTE: Ab ONTAP 9.16.1 unterstützen ASA r2 Storage-Systeme bis zu 12 Nodes pro C
 .. Wählen Sie *vorhandenes Volume verwenden*, *QoS*-Optionen nach Bedarf aktivieren und geben Sie die Details an.
 +
 
-NOTE: Beim Speichertyp ASA r2 gilt die Volume-Erstellung oder -Auswahl nicht für die Erstellung von Speichereinheiten (LUN/Namespace).  Daher werden diese Optionen nicht angezeigt.
+NOTE: Im ASA r2 Speichertyp gilt die Erstellung oder Auswahl von Volumes nicht für die Erstellung von Speichereinheiten (LUN/Namespace). Daher werden diese Optionen nicht angezeigt.
 
 +
 

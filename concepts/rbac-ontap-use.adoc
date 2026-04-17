@@ -55,7 +55,7 @@ Die RBAC-Definitionen sind in Form von verschiedenen Produktfunktionen gebündel
 
 === Berechtigungen
 
-Die Rolle Privileges sind in vier Sets basierend auf der Zugriffsebene angeordnet, die für den ONTAP Storage erforderlich ist. Zu den Privileges, auf denen die Rollen basieren, gehören:
+Die Rollenberechtigungen sind in vier Gruppen unterteilt, basierend auf dem für ONTAP Storage benötigten Zugriffsniveau. Die den Rollen zugrunde liegenden Privileges umfassen:
 
 * Ermitteln
 +
@@ -89,4 +89,4 @@ Nachdem Sie die Konfigurationsoptionen für Ihre Umgebung ausgewählt haben, kli
 .Beispiel
 `OTV_10_VSC_Discovery_Create`
 
-Der neue Benutzer wird der Liste auf der Seite "Benutzer und Rollen" hinzugefügt. Beachten Sie, dass sowohl HTTP- als auch ONTAPI-Benutzeranmeldemethoden unterstützt werden.
+Der neue Benutzer wird der Liste auf der Seite „Benutzer und Rollen“ hinzugefügt. Beachten Sie, dass sowohl HTTP- als auch ONTAPI-Benutzeranmeldemethoden unterstützt werden.

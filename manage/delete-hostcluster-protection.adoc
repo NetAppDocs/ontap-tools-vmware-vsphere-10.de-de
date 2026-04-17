@@ -16,7 +16,7 @@ Wenn Sie den Host-Cluster-Schutz entfernen, werden die Datastores ungeschützt.
 .Schritte
 . Um die Liste der geschützten Host-Cluster anzuzeigen, gehen Sie zu * NetApp ONTAP Tools* > *Schutz* > *Host-Cluster-Beziehungen*.
 +
-Überwachen Sie auf dieser Seite geschützte Hostcluster, den Schutzstatus, die SnapMirror -Beziehung und den Status.  Wählen Sie Konsistenzgruppen aus, um Kapazität, zugehörige Datenspeicher und untergeordnete Gruppen anzuzeigen.
+Auf dieser Seite können Sie geschützte Hostcluster, den Schutzstatus, die SnapMirror Beziehung und den Status überwachen. Wählen Sie Konsistenzgruppen aus, um Kapazität, zugehörige Datenspeicher und untergeordnete Gruppen anzuzeigen.
 
 . Wählen Sie im Fenster *Hostclusterschutz* das Auslassungsmenü neben dem Cluster und wählen Sie *Schutz entfernen*.
 +

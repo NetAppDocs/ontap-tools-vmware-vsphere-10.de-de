@@ -36,12 +36,12 @@ Alle Berechtigungen werden in der vSphere-Objekthierarchie mit Ausnahme der VAAI
 
 == In ONTAP Tools für VMware vSphere 10 enthaltene Rollen
 
-Um die Arbeit mit RBAC für vCenter Server zu vereinfachen, bieten die ONTAP Tools für VMware vSphere vordefinierte Rollen, die auf verschiedene Administrationsaufgaben zugeschnitten sind.
+Um die Arbeit mit vCenter Server-RBAC zu vereinfachen, stellt ONTAP tools for VMware vSphere vordefinierte Rollen bereit, die auf verschiedene administrative Aufgaben zugeschnitten sind.
 
 
-NOTE: Sie können bei Bedarf neue benutzerdefinierte Rollen erstellen. In diesem Fall sollten Sie eine der vorhandenen Rollen des ONTAP-Tools klonen und sie bei Bedarf bearbeiten. Nachdem Sie die Konfigurationsänderungen vorgenommen haben, müssen sich die betroffenen vSphere-Client-Benutzer ab- und wieder anmelden, um die Änderungen zu aktivieren.
+NOTE: Sie können bei Bedarf neue benutzerdefinierte Rollen erstellen. Klonen Sie dazu eine der vorhandenen ONTAP tools-Rollen und bearbeiten Sie diese nach Bedarf. Nach den Konfigurationsänderungen müssen sich die betroffenen vSphere Client-Benutzer ausloggen und wieder anmelden, um die Änderungen zu aktivieren.
 
-Um die ONTAP tools for VMware vSphere -Rollen anzuzeigen, wählen Sie oben im vSphere Client *Menü* und klicken Sie links auf *Administration* und dann auf *Rollen*. Die folgenden Berechtigungen müssen in der Rolle enthalten sein, die dem vCenter-Benutzer zugewiesen wird, der für die Bereitstellung oder das Onboarding von vCenter verantwortlich ist. Stellen Sie sicher, dass diese Berechtigungen als Voraussetzung für den Bereitstellungs- oder Onboarding-Prozess konfiguriert sind.
+Um die ONTAP tools für VMware vSphere Rollen anzuzeigen, wählen Sie oben im vSphere Client *Menü* und klicken Sie links auf *Administration* und dann auf *Rollen*. Die folgenden Privileges müssen in der Rolle enthalten sein, die dem vCenter Benutzer zugewiesen ist, der für die Bereitstellung oder das Onboarding des vCenter Servers verantwortlich ist. Stellen Sie sicher, dass diese Privileges als Voraussetzung für den Bereitstellungs- oder Onboarding-Prozess konfiguriert sind.
 
 * Alarm
 +

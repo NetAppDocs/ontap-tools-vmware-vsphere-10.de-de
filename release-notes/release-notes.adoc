@@ -13,10 +13,10 @@ summary: Liefert wichtige Informationen zu dieser Version der ONTAP Tools für V
 [role="lead"]
 Informieren Sie sich über die neuen und verbesserten Funktionen der ONTAP tools for VMware vSphere 10.5.
 
-Eine vollständige Liste der neuen Funktionen und Verbesserungen finden Sie unterxref:whats-new.adoc[Was ist neu in den ONTAP tools for VMware vSphere 10.5] .
+Eine vollständige Liste der neuen Funktionen und Verbesserungen finden Sie unter xref:whats-new.adoc[Was ist neu in den ONTAP tools for VMware vSphere 10.5].
 
-Die aktuellsten Informationen zur Kompatibilität finden Sie unter https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] .
+Die aktuellsten Informationen zur Kompatibilität finden Sie unter  https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^].
 
 Die Migration von ONTAP tools for VMware vSphere 9.12D1, 9.13D2 und 9.13P2 auf ONTAP tools for VMware vSphere 10.5 wird unterstützt.
 
-Weitere Informationen finden Sie im https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876["ONTAP tools for VMware vSphere 10.5 – Versionshinweise"^] . Sie müssen sich mit Ihrem NetApp -Konto anmelden oder ein Konto erstellen, um auf die Versionshinweise zugreifen zu können.
+Weitere Informationen finden Sie in den  https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876["ONTAP tools for VMware vSphere 10.5 – Versionshinweise"^]. Sie müssen sich mit Ihrem NetApp Konto anmelden oder ein Konto erstellen, um auf die Release Notes zuzugreifen.

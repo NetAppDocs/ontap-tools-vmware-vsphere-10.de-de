@@ -31,4 +31,4 @@ Sie sollten die geschützten und Recovery-Standorte verbunden haben.
 
 
 .Ergebnis
-Auf der Seite Ordnerzuordnungen werden die geschützten Site-Ressourcen und die Ressourcen des Recovery-Standorts angezeigt. Sie können die gleichen Schritte für andere Netzwerke in Ihrer Umgebung befolgen.
+Auf der Seite „Ordnerzuordnungen“ werden die geschützten Site-Ressourcen und die Ressourcen der Wiederherstellungssite angezeigt. Sie können die gleichen Schritte für andere Ordner in Ihrer Umgebung ausführen.

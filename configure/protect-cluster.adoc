@@ -11,7 +11,7 @@ summary: ONTAP Tools für VMware vSphere managen den Schutz von Host-Clustern.
 
 
 [role="lead"]
-ONTAP Tools für VMware vSphere managen den Schutz von Host-Clustern. Alle Datastores, die zur ausgewählten SVM gehören und auf einem oder mehreren Hosts des Clusters gemountet werden, werden unter einem Host-Cluster geschützt.
+ONTAP tools for VMware vSphere verwaltet den Schutz von Host-Clustern. Alle Datenspeicher, die zur ausgewählten SVM gehören und auf einem oder mehreren Hosts des Clusters eingebunden sind, werden unter einem Host-Cluster geschützt.
 
 .Bevor Sie beginnen
 Stellen Sie sicher, dass Sie diese Anforderungen erfüllen, bevor Sie einen Hostcluster schützen:
@@ -34,10 +34,10 @@ Stellen Sie sicher, dass Sie diese Anforderungen erfüllen, bevor Sie einen Host
 Der Richtlinientyp kann „asynchron“ oder „AutomaticatedFailOverDuplex“ sein.
 
 +
-Wenn Sie die SnapMirror Beziehung als Richtlinie vom Typ AutomatedFailOverDuplex hinzufügen, müssen Sie die Ziel-Storage VM als Storage-Backend zum gleichen vCenter hinzufügen, in dem ONTAP Tools für VMware vSphere implementiert werden.
+Wenn Sie die SnapMirror Beziehung als AutomatedFailOverDuplex Typ-Richtlinie hinzufügen, müssen Sie die Ziel-Speicher-VM als Speicher-Backend zu demselben vCenter hinzufügen, auf dem ONTAP tools for VMware vSphere bereitgestellt ist.
 
 +
-Beim Richtlinientyp „AutomatedFailOverDuplex“ gibt es einheitliche und nicht einheitliche Hostkonfigurationen.  Wenn Sie die Umschalttaste *einheitliche Hostkonfiguration* auswählen, wird die Konfiguration der Hostinitiatorgruppe implizit auf der Zielsite repliziert. Weitere Informationen finden Sie unter link:../concepts/ontap-tools-concepts-terms.html["Schlüsselkonzepte und -Begriffe"] .
+Im AutomatedFailOverDuplex-Richtlinientyp gibt es einheitliche und nicht einheitliche Hostkonfigurationen. Wenn Sie die Umschalttaste *Einheitliche Hostkonfiguration* auswählen, wird die Konfiguration der Host-Initiatorgruppe implizit auf dem Zielstandort repliziert. Weitere Informationen finden Sie unter link:../concepts/ontap-tools-concepts-terms.html["Schlüsselkonzepte und -Begriffe"].
 
 . Wenn Sie sich für eine nicht einheitliche Hostkonfiguration entscheiden, wählen Sie den Hostzugriff (Quelle/Ziel) für jeden Host innerhalb dieses Clusters aus.
 . Wählen Sie *Hinzufügen*.

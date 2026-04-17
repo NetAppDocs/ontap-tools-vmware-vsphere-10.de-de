@@ -72,9 +72,6 @@ NOTE: Nachdem das ONTAP -System ein Switchover und Switchback durchgeführt hat,
 
 
 
-.Was kommt als Nächstes?
-ONTAP -Tools aktualisieren die Liste, um das neue Speicher-Backend anzuzeigen.
-
 --
 ====
 ONTAP -Tools listen das neu hinzugefügte Speicher-Backend auf der Seite *Speicher-Backends* auf.  Wenn ein Zertifikat in 30 Tagen oder weniger abläuft, zeigen die ONTAP Tools in der Spalte mit dem Ablaufdatum des Zertifikats eine Warnung an.  Nach Ablauf markieren die ONTAP -Tools das Speicher-Backend als unbekannt, da es keine Verbindung zum Speichersystem herstellen kann.

@@ -48,7 +48,7 @@ NOTE: Nachdem die HA-Konfiguration aktiviert wurde, können Sie nicht mehr zu ei
 NOTE: Die ONTAP -Tools füllen die meisten Eingabefelder automatisch mit Netzwerkdetails von Knoten 1 aus, um den Arbeitsablauf zu vereinfachen.  Sie können die Eingabedaten bearbeiten, bevor Sie zur letzten Seite des Assistenten gelangen. Sie können IPv6-Adressdetails für die anderen beiden Knoten nur eingeben, wenn die IPv6-Adresse auf dem Verwaltungsknoten der ONTAP -Tools aktiviert ist.
 
 +
-Stellen Sie sicher, dass ein ESXi-Host nur eine VM mit ONTAP Tools enthält. Die Eingaben werden jedes Mal validiert, wenn Sie zum nächsten Fenster wechseln.
+Stellen Sie sicher, dass jeder ESXi-Host nur eine ONTAP tools VM enthält. Die Eingaben werden bei jedem Wechsel zum nächsten Fenster validiert.
 
 . Überprüfen Sie die Details im Abschnitt *Zusammenfassung* und speichern Sie die Änderungen.
 

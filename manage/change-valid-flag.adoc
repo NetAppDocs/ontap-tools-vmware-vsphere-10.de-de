@@ -41,3 +41,7 @@ Um eine sichere Kommunikation und ordnungsgemäße Validierung zu gewährleisten
 
 
 Durch die Befolgung dieser Schritte lassen sich Probleme bei der Zertifikatsvalidierung vermeiden und sicherstellen, dass das ONTAP-System sicher integriert ist.
+
+Das folgende Beispielzertifikat zeigt die dekodierten Informationen:
+
+image:../media/sample-cert.png["Musterzertifikat"]

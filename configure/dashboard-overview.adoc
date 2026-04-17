@@ -2,7 +2,7 @@
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
 keywords: user roles 
-summary: Wenn Sie im Abschnitt Verknüpfungen des vCenter-Clients das Symbol ONTAP-Tools für VMware vSphere Plug-in auswählen, wechselt die Benutzeroberfläche zur Übersichtsseite. Diese Seite ähnelt dem Dashboard mit einer Zusammenfassung der ONTAP Tools für VMware vSphere Plug-in. 
+summary: Wenn Sie das Symbol für das ONTAP tools for VMware vSphere Plug-in im Bereich „Verknüpfungen“ im vCenter Client auswählen, navigiert die Benutzeroberfläche zur Übersichtsseite. Diese Seite dient als Dashboard und bietet eine Zusammenfassung des ONTAP tools for VMware vSphere Plug-ins. 
 ---
 = Erfahren Sie mehr über das ONTAP tools-Dashboard
 :allow-uri-read: 
@@ -18,7 +18,7 @@ Im Enhanced Linked Mode (ELM) wird das Dropdown-Menü „vCenter Server“ angez
 Von der Übersichtsseite aus können Sie die Aktion *Discovery* ausführen. Die Erkennungsaktion erkennt neu hinzugefügte oder aktualisierte Speicher-Backends, Hosts, Datenspeicher und Schutzstatus oder -beziehungen auf vCenter-Ebene.  Führen Sie die Erkennung nach Bedarf aus, ohne auf die geplante Erkennung zu warten.
 
 
-NOTE: Die Aktionsschaltfläche *Erkennung* ist nur aktiviert, wenn Sie über die erforderliche Berechtigung zum Ausführen der Erkennungsaktion verfügen.
+NOTE: Die Schaltfläche *Discovery* ist nur dann aktiviert, wenn Sie über die erforderliche Privilege zur Durchführung der Discovery verfügen.
 
 Nachdem die Ermittlungsanfrage übermittelt wurde, können Sie den Fortschritt der Aktion im Bereich „Letzte Aufgaben“ verfolgen.
 
@@ -30,10 +30,10 @@ Das Dashboard verfügt über mehrere Karten, die verschiedene Elemente des Syste
 | *Karte* | *Beschreibung* 
 
 
-| Status | Die Statuskarte zeigt die Anzahl der Speicher-Back-Ends und den allgemeinen Integritätsstatus der Speicher-Back-Ends und des VASA Providers an. Speicher-Back-Ends-Status zeigt *gesund* an, wenn der gesamte Speicher-Back-Ends-Status normal ist und es *ungesund* anzeigt, wenn eines der Speicher-Backends ein Problem hat (Unbekannt/Unerreichbar/herabgesetzt). Wählen Sie die QuickInfo aus, um die Statusdetails der Speicherbackends zu öffnen. Für weitere Details können Sie ein beliebiges Storage-Back-End auswählen. *Andere VASA Provider-Zustände* Link zeigt den aktuellen Status des VASA Providers an, der im vCenter Server registriert ist. 
+| Status | Die Statuskarte zeigt die Anzahl der Speicher-Backends sowie den allgemeinen Zustand der Speicher-Backends und des VASA Provider an. Der Status der Speicher-Backends wird als *Healthy* angezeigt, wenn alle Speicher-Backends einen normalen Status haben, und als *Unhealthy*, wenn ein Speicher-Backend ein Problem hat (Status: Unknown/Nicht erreichbar/Beeinträchtigt). Wählen Sie das Tooltip aus, um die Statusdetails der Speicher-Backends zu öffnen. Sie können ein beliebiges Speicher-Backend für weitere Details auswählen. Der Link *Other VASA Provider states* zeigt den aktuellen Status des im vCenter Server registrierten VASA Provider an. 
 
 
-| Storage Back-Ends – Kapazität | Diese Karte zeigt die aggregierte genutzte und verfügbare Kapazität aller Speicher-Backends für die ausgewählte vCenter Server-Instanz. Bei ASA R2-Speichersystemen werden die Kapazitätsdaten nicht angezeigt, da es sich um ein disaggregiertes System handelt. 
+| Storage Back-Ends – Kapazität | Diese Karte zeigt die aggregierte genutzte und verfügbare Kapazität aller Storage-Backends für die ausgewählte vCenter Server-Instanz an. Für ASA r2 Storage-Systeme werden die Kapazitätsdaten nicht angezeigt, da der Storage disaggregiert ist. 
 
 
 | Virtual Machines | Diese Karte zeigt die 10 wichtigsten VMs nach Performance-Metrik. Sie können die Kopfzeile auswählen, um die 10 wichtigsten VMs für die ausgewählte Metrik nach aufsteigender oder absteigender Reihenfolge zu erhalten. Die auf der Karte vorgenommenen Änderungen beim Sortieren und Filtern bleiben bestehen, bis Sie den Browser-Cache ändern oder löschen. 
@@ -42,5 +42,5 @@ Das Dashboard verfügt über mehrere Karten, die verschiedene Elemente des Syste
 | Datenspeicher | Diese Karte zeigt die 10 besten Datenspeicher, sortiert nach einer Performance-Metrik. Sie können die Kopfzeile auswählen, um die 10 wichtigsten Datastores für die ausgewählte Metrik nach aufsteigender oder absteigender Reihenfolge zu erhalten. Die auf der Karte vorgenommenen Änderungen beim Sortieren und Filtern bleiben bestehen, bis Sie den Browser-Cache ändern oder löschen. Zum Auswählen des Typs der Datastores – NFS, VMFS oder VVols – existiert ein Dropdown-Menü zum Datenspeichertyp. 
 
 
-| ESXi-Host-Compliance-Karte | Diese Karte zeigt, ob alle ESXi-Hosts (für das ausgewählte vCenter) den empfohlenen NetApp Hosteinstellungen nach Gruppe oder Kategorie folgen. Sie können den Link *Empfohlene Einstellungen anwenden* auswählen, um die empfohlenen Einstellungen anzuwenden. Sie können den Konformitätsstatus der Hosts auswählen, um die Liste der Hosts anzuzeigen. 
+| ESXi-Host-Compliance-Karte | Diese Karte zeigt an, ob alle ESXi-Hosts (für das ausgewählte vCenter) die empfohlenen NetApp Host-Einstellungen nach Gruppe oder Kategorie einhalten. Sie können den Link *Empfohlene Einstellungen anwenden* auswählen, um die empfohlenen Einstellungen zu übernehmen. Sie können den Konformitätsstatus der Hosts auswählen, um die Liste der Hosts anzuzeigen. 
 |===

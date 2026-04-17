@@ -2,7 +2,7 @@
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
 keywords:  
-summary: Sie sollten einige der Überlegungen bei der Migration von vorhandenen virtuellen Maschinen in Ihrem Rechenzentrum kennen. 
+summary: Bei der Migration bestehender virtueller Maschinen in Ihrem Rechenzentrum sollten Sie einige Punkte beachten. 
 ---
 = Überlegungen zur Migration und zum Klonen virtueller Maschinen für ONTAP tools
 :allow-uri-read: 
@@ -11,20 +11,22 @@ summary: Sie sollten einige der Überlegungen bei der Migration von vorhandenen 
 
 
 [role="lead"]
-Bei der Migration bestehender virtueller Maschinen in Ihrem Rechenzentrum sollten Sie einige Überlegungen beachten.
+ONTAP tools für VMware vSphere unterstützen alle gängigen Arten der virtuellen Maschinenmigration, einschließlich reiner Compute- (vMotion), reiner Storage- (Storage vMotion) und kombinierter Compute- und Storage-Migration über alle Datenspeicher hinweg. In diesem Abschnitt werden wichtige Aspekte und Best Practices für eine erfolgreiche Migration und das Klonen von virtuellen Maschinen unabhängig vom zugrunde liegenden Datenspeichertyp erläutert.
 
 
 
 == Migrieren Sie geschützte Virtual Machines
 
-Sie können die geschützten virtuellen Maschinen migrieren in:
+Sie können geschützte virtuelle Maschinen migrieren zu:
 
-* Derselbe VVols-Datastore auf einem anderen ESXi-Host
-* Unterschiedliche kompatible VVols-Datastores auf demselben ESXi-Host
-* Unterschiedliche kompatible VVols-Datastores auf einem anderen ESXi-Host
+* Derselbe Datenspeicher auf einem anderen ESXi-Host
+* Ein anderer kompatibler Datenspeicher auf demselben ESXi-Host
+* Ein anderer kompatibler Datenspeicher auf einem anderen ESXi-Host
 
 
-Wenn Sie die virtuelle Maschine auf ein anderes FlexVol volume migrieren, aktualisiert das System die Metadatendatei für dieses Volume mit den Informationen zur virtuellen Maschine. Wenn eine virtuelle Maschine auf einen anderen ESXi-Host, aber denselben Speicher migriert wird, wird die zugrunde liegende Metadatendatei des FlexVol volume nicht geändert.
+Wenn Sie die virtuelle Maschine auf ein anderes FlexVol volume migrieren, aktualisiert das System die Metadatendatei dieses Volumes mit den Informationen der virtuellen Maschine. Wird eine virtuelle Maschine auf einen anderen ESXi-Host, aber auf denselben Speicher migriert, wird die zugrunde liegende FlexVol volume-Metadatendatei nicht geändert.
+
+Informationen zur Migration virtueller Maschinen finden Sie in der Broadcom-Dokumentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html["vSphere Migration virtueller Maschinen"]
 
 
 
@@ -32,32 +34,37 @@ Wenn Sie die virtuelle Maschine auf ein anderes FlexVol volume migrieren, aktual
 
 Sie können geschützte Virtual Machines folgendermaßen klonen:
 
-* Derselbe Container desselben FlexVol Volumes mithilfe der Replizierungsgruppe
+* Derselbe Container desselben FlexVol volume unter Verwendung einer Replikationsgruppe
 +
-Die Metadatendatei dieses FlexVol Volume wird mit den geklonten Virtual Machines aktualisiert.
+Die Metadatendatei desselben FlexVol volumes wird mit den Details der geklonten virtuellen Maschine aktualisiert.
 
-* Derselbe Container eines anderen FlexVol Volumes unter Verwendung der Replizierungsgruppe
+* Derselbe Container eines anderen FlexVol volume unter Verwendung einer Replikationsgruppe
 +
-Das FlexVol Volume, auf dem die geklonte Virtual Machine gespeichert wird, wird die Metadatendatei mit den Details der geklonten Virtual Machine aktualisiert.
+Im FlexVol volume, in dem die geklonte virtuelle Maschine abgelegt ist, wird die Metadatendatei mit den Details der geklonten virtuellen Maschine aktualisiert.
 
-* Unterschiedlicher Container oder VVols Datastore
+* Ein anderer Container oder vVols Datenspeicher
 +
-Dem FlexVol Volume, auf dem die geklonte Virtual Machine gespeichert wird, werden die Metadatendatei die Details der Virtual Machine aktualisiert.
+Im FlexVol volume, in dem die geklonte virtuelle Maschine platziert ist, wird die Metadatendatei mit den Details der virtuellen Maschine aktualisiert.
 
 
 
-VMware unterstützt derzeit keine virtuellen Maschinen, die in eine VM-Vorlage geklont wurden.
+VMware unterstützt derzeit keine virtuellen Maschinen, die auf eine VM-Vorlage geklont wurden.
 
-Der Klon einer geschützten Virtual Machine wird unterstützt.
+Das Klonen eines Klons einer geschützten virtuellen Maschine wird unterstützt.
 
-Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html["Erstellen einer virtuellen Maschine zum Klonen"].
+Weitere Einzelheiten finden Sie in der Broadcom-Dokumentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html["Erstellen einer virtuellen Maschine zum Klonen"].
 
 
 
-== Snapshots Von Virtual Machines
+== Snapshots virtueller Maschinen
 
-Snapshots virtueller Maschinen ohne Speicher werden unterstützt. Wenn eine virtuelle Maschine einen Snapshot mit Speicher hat, kann die virtuelle Maschine nicht geschützt werden.
+ONTAP tools unterstützt Snapshots virtueller Maschinen über standardmäßige VMware-Workflows. Snapshots sind kurzfristige Wiederherstellungspunkte, die für Anwendungsfälle wie Tests und Patch-Vorbereitung vorgesehen sind. Sie sind kein Ersatz für Backup oder replikationsbasierte Datensicherung. Der Betrieb einer virtuellen Maschine auf einem Snapshot über längere Zeiträume kann zu Instabilität und Datenverlust führen.
 
-Sie können ungeschützte virtuelle Maschinen, die Speicherabbilder enthalten, nicht schützen. Löschen Sie die Speicherabbilder, bevor Sie den Schutz für die virtuelle Maschine aktivieren.
+Sie können absturzkonsistente Snapshots (Snapshots ohne Speicherzustand, mit denen die virtuelle Maschine in einen konsistenten Zustand neu gestartet werden kann) auf allen unterstützten Datenspeichertypen erstellen. Auch quiesced Snapshots, die VMware Tools verwenden, um die Daten im Arbeitsspeicher vor der Erfassung auf die Festplatte zu schreiben, werden unterstützt. Eine Übersicht über Snapshot-Typen und deren Verhalten finden Sie unter https://knowledge.broadcom.com/external/article/342618/overview-of-virtual-machine-snapshots-in.html["Übersicht über Snapshots virtueller Maschinen in vSphere"].
 
-Für eine Windows-VM mit ASA r2-Speichertyp sind virtuelle Maschinen-Snapshots schreibgeschützt. Wenn Sie die VM einschalten, erstellt der VASA Provider eine LUN aus dem schreibgeschützten Snapshot und aktiviert IOPS. Wenn Sie die VM ausschalten, löscht der VASA Provider die LUN und deaktiviert IOPS.
+
+NOTE: Speicher-Snapshots erfassen den aktuellen Speicherzustand und führen zu einer temporären Unterbrechung der virtuellen Maschine. Sie werden in ONTAP tools Workflows nicht unterstützt. Wenn eine virtuelle Maschine über einen Speicher-Snapshot verfügt, muss dieser gelöscht werden, bevor die virtuelle Maschine in eine Konsistenzgruppe oder eine Host-Cluster-Beziehung aufgenommen werden kann, die von ONTAP tools verwaltet wird.
+
+Auf ASA r2-Speichersystemen unterscheidet sich das Verhalten von VM-Snapshots von anderen Speichertypen. Snapshots sind schreibgeschützt. Beim Einschalten der virtuellen Maschine erstellt der VASA Provider eine LUN aus dem schreibgeschützten Snapshot und aktiviert IOPS. Beim Ausschalten der virtuellen Maschine löscht der VASA Provider die LUN und deaktiviert IOPS.
+
+Informationen zur Verwaltung von Snapshots virtueller Maschinen finden Sie in der Broadcom-Dokumentation https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html["Virtuelle Maschinen mit Snapshots verwalten"].

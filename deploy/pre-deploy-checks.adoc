@@ -17,7 +17,7 @@ Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, bevor Sie mi
 | Anforderungen | Ihr Status 
 
 
-| Die Version von vSphere, die Version von ONTAP und die Version des ESXi Hosts sind mit der Version der ONTP Tools kompatibel. | ❏ Ja ❏ Nein 
+| vSphere Version, ONTAP Version und ESXi Host Version sind mit der ONTAP tools Version kompatibel. | ❏ Ja ❏ Nein 
 
 
 | VCenter Server-Umgebung ist eingerichtet und konfiguriert | ❏ Ja ❏ Nein 
@@ -63,7 +63,7 @@ Verwenden Sie das folgende Arbeitsblatt, um die erforderlichen Informationen fü
 | IP-Adresse für die ONTAP tools Anwendung. Dies ist die IP-Adresse für den Zugriff auf die ONTAP tools Manager Managementoberfläche (Load Balancer) unter `\https://<ip>:8443/virtualization/ui/` |  
 
 
-| Virtuelle IP-Adresse der ONTAP -Tools für die interne Kommunikation.  Diese IP-Adresse wird für die interne Kommunikation in einem Setup mit mehreren ONTAP -Tools-Instanzen verwendet.  Diese IP-Adresse darf nicht mit der IP-Adresse für die ONTAP -Tools-Anwendung identisch sein. (Die Kubernetes-Steuerebene) |  
+| Virtuelle IP-Adresse von ONTAP tools für interne Kommunikation. Diese IP-Adresse wird für die interne Kommunikation in einem Setup mit mehreren ONTAP tools Instanzen verwendet. Diese IP-Adresse sollte nicht dieselbe sein wie die IP-Adresse für die ONTAP tools Anwendung. (Die Kubernetes Control Plane) |  
 
 
 | DNS-Hostname für den Verwaltungsknoten der ONTAP -Tools |  
@@ -96,7 +96,7 @@ Verwenden Sie das folgende Arbeitsblatt, um die erforderlichen Informationen fü
 | Gateway für die IPv6-Adresse (optional) |  
 |===
 
-NOTE: Erstellen Sie DNS-Einträge für alle oben genannten IP-Adressen. Bevor Sie Hostnamen zuweisen, ordnen Sie sie den freien IP-Adressen auf dem DNS zu. Alle IP-Adressen sollten sich im gleichen VLAN befinden, das für die Bereitstellung ausgewählt wurde.
+NOTE: Erstellen Sie DNS-Einträge für alle oben genannten IP-Adressen. Ordnen Sie diese vor der Vergabe von Hostnamen den freien IP-Adressen im DNS zu. Alle IP-Adressen müssen sich im selben VLAN befinden, das für die Bereitstellung ausgewählt wurde.
 
 
 

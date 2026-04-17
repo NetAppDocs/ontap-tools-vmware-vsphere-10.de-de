@@ -20,7 +20,7 @@ Die VASA-Provider-Einstellungen zeigen den Registrierungsstatus für den ausgew�
 . Wählen Sie im Abschnitt Plug-ins *Shortcuts* > *NetApp ONTAP Tools* aus.
 . Wählen Sie *Einstellungen* > *VASA-Anbietereinstellungen*.  Die ONTAP -Tools zeigen den Registrierungsstatus des VASA-Anbieters als „nicht registriert“ an.
 . Klicken Sie auf die Schaltfläche *Registrieren*, um den VASA Provider zu registrieren.
-. Geben Sie einen Namen und Anmeldeinformationen für den VASA-Anbieter ein.  Der Benutzername darf nur Buchstaben, Zahlen und Unterstriche enthalten.  Legen Sie die Passwortlänge zwischen 8 und 256 Zeichen fest.
+. Geben Sie einen Namen und die Zugangsdaten für den VASA Provider ein. Der Benutzername darf nur Buchstaben, Zahlen und Unterstriche enthalten. Das Passwort muss zwischen 8 und 256 Zeichen lang sein.
 . Wählen Sie *Registrieren*.
 . Nach einer erfolgreichen Registrierung und Seitenaktualisierung zeigen die ONTAP -Tools den Status, den Namen und die Version des registrierten VASA-Anbieters an.
 

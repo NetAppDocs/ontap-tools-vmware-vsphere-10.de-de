@@ -25,7 +25,7 @@ NOTE: In VMware Live Site Recovery können Ressourcen Ressourcen-Pools, ESXi-Hos
 . Wählen Sie *Ressourcenzuordnungen* > *Neu* auf der Registerkarte Verwalten, um eine neue Ressourcenzuordnung zu erstellen.
 . Führen Sie im Assistenten „Ressourcenzuordnung erstellen“ folgende Schritte aus:
 +
-.. Wählen Sie *Zuordnungen automatisch für Ressource mit übereinstimmenden Namen vorbereiten* und wählen Sie *Weiter*.
+.. Wählen Sie *Automatisch Zuordnungen für Ressourcen mit übereinstimmenden Namen vorbereiten* und wählen Sie *Weiter*.
 .. Wählen Sie die gewünschten Rechenzentrumsobjekte für die geschützten und Recovery-Standorte aus und wählen Sie *Zuordnungen hinzufügen*.
 .. Wählen Sie *Weiter*, nachdem Zuordnungen erfolgreich erstellt wurden.
 .. Wählen Sie das zuvor verwendete Objekt aus, um eine umgekehrte Zuordnung zu erstellen, und wählen Sie dann *Fertig stellen*.
@@ -34,4 +34,4 @@ NOTE: In VMware Live Site Recovery können Ressourcen Ressourcen-Pools, ESXi-Hos
 
 
 .Ergebnis
-Auf der Seite Ressourcenzuordnungen werden die geschützten Standortressourcen und die Ressourcen des Recovery-Standorts angezeigt. Sie können die gleichen Schritte für andere Netzwerke in Ihrer Umgebung befolgen.
+Auf der Seite „Ressourcenzuordnungen“ werden die geschützten Standortressourcen und die Ressourcen des Wiederherstellungsstandorts angezeigt. Sie können die gleichen Schritte für andere Ressourcen in Ihrer Umgebung ausführen.
