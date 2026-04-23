@@ -84,7 +84,7 @@ NOTE: Speichern Sie die ONTAP tools for VMware vSphere Virtual Machine niemals a
 NOTE: Der vCenter-Hostname ist der Name der vCenter Server-Instanz, auf der die ONTAP Tools Appliance bereitgestellt wird.
 
 +
-Wenn Sie ONTAP Tools in einer Topologie mit zwei vCenter Servern einsetzen – wobei die Appliance in einer vCenter-Instanz gehostet wird und eine andere verwaltet –, können Sie der vCenter-Instanz, die die ONTAP Tools hostet, eine eingeschränkte Rolle zuweisen. Sie können einen dedizierten vCenter-Benutzer und eine Rolle erstellen, die nur über die für die OVF-Vorlagenbereitstellung erforderlichen Berechtigungen verfügen. Für Einzelheiten siehe die aufgeführten Rollen in https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["In ONTAP Tools für VMware vSphere 10 enthaltene Rollen"]Die
+Wenn Sie ONTAP tools in einer Zwei-vCenter-Server-Topologie bereitstellen – wobei die Appliance in einer vCenter-Instanz gehostet wird und eine andere verwaltet –, können Sie der vCenter-Instanz, die die ONTAP tools hostet, eine eingeschränkte Rolle zuweisen. Sie können einen dedizierten vCenter-Benutzer und eine Rolle erstellen, die nur die für die OVF-Vorlagenbereitstellung erforderlichen Berechtigungen besitzt. Weitere Informationen finden Sie in den aufgelisteten Rollen link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["In ONTAP Tools für VMware vSphere 10 enthaltene Rollen"].
 
 +
 Stellen Sie für die vCenter-Instanz, die von ONTAP -Tools verwaltet wird, sicher, dass das vCenter-Benutzerkonto über Administratorrechte verfügt.
