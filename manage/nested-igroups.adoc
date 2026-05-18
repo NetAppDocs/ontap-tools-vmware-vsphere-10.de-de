@@ -2,7 +2,7 @@
 permalink: manage/nested-igroups.html 
 sidebar: sidebar 
 keywords:  
-summary:  
+summary: Erfahren Sie, wie ONTAP tools for VMware vSphere Initiatorgruppen darstellt und verwaltet, einschließlich des Verhaltens verschachtelter Initiatorgruppen, der Wiederverwendung und der Bereinigungsänderungen in 10.5 P2. 
 ---
 = Wie ONTAP tools igroups verwaltet
 :allow-uri-read: 
@@ -11,19 +11,33 @@ summary:
 
 
 [role="lead"]
-Wenn Sie sowohl VMs mit ONTAP -Tools als auch ONTAP Speichersysteme verwalten, ist es wichtig zu verstehen, wie sich igroups verhalten, insbesondere beim Verschieben von Datenspeichern aus Umgebungen, die nicht mit ONTAP -Tools verwaltet werden, in Umgebungen, die mit ONTAP-Tools verwaltet werden. Diese Seite erklärt, wie igroups während dieses Prozesses aktualisiert werden.
+Wenn Sie sowohl ONTAP tools-VMs als auch ONTAP-Speichersysteme verwalten, ist es wichtig, das Verhalten von Initiatorgruppen zu verstehen, insbesondere beim Verschieben von Datenspeichern aus Umgebungen, die nicht von ONTAP tools verwaltet werden, in solche, die es werden. Diese Seite erläutert, wie ONTAP tools für VMware vSphere Initiatorgruppen darstellt und verwaltet. Es handelt sich um konzeptionelle Informationen zum Verständnis der Verhaltensunterschiede zwischen früheren Versionen und dem aktuellen verschachtelten Initiatorgruppenmodell.
 
-Ab ONTAP tools für VMware vSphere 10.4 erstellt und verwaltet ONTAP tools automatisch ONTAP- und vCenter-Objekte, was die Verwaltung von Datenspeichern in VMware-Rechenzentrumsumgebungen vereinfacht.
+Ab ONTAP tools for VMware vSphere 10.4 werden ONTAP- und vCenter-Objekte automatisch erstellt und verwaltet, wodurch die Datenspeicherverwaltung in VMware-Rechenzentrumsumgebungen vereinfacht wird. Ab ONTAP tools for VMware vSphere 10.5 P2 werden migrierte Initiatorgruppen zudem automatisch gelöscht, sobald sie nicht mehr verwendet werden.
 
-ONTAP tools for VMware vSphere interpretieren igroups in zwei verschiedenen Kontexten:
+
+
+== Kurze Verhaltenszusammenfassung
+
+* ONTAP Tools-verwaltete VMFS-Datenspeicher verwenden verschachtelte Initiatorgruppen: eine übergeordnete Initiatorgruppe pro Datenspeicherkontext und untergeordnete Initiatorgruppen pro Host.
+* LUN-Zuordnungen werden auf untergeordnete Initiatorgruppen angewendet.
+* Benutzerdefinierte übergeordnete Initiatorgruppen können datenspeicherübergreifend wiederverwendet werden.
+* Migrierte Initiatorgruppen aus ONTAP tools 9.x können nicht wiederverwendet werden.
+
+
+
+
+== Initiatorgruppen-Kontexte
+
+ONTAP tools for VMware vSphere verarbeitet Initiatorgruppen in zwei Kontexten.
 
 .Von Nicht- ONTAP -Tools verwaltete igroups
-Als Speicheradministrator können Sie igroups auf dem ONTAP -System als flache oder verschachtelte Strukturen erstellen.  Die Abbildung zeigt eine flache igroup, die im ONTAP -System erstellt wurde.
+Als Speicheradministrator können Sie auf dem ONTAP-System Initiatorgruppen als flache oder verschachtelte Strukturen erstellen. Die folgende Abbildung zeigt eine flache Initiatorgruppe, die direkt in ONTAP erstellt wurde.
 
 image:../media/non-otv-managed.png["Von Nicht- ONTAP -Tools verwaltete igroup"]
 
 .Von ONTAP -Tools verwaltete igroups
-Wenn Sie Datenspeicher erstellen, erstellen ONTAP tools for VMware vSphere automatisch igroups mithilfe einer verschachtelten Struktur für eine einfachere LUN-Zuordnung.
+Wenn Sie Datenspeicher erstellen, erstellt ONTAP tools for VMware vSphere Initiatorgruppen in einer verschachtelten Struktur.
 
 Wenn beispielsweise Datastore1 erstellt und auf den Hosts 1, 2 und 3 gemountet wird und ein neuer Datastore (Datastore2) erstellt und auf den Hosts 3, 4 und 5 gemountet wird, verwenden ONTAP -Tools die igroup auf Hostebene für eine effiziente Verwaltung erneut.
 
@@ -31,41 +45,69 @@ image:../media/otv-managed.png["ONTAP -Tools verwalteten igroup"]
 
 image:../media/otv-managed2.png["Von ONTAP -Tools verwaltete igroup mit wiederverwendeter untergeordneter igroup"]
 
-Hier sind einige Fälle für ONTAP tools for VMware vSphere unterstützte igroups.
-
-*Wenn Sie einen Datenspeicher mit Standard-Igroup-Einstellungen erstellen*
-
-Wenn Sie einen Datenspeicher erstellen und das Feld „igroup“ leer lassen (Standardeinstellung), generieren ONTAP -Tools automatisch eine verschachtelte igroup-Struktur für diesen Datenspeicher.  Die übergeordnete igroup auf Datenspeicherebene wird nach folgendem Muster benannt: otv_<vcguid>_<host_parent_datacenterMoref>_<datastore_name>.  Jede untergeordnete igroup auf Hostebene folgt dem Muster: otv_<hostMoref>_<vcguid>.  Sie können die Zuordnung zwischen übergeordneten (Datenspeicherebene) und untergeordneten (Hostebene) igroups im Abschnitt *Parent Initiator Group* der ONTAP Speicherschnittstelle anzeigen.
-
-Beim Ansatz mit verschachtelten igroups werden LUNs nur den untergeordneten igroups zugeordnet. Das vCenter Server-Inventar zeigt dann den neuen Datenspeicher an.
-
-*Wenn Sie einen Datenspeicher mit einem benutzerdefinierten igroup-Namen erstellen*
-
-Während der Datenspeichererstellung in ONTAP -Tools können Sie einen benutzerdefinierten Igroup-Namen eingeben, anstatt ihn aus der Dropdown-Liste auszuwählen. Anschließend erstellen die ONTAP -Tools eine übergeordnete igroup auf Datenspeicherebene mit dem von Ihnen angegebenen Namen. Wenn derselbe Host für mehrere Datenspeicher verwendet wird, wird die vorhandene (untergeordnete) igroup auf Hostebene wiederverwendet. Infolgedessen wird die LUN für den neuen Datenspeicher dieser vorhandenen untergeordneten Igroup zugeordnet, die jetzt möglicherweise mit mehreren übergeordneten Igroups verknüpft ist (eine für jeden Datenspeicher). Sie können den neuen Datenspeicher mit dem benutzerdefinierten Igroup-Namen in der vCenter Server-Schnittstelle sehen.
-
-*Wenn Sie den Igroup-Namen während der Datenspeichererstellung wiederverwenden*
-
-Wenn Sie einen Datenspeicher mithilfe der Benutzeroberfläche der ONTAP -Tools erstellen, können Sie eine vorhandene benutzerdefinierte übergeordnete igroup aus der Dropdown-Liste auswählen.  Nachdem Sie die übergeordnete igroup zum Erstellen eines anderen Datenspeichers wiederverwendet haben, zeigt die Benutzeroberfläche des ONTAP -Systems diese Zuordnung an.  Der neue Datenspeicher wird auch in der Benutzeroberfläche von vCenter Server angezeigt.
-
-Dieser Vorgang kann auch mithilfe der API durchgeführt werden.  Um eine vorhandene Igroup während der Datenspeichererstellung wiederzuverwenden, geben Sie die Igroup-UUID in der Nutzlast der API-Anforderung an.
 
 
-NOTE: Nur benutzerdefinierte igroups können wiederverwendet werden. Igroups, die während der Migration von ONTAP tools 9.x erstellt wurden (migrierte igroups), können nicht wiederverwendet werden und werden ab ONTAP tools 10.5P2 automatisch gelöscht, sobald sie nicht mehr verwendet werden.
+== Benennungsverhalten
 
-*Wenn Sie einen Datastore und eine igroup nativ von ONTAP und vCenter erstellen*
+Wenn Sie einen Datenspeicher erstellen und das Feld Initiatorgruppe leer lassen, erstellt ONTAP tools eine standardmäßige verschachtelte Initiatorgruppe-Struktur.
 
-Wenn Sie die igroup und den Datenspeicher direkt in ONTAP -Systemen und VMware-Umgebungen erstellen, verwalten die ONTAP Tools diese Objekte zunächst nicht.  Dadurch entsteht eine flache Igroup-Struktur.
+* Namensmuster der übergeordneten Initiatorgruppe: `otv_<vcguid>_<host_parent_datacenterMoref>_<datastore_name>`
+* Namensmuster für untergeordnete Initiatorgruppen: `otv_<hostMoref>_<vcguid>`
+
+
+Die ONTAP Benutzeroberfläche der ONTAP-Systeme zeigt die Beziehung zwischen übergeordneten und untergeordneten Initiatorgruppen im Feld *Übergeordnete Initiatorgruppe* an.
+
+
+
+== Verhalten je nach Szenario
+
+[cols="25,25,25,25"]
+|===
+| Szenario | Elterngruppenverhalten der Initiatorgruppe | Verhalten von untergeordneten Initiatorgruppen | LUN-Zuordnung und -Sichtbarkeit 
+
+
+| Datenspeicher mit Standard-Initiatorgruppe-Einstellung erstellt | Eine standardmäßige, von ONTAP tools verwaltete übergeordnete Initiatorgruppe wird erstellt. | Bei Bedarf werden untergeordnete Initiatorgruppen auf Hostebene erstellt. | LUNs werden untergeordneten Initiatorgruppen zugeordnet. Der Datenspeicher wird im vCenter Server-Inventar angezeigt. 
+
+
+| Datenspeicher mit benutzerdefiniertem Initiatorgruppen-Namen erstellt | Es wird eine benutzerdefinierte übergeordnete Initiatorgruppe mit dem angegebenen Namen erstellt. | Vorhandene untergeordnete Initiatorgruppen auf Hostebene werden wiederverwendet, wenn sich Hosts überschneiden. | Die neue Datenspeicher-LUN wird der wiederverwendeten oder neu erstellten untergeordneten Initiatorgruppe zugeordnet. Der Datenspeicher wird im vCenter Server angezeigt. 
+
+
+| Vorhandene benutzerdefinierte Initiatorgruppe wird bei der Datenspeichererstellung wiederverwendet | Eine vorhandene benutzerdefinierte übergeordnete Initiatorgruppe wird ausgewählt und wiederverwendet. | Untergeordnete Initiatorgruppen werden basierend auf der Host-Mitgliedschaft wiederverwendet oder erweitert. | Die neue Datenspeicher-LUN wird über die zugehörige untergeordnete Initiatorgruppe zugeordnet. Der Datenspeicher wird im vCenter Server angezeigt. 
+
+
+| Datenspeicher und Initiatorgruppe wurden nativ in ONTAP und vCenter erstellt und anschließend von ONTAP tools erkannt. | ONTAP tools erstellt eine übergeordnete Initiatorgruppe in seinem Verwaltungskontext und behält den ursprünglichen Initiatorgruppenamen bei. | ONTAP tools benennt die ursprüngliche Initiatorgruppe mit dem  `otv_` Präfix um und stellt sie als untergeordnete Initiatorgruppe in der Hierarchie dar. | Die Initiatorzuordnungen bleiben unverändert. Nur die Datenspeichern zugeordneten Initiatorgruppen werden während der Erkennung konvertiert. 
+|===
+
+
+== Benutzerdefinierte Initiatorgruppen-Wiederverwendung und API-Verhalten
+
+In der Benutzeroberfläche der ONTAP tools können Sie beim Erstellen eines Datenspeichers eine vorhandene benutzerdefinierte übergeordnete Initiatorgruppe aus der Dropdown-Liste wiederverwenden.
+
+Das gleiche Verhalten wird über die API unterstützt. Um eine vorhandene Initiatorgruppe bei der Datenspeichererstellung wiederzuverwenden, geben Sie die Initiatorgruppen-UUID in der API-Nutzlast an.
+
+
+NOTE: Nur benutzerdefinierte Initiatorgruppen können wiederverwendet werden. Migrierte Initiatorgruppen aus ONTAP tools 9.x können nicht wiederverwendet werden und werden ab ONTAP tools 10.5 P2 automatisch gelöscht, sobald sie nicht mehr verwendet werden.
+
+
+
+== Ansicht zur Konvertierung von nativ zu verwaltet
+
+Wenn Sie die Initiatorgruppe und den Datenspeicher direkt in ONTAP-Systemen und VMware-Umgebungen erstellen, werden diese Objekte von den ONTAP tools zunächst nicht verwaltet. Dies führt zu einer flachen Initiatorgruppenstruktur.
 
 image:../media/vmfsds-native.png["Datastore und igroup nativ erstellt"]
 
-Um einen vorhandenen Datenspeicher und eine vorhandene igroup mit ONTAP Tools zu verwalten, sollten Sie eine Datenspeichererkennung durchführen.  ONTAP -Tools identifizieren und registrieren den Datenspeicher und die Igroup und konvertieren sie in eine verschachtelte Struktur in ihrer Datenbank.  Eine neue übergeordnete Igroup wird mit dem benutzerdefinierten Namen erstellt, während die vorhandene Igroup mit dem Präfix „otv_“ umbenannt wird und zur untergeordneten Igroup wird.  Die Initiatorzuordnungen bleiben unverändert.  Während der Erkennung werden nur den Datenspeichern zugeordnete Igroups konvertiert.  Danach sieht die Igroup-Struktur wie in der folgenden Abbildung aus.
+Nach der Datenspeichererkennung identifiziert und registriert ONTAP tools die datenspeicherzugeordneten Initiatorgruppen und stellt sie anschließend in einem verschachtelten Modell dar. Die übergeordnete Initiatorgruppe wird auf Datenspeicherebene abgebildet, die bestehende Initiatorgruppe wird mit dem  `otv_` Präfix als untergeordnete Initiatorgruppe umbenannt, und die Initiatorzuordnungen bleiben unverändert.
 
 image:../media/otv-ds.png["Datastore und igroup werden von ONTAP -Tools verwaltet"]
 
-Nachdem Sie die Datenspeichererkennung in ONTAP -Tools ausgeführt haben, konvertieren ONTAP Tools die flache Igroup in eine verschachtelte Struktur. ONTAP -Tools verwalten dann die igroup und benennen sie mit dem Präfix „otv_“ um. Die LUN bleibt während des gesamten Vorgangs derselben Igroup zugeordnet.
+ONTAP tools for VMware vSphere erkennen oder verwalten keine Initiatorgruppen, die in ONTAP-Systemen erstellt wurden, aber keinem Datenspeicher zugeordnet oder mit ONTAP tools verknüpft sind. Während der Erkennung konvertieren ONTAP tools nur die Initiatorgruppen, die erkannten Datenspeichern zugeordnet sind; andere Initiatorgruppen bleiben unverwaltet.
 
-*Wie ONTAP -Tools nativ erstellte igroups wiederverwenden*
 
-Sie können einen Datenspeicher in ONTAP -Tools mithilfe einer Igroup erstellen, die zuerst in ONTAP Systemen erstellt wurde, nachdem ONTAP Tools sie verwaltet haben. Diese Igroups werden in der Dropdown-Liste mit den benutzerdefinierten Initiatorgruppennamen angezeigt. Die neue LUN für den Datenspeicher wird dann der entsprechenden normalisierten untergeordneten Igroup zugeordnet, beispielsweise „otv_NativeIgroup1“.
 
-ONTAP tools for VMware vSphere erkennen oder verwenden keine im ONTAP System erstellten Igroups, die nicht von ONTAP Tools verwaltet oder mit einem Datenspeicher verknüpft werden.
+== Wiederverwendung entdeckter nativer Initiatorgruppen
+
+Nachdem ONTAP tools eine erkannte native Initiatorgruppe verwaltet, steht diese Initiatorgruppe in der Dropdown-Liste für benutzerdefinierte Initiatorgruppennamen zur Erstellung von Datenspeichern zur Verfügung.
+
+Die neue Datastore-LUN wird der normalisierten Child-Initiatorgruppe zugeordnet, zum Beispiel  `otv_NativeIgroup1`.
+
+ONTAP tools for VMware vSphere erkennt oder verwendet keine Initiatorgruppen, die in ONTAP-Systemen erstellt wurden, die nicht von ONTAP tools verwaltet werden oder nicht mit einem Datenspeicher verknüpft sind.
