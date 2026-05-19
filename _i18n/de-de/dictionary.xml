@@ -2791,4 +2791,8 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="45f0d050845f640650733b37410eca9f" category="paragraph">Nachdem ONTAP tools eine erkannte native Initiatorgruppe verwaltet, steht diese Initiatorgruppe in der Dropdown-Liste für benutzerdefinierte Initiatorgruppennamen zur Erstellung von Datenspeichern zur Verfügung.</block>
   <block id="8d90581e01616bc6e833be117c8bf966" category="paragraph">Die neue Datastore-LUN wird der normalisierten Child-Initiatorgruppe zugeordnet, zum Beispiel <block ref="e2e2c5bf7535645ea2278f194b28ad1e" prefix=" " category="inline-code"></block>.</block>
   <block id="270b8c3a2baff1c0296c4a92204b5a54" category="paragraph">ONTAP tools for VMware vSphere erkennt oder verwendet keine Initiatorgruppen, die in ONTAP-Systemen erstellt wurden, die nicht von ONTAP tools verwaltet werden oder nicht mit einem Datenspeicher verknüpft sind.</block>
+  <block id="3830b8eac1743f2f8fe4765b99fa2547" category="summary">Speicher-Backends können lokal für eine vCenter-Instanz oder global für die clusterweite Erkennung in ONTAP tools hinzugefügt und verwaltet werden.</block>
+  <block id="986013590d14c5a1a3fba70da34aec61" category="inline-link">OTV 10: Was ist der globale und lokale Gültigkeitsbereich des Storage-Backends</block>
+  <block id="7a2217d00eec7417d83566729e06f7aa" category="paragraph">Weitere Informationen zu globalen und lokalen Speichersystemen finden Sie im KB-Artikel:<block ref="8136f7308c7184af5e69534cb5835c82" category="inline-link-rx"></block>.</block>
+  <block id="0c1cd48173490f27f69352986a77e96e" category="paragraph"><block ref="0c1cd48173490f27f69352986a77e96e" category="inline-link-rx"></block></block>
 </blocks>
