@@ -24,6 +24,7 @@ NOTE: Sie müssen eine Speichererkennung durchführen, nachdem Sie den Schutz f�
 
 
 
+[[monitor-host-cluster-protection]]
 == Überwachen Sie den Schutz des Host-Clusters
 
 Überwachen Sie den Schutzstatus, die SnapMirror -Beziehungen, die Datenspeicher und den SnapMirror -Status für jeden geschützten Hostcluster.
@@ -39,6 +40,7 @@ In der Schutzspalte wird ein Symbol angezeigt, das den Schutzstatus anzeigt.
 
 
 
+[[add-new-datastores-or-hosts]]
 == Fügen Sie neue Datastores oder Hosts hinzu
 
 Fügen Sie mithilfe der vCenter-Benutzeroberfläche Hosts hinzu oder erstellen Sie Datenspeicher auf dem geschützten Cluster.
@@ -69,6 +71,7 @@ ONTAP -Tools erstellen eine vCenter-Aufgabe und Sie können ihren Fortschritt im
 
 
 
+[[add-a-new-snapmirror-relationship]]
 == Fügen Sie eine neue SnapMirror-Beziehung hinzu
 
 .Schritte
@@ -91,6 +94,7 @@ ONTAP -Tools erstellen eine vCenter-Aufgabe und Sie können ihren Fortschritt im
 
 
 
+[[delete-an-existing-snapmirror-relationship]]
 == Löschen einer vorhandenen SnapMirror-Beziehung
 
 Um eine asynchrone SnapMirror -Beziehung zu löschen, stellen Sie sicher, dass die SVM oder der Cluster des sekundären Standorts als Speicher-Backend in den ONTAP tools for VMware vSphere hinzugefügt wird.  Sie können nicht alle SnapMirror -Beziehungen auf einmal löschen.  Durch das Löschen einer Beziehung wird auch die entsprechende Beziehung aus dem ONTAP Cluster entfernt.  Wenn Sie eine automatisierte Failover-Duplex SnapMirror -Beziehung löschen, hebt das System die Zuordnung der Zieldatenspeicher auf und löscht die Konsistenzgruppe, LUNs, Volumes und igroups aus dem Ziel ONTAP Cluster.
@@ -118,6 +122,7 @@ ONTAP -Tools erstellen eine vCenter-Aufgabe und Sie können ihren Fortschritt im
 
 
 
+[[modify-an-existing-snapmirror-relationship]]
 == Ändern Sie eine vorhandene SnapMirror-Beziehung
 
 Um eine asynchrone SnapMirror -Beziehung zu ändern, stellen Sie sicher, dass der SVM oder Cluster des sekundären Standorts als Speicher-Backend in den ONTAP tools for VMware vSphere hinzugefügt wird.  Für automatisierte Failover-Duplex- SnapMirror Beziehungen können Sie die Hostnähe für einheitliche Konfigurationen oder den Hostzugriff für nicht einheitliche Konfigurationen aktualisieren.  Das Wechseln zwischen den Richtlinientypen „Asynchrones Failover-Duplex“ und „Automatisches Failover-Duplex“ wird nicht unterstützt.  Sie können Näherungs- oder Zugriffseinstellungen für neu erkannte Hosts im Cluster konfigurieren.

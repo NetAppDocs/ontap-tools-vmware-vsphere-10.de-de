@@ -80,6 +80,21 @@ NOTE: Speichern Sie die ONTAP tools for VMware vSphere Virtual Machine niemals a
 . Wählen Sie für jedes Quellnetzwerk das Zielnetzwerk aus und wählen Sie *Weiter*.
 . Im Fenster *Vorlage anpassen* füllen Sie die erforderlichen Felder aus. image:../media/custom-temp-p2.png["Vorlage anpassen"]
 +
+[IMPORTANT]
+====
+Die Werte auf der Seite *Vorlage anpassen* sind für eine erfolgreiche Bereitstellung erforderlich.
+
+Achten Sie besonders auf diese Felder:
+
+** *Host name*: Geben Sie den Hostnamen der ONTAP tools VM ein. Ein gültiges Hostnamenformat ist zu verwenden.
+** *ONTAP tools IP-Adresse*: Dies ist die primäre Managementoberfläche für den Zugriff auf ONTAP tools.
+** *IPv4-Adresse*: Dies ist die Knoten-IP-Adresse, die für den Zugriff auf die Diagnoseshell und per SSH zur Fehlerbehebung und Wartung verwendet wird.
+
+
+Wenn Sie DNS-Namen für den Host oder vCenter verwenden, muss sichergestellt sein, dass diese Namen im DNS korrekt aufgelöst werden.
+
+====
++
 
 NOTE: Der vCenter-Hostname ist der Name der vCenter Server-Instanz, auf der die ONTAP Tools Appliance bereitgestellt wird.
 

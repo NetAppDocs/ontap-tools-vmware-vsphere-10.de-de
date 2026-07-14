@@ -48,10 +48,12 @@ Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, bevor Sie mi
 |===
 
 
+[[deployment-worksheet]]
 == Arbeitsblatt für die Bereitstellung
 
 
 
+[[for-single-node-deployment]]
 === Für Single-Node-Implementierung
 
 Verwenden Sie das folgende Arbeitsblatt, um die erforderlichen Informationen für ONTAP-Tools für die Erstbereitstellung von VMware vSphere zu sammeln:
@@ -100,6 +102,7 @@ NOTE: Erstellen Sie DNS-Einträge für alle oben genannten IP-Adressen. Ordnen S
 
 
 
+[[for-high-availability-ha-deployment]]
 === Für hochverfügbare Implementierungen
 
 Zusätzlich zu den Implementierungsanforderungen für einen Node benötigen Sie für die HA-Implementierung die folgenden Informationen:
@@ -132,12 +135,14 @@ Zusätzlich zu den Implementierungsanforderungen für einen Node benötigen Sie 
 |===
 
 
+[[network-firewall-configuration]]
 == Konfiguration der Netzwerk-Firewall
 
 Stellen Sie sicher, dass die erforderlichen Firewall-Ports für alle relevanten IP-Adressen geöffnet sind.  ONTAP -Tools erfordern Zugriff auf das LIF über Port 443.  Eine vollständige Liste der erforderlichen Ports finden Sie im Abschnitt „Portanforderungen“ unterlink:../deploy/prerequisites.html["ONTAP-Tools für VMware vSphere – Anforderungen und Konfigurationsgrenzen"] .
 
 
 
+[[ontap-storage-settings]]
 == ONTAP Storage-Einstellungen
 
 Um eine nahtlose Integration von ONTAP Storage mit ONTAP Tools für VMware vSphere zu gewährleisten, sollten folgende Einstellungen durchgeführt werden:

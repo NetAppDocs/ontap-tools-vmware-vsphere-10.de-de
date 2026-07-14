@@ -15,6 +15,7 @@ Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Daten verwe
 
 
 
+[[discover-storage]]
 == Storage erkennen
 
 Sie können die Erkennung eines Speicher-Backends bei Bedarf ausführen, ohne auf eine geplante Erkennung warten zu müssen, um die Speicherdetails sofort zu aktualisieren.  Führen Sie bei MetroCluster -Konfigurationen die Erkennung der ONTAP Tools nach einem Switchover manuell aus.
@@ -32,6 +33,7 @@ Sie können den Fortschritt im Fenster „Letzte Aufgaben“ verfolgen.
 
 
 
+[[modify-storage-backends]]
 == Speicherbackends ändern
 
 Sie können die Anmeldeinformationen des Speicher-Backends oder den Portnamen ändern.  Sie können das Speicher-Backend für globale ONTAP Cluster auch mit dem ONTAP Tools Manager ändern.  Wenn das Zertifikat in 30 Tagen oder weniger abläuft, zeigen die ONTAP Tools eine Warnung an.  Ändern Sie das Speicher-Backend und laden Sie das neue Zertifikat vom ONTAP Administrator hoch.
@@ -58,6 +60,7 @@ Befolgen Sie die Schritte in diesem Abschnitt, um ein Speicher-Back-End zu ände
 
 
 
+[[remove-storage-backends]]
 == Entfernen Sie die Speicher-Back-Ends
 
 Sie müssen alle an das Speicher-Backend angeschlossenen Datenspeicher entfernen, bevor Sie es entfernen.  Führen Sie die folgenden Schritte aus, um ein Speicher-Backend zu entfernen.
@@ -79,6 +82,7 @@ Sie können globale ONTAP-Cluster mit ONTAP tools Manager entfernen.
 
 
 
+[[drill-down-view-of-storage-backend]]
 == Drilldown-Ansicht des Storage-Back-End
 
 Auf der Speicher-Backend-Seite sind alle Speicher-Backends aufgelistet.  Sie können Vorgänge zum Erkennen, Ändern und Entfernen von Speicher auf den von Ihnen hinzugefügten Speicher-Backends ausführen, jedoch nicht auf den einzelnen untergeordneten SVMs unter dem Cluster.

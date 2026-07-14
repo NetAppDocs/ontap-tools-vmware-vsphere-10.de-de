@@ -15,6 +15,7 @@ Befolgen Sie diese Schritte, um Datenträger an virtuelle Maschinen in vSphere a
 
 
 
+[[attach-a-data-disk-to-a-virtual-machine]]
 == Verbinden Sie eine Datenfestplatte mit einer virtuellen Maschine
 
 Schließen Sie eine Datenfestplatte an eine virtuelle Maschine an, um mehr Speicherplatz hinzuzufügen.
@@ -32,6 +33,7 @@ Die Festplatte wird in der Liste Virtuelle Hardwaregeräte angezeigt.
 
 
 
+[[detach-a-data-disk-from-the-virtual-machine]]
 == Trennen Sie ein Datenlaufwerk von der virtuellen Maschine
 
 Trennen Sie eine Datenfestplatte von einer virtuellen Maschine, wenn Sie sie nicht mehr benötigen.  Die Festplatte wird nicht gelöscht; sie verbleibt im ONTAP -Speichersystem.

@@ -45,6 +45,7 @@ Der Upgrade- und Migrationsprozess von früheren Versionen der ONTAP tools for V
 
 
 
+[[supported-ontap-platforms-and-vcenter-server-versions]]
 == Unterstützte ONTAP -Plattformen und vCenter Server-Versionen
 
 ONTAP tools for VMware vSphere 10.5 P1 unterstützt vCenter High Availability (HA)-Konfigurationen für SRA- und SnapMirror active sync-Komponenten. vVols wird in dieser Konfiguration nicht unterstützt. Während eines HA-Failovers kann vCenter für mehrere Minuten nicht verfügbar sein. In großen Umgebungen oder wenn ein Fehler auftritt, können die Failover-Zeiten 15 Minuten überschreiten.

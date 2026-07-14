@@ -15,6 +15,7 @@ Sie sollten die Storage-Timeout-Intervalle gemäß den empfohlenen Einstellungen
 
 
 
+[[storage-provider-settings]]
 == Einstellungen für Speicheranbieter
 
 Sie sollten die folgenden Zeitüberschreitungswerte auf VMware Live Site Recovery für eine skalierte Umgebung festlegen:
@@ -58,6 +59,7 @@ Weitere Informationen zum Ändern von Speicheranbietereinstellungen finden Sie u
 
 
 
+[[storage-settings]]
 == Speichereinstellungen
 
 Wenn Sie auf ein Timeout klicken, erhöhen Sie die Werte von `storage.commandTimeout` Und `storage.maxConcurrentCommandCnt` Zu einem höheren Wert.

@@ -15,6 +15,7 @@ VCenter Server-Instanzen sind zentrale Management-Plattformen, mit denen Sie Hos
 
 
 
+[[dissociate-storage-backends-with-the-vcenter-server-instance]]
 == Trennen Sie Storage Back-Ends von der vCenter Server-Instanz
 
 Auf der Listingseite des vCenter-Servers wird die zugehörige Anzahl von Speicher-Back-Ends angezeigt. Jede vCenter Server-Instanz hat die Möglichkeit, ein Storage-Back-End zuzuordnen oder die Zuordnung zu aufheben.
@@ -29,6 +30,7 @@ Auf der Listingseite des vCenter-Servers wird die zugehörige Anzahl von Speiche
 
 
 
+[[modify-a-vcenter-server-instance]]
 == Ändern Sie eine vCenter Server-Instanz
 
 Führen Sie die folgenden Schritte aus, um eine vCenter Server-Instanz zu ändern.
@@ -43,6 +45,7 @@ Führen Sie die folgenden Schritte aus, um eine vCenter Server-Instanz zu änder
 
 
 
+[[remove-a-vcenter-server-instance]]
 == Entfernen einer vCenter Server-Instanz
 
 Entfernen Sie alle Speicher-Backends vom vCenter Server, bevor Sie ihn entfernen.
@@ -65,6 +68,7 @@ Wenn Sie vCenter Server-Instanzen in ONTAP-Tools entfernen, werden die folgenden
 
 
 
+[[renew-vcenter-server-certificate]]
 == vCenter Server-Zertifikat erneuern
 
 ONTAP tools benachrichtigt Sie, wenn das vCenter-Zertifikat bald abläuft oder bereits abgelaufen ist. Nach der Erneuerung des vCenter-Zertifikats laden Sie das neue Zertifikat mithilfe der folgenden Schritte in die ONTAP Tools hoch:

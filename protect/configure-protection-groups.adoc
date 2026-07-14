@@ -17,6 +17,7 @@ Wenn Sie einen neuen Datenspeicher hinzufügen, können Sie ihn in die bestehend
 
 
 
+[[pair-protected-and-recovery-sites]]
 == Kombinieren Sie geschützte Standorte und Recovery-Standorte
 
 Sie sollten die geschützten und Recovery-Standorte, die mit Ihrem vSphere Client erstellt wurden, koppeln, um Storage Replication Adapter (SRA) zur Erkennung der Speichersysteme zu aktivieren.
@@ -47,6 +48,7 @@ Im Dialogfeld *Objekte* werden sowohl die geschützten als auch die Wiederherste
 
 
 
+[[configure-protection-groups]]
 == Konfigurieren Sie Schutzgruppen
 
 .Bevor Sie beginnen

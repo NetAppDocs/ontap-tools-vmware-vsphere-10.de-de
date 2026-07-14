@@ -20,6 +20,7 @@ Die REST-API umfasst mehrere Ressourcenkategorien wie vCenter und Aggregate. Im 
 
 
 
+[[how-to-access-the-rest-api]]
 == So erhalten Sie Zugriff auf die REST API
 
 Sie können über die IP-Adresse des ONTAP Tools und den Port auf die ONTAP Tools für die VMware vSphere 10 REST-API zugreifen. Es gibt mehrere Teile der vollständigen URL, einschließlich:
@@ -47,12 +48,14 @@ Diese URL kann verwendet werden, um ein Zugriffstoken mit der POST-Methode anzuf
 
 
 
+[[http-details]]
 == HTTP – Details
 
 Die ONTAP-Tools für die REST-API von VMware vSphere 10 verwenden HTTP und verwandte Parameter, um auf die Ressourceninstanzen und -Sammlungen zu reagieren. Einzelheiten zur HTTP-Implementierung finden Sie unten.
 
 
 
+[[http-methods]]
 === HTTP-Methoden
 
 Die HTTP-Methoden oder Verben, die von der REST-API unterstützt werden, sind in der folgenden Tabelle aufgeführt.
@@ -78,6 +81,7 @@ Die HTTP-Methoden oder Verben, die von der REST-API unterstützt werden, sind in
 |===
 
 
+[[request-and-response-headers]]
 === Header für Anfragen und Antworten
 
 In der folgenden Tabelle sind die wichtigsten HTTP-Header zusammengefasst, die mit der REST-API verwendet werden.
@@ -97,6 +101,7 @@ In der folgenden Tabelle sind die wichtigsten HTTP-Header zusammengefasst, die m
 |===
 
 
+[[http-status-codes]]
 === HTTP-Statuscodes
 
 Die HTTP-Statuscodes, die von der REST-API verwendet werden, werden im Folgenden beschrieben.
@@ -137,6 +142,7 @@ Die HTTP-Statuscodes, die von der REST-API verwendet werden, werden im Folgenden
 |===
 
 
+[[authentication]]
 == Authentifizierung
 
 Die Authentifizierung eines Clients für die REST-API wird mit einem Zugriffstoken durchgeführt. Zu den relevanten Merkmalen des Token- und Authentifizierungsprozesses gehören:
@@ -151,6 +157,7 @@ Ein Beispiel für das anfordern und Verwenden eines Zugriffstoken finden Sie unt
 
 
 
+[[synchronous-and-asynchronous-requests]]
 == Synchrone und asynchrone Anfragen
 
 Die meisten REST-API-Aufrufe sind schnell abgeschlossen und werden daher synchron ausgeführt. Das heißt, sie geben einen Statuscode (z. B. 200) zurück, nachdem eine Anfrage abgeschlossen wurde. Anforderungen, die länger dauern, werden asynchron mit einem Hintergrundjob ausgeführt.

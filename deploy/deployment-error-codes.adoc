@@ -15,6 +15,7 @@ Wenn bei der Bereitstellung Probleme auftreten, überprüfen Sie die Protokolle 
 
 
 
+[[collect-the-log-files]]
 == Sammeln Sie die Protokolldateien
 
 Sie können Protokolldateien für ONTAP tools for VMware vSphere über die Optionen in der ONTAP tools Manager-Benutzeroberfläche erfassen. Der technische Support kann Sie bitten, die Protokolldateien zur Fehlerbehebung zu sammeln.
@@ -49,6 +50,7 @@ NOTE: Das erzeugte Log-Bundle ersetzt das Log-Bundle, das innerhalb der letzten 
 
 
 
+[[deployment-error-codes]]
 == Fehlercodes für die Bereitstellung
 
 Während der Bereitstellung, des Neustarts und der Wiederherstellungsvorgänge von ONTAP-Tools für VMware vSphere können Fehlercodes auftreten.

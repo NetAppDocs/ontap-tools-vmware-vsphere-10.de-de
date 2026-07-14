@@ -17,6 +17,7 @@ Ab ONTAP tools for VMware vSphere 10.4 werden ONTAP- und vCenter-Objekte automat
 
 
 
+[[quick-behavior-summary]]
 == Kurze Verhaltenszusammenfassung
 
 * ONTAP Tools-verwaltete VMFS-Datenspeicher verwenden verschachtelte Initiatorgruppen: eine übergeordnete Initiatorgruppe pro Datenspeicherkontext und untergeordnete Initiatorgruppen pro Host.
@@ -27,6 +28,7 @@ Ab ONTAP tools for VMware vSphere 10.4 werden ONTAP- und vCenter-Objekte automat
 
 
 
+[[igroup-contexts]]
 == Initiatorgruppen-Kontexte
 
 ONTAP tools for VMware vSphere verarbeitet Initiatorgruppen in zwei Kontexten.
@@ -47,6 +49,7 @@ image:../media/otv-managed2.png["Von ONTAP -Tools verwaltete igroup mit wiederve
 
 
 
+[[naming-behavior]]
 == Benennungsverhalten
 
 Wenn Sie einen Datenspeicher erstellen und das Feld Initiatorgruppe leer lassen, erstellt ONTAP tools eine standardmäßige verschachtelte Initiatorgruppe-Struktur.
@@ -59,6 +62,7 @@ Die ONTAP Benutzeroberfläche der ONTAP-Systeme zeigt die Beziehung zwischen üb
 
 
 
+[[behavior-by-scenario]]
 == Verhalten je nach Szenario
 
 [cols="25,25,25,25"]
@@ -79,6 +83,7 @@ Die ONTAP Benutzeroberfläche der ONTAP-Systeme zeigt die Beziehung zwischen üb
 |===
 
 
+[[custom-igroup-reuse-and-api-behavior]]
 == Benutzerdefinierte Initiatorgruppen-Wiederverwendung und API-Verhalten
 
 In der Benutzeroberfläche der ONTAP tools können Sie beim Erstellen eines Datenspeichers eine vorhandene benutzerdefinierte übergeordnete Initiatorgruppe aus der Dropdown-Liste wiederverwenden.
@@ -90,6 +95,7 @@ NOTE: Nur benutzerdefinierte Initiatorgruppen können wiederverwendet werden. Mi
 
 
 
+[[native-to-managed-conversion-view]]
 == Ansicht zur Konvertierung von nativ zu verwaltet
 
 Wenn Sie die Initiatorgruppe und den Datenspeicher direkt in ONTAP-Systemen und VMware-Umgebungen erstellen, werden diese Objekte von den ONTAP tools zunächst nicht verwaltet. Dies führt zu einer flachen Initiatorgruppenstruktur.
@@ -104,6 +110,7 @@ ONTAP tools for VMware vSphere erkennen oder verwalten keine Initiatorgruppen, d
 
 
 
+[[reuse-of-discovered-native-igroups]]
 == Wiederverwendung entdeckter nativer Initiatorgruppen
 
 Nachdem ONTAP tools eine erkannte native Initiatorgruppe verwaltet, steht diese Initiatorgruppe in der Dropdown-Liste für benutzerdefinierte Initiatorgruppennamen zur Erstellung von Datenspeichern zur Verfügung.
