@@ -1,8 +1,8 @@
 ---
 permalink: manage/reports.html 
 sidebar: sidebar 
-keywords:  
-summary: ONTAP Tools für das VMware vSphere Plug-in bieten Berichte für Virtual Machines und Datastores. 
+keywords: ONTAP tools reports, virtual machine reports, datastore reports, VMware storage reporting 
+summary: Berichte zu virtuellen Maschinen und Datenspeichern sind im ONTAP tools Plug-in verfügbar. 
 ---
 = Berichte zu ONTAP Tools
 :allow-uri-read: 

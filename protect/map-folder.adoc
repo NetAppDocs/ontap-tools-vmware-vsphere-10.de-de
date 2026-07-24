@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-folder.html 
 sidebar: sidebar 
-keywords:  
-summary: Sie sollten Ihre Ordner auf dem geschützten Standort und dem Wiederherstellungsstandort zuordnen, um die Kommunikation zwischen ihnen zu ermöglichen. 
+keywords: folder mappings, protected and recovery sites, VMware Live Site Recovery, disaster recovery, ONTAP tools 
+summary: Ordner zwischen geschützten und Wiederherstellungsstandorten zuordnen, um Failover-Workflows für VMware Live Site Recovery vorzubereiten. 
 ---
 = Ordnerzuordnungen in ONTAP tools konfigurieren
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: configure/add-vcenter.html 
 sidebar: sidebar 
-keywords:  
-summary: Fügen Sie vCenter Server-Instanzen zu den ONTAP-Tools für VMware vSphere hinzu, um Ihre virtuellen Datastores in Ihrer vCenter Server-Umgebung zu konfigurieren, zu managen und zu sichern. 
+keywords: add vCenter Server, ONTAP tools vCenter registration, multiple vCenter support, vCenter CA certificate 
+summary: Fügen Sie vCenter Server-Instanzen zu ONTAP tools hinzu, um Datenspeicher zu konfigurieren, zu verwalten und zu schützen. 
 ---
 = vCenter Server-Instanzen zu ONTAP -Tools hinzufügen
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Fügen Sie vCenter Server-Instanzen zu den ONTAP-Tools für VMware vSph
 
 
 [role="lead"]
-Fügen Sie vCenter Server-Instanzen zu den ONTAP-Tools für VMware vSphere hinzu, um Ihre virtuellen Datastores in Ihrer vCenter Server-Umgebung zu konfigurieren, zu managen und zu sichern. Wenn Sie mehrere vCenter Server-Instanzen hinzufügen, sind für die sichere Kommunikation zwischen ONTAP-Tools und jedem vCenter Server benutzerdefinierte CA-Zertifikate erforderlich.
+Fügen Sie vCenter Server-Instanzen zu ONTAP tools for VMware vSphere hinzu, um Datenspeicher in Ihrer vCenter Server-Umgebung zu konfigurieren, zu verwalten und zu schützen. Beim Hinzufügen mehrerer vCenter Server-Instanzen sind benutzerdefinierte CA-Zertifikate für die sichere Kommunikation zwischen ONTAP tools for VMware vSphere und jeder vCenter Server-Instanz erforderlich.
 
 .Über diese Aufgabe
 ONTAP -Tools lassen sich in vCenter Server integrieren, um Speicheraufgaben wie Bereitstellung, Snapshots und Datenschutz direkt vom vSphere-Client aus durchzuführen.

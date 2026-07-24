@@ -1,8 +1,8 @@
 ---
 permalink: manage/maintenance-console.html 
 sidebar: sidebar 
-keywords:  
-summary: Sie können Ihre Applikations-, System- und Netzwerkkonfigurationen mithilfe der Wartungskonsole der ONTAP Tools managen. Sie können Ihr Administratorkennwort und Ihr Wartungskennwort ändern. Außerdem können Sie Supportpakete generieren, verschiedene Protokollebenen festlegen, TLS-Konfigurationen anzeigen und verwalten und die Remote-Diagnose starten. 
+keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration 
+summary: ONTAP tools Konfigurationen verwalten, Passwörter zurücksetzen, Support-Bundles generieren und TLS-Einstellungen konfigurieren. 
 ---
 = Erfahren Sie mehr über die ONTAP tools maintenance console
 :allow-uri-read: 
@@ -41,11 +41,13 @@ Systemkonfiguration
  a| 
 . Starten Sie die virtuelle Maschine neu
 . Virtuelle Maschine herunterfahren
-. Ändern Sie das Benutzerpasswort „Wartung“
+. Token zum Zurücksetzen des Manager-UI-Passworts generieren
 . Zeitzone ändern
 . Erhöhen der Größe der Jail-Festplatte (/jail)
 . Upgrade
 . Installation der VMware Tools
+. Aktualisieren der vCenter-Anmeldeinformationen
+. ONTAP tools-Servicezertifikate aktualisieren
 
 
 

@@ -1,8 +1,8 @@
 ---
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
-keywords: user roles 
-summary: Wenn Sie das Symbol für das ONTAP tools for VMware vSphere Plug-in im Bereich „Verknüpfungen“ im vCenter Client auswählen, navigiert die Benutzeroberfläche zur Übersichtsseite. Diese Seite dient als Dashboard und bietet eine Zusammenfassung des ONTAP tools for VMware vSphere Plug-ins. 
+keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard 
+summary: Im ONTAP tools Dashboard wird eine Zusammenfassung des Plug-in-Status, der Datenspeicher und der vCenter Serverdaten angezeigt. 
 ---
 = Erfahren Sie mehr über das ONTAP tools-Dashboard
 :allow-uri-read: 
@@ -16,6 +16,10 @@ Wenn Sie im vCenter-Client im Abschnitt „Verknüpfungen“ das Plug-in-Symbol 
 Im Enhanced Linked Mode (ELM) wird das Dropdown-Menü „vCenter Server“ angezeigt.  Wählen Sie einen vCenter Server aus, um seine Daten anzuzeigen.  Das Dropdown-Menü ist in allen Listenansichten des Plug-Ins verfügbar. Wenn Sie auf einer Seite einen vCenter Server auswählen, bleibt dieser beim Wechseln der Registerkarten im Plug-In unverändert.image:../media/remote-plugin-dashboard.png["Dashboard-Übersicht"]
 
 Von der Übersichtsseite aus können Sie die Aktion *Discovery* ausführen. Die Erkennungsaktion erkennt neu hinzugefügte oder aktualisierte Speicher-Backends, Hosts, Datenspeicher und Schutzstatus oder -beziehungen auf vCenter-Ebene.  Führen Sie die Erkennung nach Bedarf aus, ohne auf die geplante Erkennung zu warten.
+
+Wenn ein neuer Host zu einem geschützten Hostcluster hinzugefügt wird, ändern sich die Schutzeinstellungen auf *Teilweise geschützt*.
+
+Um diesen Zustand zu beheben, *Clusterkonfiguration ändern* öffnen, den Host dem richtigen Standort (Quelle oder Ziel) zuweisen und *Ändern* auswählen.
 
 
 NOTE: Die Schaltfläche *Discovery* ist nur dann aktiviert, wenn Sie über die erforderliche Privilege zur Durchführung der Discovery verfügen.

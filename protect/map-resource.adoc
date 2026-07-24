@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-resource.html 
 sidebar: sidebar 
-keywords:  
-summary: Sie sollten Ihre Ressourcen am geschützten Standort und am Recovery-Standort zuordnen, damit Virtual Machines für Failover auf eine oder mehrere Host-Gruppen konfiguriert sind. 
+keywords: resource mappings, ESXi hosts and clusters, VMware Live Site Recovery, failover configuration, ONTAP tools 
+summary: Ressourcenpools, Hosts oder Cluster werden zwischen geschützten und Wiederherstellungsstandorten zugeordnet, damit virtuelle Maschinen während eines Failovers korrekt platziert werden. 
 ---
 = Ressourcenzuordnungen in ONTAP tools konfigurieren
 :allow-uri-read: 

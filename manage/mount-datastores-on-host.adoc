@@ -1,8 +1,8 @@
 ---
 permalink: manage/mount-datastores-on-host.html 
 sidebar: sidebar 
-keywords:  
-summary: Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speicher zugreifen. Nachdem Sie die Hosts der VMware Umgebung hinzugefügt haben, können Sie den Datastore auf den zusätzlichen Hosts einbinden. 
+keywords: mount NFS VMFS datastore, datastore host access, ONTAP tools datastore mounting, add datastore to ESXi host 
+summary: Datenspeicher auf zusätzlichen Hosts einbinden, nachdem Hosts zur VMware-Umgebung hinzugefügt wurden. 
 ---
 = NFS- und VMFS-Datenspeicher in ONTAP tools einbinden
 :allow-uri-read: 
@@ -14,7 +14,7 @@ summary: Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf d
 Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speicher zugreifen. Nachdem Sie die Hosts der VMware Umgebung hinzugefügt haben, können Sie den Datastore auf den zusätzlichen Hosts einbinden.
 
 
-NOTE: Wenn Sie einen neuen ESXi-Host hinzufügen, indem Sie https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["Fügen Sie Ihrem vSphere-Cluster-Workflow einen ESX-Host hinzu"] Warten Sie, bis die geplante Host-Erkennung abgeschlossen ist, bevor der Host in den ONTAP -Tools angezeigt wird. Alternativ können Sie die Erkennung manuell über die Übersichtsseite der NetApp ONTAP -Tools starten.
+NOTE: Nach dem Hinzufügen des Hosts sollte abgewartet werden, bis die geplante Host-Erkennung abgeschlossen ist, bevor er in ONTAP tools angezeigt wird. Alternativ kann die Erkennung manuell über die Übersicht der NetApp ONTAP tools ausgeführt werden. Informationen zum Hinzufügen eines ESXi Hosts zu Ihrem vSphere Cluster sind unter  https://techdocs.broadcom.com/["Broadcom Technische Dokumentation"] zu finden.
 
 .Über diese Aufgabe
 * Einige Rechtsklick-Aktionen sind abhängig von der vSphere-Client-Version und dem ausgewählten Datastore-Typ deaktiviert oder nicht verfügbar.
@@ -24,6 +24,7 @@ NOTE: Wenn Sie einen neuen ESXi-Host hinzufügen, indem Sie https://techdocs.bro
 
 
 * vSphere deaktiviert die Option "Mount Datastore", wenn der Host-Cluster mit einheitlichen Konfigurationen geschützt ist.
+* Wenn ein Datenspeicher mit nconnect auf einem neuen Host eingebunden wird, wenden die ONTAP tools den nconnect-Wert des Datenspeichers an, falls dieser den Wert des Hosts überschreitet.
 
 
 .Schritte

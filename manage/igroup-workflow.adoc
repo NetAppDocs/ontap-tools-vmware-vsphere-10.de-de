@@ -1,8 +1,8 @@
 ---
 permalink: manage/igroup-workflow.html 
 sidebar: sidebar 
-keywords:  
-summary:  
+keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
+summary: Es wird erläutert, wie ONTAP tools Initiatorgruppen erstellt und verwaltet sowie Export-Richtlinien für den Datenspeicherzugriff verwaltet. 
 ---
 = Wie ONTAP tools igroups und Exportrichtlinien verwaltet
 :allow-uri-read: 
@@ -13,7 +13,7 @@ summary:
 [role="lead"]
 Initiatorgruppen (igroups) sind Tabellen mit World Wide Port Names (WWPNs) des FC-Protokollhosts oder qualifizierten Knotennamen des iSCSI-Hosts. Sie können Initiatorgruppen definieren und sie LUNs zuordnen, um zu steuern, welche Initiatoren Zugriff auf LUNs haben.
 
-In ONTAP tools for VMware vSphere 9.x wurden igroups in einer flachen Struktur erstellt und verwaltet, wobei jeder Datenspeicher in vCenter einer einzelnen igroup zugeordnet war. Dieses Modell schränkte die Flexibilität und Wiederverwendung von igroups über mehrere Datenspeicher hinweg ein. ONTAP tools for VMware vSphere führen verschachtelte igroups ein, bei denen jeder Datenspeicher in vCenter einer übergeordneten igroup zugeordnet ist, während jeder Host mit einer untergeordneten igroup unter dieser übergeordneten igroup verknüpft ist. Sie können benutzerdefinierte übergeordnete igroups mit benutzerdefinierten Namen zur Wiederverwendung in allen Datenspeichern definieren, um die igroup-Verwaltung zu vereinfachen.  Verstehen Sie den igroup-Workflow zum Verwalten von LUNs und Datenspeichern in ONTAP tools for VMware vSphere. Verschiedene Workflows erzeugen unterschiedliche igroup-Konfigurationen, wie in den folgenden Beispielen gezeigt:
+In ONTAP tools for VMware vSphere 9.x wurden Initiatorgruppen in einer flachen Struktur erstellt und verwaltet, wobei jeder Datenspeicher in vCenter einer einzelnen Initiatorgruppe zugeordnet war. Dieses Modell schränkte die Flexibilität und Wiederverwendbarkeit von Initiatorgruppen über mehrere Datenspeicher hinweg ein. ONTAP tools for VMware vSphere 10.4 führt verschachtelte Initiatorgruppen ein, wobei jeder Datenspeicher in vCenter einer übergeordneten Initiatorgruppe zugeordnet ist, während jeder Host mit einer untergeordneten Initiatorgruppe unter dieser übergeordneten Gruppe verknüpft ist. Benutzerdefinierte übergeordnete Initiatorgruppen mit frei wählbaren Namen können zur Wiederverwendung über mehrere Datenspeicher hinweg definiert werden, um die Verwaltung der Initiatorgruppen zu erleichtern. Der Initiatorgruppen-Workflow unterstützt die Verwaltung von LUNs und Datenspeichern in ONTAP tools for VMware vSphere. Unterschiedliche Workflows erzeugen verschiedene Initiatorgruppen-Konfigurationen, wie in den folgenden Beispielen dargestellt:
 
 
 NOTE: Die genannten Namen dienen nur zu Illustrationszwecken und beziehen sich nicht auf echte igroup-Namen.  Von ONTAP -Tools verwaltete igroups verwenden das Präfix „otv_“.  Benutzerdefinierten igroups kann ein beliebiger Name zugewiesen werden.

@@ -1,0 +1,62 @@
+---
+permalink: protect/protect-multiple-ds.html 
+sidebar: sidebar 
+keywords: granular datastore protection, protection groups, SnapMirror relationship, AutomatedFailOverDuplex, uniform host configuration, non-uniform host configuration 
+summary: Mehrere VMFS-Datenspeicher in einem Host-Cluster lassen sich schützen, indem Datenspeicher in Schutzgruppen zusammengefasst und SnapMirror Richtlinien angewendet werden. 
+---
+= Datenspeicher in einem Cluster mit ONTAP tools schützen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Granularer Datenspeicherschutz ist sinnvoll, wenn ein Host-Cluster Datenspeicher von mehreren Storage Virtual Machines (SVMs) umfasst und ausgewählte Datenspeicher mit unterschiedlichen Richtlinien geschützt werden sollen.
+
+.Bevor Sie beginnen
+Stellen Sie sicher, dass Sie diese Anforderungen erfüllen, bevor Sie Datenspeicher in einem Host-Cluster schützen:
+
+* Die Datenspeicher sind VMFS Datenspeicher, die iSCSI oder FC Protokolle verwenden.
+* Die Datenspeicher werden in ONTAP tools erkannt und sind dort verfügbar.
+* Die Quell- und Ziel-Speicher-VMs sind für SnapMirror Beziehungen konfiguriert.
+
+
+.Schritte
+. Melden Sie sich beim vSphere Client an.
+. Klicken Sie mit der rechten Maustaste auf einen Host oder einen Host-Cluster und wählen Sie *NetApp ONTAP tools* > *Datenspeicher schützen*.
+. Die *Storage VM* im Cluster auswählen.
++
+Die Datenspeicher des ausgewählten SVM werden angezeigt.
+
+. Das Feld *Datenspeichertyp* ist bereits mit VMFS als einzigem unterstützten Datenspeichertyp für den Schutz vorbelegt und deaktiviert.
+. Wählen Sie aus der Liste, die sich anhand der Eignungskriterien füllt, die Datastores aus, die Sie schützen möchten, und klicken Sie auf *Weiter*.
+. Im Fenster *Schutzeinstellungen* lässt sich auswählen, ob die ausgewählten Datenspeicher in einer bestehenden Schutzgruppe oder in einer neuen Schutzgruppe geschützt werden.
+. Wenn Sie *Neu erstellen* auswählen, einen Namen für die Schutzgruppe angeben und *Beziehung hinzufügen* auswählen.
+. Wählen Sie im Fenster *SnapMirror-Beziehung hinzufügen* den Typ *Zielspeicher-VM* und den Typ *Richtlinie* aus.
++
+Der Richtlinientyp kann asynchron oder AutomatedFailOverDuplex sein. AutomatedFailOverDuplex wird nur für Datenspeicher unterstützt, die auf ONTAP 9.15.1 mit iSCSI oder FC Protokollen bereitgestellt und auf dem Host-Cluster eingebunden sind.
+
++
+Wenn die SnapMirror Beziehung als AutomatedFailOverDuplex hinzugefügt wird, sollte der Zielspeicher als Storage-Backend zu demselben vCenter Server hinzugefügt werden, auf dem ONTAP tools for VMware vSphere bereitgestellt ist.
+
++
+Im AutomatedFailOverDuplex Richtlinientyp gibt es einheitliche und nicht einheitliche Clusterkonfigurationen. Bei einer einheitlichen Clusterkonfiguration wird die Konfiguration der Host-Initiatorgruppe auf dem Zielstandort repliziert. Weitere Informationen finden sich unter link:../concepts/ontap-tools-concepts-terms.html["Schlüsselkonzepte und -Begriffe"].
+
+. Bei uneinheitlicher Clusterkonfiguration wird für jeden Host im Cluster der Hostzugriff (Quelle oder Ziel) ausgewählt. ONTAP tools erstellt die entsprechenden Initiatorgruppen-Konfigurationen auf dem Ziel-Storage, um den Hostzugriff auf Ziel-Storage-Objekte bereitzustellen.
+. Wählen Sie *Speichern*.
+. Die Konfiguration im Fenster *Zusammenfassung* kann überprüft und *Schützen* ausgewählt werden.
+. Die Details aller verfügbaren Schutzgruppen sind unter *NetApp ONTAP tools* > *Protection* > *Protection groups* einsehbar.
+
+
+.Ergebnis
+Es wird eine neue Schutzgruppe mit den ausgewählten Datenspeichern erstellt und die SnapMirror Beziehung wird dieser Schutzgruppe hinzugefügt. Das System erstellt eine vCenter Aufgabe mit den Details der Auftrags-ID und zeigt deren Fortschritt im Bereich „Letzte Aufgaben“ an. Dies ist eine asynchrone Aufgabe, die Benutzeroberfläche zeigt nur den Status der Anfrageübermittlung an und wartet nicht auf den Abschluss der Aufgabe.
+
+[NOTE]
+====
+Für ONTAP Storage (ONTAP 9) Cluster wird das Aufheben des Schutzes eines nicht letzten Datenspeichers nicht unterstützt, wenn die Schutzgruppe eine asynchrone Beziehung aufweist.
+
+====
+.Verwandte Informationen
+* link:../manage/protect-ds.html["Einen VMFS-Datenspeicher schützen"]
+* link:../manage/unprotect-ds.html["Schutz eines VMFS-Datastores aufheben"]
+

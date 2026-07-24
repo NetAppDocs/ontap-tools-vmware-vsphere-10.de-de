@@ -1,8 +1,8 @@
 ---
 permalink: deploy/pre-deploy-checks.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: Vor der Bereitstellung der ONTAP Tools für VMware vSphere sollten Sie mit den Speicherplatzanforderungen für das Deployment-Paket und einigen grundlegenden Anforderungen an das Host-System vertraut sein. 
+keywords: pre-deployment checklist, deployment worksheet, certificates, vCenter Server 
+summary: Die Checkliste vor der Bereitstellung für ONTAP tools, einschließlich vSphere-Kompatibilität, Dimensionierung, Zertifikaten und Netzwerkanforderungen, ist vollständig auszufüllen. 
 ---
 = Anforderungen vor der Bereitstellung von ONTAP tools
 :allow-uri-read: 
@@ -58,14 +58,15 @@ Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, bevor Sie mi
 
 Verwenden Sie das folgende Arbeitsblatt, um die erforderlichen Informationen für ONTAP-Tools für die Erstbereitstellung von VMware vSphere zu sammeln:
 
+[cols="3,1"]
 |===
 | Anforderungen | Ihr Wert 
 
 
-| IP-Adresse für die ONTAP tools Anwendung. Dies ist die IP-Adresse für den Zugriff auf die ONTAP tools Manager Managementoberfläche (Load Balancer) unter `\https://<ip>:8443/virtualization/ui/` |  
+| ONTAP tools IP-Adresse (ehemals Load Balancer). Diese externe IP-Adresse wird verwendet, um auf die ONTAP tools Manager-Oberfläche zuzugreifen `\https://<ip>:8443/virtualization/ui/`, API-Aufrufe zu senden und über die vCenter-Schnittstelle auf das ONTAP tools Plug-in zuzugreifen. |  
 
 
-| Virtuelle IP-Adresse von ONTAP tools für interne Kommunikation. Diese IP-Adresse wird für die interne Kommunikation in einem Setup mit mehreren ONTAP tools Instanzen verwendet. Diese IP-Adresse sollte nicht dieselbe sein wie die IP-Adresse für die ONTAP tools Anwendung. (Die Kubernetes Control Plane) |  
+| ONTAP tools virtuelle IP-Adresse (ehemals Node Interconnect). Diese IP-Adresse wird dem Kubernetes-API-Server zugewiesen und dient als virtuelle IP-Adresse für die Kubernetes-Steuerungsebene in Einzel- und Mehrknotenumgebungen. Sie wird für die interne Clusterkommunikation und das Kubernetes-Management verwendet und muss sich von der ONTAP tools IP-Adresse unterscheiden. |  
 
 
 | DNS-Hostname für den Verwaltungsknoten der ONTAP -Tools |  
@@ -80,7 +81,7 @@ Verwenden Sie das folgende Arbeitsblatt, um die erforderlichen Informationen fü
 | DNS-Suchdomäne |  
 
 
-| IPv4-Adresse für den ONTAP tools Managementknoten. Es ist eine eindeutige IPv4-Adresse für die Managementoberfläche des Knotens im Managementnetzwerk. Diese wird verwendet, um eine Verbindung zur ONTAP tools Appliance für den Remote-Diagnosezugriff über SSH herzustellen. |  
+| IPv4-Adresse für den ONTAP tools Verwaltungsknoten. In einer Einzelknotenbereitstellung ist diese Adresse dem angegebenen Hostnamen der ONTAP tools VM zugeordnet. In einer HA-Bereitstellung sind zusätzliche IPv4-Adressen für die zwei weiteren ONTAP tools VMs erforderlich. |  
 
 
 | Subnetzmaske für die IPv4-Adresse |  
@@ -107,6 +108,7 @@ NOTE: Erstellen Sie DNS-Einträge für alle oben genannten IP-Adressen. Ordnen S
 
 Zusätzlich zu den Implementierungsanforderungen für einen Node benötigen Sie für die HA-Implementierung die folgenden Informationen:
 
+[cols="3,1"]
 |===
 
 

@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Konfigurieren Sie einen Platzhalterdatenspeicher, um im vCenter-Inventar am Wiederherstellungsstandort Speicherplatz für geschützte virtuelle Maschinen (VMs) zu reservieren.  Platzhalter-Datenspeicher erfordern nur minimale Kapazität, da Platzhalter-VMs klein sind und normalerweise nur einige hundert Kilobyte verwenden.' 
+keywords: placeholder datastore, VMware Live Site Recovery, vCenter inventory, protected virtual machines, ONTAP tools 
+summary: Platzhalter-Datenspeicher am Wiederherstellungsstandort konfigurieren, um vCenter-Inventarplatz für geschützte virtuelle Maschinen zu reservieren. 
 ---
 = Platzhalterdatenspeicher in ONTAP tools konfigurieren
 :allow-uri-read: 

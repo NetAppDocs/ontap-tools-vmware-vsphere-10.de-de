@@ -2,8 +2,12 @@
 section: protect
 title: Sicherung von Data Stores und Virtual Machines
 entries:
-- title: Schützen mit Host-Cluster-Schutz
-  url: "/configure/protect-cluster.html"
+- title: Granulare Datenspeicherschutzkonzepte und Berechtigung
+  url: "/protect/granular-datastore-protection-concept.html"
+- title: Cluster für den Schutz des Datenspeichers konfigurieren
+  url: "/protect/config-proximity.html"
+- title: Datenspeicher in einem Cluster schützen
+  url: "/protect/protect-multiple-ds.html"
 - title: Schutz mit SRA-Sicherung
   entries:
   - title: Konfigurieren Sie SRA zum Schutz von Datenspeichern

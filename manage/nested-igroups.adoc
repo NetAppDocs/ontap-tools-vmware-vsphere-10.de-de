@@ -1,8 +1,8 @@
 ---
 permalink: manage/nested-igroups.html 
 sidebar: sidebar 
-keywords:  
-summary: Erfahren Sie, wie ONTAP tools for VMware vSphere Initiatorgruppen darstellt und verwaltet, einschließlich des Verhaltens verschachtelter Initiatorgruppen, der Wiederverwendung und der Bereinigungsänderungen in 10.5 P2. 
+keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping 
+summary: Es wird erläutert, wie ONTAP tools verschachtelte Initiatorgruppen für eine effiziente Zuordnung von Hosts und Datenspeichern darstellt und verwaltet. 
 ---
 = Wie ONTAP tools igroups verwaltet
 :allow-uri-read: 

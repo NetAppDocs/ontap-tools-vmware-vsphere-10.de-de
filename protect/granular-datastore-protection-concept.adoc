@@ -1,0 +1,83 @@
+---
+permalink: protect/granular-datastore-protection-concept.html 
+sidebar: sidebar 
+keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
+summary: Vor dem Schutz von Datenspeichern in einem Host-Cluster empfiehlt es sich, sich mit dem granularen Datenspeicherschutz und den Kriterien für die Datenspeicherberechtigung vertraut zu machen. 
+---
+= Kriterien für die Eignung zum Schutz granularer Datenspeicher
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Granularer Datenspeicherschutz ermöglicht den Schutz ausgewählter VMFS-Datenspeicher in einem Host-Cluster, ohne den gesamten Cluster zu schützen.
+
+Granularer Datenspeicherschutz ist mit ONTAP tools for VMware vSphere 10.6 und höher verfügbar. Diese Funktion bietet eine Planung des Schutzes auf Datenspeicherebene statt einer clusterweiten Auswahl.
+
+Diese Funktion ermöglicht Ihnen Folgendes:
+
+* Nur ausgewählte Datenspeicher in einem Hostcluster werden geschützt.
+* Ausgewählte Datenspeicher werden in Schutzgruppen gruppiert.
+* Beziehungen und Richtlinien für SnapMirror auf Schutzgruppenebene anwenden.
+* Unterschiedliche Schutzansätze können für verschiedene Datenspeichergruppen im selben Cluster verwendet werden.
+
+
+Diese Funktion unterstützt nur VMFS-Datenspeicher, die iSCSI oder FC Protokolle verwenden.
+
+Für berechtigte Datenspeicher stehen die folgenden Richtlinientypen zur Verfügung:
+
+* *AutomatedFailOverDuplex (AFD)*
++
+** *Einheitliche Hostkonfiguration*: Hosts an beiden Standorten können auf geschützte Datenspeicher zugreifen.
+** *Nicht einheitliche Hostkonfiguration*: Der Hostzugriff ist auf standortspezifische Hosts beschränkt.
+
+
+* *Asynchron*: Die Zielseite verwaltet eine asynchrone Kopie zur Wiederherstellung.
+
+
+Fan-out-Schutz kann AFD zwischen primären Standorten und asynchroner Replizierung zu einem dritten Standort kombinieren.
+
+
+
+[[eligibility-evaluation]]
+== Eignungsbewertung
+
+Die Eignung wird in zwei Stufen bewertet: Aufnahme in die Liste und Auswahl.
+
+Datenspeicher werden nur für den granularen Datenspeicherschutz aufgeführt, wenn sie alle folgenden Kriterien erfüllen:
+
+* Der Datenspeichertyp ist VMFS.
+* Das Protokoll ist iSCSI oder FC.
+* Der Datenspeicher ist nur auf Hosts im ausgewählten Hostcluster eingebunden.
+* ONTAP tools können den Datenspeicher auf Schutzwürdigkeit prüfen, wenn sich der Datenspeicher im ausgewählten Hostcluster in vCenter Server befindet.
+
+
+Nachdem ein Datenspeicher aufgelistet wurde, kann er nur dann zum Schutz ausgewählt werden, wenn alle folgenden Voraussetzungen erfüllt sind:
+
+* Der Datenspeicher ist noch nicht geschützt.
+* Der Datenspeicher bleibt nur innerhalb des ausgewählten Host-Clusters eingebunden.
+* Quell- und Ziel-SVMs sind miteinander verbunden und in ONTAP tools eingebunden.
+* ONTAP Version ist 9.15.1 oder höher.
+* Es werden nur 2x2 und 4x4 Kombinationen von Quell- und Ziel-Cluster-Knoten unterstützt.
+* MetroCluster Konfigurationen sind nicht zulässig.
+* Das FlexVol volume oder die LUN, die den Datenspeicher unterstützt, ist nicht Teil einer bestehenden Konsistenzgruppe.
+* Das FlexVol volume oder die LUN, die den Datenspeicher unterstützt, ist nicht Teil einer bestehenden SnapMirror Beziehung.
+
+
+Folgende Betriebsgrenzen und Verhaltensweisen sind zu berücksichtigen:
+
+* Die Clusternähe ist vor der Konfiguration des Datenspeicherschutzes festzulegen.
+* Ein einzelner Host-Cluster kann entweder eine einheitliche oder eine nicht-einheitliche AFD Konfiguration verwenden, nicht beides.
+* Das Verschieben von Datenspeichern zwischen Schutzgruppen wird nicht unterstützt. Den Schutz aufheben und anschließend im Zielgruppe erneut schützen.
+* Cross-SVM-Schutz im selben Host-Cluster mit einer Quelle und mehreren verschiedenen Zielen wird nicht unterstützt.
+* Benutzerdefinierte asynchrone Richtlinien werden nicht unterstützt. Die standardmäßige ONTAP asynchrone Richtlinie ist zu verwenden.
+* In tertiären oder ausschließlich asynchronen Konfigurationen erfolgt die Bereinigung asynchroner Beziehungen manuell.
+* Failover über ONTAP System Manager auslösen. ONTAP Mediator außerhalb von ONTAP tools konfigurieren.
+
+
+Beim Upgrade von ONTAP tools 10.5 werden bestehende Host-Cluster-Schutzkonfigurationen in das granulare Datenspeicherschutzformat migriert. Nach dem Upgrade sollten Schutzgruppen und die Datenspeicherzugehörigkeit überprüft werden.
+
+.Verwandte Informationen
+* link:../protect/protect-multiple-ds.html["Datenspeicher in einem Cluster mit ONTAP tools schützen"]
+

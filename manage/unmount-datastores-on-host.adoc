@@ -1,8 +1,8 @@
 ---
 permalink: manage/unmount-datastores-on-host.html 
 sidebar: sidebar 
-keywords:  
-summary: Durch die Unmounten der Datastore-Aktion wird ein NFS- oder VMFS-Datastore von ESXi-Hosts abgehängt. Die Aktion „Datastore unmounten“ ist für NFS- und VMFS-Datastores aktiviert, die von den ONTAP-Tools für VMware vSphere erkannt oder gemanagt werden. 
+keywords: unmount NFS VMFS datastore, remove datastore from host, ONTAP tools datastore unmount, ESXi host storage detach 
+summary: NFS- oder VMFS-Datenspeicher werden mithilfe von ONTAP tools von ESXi Hosts ausgehängt. 
 ---
 = NFS- und VMFS-Datenspeicher in ONTAP tools aushängen
 :allow-uri-read: 
@@ -11,13 +11,15 @@ summary: Durch die Unmounten der Datastore-Aktion wird ein NFS- oder VMFS-Datast
 
 
 [role="lead"]
-Die Aktion „Datenspeicher aushängen“ entfernt einen NFS- oder VMFS-Datenspeicher von ESXi-Hosts.  Es ist für Datenspeicher verfügbar, die von ONTAP tools for VMware vSphere erkannt oder verwaltet werden.
+Diese Aufgabe dient dazu, einen NFS- oder VMFS-Datenspeicher von ESXi-Hosts zu trennen. Das Trennen von Datenspeichern auf Cluster-Ebene wird weder über die Benutzeroberfläche noch über APIs unterstützt.
+
+Ab ONTAP tools 10.6 ist das Aushängen für geschützte VMFS-Datenspeicher blockiert.
 
 .Schritte
 . Melden Sie sich beim vSphere-Client an.
 . Klicken Sie mit der rechten Maustaste auf ein NFS- oder VMFS-Datenspeicherobjekt und wählen Sie *Datenspeicher aushängen*.
 +
-Der vSphere-Client öffnet ein Dialogfeld und listet die ESXi-Hosts auf, die den Datenspeicher einbinden. Wenn der Vorgang auf einem geschützten Datenspeicher ausgeführt wird, wird eine Warnmeldung auf dem Bildschirm angezeigt.
+Der vSphere Client öffnet ein Dialogfeld und listet die ESXi-Hosts auf, die den Datenspeicher eingebunden haben. Wenn der Datenspeicher geschützt ist, blockieren die ONTAP tools die Anfrage und zeigen eine Meldung an, dass der Datenspeicher unter Schutz steht und nicht ausgehängt werden kann.
 
 . Wählen Sie einen oder mehrere ESXi-Hosts aus, um die Bereitstellung des Datastore aufzuheben.
 +
@@ -25,12 +27,12 @@ Sie können den Datastore nicht von allen Hosts abladen. Die Benutzeroberfläche
 
 . Wählen Sie die Schaltfläche *Unmount*.
 +
-Wenn der Datastore Teil eines geschützten Host-Clusters ist, wird eine Warnmeldung angezeigt.
+Die Option *Datenspeicher aushängen* ist nur verfügbar, wenn der Host außerhalb des geschützten Host-Clusters verschoben wird.
 
 
 
 
-NOTE: Wenn der geschützte Datenspeicher ausgehängt wird, kann die bestehende Schutzeinstellung zu einem teilweisen Schutz führen. Siehe link:../manage/edit-hostcluster-protection.html["Geschütztes Host-Cluster ändern"] um einen umfassenden Schutz zu ermöglichen.
+NOTE: Wenn ein Datenspeicher geschützt ist, muss der Schutz aufgehoben werden, bevor er ausgehängt werden kann.
 
 .Was kommt als Nächstes?
 Sie können den Fortschritt im Fenster „Letzte Aufgaben“ verfolgen.

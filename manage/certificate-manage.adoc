@@ -1,8 +1,8 @@
 ---
 permalink: manage/certificate-manage.html 
 sidebar: sidebar 
-keywords:  
-summary: Mit einer einzigen Instanz der ONTAP Tools für VMware vSphere können mehrere vCenter Server-Instanzen gemanagt werden. ONTAP Tools für VMware vSphere werden mit einem selbstsignierten Zertifikat für VASA Provider implementiert. Dadurch kann nur eine vCenter Server-Instanz für VVols-Datastores gemanagt werden. 
+keywords: ONTAP tools certificates, VASA provider certificate, vCenter certificate trust, manage appliance certificates 
+summary: ONTAP tools und VASA Provider-Zertifikate verwalten, Standardzertifikate erneuern oder durch benutzerdefinierte CA-Zertifikate ersetzen. 
 ---
 = ONTAP tools-Zertifikate verwalten
 :allow-uri-read: 
@@ -13,16 +13,19 @@ summary: Mit einer einzigen Instanz der ONTAP Tools für VMware vSphere können 
 [role="lead"]
 Für ONTAP -Tools und den VASA-Provider wird während der Bereitstellung standardmäßig ein selbstsigniertes Zertifikat generiert. Über die ONTAP Tools Manager-Oberfläche können Sie dieses Zertifikat erneuern oder durch ein benutzerdefiniertes CA-Zertifikat ersetzen. Bei Multi-vCenter-Bereitstellungen ist die Verwendung benutzerdefinierter CA-Zertifikate erforderlich.
 
+
+WARNING: Wenn Zertifikate ohne rechtzeitige Verlängerung ablaufen, funktionieren die ONTAP tools nicht mehr. Zertifikate sollten vor Ablauf erneuert werden, damit der kontinuierliche Betrieb aufrechterhalten bleibt und Unterbrechungen des Dienstes vermieden werden.
+
 .Bevor Sie beginnen
 Folgendes sollten Sie vor Beginn bereithalten:
 
-* Der Domänenname wurde der virtuellen IP-Adresse zugeordnet.
+* Der Domänenname, der der ONTAP tools IP-Adresse zugeordnet ist.
 * Erfolgreicher nslookup des Domainnamens, was bestätigt, dass er zur korrekten IP-Adresse aufgelöst wird.
 * Zertifikate, die mit dem Domänennamen und der IP-Adresse der ONTAP -Tools erstellt wurden.
 
 
 
-NOTE: Eine IP-Adresse für ONTAP-Tools sollte einem vollständig qualifizierten Domänennamen (FQDN) zugeordnet werden. Zertifikate sollten denselben FQDN enthalten, der der IP-Adresse des ONTAP-Tools in alternativen Namen des Subjekts oder des Subjekts zugeordnet ist.
+NOTE: Eine ONTAP tools IP-Adresse sollte einem vollqualifizierte Domainnamen (FQDN) zugeordnet sein. Zertifikate sollten denselben FQDN enthalten, der der ONTAP tools IP-Adresse im Subjekt oder in den alternativen Subjektnamen zugeordnet ist.
 
 
 NOTE: Sie können nicht von einem mit einer Zertifizierungsstelle signierten zu einem selbstsignierten Zertifikat wechseln.
@@ -38,7 +41,7 @@ Auf der Registerkarte „ONTAP Tools“ werden Details wie der Zertifikatstyp (s
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie *Zertifikate* > *ONTAP Tools* > *erneuern*, um die Zertifikate zu erneuern.
 +
-Sie können das Zertifikat erneuern, wenn es abgelaufen ist oder sich seinem Ablaufdatum nähert. Die Option „erneuern“ ist verfügbar, wenn der Zertifikatstyp CA-signiert ist. Geben Sie im Popup-Fenster das Serverzertifikat, den privaten Schlüssel, die Stammzertifizierungsstelle und die Details zum Zwischenzertifikat an.
+Sie können das Zertifikat erneuern, wenn es abgelaufen ist oder sich dem Ablaufdatum nähert. Die Erneuerungsoption ist verfügbar, wenn der Zertifikatstyp selbstsigniert oder von einer Zertifizierungsstelle signiert ist. Im Pop-up-Fenster sind die Details des Serverzertifikats, des privaten Schlüssels, der Stammzertifizierungsstelle und des Zwischenzertifikats anzugeben.
 
 +
 
@@ -47,7 +50,7 @@ NOTE: Das System ist offline, bis das Zertifikat erneuert wird, und Sie werden v
 . Um das selbstsignierte Zertifikat auf ein benutzerdefiniertes CA-Zertifikat zu aktualisieren, wählen Sie *Zertifikate* > *ONTAP-Tools* > *Upgrade auf CA*.
 +
 .. Laden Sie im Popup-Fenster das Serverzertifikat, den privaten Schlüssel des Serverzertifikats, das Stammzertifizierungsstellenzertifikat und die Zwischenzertifikatdateien hoch.
-.. Geben Sie den FQDN der Load Balancer IP-Adresse ein, für die Sie dieses Zertifikat generiert haben, und aktualisieren Sie das Zertifikat.
+.. Geben Sie den FQDN ein, der der ONTAP tools IP-Adresse (ehemals Load Balancer IP) zugeordnet ist, für die Sie dieses Zertifikat generiert haben, und aktualisieren Sie das Zertifikat.
 +
 
 NOTE: Das System ist bis zum Abschluss des Upgrades offline und Sie werden von der Oberfläche des ONTAP Tools Managers abgemeldet.
@@ -68,7 +71,7 @@ ONTAP Tools für VMware vSphere werden mit einem selbstsignierten Zertifikat fü
 . Wählen Sie *Certificates* > *VASA Provider* oder *ONTAP Tools* > *Upgrade auf CA*, um das selbstsignierte Zertifikat auf ein benutzerdefiniertes CA-Zertifikat zu aktualisieren.
 +
 .. Laden Sie im Popup-Fenster das Serverzertifikat, den privaten Schlüssel des Serverzertifikats, das Stammzertifizierungsstellenzertifikat und die Zwischenzertifikatdateien hoch.
-.. Geben Sie den FQDN der Load Balancer IP-Adresse ein, für die Sie dieses Zertifikat generiert haben, und aktualisieren Sie das Zertifikat.
+.. Geben Sie den FQDN ein, der der ONTAP tools IP-Adresse (ehemals Load Balancer IP) zugeordnet ist, für die Sie dieses Zertifikat generiert haben, und aktualisieren Sie das Zertifikat.
 +
 
 NOTE: Das System ist bis zum Abschluss des Upgrades offline und Sie werden von der Oberfläche des ONTAP Tools Managers abgemeldet.
@@ -76,6 +79,24 @@ NOTE: Das System ist bis zum Abschluss des Upgrades offline und Sie werden von d
 
 
 
+
+--
+.ONTAP tools Servicezertifikat aktualisieren
+--
+Ab ONTAP tools 10.5 wurde die Gültigkeitsdauer von Zertifikaten von 10 Jahren auf 1 Jahr geändert. Ab ONTAP tools 10.5P2 werden während eines Upgrades der ONTAP tools die internen Servicekommunikationszertifikate automatisch erneuert und das selbstsignierte Gateway-Zertifikat ebenfalls aktualisiert.
+
+Diese Option in der Wartungskonsole dient dazu, interne Servicekommunikationszertifikate manuell zu aktualisieren, wenn eine Warnung über das bevorstehende Ablaufdatum eines internen Zertifikats angezeigt wird oder wenn ONTAP tools seit über einem Jahr nicht aktualisiert wurde. Ab ONTAP tools 10.5P2 werden diese Zertifikate bei Upgrades automatisch erneuert. Die aktualisierten Zertifikate behalten weiterhin eine Gültigkeitsdauer von einem Jahr (365 Tagen), was die Erfüllung von Audit-Anforderungen unterstützt.
+
+.Schritte
+. Melden Sie sich beim vCenter Server an.
+. Die ONTAP tools VM suchen und die Webkonsole öffnen.
+. Melden Sie sich mit den  `maint` Zugangsdaten an.
+. Eingeben `2` Um die *Systemkonfiguration* auszuwählen, wählen Sie diese bitte aus.
+. Geben Sie  `9` ein, um *Refresh ONTAP tools services certificates* auszuwählen.
+
+
+
+WARNING: Diese Aktion startet alle Dienste neu und kann zu Ausfallzeiten oder Störungen führen. Zum Fortfahren muss die Warnung durch Eingabe von  `y` bestätigt werden, danach beginnt der Aktualisierungsprozess.
 
 --
 ====

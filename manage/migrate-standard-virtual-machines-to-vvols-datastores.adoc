@@ -1,8 +1,8 @@
 ---
 permalink: manage/migrate-standard-virtual-machines-to-vvols-datastores.html 
 sidebar: sidebar 
-keywords: Migrate NFS and VMFS virtual machines 
-summary: 'Sie können Virtual Machines von NFS- und VMFS-Datastores auf Virtual Volumes \(VVols\)-Datastores migrieren, um die Vorteile des richtlinienbasierten VM-Managements und anderer VVols Funktionen zu nutzen. VVols Datastores ermöglichen es, steigende Workload-Anforderungen zu erfüllen.' 
+keywords: migrate VMs to vVols, NFS VMFS to vVol migration, virtual machine storage migration, policy-based VM storage 
+summary: Migration virtueller Maschinen von NFS- und VMFS-Datenspeichern zu vVols Datenspeichern für richtlinienbasierte Verwaltung. 
 ---
 = Migrieren Sie virtuelle Maschinen zu vVols-Datenspeichern in ONTAP tools
 :allow-uri-read: 

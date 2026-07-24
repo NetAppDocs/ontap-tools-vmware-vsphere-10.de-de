@@ -1,8 +1,8 @@
 ---
 permalink: manage/enable-services.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Sie können optionale Dienste wie VASA Provider, den Import der vVols-Konfiguration und Disaster Recovery (SRA) mit dem ONTAP tools Manager aktivieren.' 
+keywords: enable ONTAP tools services, enable VASA provider, enable SRA service, vVols service configuration 
+summary: 'Optionale ONTAP tools Dienste, einschließlich VASA Provider, vVols Konfigurationsimport und Disaster Recovery (SRA), können aktiviert werden.' 
 ---
 = ONTAP tools-Dienste aktivieren
 :allow-uri-read: 
@@ -11,21 +11,25 @@ summary: 'Sie können optionale Dienste wie VASA Provider, den Import der vVols-
 
 
 [role="lead"]
-Mithilfe von ONTAP Tools Manager kann das Administratorpasswort geändert werden, um Services wie VASA Provider, den Import der VVols-Konfiguration und die Disaster Recovery (SRA) mithilfe von ONTAP Tools Manager zu aktivieren.
+Mit ONTAP tools Manager können optionale Dienste wie VASA Provider, vVols Konfigurationsimport und Disaster Recovery (SRA) aktiviert werden.
 
 .Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
-. Wählen Sie im Übersichtsbereich die Option *Geräteeinstellungen bearbeiten* aus.
-. Im Abschnitt *Services* können Sie bei Bedarf optionale Dienste wie VASA Provider, den Import der vVols -Konfiguration und Disaster Recovery (SRA) aktivieren.
+. Im Abschnitt *Übersicht* *Geräteeinstellungen bearbeiten* auswählen.
+. Im Abschnitt *Dienste* können die optionalen Dienste aktiviert werden, die benötigt werden, wie VASA Provider, vVols Konfigurationsimport und Disaster Recovery (SRA).
 +
-Wenn Sie die Services zum ersten Mal aktivieren, müssen Sie die VASA Provider- und SRA-Anmeldeinformationen erstellen. Diese werden verwendet, um die VASA Provider- und SRA-Dienste auf dem vCenter Server zu registrieren oder zu aktivieren. Der Benutzername darf nur Buchstaben, Ziffern und Unterstriche enthalten. Das Passwort muss zwischen 8 und 256 Zeichen lang sein.
-
-+
-
-NOTE: Stellen Sie vor dem Deaktivieren optionaler Dienste sicher, dass die von ONTAP -Tools verwalteten vCenter-Server diese nicht verwenden.
+Wenn diese Dienste zum ersten Mal aktiviert werden, sind VASA Provider und SRA Anmeldeinformationen zu erstellen.
 
 +
-Die Option *Import der vVols -Konfiguration zulassen* wird nur angezeigt, wenn der VASA-Provider-Dienst aktiviert ist.  Diese Option ermöglicht die vVols Datenmigration von ONTAP Tools 9.xx zu ONTAP Tools 10.5.
+** Verwenden Sie diese Anmeldeinformationen, um VASA Provider und SRA Services auf dem vCenter Server zu registrieren und zu aktivieren.
+** Der Benutzername darf nur Buchstaben, Zahlen und Unterstriche enthalten.
+** Die Passwortlänge muss zwischen 8 und 256 Zeichen liegen.
 
 
+
+
+
+NOTE: Bevor Sie einen optionalen Dienst deaktivieren, stellen Sie sicher, dass vCenter Server-Instanzen, die von ONTAP tools verwaltet werden, diesen Dienst nicht verwenden.
+
+Die Option *Import von vVols-Konfiguration erlauben* wird nur angezeigt, wenn der VASA Provider-Dienst aktiviert ist. Diese Option ermöglicht die vVols Datenmigration von ONTAP tools 9.x zu ONTAP tools 10.6.

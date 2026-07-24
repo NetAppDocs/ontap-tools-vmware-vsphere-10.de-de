@@ -1,8 +1,8 @@
 ---
 permalink: concepts/rbac-learn-about.html 
 sidebar: sidebar 
-keywords: role based access control, rbac, rbac components, learn about rbac 
-summary: 'Rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) ist ein Sicherheits-Framework zur Steuerung des Zugriffs auf Ressourcen innerhalb eines Unternehmens. RBAC vereinfacht die Administration, indem Rollen mit bestimmten Berechtigungsstufen für Aktionen definiert werden, anstatt einzelnen Benutzern Berechtigungen zuzuweisen. Die definierten Rollen werden Benutzern zugewiesen, was das Fehlerrisiko reduziert und das Management der Zugriffskontrolle im gesamten Unternehmen vereinfacht.' 
+keywords: RBAC framework, role-based access control, authorization, security 
+summary: Es wird erläutert, wie RBAC Rollen mit spezifischen Berechtigungsstufen definiert, um den Zugriff zu steuern und die Benutzerverwaltung in ONTAP tools zu vereinfachen. 
 ---
 = Erfahren Sie mehr über ONTAP tools RBAC
 :hardbreaks:

@@ -1,61 +1,53 @@
 ---
 permalink: manage/edit-appliance-settings.html 
 sidebar: sidebar 
-keywords:  
-summary: Sie können das Administratorkennwort mit dem ONTAP Tools Manager ändern. 
+keywords: scale ONTAP tools appliance, enable high availability, ONTAP tools HA configuration, appliance scaling settings 
+summary: 'Die ONTAP tools Appliance kann skaliert und Hochverfügbarkeit (HA) mithilfe von ONTAP tools Manager konfiguriert werden.' 
 ---
-= ONTAP-Tools-Appliance-Einstellungen ändern
+= ONTAP tools skalieren und Hochverfügbarkeit aktivieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Verwenden Sie den ONTAP Tools Manager, um die ONTAP tools for VMware vSphere Konfiguration zu skalieren, indem Sie entweder die Anzahl der Knoten erhöhen oder die Hochverfügbarkeit (HA) aktivieren.  Standardmäßig werden die ONTAP tools for VMware vSphere Appliance als Einzelknotenkonfiguration ohne Hochverfügbarkeit bereitgestellt.
+Mit ONTAP tools Manager lässt sich die Appliance skalieren und Hochverfügbarkeit (HA) konfigurieren. Standardmäßig wird ONTAP tools for VMware vSphere als Einzelknoten-Konfiguration ohne Hochverfügbarkeit bereitgestellt.
 
 .Bevor Sie beginnen
-* Stellen Sie sicher, dass Ihre OVA-Vorlage die gleiche OVA-Version wie Knoten 1 hat. Knoten 1 ist der Standardknoten, auf dem die ONTAP-Tools für VMware vSphere OVA ursprünglich bereitgestellt werden.
-* Stellen Sie sicher, dass der CPU-Hot-Plug-Speicher und der Hot-Plug-Speicher aktiviert sind.
-* Stellen Sie im vCenter Server die Automatisierungsstufe des Disaster Recovery Service (DRS) auf „Teilautomatisiert“ ein. Setzen Sie sie nach der HA-Bereitstellung wieder auf „Vollautomatisiert“ zurück.
-* Knoten-Hostnamen im HA-Setup sollten in Kleinbuchstaben geschrieben sein.
+* Stellen Sie sicher, dass Ihre OVA-Vorlage mit der Version von Node 1 (dem initialen Bereitstellungsknoten) übereinstimmt.
+* CPU-Hot-Add und Memory-Hot-Plug werden auf dem Hypervisor aktiviert. Diese Funktionen sind erforderlich, um die Appliance zu skalieren und HA zu ermöglichen. Für ONTAP tools 10.6 und höher sind diese Funktionen standardmäßig aktiviert. Bei früheren Versionen werden diese Funktionen vor dem Skalieren oder dem Aktivieren von HA aktiviert.
+* Im vCenter Server den Automatisierungsgrad des Disaster Recovery Service (DRS) auf teilweise automatisiert setzen. Nach Abschluss der HA-Bereitstellung wieder auf vollständig automatisiert zurücksetzen.
++
+
+NOTE: Die Knotengröße kann nur erhöht, nicht aber verringert werden. Besonders kleine (XS) Bereitstellungen schränken bestimmte Dienste ein.
+
 
 
 .Schritte
-. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
-. Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
-. Wählen Sie im Übersichtsbereich die Option *Geräteeinstellungen bearbeiten* aus.
-. Im Abschnitt *Konfiguration* können Sie die Knotengröße erhöhen und die HA-Konfiguration aktivieren.  Verwenden Sie die Anmeldeinformationen des vCenter Servers, um Änderungen vorzunehmen.
+. ONTAP tools Manager öffnen: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Melden Sie sich mit Ihren ONTAP tools Administratoranmeldeinformationen an.
+. Im Übersichtsabschnitt ist *Geräteeinstellungen bearbeiten* auszuwählen.
+. Im Abschnitt *Konfiguration* die neue Knotengröße auswählen und den HA-Schalter umlegen, um Hochverfügbarkeit zu aktivieren.
+. Auf der Seite *HA-Einstellungen* ist Folgendes zu überprüfen:
 +
-In der HA-Konfiguration können Sie Details zur Inhaltsbibliothek ändern.  Geben Sie für jede Bearbeitung das Passwort an.
-
-+
-
-NOTE: In ONTAP tools for VMware vSphere können Sie die Knotengröße nur erhöhen, nicht jedoch verringern.  In einem Nicht-HA-Setup wird nur eine mittelgroße Konfiguration unterstützt.  In einem HA-Setup werden mittlere und große Konfigurationen unterstützt.
-
-. Aktivieren Sie die HA-Konfiguration mit der HA-Toggle-Taste. Stellen Sie auf der Seite *HA settings* Folgendes sicher:
-+
-** Die Inhaltsbibliothek gehört zum gleichen vCenter Server, auf dem die ONTAP Tools-Knoten-VMs ausgeführt werden. VCenter Server-Anmeldeinformationen werden verwendet, um die OVA-Vorlage für Appliance-Änderungen zu validieren und herunterzuladen.
-** Die virtuelle Maschine, die die ONTAP-Tools hostet, wird nicht direkt auf einem ESXi-Host bereitgestellt. Die VM sollte auf einem Cluster oder einem Ressourcen-Pool bereitgestellt werden.
+** Die Bibliothek befindet sich auf demselben vCenter Server, auf dem die ONTAP tools VMs ausgeführt werden.
+** Die ONTAP tools VMs werden auf einem Cluster oder Ressourcenpool bereitgestellt, nicht direkt auf einem ESXi Host.
 +
 
-NOTE: Nachdem die HA-Konfiguration aktiviert wurde, können Sie nicht mehr zu einer Einzelknotenkonfiguration ohne HA zurückkehren.
+IMPORTANT: Nach der Aktivierung von HA ist eine Rückkehr zu einer Einzelknoten-Konfiguration ohne HA nicht mehr möglich.
 
 
 
-. Im Abschnitt *HA-Einstellungen* des Fensters *Appliance-Einstellungen bearbeiten* können Sie die Details der Knoten 2 und 3 eingeben. Die ONTAP Tools für VMware vSphere unterstützen drei Nodes im HA-Setup.
+. Im Abschnitt *HA-Einstellungen* die Netzwerkdetails für die Nodes 2 und 3 eingeben. ONTAP tools unterstützt drei Nodes im HA-Modus.
 +
+ONTAP tools füllt die meisten Felder automatisch mit den Netzwerkeinstellungen von Node 1 aus. Diese Werte können vor Abschluss des Assistenten bearbeitet werden. IPv6-Adresseinträge sind nur verfügbar, wenn IPv6 auf dem Management-Node aktiviert ist. Jeder ESXi Host sollte nur eine ONTAP tools VM hosten.
 
-NOTE: Die ONTAP -Tools füllen die meisten Eingabefelder automatisch mit Netzwerkdetails von Knoten 1 aus, um den Arbeitsablauf zu vereinfachen.  Sie können die Eingabedaten bearbeiten, bevor Sie zur letzten Seite des Assistenten gelangen. Sie können IPv6-Adressdetails für die anderen beiden Knoten nur eingeben, wenn die IPv6-Adresse auf dem Verwaltungsknoten der ONTAP -Tools aktiviert ist.
-
-+
-Stellen Sie sicher, dass jeder ESXi-Host nur eine ONTAP tools VM enthält. Die Eingaben werden bei jedem Wechsel zum nächsten Fenster validiert.
-
-. Überprüfen Sie die Details im Abschnitt *Zusammenfassung* und speichern Sie die Änderungen.
+. Die Zusammenfassung wird angezeigt, danach auf *Speichern* klicken.
 
 
-.Was kommt als Nächstes?
-Auf der Seite *Übersicht* wird der Status der Bereitstellung angezeigt. Sie können den Status des Auftrags „Geräteeinstellungen bearbeiten“ auch in der Auftragsansicht mithilfe der Auftrags-ID verfolgen.
+.Ergebnis
+Die Appliance beginnt mit der Skalierung und der Aktivierung von Hochverfügbarkeit. Der Fortschritt kann auf der *Übersicht*-Seite überwacht oder der Vorgang in der *Aufträge*-Ansicht anhand der Auftrags-ID verfolgt werden.
 
-Falls die HA-Bereitstellung fehlschlägt und der Status des neuen Knotens „Neu“ lautet, löschen Sie die neue VM in vCenter, bevor Sie versuchen, HA erneut zu aktivieren.
+Wenn die HA-Bereitstellung mit dem Status 'Neu' fehlschlägt, die fehlgeschlagene VM in vCenter löschen und den Vorgang erneut versuchen.
 
-Auf der Registerkarte *Alerts* im linken Bereich werden Warnungen für ONTAP-Tools für VMware vSphere aufgelistet.
+Die Registerkarte *Warnungen* sollte während des Vorgangs auf etwaige Warnungen oder Probleme überprüft werden.

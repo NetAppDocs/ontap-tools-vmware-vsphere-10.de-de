@@ -1,8 +1,8 @@
 ---
 permalink: deploy/ha-workflow.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: Die ersten Schritte mit den ONTAP Tools für VMware vSphere sind ein paar Schritte. 
+keywords: high availability deployment, HA workflow, VASA Provider, VMware Live Site Recovery 
+summary: 'Eine ONTAP tools Bereitstellung kann auf eine Hochverfügbarkeitskonfiguration (HA) erweitert werden, um die Ausfallsicherheit zu erhöhen und mehr Container pro Dienst zu unterstützen.' 
 ---
 = Workflow für die Hochverfügbarkeitsbereitstellung von ONTAP tools
 :allow-uri-read: 

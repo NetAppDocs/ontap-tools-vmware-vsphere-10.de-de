@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-storage-replication-adapter-for-highly-scaled-environment.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Sie sollten die Storage-Timeout-Intervalle gemäß den empfohlenen Einstellungen für Storage Replication Adapter\(SRA \) konfigurieren, um in stark skalierten Umgebungen eine optimale Leistung zu erzielen.' 
+keywords: SRA timeout settings, highly scaled environment, VMware Live Site Recovery, storage provider settings, ONTAP tools 
+summary: VMware Live Site Recovery Speicheranbieter-Zeitüberschreitungseinstellungen für SRA in hochskalierten Umgebungen konfigurieren. 
 ---
 = Konfigurieren Sie SRA in ONTAP tools für hochskalierte Umgebungen
 :allow-uri-read: 

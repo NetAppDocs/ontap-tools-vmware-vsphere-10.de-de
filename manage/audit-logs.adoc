@@ -1,0 +1,158 @@
+---
+permalink: manage/audit-logs.html 
+sidebar: sidebar 
+keywords: ONTAP tools audit logs, security logging, compliance audit trail, audit log retention 
+summary: Es wird dargestellt, wie ONTAP tools Revisionsprotokolle im Hinblick auf Sicherheit und Compliance erfasst, speichert und überwacht. 
+---
+= Verwalten von Revisionsprotokollen für ONTAP tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dieser Aufgabe lässt sich das Verhalten der Revisionsprotokollierung und die operative Reaktion in ONTAP tools for VMware vSphere verwalten. Revisionsprotokolle liefern einen Ereignisverlauf, der zeigt, wer eine Aktion durchgeführt hat, welche Aktion durchgeführt wurde, wann sie erfolgte, die Anfragequelle sowie, ob sie erfolgreich war oder fehlgeschlagen ist.
+
+.Bevor Sie beginnen
+* Stellen Sie sicher, dass Sie über Administratorzugriff auf ONTAP tools Manager verfügen.
+* Stellen Sie sicher, dass Sie Zugriff auf die Wartungskonsole haben, falls eine Änderung der lokalen Aufbewahrungseinstellungen geplant ist.
+* Die Sicherheits- und Compliance-Anforderungen Ihrer Organisation in Bezug auf Aufbewahrung, Weiterleitung und Reaktion auf Sicherheitsvorfälle sollten geprüft werden.
+
+
+.Über diese Aufgabe
+ONTAP tools erfassen umfassende Revisionsereignisse für operative und Compliance-Transparenz.
+
+Der Prüfungsumfang umfasst:
+
+* Benutzer- und API-Operationen, wie das Erstellen/Löschen von Datenspeichern, vCenter Onboarding und Speicher-Backend-Aktionen
+* Interne Serviceanfragen, einschließlich VASA Provider Serviceinteraktionen
+* Aufgaben, einschließlich Entdeckungs-, Schutz- und Aggregatvorgänge
+* Aktivitäten der Wartungskonsole
+
+
+Prüfvermerke können Folgendes umfassen:
+
+* Benutzername, falls verfügbar
+* Operation durchgeführt
+* Zeitstempel
+* Anfragequelle (UI, API oder interner Dienst)
+* Anfrage- und Antwortdetails mit Status
+
+
+Revisionsprotokoll-Archive werden täglich erstellt und sind über das im ONTAP tools Manager generierte Support-Bundle verfügbar. Archive für einen bestimmten Tag sind am nächsten Tag verfügbar.
+
+Die Protokollierung unterliegt folgenden betrieblichen Beschränkungen:
+
+* Das Deaktivieren der Revisionsprotokollierung wird nicht unterstützt.
+* Die Größe der Revisionsprotokolldatei ist nicht benutzerkonfigurierbar.
+
+
+Der Umgang mit sensiblen Daten ist integriert:
+
+* Sensible Daten wie Passwörter, Token und privates Schlüsselmateriel werden geschwärzt.
+* Lange Anfrage- und Antwort-Payloads können abgeschnitten werden.
+
+
+.Schritte
+. Generieren eines Support-Bundles aus ONTAP tools Manager:
++
+.. Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+.. Melden Sie sich mit den Administrator-Anmeldedaten für ONTAP tools for VMware vSphere an.
+.. Wählen Sie in der Seitenleiste *Log Bundles* aus.
+.. Wählen Sie *Generieren*.
+.. Geben Sie eine Bezeichnung für das Protokollpaket ein und wählen Sie *Generieren*.
++
+Die Revisionsprotokolle sind in den täglichen Archiven im Verzeichnis „audit“ des heruntergeladenen Support-Bundles verfügbar.
+
+
+
+. Optional: Konfiguration der lokalen Aufbewahrung über die Wartungskonsole:
++
+.. Melden Sie sich beim vCenter Server an.
+.. Die ONTAP tools VM suchen und die Webkonsole öffnen.
+.. Melden Sie sich mit den  `maint` Zugangsdaten an.
+.. Geben Sie  `1` ein, um *Anwendungskonfiguration* auszuwählen.
+.. Geben Sie  `4` ein, um *Aufbewahrungsdauer des Revisionsprotokolls ändern* auszuwählen.
+.. Geben Sie den Aufbewahrungswert in Tagen ein und bestätigen Sie die Änderung.
++
+Die Standardaufbewahrungsdauer beträgt 30 Tage, der unterstützte Bereich liegt zwischen 1 und 180 Tagen.
+
++
+
+WARNING: Die Änderung der Aufbewahrungsfrist für das Revisionsprotokoll startet die Dienste neu und ist ein unterbrechender Vorgang.
+
+
+
+. Integritätsstatus des Revisionsprotokolls im ONTAP tools Manager überwachen:
++
+.. Im ONTAP tools Manager-Dashboard die Karte *Warnungen* auf aktive Warnungen überprüfen.
+.. Wählen Sie den Hyperlink zur Warnungsanzahl aus oder öffnen Sie *Warnungen verwalten*, um Details und Status der Warnungen anzuzeigen.
++
+ONTAP tools überprüft alle 3 Minuten die Integrität der Revisionsprotokoll-Archive. ONTAP tools führt eine Aufzeichnung der erwarteten Archive. Fehlt ein Archiv oder wurde es verändert, löst ONTAP tools eine Warnung im ONTAP tools Manager aus.
+
+
+
+. Optional: Das Intervall für die Integritätsprüfung des Revisionsprotokolls kann über die Wartungskonsole geändert werden:
++
+.. Melden Sie sich beim vCenter Server an.
+.. Die ONTAP tools VM suchen und die Webkonsole öffnen.
+.. Melden Sie sich mit den  `maint` Zugangsdaten an.
+.. Geben Sie  `4` ein, um *Support und Diagnose* auszuwählen.
+.. Geben Sie  `2` ein, um *Diagnosezugriff aktivieren* auszuwählen.
+.. Melden Sie sich als  `diag` Benutzer an.
+.. Führen Sie den folgenden Befehl aus, um das Intervall in Sekunden zu ändern:
++
+`bash /home/maint/scripts/change_audit_integrity_check_interval.sh <value_in_seconds>`
+
++
+Das minimal unterstützte Intervall beträgt 60 Sekunden.
+
++
+
+WARNING: Eine Änderung des Prüfintervalls für die Integritätsprüfung erfordert einen Neustart der Dienste und ist ein disruptiver Vorgang.
+
+
+
+. Optional: Audit-Logs können an ein externes Syslog-Ziel weitergeleitet werden. Syslog-Weiterleitung wird verwendet, wenn zentrale Überwachung, langfristige Aufbewahrung oder Security Information and Event Management (SIEM)-Korrelation erforderlich ist. Die Standards Ihrer Organisation für TLS, Zertifikate, Ports und Aufbewahrung sind zu berücksichtigen.
+. Wenn eine Integritätswarnung auftritt, sind Maßnahmen zur Reaktion auf den Vorfall erforderlich.
++
+.. Ein Support-Bundle sollte so schnell wie möglich gesammelt werden.
+.. Exportierte Pakete und Archive sind gemäß dem Incident-Response-Prozess Ihrer Organisation aufzubewahren.
+.. Alarmdetails im ONTAP tools Manager prüfen und bei Bedarf NetApp Support kontaktieren.
+
+
+
+
+
+
+[[example-audit-record]]
+== Beispiel eines Prüfprotokolls
+
+Prüfprotokolle enthalten einen einheitlichen Satz von Feldern zur Unterstützung der Rückverfolgbarkeit. Typische Felder sind:
+
+* Zeitstempel (UTC)
+* Benutzername (authentifizierte Benutzeridentität)
+* Operation (HTTP-Methode und Anfrage-URI)
+* Anfragequelle (UI, API oder interner Dienst)
+* Status (Erfolg oder Misserfolg und Statuscode)
+* Benutzeragent (Client-Identität, falls verfügbar)
+* Anforderungskennung, sofern verfügbar (z. B. Korrelations-ID)
+* Job-ID, sofern verfügbar (für asynchrone Workflows)
+* Mandanten- oder vCenter-Kennung, sofern verfügbar
+
+
+Das folgende Beispiel zeigt die Art der erfassten Informationen. Die genaue Feldkonfiguration kann je nach Workflow variieren.
+
+[source, json]
+----
+{
+  "timestamp": "2026-01-29T08:21:51Z",
+  "username": "administrator",
+  "operation": "POST /virtualization/api/v1/vcenters/{vcguid}/traditional/datastores",
+  "status": "Success 202",
+  "user_agent": "Mozilla/5.0 ...",
+  "correlation_id": "9ee9a89e-900d-4538-bcab-79830d4ab7cc",
+  "job_id": "3416",
+  "type": "audit"
+}
+----

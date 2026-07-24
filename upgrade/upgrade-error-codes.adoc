@@ -1,8 +1,8 @@
 ---
 permalink: upgrade/upgrade-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: Auf dieser Seite werden die Fehlercodes für den Upgrade-Betrieb von ONTAP-Tools für das VMware vSphere-System erläutert. 
+keywords: upgrade error codes, ONTAP tools, VMware vSphere, troubleshooting, Ansible logs 
+summary: ONTAP tools-Upgrade-Fehlercodes dienen zur Identifizierung fehlgeschlagener Workflows und zur Fehlerbehebung bei Upgrade-Problemen in VMware vSphere. 
 ---
 = ONTAP tools-Upgrade-Fehlercodes
 :allow-uri-read: 
@@ -65,7 +65,7 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 052 | Die ISO-Datei kann mit der aktuellen Version identisch sein oder zwei Versionen über der aktuellen Version liegen. | Verwenden Sie eine kompatible ISO-Version, um von Ihrer aktuellen Version zu aktualisieren. 
 
 
-| 068 | Das Rollback von Debian-Paketen ist fehlgeschlagen | Recovery auf Basis von RPOs oder Snapshots ohne RPO und Upgrade erneut versuchen 
+| 068 | Das Rollback der Debian OS-Pakete ist fehlgeschlagen. | Recovery auf Basis von RPOs oder Snapshots ohne RPO und Upgrade erneut versuchen 
 
 
 | 069 | Wiederherstellung der Dateien fehlgeschlagen | Recovery auf Basis von RPOs oder Snapshots ohne RPO und Upgrade erneut versuchen 
@@ -77,7 +77,7 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 071 | Das Kubernetes-Cluster war in keinem ordnungsgemäßen Zustand | - 
 
 
-| 074 | Mount-ISO ist fehlgeschlagen | Prüfen Sie /var/log/upgrade-run.log, und versuchen Sie die Aktualisierung erneut. 
+| 074 | Mount-ISO ist fehlgeschlagen | Die Datei /var/log/otvng/upgrade-run.log prüfen und das Upgrade erneut versuchen. 
 
 
 | 075 | Die Vorabprüfungen für die Aktualisierung sind fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
@@ -107,10 +107,10 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 083 | Löschen des Backups ist fehlgeschlagen | Recovery auf Basis von RPOs oder Snapshots ohne RPO und Upgrade erneut versuchen 
 
 
-| 084 | JobManager konnte nicht wieder in die Produktion geändert werden | Führen Sie die folgenden Schritte aus, um das Upgrade wiederherzustellen/abzuschließen. 1. Aktivieren Sie die Diagnose-Shell 2. Führen Sie den Befehl aus: _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Überprüfen Sie die Protokolle unter /var/log/post-deploy-upgrade.log 
+| 084 | JobManager konnte nicht wieder in die Produktion geändert werden | Die folgenden Schritte dienen der Wiederherstellung/Vervollständigung des Upgrades. 1. Diagnose-Shell aktivieren 2. Den Befehl ausführen: _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Die Protokolle unter /var/log/otvng/post-deploy-upgrade.log prüfen 
 
 
-| 087 | Schritte nach dem Upgrade fehlgeschlagen. | Führen Sie die folgenden Schritte aus, um das Upgrade wiederherzustellen bzw. abzuschließen. 1. Aktivieren Sie Diagnostic Shell 2. Führen Sie _sudo perl /Home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ Befehl 3 aus. Überprüfen Sie die Protokolle unter /var/log/post-deploy-upgrade.log 
+| 087 | Schritte nach dem Upgrade fehlgeschlagen. | Führen Sie die folgenden Schritte aus, um das Upgrade wiederherzustellen/abzuschließen. 1. Diagnose-Shell aktivieren 2. Den Befehl _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ ausführen 3. Die Protokolle unter /var/log/otvng/post-deploy-upgrade.log prüfen 
 
 
 | 088 | Die Konfiguration der Protokollrotation für journald ist fehlgeschlagen | Prüfen Sie, ob die Netzwerkeinstellungen der VM mit dem Host kompatibel sind, auf dem die VM gehostet wird. Sie können versuchen, die VM auf einen anderen Host zu migrieren und neu zu starten. 
@@ -128,10 +128,13 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 097 | Die Deinstallation der Dienste für das Upgrade ist fehlgeschlagen | Recovery auf Basis von RPOs oder Snapshots ohne RPO und Upgrade erneut versuchen 
 
 
-| 098 | Das Kopieren des dockercred Secret von ntv-System in den Namespace für die dynamische Storage-bereitstellung ist fehlgeschlagen | Prüfen Sie die Upgrade-Protokolle, und versuchen Sie das Upgrade erneut. 
+| 098 | Das Kopieren des dockercred-Secrets vom ntv-system in den rook-ceph-Namespace ist fehlgeschlagen. | Prüfen Sie die Upgrade-Protokolle, und versuchen Sie das Upgrade erneut. 
 
 
 | 099 | Die neue HDD-Ergänzung konnte nicht validiert werden | Fügen Sie im Falle von HA alle Nodes hinzu und bei einer Implementierung ohne HA-System einem Node. 
+
+
+| 108 | Das Seeding des Skripts ist fehlgeschlagen | - 
 
 
 | 109 | Das Backup von persistenten Volume-Daten ist fehlgeschlagen | Prüfen Sie die Upgrade-Protokolle, und versuchen Sie das Upgrade erneut. 
@@ -161,7 +164,7 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 056 | Löschen der Migrationssicherung fehlgeschlagen | NA 
 
 
-| 090 | Zertifikatsvalidierung für Speicher-Backends und vCenter fehlgeschlagen | Überprüfen Sie die Upgrade-Protokolle und die Protokolldatei unter /var/log/cert_validation_error.log und versuchen Sie das Upgrade erneut. 
+| 090 | Zertifikatsvalidierung für Speicher-Backends und vCenter fehlgeschlagen | Upgrade-Protokolle und die Protokolldatei unter /var/log/otvng/cert_validation_error.log prüfen und das Upgrade erneut versuchen. 
 
 
 | 114 | Interne Zertifikatsaktualisierung in der MongoDB-Collection fehlgeschlagen  a| 
@@ -216,7 +219,7 @@ sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade
 +
 [listing]
 ----
-tail -f /var/log/post-deploy-upgrade.log
+tail -f /var/log/otvng/post-deploy-upgrade.log
 ----
 +
 Achten Sie auf die Erfolgsmeldung: `Completed post 10.5 upgrade steps.`

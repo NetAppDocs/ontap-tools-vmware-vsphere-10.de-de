@@ -1,8 +1,8 @@
 ---
 permalink: manage/virtual-machine-storage-view-datastore.html 
 sidebar: sidebar 
-keywords: Remove vVol datastore 
-summary: In der Ansicht Storage wird die Liste der VVols angezeigt, die von der virtuellen Maschine erstellt werden. 
+keywords: virtual machine storage view, vVols list per VM, ONTAP tools VM storage details, datastore usage by virtual machine 
+summary: In der Speicheransicht wird die Liste der von einer virtuellen Maschine erstellten vVols angezeigt. 
 ---
 = Ansicht des Speichers virtueller Maschinen in ONTAP tools
 :allow-uri-read: 

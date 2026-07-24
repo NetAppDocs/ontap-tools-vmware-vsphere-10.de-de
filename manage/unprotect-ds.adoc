@@ -1,0 +1,57 @@
+---
+permalink: manage/unprotect-ds.html 
+sidebar: sidebar 
+keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
+summary: Den Schutz eines VMFS-Datenspeichers aufheben und optional zugehörige Speicherelemente auf der Zielseite entfernen. 
+---
+= Schutz eines VMFS-Datastores aufheben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Diese Aufgabe dient dazu, den Schutz eines VMFS-Datenspeichers aufzuheben und optional zugehörige Speicherelemente auf der Zielseite des sekundären Standorts zu entfernen.
+
+.Über diese Aufgabe
+Beim Aufheben des Schutzes eines VMFS-Datenspeichers ist folgendes Verhalten zu berücksichtigen:
+
+* Das Aufheben des Schutzes des letzten Datenspeichers in einer Schutzgruppe führt dazu, dass die Schutzgruppe und der Name ihrer Schutzeinstellungen gelöscht werden.
+* Für einen letzten Datenspeicher zeigt ONTAP tools den Namen der Schutzeinstellungen an.
+
+
+.Bevor Sie beginnen
+* Stellen Sie sicher, dass Sie über Administratorrechte in vSphere verfügen.
+* Stellen Sie sicher, dass Ihr ONTAP tools-Benutzerkonto über die Berechtigungen zur Verwaltung der Schutzeinstellungen verfügt.
+* Die Auswirkungen der Aufhebung des Schutzes des letzten Datenspeichers in einer Schutzgruppe werden dargestellt.
+* Auf ONTAP 9 Clustern wird das Aufheben des Schutzes von nicht zuletzt verwendeten Datenspeichern nur für AutomatedFailOverDuplex Beziehungen unterstützt.
+
+
+.Schritte
+. Melden Sie sich beim vSphere Client an.
+. Den Hostcluster auswählen und anschließend *Datenspeicher* auswählen.
+. Klicken Sie mit der rechten Maustaste auf den entsprechenden VMFS-Datenspeicher, den Sie entschützen möchten, und wählen Sie *NetApp ONTAP tools* > *Datenspeicher entschützen*.
++
+
+NOTE: Sie können jeweils nur einen Datenspeicher entsperren. Die gleichzeitige Entsperrung mehrerer Datenspeicher wird nicht unterstützt.
+
+. Im Bestätigungsdialog wird die Meldung *Diese Aktion entfernt den Datenspeicherschutz. Möchten Sie fortfahren?*.
+. Optional: *Zugehörige Speicherelemente (LUNs) und igroups aus dem Sekundärspeicher löschen* kann ausgewählt werden, um replizierte LUNs und Konsistenzgruppen am Zielstandort zu entfernen.
+. *Datenspeicher-Schutz aufheben* auswählen.
++
+
+NOTE: Bei nicht letzten Datenspeichern unterscheidet sich das Verhalten je nach Speichertyp:
+
++
+** Für ASA r2 wird beim Aufheben des Schutzes eines nicht letzten Datenspeichers dieselbe Bestätigungsmeldung angezeigt und das Löschen von Ressourcen des sekundären Standorts über den Dialog ermöglicht.
+** Für ONTAP Speicher mit einer asynchronen SnapMirror Beziehung wird das Unschützen eines nicht letzten Datenspeichers nicht unterstützt.
+** Bei ONTAP Storage mit einer AutomatedFailOverDuplex (AFD)-Beziehung entfernt das Aufheben des Schutzes eines nicht letzten Datenspeichers die AFD-Beziehung und erstellt sie neu, da das Verkleinern der Konsistenzgruppe nicht unterstützt wird.
++
+Der Unprotect-Vorgang startet einen Job, der im ONTAP tools Manager überwacht werden kann.
+
+
+
+
+
+.Ergebnis
+Der Datenspeicher wird aus dem Schutz entfernt. War er der letzte Datenspeicher in der Schutzgruppe, löschen ONTAP tools die Schutzgruppe und die Schutzeinstellungen. Wenn die Option „Löschen“ ausgewählt wurde, werden auch die auf der Zielseite replizierten LUNs und Konsistenzgruppen entfernt. Für berechtigte, nicht letzte Datenspeicher auf ONTAP Storage (AutomatedFailOverDuplex nur), entfernen und erstellen ONTAP tools im Rahmen des Vorgangs die AFD-Beziehung neu.

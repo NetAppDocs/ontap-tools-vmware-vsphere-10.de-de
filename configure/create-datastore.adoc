@@ -1,8 +1,8 @@
 ---
 permalink: configure/create-datastore.html 
 sidebar: sidebar 
-keywords:  
-summary: Wenn Sie einen Datenspeicher auf Hostclusterebene erstellen, mounten ONTAP Tools ihn auf allen Zielhosts und aktivieren die Aktion nur, wenn Sie über die erforderlichen Berechtigungen verfügen. 
+keywords: create datastore, ONTAP tools NFS VMFS vVols, host cluster datastore provisioning, nconnect datastore settings 
+summary: NFS-, VMFS- oder vVols Datenspeicher in ONTAP tools auf Host- oder Hostcluster-Ebene erstellen. 
 ---
 = Erstellen Sie einen Datenspeicher in ONTAP tools
 :allow-uri-read: 
@@ -23,16 +23,16 @@ Nachdem Sie den Speicher integriert und die Datenspeichererkennung ausgeführt h
 ====
 .Erstellen Sie einen VVols-Datastore
 --
-Ab den ONTAP tools for VMware vSphere 10.3 können Sie einen vVols Datenspeicher auf ASA R2-Systemen mit platzsparender Speicherkapazität als thin.vVol erstellen.  Der VASA-Anbieter erstellt beim Erstellen des vVol-Datenspeichers einen Container und die gewünschten Protokollendpunkte.  Der VASA-Anbieter weist diesem Container keine Sicherungsvolumes zu.
+Ab ONTAP tools for VMware vSphere 10.3 ist es möglich, einen vVols Datenspeicher auf ASA r2 Systemen mit Thin-Space-Effizienz zu erstellen. Der VASA Provider erstellt beim Anlegen des vVol Datenspeichers einen Container und die gewünschten Protokollendpunkte. Der VASA Provider weist diesem Container keine unterstützenden Volumes zu.
 
 .Bevor Sie beginnen
 * Stellen Sie sicher, dass keine Root-Aggregate auf die SVM abgebildet werden.
 * Stellen Sie sicher, dass der VASA Provider beim ausgewählten vCenter registriert ist.
-* Im ASA R2-Speichersystem sollte die SVM dem Aggregat für den SVM-Benutzer zugeordnet werden.
+* Für ASA r2 Speichersysteme ist keine SVM zu Aggregat Zuordnung erforderlich.
 
 
 .Schritte
-. Melden Sie sich beim vSphere-Client an.
+. Melden Sie sich beim vSphere Client an.
 . Klicken Sie mit der rechten Maustaste auf ein Hostsystem, einen Hostcluster oder ein Rechenzentrum und wählen Sie * NetApp ONTAP Tools* > *Datastore erstellen*.
 . Wählen Sie vVols als *Datenspeichertyp* aus.
 . Geben Sie die Informationen *Datastore Name* und *Protocol* ein.
@@ -41,13 +41,13 @@ Ab den ONTAP tools for VMware vSphere 10.3 können Sie einen vVols Datenspeicher
 NOTE: Das ASA r2 System unterstützt die iSCSI- und FC-Protokolle für VVols.
 
 . Wählen Sie die Storage-VM aus, auf der der Datastore erstellt werden soll.
-. Unter Erweiterte Optionen:
+. Unter *Erweiterte Optionen*:
 +
-** Wenn Sie die *Benutzerdefinierte Exportrichtlinie* auswählen, stellen Sie sicher, dass Sie die Erkennung in vCenter für alle Objekte ausführen.  Es wird empfohlen, diese Option nicht zu verwenden.
+** Wenn die *Benutzerdefinierte Exportrichtlinie* ausgewählt wird, sollte die Erkennung in vCenter für alle Objekte vor dem Fortfahren durchgeführt werden. Die Verwendung dieser Option wird nicht empfohlen.
 ** Sie können einen *benutzerdefinierten Initiatorgruppen*-Namen für die iSCSI- und FC-Protokolle auswählen.
 +
 
-NOTE: Im ASA R2-Speichersystemtyp SVM werden keine Speichereinheiten (LUN/Namespace) erstellt, da der Datenspeicher nur ein logischer Container ist.
+NOTE: Bei einer ASA r2 SVM werden keine Speichereinheiten (LUNs/Namespaces) erstellt, da der Datenspeicher nur ein logischer Container ist.
 
 
 
@@ -61,30 +61,35 @@ Beim Erstellen eines neuen Volumes können Sie QoS für den Datenspeicher aktivi
 --
 .Erstellen Sie einen NFS-Datastore
 --
-Ein NFS-Datenspeicher verbindet ESXi-Hosts über das NFS-Protokoll mit gemeinsam genutztem Speicher.  Sie sind einfach und flexibel und werden in VMware vSphere-Umgebungen verwendet.
+Ein NFS-Datenspeicher verbindet ESXi-Hosts über das NFS-Protokoll mit gemeinsam genutztem Speicher. Er ist einfach und flexibel und wird in VMware vSphere Umgebungen verwendet.
 
 .Schritte
-. Melden Sie sich beim vSphere-Client an.
+. Melden Sie sich beim vSphere Client an.
 . Klicken Sie mit der rechten Maustaste auf ein Hostsystem, einen Hostcluster oder ein Rechenzentrum und wählen Sie * NetApp ONTAP Tools* > *Datenspeicher erstellen*.
 . Wählen Sie NFS im Feld *Datastore type* aus.
-. Geben Sie den Namen, die Größe und die Protokollinformationen des Datastore im Bereich *Name und Protokoll* ein. Wählen Sie in den erweiterten Optionen *Datastore Cluster* und *Kerberos-Authentifizierung* aus.
+. Im Bereich *Name und Protokoll* werden der Name, die Größe und die Protokollinformationen des Datenspeichers eingegeben.
++
+.. In den *Erweiterten Optionen* *Datenspeichercluster* und *Kerberos-Authentifizierung* auswählen.
 +
 
 NOTE: Kerberos-Authentifizierung ist nur verfügbar, wenn das NFS 4.1-Protokoll ausgewählt ist.
 
-. Wählen Sie *Plattform* und *Storage VM* im Bereich *Storage* aus.
-. Wenn Sie unter den erweiterten Optionen *Benutzerdefinierte Exportrichtlinie* auswählen, führen Sie die Erkennung in vCenter für alle Objekte aus.  Es wird empfohlen, diese Option nicht zu verwenden.
+.. Geben Sie die *Anzahl der Verbindungen (nconnect)* für den Datenspeicher an. Der Standardwert ist 4, konfigurierbar von 1 bis 8. Wenn der von Ihnen gewählte Wert höher ist als die aktuelle nconnect-Einstellung auf Hostebene, passen die ONTAP tools die nconnect-Einstellung auf Hostebene entsprechend an.
+
+
+. Im Bereich *Speicher* sind *Plattform* und *Storage-VM* auszuwählen.
+. Wenn unter den *Erweiterten Optionen* die *Benutzerdefinierte Exportrichtlinie* ausgewählt wird, erfolgt eine Erkennung in vCenter für alle Objekte, bevor fortgefahren wird.
 +
 
 NOTE: Sie können keinen NFS-Datenspeicher mithilfe der Standard- oder Root-Volume-Richtlinie der SVM erstellen.
 
 +
-** In den erweiterten Optionen ist die Umschalttaste *Asymmetric* nur sichtbar, wenn Leistung oder Kapazität in der Dropdown-Liste Plattform ausgewählt ist.
-** Wenn Sie im Plattform-Dropdown-Menü die Option *Beliebig* auswählen, können Sie alle SVMs im vCenter sehen.  Plattform und asymmetrische Flagge beeinträchtigen die Sicht nicht.
+** In den *Erweiterten Optionen* ist die Umschalttaste *Asymmetrisch* nur sichtbar, wenn im Dropdown-Menü Plattform die Option Leistung oder Kapazität ausgewählt ist. Die Option *Asymmetrisch* gilt jedoch nicht für die Erstellung von NFS-Datenspeichern.
+** Wenn im Dropdown-Menü für die Plattform die Option *Beliebig* ausgewählt wird, sind alle SVMs im vCenter sichtbar. Plattform- und asymmetrische Einstellungen haben keinen Einfluss auf die Sichtbarkeit.
 
 
-. Wählen Sie im Bereich *Speicherattribute* das Aggregat für die Volume-Erstellung aus. Wählen Sie in den erweiterten Optionen je nach Bedarf *Space Reserve* und *Enable QoS* aus.
-. Überprüfen Sie die Auswahl im Fenster *Zusammenfassung* und wählen Sie *Fertig stellen*.
+. Im Bereich *Speicherattribute* das Aggregat für die Volume-Erstellung auswählen. Unter *Erweiterte Optionen* *Speicherplatzreservierung* und *QoS aktivieren* nach Bedarf auswählen.
+. Im Bereich *Zusammenfassung* werden die Auswahlen überprüft und *Fertigstellen* ausgewählt.
 
 
 ONTAP -Tools erstellen den NFS-Datenspeicher und mounten ihn auf allen Hosts.
@@ -94,17 +99,9 @@ ONTAP -Tools erstellen den NFS-Datenspeicher und mounten ihn auf allen Hosts.
 --
 VMFS ist ein Cluster-Dateisystem zum Speichern von Dateien virtueller Maschinen.  Mehrere ESXi-Hosts können für vMotion- und Hochverfügbarkeitsfunktionen gleichzeitig auf dieselben VM-Dateien zugreifen.
 
-In einem geschützten Cluster:
-
-* Sie können nur VMFS-Datenspeicher erstellen.  Durch das Hinzufügen eines VMFS-Datenspeichers zu einem geschützten Cluster wird dieser automatisch geschützt.
-* Sie können keinen Datastore in einem Rechenzentrum mit einem oder mehreren geschützten Host-Clustern erstellen.
-* Sie können keinen Datenspeicher auf einem ESXi-Host erstellen, wenn der übergeordnete Hostcluster durch eine „Automated Failover Duplex Policy“ (einheitliche oder nicht einheitliche Konfiguration) geschützt ist.
-* Sie können einen VMFS-Datastore nur auf einem ESXi-Host erstellen, der durch eine asynchrone Beziehung geschützt ist. Sie können keinen Datastore auf einem ESXi-Host erstellen und mounten, der Teil eines Host-Clusters ist, der durch die Richtlinie „Automatischer Failover-Duplex“ geschützt ist.
-
-
 .Bevor Sie beginnen
 * Aktivieren Sie Services und LIFs für jedes Protokoll auf der ONTAP Storage-Seite.
-* SVM-Aggregat für SVM-Benutzer im ASA r2 Storage-System zuordnen
+* Für ASA r2 Speichersysteme ist keine SVM zu Aggregat Zuordnung erforderlich.
 * Konfigurieren Sie den ESXi-Host, wenn Sie das NVMe/TCP-Protokoll verwenden:
 +
 .. Überprüfen Sie die https://www.vmware.com/resources/compatibility/detail.php?deviceCategory=san&productid=49677&releases_filter=589,578,518,508,448&deviceCategory=san&details=1&partner=399&Protocols=1&transportTypes=3&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc["VMware Compatibility Guide"]
@@ -112,16 +109,16 @@ In einem geschützten Cluster:
 
 NOTE: VMware vSphere 7.0 U3 und neuere Versionen unterstützen das NVMe/TCP-Protokoll. VMware vSphere 8.0 und neuere Versionen werden jedoch empfohlen.
 
-.. Überprüfen Sie, ob der Anbieter der Netzwerkschnittstellenkarte (NIC) ESXi NIC mit dem NVMe/TCP-Protokoll unterstützt.
+.. Es sollte geprüft werden, ob der Hersteller der Netzwerkkarte (NIC) ESXi NICs mit dem NVMe/TCP-Protokoll unterstützt.
 .. Richten Sie die ESXi-NIC für NVMe/TCP gemäß den Spezifikationen des NIC-Anbieters ein.
 .. Wenn Sie VMware vSphere 7-Version verwenden, befolgen Sie die Anweisungen auf der VMware-Site https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["Konfigurieren Sie die VMkernel Bindung für den NVMe over TCP Adapter"], um die NVMe/TCP-Portbindung zu konfigurieren. Wenn Sie VMware vSphere 8 Version verwenden, folgen Sie https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["Konfiguration von NVMe over TCP auf ESXi"], um die NVMe/TCP-Portbindung zu konfigurieren.
 .. Folgen Sie für VMware vSphere 7 Release den Anweisungen auf Seite https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Aktivieren Sie NVMe over RDMA oder NVMe over TCP-Softwareadapter"], um NVMe/TCP-Softwareadapter zu konfigurieren. Folgen Sie für die Version VMware vSphere 8, https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Fügen Sie Software-NVMe-over-RDMA- oder NVMe-over-TCP-Adapter hinzu"] um die NVMe/TCP-Softwareadapter zu konfigurieren.
-.. Führen Sie link:../configure/discover-storage-systems-and-hosts.html["Erkennen von Storage-Systemen und Hosts"]eine Aktion auf dem ESXi-Host aus. Weitere Informationen finden Sie unter https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["Konfigurieren von NVMe/TCP mit vSphere 8.0 Update 1 und ONTAP 9.13.1 für VMFS-Datenspeicher"].
+.. Führen Sie die link:../configure/discover-storage-systems-and-hosts.html["Erkennen von Storage-Systemen und Hosts"] Aktion auf dem ESXi Host aus. Weitere Informationen finden Sie unter  https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["Konfigurieren von NVMe/TCP mit vSphere 8.0 Update 1 und ONTAP 9.13.1 für VMFS-Datenspeicher"].
 
 
-* Wenn Sie das NVME/FC-Protokoll verwenden, führen Sie die folgenden Schritte aus, um den ESXi-Host zu konfigurieren:
+* Wenn Sie das NVMe/FC-Protokoll verwenden, sind die folgenden Schritte zur Konfiguration des ESXi-Hosts erforderlich:
 +
-.. Falls noch nicht aktiviert, aktivieren Sie NVMe over Fabrics (NVMe-of) auf Ihren ESXi Hosts.
+.. Falls NVMe over Fabrics (NVMe-oF) noch nicht aktiviert ist, sollte es auf dem/den ESXi-Host(s) aktiviert werden.
 .. Vollständiges SCSI-Zoning
 .. Stellen Sie sicher, dass ESXi-Hosts und das ONTAP-System auf einer physischen und logischen Ebene verbunden sind.
 
@@ -132,30 +129,30 @@ Informationen zum Konfigurieren einer ONTAP SVM für das FC-Protokoll finden Sie
 
 Weitere Informationen zur Nutzung des NVMe/FC-Protokolls mit VMware vSphere 8.0 finden Sie unter https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html["NVMe-of Host-Konfiguration für ESXi 8.x mit ONTAP"].
 
-Weitere Informationen zur Verwendung von NVMe/FC mit VMware vSphere 7.0 finden Sie unter https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html["ONTAP NVMe/FC-Host-Konfigurationsleitfaden"] und http://www.netapp.com/us/media/tr-4684.pdf["TR-4684"].
+Weitere Informationen zur Verwendung von NVMe/FC mit VMware vSphere 7.0 sind unter  https://docs.netapp.com/us-en/ontap-sanhost/nvme-esxi-7.html["ONTAP NVMe/FC-Host-Konfigurationsleitfaden"] zu finden.
 
 .Schritte
-. Melden Sie sich beim vSphere-Client an.
+. Melden Sie sich beim vSphere Client an.
 . Klicken Sie mit der rechten Maustaste auf ein Hostsystem, einen Hostcluster oder ein Rechenzentrum und wählen Sie * NetApp ONTAP Tools* > *Datastore erstellen*.
 . Wählen Sie den VMFS-Datenspeichertyp aus.
-. Geben Sie im Bereich „Name und Protokoll“ den Namen, die Größe und die Protokollinformationen des Datenspeichers ein.  Um den neuen Datenspeicher zu einem vorhandenen VMFS-Cluster hinzuzufügen, wählen Sie den Datenspeicher-Cluster in den erweiterten Optionen aus.
-. Wählen Sie im Bereich *Speicher* eine Speicher-VM aus. Geben Sie im Abschnitt *Erweiterte Optionen* bei Bedarf den *Namen der benutzerdefinierten Initiatorgruppe* an. Sie können eine vorhandene Initiatorgruppe für den Datenspeicher auswählen oder eine neue Initiatorgruppe mit einem benutzerdefinierten Namen erstellen.
+. Geben Sie im Bereich *Name und Protokoll* den Namen, die Größe und die Protokollinformationen des Datenspeichers ein. Zum Hinzufügen des neuen Datenspeichers zu einem bestehenden VMFS Cluster wird der Datenspeichercluster in den *Erweiterten Optionen* ausgewählt.
+. Im Bereich *Speicher* die Storage-VM auswählen. Im Abschnitt *Erweiterte Optionen* bei Bedarf den *Namen der benutzerdefinierten Initiatorgruppe* angeben. Es besteht die Möglichkeit, eine vorhandene Initiatorgruppe für den Datenspeicher auszuwählen oder eine neue Initiatorgruppe mit einem benutzerdefinierten Namen zu erstellen.
 +
-Wenn das NVMe/FC- oder NVMe/TCP-Protokoll ausgewählt wird, wird ein neues Namespace-Subsystem erstellt und für die Namespace-Zuordnung verwendet.  ONTAP -Tools erstellen das Namespace-Subsystem mithilfe des automatisch generierten Namens, der den Datenspeichernamen enthält.  Sie können das Namespace-Subsystem im Feld *Benutzerdefinierter Namespace-Subsystemname* in den erweiterten Optionen des Bereichs *Speicher* umbenennen.
+Bei Auswahl des NVMe/FC- oder NVMe/TCP-Protokolls wird ein neues Namespace-Subsystem erstellt und für die Namespace-Zuordnung verwendet. ONTAP tools erstellt das Namespace-Subsystem mit dem automatisch generierten Namen, der den Datenspeichernamen enthält. Eine Umbenennung des Namespace-Subsystems ist im Feld *Benutzerdefinierter Namespace-Subsystemname* in den *Erweiterten Optionen* des Bereichs *Speicher* möglich.
 
-. Im Bereich *Storage attributes*:
+. Im Bereich *Speicherattribute*:
 +
 .. Wählen Sie aus den Dropdown-Optionen *Aggregate* aus.
 +
 
-NOTE: Bei ASA r2-Speichersystemen wird die Option *Aggregat* nicht angezeigt, da der Speicher disaggregiert ist. Wenn Sie einen ASA R2-Speichersystemtyp „SVM“ auswählen, werden auf der Seite mit den Speicherattributen die Optionen zum Aktivieren von QoS angezeigt.
+NOTE: Für ASA r2 Speichersysteme wird die Option *Aggregate* nicht angezeigt, da der Speicher disaggregiert ist. Bei Auswahl eines ASA r2 Speichersystems vom Typ SVM werden auf der Seite *Storage attributes* Optionen zur Aktivierung von QoS angezeigt.
 
 .. ONTAP -Tools erstellen basierend auf dem ausgewählten Protokoll eine Speichereinheit (LUN/Namespace) mit einer Thin-Space-Reserve.
 +
 
 NOTE: Ab ONTAP 9.16.1 unterstützen ASA r2 Storage-Systeme bis zu 12 Nodes pro Cluster.
 
-.. Wählen Sie das *Performance Service Level* für ASA r2 Speichersysteme mit 12 Knoten SVM, die ein heterogener Cluster ist. Diese Option ist nicht verfügbar, wenn die ausgewählte SVM ein homogenes Cluster ist oder einen SVM-Benutzer verwendet.
+.. Die *Leistungsstufe* für ein ASA r2 Speichersystem mit einer 12-Knoten-SVM in einem heterogen Cluster auswählen. Diese Option ist nicht verfügbar, wenn die ausgewählte SVM ein homogen Cluster ist oder ein SVM-Benutzer verwendet wird.
 +
 „Beliebig“ ist der Standard-PSL-Wert (Performance Service Level). Diese Einstellung erstellt die Speichereinheit mithilfe des ONTAP-Algorithmus für die ausgewogene Platzierung. Sie können jedoch nach Bedarf die Option „Performance“ oder „Extreme“ auswählen.
 
@@ -170,11 +167,22 @@ NOTE: Sie können das vorhandene Volume nicht zum Erstellen eines VMFS-Datenspei
 
 
 
+. Im Fenster *Schutz* die Option *Diesen Datenspeicher mithilfe der SnapMirror Replikation schützen* auswählen, um den Schutz zu aktivieren. Der Datenspeicher kann einer bestehenden Schutzgruppe hinzugefügt oder eine neue Schutzgruppe erstellt werden. Eine neue Schutzgruppe kann wie folgt erstellt werden:
++
+.. Einen *Schutzgruppennamen* eingeben.
+.. Die SnapMirror Beziehung konfigurieren. Bei Auswahl der Automated Failover Duplex Policy (AFD) sind die Host-Cluster-Konfigurationseinstellungen vor dem Fortfahren einzurichten. Einzelheiten finden sich unter link:../protect/config-proximity.html["Cluster für den Datenspeicherschutz mit ONTAP tools konfigurieren"].
++
+
+NOTE: Ist das ausgewählte Volume bereits Teil einer anderen Schutzeinstellung, wird die nächste Schutzseite deaktiviert und eine Informationsmeldung angezeigt. Ist der Datenspeicher nicht für den Schutz geeignet, wird die Schutzoption deaktiviert und der Grund für die Nichteignung angezeigt. Der Datenspeicher kann dennoch ohne Schutz erstellt werden.
+
+
+
 . Überprüfen Sie die Datastore-Details im Bereich *Summary* und wählen Sie *Finish*.
++
+
+NOTE: Wenn ein Datenspeicher geschützt ist, mounten die ONTAP tools ihn auf allen Hosts im Cluster.
 
 
-
-NOTE: Wenn Sie den Datastore auf einem geschützten Cluster erstellen, wird eine schreibgeschützte Meldung angezeigt: „Der Datastore wird auf einem geschützten Cluster gemountet.“
 
 .Ergebnis
 ONTAP -Tools erstellen den VMFS-Datenspeicher und mounten ihn auf allen Hosts.

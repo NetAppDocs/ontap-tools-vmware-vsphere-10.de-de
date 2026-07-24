@@ -1,8 +1,8 @@
 ---
 permalink: manage/resize-datastores.html 
 sidebar: sidebar 
-keywords:  
-summary: Durch die Größenänderung eines Datenspeichers können Sie den Speicher für die Dateien Ihrer virtuellen Maschine erhöhen. Sie können die Größe eines Datastores ändern, wenn sich Ihre Infrastrukturanforderungen ändern. 
+keywords: resize NFS VMFS datastore, increase datastore capacity, ONTAP tools datastore expansion, VMware datastore size change 
+summary: Datenspeicher werden vergrößert, um den Dateispeicher virtueller Maschinen bei sich ändernden Infrastrukturanforderungen zu erhöhen. 
 ---
 = NFS- und VMFS-Datenspeicher in ONTAP tools vergrößern/verkleinern
 :allow-uri-read: 

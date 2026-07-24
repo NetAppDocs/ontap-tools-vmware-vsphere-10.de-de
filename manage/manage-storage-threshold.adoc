@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-storage-threshold.html 
 sidebar: sidebar 
-keywords:  
-summary: Sie können den Schwellenwert für den Empfang von Benachrichtigungen in vCenter Server festlegen, wenn das Volume und die Gesamtkapazität des Aggregats bestimmte Ebenen erreichen.  
+keywords: storage threshold alerts, ONTAP tools capacity thresholds, vCenter storage notifications, aggregate volume capacity warnings 
+summary: Schwellenwertbenachrichtigungen für Volume- und Aggregatkapazitätsniveaus im vCenter Server festlegen. 
 ---
 = Speicherschwellenwerte in ONTAP tools verwalten
 :allow-uri-read: 

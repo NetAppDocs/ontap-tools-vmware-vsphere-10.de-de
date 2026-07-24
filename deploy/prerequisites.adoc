@@ -1,8 +1,8 @@
 ---
 permalink: deploy/prerequisites.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: Vor der Bereitstellung der ONTAP Tools für VMware vSphere sollten Sie mit den Speicherplatzanforderungen für das Deployment-Paket und einigen grundlegenden Anforderungen an das Host-System vertraut sein. 
+keywords: ONTAP tools requirements, configuration limits, supported versions, sizing 
+summary: Vor der Bereitstellung von ONTAP tools für VMware vSphere werden die unterstützten Versionen, die Dimensionierung, die Portanforderungen und die Konfigurationsgrenzen geprüft. 
 ---
 = ONTAP-Tools für VMware vSphere – Anforderungen und Konfigurationsgrenzen
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: Vor der Bereitstellung der ONTAP Tools für VMware vSphere sollten Sie 
 
 
 [role="lead"]
-Vor der Bereitstellung der ONTAP Tools für VMware vSphere sollten Sie mit den Speicherplatzanforderungen für das Deployment-Paket und einigen grundlegenden Anforderungen an das Host-System vertraut sein.
+Vor der Bereitstellung von ONTAP tools für VMware vSphere werden die unterstützten Versionen, die Dimensionierung, die Portanforderungen und die Konfigurationsgrenzen geprüft.
 
-Sie können ONTAP tools für VMware vSphere mit VMware vCenter Server Virtual Appliance (vCSA) verwenden. Sie sollten ONTAP tools für VMware vSphere in einer unterstützten vSphere Umgebung bereitstellen, die ESXi-Hosts umfasst.
+ONTAP tools für VMware vSphere in einer unterstützten vSphere Umgebung bereitstellen, die ESXi Hosts und VMware vCenter Server Virtual Appliance (vCSA) umfasst.
 
 
 
@@ -26,7 +26,7 @@ Sie können ONTAP tools für VMware vSphere mit VMware vCenter Server Virtual Ap
 ** 348 GB für Thick Provisioning-Installationen
 
 
-* *Anforderungen an die Dimensionierung des Hostsystems* Die folgende Tabelle zeigt den empfohlenen Arbeitsspeicher für jede Bereitstellungsgröße. Für Bereitstellungen mit hoher Verfügbarkeit (HA) benötigen Sie die dreifache Appliance-Größe, die angegeben ist.
+* *Anforderungen an die Dimensionierung des Hostsystems* Die folgende Tabelle zeigt die empfohlenen Werte für CPU, Arbeitsspeicher und Festplattenspeicher pro Knoten für jede Bereitstellungsgröße. Für Hochverfügbarkeit (HA) sollten drei Knoten bereitgestellt werden.
 
 
 |===
@@ -35,16 +35,22 @@ Sie können ONTAP tools für VMware vSphere mit VMware vCenter Server Virtual Ap
 | *Art der Bereitstellung* | *CPUs pro Knoten* | *Arbeitsspeicher (GB) pro Node* | *Speicherplatz (GB) Thick Provisioning pro Knoten* 
 
 
+| Extra klein (XS) | 6 | 12 | 350 
+
+
 | Klein | 9 | 18 | 350 
 
 
 | Mittel | 13 | 26 | 350 
 
 
-| HINWEIS: Bei der großen Implementierung geht es nur um die HA-Konfiguration. | 17 | 34 | 350 
+| Groß | 17 | 34 | 350 
 |===
 
-NOTE: Wenn Backup aktiviert ist, benötigt jeder Cluster mit ONTAP Tools weitere 50 GB Speicherplatz auf dem Datenspeicher, auf dem die VMs implementiert werden. Daher sind für nicht-HA 400 GB und für HA insgesamt 1100 GB Speicherplatz erforderlich.
+NOTE: Große Bereitstellungsgrößen werden nur für HA Konfigurationen unterstützt.
+
+
+NOTE: Wenn die Datensicherung aktiviert ist, benötigt jeder ONTAP tools Cluster zusätzlich 50 GB Speicherplatz auf dem Datenspeicher, auf dem die VMs bereitgestellt sind. Daher sind für Non-HA insgesamt 400 GB und für HA insgesamt 1100 GB Speicherplatz erforderlich.
 
 
 
@@ -55,28 +61,28 @@ NOTE: Wenn Backup aktiviert ist, benötigt jeder Cluster mit ONTAP Tools weitere
 | Storage, Host und Applikationen | Versionsanforderungen 
 
 
-| ONTAP | 9.15.1, 9.16.1 und 9.17.0 
+| ONTAP-Systeme | 9.16.1, 9.17.1, 9.18.1, 9.19.1 
 
 
-| Von ONTAP Tools unterstützte ESXi-Hosts | Ab 7.0.3 
+| ESXi Hosts, die von ONTAP tools verwaltet werden | Ab 7.0.3 
 
 
-| ONTAP Tools unterstützten vCenter Server | 7.0U3 ab 
+| vCenter Server-Instanzen, die von ONTAP tools verwaltet werden | 8.0U3 und höher 
 
 
 | VASA Provider | 3.0 
 
 
-| OVA-Anwendung | 10,5 
+| OVA-Anwendung | 10,6 
 
 
-| ESXi-Host zur Implementierung der virtuellen Maschine mit ONTAP-Tools | 7.0U3 und 8.0U3 
+| ESXi-Host, der zum Bereitstellen der ONTAP tools virtuellen Maschine verwendet wird | 7.0U3 und 8.0U3 
 
 
-| VCenter Server zur Bereitstellung einer virtuellen Maschine mit ONTAP-Tools | 7.0 und 8.0 
+| vCenter Server, der zum Bereitstellen der ONTAP tools virtuellen Maschine verwendet wird | 7.0 und 8.0 
 |===
 
-NOTE: Ab ONTAP-Tools für VMware vSphere 10.4 wird die Hardware der virtuellen Maschine von Version 10 auf 17 geändert.
+NOTE: Ab ONTAP tools for VMware vSphere 10.4 ändert sich die Hardwareversion der virtuellen Maschine von 10 auf 17.
 
 Das Interoperabilitäts-Matrix-Tool (IMT) enthält aktuelle Informationen zu den unterstützten Versionen von ONTAP, vCenter Server, ESXi-Hosts und Plug-in-Applikationen.
 
@@ -90,7 +96,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 Die folgende Tabelle zeigt die von NetApp verwendeten Netzwerkports und deren Zweck. Es gibt drei verschiedene Arten von Anschlüssen:
 
 * Externe Ports: Diese Ports sind von außerhalb des Kubernetes-Clusters oder -Knotens zugänglich. Sie ermöglichen es Diensten, mit externen Netzwerken oder Benutzern zu kommunizieren und so die Integration mit Systemen außerhalb der Clusterumgebung zu ermöglichen.
-* Inter-Node-Ports: Diese Ports ermöglichen die Kommunikation zwischen den Knoten innerhalb des Kubernetes-Clusters. Sie werden für Clusteraufgaben wie den Datenaustausch und die Zusammenarbeit benötigt. Bei Einzelknoten-Bereitstellungen werden die Inter-Node-Ports nur innerhalb des Knotens verwendet und benötigen keinen externen Zugriff. Inter-Node-Ports können Datenverkehr von außerhalb des Clusters akzeptieren. Sperren Sie den Internetzugang zwischen den Knoten mithilfe von Firewall-Regeln.
+* Inter-node-Ports: Diese Ports ermöglichen die Kommunikation zwischen Knoten innerhalb des Kubernetes-Clusters. Sie sind für Cluster-Operationen wie Datenaustausch und Knotenkoordination erforderlich. Bei Einzelknoten-Bereitstellungen werden Inter-node-Ports nur innerhalb des Knotens verwendet und benötigen keinen externen Zugriff. Inter-node-Datenverkehr sollte nur aus vertrauenswürdigen Clusternetzwerken zugelassen und der Internetzugriff durch Firewall-Regeln blockiert werden.
 * Interne Ports: Diese Ports kommunizieren innerhalb des Kubernetes-Clusters über ClusterIP-Adressen. Sie sind nicht extern zugänglich und müssen nicht zu Firewall-Regeln hinzugefügt werden.
 
 
@@ -161,10 +167,10 @@ NOTE: Bei HA-Bereitstellungen muss sichergestellt werden, dass der UDP-Port 8472
 ====
 
 
-[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vvols-datastores]]
-== Konfigurationsbeschränkungen für die Bereitstellung von ONTAP tools for VMware vSphere für vVols Datenspeicher
+[[configuration-limits-for-vvol-datastores]]
+== Konfigurationsbeschränkungen für vVol Datenspeicher
 
-Sie können die folgende Tabelle als Leitfaden für die Konfiguration von ONTAP tools for VMware vSphere verwenden.
+Die folgende Tabelle dient als Leitfaden für die Konfiguration von ONTAP tools for VMware vSphere.
 
 |===
 
@@ -181,18 +187,18 @@ Sie können die folgende Tabelle als Leitfaden für die Konfiguration von ONTAP 
 | Hochverfügbarkeit | Klein (S) | bis zu 24K | 64 
 
 
-| Hochverfügbarkeit | Mittel (M) | bis zu 50k | 128 
+| Hochverfügbarkeit | Mittel (M) | bis zu 50K | 128 
 
 
-| Hochverfügbarkeit | Groß (L) | bis zu 100k | 256 
+| Hochverfügbarkeit | Groß (L) | bis zu 100K | 256 
 |===
 
 NOTE: Die Host-Zahlen in der Tabelle stellen die kombinierte Gesamtzahl über alle verbundenen vCenters dar.
 
 
 
-[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vmfs-and-nfs-datastores]]
-== Konfigurationsbeschränkungen für die Bereitstellung von ONTAP tools for VMware vSphere für VMFS- und NFS-Datenspeicher
+[[configuration-limits-for-vmfs-and-nfs-datastores]]
+== Konfigurationsbeschränkungen für VMFS und NFS-Datenspeicher
 
 Die in diesem Abschnitt aufgeführten Konfigurationsgrenzen sind von NetApp validiert und unterstützt. Die tatsächlichen Grenzen können je nach Umgebung und Arbeitslast variieren. Eine Überschreitung dieser Grenzen kann die Leistung oder die Supportfähigkeit beeinträchtigen und wird nicht empfohlen. Beachten Sie Folgendes bei der Durchsicht der Tabelle:
 
@@ -207,10 +213,16 @@ Die in diesem Abschnitt aufgeführten Konfigurationsgrenzen sind von NetApp vali
 | Bereitstellung | Anzahl der VMFS- und NFS-Datenspeicher | Anzahl der DR-fähigen VMFS-Datenspeicher | Anzahl der Hosts 
 
 
+| Extra klein | 50 | 50 | 16 
+
+
 | Nicht-HA klein | 200 | 80 | 32 
 
 
 | Non-HA Medium | 250 | 100 | 32 
+
+
+| HA Extra klein | 200 | 100 | 32 
 
 
 | HA klein | 350 | 200 | 64 
@@ -229,7 +241,7 @@ Die in diesem Abschnitt aufgeführten Konfigurationsgrenzen sind von NetApp vali
 In der folgenden Tabelle sind die Zahlen aufgeführt, die pro VMware Live Site Recovery-Instanz mithilfe von ONTAP Tools für VMware vSphere unterstützt werden.
 
 |===
-| *VCenter-Bereitstellungsgröße* | *Klein* | *Mittel* 
+| *vCenter Bereitstellungsgröße* | *Klein* | *Mittel* 
 
 
 | Gesamtzahl der virtuellen Maschinen, die für den Schutz mithilfe einer Array-basierten Replikation konfiguriert wurden | 2000 | 5000 
@@ -251,10 +263,10 @@ Die folgende Tabelle zeigt die Anzahl der VMware Live Site Recovery-Instanzen un
 |===
 
 
-| *Anzahl der VMware Live Site Recovery Instanzen* | *Größe der Bereitstellung von ONTAP-Tools* 
+| *Anzahl der VMware Live Site Recovery Instanzen* | *ONTAP tools Bereitstellungsgröße* 
 
 
-| Bis Zu 4 | Klein 
+| Bis zu 4 | Klein 
 
 
 | 4 bis 8 | Mittel 

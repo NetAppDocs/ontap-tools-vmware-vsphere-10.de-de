@@ -1,8 +1,8 @@
 ---
 permalink: manage/recover-backup.html 
 sidebar: sidebar 
-keywords:  
-summary: Ab der Verwendung von ONTAP Tools für VMware vSphere 10.3 verwendet die Appliance die dynamische Storage-bereitstellung. Ein RPO von null ist nicht möglich. Sie können jedoch eine RPO von nahezu null erzielen. 
+keywords: recover ONTAP tools setup, appliance recovery workflow, near zero RPO recovery, restore ONTAP tools configuration 
+summary: ONTAP tools aus Backups wiederherstellen und das Verhalten bei Zero-RPO und Near Zero-RPO nach Release verstehen. 
 ---
 = Wiederherstellen des ONTAP Tools-Setups
 :allow-uri-read: 
@@ -26,8 +26,9 @@ Stellen Sie sicher, dass die neue virtuelle Maschine dieselbe IP-Adresse der ONT
 
 
 . Schalten Sie die vorhandene virtuelle Maschine aus.  Stellen Sie dann eine neue virtuelle Maschine bereit, indem Sie dieselbe OVA-Datei wie bei der ursprünglichen Bereitstellung verwenden.
-. Öffnen Sie vom vCenter Server aus die Wartungskonsole.
-. Melden Sie sich als Wartungbenutzer an.
+. Melden Sie sich beim vCenter Server an.
+. Die neu bereitgestellte ONTAP tools VM suchen und die Webkonsole öffnen.
+. Melden Sie sich mit den  `maint` Zugangsdaten an.
 . Geben Sie ein `4`, um *Support und Diagnose* auszuwählen.
 . Geben Sie ein `2`, um die Option *Ferndiagnosezugriff aktivieren* auszuwählen, und erstellen Sie ein neues Passwort für den Diagnosezugriff.
 . Wählen Sie eine Sicherungsdatei aus dem heruntergeladenen Verzeichnis.  Informationen zum neuesten Backup finden Sie in der Datei _OTV_backup_info.txt_.
@@ -48,7 +49,7 @@ NOTE: Ändern Sie nicht den im Befehl angegebenen Zielpfad und Dateinamen (/home
 sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
 ----
 +
-Die Protokolle werden in der Datei _/var/log/post-deploy-Upgrade.log_ aufgezeichnet.
+Die Protokolle werden in der Datei _/var/log/otvng/post-deploy-upgrade.log_ aufgezeichnet.
 
 
 

@@ -1,0 +1,33 @@
+---
+permalink: manage/nconnect-change-default.html 
+sidebar: sidebar 
+keywords: change nconnect default, ESXi NFS nconnect, ONTAP tools host nconnect settings, vCenter NFS performance tuning 
+summary: Den Standardwert für nconnect für ESXi Hosts in einem vCenter Server ändern. 
+---
+= Den Standardwert für nconnect für ESXi Hosts in ONTAP tools ändern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dieser Aufgabe lässt sich die Standardanzahl der Verbindungen (nconnect) für ESXi Hosts in einem ausgewählten vCenter Server ändern.
+
+.Über diese Aufgabe
+* Der auf dieser Seite festgelegte nconnect Wert ist der Standardwert auf Hostebene.
+* Diese Einstellung gilt für alle ESXi-Hosts im ausgewählten vCenter Server für die Protokolle NFSv3 und NFSv4.
+* Wenn ein NFS-Datenspeicher mit einem höheren nconnect-Wert als der aktuellen Einstellung auf Hostebene erstellt wird, passen die ONTAP tools die Einstellung auf Hostebene entsprechend an.
+
+
+
+NOTE: Diese Änderung gilt für alle ESXi-Hosts im ausgewählten vCenter Server. .Schritte
+
+. Melden Sie sich beim vSphere Client an.
+. Wählen Sie im Abschnitt Plug-ins *Shortcuts* > *NetApp ONTAP Tools* aus.
+. *Einstellungen* > *Standardwert für nconnect* auswählen.
+. *Bearbeiten* auswählen.
+. Den neuen Standardwert für nconnect für ESXi Hosts eingeben und *Speichern* auswählen.
+
+
+.Ergebnis
+Der aktualisierte nconnect Wert wird auf alle ESXi Hosts im ausgewählten vCenter Server für die NFSv3 und NFSv4 Protokolle angewendet.

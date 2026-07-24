@@ -1,8 +1,8 @@
 ---
 permalink: manage/remove-storage-from-a-vvols-datastore.html 
 sidebar: sidebar 
-keywords: Remove vVol datastore 
-summary: Mit der Aktion „Datastore löschen“ wird der Datastore gelöscht, wenn sich keine VVols auf dem ausgewählten Datastore befinden. 
+keywords: shrink vVols datastore, remove storage from vVol datastore, ONTAP tools vVol capacity reduction, virtual volumes datastore resize down 
+summary: Einen vVols Datenspeicher nur löschen, wenn keine vVols mehr auf dem ausgewählten Datenspeicher vorhanden sind. 
 ---
 = Einen vVols Datenspeicher in ONTAP tools verkleinern
 :allow-uri-read: 

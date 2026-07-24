@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-vcenter.html 
 sidebar: sidebar 
-keywords:  
-summary: VCenter sind zentrale Management-Plattformen, mit denen Sie Hosts, Virtual Machines und Storage-Back-Ends steuern können. 
+keywords: manage vCenter instances, add remove vCenter, ONTAP tools vCenter credentials, vCenter certificate management 
+summary: In ONTAP tools vCenter-Instanzen verwalten, um Hosts, virtuelle Maschinen und Storage-Backends zu steuern. 
 ---
 = Verwalten von vCenter Server-Instanzen in ONTAP -Tools
 :allow-uri-read: 
@@ -15,16 +15,16 @@ VCenter Server-Instanzen sind zentrale Management-Plattformen, mit denen Sie Hos
 
 
 
-[[dissociate-storage-backends-with-the-vcenter-server-instance]]
-== Trennen Sie Storage Back-Ends von der vCenter Server-Instanz
+[[dissociate-storage-backends-from-a-vcenter-server-instance]]
+== Speicher-Backends von einer vCenter Server-Instanz entkoppeln
 
 Auf der Listingseite des vCenter-Servers wird die zugehörige Anzahl von Speicher-Back-Ends angezeigt. Jede vCenter Server-Instanz hat die Möglichkeit, ein Storage-Back-End zuzuordnen oder die Zuordnung zu aufheben.
 
 .Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
-. Wählen Sie in der Seitenleiste die erforderliche vCenter Server-Instanz aus.
-. Wählen Sie die vertikalen Ellipsen für den vCenter Server aus, den Sie mit Speicher-Back-Ends verknüpfen oder trennen möchten.
+. *vCenters* aus der Seitenleiste auswählen.
+. Wählen Sie die vertikalen Auslassungspunkte für den vCenter Server aus, den Sie mit Storage-Backends verknüpfen oder von Storage-Backends trennen möchten.
 . Wählen Sie *Speicher-Backend trennen*.
 
 
@@ -33,12 +33,10 @@ Auf der Listingseite des vCenter-Servers wird die zugehörige Anzahl von Speiche
 [[modify-a-vcenter-server-instance]]
 == Ändern Sie eine vCenter Server-Instanz
 
-Führen Sie die folgenden Schritte aus, um eine vCenter Server-Instanz zu ändern.
-
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
-. Wählen Sie in der Seitenleiste die entsprechende vCenter Server-Instanz aus
-. Wählen Sie die vertikalen Ellipsen für den vCenter Server aus, den Sie ändern möchten, und wählen Sie *Ändern*.
+. *vCenters* aus der Seitenleiste auswählen.
+. Wählen Sie die vertikalen Auslassungspunkte für den vCenter Server aus, den Sie bearbeiten möchten, und wählen Sie *Ändern*.
 . Geben Sie im Fenster *vCenter ändern* den Benutzernamen, das Kennwort und die Portdetails ein.
 . Laden Sie das Zertifikat hoch und wählen Sie *Ändern*.
 
@@ -48,22 +46,61 @@ Führen Sie die folgenden Schritte aus, um eine vCenter Server-Instanz zu änder
 [[remove-a-vcenter-server-instance]]
 == Entfernen einer vCenter Server-Instanz
 
-Entfernen Sie alle Speicher-Backends vom vCenter Server, bevor Sie ihn entfernen.
+Sie können eine vCenter Server-Instanz auch dann entfernen, wenn Datenspeicher und Storage-Backends noch zugeordnet sind. Der Dialog *Entfernen vCenter* führt durch die erforderlichen Aktionen, basierend auf dem aktuellen Status des vCenter Servers.
 
+
+NOTE: Durch das erzwungene Löschen werden nur die Metadaten der ONTAP tools entfernt. ONTAP Storage-Objekte (Volumes oder LUNs), vSphere Datenspeicher oder virtuelle Maschinen werden dabei nicht entfernt.
+
+.Bevor Sie beginnen
+Das erzwungene Löschen ist blockiert, wenn der vCenter Server vVols Datenspeicher oder geschützte Datenspeicher enthält. Vor dem Fortfahren:
+
+* Alle vVols Datenspeicher entfernen oder migrieren.
+* Schutz für alle geschützten Datenspeicher aufheben.
+* Stellen Sie sicher, dass keine Erkennungsaufträge ausgeführt werden. Der erzwungene Löschvorgang wird nicht fortgesetzt, wenn Erkennungsaufträge in Bearbeitung sind.
+
+
+
+NOTE: Globale Speichersysteme, die mit anderen vCenter Server-Instanzen gemeinsam genutzt werden, bleiben erhalten. Nur die Verknüpfung mit dem gelöschten vCenter Server wird entfernt.
+
+.Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
-. Wählen Sie in der Seitenleiste die entsprechenden vCenter Server-Instanzen aus
-. Wählen Sie die vertikalen Auslassungspunkte neben dem vCenter Server aus, den Sie entfernen möchten, und wählen Sie *Entfernen*.
+. *vCenters* aus der Seitenleiste auswählen.
+. Wählen Sie die vertikalen Auslassungspunkte für den gewünschten vCenter Server aus und wählen Sie *Entfernen*.
+. Im Dialogfeld *vCenter entfernen* den Status des vCenter Servers überprüfen und alle erforderlichen Aktionen abschließen.
 +
+Das Dialogverhalten hängt vom Zustand des vCenter Server ab:
 
-NOTE: Nachdem Sie vCenter Server-Instanzen entfernt haben, werden sie nicht mehr von der Anwendung verwaltet.
++
+[cols="2,2,3"]
+|===
+| Zustand | Dialogverhalten | Erforderliche Maßnahme 
 
 
+| Keine vVols oder geschützte Datenspeicher, aber Speicher-Backends sind zugeordnet | Im Dialogfeld wird die Anzahl der zugehörigen Storage-Backends und Datenspeicher angezeigt. | *Alle Speicherartefakte von diesem vCenter Server entfernen* und *Ich verstehe, dass die zugehörigen Datenspeicher nicht mehr von ONTAP tools verwaltet werden*, auswählen. 
 
-Wenn Sie vCenter Server-Instanzen in ONTAP-Tools entfernen, werden die folgenden Aktionen automatisch ausgeführt:
+
+| Keine vVols Datenspeicher, geschützte Datenspeicher oder Storage-Backends | Der Dialog bestätigt die Entfernung. | Es sind keine weiteren Maßnahmen erforderlich. 
+|===
+. *Löschen erzwingen* auswählen.
+. Die Aktion bestätigen.
+
+
+.Ergebnis
+ONTAP tools führt die folgenden Aktionen automatisch aus:
 
 * Die Registrierung des Plug-ins wurde aufgehoben.
 * Plug-in-Berechtigungen und Plug-in-Rollen werden entfernt.
+
+
+Die vCenter Server-Instanz wird nicht mehr von ONTAP tools verwaltet.
+
+Wenn der vCenter Server während der Löschung nicht erreichbar ist:
+
+* ONTAP tools entfernt den vCenter Server-Eintrag.
+* Die Plugin-Abmeldung findet nicht statt.
+* Es wird eine Warnung angezeigt.
+* Das Plugin muss manuell vom VMware vCenter Server abgemeldet werden.
 
 
 
@@ -120,9 +157,9 @@ siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Seitenleiste die entsprechende vCenter Server-Instanz aus
-. Wählen Sie die vertikalen Ellipsen für den vCenter Server aus, den Sie ändern möchten, und wählen Sie *Ändern*.
+. Wählen Sie die vertikalen Auslassungspunkte für den vCenter Server aus, den Sie bearbeiten möchten, und wählen Sie *Ändern*.
 . Geben Sie im Fenster *vCenter ändern* den Benutzernamen, das Kennwort und die Portdetails ein.
-. Laden Sie das Zertifikat hoch und wählen Sie *Ändern*.
+. Das Zertifikat wird hochgeladen und *Ändern* ausgewählt.
 
 
 .Verwandte Informationen

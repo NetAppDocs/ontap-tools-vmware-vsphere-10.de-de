@@ -1,8 +1,8 @@
 ---
 permalink: manage/start-the-ssh-on-other-nodes.html 
 sidebar: sidebar 
-keywords:  
-summary: Sie müssen SSH auf anderen Nodes vor dem Upgrade starten. 
+keywords: start SSH on nodes, ONTAP tools node SSH access, pre-upgrade SSH enablement, appliance cluster troubleshooting 
+summary: SSH auf anderen Knoten sollte gestartet werden, bevor ein Upgrade durchgeführt wird. 
 ---
 = Starten Sie SSH auf anderen ONTAP tools-Knoten
 :allow-uri-read: 
@@ -20,8 +20,9 @@ Aktivieren Sie die VASA Provider-Erweiterung für Ihre vCenter Server-Instanz.
 Wiederholen Sie diesen Vorgang auf jedem Knoten vor dem Upgrade.
 
 .Schritte
-. Öffnen Sie über den vCenter Server eine Konsole für VASA Provider.
-. Melden Sie sich als Wartungbenutzer an.
+. Melden Sie sich beim vCenter Server an.
+. Die ONTAP tools Knoten-VM suchen und die Webkonsole öffnen.
+. Melden Sie sich mit den  `maint` Zugangsdaten an.
 . Eingabe `4` Wählen Sie Support und Diagnose aus.
 . Eingabe `1` Wählen Sie Access Diagnostic Shell aus.
 . Eingabe `y` Fortfahren.

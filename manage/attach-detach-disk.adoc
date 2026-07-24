@@ -1,8 +1,8 @@
 ---
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
-keywords:  
-summary: Verbinden Sie eine Datenfestplatte mit einer virtuellen Maschine, um die Speicherkapazität zu erweitern. 
+keywords: attach data disk VM, detach VM disk, ONTAP tools virtual machine disk, VMware VM storage expansion 
+summary: Virtuelle Maschinen-Datenträger können angehängt oder entfernt werden, um die Speicherkapazität zu verwalten. 
 ---
 = Eine Datenfestplatte an eine VM in ONTAP tools anhängen oder trennen
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
-keywords:  
-summary: Bei der Migration bestehender virtueller Maschinen in Ihrem Rechenzentrum sollten Sie einige Punkte beachten. 
+keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
+summary: Wichtige Aspekte sollten vor der Migration bestehender virtueller Maschinen in Ihrem Rechenzentrum berücksichtigt werden. 
 ---
 = Überlegungen zur Migration und zum Klonen virtueller Maschinen für ONTAP tools
 :allow-uri-read: 
@@ -27,7 +27,7 @@ Sie können geschützte virtuelle Maschinen migrieren zu:
 
 Wenn Sie die virtuelle Maschine auf ein anderes FlexVol volume migrieren, aktualisiert das System die Metadatendatei dieses Volumes mit den Informationen der virtuellen Maschine. Wird eine virtuelle Maschine auf einen anderen ESXi-Host, aber auf denselben Speicher migriert, wird die zugrunde liegende FlexVol volume-Metadatendatei nicht geändert.
 
-Informationen zur Migration virtueller Maschinen finden Sie in der Broadcom-Dokumentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html["vSphere Migration virtueller Maschinen"]
+Informationen zur Migration virtueller Maschinen sind unter https://techdocs.broadcom.com/["Broadcom Technische Dokumentation"] zu finden
 
 
 
@@ -63,11 +63,11 @@ Weitere Einzelheiten finden Sie in der Broadcom-Dokumentation: https://techdocs.
 
 ONTAP tools unterstützt Snapshots virtueller Maschinen über standardmäßige VMware-Workflows. Snapshots sind kurzfristige Wiederherstellungspunkte, die für Anwendungsfälle wie Tests und Patch-Vorbereitung vorgesehen sind. Sie sind kein Ersatz für Backup oder replikationsbasierte Datensicherung. Der Betrieb einer virtuellen Maschine auf einem Snapshot über längere Zeiträume kann zu Instabilität und Datenverlust führen.
 
-Sie können absturzkonsistente Snapshots (Snapshots ohne Speicherzustand, mit denen die virtuelle Maschine in einen konsistenten Zustand neu gestartet werden kann) auf allen unterstützten Datenspeichertypen erstellen. Auch quiesced Snapshots, die VMware Tools verwenden, um die Daten im Arbeitsspeicher vor der Erfassung auf die Festplatte zu schreiben, werden unterstützt. Eine Übersicht über Snapshot-Typen und deren Verhalten finden Sie unter https://knowledge.broadcom.com/external/article/342618/overview-of-virtual-machine-snapshots-in.html["Übersicht über Snapshots virtueller Maschinen in vSphere"].
+Sie können absturzkonsistente Snapshots (Snapshots ohne Speicherzustand, mit denen die virtuelle Maschine in einen konsistenten Zustand neu gestartet werden kann) auf allen unterstützten Datenspeichertypen erstellen. Auch quiesced Snapshots, die VMware Tools verwenden, um die Daten im Arbeitsspeicher vor der Erfassung auf die Festplatte zu schreiben, werden unterstützt. Eine Übersicht über Snapshot-Typen und deren Verhalten finden Sie unter https://techdocs.broadcom.com/["Broadcom Technische Dokumentation"].
 
 
 NOTE: Speicher-Snapshots erfassen den aktuellen Speicherzustand und führen zu einer temporären Unterbrechung der virtuellen Maschine. Sie werden in ONTAP tools Workflows nicht unterstützt. Wenn eine virtuelle Maschine über einen Speicher-Snapshot verfügt, muss dieser gelöscht werden, bevor die virtuelle Maschine in eine Konsistenzgruppe oder eine Host-Cluster-Beziehung aufgenommen werden kann, die von ONTAP tools verwaltet wird.
 
 Auf ASA r2-Speichersystemen unterscheidet sich das Verhalten von VM-Snapshots von anderen Speichertypen. Snapshots sind schreibgeschützt. Beim Einschalten der virtuellen Maschine erstellt der VASA Provider eine LUN aus dem schreibgeschützten Snapshot und aktiviert IOPS. Beim Ausschalten der virtuellen Maschine löscht der VASA Provider die LUN und deaktiviert IOPS.
 
-Informationen zur Verwaltung von Snapshots virtueller Maschinen finden Sie in der Broadcom-Dokumentation https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html["Virtuelle Maschinen mit Snapshots verwalten"].
+Informationen zur Verwaltung von Snapshots virtueller Maschinen sind unter  https://techdocs.broadcom.com/["Broadcom Technische Dokumentation"] zu finden.

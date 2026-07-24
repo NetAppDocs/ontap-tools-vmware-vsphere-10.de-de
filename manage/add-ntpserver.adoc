@@ -1,8 +1,8 @@
 ---
 permalink: manage/add-ntpserver.html 
 sidebar: sidebar 
-keywords:  
-summary: Geben Sie die NTP-Serverdetails ein, um die Zeituhren der ONTAP Tools-Appliance zu synchronisieren. 
+keywords: ONTAP tools NTP server, add NTP server, appliance time sync, ONTAP tools clock synchronization 
+summary: NTP-Serverdetails hinzufügen, damit die Gerätezeit in ONTAP tools synchronisiert wird. 
 ---
 = Fügen Sie NTP-Server zu ONTAP tools hinzu
 :allow-uri-read: 
@@ -13,11 +13,14 @@ summary: Geben Sie die NTP-Serverdetails ein, um die Zeituhren der ONTAP Tools-A
 [role="lead"]
 Geben Sie die NTP-Serverdetails ein, um die Zeituhren der ONTAP Tools-Appliance zu synchronisieren.
 
+
+NOTE: Ab ONTAP tools for VMware vSphere 10.6 wird der Zeitsynchronisations-Daemon chronyd anstelle von ntpd verwendet. Bei einem Upgrade auf 10.6 werden bestehende NTP-Servereinstellungen automatisch migriert. Eine manuelle Neukonfiguration ist nicht erforderlich.
+
 .Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie die Option *Einstellungen* > *NTP-Server* > *Bearbeiten*.
-. Geben Sie den vollständig qualifizierten Domänennamen (FQDN), IPv4- oder IPv6-Adressen durch Komma getrennt ein.
+. Geben Sie die durch Kommas getrennte vollqualifizierte Domain (FQDN) oder IPv4-Adressen ein.
 +
 Aktualisieren Sie die Seite, um die aktualisierten Werte zu sehen.
 

@@ -1,8 +1,8 @@
 ---
 permalink: protect/fan-out-protection.html 
 sidebar: sidebar 
-keywords:  
-summary: In einem Fan-Out-Schutzszenario ist die Konsistenzgruppe doppelt geschützt, mit einer synchronen Beziehung auf dem ersten Ziel ONTAP Cluster und mit einer asynchronen Beziehung auf dem zweiten Ziel ONTAP Cluster. 
+keywords: fan-out protection, SnapMirror active sync, asynchronous replication, VMware Live Site Recovery, placeholder datastore, host cluster protection 
+summary: Eine Konsistenzgruppe kann mit Fan-Out-Schutz durch synchrone und asynchrone Replizierung über zwei ONTAP Cluster geschützt werden. 
 ---
 = Fan-out-Schutz in ONTAP tools
 :allow-uri-read: 
@@ -11,37 +11,35 @@ summary: In einem Fan-Out-Schutzszenario ist die Konsistenzgruppe doppelt gesch�
 
 
 [role="lead"]
-In einem Fan-Out-Schutzszenario ist die Konsistenzgruppe doppelt geschützt, mit einer synchronen Beziehung auf dem ersten Ziel ONTAP Cluster und mit einer asynchronen Beziehung auf dem zweiten Ziel ONTAP Cluster.  Die Workflows zum Erstellen, Bearbeiten und Löschen des SnapMirror Active Sync-Schutzes gewährleisten den synchronen Schutz.  Failover- und Reprotect-Workflows der VMware Live Site Recovery-Appliance gewährleisten den asynchronen Schutz.
+Mit Fan-Out-Schutz wird eine Konsistenzgruppe über zwei Ziel-ONTAP-Cluster geschützt. ONTAP tools hält die synchrone Beziehung über die Workflows zum Erstellen, Bearbeiten und Löschen des SnapMirror Active Sync-Schutzes aufrecht, während VMware Live Site Recovery die asynchrone Beziehung über Failover- und Reprotect-Workflows aufrechterhält.
 
 
 NOTE: Fan-Out wird für SVM-Benutzer nicht unterstützt.
 
 Um den Fan-Out-Schutz einzurichten, führen Sie ein Peering der drei Site-Cluster und SVMs durch.
 
+Das folgende Diagramm zeigt die Fan-Out-Schutzkonfiguration: image:../media/fan-out-protection.png["Fan-Out-Schutzkonfiguration"]
+
 Beispiel:
 
-|===
+Wenn:
 
-
-| Wenn | Dann 
-
-
- a| 
 * Die Konsistenzgruppe der Quelle befindet sich auf Cluster c1 und SVM svm1
 * Die erste Ziel-Konsistenzgruppe befindet sich auf Cluster c2 und SVM svm2 und
 * Die zweite Ziel-Konsistenzgruppe befindet sich auf Cluster c3 und SVM svm3
 
- a| 
+
+Dann,
+
 * Der Cluster-Peering auf dem Quell-ONTAP-Cluster ist (C1, C2) und (C1, C3).
 * Der Cluster-Peering auf dem ersten Ziel-ONTAP-Cluster ist (C2, C1) und (C2, C3)
 * Der Cluster-Peering auf dem zweiten Ziel-ONTAP-Cluster sind (C3, C1) und (C3, C2).
 * SVM-Peering auf Quell-SVM wird (svm1, svm2) und (svm1, svm3) sein.
 * SVM-Peering auf der ersten Ziel-SVM wird (svm2, svm1) und (svm2, svm3) und sein
-* SVM-Peering auf zweite Ziel-SVM wird (svm3, svm1) und (svm3, svm2) sein.
+* Das SVM-Peering auf der zweiten Ziel-SVM ist (svm3, svm1) und (svm3, svm2).
 
 
-|===
-Das folgende Diagramm zeigt die Fan-Out-Schutzkonfiguration:image:../media/fan-out-protection.png["Fan-Out-Schutzkonfiguration"] image:../media/fan-out-protection-relationship.png["Fan-Out-Schutzbeziehung"]
+image:../media/fan-out-protection-relationship.png["Fan-Out-Schutzbeziehung"]
 
 .Schritte
 . Wählen Sie einen neuen Platzhalterdatenspeicher aus. Die Auswahlkriterien für den Platzhalterdatenspeicher im Rahmen des phasenweisen Schutzes lauten:
@@ -49,9 +47,9 @@ Das folgende Diagramm zeigt die Fan-Out-Schutzkonfiguration:image:../media/fan-o
 ** Platzieren Sie den Platzhalter-Datenspeicher nicht im Hostcluster, den Sie schützen.
 ** Wenn Sie den Platzhalterdatenspeicher in den Hostcluster einbinden müssen, fügen Sie ihn der VMware Live Site Recovery Appliance hinzu, bevor Sie SnapMirror active sync-Schutz einrichten. Mit dieser Konfiguration können Sie den Platzhalterdatenspeicher vom Schutz ausnehmen.
 +
-Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Wählen Sie einen Platzhalter Datastore aus"]
+Weitere Informationen finden Sie unter https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Einen Platzhalter-Datenspeicher auswählen"]
 
 
 
-. Fügen Sie Datenspeicher zum Hostclusterschutz hinzu, indem Sie link:../manage/edit-hostcluster-protection.html["Geschütztes Host-Cluster ändern"] folgen. Fügen Sie sowohl asynchrone als auch synchrone Richtlinientypen hinzu.
+. Fügen Sie Datenspeicher zum Hostclusterschutz hinzu, indem Sie link:../protect/protect-multiple-ds.html["Datenspeicher in einem Cluster schützen"] folgen. Fügen Sie sowohl asynchrone als auch synchrone Richtlinientypen hinzu.
 

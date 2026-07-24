@@ -1,0 +1,55 @@
+---
+permalink: manage/protect-ds.html 
+sidebar: sidebar 
+keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery 
+summary: Ein geeigneter VMFS-Datenspeicher kann geschützt werden, indem er einer Schutzgruppe mit SnapMirror Replikation hinzugefügt wird. 
+---
+= Einen VMFS-Datenspeicher schützen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dieser Aufgabe wird ein geeigneter VMFS-Datenspeicher geschützt, indem er einer Schutzgruppe hinzugefügt wird.
+
+.Bevor Sie beginnen
+* Der Datenspeicher muss das iSCSI- oder FC-Protokoll verwenden.
+* Bestätigen Sie, dass Sie über Administratorrechte in vSphere verfügen.
+* Es sollte überprüft werden, ob der Datenspeicher bereits Teil einer Schutzgruppe ist.
+
+
+.Schritte
+. Melden Sie sich beim vSphere Client an.
+. Einen Hostcluster auswählen und *Datenspeicher* auswählen.
+. Klicken Sie mit der rechten Maustaste auf den geeigneten VMFS-Datenspeicher, den Sie schützen möchten, und wählen Sie *NetApp ONTAP tools* > *Protect*.
++
+Das System prüft, ob der Datenspeicher für den Schutz geeignet ist. Wenn der Datenspeicher geeignet ist, wird der Schutz-Workflow fortgesetzt. Wenn der Datenspeicher nicht geeignet ist, werden die Gründe in einer Meldung angezeigt und eine Fortsetzung ist nicht möglich.
+
+. Wählen Sie, ob der Datenspeicher zu einer bestehenden Schutzgruppe hinzugefügt oder eine neue Schutzgruppe erstellt werden soll.
++
+.. Um eine bestehende Schutzgruppe zu verwenden, die Schutzgruppe auswählen und fortfahren.
+.. Eine neue Schutzgruppe kann wie folgt erstellt werden:
++
+... Geben Sie einen Namen für die Schutzgruppe an.
+... Wählen Sie *Beziehung Hinzufügen*.
+... Wählen Sie im Fenster *SnapMirror-Beziehung hinzufügen* den Typ *Zielspeicher-VM* und den Typ *Richtlinie* aus.
++
+Der Richtlinientyp kann *asynchron* oder *AutomatedFailOverDuplex* sein.
+
++
+Wenn *AutomatedFailOverDuplex* ausgewählt wird, ist die Ziel-Speicher-VM als Storage-Backend zu demselben vCenter Server hinzuzufügen, auf dem ONTAP tools for VMware vSphere bereitgestellt ist.
+
++
+Für *AutomatedFailOverDuplex* kann eine einheitliche oder nicht einheitliche Hostkonfiguration gewählt werden. Bei Auswahl der Umschaltfläche *einheitliche Hostkonfiguration* wird die Konfiguration der Host-Initiatorgruppe implizit auf den Zielstandort repliziert. Weitere Informationen sind unter link:../concepts/ontap-tools-concepts-terms.html["Schlüsselkonzepte und -Begriffe"] zu finden.
+
+... Wenn eine nicht einheitliche Hostkonfiguration ausgewählt wird, ist für jeden Host im Cluster der Hostzugriff (Quelle/Ziel) auszuwählen.
+
+
+
+
+. *OK* auswählen, um den Schutz-Workflow zu starten.
+
+
+.Ergebnis
+Der Datenspeicher wird in der ausgewählten Schutzgruppe angezeigt. Der Schutzstatus kann über das ONTAP tools Plug-in angezeigt und verwaltet werden.

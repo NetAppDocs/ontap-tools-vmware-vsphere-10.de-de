@@ -1,8 +1,8 @@
 ---
 permalink: deploy/deployment-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: Auf dieser Seite werden die Fehlercodes für die Bereitstellung, den Neustart und die Wiederherstellungsvorgänge von ONTAP-Tools für das VMware vSphere-System erläutert. 
+keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools 
+summary: ONTAP tools Bereitstellungsfehlercodes dienen zur Diagnose und Behebung von Fehlern bei Bereitstellung, Neustart und Wiederherstellung. 
 ---
 = Fehler bei der Bereitstellung von ONTAP tools beheben
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Auf dieser Seite werden die Fehlercodes für die Bereitstellung, den Ne
 
 
 [role="lead"]
-Wenn bei der Bereitstellung Probleme auftreten, überprüfen Sie die Protokolle und Fehlercodes, um die Probleme zu diagnostizieren und zu beheben.  Ab ONTAP tools for VMware vSphere 10.5 umfassen die von den Pods gesammelten Protokollpakete Protokolle von MongoDB, RabbitMQ und Vault sowie den Status und die Beschreibungen aller Pods.  Diese werden zusätzlich zu den vorhandenen Serviceprotokollen der ONTAP Tools bereitgestellt und verbessern die Supportfähigkeit und Fehlerbehebung.
+Wenn Bereitstellungsprobleme auftreten, werden die Protokolle und Fehlercodes zur Diagnose und Behebung der Probleme überprüft. Ab ONTAP tools for VMware vSphere 10.6 enthalten die von den Pods gesammelten Protokollpakete Protokolle von MongoDB, RabbitMQ und Vault sowie den Status und die Beschreibungen aller Pods. ONTAP tools 10.6 bietet außerdem eine Audit-Protokollierung zur Verbesserung der Nachverfolgbarkeit bei der Fehlerbehebung. Diese werden zusätzlich zu den bestehenden ONTAP tools Serviceprotokollen bereitgestellt und verbessern die Supportfähigkeit und Fehlerbehebung.
 
 
 
@@ -56,7 +56,7 @@ NOTE: Das erzeugte Log-Bundle ersetzt das Log-Bundle, das innerhalb der letzten 
 Während der Bereitstellung, des Neustarts und der Wiederherstellungsvorgänge von ONTAP-Tools für VMware vSphere können Fehlercodes auftreten.
 Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skript darstellen, das auf das Problem gestoßen ist, und die letzten drei Ziffern den spezifischen Workflow innerhalb dieses Skripts darstellen.
 
-Alle Fehlerprotokolle werden in der Datei ansible-perl-errors.log im Verzeichnis /var/log aufgezeichnet, um die einfache Verfolgung und Lösung von Problemen zu ermöglichen.  Diese Protokolldatei enthält den Fehlercode und die fehlgeschlagene Ansible-Aufgabe.
+Alle Fehlerprotokolle werden in der Datei ansible-perl-errors.log im Verzeichnis /var/log/otvng gespeichert, um die Nachverfolgung und Behebung von Problemen zu erleichtern. Diese Protokolldatei enthält den Fehlercode und die fehlgeschlagene Ansible Aufgabe.
 
 
 NOTE: Die auf dieser Seite angegebenen Fehlercodes dienen nur als Referenz. Wenden Sie sich an das Support-Team, falls der Fehler weiterhin besteht oder keine Lösung genannt wird.
@@ -129,10 +129,10 @@ Sudo rke2-uninstall.sh (alle VMs).
 | 060 | Die Benutzerbereitstellung ist fehlgeschlagen | Neu Starten 
 
 
-| 061 | Die Bereitstellung der Dienste ist fehlgeschlagen | Führen Sie einfache Kubernetes-Fehlerbehebungen wie get Pods, get rs, get svc usw. im ntv-System-Namespace durch, um weitere Details und Fehlerprotokolle unter /var/log/ansible-perl-errors.log und /var/log/ansible-run.log zu erhalten und Neuimplementierungen durchzuführen. 
+| 061 | Die Bereitstellung der Dienste ist fehlgeschlagen | Grundlegendes Kubernetes-Debugging wie get pods, get rs, get svc usw. im ntv-system Namespace liefert weitere Details und Fehlerprotokolle unter /var/log/otvng/ansible-perl-errors.log und /var/log/otvng/ansible-run.log; anschließend kann eine erneute Bereitstellung erfolgen. 
 
 
-| 062 | Die Bereitstellung der ONTAP Tools Services ist fehlgeschlagen | Weitere Informationen und Neuimplementierungen finden Sie in den Fehlerprotokollen unter /var/log/ansible-perl-errors.log. 
+| 062 | Die Bereitstellung der ONTAP Tools Services ist fehlgeschlagen | Weitere Details stehen in den Fehlerprotokollen unter /var/log/otvng/ansible-perl-errors.log und eine erneute Bereitstellung ist erforderlich. 
 
 
 | 065 | Die URL der Swagger-Seite ist nicht erreichbar | Neuimplementierung 
@@ -143,7 +143,7 @@ Führen Sie folgende Schritte aus, um das Upgrade wiederherzustellen/abzuschlie�
 
 * Diagnose-Shell aktivieren.
 * Führen Sie den Befehl 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy' aus.
-* Überprüfen Sie die Protokolle unter /var/log/post-deploy-upgrade.log.
+* Die Protokolle unter /var/log/otvng/post-deploy-upgrade.log prüfen.
 
 
 
@@ -158,16 +158,6 @@ Führen Sie folgende Schritte aus, um das Upgrade wiederherzustellen/abzuschlie�
 
 
 | 108 | Das Seeding des Skripts ist fehlgeschlagen | - 
-
-
-| 114 | Interne Zertifikatsaktualisierung in der MongoDB-Collection fehlgeschlagen  a| 
-Falls die Bereitstellung mit dem Fehlercode 114 fehlschlägt, führen Sie die folgenden Schritte aus:
-
-* Aktivieren Sie die Diagnose-Shell.
-* Führen Sie folgenden Befehl aus: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* Überprüfen Sie die Protokolle unter `/var/log/otvng/post-deploy-upgrade.log`
-
-
 |===
 |===
 

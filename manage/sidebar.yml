@@ -10,6 +10,8 @@ entries:
   url: "/manage/nested-igroups.html"
 - title: Benutzeroberfläche von ONTAP Tools Manager
   url: "/manage/manager-user-interface.html"
+- title: Verwalten von Revisionsprotokollen für ONTAP tools
+  url: "/manage/audit-logs.html"
 - title: Verwalten der ONTAP Tools Manager-Einstellungen
   entries:
   - title: AutoSupport -Einstellungen bearbeiten
@@ -28,6 +30,10 @@ entries:
   url: "/manage/add-vsphere-host.html"
 - title: Managen von Datastores
   entries:
+  - title: Einen VMFS-Datenspeicher schützen
+    url: "/manage/protect-ds.html"
+  - title: Schutz eines VMFS-Datastores aufheben
+    url: "/manage/unprotect-ds.html"
   - title: Mounten Sie NFS- und VMFS-Datastore
     url: "/manage/mount-datastores-on-host.html"
   - title: Unmounten Sie den NFS- und VMFS-Datastore
@@ -36,6 +42,8 @@ entries:
     url: "/manage/mount-a-vvols-datastore.html"
   - title: Redimensionierung des NFS- und VMFS-Datenspeichers
     url: "/manage/resize-datastores.html"
+  - title: Standardwert für nconnect für ESXi Hosts ändern
+    url: "/manage/nconnect-change-default.html"
   - title: Erweitern Sie den vVol Datastore
     url: "/manage/expand-storage-of-vvol-datastore.html"
   - title: VVols Datastore verkleinern
@@ -94,10 +102,10 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: Verwalten Sie den Schutz des Host-Clusters
   entries:
-  - title: Ändern Sie den Schutz des Host-Clusters
-    url: "/manage/edit-hostcluster-protection.html"
-  - title: Entfernen Sie den Host-Cluster-Schutz
-    url: "/manage/delete-hostcluster-protection.html"
+  - title: Schutzgruppen in ONTAP tools verwalten
+    url: "/manage/manage-protection-groups.html"
+  - title: Hostclusterkonfiguration in ONTAP tools verwalten
+    url: "/manage/manage-host-proximity.html"
 - title: Wiederherstellen des ONTAP Tools-Setups
   url: "/manage/recover-backup.html"
 - title: Deinstallieren Sie die ONTAP-Tools für VMware vSphere

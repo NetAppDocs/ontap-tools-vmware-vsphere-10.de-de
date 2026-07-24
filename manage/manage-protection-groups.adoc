@@ -1,0 +1,105 @@
+---
+permalink: manage/manage-protection-groups.html 
+sidebar: sidebar 
+keywords: manage protection groups, SnapMirror relationships, datastore disaster recovery, ONTAP tools replication groups 
+summary: Schutzgruppen und ihre Beziehungen können in ONTAP tools angezeigt, bearbeitet und gelöscht werden. 
+---
+= Schutzgruppen in ONTAP tools verwalten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit dieser Aufgabe lassen sich Schutzgruppen und deren Beziehungen auf der Seite „Schutzgruppen“ in ONTAP tools anzeigen, bearbeiten und löschen.
+
+.Bevor Sie beginnen
+* Stellen Sie sicher, dass Sie über Administratorrechte in vSphere verfügen.
+* Stellen Sie sicher, dass Ihr ONTAP tools-Benutzerkonto über die Berechtigungen zur Verwaltung von Schutzgruppen verfügt.
+
+
+
+IMPORTANT: Bevor Sie den Schutz bearbeiten oder entfernen, sollten die Warnmeldungen im Dialog überprüft werden. Die Entfernung von Beziehungen kann das Backup- und Konsistenzverhalten beeinflussen.
+
+.Über diese Aufgabe
+* ONTAP tools aktualisiert lokale Schutzdatensätze in der ausgewählten ONTAP tools Instanz.
+* Wenn *Zugehörige Speicherelemente löschen* ausgewählt wird, entfernt ONTAP tools die Speicherelemente in der Schutzgruppe.
+* Wenn Sie *Zugehörige Speicherelemente löschen* nicht auswählen, entfernen Sie die Zielseitenbeziehungen und Speicherelemente in ONTAP manuell.
+
+
+
+
+[[view-protection-groups]]
+== Schutzgruppen anzeigen
+
+.Schritte
+. Im ONTAP tools Plug-in zu *Schutz* > *Schutzgruppen* navigieren.
++
+Die Liste der Schutzgruppen zeigt zugehörige Beziehungen, einschließlich Konsistenzgruppen, SnapMirror Richtlinien und geschützte Datenspeicher.
+
+. Die Details der Schutzgruppe, einschließlich der Anzahl der geschützten Datenspeicher, werden angezeigt.
+
+
+
+
+[[edit-protection-group-relationships]]
+== Beziehungen von Schutzgruppen bearbeiten
+
+.Schritte
+. Im ONTAP tools Plug-in zu *Schutz* > *Schutzgruppen* navigieren.
+. Wählen Sie die vertikale Auslassungspunkte (drei Punkte) neben der Schutzgruppe aus, die bearbeitet werden soll.
+. *Schutzgruppe bearbeiten* auswählen.
+. Beziehungseinstellungen aktualisieren:
++
+.. Wenn eine Schutzgruppe über eine Automated Failover Duplex (AFD)-Beziehung verfügt, kann eine asynchrone Beziehung hinzugefügt werden.
+.. Wenn eine Schutzgruppe eine asynchrone Beziehung aufweist, kann eine Automated Failover Duplex (AFD) Beziehung hinzugefügt werden.
+.. Wenn eine Schutzgruppe sowohl über Automated Failover Duplex (AFD) als auch über asynchrone Beziehungen verfügt, kann jede dieser Beziehungen im Fenster *Schutzgruppe bearbeiten* entfernt werden.
+.. Jede Schutzgruppe kann nur eine Automated Failover Duplex (AFD) Beziehung und eine asynchrone Beziehung haben.
+.. Um eine andere AFD Beziehung zu verwenden, muss die bestehende AFD Beziehung entfernt und anschließend die neue AFD Beziehung hinzugefügt werden.
+.. Wenn eine bestehende Beziehung im Fenster *Schutzgruppe bearbeiten* entfernt wird, ist der Warnhinweis zu beachten, dass die Entfernung der Beziehung Auswirkungen auf Backups und Konsistenz haben kann.
+.. Wenn Sie eine asynchrone Beziehung im Fenster *Schutzgruppe bearbeiten* entfernen, werden die Speicherressourcen auf der Zielseite nicht automatisch gelöscht. Zielseitige Beziehungen und Speicherelemente in ONTAP sind manuell zu entfernen.
+
+
+
+
+
+NOTE: Bearbeitungsvorgänge sind auf unterstützte Beziehungseinstellungen beschränkt. Vor dem Speichern von Änderungen sollten die Datensicherungsstrategie und die Workflow-Anforderungen berücksichtigt werden.
+
+
+
+[[remove-a-protection-group]]
+== Eine Schutzgruppe entfernen
+
+.Schritte
+. Im ONTAP tools Plug-in zu *Schutz* > *Schutzgruppen* navigieren.
+. Die vertikale Ellipse (drei Punkte) neben der Schutzgruppe auswählen, die entfernt werden soll.
+. *Schutz entfernen* auswählen.
+. Im Dialogfeld *Schutz entfernen* wird darauf hingewiesen, dass das Entfernen des Hostclusterschutzes zu ungeschützten Datenspeichern führt.
+. Optional: *Zugehörige Speicherelemente löschen* (Artefakte bereinigen) kann ausgewählt werden, um Speicherelemente in der Schutzgruppe zu entfernen.
++
+Zu den Speicherelementen gehören Konsistenzgruppen, Volumes, Speichereinheiten und Snapshots.
+
+. Wenn Sie *Zugehörige Speicherelemente löschen* nicht auswählen, entfernen ONTAP tools nur lokale Schutzdatensätze. Zielseitige Beziehungen und Speicherelemente in ONTAP sind manuell zu entfernen.
+
+
+[cols="1,1,1,1"]
+|===
+| Beziehungstyp | Bereich löschen | Automatische Bereinigung | Manuelle Bereinigung erforderlich 
+
+
+| Automatisiertes Failover Duplex (AFD) | Das Löschen des Schutzes auf einer der beiden Seiten löscht die Beziehung auf beiden Seiten. | Beziehungsdatensätze werden im Rahmen des Workflows entfernt. | Wenn Sie *Zugehörige Speicherelemente löschen* nicht auswählen, müssen verbleibende Speicherelemente bei Bedarf manuell entfernt werden. 
+
+
+| Asynchron | Löschen gilt nur für die lokale ONTAP tools Instanz; eine standortübergreifende Löschung ist nicht verfügbar. | Lokale Schutzdatensätze werden entfernt. | Manuelles Entfernen von Zielbeziehungen und Speicherelementen in ONTAP. 
+|===
+.Ergebnis
+* ONTAP tools entfernt lokale Schutzdatensätze für die ausgewählte Schutzgruppe.
+* Wenn *Zugehörige Speicherelemente löschen* ausgewählt wurde, entfernt ONTAP tools die ausgewählten Speicherelemente in der Schutzgruppe.
+* Falls auf der Zielseite Beziehungen oder Speicherelemente verbleiben, müssen diese manuell in ONTAP entfernt werden.
+
+
+.Verwandte Themen
+* link:../manage/protect-ds.html["Einen VMFS-Datenspeicher schützen"]
+* link:../protect/protect-multiple-ds.html["Mehrere Datenspeicher schützen"]
+* link:../protect/config-proximity.html["Cluster für den Datenspeicherschutz mit ONTAP tools konfigurieren"]
+

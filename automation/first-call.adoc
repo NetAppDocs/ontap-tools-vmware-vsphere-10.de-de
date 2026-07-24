@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: automation/first-call.html 
-keywords: ontap tools for vmware vsphere rest api reference, first rest api call, acquire access token 
+keywords: first REST API call, access token, curl, authentication 
 summary: Sie können einen API-Aufruf mit Curl ausgeben, um mit den ONTAP-Tools für die REST-API von VMware vSphere 10 zu beginnen. 
 ---
 = Führen Sie Ihren ersten ONTAP tools REST API-Aufruf durch
