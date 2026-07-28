@@ -3122,4 +3122,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="3d3b22ece01725fa79df30b77fa3a31a" category="sidebar">Migration von ONTAP tools für VMware vSphere 9.xx auf 10.6</block>
   <block id="41a5e22b558335c66fd0b39340507737" category="sidebar">Granulare Datenspeicherschutzkonzepte und Berechtigung</block>
   <block id="78b8a2472e1c8fa0502b3ca56bf4d2c2" category="sidebar">Cluster für den Schutz des Datenspeichers konfigurieren</block>
+  <block id="6449edcecf1e41dc6b7285ef82391ccf" category="section-title">Konfigurationsbeschränkungen für die Storage-Backend-Erkennung</block>
+  <block id="1bf037add08fddef448fa6335970a313" category="paragraph">ONTAP tools unterstützt die Erkennung von Storage-Backends für bis zu 200 SVMs und etwa 10.000 LUNs.</block>
 </blocks>

@@ -197,6 +197,13 @@ NOTE: Die Host-Zahlen in der Tabelle stellen die kombinierte Gesamtzahl über al
 
 
 
+[[configuration-limits-for-storage-backend-discovery]]
+== Konfigurationsbeschränkungen für die Storage-Backend-Erkennung
+
+ONTAP tools unterstützt die Erkennung von Storage-Backends für bis zu 200 SVMs und etwa 10.000 LUNs.
+
+
+
 [[configuration-limits-for-vmfs-and-nfs-datastores]]
 == Konfigurationsbeschränkungen für VMFS und NFS-Datenspeicher
 
