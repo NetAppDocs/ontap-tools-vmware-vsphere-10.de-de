@@ -14,14 +14,14 @@ summary: Es wird erläutert, wie vCenter Server RBAC den Zugriff auf vSphere Obj
 
 
 [role="lead"]
-VMware vCenter Server bietet eine RBAC-Funktion, mit der Sie den Zugriff auf vSphere Objekte steuern können. Dies ist ein wichtiger Teil der zentralisierten Authentifizierungs- und Autorisierungssicherheitsdienste von vCenter.
+VMware vCenter Server bietet rollenbasierte Zugriffssteuerung (RBAC), mit der der Zugriff auf vSphere-Objekte gesteuert werden kann. Ein Verständnis dafür, wie vCenter Server-RBAC mit ONTAP tools for VMware vSphere integriert wird, unterstützt eine effektive Verwaltung von Berechtigungen und die Sicherung des Zugriffs auf Speicherressourcen.
 
 
 
 [[illustration-of-a-vcenter-server-permission]]
 == Abbildung einer vCenter Server-Berechtigung
 
-Eine Berechtigung ist die Grundlage für die Durchsetzung der Zugriffskontrolle in der vCenter Server-Umgebung. Sie wird auf ein vSphere-Objekt mit einem Benutzer oder einer Gruppe angewendet, der in der Berechtigungsdefinition enthalten ist. Die Abbildung unten zeigt eine allgemeine Darstellung einer vCenter-Berechtigung.
+Eine Berechtigung bildet die Grundlage für die Durchsetzung der Zugriffskontrolle in der vCenter Server-Umgebung. Sie wird auf ein vSphere Objekt angewendet und umfasst einen Benutzer oder eine Gruppe als Teil der Berechtigungsdefinition. Die folgende Abbildung zeigt eine Übersicht einer vCenter Server-Berechtigung.
 
 image:vc-permission.png["VCenter-Berechtigung"]
 
@@ -44,7 +44,7 @@ Berechtigungen sind vSphere-Objekten wie vCenter Server, ESXi-Hosts, virtuellen 
 [[privileges-and-roles]]
 === Privileges und Rollen
 
-Es gibt zwei Arten von vSphere Privileges, die mit ONTAP-Tools für VMware vSphere 10 verwendet werden. Um die Arbeit mit RBAC in dieser Umgebung zu vereinfachen, bietet ONTAP Tools Rollen, die die erforderlichen nativen und benutzerdefinierten Privileges enthalten. Die Privileges umfassen:
+ONTAP tools für VMware vSphere verwendet zwei Arten von vSphere-Berechtigungen. Zur Vereinfachung der Arbeit mit rollenbasierter Zugriffssteuerung (RBAC) in dieser Umgebung stellt ONTAP tools Rollen mit den erforderlichen nativen und benutzerdefinierten Berechtigungen bereit. Zu den Berechtigungen gehören:
 
 * Native vCenter Server-Berechtigungen
 +
@@ -61,4 +61,4 @@ Hierbei handelt es sich um individuelle Privileges, die nur bei ONTAP Tools für
 [[users-and-groups]]
 === Benutzer und Gruppen
 
-Sie können Benutzer und Gruppen über Active Directory oder die lokale vCenter Server-Instanz definieren. In Kombination mit einer Rolle können Sie eine Berechtigung für ein Objekt in der vSphere-Objekthierarchie erstellen. Die Berechtigung gewährt Zugriff basierend auf den Berechtigungen der zugehörigen Rolle. Beachten Sie, dass Rollen nicht isoliert Benutzern direkt zugewiesen werden. Stattdessen erhalten Benutzer und Gruppen Zugriff auf ein Objekt über Rollenberechtigungen als Teil der umfassenderen vCenter Server-Berechtigung.
+Benutzer und Gruppen können mithilfe von Active Directory oder der lokalen vCenter Server-Instanz definiert werden. In Kombination mit einer Rolle lässt sich eine Berechtigung für ein Objekt in der vSphere Objekt-Hierarchie erstellen. Die Berechtigung gewährt Zugriff basierend auf den Privilegien der zugehörigen Rolle. Rollen werden nicht direkt isoliert Benutzern zugewiesen. Stattdessen erhalten Benutzer und Gruppen Zugriff auf ein Objekt durch Rollenprivilegien als Teil der umfassenderen vCenter Server-Berechtigung.

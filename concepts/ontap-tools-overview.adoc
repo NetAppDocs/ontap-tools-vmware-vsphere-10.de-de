@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ONTAP tools overview, virtual machine lifecycle, VASA Provider, disaster recovery 
 summary: Es wird erläutert, wie ONTAP tools for VMware vSphere die Verwaltung des Speicherlebenszyklus virtueller Maschinen, die Bereitstellung von Datenspeichern und die Notfallwiederherstellung unterstützt. 
 ---
-= Erfahren Sie mehr über ONTAP tools
+= Erfahren Sie mehr über ONTAP Tools für VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools für VMware vSphere ist eine Sammlung von Werkzeugen für das Lebenszyklusmanagement von Speichersystemen virtueller Maschinen. Es integriert sich in das VMware-Ökosystem, um die Bereitstellung von Datenspeichern zu vereinfachen und grundlegenden Schutz für virtuelle Maschinen bereitzustellen. Es ist eine Sammlung horizontal skalierbarer, ereignisgesteuerter Microservices, die als Open Virtual Appliance (OVA) bereitgestellt werden.
+ONTAP tools for VMware vSphere ist eine Sammlung von Tools für das Lebenszyklusmanagement virtueller Maschinen. Es integriert sich in das VMware-Ökosystem, um die Bereitstellung von Datenspeichern zu vereinfachen und grundlegenden Schutz sowie Notfallwiederherstellung für virtuelle Maschinen bereitzustellen. Als Open Virtual Appliance (OVA) bereitgestellt, nutzt es horizontal skalierbare, ereignisgesteuerte Microservices, um zuverlässige Leistung im großen Maßstab bereitzustellen.
 
 ONTAP tools for VMware vSphere unterstützen:
 
@@ -21,7 +21,7 @@ ONTAP tools for VMware vSphere unterstützen:
 * Storage Replication Adapter (SRA)
 
 
-.Hohe Verfügbarkeit für ONTAP -Tools für VMware
+.Hohe Verfügbarkeit für ONTAP tools für VMware vSphere
 ONTAP tools for VMware vSphere bieten Hochverfügbarkeitsunterstützung (HA), um bei Ausfällen einen unterbrechungsfreien Betrieb aufrechtzuerhalten.
 
 Die HA-Lösung unterstützt Sie bei der schnellen Wiederherstellung nach den folgenden Arten von Ausfällen:

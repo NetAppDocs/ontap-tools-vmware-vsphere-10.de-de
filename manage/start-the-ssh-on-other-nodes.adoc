@@ -11,7 +11,7 @@ summary: SSH auf anderen Knoten sollte gestartet werden, bevor ein Upgrade durch
 
 
 [role="lead"]
-Sie müssen SSH auf anderen Nodes vor dem Upgrade starten.
+Bevor Sie ein Upgrade von ONTAP tools for VMware vSphere durchführen, müssen Sie SSH auf jedem der anderen Nodes in Ihrer Umgebung starten.
 
 .Bevor Sie beginnen
 Aktivieren Sie die VASA Provider-Erweiterung für Ihre vCenter Server-Instanz.

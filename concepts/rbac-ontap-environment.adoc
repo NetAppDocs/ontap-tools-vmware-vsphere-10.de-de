@@ -14,17 +14,17 @@ summary: Die ONTAP RBAC Umgebung und deren Steuerung des Zugriffs auf Speicher u
 
 
 [role="lead"]
-ONTAP bietet eine robuste und erweiterbare RBAC-Umgebung. Über die RBAC-Funktion kann der Zugriff auf Storage- und Systemvorgänge gesteuert werden, da diese über die REST-API und CLI offengelegt werden. Es ist besonders hilfreich, mit der Umgebung vertraut zu sein, bevor sie mit ONTAP Tools für die Implementierung von VMware vSphere 10 verwendet wird.
+ONTAP bietet eine robuste und erweiterbare RBAC-Umgebung, die den Zugriff auf Speicher und Systemvorgänge über die REST API und CLI steuert. Das Verständnis von ONTAP RBAC-Konzepten, einschließlich Rollentypen, Geltungsbereichen und Berechtigungen, unterstützt die Konfiguration und Verwaltung des Benutzerzugriffs für die ONTAP tools for VMware vSphere 10-Bereitstellung.
 
 
 
 [[overview-of-the-administrative-options]]
 == Überblick über die administrativen Optionen
 
-Bei der Nutzung von ONTAP RBAC stehen Ihnen je nach Umgebung und Zielen verschiedene Optionen zur Verfügung. Im Folgenden wird ein Überblick über die wichtigsten Verwaltungsentscheidungen gegeben. Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["ONTAP Automatisierung: Überblick über die RBAC-Sicherheit"^].
+Bei der Verwendung von ONTAP RBAC stehen je nach Umgebung und Zielen verschiedene Optionen zur Verfügung. Die folgenden Abschnitte bieten einen Überblick über die wichtigsten administrativen Entscheidungen. Siehe auch https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["ONTAP Automatisierung: Überblick über die RBAC-Sicherheit"^] für weitere Informationen.
 
 
-NOTE: ONTAP RBAC ist auf eine Speicherumgebung zugeschnitten und einfacher als die mit vCenter Server bereitgestellte RBAC-Implementierung.  Mit ONTAP weisen Sie dem Benutzer direkt eine Rolle zu.  Das Konfigurieren expliziter Berechtigungen, wie sie beispielsweise bei vCenter Server verwendet werden, ist bei ONTAP RBAC nicht erforderlich.
+NOTE: ONTAP RBAC ist speziell für Speicherumgebungen entwickelt und einfacher als die mit vCenter Server bereitgestellte RBAC-Implementierung. Mit ONTAP wird die Rolle dem Benutzer direkt zugewiesen. Im Gegensatz zu vCenter Server erfordert ONTAP RBAC keine explizite Konfiguration von Berechtigungen.
 
 .Rollen- und Privileges-Typen
 Beim Definieren eines ONTAP-Benutzers ist eine ONTAP-Rolle erforderlich. Es gibt zwei Arten von ONTAP-Rollen:
@@ -39,7 +39,7 @@ Dies sind die Legacy-Rollen, die vor ONTAP 9.6 existierten. Sie sind weiterhin e
 
 
 
-Obwohl die REST-Rollen erst vor Kurzem eingeführt wurden, bieten die traditionellen Rollen einige Vorteile. Beispielsweise können zusätzliche Abfrageparameter hinzugefügt werden, damit Privileges die Objekte, auf die sie angewendet werden, genauer definieren können.
+Obwohl die REST-Rollen erst vor Kurzem eingeführt wurden, bieten die traditionellen Rollen einige Vorteile. Beispielsweise können zusätzliche Abfrageparameter angegeben werden, sodass Berechtigungen die Objekte, auf die sie sich beziehen, genauer definieren.
 
 .Umfang
 ONTAP-Rollen können mit einem von zwei verschiedenen Bereichen definiert werden. Sie können auf eine bestimmte Daten-SVM (SVM-Ebene) oder auf das gesamte ONTAP-Cluster (Cluster-Ebene) angewendet werden.
@@ -52,7 +52,7 @@ ONTAP bietet vordefinierte Rollen auf Cluster- und SVM-Ebene. Sie können auch b
 [[working-with-ontap-rest-roles]]
 == Arbeiten mit ONTAP-REST-Rollen
 
-Bei der Verwendung der in ONTAP Tools für VMware vSphere 10 enthaltenen ONTAP REST-Rollen müssen verschiedene Aspekte berücksichtigt werden.
+Folgendes ist bei der Verwendung der ONTAP REST-Rollen zu beachten, die in ONTAP tools for VMware vSphere 10 enthalten sind.
 
 .Rollenzuordnung
 Alle Entscheidungen für den ONTAP-Zugriff basierend auf dem zugrunde liegenden CLI-Befehl werden unabhängig davon getroffen, ob sie eine klassische Rolle oder eine REST-Rolle verwenden. Da die Privileges in einer REST-Rolle jedoch in Bezug auf die REST-API-Endpunkte definiert sind, muss ONTAP für jede der REST-Rollen eine traditionelle _Mapping_ Rolle erstellen. Daher wird jede REST-Rolle einer zugrunde liegenden herkömmlichen Rolle zugeordnet. Dadurch kann ONTAP unabhängig vom Rollentyp Entscheidungen zur Zugriffssteuerung konsistent treffen. Sie können die parallel zugeordneten Rollen nicht ändern.

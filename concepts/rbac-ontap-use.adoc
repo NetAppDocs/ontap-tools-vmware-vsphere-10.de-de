@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ONTAP RBAC deployment, custom roles, user configuration, JSON role definition 
 summary: Vor der Verwendung von ONTAP tools für VMware vSphere in einer Produktionsumgebung sind die ONTAP RBAC-Überlegungen für ONTAP tools zu berücksichtigen. 
 ---
-= ONTAP RBAC-Überlegungen für ONTAP tools
+= ONTAP RBAC in ONTAP tools für VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Es gibt verschiedene Aspekte der ONTAP Tools für die Implementierung der rollenbasierten Zugriffssteuerung von VMware vSphere 10 mit ONTAP, die Sie vor dem Einsatz in einer Produktionsumgebung in Betracht ziehen sollten.
+ONTAP tools für VMware vSphere unterstützt rollenbasierte Zugriffssteuerung (RBAC) durch ONTAP, wodurch benutzerdefinierte Benutzer und Rollen erstellt werden können, die den Zugriff auf Speicherressourcen einschränken. Das Verständnis des Konfigurationsprozesses und der Berechtigungsstufen erleichtert die Einrichtung geeigneter Zugriffskontrollen, bevor ONTAP tools in einer Produktionsumgebung eingesetzt werden.
 
 
 
@@ -20,7 +20,7 @@ Es gibt verschiedene Aspekte der ONTAP Tools für die Implementierung der rollen
 
 ONTAP tools for VMware vSphere umfassen Unterstützung für die Erstellung eines ONTAP Benutzers mit einer benutzerdefinierten Rolle.  Die Definitionen sind in einer JSON-Datei verpackt, die Sie in den ONTAP Cluster hochladen können.  Sie können den Benutzer erstellen und die Rolle an Ihre Umgebung und Sicherheitsanforderungen anpassen.
 
-Die wichtigsten Konfigurationsschritte werden auf einer der folgenden Ebenen beschrieben. link:../configure/configure-user-role-and-privileges.html["Konfigurieren Sie ONTAP-Benutzerrollen und -Berechtigungen"]Weitere Informationen finden Sie unter.
+Im folgenden Abschnitt werden die wichtigsten Konfigurationsschritte im Überblick beschrieben. Weitere Details sind unter link:../configure/configure-user-role-and-privileges.html["Konfigurieren Sie ONTAP-Benutzerrollen und -Berechtigungen"] zu finden.
 
 .1. Vorbereiten
 Sie müssen über Administratoranmeldeinformationen sowohl für den ONTAP Tools Manager als auch für den ONTAP Cluster verfügen.
@@ -32,7 +32,7 @@ Nachdem Sie sich bei der Benutzeroberfläche von ONTAP Tools Manager angemeldet 
 Nach der Anmeldung bei System Manager können Sie den Benutzer und die Rolle erstellen:
 
 . Wählen Sie *Cluster* auf der linken Seite und dann *Einstellungen*.
-. Scrollen Sie nach unten zu *Benutzer und Rollen* und klicken Sie auf `-->`.
+. Scrollen Sie nach unten zu *Benutzer und Rollen* und wählen  `-->`.
 . Wählen Sie *Add* unter *Users* und wählen Sie *Virtualization products* aus.
 . Wählen Sie die JSON-Datei auf Ihrer lokalen Workstation aus, und laden Sie sie hoch.
 
@@ -59,7 +59,7 @@ Die RBAC-Definitionen sind in Form von verschiedenen Produktfunktionen gebündel
 [[privileges]]
 === Berechtigungen
 
-Die Rollenberechtigungen sind in vier Gruppen unterteilt, basierend auf dem für ONTAP Storage benötigten Zugriffsniveau. Die den Rollen zugrunde liegenden Privileges umfassen:
+Die Rollenberechtigungen sind in vier Gruppen unterteilt, basierend auf dem für ONTAP Storage benötigten Zugriffsniveau. Die den Rollen zugrunde liegenden Berechtigungen umfassen:
 
 * Ermitteln
 +
@@ -84,7 +84,7 @@ Mit dieser Rolle können Sie Speicher zerstören. Sie umfasst auch alle Privileg
 [[generate-the-user-with-a-role]]
 === Benutzer mit einer Rolle generieren
 
-Nachdem Sie die Konfigurationsoptionen für Ihre Umgebung ausgewählt haben, klicken Sie auf *Hinzufügen* und ONTAP erstellt den Benutzer und die Rolle. Der Name der generierten Rolle ist eine Verkettung der folgenden Werte:
+Nachdem Sie die Konfigurationsoptionen für Ihre Umgebung ausgewählt haben, wählen Sie *Hinzufügen* und ONTAP erstellt den Benutzer und die Rolle. Der Name der generierten Rolle ist eine Verkettung der folgenden Werte:
 
 * In der JSON-Datei definierter konstanter Präfixwert (z.B. „OTV_10“)
 * Ausgewählte Produktfunktion
@@ -94,4 +94,4 @@ Nachdem Sie die Konfigurationsoptionen für Ihre Umgebung ausgewählt haben, kli
 .Beispiel
 `OTV_10_VSC_Discovery_Create`
 
-Der neue Benutzer wird der Liste auf der Seite „Benutzer und Rollen“ hinzugefügt. Beachten Sie, dass sowohl HTTP- als auch ONTAPI-Benutzeranmeldemethoden unterstützt werden.
+Der neue Benutzer erscheint in der Liste auf der Seite *Benutzer und Rollen*. Sowohl HTTP- als auch ONTAPI-Benutzeranmeldemethoden werden unterstützt.

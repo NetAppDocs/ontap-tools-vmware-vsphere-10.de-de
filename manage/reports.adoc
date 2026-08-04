@@ -4,17 +4,17 @@ sidebar: sidebar
 keywords: ONTAP tools reports, virtual machine reports, datastore reports, VMware storage reporting 
 summary: Berichte zu virtuellen Maschinen und Datenspeichern sind im ONTAP tools Plug-in verfügbar. 
 ---
-= Berichte zu ONTAP Tools
+= ONTAP tools für VMware vSphere Berichte
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP Tools für das VMware vSphere Plug-in bieten Berichte für Virtual Machines und Datastores. Wenn Sie im Abschnitt „Verknüpfungen“ des vCenter-Clients das Symbol „NetApp ONTAP-Tools für VMware vSphere“ auswählen, wechselt die Benutzeroberfläche zur Seite „Übersicht“. Wählen Sie die Registerkarte Berichte aus, um die virtuelle Maschine und den Bericht Datastores anzuzeigen.
+Das ONTAP tools for VMware vSphere Plug-in stellt Berichte bereit, die bei der Überwachung von virtuellen Maschinen und Datenspeichern unterstützen, die durch ONTAP Storage bereitgestellt werden. Diese Berichte sind über das ONTAP tools for VMware vSphere Plug-in-Symbol im Bereich „Verknüpfungen“ des vCenter Clients und anschließend über die Registerkarte „Berichte“ zugänglich.
 
-Der Bericht „Virtuelle Maschinen“ zeigt die Liste der erkannten virtuellen Maschinen (sollte mindestens eine Festplatte aus ONTAP Speicher-basierten Datenspeichern haben) mit Leistungsmetriken. Wenn Sie den VM-Datensatz erweitern, zeigt die Benutzeroberfläche alle datenspeicherbezogenen Informationen zum Datenträger an.
+Der Bericht „Virtuelle Maschinen“ listet entdeckte virtuelle Maschinen auf, die mindestens eine Festplatte auf einem ONTAP Storage-basierten Datenspeicher haben, zusammen mit Leistungskennzahlen. Beim Erweitern des VM-Eintrags zeigt die Oberfläche alle festplattenbezogenen Datenspeicherinformationen an.
 
-Der Datenspeicherbericht listet die von ONTAP tools for VMware vSphere erkannten oder identifizierten Datenspeicher auf, die ONTAP -Speicher verwenden, und gibt Leistungskennzahlen an.
+Der Datenspeicherbericht listet die Datenspeicher auf, die ONTAP tools for VMware vSphere erkennt und die ONTAP Storage verwenden, zusammen mit Leistungskennzahlen.
 
 Mit der Option Spalten verwalten können Sie verschiedene Spalten ein- oder ausblenden.

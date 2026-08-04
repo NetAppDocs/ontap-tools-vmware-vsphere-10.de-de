@@ -11,7 +11,7 @@ summary: Datenspeicher auf zusätzlichen Hosts einbinden, nachdem Hosts zur VMwa
 
 
 [role="lead"]
-Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speicher zugreifen. Nachdem Sie die Hosts der VMware Umgebung hinzugefügt haben, können Sie den Datastore auf den zusätzlichen Hosts einbinden.
+Durch das Einbinden eines Datenspeichers erhalten zusätzliche Hosts Zugriff auf den Speicher, nachdem sie Ihrer VMware-Umgebung hinzugefügt wurden.
 
 
 NOTE: Nach dem Hinzufügen des Hosts sollte abgewartet werden, bis die geplante Host-Erkennung abgeschlossen ist, bevor er in ONTAP tools angezeigt wird. Alternativ kann die Erkennung manuell über die Übersicht der NetApp ONTAP tools ausgeführt werden. Informationen zum Hinzufügen eines ESXi Hosts zu Ihrem vSphere Cluster sind unter  https://techdocs.broadcom.com/["Broadcom Technische Dokumentation"] zu finden.
@@ -20,11 +20,10 @@ NOTE: Nach dem Hinzufügen des Hosts sollte abgewartet werden, bis die geplante 
 * Einige Rechtsklick-Aktionen sind abhängig von der vSphere-Client-Version und dem ausgewählten Datastore-Typ deaktiviert oder nicht verfügbar.
 +
 ** Wenn Sie vSphere Client 8.0 oder höher verwenden, sind einige der Optionen mit der rechten Maustaste ausgeblendet.
-** Von vSphere 7.0U3 bis vSphere 8.0, obwohl die Optionen angezeigt werden, wird die Aktion deaktiviert.
+** Von vSphere 7.0U3 bis vSphere 8.0 werden die Optionen zwar angezeigt, die Aktion ist jedoch deaktiviert.
 
 
 * vSphere deaktiviert die Option "Mount Datastore", wenn der Host-Cluster mit einheitlichen Konfigurationen geschützt ist.
-* Wenn ein Datenspeicher mit nconnect auf einem neuen Host eingebunden wird, wenden die ONTAP tools den nconnect-Wert des Datenspeichers an, falls dieser den Wert des Hosts überschreitet.
 
 
 .Schritte

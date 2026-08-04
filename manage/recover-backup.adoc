@@ -11,7 +11,7 @@ summary: ONTAP tools aus Backups wiederherstellen und das Verhalten bei Zero-RPO
 
 
 [role="lead"]
-Ab ONTAP tools for VMware vSphere 10.5 ist die Backup-Funktion standardmäßig aktiviert.
+Die ONTAP tools for VMware vSphere Einrichtung kann wiederhergestellt werden, indem sie aus einer auf dem Datenspeicher gespeicherten Sicherungsdatei zurückgespielt wird. Ab ONTAP tools for VMware vSphere 10.5 ist die Sicherungsfunktion standardmäßig aktiviert, sodass eine aktuelle Sicherung verfügbar ist, falls eine erneute Bereitstellung oder Wiederherstellung der Appliance erforderlich ist.
 
 Der Datenspeicher, in dem Sie ONTAP tools for VMware vSphere Maschinen bereitstellen, speichert die Sicherungsdateien.  Ein Ordner, der nach der IP-Adresse des ONTAP -Tools benannt ist (Punkte durch Unterstriche ersetzt und mit _OTV_backup_ angehängt), enthält die beiden aktuellsten Sicherungsdateien (_OTV_backup_1.tar.enc_ und _OTV_backup_2.tar.enc_) und eine Infodatei (_OTV_backup_info.txt_), die den Namen der aktuellsten Sicherung enthält.
 
@@ -40,7 +40,7 @@ scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
 ----
 +
 
-NOTE: Ändern Sie nicht den im Befehl angegebenen Zielpfad und Dateinamen (/home/diag/system_recovery.tar.enc).
+NOTE: Der im Befehl angegebene Zielpfad und Dateiname (/home/diag/system_recovery.tar.enc) sollte nicht geändert werden.
 
 . Nachdem die Sicherungsdatei übertragen wurde, melden Sie sich bei der Diagnose-Shell an und führen Sie den folgenden Befehl aus:
 +

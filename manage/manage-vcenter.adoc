@@ -11,7 +11,7 @@ summary: In ONTAP tools vCenter-Instanzen verwalten, um Hosts, virtuelle Maschin
 
 
 [role="lead"]
-VCenter Server-Instanzen sind zentrale Management-Plattformen, mit denen Sie Hosts, Virtual Machines und Storage-Back-Ends steuern können.
+vCenter Server-Instanzen sind zentrale Verwaltungsplattformen, mit denen Sie Hosts, virtuelle Maschinen und Storage-Backends steuern können. In ONTAP tools können Storage-Backends getrennt, Instanzdetails geändert, Instanzen entfernt und vCenter Server-Zertifikate erneuert werden.
 
 
 
@@ -33,12 +33,14 @@ Auf der Listingseite des vCenter-Servers wird die zugehörige Anzahl von Speiche
 [[modify-a-vcenter-server-instance]]
 == Ändern Sie eine vCenter Server-Instanz
 
+Eine vCenter Server-Instanz kann durch Ausführen der folgenden Schritte geändert werden.
+
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . *vCenters* aus der Seitenleiste auswählen.
 . Wählen Sie die vertikalen Auslassungspunkte für den vCenter Server aus, den Sie bearbeiten möchten, und wählen Sie *Ändern*.
 . Geben Sie im Fenster *vCenter ändern* den Benutzernamen, das Kennwort und die Portdetails ein.
-. Laden Sie das Zertifikat hoch und wählen Sie *Ändern*.
+. Das Zertifikat wird hochgeladen und *Ändern* ausgewählt.
 
 
 
@@ -117,7 +119,7 @@ ONTAP tools benachrichtigt Sie, wenn das vCenter-Zertifikat bald abläuft oder b
 ----
 echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
 ----
-. Stellen Sie sicher, dass das Zertifikat im Base64-ASCII-Format vorliegt und die Anfangs- und Endzeile enthält, zum Beispiel:
+. Es sollte geprüft werden, ob das Zertifikat im Base 64-ASCII-Format vorliegt und die Anfangs- sowie Endzeile enthält, zum Beispiel:
 +
 [listing]
 ----

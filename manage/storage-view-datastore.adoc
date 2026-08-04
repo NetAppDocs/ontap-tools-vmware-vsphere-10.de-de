@@ -11,7 +11,7 @@ summary: Details zu Datenspeicher und Volumes sind auf der ONTAP Storage-Seite i
 
 
 [role="lead"]
-Auf der Seite ONTAP Storage im Tab *Konfigurieren* werden Informationen zu Datastores und Volumes angezeigt.
+ONTAP tools for VMware vSphere zeigt auf der Registerkarte „Konfigurieren“ die ONTAP-Speicherseitenansicht der Datenspeicher und ihrer Volumes, einschließlich Storage-Backend-, Aggregat- und Volume-Details für jeden Datenspeichertyp.
 
 .Schritte
 . Im vSphere Client-Inventar den Datenspeicher auswählen.
@@ -25,13 +25,13 @@ Auf der Seite ONTAP Storage im Tab *Konfigurieren* werden Informationen zu Datas
 | *Datenspeichertyp* | *Informationen verfügbar* 
 
 
-| NFS-Datenspeicher | Die Seite *Speicherdetails* enthält Informationen zu Storage-Backends, Aggregaten und Volumes. Die Seite *NFS Details* enthält Daten zum NFS-Datenspeicher. Hinweis: Wenn der nconnect-Wert außerhalb von ONTAP tools geändert wird, spiegelt der in ONTAP tools angezeigte Wert diese externe Änderung möglicherweise nicht wider. 
+| NFS Datenspeicher | Die Seite *Speicherdetails* enthält Informationen zum Storage-Backend, zum Aggregat und zum Volume. Die Seite *NFS details* enthält Daten zum NFS-Datenspeicher. Hinweis: Wenn der nconnect-Wert außerhalb von ONTAP tools geändert wird, spiegelt der in ONTAP tools angezeigte Wert diese externe Änderung möglicherweise nicht wider. 
 
 
-| VMFS-Datastores | Die Seite *Speicherdetails* enthält Informationen zum Speicher-Backend, zu Aggregaten, Volumes und zur Speicherverfügbarkeitszone (SAZ). Die Seite *Speichereinheitendetails* enthält Details zu den Speichereinheiten. 
+| VMFS-Datastores | Die Seite *Speicherdetails* enthält Informationen zum Storage-Backend, Aggregat, Volume und zur Storage Availability Zone (SAZ). Die Seite *Speichereinheitendetails* enthält Details zur Speichereinheit. 
 
 
-| VVols Datastores | Listet alle Bände auf. Sie können Speicher im ONTAP Speicherbereich erweitern oder entfernen. ONTAP Tools unterstützen diese Ansicht nicht für ASA r2-System-basierte vVols Datenspeicher. 
+| VVols Datastores | Auf dieser Seite werden alle Volumes aufgelistet. Im ONTAP Speicherbereich kann Speicher erweitert oder entfernt werden. ONTAP tools for VMware vSphere unterstützt diese Ansicht nicht für ASA r2 systembasierte vVols Datenspeicher. 
 |===
 .Ergebnis
 Die Details des ONTAP-seitigen Datenspeichers lassen sich abhängig vom ausgewählten Datenspeichertyp anzeigen.

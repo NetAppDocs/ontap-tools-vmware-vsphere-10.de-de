@@ -11,14 +11,14 @@ summary: Speicher-Backends verwalten, die ESXi-Hosts für die Datenspeicherung v
 
 
 [role="lead"]
-Storage-Back-Ends sind Systeme, die die ESXi Hosts zum Speichern von Daten verwenden.
+Storage-Backends sind Systeme, die ESXi-Hosts zur Datenspeicherung verwenden. Storage-Backends lassen sich mit ONTAP tools for VMware vSphere ermitteln, ändern und entfernen.
 
 
 
 [[discover-storage]]
 == Storage erkennen
 
-Sie können die Erkennung eines Speicher-Backends bei Bedarf ausführen, ohne auf eine geplante Erkennung warten zu müssen, um die Speicherdetails sofort zu aktualisieren.  Führen Sie bei MetroCluster -Konfigurationen die Erkennung der ONTAP Tools nach einem Switchover manuell aus.
+Sie können die Speicher-Backend-Erkennung bedarfsgesteuert ausführen, anstatt auf die nächste geplante Erkennung zur Aktualisierung der Speicherdetails zu warten. Für MetroCluster Konfigurationen sollte die ONTAP tools-Erkennung nach einem Switchover manuell ausgeführt werden.
 
 Führen Sie die folgenden Schritte aus, um die Speicher-Back-Ends zu ermitteln.
 
@@ -36,7 +36,7 @@ Sie können den Fortschritt im Fenster „Letzte Aufgaben“ verfolgen.
 [[modify-storage-backends]]
 == Speicherbackends ändern
 
-Sie können die Anmeldeinformationen des Speicher-Backends oder den Portnamen ändern.  Sie können das Speicher-Backend für globale ONTAP Cluster auch mit dem ONTAP Tools Manager ändern.  Wenn das Zertifikat in 30 Tagen oder weniger abläuft, zeigen die ONTAP Tools eine Warnung an.  Ändern Sie das Speicher-Backend und laden Sie das neue Zertifikat vom ONTAP Administrator hoch.
+Sie können die Zugangsdaten für das Storage-Backend oder den Portnamen ändern. Das Storage-Backend für globale ONTAP Cluster kann auch mit ONTAP tools Manager angepasst werden. Wenn das Zertifikat in 30 Tagen oder weniger abläuft, zeigt ONTAP tools eine Warnung an. Das Storage-Backend sollte angepasst und das neue Zertifikat vom ONTAP Administrator hochgeladen werden.
 
 Wenn Sie das Speicher-Backend ändern, führen ONTAP tools for VMware vSphere eine Erkennung des Speicher-Backends durch, um die Speicherdetails zu aktualisieren.
 
@@ -68,7 +68,7 @@ Sie müssen alle an das Speicher-Backend angeschlossenen Datenspeicher entfernen
 . Melden Sie sich beim vSphere-Client an.
 . Wählen Sie auf der Shortcuts-Seite unter dem Plug-ins-Abschnitt *NetApp ONTAP Tools* aus.
 . Gehen Sie im linken Bereich der ONTAP -Tools zu *Storage Backends* und wählen Sie ein Storage Backend aus.
-. Wählen Sie das vertikale Auslassungszeichen-Menü und dann *Entfernen*. Stellen Sie sicher, dass das Storage-Backend keine Datastores enthält. Der Fortschritt kann im Bereich „Letzte Aufgaben“ verfolgt werden.
+. Wählen Sie das Menü mit den drei vertikalen Punkten und dann *Entfernen*. Es sollte sichergestellt sein, dass das Storage-Backend keine Datenspeicher enthält. Der Fortschritt lässt sich im Bereich „Letzte Aufgaben“ nachverfolgen.
 
 
 Sie können globale ONTAP-Cluster mit ONTAP tools Manager entfernen.
@@ -85,7 +85,7 @@ Sie können globale ONTAP-Cluster mit ONTAP tools Manager entfernen.
 [[drill-down-view-of-storage-backend]]
 == Drilldown-Ansicht des Storage-Back-End
 
-Auf der Speicher-Backend-Seite sind alle Speicher-Backends aufgelistet.  Sie können Vorgänge zum Erkennen, Ändern und Entfernen von Speicher auf den von Ihnen hinzugefügten Speicher-Backends ausführen, jedoch nicht auf den einzelnen untergeordneten SVMs unter dem Cluster.
+Die Seite „Speicher-Backend“ listet alle Speicher-Backends auf. Sie können die hinzugefügten Speicher-Backends ermitteln, ändern und entfernen, aber diese Vorgänge können nicht für die einzelnen untergeordneten SVMs im Cluster durchgeführt werden.
 
 Wählen Sie den übergeordneten oder untergeordneten Cluster aus, um die Komponentenübersicht anzuzeigen.  Verwenden Sie für den übergeordneten Cluster das Dropdown-Menü „Aktionen“, um Speicher zu ermitteln und das Speicher-Backend zu ändern oder zu entfernen.
 
@@ -97,8 +97,8 @@ Die Übersichtsseite enthält folgende Details:
 * Zertifikatsdetails wie Zertifikatsstatus und Ablaufdatum.
 * Netzwerkinformationen wie IP-Adresse und Port des Netzwerks.  Für die untergeordnete SVM sind die Informationen dieselben wie für das übergeordnete Speicher-Backend.
 * Privileges erlaubt und eingeschränkt für das Storage-Backend. Für das untergeordnete SVM sind die Informationen dieselben wie für das übergeordnete Storage-Backend. ONTAP tools zeigt Privileges nur bei clusterbasierten Storage-Backends an. Wenn Sie SVM als Storage-Backend hinzufügen, werden keine Privileges-Informationen angezeigt.
-* Die Drilldown-Ansicht des ASA R2-Systemclusters enthält keine Registerkarte „Lokale Ebenen“, wenn die disaggregierte Eigenschaft für die SVM oder den Cluster auf „true“ gesetzt ist.
-* Bei ASA r2 SVM-Systemen wird das Portlet „Capacity“ nicht angezeigt. Das Kapazitätsportal ist nur erforderlich, wenn die disaggregierte Eigenschaft für die SVM oder den Cluster als „true“ festgelegt ist.
+* Die Drilldown-Ansicht des ASA r2 Systemclusters enthält nicht die Registerkarte „Lokale Ebenen“, wenn die Eigenschaft „disaggregated“ für die SVM oder den Cluster auf „true“ gesetzt ist.
+* Bei ASA r2 SVM-Systemen wird das Kapazitäts-Portlet nicht angezeigt. Das Kapazitäts-Portlet ist nur erforderlich, wenn die Eigenschaft „disaggregiert“ für die SVM oder den Cluster auf „true“ gesetzt ist.
 * Für ASA r2 SVM-Systeme wird im Abschnitt grundlegende Informationen der Plattformtyp angezeigt.
 
 
