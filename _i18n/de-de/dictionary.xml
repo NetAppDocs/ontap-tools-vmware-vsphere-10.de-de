@@ -2016,8 +2016,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="dc99d10a215fcfc7c9cc258f6b526f04" category="doc">Konfigurieren Sie SRA mithilfe des Array-Managers in ONTAP tools</block>
   <block id="f825d08cca5235c68d18f5f167189a42" category="doc">Konfigurieren Sie SRA auf der VMware Live Site Recovery Appliance mithilfe von ONTAP tools</block>
   <block id="8c8cc20f279873e3e2c26985f73dde50" category="doc">Platzhalterdatenspeicher in ONTAP tools konfigurieren</block>
-  <block id="7daa54a7e34530faf73a185cac6ff92e" category="doc">Konfigurieren von geschützten und Wiederherstellungsstandorten in ONTAP tools</block>
-  <block id="7f76078e340f36a84d5f402d8a9e9ed2" category="doc">Konfigurieren Sie SRA in ONTAP tools für hochskalierte Umgebungen</block>
   <block id="366099eedc535323fc065faade609247" category="doc">Konfigurieren Sie SRA in ONTAP tools for VMware vSphere für SAN- und NAS-Umgebungen</block>
   <block id="36acaddf44788c31be5317a19ff8bcfa" category="doc">Konfigurieren Sie SRA in ONTAP tools, um Datastores zu schützen</block>
   <block id="866ca228b7c9c7c4dd7f33b4edfe6343" category="doc">Fan-out-Schutz in ONTAP tools</block>
@@ -2851,7 +2849,6 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="41d5b3331c49688beabf64a476565b2f" category="paragraph">Weitere Informationen finden Sie unter<block ref="63042c288d643bd286f708c30aa7eeb1" category="inline-link-rx"></block></block>
   <block id="70ada8320af8255a677b6ffe7e62fb77" category="list-text">Fügen Sie Datenspeicher zum Hostclusterschutz hinzu, indem Sie <block ref="606bd525eb6add3259ec861686535f41" category="inline-link-macro-rx"></block> folgen. Fügen Sie sowohl asynchrone als auch synchrone Richtlinientypen hinzu.</block>
   <block id="30c3acc62ace9fe8b9f51083513c9b1f" category="summary">Vor dem Schutz von Datenspeichern in einem Host-Cluster empfiehlt es sich, sich mit dem granularen Datenspeicherschutz und den Kriterien für die Datenspeicherberechtigung vertraut zu machen.</block>
-  <block id="f8bdb2b4320068538b2e660cf5594097" category="doc">Kriterien für die Eignung zum Schutz granularer Datenspeicher</block>
   <block id="7a6c5f13c11ac0091369e5de3372b041" category="paragraph">Granularer Datenspeicherschutz ermöglicht den Schutz ausgewählter VMFS-Datenspeicher in einem Host-Cluster, ohne den gesamten Cluster zu schützen.</block>
   <block id="94ba1053dfcb4c2f50ecb31c2a3a48e9" category="paragraph">Granularer Datenspeicherschutz ist mit ONTAP tools for VMware vSphere 10.6 und höher verfügbar. Diese Funktion bietet eine Planung des Schutzes auf Datenspeicherebene statt einer clusterweiten Auswahl.</block>
   <block id="5885c3f17ed13c3b9ddcd82efb888751" category="paragraph">Diese Funktion ermöglicht Ihnen Folgendes:</block>
@@ -3123,4 +3120,7 @@ Die Fehlercodes sind fünf Ziffern lang, wobei die ersten beiden Ziffern das Skr
   <block id="f02ba84a6292d236b6193eb515758b58" category="cell">Auf dieser Seite werden alle Volumes aufgelistet. Im ONTAP Speicherbereich kann Speicher erweitert oder entfernt werden. ONTAP tools for VMware vSphere unterstützt diese Ansicht nicht für ASA r2 systembasierte vVols Datenspeicher.</block>
   <block id="d6ac92fc703f8db58239689a33a3a860" category="doc">Deinstallation Ihrer ONTAP tools für VMware vSphere Bereitstellung</block>
   <block id="675f332e8d70702f8454fa3cd1db7207" category="paragraph">Durch die Deinstallation von ONTAP tools for VMware vSphere werden alle Daten in den Tools gelöscht, daher sollten diese Schritte abgeschlossen werden, um die Bereitstellung ordnungsgemäß zu beenden und unerwarteten Datenverlust zu vermeiden.</block>
+  <block id="61aba9a185948f67b0e30c93c8bd8745" category="doc">Standorte koppeln und Schutzgruppen in ONTAP Tools konfigurieren</block>
+  <block id="2f1ee6929021bf5cd62c7d2d50b7d710" category="doc">SRA Zeitüberschreitungseinstellungen für hochskalierte Umgebungen in ONTAP tools</block>
+  <block id="ead0b27d7cf57e3420b139c5b99f4200" category="doc">Granulare Kriterien für den Schutz von Datenspeichern in ONTAP Tools</block>
 </blocks>

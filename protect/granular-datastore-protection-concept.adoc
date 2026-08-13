@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
 summary: Vor dem Schutz von Datenspeichern in einem Host-Cluster empfiehlt es sich, sich mit dem granularen Datenspeicherschutz und den Kriterien für die Datenspeicherberechtigung vertraut zu machen. 
 ---
-= Kriterien für die Eignung zum Schutz granularer Datenspeicher
+= Granulare Kriterien für den Schutz von Datenspeichern in ONTAP Tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

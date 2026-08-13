@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: protection groups, VMware Live Site Recovery, SnapMirror, datastore protection, ONTAP tools 
 summary: Schutzgruppen für virtuelle Maschinen am geschützten Standort erstellen und die Speichererkennung nach dem Hinzufügen von Datenspeichern zu geschützten Volumes aktualisieren. 
 ---
-= Konfigurieren von geschützten und Wiederherstellungsstandorten in ONTAP tools
+= Standorte koppeln und Schutzgruppen in ONTAP Tools konfigurieren
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
