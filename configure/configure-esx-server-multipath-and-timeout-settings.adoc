@@ -6,17 +6,21 @@ summary: ESXi-Host-Multipathing- und HBA-Zeitüberschreitungseinstellungen für 
 ---
 = Konfigurieren der ESXi-Hosteinstellungen in ONTAP tools
 :allow-uri-read: 
+:firstname: = Configure ESXi host settings in ONTAP tools
+:author: = Configure ESXi host settings in ONTAP tools
+:authorinitials: =
+:authors: = Configure ESXi host settings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Durch die Konfiguration der Multipath- und Timeout-Einstellungen des ESXi-Servers können Sie die Datenverfügbarkeit und -integrität aufrechterhalten.  Es ermöglicht ein automatisches Failover auf einen Backup-Speicherpfad, wenn der primäre Pfad nicht mehr verfügbar ist.
+Die Konfiguration der Multipath- und Zeitüberschreitung-Einstellungen des ESXi-Hosts trägt zur Aufrechterhaltung der Datenverfügbarkeit und -integrität bei. Sie ermöglicht automatisches Failover auf einen Backup-Speicherpfad, falls der primäre Pfad nicht verfügbar ist.
 
 
 
-[[configure-esxi-server-multipath-and-timeout-settings]]
-== Konfigurieren Sie die Multipath- und Timeout-Einstellungen des ESXi-Servers
+[[apply-recommended-esxi-host-settings]]
+== Empfohlene ESXi Host-Einstellungen anwenden
 
 Die ONTAP Tools für VMware vSphere prüfen und legen die Multipath-Einstellungen für ESXi Hosts und die HBA-Zeitüberschreitungseinstellungen fest, die für NetApp Storage-Systeme am besten geeignet sind.
 
@@ -27,7 +31,7 @@ Dieser Vorgang kann je nach Konfiguration und Systemauslastung einige Zeit in An
 . Wählen Sie auf der VMware vSphere Web Client-Startseite *Hosts und Cluster* aus.
 . Wählen Sie auf der Seite Verknüpfungen des VMware vSphere Web-Clients im Abschnitt Plug-ins *NetApp ONTAP-Tools* aus.
 . Gehen Sie in der Übersicht (Dashboard) der ONTAP Tools für VMware vSphere Plug-in zur *ESXi Host Compliance* Karte.
-. Wählen Sie den Link *Empfohlene Einstellungen anwenden*.
+. Den Link *Empfohlene Einstellungen anwenden* auswählen.
 . Wählen Sie im Fenster *Empfohlene Hosteinstellungen anwenden* die Hosts aus, die Sie aktualisieren möchten, um die empfohlenen NetApp -Einstellungen zu verwenden, und wählen Sie *Weiter*.
 +
 
@@ -51,7 +55,7 @@ Auf einem ESXi-Host können Sie die folgenden Werte festlegen:
 [[hbacna-adapter-settings]]
 === HBA/CNA-Adaptereinstellungen
 
-Setzt die folgenden Parameter auf Standardwerte:
+ONTAP tools setzt die folgenden Parameter auf Standardwerte:
 
 * Disk.QFullSampleSize
 * Disk.QFullThreshold
@@ -64,7 +68,7 @@ Setzt die folgenden Parameter auf Standardwerte:
 [[mpio-settings]]
 === MPIO-Einstellungen
 
-MPIO-Einstellungen wählen die besten Pfade für NetApp -Speichersysteme aus.  Wählen Sie in den MPIO-Einstellungen den besten Pfad aus und verwenden Sie ihn.
+Die MPIO-Einstellungen wählen und nutzen den besten verfügbaren Pfad für NetApp Speichersysteme.
 
 Passen Sie für Hochleistungsumgebungen oder beim Testen mit einem einzelnen LUN-Datenspeicher die Lastausgleichseinstellung der Round-Robin-Pfadauswahlrichtlinie (VMW_PSP_RR) an, um die Leistung zu verbessern.  Setzen Sie den Standard-IOPS-Wert von 1000 auf 1.
 
@@ -77,8 +81,6 @@ NOTE: Die MPIO-Einstellungen gelten nicht für die Protokolle NVMe, NVMe/FC und 
 === NFS-Einstellungen
 
 |===
-
-
 | Parameter | Wert festlegen auf... 
 
 

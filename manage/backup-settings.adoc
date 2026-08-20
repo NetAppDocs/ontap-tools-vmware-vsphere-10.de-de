@@ -11,13 +11,13 @@ summary: ONTAP tools Backup kann aktiviert oder deaktiviert und die Sicherungsh�
 
 
 [role="lead"]
-Ab ONTAP tools for VMware vSphere 10.5 ist die Backup-Funktion standardmäßig aktiviert und alle 10 Minuten wird ein Backup erstellt.  Sie können die Sicherung deaktivieren oder die Häufigkeit der Sicherung bearbeiten.
+Ab ONTAP tools for VMware vSphere 10.5 sind Backups standardmäßig aktiviert und werden alle 10 Minuten ausgeführt. Backups können deaktiviert oder die Backup-Frequenz geändert werden.
 
-Deaktivieren Sie die Sicherung nicht, da dies die ONTAP -Tools daran hindert, einen niedrigen RPO aufrechtzuerhalten.  Durch das Deaktivieren der Sicherung werden die vorhandenen Sicherungsdateien nicht gelöscht.  Sie können die Häufigkeit der Sicherung auf einen Wert zwischen 10 und 60 Minuten ändern.
+Deaktivieren Sie die Datensicherung nicht, da dies ONTAP tools daran hindert, ein niedriges Wiederherstellungspunktziel (RPO) einzuhalten. Das Deaktivieren der Datensicherung löscht die vorhandenen Sicherungsdateien nicht. Die Häufigkeit der Datensicherung kann auf einen Wert zwischen 10 und 60 Minuten geändert werden.
 
 .Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie die Option *Einstellungen* > *Sicherung* > *Bearbeiten*.
-. Im Bearbeitungsfenster können Sie die Sicherung deaktivieren oder die Sicherungshäufigkeit bearbeiten.
+. Im Bearbeitungsfenster lässt sich die Datensicherung deaktivieren oder die Sicherungshäufigkeit ändern.
 

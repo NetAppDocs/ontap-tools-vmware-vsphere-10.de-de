@@ -11,7 +11,7 @@ summary: ESXi Hosts, LUNs, NFS Exporte und NetApp Speichersysteme werden in ONTA
 
 
 [role="lead"]
-Wenn ONTAP tools for VMware vSphere zum ersten Mal im vSphere Client gestartet wird, werden automatisch ESXi-Hosts, die zugehörigen LUNs und NFS-Exporte sowie die NetApp -Speichersysteme, denen diese Ressourcen gehören, erkannt.
+Wenn ONTAP tools for VMware vSphere im vSphere Client zum ersten Mal gestartet wird, werden ESXi-Hosts, die zugehörigen LUNs und NFS-Exporte sowie die NetApp Speichersysteme, denen diese Ressourcen zugeordnet sind, automatisch erkannt.
 
 .Bevor Sie beginnen
 * Stellen Sie sicher, dass alle ESXi-Hosts eingeschaltet und verbunden sind.
@@ -25,7 +25,7 @@ Bei der Erkennung der Speichersysteme erfasst ONTAP-Tools für VMware vSphere In
 
 .Schritte
 . Auf der Startseite des vSphere Clients die Option *Hosts und Cluster* auswählen.
-. Mit der rechten Maustaste auf das gewünschte Rechenzentrum klicken und *NetApp ONTAP tools* > *Host- und Speicherdaten aktualisieren* auswählen.
+. Klicken Sie mit der rechten Maustaste auf das gewünschte Rechenzentrum und wählen Sie *NetApp ONTAP tools* > *Host- und Speicherdaten aktualisieren*.
 +
 Bestätigen Sie im Dialogfeld *Bestätigen* Ihre Auswahl.
 

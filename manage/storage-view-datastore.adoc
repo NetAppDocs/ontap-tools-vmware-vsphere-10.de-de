@@ -11,7 +11,7 @@ summary: Details zu Datenspeicher und Volumes sind auf der ONTAP Storage-Seite i
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere zeigt auf der Registerkarte „Konfigurieren“ die ONTAP-Speicherseitenansicht der Datenspeicher und ihrer Volumes, einschließlich Storage-Backend-, Aggregat- und Volume-Details für jeden Datenspeichertyp.
+ONTAP tools for VMware vSphere zeigt auf der Registerkarte *Konfigurieren* ONTAP-seitige Details für Datenspeicher und deren Volumes an, einschließlich Storage-Backend-, Aggregat- und Volume-Details für jeden Datenspeichertyp.
 
 .Schritte
 . Im vSphere Client-Inventar den Datenspeicher auswählen.

@@ -11,14 +11,14 @@ summary: Nach dem Löschen virtueller Maschinen sollte eine VASA-Bereinigung dur
 
 
 [role="lead"]
-Um den VASA-Bereinigungsprozess abzuschließen, befolgen Sie diese Schritte.
+Die folgenden Schritte führen zur vollständigen VASA-Bereinigung in ONTAP tools.
 
 
-NOTE: Es wird empfohlen, vor Beginn der VASA-Bereinigung alle vVols -Datenspeicher zu entfernen.
+NOTE: Alle vVols Datenspeicher sollten entfernt werden, bevor die VASA-Bereinigung gestartet wird.
 
 .Schritte
-. Heben Sie die Registrierung des Plug-ins auf, indem Sie zu \https://OTV_IP:8143/Register.html gehen
+. Öffnen  `\https://OTV_IP:8143/Register.html`, um das Plug-in zu deregistrieren.
 . Vergewissern Sie sich, dass das Plug-in nicht mehr auf dem vCenter Server verfügbar ist.
-. Fahren Sie die ONTAP Tools für VMware vSphere VM herunter.
+. Die ONTAP tools for VMware vSphere virtuelle Maschine (VM) wird heruntergefahren.
 . Löschen Sie ONTAP Tools für VMware vSphere VM.
 

@@ -11,7 +11,7 @@ summary: Virtuelle Maschinen-Datenträger können angehängt oder entfernt werde
 
 
 [role="lead"]
-Befolgen Sie diese Schritte, um Datenträger an virtuelle Maschinen in vSphere anzuhängen oder zu trennen und deren Speicherressourcen zu verwalten.
+Datenfestplatten an oder von virtuellen Maschinen in vSphere anhängen oder trennen, um die Speicherkapazität zu verwalten.
 
 
 
@@ -22,10 +22,10 @@ Schließen Sie eine Datenfestplatte an eine virtuelle Maschine an, um mehr Speic
 
 .Schritte
 . Melden Sie sich beim vSphere-Client an.
-. Klicken Sie mit der rechten Maustaste auf eine virtuelle Maschine im Inventar und wählen Sie *Einstellungen bearbeiten*.
+. Mit der rechten Maustaste auf eine virtuelle Maschine im Inventar klicken und *Einstellungen bearbeiten* auswählen.
 . Wählen Sie auf der Registerkarte *Virtual Hardware* *existing Hard Disk* aus.
-. Wählen Sie die virtuelle Maschine aus, auf der das Laufwerk vorhanden ist.
-. Wählen Sie die Festplatte aus, die Sie anschließen möchten, und klicken Sie auf die Schaltfläche *OK*.
+. Wählen Sie die virtuelle Maschine aus, die die Festplatte enthält.
+. Wählen Sie die Festplatte aus, die Sie anschließen möchten, und wählen Sie *OK* aus.
 
 
 .Ergebnis
@@ -36,7 +36,7 @@ Die Festplatte wird in der Liste Virtuelle Hardwaregeräte angezeigt.
 [[detach-a-data-disk-from-the-virtual-machine]]
 == Trennen Sie ein Datenlaufwerk von der virtuellen Maschine
 
-Trennen Sie eine Datenfestplatte von einer virtuellen Maschine, wenn Sie sie nicht mehr benötigen.  Die Festplatte wird nicht gelöscht; sie verbleibt im ONTAP -Speichersystem.
+Eine Datenfestplatte kann von einer virtuellen Maschine getrennt werden, wenn sie nicht mehr benötigt wird. Die Festplatte wird nicht gelöscht und verbleibt im ONTAP Speichersystem.
 
 .Schritte
 . Melden Sie sich beim vSphere-Client an.

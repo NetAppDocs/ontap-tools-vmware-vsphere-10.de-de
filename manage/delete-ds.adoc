@@ -11,7 +11,7 @@ summary: Ein NFS-, VMFS- oder vVols Datastore kann gelöscht und die virtuellen 
 
 
 [role="lead"]
-Diese Aufgabe dient dazu, NFS-, VMFS- oder vVols Datenspeicher mithilfe von ONTAP tools in vCenter Server zu löschen. Das Löschverhalten und die Bereinigungsoptionen unterscheiden sich je nach Datenspeichertyp.
+NFS-, VMFS- oder vVols Datenspeicher im vCenter Server mithilfe von ONTAP tools löschen. Das Löschverhalten und die Bereinigungsoptionen variieren je nach Datenspeichertyp.
 
 .Löschverhalten für NFS und VMFS Datenspeicher
 * Ein Datenspeicher, der von virtuellen Maschinen verwendet wird, kann nicht gelöscht werden.
@@ -24,7 +24,7 @@ Für vVols Datenspeicher werden folgende Aktionen durchgeführt:
 * Der vVol-Container ist ausgehängt.
 * Wenn die Initiatorgruppe nicht verwendet wird, werden ihre Initiatoren aus der Initiatorgruppe entfernt.
 * Der vVol-Container wird gelöscht.
-* Flex-Volumes verbleiben auf dem Speicherarray.
+* FlexVols verbleiben auf dem Storage-Backend.
 
 
 Für vVols Datenspeicher kann der Datenspeicher nur gelöscht werden, wenn sich keine vVols auf dem ausgewählten Datenspeicher befinden.
@@ -50,7 +50,7 @@ Für vVols Datenspeicher kann der Datenspeicher nur gelöscht werden, wenn sich 
 |===
 .Schritte
 . Melden Sie sich beim vSphere Client an.
-. Klicken Sie mit der rechten Maustaste auf ein Hostsystem, einen Hostcluster oder ein Rechenzentrum und wählen Sie * NetApp ONTAP Tools* > *Datenspeicher löschen*.
+. Klicken Sie mit der rechten Maustaste auf ein Hostsystem, einen Hostcluster oder ein Rechenzentrum und wählen Sie *NetApp ONTAP tools* > *Datenspeicher löschen*.
 +
 
 NOTE: Ein von virtuellen Maschinen verwendeter Datenspeicher kann nicht gelöscht werden. Vor dem Löschen müssen die virtuellen Maschinen in einen anderen Datenspeicher verschoben werden.

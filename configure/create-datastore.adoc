@@ -11,9 +11,12 @@ summary: NFS-, VMFS- oder vVols Datenspeicher in ONTAP tools auf Host- oder Host
 
 
 [role="lead"]
-Wenn Sie einen Datenspeicher auf Hostclusterebene erstellen, mounten ONTAP Tools ihn auf allen Zielhosts und aktivieren die Aktion nur, wenn Sie über die erforderlichen Berechtigungen verfügen.
+Einen NFS-, VMFS- oder vVols Datenspeicher auf Host- oder Hostclusterebene erstellen. Wird ein Datenspeicher auf Hostclusterebene erstellt, mounten die ONTAP tools diesen auf allen Zielhosts, sofern die erforderlichen Privileges vorhanden sind.
 
-*Interoperabilität zwischen nativen Datenspeichern mit vCenter Server und von ONTAP-Tools verwalteten Datenspeichern*
+
+
+[[interoperability-between-native-datastores-and-ontap-tools-managed-datastores]]
+== Interoperabilität zwischen nativen Datenspeichern und ONTAP tools verwalteten Datenspeichern
 
 Ab ONTAP tools for VMware vSphere 10.4 erstellen ONTAP Tools verschachtelte igroups für Datenspeicher, wobei übergeordnete igroups spezifisch für Datenspeicher und untergeordnete igroups den Hosts zugeordnet sind.  Sie können flache igroups vom ONTAP System Manager aus erstellen und diese zum Erstellen von VMFS-Datenspeichern verwenden, ohne ONTAP Tools zu verwenden. Siehe https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Verwalten von SAN-Initiatoren und igroups"] für weitere Informationen.
 
@@ -43,7 +46,7 @@ NOTE: Das ASA r2 System unterstützt die iSCSI- und FC-Protokolle für VVols.
 . Wählen Sie die Storage-VM aus, auf der der Datastore erstellt werden soll.
 . Unter *Erweiterte Optionen*:
 +
-** Wenn die *Benutzerdefinierte Exportrichtlinie* ausgewählt wird, sollte die Erkennung in vCenter für alle Objekte vor dem Fortfahren durchgeführt werden. Die Verwendung dieser Option wird nicht empfohlen.
+** Wenn Sie die *Benutzerdefinierte Exportrichtlinie* auswählen, führen Sie die Erkennung in vCenter für alle Objekte durch, bevor Sie fortfahren. NetApp empfiehlt, diese Option nicht zu verwenden.
 ** Sie können einen *benutzerdefinierten Initiatorgruppen*-Namen für die iSCSI- und FC-Protokolle auswählen.
 +
 
@@ -61,7 +64,7 @@ Beim Erstellen eines neuen Volumes können Sie QoS für den Datenspeicher aktivi
 --
 .Erstellen Sie einen NFS-Datastore
 --
-Ein NFS-Datenspeicher verbindet ESXi-Hosts über das NFS-Protokoll mit gemeinsam genutztem Speicher. Er ist einfach und flexibel und wird in VMware vSphere Umgebungen verwendet.
+Ein NFS-Datenspeicher verbindet ESXi Hosts über das NFS-Protokoll mit gemeinsam genutztem Speicher. Er ist einfach und flexibel, und VMware vSphere Umgebungen verwenden ihn häufig.
 
 .Schritte
 . Melden Sie sich beim vSphere Client an.
@@ -84,7 +87,7 @@ NOTE: Kerberos-Authentifizierung ist nur verfügbar, wenn das NFS 4.1-Protokoll 
 NOTE: Sie können keinen NFS-Datenspeicher mithilfe der Standard- oder Root-Volume-Richtlinie der SVM erstellen.
 
 +
-** In den *Erweiterten Optionen* ist die Umschalttaste *Asymmetrisch* nur sichtbar, wenn im Dropdown-Menü Plattform die Option Leistung oder Kapazität ausgewählt ist. Die Option *Asymmetrisch* gilt jedoch nicht für die Erstellung von NFS-Datenspeichern.
+** In den *Erweiterten Optionen* ist die Schaltfläche *Asymmetrisch* nur sichtbar, wenn in der Dropdown-Liste „Plattform“ „Leistung“ oder „Kapazität“ ausgewählt wird. Die Option *Asymmetrisch* gilt jedoch nicht für die Erstellung von NFS-Datenspeichern.
 ** Wenn im Dropdown-Menü für die Plattform die Option *Beliebig* ausgewählt wird, sind alle SVMs im vCenter sichtbar. Plattform- und asymmetrische Einstellungen haben keinen Einfluss auf die Sichtbarkeit.
 
 
@@ -118,7 +121,7 @@ NOTE: VMware vSphere 7.0 U3 und neuere Versionen unterstützen das NVMe/TCP-Prot
 
 * Wenn Sie das NVMe/FC-Protokoll verwenden, sind die folgenden Schritte zur Konfiguration des ESXi-Hosts erforderlich:
 +
-.. Falls NVMe over Fabrics (NVMe-oF) noch nicht aktiviert ist, sollte es auf dem/den ESXi-Host(s) aktiviert werden.
+.. Falls NVMe over Fabrics (NVMe-oF) noch nicht aktiviert ist, sollte es auf Ihren ESXi Hosts aktiviert werden.
 .. Vollständiges SCSI-Zoning
 .. Stellen Sie sicher, dass ESXi-Hosts und das ONTAP-System auf einer physischen und logischen Ebene verbunden sind.
 

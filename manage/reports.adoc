@@ -11,10 +11,10 @@ summary: Berichte zu virtuellen Maschinen und Datenspeichern sind im ONTAP tools
 
 
 [role="lead"]
-Das ONTAP tools for VMware vSphere Plug-in stellt Berichte bereit, die bei der Überwachung von virtuellen Maschinen und Datenspeichern unterstützen, die durch ONTAP Storage bereitgestellt werden. Diese Berichte sind über das ONTAP tools for VMware vSphere Plug-in-Symbol im Bereich „Verknüpfungen“ des vCenter Clients und anschließend über die Registerkarte „Berichte“ zugänglich.
+Das ONTAP tools for VMware vSphere Plug-in stellt Berichte bereit, die bei der Überwachung von virtuellen Maschinen und Datenspeichern unterstützen, die durch ONTAP Storage bereitgestellt werden. Die Berichte sind über das ONTAP tools for VMware vSphere Plug-in Symbol im Bereich „Verknüpfungen“ des vSphere Clients und anschließend über die Registerkarte *Reports* zugänglich.
 
-Der Bericht „Virtuelle Maschinen“ listet entdeckte virtuelle Maschinen auf, die mindestens eine Festplatte auf einem ONTAP Storage-basierten Datenspeicher haben, zusammen mit Leistungskennzahlen. Beim Erweitern des VM-Eintrags zeigt die Oberfläche alle festplattenbezogenen Datenspeicherinformationen an.
+Der Bericht „Virtuelle Maschinen“ listet gefundene virtuelle Maschinen auf, die mindestens eine Festplatte auf einem ONTAP Storage-basierten Datenspeicher haben, zusammen mit Leistungskennzahlen. Beim Erweitern eines VM-Eintrags sind alle Datenspeicherinformationen zu den Festplatten sichtbar.
 
 Der Datenspeicherbericht listet die Datenspeicher auf, die ONTAP tools for VMware vSphere erkennt und die ONTAP Storage verwenden, zusammen mit Leistungskennzahlen.
 
-Mit der Option Spalten verwalten können Sie verschiedene Spalten ein- oder ausblenden.
+Die Option *Spalten verwalten* ermöglicht das Ein- oder Ausblenden von Spalten.

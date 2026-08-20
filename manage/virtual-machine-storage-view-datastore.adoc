@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine storage view, vVols list per VM, ONTAP tools VM storage details, datastore usage by virtual machine 
 summary: In der Speicheransicht wird die Liste der von einer virtuellen Maschine erstellten vVols angezeigt. 
 ---
-= Ansicht des Speichers virtueller Maschinen in ONTAP tools
+= Details zum Speicher virtueller Maschinen in ONTAP tools anzeigen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Die Speicheransicht zeigt die Liste der vVols an, die die virtuelle Maschine erstellt.
+In der Speicheransicht werden die vVols angezeigt, die einer virtuellen Maschine zugeordnet sind.
 
 
 NOTE: Diese Ansicht gilt für VMs mit mindestens einer Festplatte aus einem von ONTAP tools for VMware vSphere verwalteten vVols Datenspeicher.
@@ -19,8 +19,8 @@ NOTE: Diese Ansicht gilt für VMs mit mindestens einer Festplatte aus einem von 
 .Schritte
 . Gehen Sie vom vSphere-Client zur virtuellen Maschine.
 . Wählen Sie im rechten Fensterbereich die Registerkarte *Monitor* aus.
-. Wählen Sie *NetApp ONTAP Tools* > *Speicher*. Die *Speicher*-Details werden im rechten Fensterbereich angezeigt. Sie können die Liste der VVols anzeigen, die auf der VM vorhanden sind.
+. *NetApp ONTAP tools* > *Storage* auswählen. Die *Storage*-Details erscheinen im rechten Bereich. Die Liste der vVols auf der VM ist sichtbar.
 +
-Sie können die Option „Spalten verwalten“ verwenden, um verschiedene Spalten ein- oder auszublenden.
+Die Option *Spalten verwalten* ermöglicht das Ein- oder Ausblenden von Spalten.
 
 

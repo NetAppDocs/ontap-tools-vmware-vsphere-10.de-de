@@ -16,14 +16,14 @@ Diese Aufgabe dient dazu, einen NFS- oder VMFS-Datenspeicher von ESXi-Hosts zu t
 Ab ONTAP tools 10.6 ist das Aushängen für geschützte VMFS-Datenspeicher blockiert.
 
 .Schritte
-. Melden Sie sich beim vSphere-Client an.
+. Melden Sie sich beim vSphere Client an.
 . Klicken Sie mit der rechten Maustaste auf ein NFS- oder VMFS-Datenspeicherobjekt und wählen Sie *Datenspeicher aushängen*.
 +
 Der vSphere Client öffnet ein Dialogfeld und listet die ESXi-Hosts auf, die den Datenspeicher eingebunden haben. Wenn der Datenspeicher geschützt ist, blockieren die ONTAP tools die Anfrage und zeigen eine Meldung an, dass der Datenspeicher unter Schutz steht und nicht ausgehängt werden kann.
 
 . Wählen Sie einen oder mehrere ESXi-Hosts aus, um die Bereitstellung des Datastore aufzuheben.
 +
-Sie können den Datastore nicht von allen Hosts abladen. Die Benutzeroberfläche schlägt vor, dass Sie stattdessen den Vorgang zum Löschen von Datenspeichern verwenden.
+Sie können den Datenspeicher nicht von allen Hosts aushängen. Die Benutzeroberfläche schlägt stattdessen die Verwendung des Vorgangs „Datenspeicher löschen“ vor.
 
 . Wählen Sie die Schaltfläche *Unmount*.
 +

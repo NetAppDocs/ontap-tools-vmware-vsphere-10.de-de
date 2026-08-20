@@ -4,19 +4,25 @@ sidebar: sidebar
 keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
 summary: Ein globales Storage-Backend wird mit einer vCenter Server-Instanz in ONTAP tools verknüpft. 
 ---
-= Verknüpfen Sie ein Storage-Backend mit einer vCenter Server-Instanz in ONTAP tools
+= Ordnen Sie ein Storage-Back-End einer vCenter Server-Instanz zu
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Mit dieser Aufgabe kann ein globales Speicher-Backend mit einer vCenter Server-Instanz verknüpft werden. Ein globales Speicher-Backend ist ein Backend, das im ONTAP tools Manager hinzugefügt wurde und noch keiner bestimmten vCenter Server-Instanz zugeordnet ist. Für NetApp MetroCluster Konfigurationen sollte beim Verknüpfen eines Speicher-Backend-Clusters auch dessen Peer-Cluster mit dem vCenter Server verknüpft werden.
+Ein globales Storage-Backend, das im ONTAP tools Manager hinzugefügt, aber noch keiner bestimmten vCenter Server-Instanz zugeordnet wurde, kann mit einer vCenter Server-Instanz verknüpft werden. Für NetApp MetroCluster Konfigurationen wird außerdem der Peer-Cluster mit dem vCenter Server verknüpft.
 
 .Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
-. Wählen Sie in der Randleiste vCenter aus.
+. *vCenter* in der Seitenleiste auswählen.
 . Wählen Sie die vertikale Ellipse neben der vCenter Serverinstanz aus, die mit den Storage-Backends verbunden werden soll.
 . Wählen Sie aus dem Dropdown-Menü das Speicher-Backend aus, das Sie mit der ausgewählten vCenter Server-Instanz verknüpfen möchten.
 
+
+
+NOTE: Für NetApp MetroCluster Konfigurationen sollte beim Verknüpfen eines Speicher-Backend-Clusters auch dessen Peer-Cluster mit dem vCenter Server verknüpft werden.
+
+.Was kommt als Nächstes?
+ONTAP tools verknüpft das ausgewählte Speicher-Backend mit der vCenter Serverinstanz und stellt es so für Datenspeicheroperationen in dieser vCenter Serverumgebung zur Verfügung.

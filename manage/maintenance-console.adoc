@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration 
 summary: ONTAP tools Konfigurationen verwalten, Passwörter zurücksetzen, Support-Bundles generieren und TLS-Einstellungen konfigurieren. 
 ---
-= Erfahren Sie mehr über die ONTAP tools maintenance console
+= ONTAP tools Wartungskonsole
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,12 +13,12 @@ summary: ONTAP tools Konfigurationen verwalten, Passwörter zurücksetzen, Suppo
 [role="lead"]
 Die Wartungskonsole für ONTAP tools for VMware vSphere ermöglicht die Verwaltung von Anwendungs-, System- und Netzwerkeinstellungen.  Sie können Administrator- und Wartungspasswörter aktualisieren, Support-Bundles generieren, Protokollierungsstufen konfigurieren, TLS-Einstellungen verwalten und die Ferndiagnose aktivieren.
 
-Nach der Bereitstellung der ONTAP tools for VMware vSphere und falls die Wartungskonsole nicht erreichbar ist, installieren Sie die VMware-Tools vom vCenter Server aus.  Melden Sie sich mit dem `maint` Benutzername und das während der Bereitstellung festgelegte Passwort.  Verwenden Sie *nano*, um Dateien in der Wartungskonsole oder der Root-Login-Konsole zu bearbeiten.
+Nach der Bereitstellung von ONTAP tools for VMware vSphere ist bei nicht erreichbarer Wartungskonsole die Installation der VMware Tools vom vCenter Server erforderlich. Die Anmeldung erfolgt mit dem `maint` Benutzernamen und dem während der Bereitstellung festgelegten Passwort. *nano* dient zum Bearbeiten von Dateien in der Wartungs- oder Root-Anmeldekonsole.
 
 
-NOTE: Sie sollten ein Kennwort für das festlegen `diag` Benutzer, während die Ferndiagnose aktiviert wird.
+NOTE: Ein Passwort für den  `diag`Benutzer wird festgelegt, wenn die Remote-Diagnose aktiviert wird.
 
-Sie sollten die Registerkarte *Zusammenfassung* Ihrer bereitgestellten ONTAP-Tools für VMware vSphere verwenden, um auf die Wartungskonsole zuzugreifen. Wenn Sie auswählenimage:../media/launch-maintenance-console.gif["Wiedergabetaste"], wird die Wartungskonsole gestartet.
+Über die Registerkarte *Zusammenfassung* Ihrer bereitgestellten ONTAP tools für VMware vSphere kann auf die Wartungskonsole zugegriffen werden. Zum Starten der Wartungskonsole image:../media/launch-maintenance-console.gif["Wiedergabetaste"] auswählen.
 
 |===
 

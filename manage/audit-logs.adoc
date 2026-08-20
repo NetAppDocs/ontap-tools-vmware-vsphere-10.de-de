@@ -11,7 +11,7 @@ summary: Es wird dargestellt, wie ONTAP tools Revisionsprotokolle im Hinblick au
 
 
 [role="lead"]
-Mit dieser Aufgabe lässt sich das Verhalten der Revisionsprotokollierung und die operative Reaktion in ONTAP tools for VMware vSphere verwalten. Revisionsprotokolle liefern einen Ereignisverlauf, der zeigt, wer eine Aktion durchgeführt hat, welche Aktion durchgeführt wurde, wann sie erfolgte, die Anfragequelle sowie, ob sie erfolgreich war oder fehlgeschlagen ist.
+Die Protokollierung in ONTAP tools for VMware vSphere verwalten. Audit-Protokolle zeigen, wer eine Aktion durchgeführt hat, was passiert ist, wann sie erfolgt ist, die Anfragequelle sowie, ob die Aktion erfolgreich war oder fehlgeschlagen ist.
 
 .Bevor Sie beginnen
 * Stellen Sie sicher, dass Sie über Administratorzugriff auf ONTAP tools Manager verfügen.

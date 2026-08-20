@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
 summary: Den Schutz eines VMFS-Datenspeichers aufheben und optional zugehörige Speicherelemente auf der Zielseite entfernen. 
 ---
-= Schutz eines VMFS-Datastores aufheben
+= Schutz eines VMFS-Datenspeichers in ONTAP tools aufheben
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,8 +16,8 @@ Diese Aufgabe dient dazu, den Schutz eines VMFS-Datenspeichers aufzuheben und op
 .Über diese Aufgabe
 Beim Aufheben des Schutzes eines VMFS-Datenspeichers ist folgendes Verhalten zu berücksichtigen:
 
-* Das Aufheben des Schutzes des letzten Datenspeichers in einer Schutzgruppe führt dazu, dass die Schutzgruppe und der Name ihrer Schutzeinstellungen gelöscht werden.
-* Für einen letzten Datenspeicher zeigt ONTAP tools den Namen der Schutzeinstellungen an.
+* Durch das Aufheben des Schutzes des letzten Datenspeichers in einer Schutzgruppe werden die Schutzgruppe und ihre Schutzeinstellungen gelöscht.
+* Für den letzten Datenspeicher zeigt ONTAP tools den Namen der Schutzeinstellungen an.
 
 
 .Bevor Sie beginnen

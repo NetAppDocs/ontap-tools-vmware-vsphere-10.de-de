@@ -11,7 +11,7 @@ summary: 'Die ONTAP tools Appliance kann skaliert und Hochverfügbarkeit (HA) mi
 
 
 [role="lead"]
-Mit ONTAP tools Manager lässt sich die Appliance skalieren und Hochverfügbarkeit (HA) konfigurieren. Standardmäßig wird ONTAP tools for VMware vSphere als Einzelknoten-Konfiguration ohne Hochverfügbarkeit bereitgestellt.
+Mit ONTAP tools Manager lässt sich die Appliance skalieren oder Hochverfügbarkeit (HA) konfigurieren. Standardmäßig wird ONTAP tools for VMware vSphere als Einzelknoten-Konfiguration ohne Hochverfügbarkeit bereitgestellt.
 
 .Bevor Sie beginnen
 * Stellen Sie sicher, dass Ihre OVA-Vorlage mit der Version von Node 1 (dem initialen Bereitstellungsknoten) übereinstimmt.
@@ -30,7 +30,7 @@ NOTE: Die Knotengröße kann nur erhöht, nicht aber verringert werden. Besonder
 . Im Abschnitt *Konfiguration* die neue Knotengröße auswählen und den HA-Schalter umlegen, um Hochverfügbarkeit zu aktivieren.
 . Auf der Seite *HA-Einstellungen* ist Folgendes zu überprüfen:
 +
-** Die Bibliothek befindet sich auf demselben vCenter Server, auf dem die ONTAP tools VMs ausgeführt werden.
+** Die Bibliothek befindet sich auf demselben vCenter Server, auf dem die ONTAP tools virtuellen Maschinen (VMs) laufen.
 ** Die ONTAP tools VMs werden auf einem Cluster oder Ressourcenpool bereitgestellt, nicht direkt auf einem ESXi Host.
 +
 
@@ -40,7 +40,7 @@ IMPORTANT: Nach der Aktivierung von HA ist eine Rückkehr zu einer Einzelknoten-
 
 . Im Abschnitt *HA-Einstellungen* die Netzwerkdetails für die Nodes 2 und 3 eingeben. ONTAP tools unterstützt drei Nodes im HA-Modus.
 +
-ONTAP tools füllt die meisten Felder automatisch mit den Netzwerkeinstellungen von Node 1 aus. Diese Werte können vor Abschluss des Assistenten bearbeitet werden. IPv6-Adresseinträge sind nur verfügbar, wenn IPv6 auf dem Management-Node aktiviert ist. Jeder ESXi Host sollte nur eine ONTAP tools VM hosten.
+ONTAP tools füllt die meisten Felder automatisch mit den Netzwerkeinstellungen von Node 1 aus. Diese Werte können vor Abschluss des Assistenten bearbeitet werden. IPv6-Adresseneinträge sind nur verfügbar, wenn IPv6 auf dem Management-Node aktiviert ist. Jeder ESXi Host sollte nur eine ONTAP tools VM ausführen.
 
 . Die Zusammenfassung wird angezeigt, danach auf *Speichern* klicken.
 

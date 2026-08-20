@@ -11,14 +11,14 @@ summary: In ONTAP tools vCenter-Instanzen verwalten, um Hosts, virtuelle Maschin
 
 
 [role="lead"]
-vCenter Server-Instanzen sind zentrale Verwaltungsplattformen, mit denen Sie Hosts, virtuelle Maschinen und Storage-Backends steuern können. In ONTAP tools können Storage-Backends getrennt, Instanzdetails geändert, Instanzen entfernt und vCenter Server-Zertifikate erneuert werden.
+ONTAP tools ermöglichen das Trennen von Storage-Backends, das Ändern von vCenter Server-Instanzdetails, das Entfernen von Instanzen sowie das Erneuern von vCenter Server-Zertifikaten.
 
 
 
 [[dissociate-storage-backends-from-a-vcenter-server-instance]]
 == Speicher-Backends von einer vCenter Server-Instanz entkoppeln
 
-Auf der Listingseite des vCenter-Servers wird die zugehörige Anzahl von Speicher-Back-Ends angezeigt. Jede vCenter Server-Instanz hat die Möglichkeit, ein Storage-Back-End zuzuordnen oder die Zuordnung zu aufheben.
+Die vCenter Server-Übersichtsseite zeigt die Anzahl der zugehörigen Storage-Backends an. Jede vCenter Server-Instanz kann mit einem Storage-Backend verknüpft oder davon getrennt werden.
 
 .Schritte
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -33,7 +33,7 @@ Auf der Listingseite des vCenter-Servers wird die zugehörige Anzahl von Speiche
 [[modify-a-vcenter-server-instance]]
 == Ändern Sie eine vCenter Server-Instanz
 
-Eine vCenter Server-Instanz kann durch Ausführen der folgenden Schritte geändert werden.
+Zum Ändern einer vCenter Server-Instanz sind die folgenden Schritte erforderlich.
 
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
@@ -100,7 +100,7 @@ Die vCenter Server-Instanz wird nicht mehr von ONTAP tools verwaltet.
 Wenn der vCenter Server während der Löschung nicht erreichbar ist:
 
 * ONTAP tools entfernt den vCenter Server-Eintrag.
-* Die Plugin-Abmeldung findet nicht statt.
+* Die Abmeldung des Plug-ins erfolgt nicht.
 * Es wird eine Warnung angezeigt.
 * Das Plugin muss manuell vom VMware vCenter Server abgemeldet werden.
 
@@ -155,7 +155,7 @@ iVm0cl+2BZNi/QTMh/MkWV2dYXJ3NuNlqqfzFY+bUfkzkR4SneMk0HX3joNNYDJv
 siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 ---{}END CERTIFICATE{}---
 ----
-. Kopieren Sie die Ausgabe und speichern Sie sie als Textdatei mit dem Namen `.pem` Erweiterung auf Ihrem Desktop.
+. Kopieren Sie die Ausgabe und speichern Sie sie als  `.pem` Datei auf Ihrem Desktop.
 . Starten Sie den ONTAP Tools Manager über einen Webbrowser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Melden Sie sich mit den ONTAP Tools für VMware vSphere Administrator-Anmeldeinformationen an, die Sie während der Implementierung angegeben haben.
 . Wählen Sie in der Seitenleiste die entsprechende vCenter Server-Instanz aus

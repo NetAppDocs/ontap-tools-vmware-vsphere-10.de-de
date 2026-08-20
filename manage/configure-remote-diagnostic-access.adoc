@@ -11,7 +11,7 @@ summary: SSH-Zugriff für den Benutzer „diag“ in ONTAP tools for VMware vSph
 
 
 [role="lead"]
-Sie können ONTAP Tools für VMware vSphere konfigurieren, um den SSH-Zugriff für den Diagnosebenutzer zu aktivieren.
+Sie können den SSH-Zugriff für den Benutzer diag in ONTAP tools for VMware vSphere aktivieren.
 
 .Bevor Sie beginnen
 Aktivieren Sie die VASA Provider-Erweiterung für Ihre vCenter Server-Instanz.
@@ -19,8 +19,8 @@ Aktivieren Sie die VASA Provider-Erweiterung für Ihre vCenter Server-Instanz.
 .Über diese Aufgabe
 Die Verwendung von SSH für den Zugriff auf das Diagnose-Benutzerkonto weist folgende Einschränkungen auf:
 
-* Sie dürfen pro SSH-Aktivierung nur ein Anmeldekonto verwenden.
-* SSH-Zugriff auf das Diagnose-Benutzerkonto ist deaktiviert, wenn eines der folgenden Ereignisse eintritt:
+* Es kann jeweils nur ein Login-Konto verwendet werden, wenn SSH aktiviert wird.
+* Der SSH-Zugriff auf das diag-Benutzerkonto ist in beiden folgenden Fällen deaktiviert:
 +
 ** Die Zeit läuft ab.
 +
@@ -37,6 +37,6 @@ Die Anmeldesitzung läuft am nächsten Tag um Mitternacht ab.
 . Melden Sie sich mit den  `maint` Zugangsdaten an.
 . Geben Sie ein `4`, um *Support und Diagnose* auszuwählen.
 . Eingeben `2` , um *Zugriff auf Remotediagnose aktivieren* auszuwählen.
-. Eingabe `y` Im Dialogfeld „Bestätigung“ können Sie den Remote-Diagnosezugriff aktivieren.
+. Geben Sie  `y` im Bestätigungsdialogfeld ein, um den Remote-Diagnosezugriff zu aktivieren.
 . Geben Sie ein Kennwort für den Remote-Diagnosezugriff ein.
 

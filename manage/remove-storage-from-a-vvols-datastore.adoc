@@ -11,7 +11,7 @@ summary: Einen vVols Datenspeicher nur löschen, wenn keine vVols mehr auf dem a
 
 
 [role="lead"]
-Die Aktion „Speicher aus Datenspeicher entfernen“ entfernt Volumes aus einem vVols Datenspeicher in ONTAP tools und verringert dessen Kapazität, wenn der zusätzliche Speicher nicht mehr benötigt wird.
+Volumes können aus einem vVols Datenspeicher in ONTAP tools entfernt werden, um die Kapazität zu reduzieren, wenn der zusätzliche Speicherplatz nicht mehr benötigt wird.
 
 Verwenden Sie die Aktion "Speicher aus Datenspeicher entfernen" für jeden vVols -Datenspeicher, der von ONTAP Tools in vCenter Server verwaltet wird.
 
@@ -23,11 +23,11 @@ NOTE: Der Vorgang zum Verkleinern von vVols Datenspeichern wird für vVols Daten
 .Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.
 . Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Datastore enthält.
-. Klicken Sie mit der rechten Maustaste auf den vVol Datastore und wählen Sie *NetApp ONTAP Tools* > *Speicher aus Datastore entfernen*.
+. Klicken Sie mit der rechten Maustaste auf den vVol Datenspeicher und wählen Sie *NetApp ONTAP tools* > *Speicher aus dem Datenspeicher entfernen*.
 . Wählen Sie die Volumes aus, die keine vVols haben, und wählen Sie *Entfernen*.
 +
 
 NOTE: Die Option zur Auswahl des Volumes, auf dem vVols liegen, ist deaktiviert.
 
-. Im Popup *Speicher entfernen* die Checkbox *Volumes aus ONTAP Cluster löschen* aktivieren, um die Volumes aus dem Datenspeicher und aus dem ONTAP Storage zu löschen, und *Löschen* auswählen.
+. Im Popup *Speicher entfernen* das Kästchen *Volumes aus ONTAP-Cluster löschen* auswählen, um die Volumes aus dem Datenspeicher und dem ONTAP-Speicher zu entfernen, und anschließend *Löschen* auswählen.
 

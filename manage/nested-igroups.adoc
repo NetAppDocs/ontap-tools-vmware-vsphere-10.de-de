@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping 
 summary: Es wird erläutert, wie ONTAP tools verschachtelte Initiatorgruppen für eine effiziente Zuordnung von Hosts und Datenspeichern darstellt und verwaltet. 
 ---
-= Wie ONTAP tools igroups verwaltet
+= Verschachtelte Initiatorgruppe Verwaltung in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Wenn Sie sowohl ONTAP tools VMs als auch ONTAP-Speichersysteme verwalten, ist es wichtig, das Verhalten von Initiatorgruppen zu verstehen, insbesondere beim Verschieben von Datenspeichern aus Umgebungen, die nicht von ONTAP tools verwaltet werden, in solche, die von ONTAP tools verwaltet werden. ONTAP tools für VMware vSphere stellt und verwaltet Initiatorgruppen mithilfe eines verschachtelten Initiatorgruppenmodells. Das Verständnis dieses Modells erleichtert die Interpretation von Verhaltensunterschieden zwischen früheren Versionen und der aktuellen Implementierung.
+Wenn Datenspeicher aus Umgebungen, die nicht von ONTAP tools verwaltet werden, in Umgebungen verschoben werden, die von ONTAP tools verwaltet werden, ist das Verhalten von Initiatorgruppen zu berücksichtigen. ONTAP tools für VMware vSphere verwenden ein verschachteltes Initiatorgruppenmodell, was die Verhaltensunterschiede zwischen früheren Versionen und der aktuellen Implementierung verdeutlicht.
 
-Ab ONTAP tools for VMware vSphere 10.4 werden ONTAP- und vCenter-Objekte automatisch erstellt und verwaltet, wodurch die Datenspeicherverwaltung in VMware-Rechenzentrumsumgebungen vereinfacht wird. Ab ONTAP tools for VMware vSphere 10.5 P2 werden migrierte Initiatorgruppen zudem automatisch gelöscht, sobald sie nicht mehr verwendet werden.
+Ab ONTAP tools for VMware vSphere 10.4 erstellt und verwaltet ONTAP tools automatisch ONTAP- und vCenter-Objekte, was die Datenspeicherverwaltung in VMware-Datacenter-Umgebungen vereinfacht. Ab ONTAP tools for VMware vSphere 10.5 P2 werden migrierte Initiatorgruppen von ONTAP tools zudem automatisch gelöscht, sobald sie nicht mehr verwendet werden.
 
 
 

@@ -11,23 +11,23 @@ summary: ESXi-Hosteinstellungen können über das ONTAP tools Dashboard bearbeit
 
 
 [role="lead"]
-Nutzen Sie das ONTAP -Tools-Dashboard in VMware vSphere, um Konfigurationsprobleme zu identifizieren, ESXi-Hosts auszuwählen, die von NetApp empfohlenen Einstellungen zu überprüfen und diese anzuwenden.
+Das ONTAP tools Dashboard in VMware vSphere bietet die Möglichkeit, Konfigurationsprobleme zu identifizieren, von NetApp empfohlene Einstellungen für ausgewählte ESXi Hosts zu überprüfen und diese anzuwenden.
 
 .Bevor Sie beginnen
 Das ESXi-Hostsystem-Portlet zeigt Probleme mit den ESXi-Hosteinstellungen an.  Wählen Sie ein Problem aus, um den Hostnamen oder die IP-Adresse anzuzeigen.
 
 .Schritte
-. Melden Sie sich beim vSphere-Client an.
-. Wählen Sie auf der Shortcuts-Seite unter dem Plug-ins-Abschnitt *NetApp ONTAP Tools* aus.
-. Gehen Sie in der Übersicht (Dashboard) des ONTAP Tools for VMware vSphere Plug-ins zum Portlet *ESXi Host Compliance*.
-. Wählen Sie den Link *Empfohlene Einstellungen anwenden*.
-. Im Fenster *Empfohlene Hosteinstellungen anwenden* wählen Sie die Hosts aus, für die Sie die von NetApp empfohlenen Hosteinstellungen verwenden möchten, und klicken Sie auf *Weiter*.
+. Melden Sie sich beim vSphere Client an.
+. Auf der Seite „Shortcuts“ im Abschnitt „Plug-ins“ ist *NetApp ONTAP tools* auszuwählen.
+. Zum Portlet *ESXi Host compliance* im Übersichts-Dashboard des ONTAP tools for VMware vSphere Plug-in wechseln.
+. Den Link *Empfohlene Einstellungen anwenden* auswählen.
+. Im Fenster *Empfohlene Host-Einstellungen anwenden* die Hosts auswählen, für die die von NetApp empfohlenen Host-Einstellungen angewendet werden sollen, und anschließend *Weiter* auswählen.
 +
 
 NOTE: Sie können den ESXi-Host erweitern, um die aktuellen Werte anzuzeigen.
 
-. Wählen Sie auf der Einstellungsseite die empfohlenen Werte nach Bedarf aus.
-. Überprüfen Sie im Übersichtsfenster die Werte und wählen Sie *Fertig stellen*. Sie können den Fortschritt im Fenster „Letzte Aufgabe“ verfolgen.
+. Auf der Einstellungsseite können die empfohlenen Werte nach Bedarf ausgewählt werden.
+. Im Zusammenfassungsbereich die Werte überprüfen und *Fertigstellen* auswählen. Der Fortschritt kann im Bereich „Letzte Aufgaben“ verfolgt werden.
 
 
 .Verwandte Informationen

@@ -11,10 +11,10 @@ summary: Einen vVols Datenspeicher auf zusätzliche Hosts einbinden, um Speicher
 
 
 [role="lead"]
-Ein VMware Virtual Volumes (vVols) Datenspeicher kann auf einem oder mehreren zusätzlichen Hosts eingebunden werden, um diesen zusätzlichen Hosts Speicherzugriff bereitzustellen. Ein vVols Datenspeicher kann nur über Host-APIs ausgehängt werden. Das Aushängen eines Datenspeichers auf Cluster-Ebene wird nicht unterstützt.
+Ein VMware Virtual Volumes (vVols) Datenspeicher kann auf einem oder mehreren zusätzlichen Hosts eingebunden werden, um den Speicherzugriff zu erweitern. Ein vVols Datenspeicher kann nur über Host-APIs ausgehängt werden. Das Aushängen von Datenspeichern auf Cluster-Ebene wird nicht unterstützt.
 
 
-NOTE: Nach dem Hinzufügen des Hosts sollte abgewartet werden, bis die geplante Host-Erkennung abgeschlossen ist, bevor er in ONTAP tools angezeigt wird. Alternativ kann die Erkennung manuell über die Übersicht der NetApp ONTAP tools ausgeführt werden. Informationen zum Hinzufügen eines ESXi Hosts zu Ihrem vSphere Cluster sind unter  https://techdocs.broadcom.com/["Broadcom Technische Dokumentation"] zu finden.
+NOTE: Nach dem Hinzufügen des Hosts sollte abgewartet werden, bis die geplante Host-Erkennung abgeschlossen ist, bevor er in ONTAP tools angezeigt wird. Alternativ kann die Erkennung manuell über die NetApp ONTAP tools Übersichtsseite ausgeführt werden. Informationen zum Hinzufügen eines ESXi Hosts zu Ihrem vSphere Cluster finden sich unter  https://techdocs.broadcom.com/["Broadcom Technische Dokumentation"].
 
 .Schritte
 . Wählen Sie auf der vSphere Client-Startseite *Hosts und Cluster* aus.

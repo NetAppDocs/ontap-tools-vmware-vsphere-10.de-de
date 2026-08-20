@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools Manager UI, appliance administration interface, tenant and backend management, ONTAP tools manager portal 
 summary: Mit ONTAP tools Manager lassen sich die Appliance, die Mandanten und die Storage Backends verwalten. 
 ---
-= Erfahren Sie mehr über die Benutzeroberfläche des ONTAP tools Manager
+= Benutzeroberfläche von ONTAP Tools Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,8 +12,6 @@ summary: Mit ONTAP tools Manager lassen sich die Appliance, die Mandanten und di
 
 [role="lead"]
 ONTAP tools Manager ist eine webbasierte Konsole, mit der ONTAP tools für VMware vSphere verwaltet werden, einschließlich vCenter Server-Instanzen, Storage-Backends und Appliance-Konfigurationen wie Hochverfügbarkeit (HA) und Knotenskalierung. Es wird Mandantenfähigkeit unterstützt, sodass mehrere vCenter Server-Instanzen über eine einzige Oberfläche verwaltet werden können.
-
-ONTAP Tools Manager ist eine webbasierte Konsole zum Verwalten von ONTAP tools for VMware vSphere, vCenter Server-Instanzen, Speicher-Backends und Appliance-Konfigurationen wie Hochverfügbarkeit (HA) und Knotenskalierung.
 
 Der ONTAP Tools Manager bietet die folgenden Funktionen:
 
@@ -38,7 +36,7 @@ image:../media/ontap-tools-manager-overview.png["Dashboard-Übersicht über ONTA
 | Gerätekarte | Die Appliance-Karte zeigt den Gesamtstatus der ONTAP Tools-Appliance, Konfigurationsdetails und den Status aktivierter Dienste.  Um weitere Informationen anzuzeigen, wählen Sie den Link *Details anzeigen*.  Wenn Sie eine Geräteeinstellung ändern, werden auf der Karte der Auftragsstatus und die Details angezeigt, bis die Änderung abgeschlossen ist. 
 
 
-| Warnkarte | Auf der Karte „Warnungen“ werden Warnungen der ONTAP -Tools nach Typ kategorisiert angezeigt, einschließlich Warnungen auf HA-Knotenebene.  Sie können detaillierte Warnungen anzeigen, indem Sie auf den Hyperlink „Zählen“ klicken. Dadurch gelangen Sie zur Warnungsseite, die nach dem ausgewählten Warnungstyp gefiltert ist. 
+| Warnkarte | Die Warnmeldungskarte zeigt ONTAP tools Warnmeldungen, kategorisiert nach Typ, einschließlich Warnungen auf HA Node-Ebene. Detaillierte Warnmeldungen sind über den Link „Anzahl“ einsehbar, der zur Warnmeldungsseite führt, gefiltert nach dem ausgewählten Warnmeldungstyp. 
 
 
 | vCenters-Karte | Die vCenters-Karte zeigt den Integritätsstatus aller von ONTAP -Tools verwalteten vCenter Server-Instanzen.  Sie können Details zu jedem vCenter anzeigen, indem Sie den entsprechenden Link auswählen, der zu einer Seite mit weiteren Informationen zur ausgewählten Instanz führt. 

@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard 
 summary: Im ONTAP tools Dashboard wird eine Zusammenfassung des Plug-in-Status, der Datenspeicher und der vCenter Serverdaten angezeigt. 
 ---
-= Erfahren Sie mehr über das ONTAP tools-Dashboard
+= Informationen zum ONTAP tools for VMware vSphere Dashboard
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Wenn Sie im vCenter-Client im Abschnitt „Verknüpfungen“ das Plug-in-Symbol „ONTAP tools for VMware vSphere“ auswählen, wird die Übersichtsseite geöffnet.  Dieses Dashboard bietet eine Zusammenfassung der ONTAP tools for VMware vSphere Plug-in.
+Das Symbol für das ONTAP tools for VMware vSphere Plug-in im Bereich „Verknüpfungen“ des vCenter Clients auswählen, um das Dashboard zu öffnen, das den Status des Plug-ins, der Datenspeicher und der vCenter Serverdaten zusammenfasst.
 
 Im Enhanced Linked Mode (ELM) wird das Dropdown-Menü „vCenter Server“ angezeigt.  Wählen Sie einen vCenter Server aus, um seine Daten anzuzeigen.  Das Dropdown-Menü ist in allen Listenansichten des Plug-Ins verfügbar. Wenn Sie auf einer Seite einen vCenter Server auswählen, bleibt dieser beim Wechseln der Registerkarten im Plug-In unverändert.image:../media/remote-plugin-dashboard.png["Dashboard-Übersicht"]
 
-Von der Übersichtsseite aus können Sie die Aktion *Discovery* ausführen. Die Erkennungsaktion erkennt neu hinzugefügte oder aktualisierte Speicher-Backends, Hosts, Datenspeicher und Schutzstatus oder -beziehungen auf vCenter-Ebene.  Führen Sie die Erkennung nach Bedarf aus, ohne auf die geplante Erkennung zu warten.
+Auf der Übersichtsseite kann die Aktion *Erkennung* ausgeführt werden, um neu hinzugefügte oder aktualisierte Speicher-Backends, Hosts, Datenspeicher sowie Schutzstatus oder -beziehungen auf vCenter-Ebene zu erkennen. Die bedarfsgesteuerte Erkennung kann durchgeführt werden, ohne auf die geplante Erkennung warten zu müssen.
 
 Wenn ein neuer Host zu einem geschützten Hostcluster hinzugefügt wird, ändern sich die Schutzeinstellungen auf *Teilweise geschützt*.
 
@@ -40,10 +40,10 @@ Das Dashboard verfügt über mehrere Karten, die verschiedene Elemente des Syste
 | Storage Back-Ends – Kapazität | Diese Karte zeigt die aggregierte genutzte und verfügbare Kapazität aller Storage-Backends für die ausgewählte vCenter Server-Instanz an. Für ASA r2 Storage-Systeme werden die Kapazitätsdaten nicht angezeigt, da der Storage disaggregiert ist. 
 
 
-| Virtual Machines | Diese Karte zeigt die 10 wichtigsten VMs nach Performance-Metrik. Sie können die Kopfzeile auswählen, um die 10 wichtigsten VMs für die ausgewählte Metrik nach aufsteigender oder absteigender Reihenfolge zu erhalten. Die auf der Karte vorgenommenen Änderungen beim Sortieren und Filtern bleiben bestehen, bis Sie den Browser-Cache ändern oder löschen. 
+| Virtual Machines | Diese Karte zeigt die Top 10 VMs, sortiert nach Leistungsmetrik. Die Überschrift kann ausgewählt werden, um die Top 10 VMs für die ausgewählte Metrik aufsteigend oder absteigend zu sortieren. Die auf der Karte vorgenommenen Sortier- und Filteränderungen bleiben erhalten, bis sie geändert oder der Browser-Cache geleert wird. 
 
 
-| Datenspeicher | Diese Karte zeigt die 10 besten Datenspeicher, sortiert nach einer Performance-Metrik. Sie können die Kopfzeile auswählen, um die 10 wichtigsten Datastores für die ausgewählte Metrik nach aufsteigender oder absteigender Reihenfolge zu erhalten. Die auf der Karte vorgenommenen Änderungen beim Sortieren und Filtern bleiben bestehen, bis Sie den Browser-Cache ändern oder löschen. Zum Auswählen des Typs der Datastores – NFS, VMFS oder VVols – existiert ein Dropdown-Menü zum Datenspeichertyp. 
+| Datenspeicher | Diese Karte zeigt die zehn besten Datenspeicher, sortiert nach einer Leistungsmetrik. Die Überschrift kann ausgewählt werden, um die zehn besten Datenspeicher für die ausgewählte Metrik aufsteigend oder absteigend zu sortieren. Die auf der Karte vorgenommenen Sortier- und Filteränderungen bleiben erhalten, bis sie geändert oder der Browser-Cache geleert wird. Mit der Dropdown-Liste „Datenspeichertyp“ lässt sich der Datenspeichertyp auswählen: NFS, VMFS oder vVols. 
 
 
 | ESXi-Host-Compliance-Karte | Diese Karte zeigt an, ob alle ESXi-Hosts (für das ausgewählte vCenter) die empfohlenen NetApp Host-Einstellungen nach Gruppe oder Kategorie einhalten. Sie können den Link *Empfohlene Einstellungen anwenden* auswählen, um die empfohlenen Einstellungen zu übernehmen. Sie können den Konformitätsstatus der Hosts auswählen, um die Liste der Hosts anzuzeigen. 

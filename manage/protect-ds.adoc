@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery 
 summary: Ein geeigneter VMFS-Datenspeicher kann geschützt werden, indem er einer Schutzgruppe mit SnapMirror Replikation hinzugefügt wird. 
 ---
-= Einen VMFS-Datenspeicher schützen
+= Einen VMFS Datenspeicher in ONTAP tools schützen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Mit dieser Aufgabe wird ein geeigneter VMFS-Datenspeicher geschützt, indem er einer Schutzgruppe hinzugefügt wird.
+Ein geeigneter VMFS Datenspeicher kann geschützt werden, indem er einer Schutzgruppe hinzugefügt wird.
 
 .Bevor Sie beginnen
 * Der Datenspeicher muss das iSCSI- oder FC-Protokoll verwenden.

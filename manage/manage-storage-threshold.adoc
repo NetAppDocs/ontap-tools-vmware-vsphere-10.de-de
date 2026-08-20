@@ -14,8 +14,8 @@ summary: Schwellenwertbenachrichtigungen für Volume- und Aggregatkapazitätsniv
 Sie können Speicherschwellenwerte festlegen, um Benachrichtigungen im vCenter Server zu erhalten, wenn das Volumen oder die Aggregatkapazität ein bestimmtes Niveau erreicht.
 
 .Schritte
-. Melden Sie sich beim vSphere-Client an.
-. Wählen Sie auf der Shortcuts-Seite unter dem Plug-ins-Abschnitt *NetApp ONTAP Tools* aus.
+. Melden Sie sich beim vSphere Client an.
+. Auf der Seite *Shortcuts* im Abschnitt *Plug-ins* die Option *NetApp ONTAP tools* auswählen.
 . Gehen Sie im linken Bereich der ONTAP -Tools zu *Einstellungen* > *Schwellenwerteinstellungen* > *Bearbeiten*.
 . Im Fenster *Schwellenwert bearbeiten* die gewünschten Werte in den Feldern *Fast voll* und *Voll* eingeben und *Speichern* auswählen.
 +

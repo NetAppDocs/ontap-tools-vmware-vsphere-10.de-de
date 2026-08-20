@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: recover ONTAP tools setup, appliance recovery workflow, near zero RPO recovery, restore ONTAP tools configuration 
 summary: ONTAP tools aus Backups wiederherstellen und das Verhalten bei Zero-RPO und Near Zero-RPO nach Release verstehen. 
 ---
-= Wiederherstellen des ONTAP Tools-Setups
+= ONTAP tools für VMware vSphere aus der Sicherung wiederherstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Die ONTAP tools for VMware vSphere Einrichtung kann wiederhergestellt werden, indem sie aus einer auf dem Datenspeicher gespeicherten Sicherungsdatei zurückgespielt wird. Ab ONTAP tools for VMware vSphere 10.5 ist die Sicherungsfunktion standardmäßig aktiviert, sodass eine aktuelle Sicherung verfügbar ist, falls eine erneute Bereitstellung oder Wiederherstellung der Appliance erforderlich ist.
+Die Wiederherstellung von ONTAP tools for VMware vSphere erfolgt durch das Zurückspielen einer auf dem Datenspeicher abgelegten Sicherungsdatei. Ab ONTAP tools for VMware vSphere 10.5 ist die Sicherung standardmäßig aktiviert, sodass in der Regel eine aktuelle Sicherung verfügbar ist, falls eine erneute Bereitstellung oder Wiederherstellung der Appliance erforderlich ist.
 
-Der Datenspeicher, in dem Sie ONTAP tools for VMware vSphere Maschinen bereitstellen, speichert die Sicherungsdateien.  Ein Ordner, der nach der IP-Adresse des ONTAP -Tools benannt ist (Punkte durch Unterstriche ersetzt und mit _OTV_backup_ angehängt), enthält die beiden aktuellsten Sicherungsdateien (_OTV_backup_1.tar.enc_ und _OTV_backup_2.tar.enc_) und eine Infodatei (_OTV_backup_info.txt_), die den Namen der aktuellsten Sicherung enthält.
+Der Datenspeicher, in dem Sie ONTAP tools for VMware vSphere virtuelle Maschinen bereitstellen, speichert die Sicherungsdateien. Ein Ordner, der nach der ONTAP tools IP-Adresse benannt ist, speichert die beiden aktuellsten Sicherungsdateien (_OTV_backup_1.tar.enc_ und _OTV_backup_2.tar.enc_) sowie die Info-Datei (_OTV_backup_info.txt_), die die letzte Sicherung identifiziert.
 
 Stellen Sie sicher, dass die neue virtuelle Maschine dieselbe IP-Adresse der ONTAP Tools verwendet und mit der ursprünglichen Systemkonfiguration übereinstimmt, einschließlich aktivierter Dienste, Knotengröße und HA-Modus.
 

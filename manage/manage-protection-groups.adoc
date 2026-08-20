@@ -19,7 +19,7 @@ Mit dieser Aufgabe lassen sich Schutzgruppen und deren Beziehungen auf der Seite
 
 
 
-IMPORTANT: Bevor Sie den Schutz bearbeiten oder entfernen, sollten die Warnmeldungen im Dialog überprüft werden. Die Entfernung von Beziehungen kann das Backup- und Konsistenzverhalten beeinflussen.
+IMPORTANT: Bevor Sie eine Schutzgruppe bearbeiten oder entfernen, sollten die Warnmeldungen im Dialogfeld geprüft werden. Das Entfernen von Beziehungen kann sich auf das Backup- und Konsistenzverhalten auswirken.
 
 .Über diese Aufgabe
 * ONTAP tools aktualisiert lokale Schutzdatensätze in der ausgewählten ONTAP tools Instanz.

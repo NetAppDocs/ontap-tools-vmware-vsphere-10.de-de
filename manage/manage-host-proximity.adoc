@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host cluster configuration, manage host proximity, SVM mapping, ONTAP tools host cluster protection 
 summary: Konfigurationseinstellungen des Hostclusters für den Schutz des Hostclusters anzeigen, bearbeiten und entfernen. 
 ---
-= Clusterkonfiguration in ONTAP tools verwalten
+= Hostclusterkonfiguration in ONTAP tools verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,7 +27,7 @@ Die Konfigurationseinstellungen des Host-Clusters sind mit ihrem Konfigurationst
 +
 .. Um eine Konfiguration zu bearbeiten, *Bearbeiten* auswählen und die erforderlichen Einstellungen aktualisieren. Weitere Informationen finden sich unter link:../protect/config-proximity.html["Cluster für den Datenspeicherschutz mit ONTAP tools konfigurieren"].
 +
-Wenn ein neuer Host zu einem Cluster hinzugefügt wird, werden die bestehenden Clusterkonfigurationseinstellungen nicht automatisch auf diesen Host angewendet. Die bestehende Clusterkonfiguration kann bearbeitet und der neue Host dem entsprechenden Standort zugewiesen werden.
+Wenn Sie einem Cluster einen neuen Host hinzufügen, wendet ONTAP tools die bestehenden Clusterkonfigurationseinstellungen nicht automatisch auf diesen Host an. Die bestehende Clusterkonfiguration kann bearbeitet und der neue Host dem entsprechenden Standort zugewiesen werden.
 
 .. Zum Entfernen einer Konfiguration *Entfernen* auswählen und die Entfernung im Dialogfeld bestätigen.
 

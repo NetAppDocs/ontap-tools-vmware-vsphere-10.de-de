@@ -11,10 +11,10 @@ summary: Benutzerrollen und Berechtigungen für Speicher-Backends lassen sich mi
 
 
 [role="lead"]
-In diesem Abschnitt konfigurieren Sie ONTAP -Benutzerrollen und -Berechtigungen für Speichersysteme mit ONTAP tools for VMware vSphere und ONTAP System Manager.  Sie können Rollen mithilfe der bereitgestellten JSON-Dateien zuweisen, Benutzer und Rollen manuell erstellen und die minimal erforderlichen Berechtigungen für Nicht-Administratorkonten anwenden.
+ONTAP Benutzerrollen und Privileges für Storage-Backends lassen sich mit ONTAP tools for VMware vSphere und ONTAP System Manager konfigurieren. Rollen können mit den bereitgestellten JSON-Dateien zugewiesen, Benutzer und Rollen manuell erstellt oder die minimal erforderlichen Privileges für Nicht-Admin-Konten angewendet werden.
 
 .Bevor Sie beginnen
-* Laden Sie die ONTAP Privileges von den ONTAP tools for VMware vSphere mit _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ herunter.  Nach dem Herunterladen der ZIP-Datei finden Sie zwei JSON-Dateien.  Verwenden Sie die ASA r2-spezifische JSON-Datei, wenn Sie ein ASA r2-System konfigurieren.
+* Die ONTAP Privileges Datei kann von ONTAP tools for VMware vSphere unter _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ heruntergeladen werden. Die Zip-Datei enthält zwei JSON-Dateien. Die ASA r2-spezifische JSON-Datei ist bei der Konfiguration eines ASA r2 Systems zu verwenden.
 +
 
 NOTE: Sie können Benutzer auf Clusterebene oder direkt auf der Ebene der virtuellen Speichermaschinen (SVMs) erstellen.  Wenn Sie die Datei user_roles.json nicht verwenden, stellen Sie sicher, dass der Benutzer über die erforderlichen Mindestberechtigungen für SVM verfügt.
@@ -35,7 +35,7 @@ NOTE: Sie können Benutzer auf Clusterebene oder direkt auf der Ebene der virtue
 +
 ONTAP -Tools füllen das Produktfeld automatisch aus.
 
-.. Wählen Sie aus der Dropdown-Liste die Produktfunktion „VSC, VASA Provider und SRA“ aus.
+.. Die Produktfunktion *VSC, VASA Provider und SRA* ist in der Dropdown-Liste auszuwählen.
 +
 ONTAP -Tools füllen das Feld *Rolle* automatisch basierend auf der von Ihnen ausgewählten Produktfunktion aus.
 
@@ -104,10 +104,10 @@ Fügen Sie den *REST-API-Pfad* hinzu und wählen Sie den Zugriff aus der Dropdow
 
 
 
-[[list-of-minimum-privileges-required-for-non-admin-global-scoped-cluster-user]]
-=== Liste der Mindestberechtigungen, die für einen nicht-Administrator-Cluster mit globalem Umfang erforderlich sind
+[[list-of-minimum-privileges-required-for-a-non-admin-global-scoped-cluster-user]]
+=== Liste der Mindestberechtigungen für einen Clusterbenutzer ohne Administratorrechte und mit globalem Geltungsbereich
 
-Diese Seite listet die Mindestberechtigungen auf, die für einen globalen Clusterbenutzer ohne Administratorrechte und ohne JSON-Datei erforderlich sind. Wenn sich ein Cluster im lokalen Bereich befindet, verwenden Sie die JSON-Datei zum Erstellen von Benutzern, da ONTAP tools for VMware vSphere mehr als nur Leseberechtigungen für die Bereitstellung auf ONTAP benötigen.
+Diese Seite listet die Mindestberechtigungen auf, die für einen nicht-administrativen Clusterbenutzer mit globalem Gültigkeitsbereich ohne JSON-Datei erforderlich sind. Wenn sich ein Cluster im lokalen Gültigkeitsbereich befindet, sollte die JSON-Datei zur Erstellung von Benutzern verwendet werden, da ONTAP tools for VMware vSphere für die Bereitstellung auf ONTAP mehr als nur die Leseberechtigungen benötigt.
 
 Sie können über APIs auf die Funktionen zugreifen:
 

@@ -11,14 +11,14 @@ summary: Der Netzwerkzugriff wird so konfiguriert, dass gesteuert wird, welche E
 
 
 [role="lead"]
-Standardmäßig werden alle vom ESXi-Host ermittelten IP-Adressen automatisch zur Exportrichtlinie hinzugefügt, es sei denn, Sie konfigurieren den Netzwerkzugriff.  Sie können die Exportrichtlinie so ändern, dass der Zugriff nur von bestimmten IP-Adressen aus erlaubt ist.  Wenn ein ausgeschlossener ESXi-Host versucht, einen Mount-Vorgang durchzuführen, schlägt der Vorgang fehl.
+Standardmäßig fügt ONTAP tools automatisch alle vom ESXi-Host ermittelten IP-Adressen zur Exportrichtlinie hinzu, es sei denn, Sie konfigurieren Netzwerkzugriff. Die Exportrichtlinie kann so angepasst werden, dass der Zugriff nur von bestimmten IP-Adressen erlaubt ist; Mount-Vorgänge schlagen für ausgeschlossene ESXi-Hosts fehl.
 
 .Schritte
 . Melden Sie sich beim vSphere-Client an.
-. Wählen Sie *NetApp ONTAP Tools* auf der Shortcuts-Seite unter dem Plug-ins-Bereich.
+. Wählen Sie *NetApp ONTAP tools* auf der Seite mit den Verknüpfungen unter dem Abschnitt „Plug-ins“ aus.
 . Gehen Sie im linken Bereich der ONTAP -Tools zu *Einstellungen* > *Netzwerkzugriff verwalten* > *Bearbeiten*.
 +
-Um mehrere IP-Adressen hinzuzufügen, trennen Sie die Liste durch Kommas, Bereich, klassenloses Inter-Domain Routing (CIDR) oder eine Kombination aller drei.
+Um mehrere IP-Adressen hinzuzufügen, die Liste mit Kommas, Bereichen, Classless Inter-Domain Routing (CIDR)-Notation oder einer Kombination aus allen drei trennen.
 
 . Wählen Sie *Speichern*.
 

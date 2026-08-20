@@ -11,7 +11,7 @@ summary: Fügen Sie vCenter Server-Instanzen zu ONTAP tools hinzu, um Datenspeic
 
 
 [role="lead"]
-Fügen Sie vCenter Server-Instanzen zu ONTAP tools for VMware vSphere hinzu, um Datenspeicher in Ihrer vCenter Server-Umgebung zu konfigurieren, zu verwalten und zu schützen. Beim Hinzufügen mehrerer vCenter Server-Instanzen sind benutzerdefinierte CA-Zertifikate für die sichere Kommunikation zwischen ONTAP tools for VMware vSphere und jeder vCenter Server-Instanz erforderlich.
+Fügen Sie vCenter Server-Instanzen zu ONTAP tools for VMware vSphere hinzu, um Datenspeicher in Ihrer vCenter Server-Umgebung zu konfigurieren, zu verwalten und zu schützen. Beim Hinzufügen mehrerer vCenter Server-Instanzen werden benutzerdefinierte CA-Zertifikate für die sichere Kommunikation zwischen ONTAP tools for VMware vSphere und jeder vCenter Server-Instanz konfiguriert.
 
 .Über diese Aufgabe
 ONTAP -Tools lassen sich in vCenter Server integrieren, um Speicheraufgaben wie Bereitstellung, Snapshots und Datenschutz direkt vom vSphere-Client aus durchzuführen.
@@ -19,8 +19,8 @@ ONTAP -Tools lassen sich in vCenter Server integrieren, um Speicheraufgaben wie 
 Das Hinzufügen einer vCenter Server-Instanz zu ONTAP Tools löst automatisch die folgenden Aktionen aus:
 
 * ONTAP -Tools registrieren das vCenter-Client-Plug-In als Remote-Plug-In.
-* Benutzerdefinierte Privileges für die Plug-ins und APIs werden auf die vCenter Server Instanz angewendet.
-* Zum Verwalten der Benutzer werden benutzerdefinierte Rollen erstellt.
+* ONTAP tools wendet benutzerdefinierte Privileges für die Plug-ins und APIs auf die vCenter Serverinstanz an.
+* ONTAP tools erstellt benutzerdefinierte Rollen zur Verwaltung der Benutzer.
 * Das Plug-in wird als Verknüpfung auf der vSphere-Benutzeroberfläche angezeigt.
 
 
@@ -37,7 +37,7 @@ X509v3 extensions:
 Wenn das Zertifikat keine SAN-Erweiterung enthält oder die SAN-Erweiterung nicht die korrekten DNS- oder IP-Adresswerte enthält, können ONTAP tools-Operationen aufgrund von Zertifikatvalidierungsfehlern fehlschlagen.
 
 * Die primäre Netzwerkkennung (PNID) des vCenter Server muss in den SAN-Details enthalten sein. Die PNID und der DNS-Name müssen identisch und im DNS auflösbar sein.
-* Es wird empfohlen, den vCenter Server unter Verwendung seines vollqualifizierten Domainnamens (FQDN) bereitzustellen und sicherzustellen, dass der SAN im Zertifikat DNS Name=machine_FQDN enthält, um optimale Kompatibilität und Unterstützung zu gewährleisten.
+* Die Bereitstellung des vCenter Servers sollte unter Verwendung seines vollqualifizierte Domain Namens (FQDN) erfolgen, wobei sichergestellt werden muss, dass der SAN im Zertifikat DNS Name=machine_FQDN enthält, um optimale Kompatibilität und Unterstützung zu gewährleisten.
 * Weitere Informationen finden Sie in der VMware-Dokumentation:
 +
 ** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["vSphere Certificate Requirements für verschiedene Lösungswege"]
@@ -49,7 +49,7 @@ Wenn das Zertifikat keine SAN-Erweiterung enthält oder die SAN-Erweiterung nich
 
 [NOTE]
 ====
-Falls kein FQDN verfügbar ist, können Sie die PNID auf die IP-Adresse setzen und die IP-Adresse in das SAN einbinden. Dies wird jedoch von VMware nicht empfohlen.
+Falls kein FQDN verfügbar ist, kann die PNID auf die IP-Adresse gesetzt und diese IP-Adresse in das SAN eingebunden werden. VMware empfiehlt diese Konfiguration jedoch nicht.
 
 ====
 .Schritte
@@ -59,6 +59,6 @@ Falls kein FQDN verfügbar ist, können Sie die PNID auf die IP-Adresse setzen u
 . Rufen Sie in den erweiterten Optionen das vCenter Server-Zertifikat automatisch ab (autorisieren Sie es) oder laden Sie es manuell hoch.
 +
 
-NOTE: Sie benötigen kein Administratorkonto, um vCenter Instanzen zu ONTAP Tools hinzuzufügen. Sie können eine benutzerdefinierte Rolle ohne Administratorkonto mit eingeschränkten Berechtigungen erstellen. Weitere Informationen finden Sie unter link:../concepts/rbac-vcenter-use.html["Nutzen Sie die RBAC für vCenter Server mit ONTAP Tools für VMware vSphere 10"] .
+NOTE: Sie benötigen kein Administratorkonto, um vCenter-Instanzen zu ONTAP tools hinzuzufügen. Eine benutzerdefinierte Rolle mit eingeschränkten Berechtigungen kann ohne Administratorkonto erstellt werden. Weitere Einzelheiten sind unter link:../concepts/rbac-vcenter-use.html["Nutzen Sie die RBAC für vCenter Server mit ONTAP Tools für VMware vSphere 10"] zu finden.
 
 

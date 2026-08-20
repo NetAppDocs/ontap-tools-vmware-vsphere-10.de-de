@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
 summary: Es wird erläutert, wie ONTAP tools Initiatorgruppen erstellt und verwaltet sowie Export-Richtlinien für den Datenspeicherzugriff verwaltet. 
 ---
-= Wie ONTAP tools igroups und Exportrichtlinien verwaltet
+= Igroup- und Exportrichtlinien-Workflows in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Initiatorgruppen (igroups) sind Tabellen mit World Wide Port Names (WWPNs) des FC-Protokollhosts oder qualifizierten Knotennamen des iSCSI-Hosts. Sie können Initiatorgruppen definieren und sie LUNs zuordnen, um zu steuern, welche Initiatoren Zugriff auf LUNs haben.
+Diese Informationen erläutern, wie ONTAP tools for VMware vSphere Initiatorgruppen und Exportrichtlinien für den Datenspeicherzugriff erstellt und verwaltet.
 
-In ONTAP tools for VMware vSphere 9.x wurden Initiatorgruppen in einer flachen Struktur erstellt und verwaltet, wobei jeder Datenspeicher in vCenter einer einzelnen Initiatorgruppe zugeordnet war. Dieses Modell schränkte die Flexibilität und Wiederverwendbarkeit von Initiatorgruppen über mehrere Datenspeicher hinweg ein. ONTAP tools for VMware vSphere 10.4 führt verschachtelte Initiatorgruppen ein, wobei jeder Datenspeicher in vCenter einer übergeordneten Initiatorgruppe zugeordnet ist, während jeder Host mit einer untergeordneten Initiatorgruppe unter dieser übergeordneten Gruppe verknüpft ist. Benutzerdefinierte übergeordnete Initiatorgruppen mit frei wählbaren Namen können zur Wiederverwendung über mehrere Datenspeicher hinweg definiert werden, um die Verwaltung der Initiatorgruppen zu erleichtern. Der Initiatorgruppen-Workflow unterstützt die Verwaltung von LUNs und Datenspeichern in ONTAP tools for VMware vSphere. Unterschiedliche Workflows erzeugen verschiedene Initiatorgruppen-Konfigurationen, wie in den folgenden Beispielen dargestellt:
+In ONTAP tools für VMware vSphere 9.x wurden Initiatorgruppen in einer flachen Struktur erstellt und verwaltet, wobei jeder Datenspeicher in vCenter einer einzelnen Initiatorgruppe zugeordnet war. Dieses Modell schränkte die Flexibilität und Wiederverwendbarkeit von Initiatorgruppen über mehrere Datenspeicher hinweg ein. ONTAP tools für VMware vSphere 10.4 führt verschachtelte Initiatorgruppen ein, wobei jeder Datenspeicher in vCenter einer übergeordneten Initiatorgruppe zugeordnet ist, während jeder Host mit einer untergeordneten Initiatorgruppe unter dieser übergeordneten Initiatorgruppe verknüpft ist. Benutzerdefinierte übergeordnete Initiatorgruppen mit frei wählbaren Namen können zur Wiederverwendung über mehrere Datenspeicher hinweg definiert werden, um die Verwaltung von Initiatorgruppen zu erleichtern. Diese Informationen zeigen, wie ONTAP tools für VMware vSphere LUNs und Datenspeicher über Initiatorgruppen-Workflows verwaltet. Verschiedene Workflows erzeugen unterschiedliche Initiatorgruppen-Konfigurationen, wie in den folgenden Beispielen dargestellt:
 
 
 NOTE: Die genannten Namen dienen nur zu Illustrationszwecken und beziehen sich nicht auf echte igroup-Namen.  Von ONTAP -Tools verwaltete igroups verwenden das Präfix „otv_“.  Benutzerdefinierten igroups kann ein beliebiger Name zugewiesen werden.
@@ -78,7 +78,7 @@ Mounten Sie den vorhandenen Datenspeicher auf einem zusätzlichen Host
 
 
 
-ONTAP tools for VMware vSphere erstellen eine untergeordnete igroup host2Igroup und fügen sie der vorhandenen übergeordneten igroup DS1Igroup hinzu.
+ONTAP tools for VMware vSphere erstellt eine untergeordnete Initiatorgruppe host2Igroup und fügt sie der bestehenden übergeordneten Initiatorgruppe DS1Igroup hinzu.
 
 .Beispiel 3:
 Unmounten eines Datenspeichers von einem Host
@@ -203,7 +203,7 @@ Migration von ONTAP Tools 9 auf 10 (igroup-Normalisierung)
 
 *Arbeitsablauf*
 
-ONTAP -Tools für VMware vSPhere 9.x-Versionen unterstützen keine hierarchischen igroups.  Während der Migration auf Version 10.3 oder höher müssen igroups in die hierarchische Struktur normalisiert werden.
+ONTAP tools for VMware vSphere 9.x Versionen unterstützen keine hierarchischen igroups. Während der Migration auf Version 10.3 oder höher müssen igroups in die hierarchische Struktur normalisiert werden.
 
 Vor der Migration:
 
@@ -243,7 +243,7 @@ Beim Erstellen eines NFS-Datenspeichers in ONTAP Tools für VMware vSphere könn
 
 Wenn Sie einen NFS-Datenspeicher auf einem neuen ESXi-Host mounten, fügen ONTAP Tools für VMware vSphere die IP-Adresse des Hosts der bestehenden Exportrichtlinie des Datenspeichers hinzu. Dadurch kann der neue Host auf den Datenspeicher zugreifen, ohne eine neue Exportrichtlinie erstellen zu müssen.
 
-Wenn Sie einen NFS-Datenspeicher von einem ESXi-Host löschen oder aushängen, entfernen die ONTAP tools for VMware vSphere die IP-Adresse des Hosts aus der Exportrichtlinie. Wenn keine anderen Hosts diese Exportrichtlinie verwenden, wird sie gelöscht. Wenn Sie einen NFS-Datenspeicher löschen, entfernen die ONTAP tools for VMware vSphere die mit diesem Datenspeicher verknüpfte Exportrichtlinie, wenn sie nicht von anderen Datenspeichern wiederverwendet wird. Wenn die Exportrichtlinie wiederverwendet wird, bleibt die Host-IP-Adresse erhalten und ändert sich nicht. Wenn Sie die Datenspeicher löschen, hebt die Exportrichtlinie die Zuweisung der Host-IP-Adresse auf und weist eine Standardexportrichtlinie zu, sodass die ONTAP -Systeme bei Bedarf darauf zugreifen können.
+Wenn ein NFS-Datenspeicher von einem ESXi-Host gelöscht oder ausgehängt wird, entfernt ONTAP tools for VMware vSphere die IP-Adresse des Hosts aus der Exportrichtlinie. Wenn keine anderen Hosts diese Exportrichtlinie verwenden, wird sie gelöscht. Beim Löschen eines NFS-Datenspeichers entfernt ONTAP tools for VMware vSphere die mit diesem Datenspeicher verknüpfte Exportrichtlinie, sofern sie nicht von anderen Datenspeichern wiederverwendet wird. Wird die Exportrichtlinie wiederverwendet, bleibt die Host-IP-Adresse erhalten und es erfolgt keine Änderung. Beim Löschen von Datenspeichern entfernt ONTAP tools die Host-IP-Adresse aus der Exportrichtlinie und weist die Standardexportrichtlinie zu, falls ONTAP Zugriff benötigt.
 
 Die Zuweisung der Exportrichtlinie unterscheidet sich, wenn sie in verschiedenen Datenspeichern wiederverwendet wird. Bei der Wiederverwendung der Exportrichtlinie können Sie die neue Host-IP-Adresse anhängen. Beim Löschen oder Unmounten eines Datenspeichers mit einer freigegebenen Exportrichtlinie wird die Richtlinie nicht gelöscht. Sie bleibt unverändert, und die Host-IP-Adresse wird nicht entfernt, da sie mit den anderen Datenspeichern gemeinsam genutzt wird. Die Wiederverwendung von Exportrichtlinien wird nicht empfohlen, da dies zu Zugriffs- und Latenzproblemen führen kann.
 
