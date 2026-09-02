@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools 
 summary: ONTAP tools Bereitstellungsfehlercodes dienen zur Diagnose und Behebung von Fehlern bei Bereitstellung, Neustart und Wiederherstellung. 
 ---
-= Fehler bei der Bereitstellung von ONTAP tools beheben
+= Fehlercodes bei der Bereitstellung von ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

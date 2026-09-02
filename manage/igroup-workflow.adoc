@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
 summary: Es wird erläutert, wie ONTAP tools Initiatorgruppen erstellt und verwaltet sowie Export-Richtlinien für den Datenspeicherzugriff verwaltet. 
 ---
-= Igroup- und Exportrichtlinien-Workflows in ONTAP tools
+= Wie ONTAP tools igroups und Exportrichtlinien verwaltet
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

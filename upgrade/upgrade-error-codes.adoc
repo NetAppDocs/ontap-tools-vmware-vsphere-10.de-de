@@ -119,6 +119,37 @@ Die letzten drei Ziffern des Fehlercodes zeigen den spezifischen Workflow-Fehler
 | 089 | Ändern der Eigentumsrechte für die Konfigurationsdatei „Zusammenfassung Protokoll drehen“ ist fehlgeschlagen | Wiederholen Sie die Aktualisierung. 
 
 
+| 094 | Die NTP-Konfiguration ist fehlgeschlagen und das System wurde auf NTPsec zurückgesetzt  a| 
+Falls das Upgrade aufgrund eines Fehlers bei der Chrony Installation fehlschlägt:
+
+. Überprüfen, ob Chrony installiert ist:
++
+[listing]
+----
+systemctl status chrony
+----
+. Wenn Chrony installiert ist und das Problem bei den von Ihnen angegebenen NTP-Servern liegt, prüfen Sie, ob diese Server erreichbar sind:
++
+[listing]
+----
+sudo chronyc -N sources -v
+sudo chronyc tracking
+----
++
+Sind die Server erreichbar, liegt das Problem nicht an der Servererreichbarkeit. Ist ein Server tatsächlich nicht erreichbar, sollte er aus ONTAP tools Manager entfernt und stattdessen ein erreichbarer NTP-Server angegeben werden.
+
+. Falls das Upgrade aufgrund eines anderen Problems während des NTP Upgrades fehlschlägt, sind die folgenden Protokolle zu prüfen:
++
+[listing]
+----
+/var/log/otvng/ansible-perl-errors.log
+/var/log/otvng/ntp_configure.log
+/var/log/ansible-perl-errors.log
+----
+
+
+
+
 | 095 | Fehler beim Upgrade des Betriebssystems | Kein Recovery für OS Upgrade. Die ONTAP Tools Services wurden aktualisiert und neue Pods laufen. 
 
 
