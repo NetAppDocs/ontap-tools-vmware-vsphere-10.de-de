@@ -84,7 +84,7 @@ Wenn während des Upgrades in integrierten Speicher-Backend-Zertifikaten SAN-Ein
 .. Remote-Plug-In wird aktualisiert
 .. ONTAP und vCenter Server-Zertifikate werden validiert und zu ONTAP -Tools hinzugefügt
 .. Sicherung ist aktiviert
-.. Falls Hostcluster-Schutzeinstellungen aus Version 10.5 oder früheren Versionen vorhanden sind, erstellt ONTAP tools während des Upgrades einen separaten Navigationspunkt *Cluster protection configuration*.
+.. Falls Hostcluster-Schutzeinstellungen aus ONTAP tools for VMware vSphere 10.5 oder früher vorhanden sind, konvertiert ONTAP tools diese in einen granularen Datenspeicherschutz und erstellt einen separaten Navigationspunkt *Cluster protection configuration*.
 
 
 
@@ -96,6 +96,7 @@ Nach dem Upgrade auf ONTAP tools für VMware vSphere 10.6:
 * Den ONTAP tools 10.4 oder 10.5 SRA Adapter entfernen und die 10.6 SRA Adapter tar-Datei hochladen.
 * Führen Sie den Installationsbefehl nach dem Hochladen des SRA-Adapter-Tar-Archivs aus. Scannen Sie anschließend die SRA-Adapter erneut, um die Seite „VMware Site Recovery Storage Replication Adapters“ zu aktualisieren.
 * *Cluster-Schutzkonfiguration* öffnen und prüfen, ob die vorhandenen Host-Cluster-Schutzeinstellungen vorhanden und korrekt zugeordnet sind.
+* Weitere Informationen zu den Funktionen des granularen Datenspeicherschutzes und zur Eignung sind unter link:../protect/granular-datastore-protection-concept.html["Granulare Kriterien für den Schutz von Datenspeichern in ONTAP Tools"] zu finden.
 
 
 Nach dem Upgrade können Sie:

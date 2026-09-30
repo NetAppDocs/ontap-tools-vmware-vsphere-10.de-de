@@ -16,6 +16,9 @@ Vor der Bereitstellung von ONTAP tools für VMware vSphere werden die unterstüt
 ONTAP tools für VMware vSphere in einer unterstützten vSphere Umgebung bereitstellen, die ESXi Hosts und VMware vCenter Server Virtual Appliance (vCSA) umfasst.
 
 
+NOTE: Die virtuelle Maschine von ONTAP tools darf nicht innerhalb einer VMware vApp in vCenter Server bereitgestellt werden.
+
+
 
 [[system-requirements]]
 == Systemanforderungen

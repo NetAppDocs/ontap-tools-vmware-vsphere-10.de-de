@@ -22,8 +22,6 @@ Durch die Deinstallation von ONTAP tools for VMware vSphere werden Daten auf dem
 
 . link:../manage/delete-ds.html["Löschen Sie Datastores"] Auf ONTAP Tools für VMware vSphere erstellt.
 . Wenn Sie den VASA Provider aktiviert haben, in ONTAP tools *Einstellungen* > *VASA Provider Einstellungen* > *Abmelden* auswählen, um den VASA Provider von allen vCenter Server Instanzen abzumelden.
-. Aufheben der Zuordnung aller Speicher-Back-Ends zur vCenter Server-Instanz. Siehe link:../manage/manage-vcenter.html["Trennen Sie Storage Back-Ends von der vCenter Server-Instanz"].
-. Löschen Sie alle Speicher-Back-Ends. Siehe link:../manage/storage-backend.html["Managen von Storage-Back-Ends"].
 . Entfernen Sie den SRA-Adapter aus VMware Live Site Recovery:
 +
 .. Melden Sie sich als Administrator an der VMware Live Site Recovery-Appliance-Managementschnittstelle über Port 5480 an.
@@ -32,7 +30,16 @@ Durch die Deinstallation von ONTAP tools for VMware vSphere werden Daten auf dem
 .. Bestätigen Sie, dass Sie die Ergebnisse des Löschens des Adapters kennen, und wählen Sie *Löschen*.
 
 
-. Löschen Sie die in den ONTAP Tools für VMware vSphere gespeicherten vCenter Server-Instanzen. Siehe link:../manage/manage-vcenter.html["Verwalten von vCenter Server-Instanzen"].
+. Entfernen Sie die vCenter Server Instanzen, die in ONTAP tools for VMware vSphere integriert sind. Weitere Informationen finden Sie unter link:../manage/manage-vcenter.html["Verwalten von vCenter Server-Instanzen"].
++
+Wenn Sie eine vCenter Server-Instanz entfernen, können ONTAP tools Sie durch die erforderliche Bereinigung führen. Falls Sie im Dialogfeld *Remove vCenter* dazu aufgefordert werden, wählen Sie *Remove all storage artifacts from this vCenter Server* und *I understand that the associated datastores will no longer be managed by ONTAP tools* aus und anschließend *Force delete*.
+
++
+Vor der Verwendung von *Force delete* ist sicherzustellen, dass alle vVols Datenspeicher entfernt oder migriert sind, alle geschützten Datenspeicher nicht mehr geschützt sind und keine Erkennungsaufträge ausgeführt werden.
+
++
+Wenn der vCenter Server während des Löschvorgangs nicht erreichbar ist, entfernt ONTAP tools nur den vCenter Server-Eintrag. Die Abmeldung des Plug-ins von VMware vCenter Server muss manuell erfolgen.
+
 . Schalten Sie die ONTAP-Tools für VMware vSphere-VMs vom vCenter-Server aus und löschen Sie die VMs.
 
 

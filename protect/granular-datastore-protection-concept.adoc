@@ -20,7 +20,12 @@ Diese Funktion ermöglicht Ihnen Folgendes:
 * Nur ausgewählte Datenspeicher in einem Hostcluster werden geschützt.
 * Ausgewählte Datenspeicher werden in Schutzgruppen gruppiert.
 * Beziehungen und Richtlinien für SnapMirror auf Schutzgruppenebene anwenden.
-* Unterschiedliche Schutzansätze können für verschiedene Datenspeichergruppen im selben Cluster verwendet werden.
+* Für verschiedene Datenspeichergruppen im selben Hostcluster kommen unterschiedliche Schutzansätze zum Einsatz.
+* Einem einzelnen Hostcluster lassen sich mehrere Schutzeinstellungen zuweisen.
+* Die Konfiguration der Schutzeinstellungen ist für dieselbe Storage Virtual Machine (SVM), verschiedene SVMs oder verschiedene Speichersysteme möglich.
+* Einige Datenspeicher in einem Hostcluster bleiben ungeschützt.
+* Der Schutz eines einzelnen Datenspeichers wird aufgehoben.
+* Ein Datenspeicher wird während der Bereitstellung geschützt.
 
 
 Diese Funktion unterstützt nur VMFS-Datenspeicher, die iSCSI oder FC Protokolle verwenden.
@@ -76,7 +81,7 @@ Folgende Betriebsgrenzen und Verhaltensweisen sind zu berücksichtigen:
 * Failover über ONTAP System Manager auslösen. ONTAP Mediator außerhalb von ONTAP tools konfigurieren.
 
 
-Beim Upgrade von ONTAP tools 10.5 werden bestehende Host-Cluster-Schutzkonfigurationen in das granulare Datenspeicherschutzformat migriert. Nach dem Upgrade sollten Schutzgruppen und die Datenspeicherzugehörigkeit überprüft werden.
+Beim Upgrade von ONTAP tools for VMware vSphere 10.5 werden die vorhandenen Host Cluster Schutzeinstellungen automatisch in granularen Datenspeicherschutz umgewandelt. Nach dem Upgrade ist eine Überprüfung der Schutzgruppen und der Datenspeicherzugehörigkeit erforderlich.
 
 .Verwandte Informationen
 * link:../protect/protect-multiple-ds.html["Datenspeicher in einem Cluster mit ONTAP tools schützen"]

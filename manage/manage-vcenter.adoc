@@ -117,7 +117,8 @@ ONTAP tools benachrichtigt Sie, wenn das vCenter-Zertifikat bald abläuft oder b
 +
 [listing]
 ----
-echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+echo | openssl s_client -connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+// OTVDOC-378 updates
 ----
 . Es sollte geprüft werden, ob das Zertifikat im Base 64-ASCII-Format vorliegt und die Anfangs- sowie Endzeile enthält, zum Beispiel:
 +
