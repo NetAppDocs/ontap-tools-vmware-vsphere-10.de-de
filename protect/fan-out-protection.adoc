@@ -14,7 +14,7 @@ summary: Eine Konsistenzgruppe kann mit Fan-Out-Schutz durch synchrone und async
 Mit Fan-Out-Schutz wird eine Konsistenzgruppe über zwei Ziel-ONTAP-Cluster geschützt. ONTAP tools hält die synchrone Beziehung über die Workflows zum Erstellen, Bearbeiten und Löschen des SnapMirror Active Sync-Schutzes aufrecht, während VMware Live Site Recovery die asynchrone Beziehung über Failover- und Reprotect-Workflows aufrechterhält.
 
 
-NOTE: Fan-Out wird für SVM-Benutzer nicht unterstützt.
+NOTE: Fan-out-Schutz wird für SVM-Benutzer nicht unterstützt. Fan-out-Schutz erfordert zusätzlich zur Beziehung AutomatedFailOverDuplex eine asynchrone Beziehung, und ONTAP tools unterstützt nicht die Erstellung von asynchronem Schutz für ein Storage Backend, das mit SVM-Benutzeranmeldeinformationen hinzugefügt wurde.
 
 Um den Fan-Out-Schutz einzurichten, führen Sie ein Peering der drei Site-Cluster und SVMs durch.
 
