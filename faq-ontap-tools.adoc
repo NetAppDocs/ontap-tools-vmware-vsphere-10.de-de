@@ -1,0 +1,182 @@
+---
+sidebar: sidebar 
+permalink: faq-ontap-tools.html 
+keywords: faq, frequently asked questions, frequently asked questions about ontap tools for vmware vsphere, datastore management, disaster recovery, vvols, storage backends 
+summary: Häufig gestellte Fragen zu ONTAP tools for VMware vSphere. 
+---
+= FAQ für ONTAP tools for VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Diese FAQ beantwortet häufig gestellte Fragen zu ONTAP tools for VMware vSphere. Der Schwerpunkt liegt auf Konzepten, Deployment, Storage-Backends, Datastore-Schutz und Automatisierung, die beim Deployment, Managen und bei der Fehlerbehebung Ihrer ONTAP tools Umgebung hilfreich sind.
+
+
+
+[[deployment-and-high-availability]]
+== Deployment und Hochverfügbarkeit
+
+.Welche Versionen von VMware vSphere, ESXi und ONTAP werden von ONTAP tools unterstützt?
+Die unterstützten Versionen von ONTAP, ESXi und vCenter Server variieren je nach ONTAP tools Release. Der ESXi Host und der vCenter Server, die zum Deployment der virtuellen Maschine von ONTAP tools verwendet werden, können zudem separate, restriktivere Anforderungen haben als die Versionen, die ONTAP tools nach dem Deployment managen kann. Die unterstützten Versionen ändern sich zwischen Releases, daher sind für das verwendete Release immer die https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] und link:deploy/prerequisites.html["ONTAP-Tools für VMware vSphere – Anforderungen und Konfigurationsgrenzen"] zu prüfen.
+
+.Welche Version von ONTAP tools sollte ich verwenden, 9.x oder 10.x?
+Die meisten Umgebungen profitieren von einem Wechsel auf die neueste ONTAP tools 10.x Version. Im Vergleich zu ONTAP tools 9.13 bietet sie NVMe-oF Unterstützung für VMFS, ist für neuere ONTAP und VMware vSphere Versionen qualifiziert und unterstützt mehrere vCenter Server Instanzen pro Appliance statt nur einer. Bei ONTAP tools 9.x zu bleiben, ist nur dann sinnvoll, wenn Ihre Umgebung eine spezifische Abhängigkeit hat, die von der neuesten 10.x Version noch nicht unterstützt wird, und eine frühzeitige Migrationsplanung ist sinnvoll, da sich ONTAP tools 9.x dem Supportende nähert. Die aktuellen End-of-Support-Termine stehen auf der https://mysupport.netapp.com/site/info/version-support["NetApp Support Site - Unterstützung für Softwareversionen"^] Seite. Aus der link:release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html["Vergleich der Funktionen von ONTAP tools for VMware vSphere nach Version"] und der https://mysupport.netapp.com/matrix["NetApp Interoperabilitäts-Matrix-Tool"^] geht hervor, welche Version zu Ihren ONTAP, ESXi und vSphere Versionen passt.
+
+.Wie kann ich mein ONTAP tools Deployment erweitern, wenn meine Anforderungen wachsen?
+ONTAP tools wird zunächst immer als extra-kleine (XS) Einzelknoten-Appliance eingesetzt und stellt zentrale Services für NFS- und VMFS-Datastores bereit. Wenn später mehr Ressourcen, höhere Ausfallsicherheit oder vVols und HA erforderlich sind, ist eine Skalierung auf klein, mittel oder groß beziehungsweise eine Erweiterung auf HA möglich; HA-Deployments sind mehrknotenbasiert, verwenden drei Knoten und erfordern eine Bibliothek, und große Deployments werden nur mit HA unterstützt. Zur Unterstützung der HA-Erweiterung ist die Appliance in einem ESXi-Cluster oder Ressourcenpool einzusetzen; außerdem muss sichergestellt sein, dass CPU Hot-Add und Memory Hot-Plug aktiviert sind; ab ONTAP tools 10.6 sind diese Einstellungen bei neuen Deployments standardmäßig aktiviert. Die CPU-, Speicher- und Festplattenressourcen für jede Größe sind in link:deploy/prerequisites.html["ONTAP-Tools für VMware vSphere – Anforderungen und Konfigurationsgrenzen"] aufgeführt, sodass ein Start mit der XS-Standardkonfiguration unbedenklich ist und bei wachsenden Anforderungen eine Erweiterung erfolgen kann. ONTAP tools unterstützt nur die Skalierung nach oben: Die Knotengröße kann nur erhöht, nicht verringert werden, und nach der Aktivierung von HA ist keine Rückkehr zu einer Einzelknotenkonfiguration ohne HA mehr möglich. Informationen zu Deployment-, Dimensionierungs- und Erweiterungsschritten finden Sie unter link:deploy/quick-start.html["Schnellstart für ONTAP-Tools für VMware vSphere"], link:deploy/ha-workflow.html["Workflow für die Hochverfügbarkeitsbereitstellung von ONTAP tools"] und link:manage/edit-appliance-settings.html["ONTAP tools skalieren und Hochverfügbarkeit aktivieren"].
+
+.Was genau schützt Hochverfügbarkeit, und was muss ich dabei berücksichtigen?
+Die HA-Lösung ist für die Wiederherstellung nach dem Ausfall eines einzelnen Host-Knotens, eines Netzwerks, des Gastbetriebssystems oder der ONTAP tools Applikation vorgesehen. HA-Deployments verwenden drei Knoten, die sich für die Kommunikation zwischen den Knoten im selben Subnetz befinden müssen. CPU Hot-Add und Memory Hot-Plug müssen aktiviert sein; der HA-Workflow erfordert außerdem VASA Provider für vVols Datastores. Einrichtungsschritte sind in link:deploy/ha-workflow.html["Workflow für die Hochverfügbarkeitsbereitstellung von ONTAP tools"] beschrieben.
+
+.Benötigen Sie ein hochverfügbares (HA) Deployment, und wann ist ein solches sinnvoll?
+HA ist nicht erforderlich, wenn Sie nur NFS- oder VMFS-Datastores ohne vVols verwenden, bietet jedoch weiterhin eine umfassendere Ausfallsicherheit gegenüber Ausfällen eines einzelnen Knotens, des Hosts, des Netzwerks, des Gastbetriebssystems oder der ONTAP tools Applikation. HA ist erforderlich, um den VASA Provider Service für vVols Datastores kontinuierlich verfügbar zu halten. Daher ist ein HA Deployment erforderlich, wenn Sie vVols verwenden oder wenn Sie eine höhere Service-Ausfallsicherheit und mehr Container pro Service benötigen, als ein Einzelknoten Deployment bietet.
+
+.Kann ein einzelnes ONTAP tools 10.x Deployment mehrere vCenter Server Instanzen managen?
+Ja. Im Gegensatz zu ONTAP tools 9.x, das nur einen vCenter Server pro Appliance unterstützt, unterstützt ONTAP tools 10.x Mandantenfähigkeit und ermöglicht das Managen mehrerer vCenter Server Instanzen über eine einzige ONTAP tools Manager Oberfläche, wodurch sich die Anzahl der Appliances und der gesamte Ressourcenbedarf verringern. Wenn Sie vVols Datastores über mehrere vCenter Server Instanzen hinweg verwenden, aktualisieren Sie das selbstsignierte Zertifikat auf ein von einer CA signiertes Zertifikat, um eine sichere Kommunikation zu gewährleisten. Die Schritte finden Sie unter link:configure/add-vcenter.html["vCenter Server-Instanzen zu ONTAP -Tools hinzufügen"].
+
+
+
+[[networking-and-ports]]
+== Netzwerk und Ports
+
+.Wie viele IP-Adressen benötigt ein Deployment von ONTAP tools, und wofür wird jede einzelne verwendet?
+Für ein Einzelknoten-Deployment sind drei eindeutige, statische IPv4-Adressen im selben Subnetz erforderlich:
+
+* *ONTAP tools IP* (ehemals Load Balancer IP): Der externe Endpunkt für ONTAP tools Manager (`https://<ONTAPtoolsIP>:8443/virtualization/ui/`), die REST-API, den VASA Provider, den Storage Replication Adapter (SRA) und das vSphere Client Plug-in.
+* *ONTAP tools virtuelle IP* (früher die Node Interconnect IP): Dem Kubernetes API-Server zugewiesen und als virtuelle IP für die Kubernetes Kontrollebene verwendet.
+* *Knoten-IP*: Die Knotenverwaltungsadresse für den Zugriff auf die Diagnose-Shell und per SSH.
+
+
+Ein HA-Deployment fügt für den zweiten und dritten Knoten jeweils eine zusätzliche Knoten-IP-Adresse hinzu; die IP-Adresse von ONTAP tools und die virtuelle IP-Adresse werden von allen Knoten gemeinsam genutzt. Das vollständige Deployment-Arbeitsblatt ist unter link:deploy/prerequisites.html["ONTAP-Tools für VMware vSphere – Anforderungen und Konfigurationsgrenzen"] und link:deploy/pre-deploy-checks.html["Anforderungen vor der Bereitstellung von ONTAP tools"] verfügbar.
+
+.Welche Netzwerkports verwendet ONTAP tools?
+ONTAP tools stellt die Ports 443 und 8443 als externe Pass-through-Ports für ONTAP tools Manager, die REST API, den VASA Provider und das Back-End des vSphere Client Plug-in bereit. Die übrigen Ports in der Tabelle mit den Portanforderungen sind Inter-Node-Ports, die vom Kubernetes Cluster der Appliance intern verwendet werden; in einem Einzelknoten-Deployment ist kein externer Zugriff darauf erforderlich, und in einem HA Deployment müssen alle drei Knoten einander über diese Ports erreichen können, einschließlich UDP 8472 für die Pod-zu-Pod-Kommunikation. Die vollständige Porttabelle ist unter link:deploy/prerequisites.html["ONTAP-Tools für VMware vSphere – Anforderungen und Konfigurationsgrenzen"] zu finden.
+
+
+
+[[certificates-and-security]]
+== Zertifikate und Sicherheit
+
+.Welche Anforderungen stellt ONTAP tools an das Zertifikat des vCenter Server?
+Ein Zertifikat sichert eine Verbindung nur dann, wenn es die Identität des Servers nachweist, mit dem Sie sich verbinden. Die Subject Alternative Name (SAN)-Erweiterung liefert diesen Nachweis: Sie listet die DNS-Namen und IP-Adressen auf, für die das Zertifikat gültig ist.
+
+Das Maschinen-SSL-Zertifikat des vCenter Server muss folgende Anforderungen erfüllen:
+
+* Das SAN umfasst den DNS-Namen und die IP-Adresse des vCenter Server.
+* Das SAN umfasst den vCenter Server Primary Network Identifier (PNID), und die PNID entspricht dem DNS-Namen.
+* Jeder Name im SAN wird in DNS aufgelöst.
+
+
+Wenn das Zertifikat kein SAN aufweist oder das SAN nicht mit dem DNS-Namen, der IP-Adresse oder der PNID des vCenter Servers übereinstimmt, schlagen Operationen der ONTAP tools mit Zertifikatsvalidierungsfehlern fehl. Diese Validierung kann nicht deaktiviert werden. Korrigieren Sie das SAN mit dem vSphere Certificate Manager, bevor Sie die vCenter Server Instanz hinzufügen. Zertifikatanforderungen und Beispiele finden Sie unter link:configure/add-vcenter.html["vCenter Server-Instanzen zu ONTAP -Tools hinzufügen"].
+
+.Warum schlägt die Zertifikatsvalidierung beim Hinzufügen eines Storage-Backends fehl, und wie kann ich das Problem beheben?
+ONTAP tools validiert standardmäßig Storage-Backend-Zertifikate, aus demselben Grund, aus dem auch vCenter Server-Zertifikate validiert werden: Die SAN-Erweiterung weist nach, zu welchem Cluster oder zu welcher SVM-Management-LIF das Zertifikat gehört. Das standardmäßige selbstsignierte ONTAP Zertifikat hat häufig keine SAN-Erweiterung und schlägt daher bei der Validierung fehl, wenn das Storage-Backend hinzugefügt wird.
+
+Zum Beheben einer fehlgeschlagenen Validierung:
+
+* Beim Hinzufügen oder erneuten Hinzufügen des Storage Backends ist das Zertifikat durch ein Zertifikat zu ersetzen, dessen SAN die IP-Adresse oder den DNS-Namen der Cluster- oder SVM-Management-LIF enthält; anschließend ist das aktualisierte Zertifikat abzurufen und zu autorisieren.
+* Falls Sie das Zertifikat nicht sofort ersetzen können, lässt sich die Zertifikatsvalidierung in der Managementplattform deaktivieren. Dadurch wird die Validierung für alle konfigurierten Storage-Backends umgangen, und dies gilt nicht für vCenter Server-Zertifikate.
+
+
+Wenn ein Storage-Backend-Zertifikat abläuft, bevor Sie es erneuern, markiert ONTAP tools das Storage-Backend als unbekannt, weil keine Verbindung mehr zum Storage-System hergestellt werden kann. Die Schritte finden Sie unter link:configure/add-storage-backend.html["Fügen Sie ein Speicher-Backend zu ONTAP tools hinzu"] und link:manage/change-valid-flag.html["Zertifikatvalidierungsflag ändern"].
+
+
+
+[[datastores-and-storage-backends]]
+== Datastores und Storage-Backends
+
+.Welche Datastore-Typen und Protokolle kann ich managen?
+ONTAP tools unterstützt diese Datenspeichertypen und Protokolle:
+
+* *NFS*: NFSv3 und NFSv4.1.
+* *VMFS*: iSCSI, FC, NVMe/TCP und NVMe/FC.
+* *vVols*: Werden über VASA Provider bereitgestellt und gemanagt.
+
+
+Die Schritte zur Erstellung finden Sie unter link:configure/create-datastore.html["Erstellen Sie einen Datenspeicher in ONTAP tools"].
+
+.Warum erstellt ONTAP tools so viele Initiatorgruppen, und kann ich meine vorhandenen flachen Initiatorgruppen verwenden?
+ONTAP tools verwendet systembedingt ein verschachteltes Initiatorgruppenmodell:
+
+* Eine übergeordnete Initiatorgruppe repräsentiert den Zugriff auf jeden Datenspeicher, und eine untergeordnete Initiatorgruppe repräsentiert jeden ESXi-Host. LUN-Zuordnungen gelten auf Ebene der untergeordneten Initiatorgruppe.
+* Diese Struktur ermöglicht es ONTAP Tools, die untergeordnete Initiatorgruppe eines Hosts über mehrere Datenspeicher hinweg wiederzuverwenden, anstatt den Hostzugriff für jeden Datenspeicher zu duplizieren, und sie gibt ONTAP Tools die granulare Kontrolle pro Host, die sie für Mount-, Unmount- und Host-Update-Operationen benötigen.
+* Von ONTAP tools verwaltete Initiatorgruppen verwenden das `otv_` Präfix.
+
+
+Wenn Sie bereits flache Initiatorgruppen haben, die Datastores zugeordnet sind, die ONTAP tools erkennt, konvertiert ONTAP tools diese während der Erkennung: Die ursprüngliche Initiatorgruppe bleibt als untergeordnete Initiatorgruppe mit dem  `otv_` Präfix erhalten, und darüber wird eine übergeordnete Initiatorgruppe erstellt, ohne die zugrunde liegenden Initiatorzuordnungen zu ändern. Initiatorgruppen, die keinem Datastore zugeordnet sind, wie z. B. Boot-LUN-Initiatorgruppen, bleiben unverändert.
+
+Da ONTAP tools diese Parent-Child-Struktur zur Nachverfolgung des Hostzugriffs verwendet, sollten von ONTAP tools verwaltete Initiatorgruppen nicht manuell umbenannt, bearbeitet oder gelöscht werden. Stattdessen sind die ONTAP tools Workflows zum Mounten, Unmounten und Aktualisieren von Hosts zu verwenden. Details finden Sie in link:manage/nested-igroups.html["Verschachtelte Initiatorgruppe Verwaltung in ONTAP tools"] und link:manage/igroup-workflow.html["Wie ONTAP tools igroups und Exportrichtlinien verwaltet"].
+
+.Worin besteht der Unterschied zwischen einem globalen und einem lokalen Storage-Backend?
+Storage Backends unterscheiden sich hinsichtlich Umfang und Zugangsdaten:
+
+* *Globales Storage Backend*: Einmalig in ONTAP tools Manager nur mit ONTAP Cluster-Anmeldeinformationen hinzugefügt. Es ist erst dann mit einem vCenter Server verknüpft, wenn Sie es einem solchen zuordnen, und es bietet die Erkennung auf Cluster-Ebene, die für das Management von vVols erforderlich ist.
+* *Lokales Storage Backend*: Wird pro vCenter Server entweder mit Cluster- oder SVM-Anmeldeinformationen hinzugefügt und ist nur für diesen vCenter Server verfügbar. SVM-Anmeldeinformationen allein reichen für VMFS-Datenspeicher und Storage Replication Adapter (SRA)-Workflows aus, jedoch nicht für vVols.
+
+
+Die Schritte finden Sie unter link:configure/add-storage-backend.html["Fügen Sie ein Speicher-Backend zu ONTAP tools hinzu"] und link:configure/associate-storage-backend.html["Verknüpfen Sie ein Storage-Backend mit einer vCenter Server-Instanz in ONTAP tools"].
+
+.Was benötige ich, um vVols mit ONTAP tools zu verwenden?
+Die Workflows für vVols Datastore hängen davon ab, dass der VASA Provider Service aktiviert und beim ausgewählten vCenter Server registriert ist. ONTAP tools verwendet VASA Provider, um die vVols Datastore Darstellung zu erstellen und zu pflegen, und VM Storage Policies verwenden Regeln des NetApp vVols Storage Type Provider. In einer HA Konfiguration erfordert der HA Workflow für vVols Datastores ebenfalls VASA Provider. Einrichtungsschritte sind in link:manage/enable-services.html["Optionale Dienste im ONTAP tools Manager aktivieren"] und link:configure/registration-process.html["Registrieren Sie den VASA Provider bei einer vCenter Server-Instanz in ONTAP tools"] beschrieben.
+
+.VMware hat vVols als veraltet eingestuft. Was bedeutet das für Benutzer von ONTAP tools?
+Broadcom hat vVols ab VMware Cloud Foundation und VMware vSphere Foundation 9.0 als veraltet eingestuft und plant, die Funktion in einer zukünftigen Version einzustellen. Für neue Deployments sollten VMFS- oder NFS-Datastores eingeplant werden, und der VASA Provider sollte deaktiviert bleiben, sofern vVols derzeit nicht verwendet wird. Informationen zur vVols Unterstützung in den einzelnen Releases finden Sie in den Release Notes der ONTAP tools.
+
+
+
+[[protection-and-disaster-recovery]]
+== Schutz und Notfallwiederherstellung
+
+.Wie lassen sich Datastores mit ONTAP tools for VMware vSphere schützen?
+Sie können einen geeigneten VMFS-Datenspeicher, der das iSCSI- oder FC-Protokoll verwendet, schützen, indem Sie ihn einer Schutzgruppe mit einer SnapMirror Beziehung unter Verwendung einer asynchronen oder AutomatedFailOverDuplex Richtlinie hinzufügen. Wenn ein Hostcluster Datenspeicher aus mehreren SVMs enthält, verwenden Sie stattdessen den Workflow für granularen Datenspeicherschutz, um Datenspeicher auf Schutzgruppen-Level auszuwählen und zu schützen. Die Schritte finden Sie unter link:manage/protect-ds.html["Einen VMFS Datenspeicher in ONTAP tools schützen"] und link:protect/protect-multiple-ds.html["Datenspeicher in einem Cluster mit ONTAP tools schützen"].
+
+.Wie kann ich ONTAP tools für Disaster Recovery nutzen?
+Für die Array-basierte Notfallwiederherstellung ist der SRA-Service in ONTAP tools zu aktivieren und der SRA-Adapter auf der VMware Live Site Recovery Appliance zu installieren. Vor dem Ausführen von SRA-Workflows sind auf den Quell- und Ziel-Clustern dieselben benutzerdefinierten SnapMirror Zeitpläne zu verwenden. In einer neuen SRA-Konfiguration sollte immer ein Test-Failover ausgeführt werden; wird dieser übersprungen, kann der Reprotect-Vorgang fehlschlagen. Die Einrichtungsschritte finden Sie in link:protect/enable-storage-replication-adapter.html["Konfigurieren Sie SRA in ONTAP tools, um Datastores zu schützen"].
+
+.Welche Datenspeichertypen kann ich mit dem SRA und VMware Live Site Recovery schützen?
+Die SRA unterstützt NFSv3-Datenspeicher und VMFS-Datenspeicher auf iSCSI und FC. Disaster Recovery wird für NVMe-oF-Datenspeicher nicht unterstützt, und VMware Live Site Recovery unterstützt keine arraybasierte Replikation für NFSv4.1- oder FlexGroup-Datenspeicher. Konsistenzgruppen werden nur für iSCSI und FC unterstützt; das Hinzufügen von NFS-Volumes zu einer Konsistenzgruppe führt zu einem Fehler bei der Geräteerkennung.
+
+.Wie unterscheidet sich der aktive Synchronisierungsschutz von SnapMirror von der SRA-basierten Notfallwiederherstellung?
+Der Host-Cluster-Schutzworkflow verwendet SnapMirror active sync für VMFS-Datastores. ONTAP tools 10.6 unterstützt außerdem granularen Datastore-Schutz, mit dem Sie geeignete VMFS-Datastores mit iSCSI oder FC auswählen und den Schutz auf Schutzgruppen-Level anwenden können. SRA lässt sich stattdessen in VMware Live Site Recovery für arraybasierte Disaster-Recovery-Workflows integrieren. Einzelheiten zur Eignung finden Sie in link:protect/granular-datastore-protection-concept.html["Granulare Kriterien für den Schutz von Datenspeichern in ONTAP Tools"].
+
+
+
+[[access-control-backup-and-support]]
+== Zugriffskontrolle, Datensicherung und Support
+
+.Wie funktioniert die Zugriffskontrolle zwischen ONTAP tools, vCenter und ONTAP?
+Der Zugriff wird in zwei Umgebungen gesteuert: Die Berechtigungen von vCenter Server regeln den Zugriff auf vSphere Objekte, und ONTAP Rollen steuern Storage-Vorgänge. ONTAP tools prüft zuerst die vCenter Rolle und anschließend die ONTAP Rolle, die dem Storage-Backend zugeordnet ist. ONTAP tools erstellt keine Benutzerkonten in vCenter oder ONTAP, daher erstellen Administratoren die erforderlichen Dienstkonten. Weitere Informationen enthält link:concepts/rbac-learn-about.html["Informationen zu rollenbasierter Zugriffssteuerung (RBAC) in ONTAP tools"].
+
+.Wie lässt sich rollenbasierte Zugriffssteuerung (RBAC) in ONTAP tools for VMware vSphere konfigurieren?
+Da ONTAP tools keine Benutzerkonten in vCenter oder ONTAP erstellt, muss ein vSphere Administrator die erforderlichen Service Accounts erstellen und in beiden Umgebungen Rollen zuweisen. In vCenter Server erweitert ONTAP tools das RBAC-Modell um zusätzliche Objekte, die über das Remote-Plug-in verfügbar gemacht werden. In ONTAP wird der Zugriff über eine ONTAP Rolle gesteuert, die dem Benutzer zugewiesen ist, den Sie bei der Authentifizierung eines Storage Backends angeben. ONTAP tools stellt vordefinierte Rollen und JSON-Rollendateien bereit, mit denen Sie die für Storage Backend Vorgänge erforderlichen Mindestberechtigungen zuweisen können. Einrichtungsschritte sind unter link:concepts/rbac-vcenter-use.html["Wie die rollenbasierte Zugriffssteuerung (RBAC) von vCenter Server mit ONTAP tools for VMware vSphere funktioniert"] und link:configure/configure-user-role-and-privileges.html["Konfigurieren Sie ONTAP Benutzerrollen und -Berechtigungen für ONTAP tools"] beschrieben.
+
+.Wie oft sichern die ONTAP tools die Appliance, und wofür wird das Backup verwendet?
+Ab ONTAP tools 10.5 sind Backups standardmäßig aktiviert und werden alle 10 Minuten ausgeführt. Die Backup-Dateien werden im Datastore gespeichert und ermöglichen es Ihnen, die ONTAP tools Appliance selbst neu einzusetzen und wiederherzustellen, falls die ursprüngliche virtuelle Maschine verloren geht; sie sind kein Backup der ONTAP Cluster- oder vCenter Server-Konfiguration, die ONTAP tools managt. Sie können die Häufigkeit auf einen Wert zwischen 10 und 60 Minuten ändern. Die Schritte finden Sie unter link:manage/backup-settings.html["ONTAP tools-Sicherungseinstellungen bearbeiten"] und link:manage/recover-backup.html["ONTAP tools für VMware vSphere aus der Sicherung wiederherstellen"].
+
+.Kann ich die Backups von ONTAP tools deaktivieren?
+Sie können Backups zwar deaktivieren, sollten dies aber nicht tun, da dies ONTAP tools daran hindert, ein niedriges Wiederherstellungspunktziel (RPO) beizubehalten. Das Deaktivieren von Backups löscht keine vorhandenen Backup-Dateien. Die Schritte finden Sie unter link:manage/backup-settings.html["ONTAP tools-Sicherungseinstellungen bearbeiten"].
+
+.Wo finden Sie Protokolle, wenn eine Fehlerbehebung erforderlich ist oder Sie den Support kontaktieren müssen?
+Sie können ein Protokollpaket in ONTAP tools Manager oder über den vSphere Client erstellen. Ein in ONTAP tools Manager erstelltes Paket enthält Protokolle für alle verwalteten vCenter Server-Instanzen; ein im vSphere Client erstelltes Paket ist auf den ausgewählten vCenter Server begrenzt. Das erstellte Archiv kann heruntergeladen und dem technischen Support auf Anfrage zur Verfügung gestellt werden. Die Schritte finden Sie unter link:deploy/deployment-error-codes.html["Fehlercodes bei der Bereitstellung von ONTAP tools"].
+
+.Wie kann ich Diagnoseinformationen zur Fehlerbehebung für ONTAP tools sammeln?
+Zusätzlich zu einem Protokollpaket können Sie über die Managementplattform den Remote-Diagnosezugriff (SSH) auf das `diag` Benutzerkonto aktivieren. Es ist jeweils nur eine diag Anmeldesitzung zulässig, und der Zugriff wird automatisch um Mitternacht des folgenden Tages oder bei einer erneuten Anmeldung als diag Benutzer deaktiviert. Dieser Zugriff ist für eine tiefergehende Fehlerbehebung vorgesehen, die über den Umfang eines Protokollpakets hinausgeht, und zunächst sollte ein Protokollpaket erstellt werden, damit der technische Support über die Basisprotokolle verfügt. Die Schritte sind in link:manage/configure-remote-diagnostic-access.html["Konfigurieren Sie den Ferndiagnosezugriff für ONTAP tools"] beschrieben.
+
+
+
+[[upgrade-migration-and-automation]]
+== Upgrade, Migration und Automatisierung
+
+.Kann ich direkt auf die neueste ONTAP tools 10.x Version aktualisieren?
+Ein direktes Upgrade ist von den beiden Releases unmittelbar vor dem neuesten Release (N-2) möglich. Wenn Ihr System weiter zurückliegt, ist zunächst ein Upgrade auf den ältesten Release erforderlich, der ein direktes Upgrade auf den neuesten Release unterstützt, und danach ein weiteres Upgrade auf den neuesten Release. Vor dem Start ist das Low-RPO-Backup zu aktivieren und das Backup herunterzuladen, da ein fehlgeschlagenes Upgrade nicht immer rückgängig gemacht werden kann und die Wiederherstellung dann vom Low-RPO-Backup oder von der Snapshot-Wiederherstellung abhängt. Die unterstützten Upgrade-Pfade und -Schritte sind unter link:upgrade/upgrade-ontap-tools.html["Upgrade von ONTAP tools für VMware vSphere 10.x auf 10.6"] aufgeführt.
+
+.Wie kann ich von ONTAP tools 9.x auf die neueste Version 10.x migrieren?
+Die Migration wird nur von bestimmten ONTAP tools 9.x Versionen unterstützt. Der Migrationspfad hängt davon ab, ob Ihre Umgebung vVols verwendet: Umgebungen mit vVols migrieren den VASA Provider und aktualisieren SRA, während Umgebungen mit ausschließlich NFS- und VMFS-Datastores das 9.x Deployment entfernen und 10.x einsetzen. vVols Datastores, die NVMe/FC verwenden, sind nach der Migration nicht mehr betriebsbereit, da ONTAP tools 10.x NVMe-oF nur mit VMFS-Datastores unterstützt. Siehe link:migrate/migrate-to-latest-ontaptools.html["Migration von ONTAP tools für VMware vSphere 9.xx auf 10.6"] für die unterstützten Quellversionen und Schritte.
+
+.Kann ich Vorgänge von ONTAP tools mit einer REST API automatisieren?
+Ja. ONTAP tools bietet eine separate REST-API für die Automatisierung, unabhängig von der ONTAP Cluster REST-API. Der API-Zugriff verwendet die IP-Adresse von ONTAP tools und Port 8443; zur Authentifizierung mit den Anmeldeinformationen von ONTAP tools Manager wird ein Zugriffstoken abgerufen, das anschließend im `x-auth` Header gesendet wird. Lang laufende Vorgänge können asynchron ausgeführt werden und einen zu überwachenden Job zurückgeben. Informationen für den Einstieg finden Sie unter link:automation/learn-rest-api.html["Erfahren Sie mehr über die ONTAP tools REST API"] und link:automation/first-call.html["Führen Sie Ihren ersten ONTAP tools REST API-Aufruf durch"].
